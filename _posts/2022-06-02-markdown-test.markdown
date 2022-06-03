@@ -13,6 +13,13 @@ author: jamesfoster
 description: Markdown summary with different options
 ---
 
-## TEST:
+TEST
+===
 
 TEST
+
+```javascript
+function test() {
+ console.log("look ma’, no spaces");
+}
+```
