@@ -23,6 +23,11 @@ resume-url: https://google.com/?q=my+resume
 url: https://hwangyoonjae.github.io
 # your url: https://USERNAME.github.io
 
+# 다크 모드 토글 기능 추가
+dark_theme_toggle: true
+after_footer_scripts:
+  - /assets/js/custom/dark-theme.js
+
 permalink: /:title/
 
 # To enable google analytics, supply your token below
