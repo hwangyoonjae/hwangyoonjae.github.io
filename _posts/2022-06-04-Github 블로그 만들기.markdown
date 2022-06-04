@@ -1,7 +1,7 @@
 ---
 title: "Github 블로그 만들기"
 layout: post
-date: 2022-06-02 22:48
+date: 2022-06-04
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
