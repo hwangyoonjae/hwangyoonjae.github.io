@@ -53,12 +53,12 @@ authors:
     external-image: false
     picture: assets/images/profile.jpg
     twitter: johndoe
-  jamesfoster:
-    name: James Foster
-    bio: A Man who develops software with coffee
+  hwangyoonjae:
+    name: Hwang YoonJae
+    bio: Think positive about everything.
     external-image: false
-    picture: assets/images/james.jpg
-    twitter: jamesfoster
+    picture: assets/images/mini_profile.png
+    twitter: Hwang YoonJae
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
