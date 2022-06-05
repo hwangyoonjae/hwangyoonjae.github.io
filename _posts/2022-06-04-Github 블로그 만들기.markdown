@@ -21,5 +21,41 @@ description: Markdown summary with different options
 요새는 커밋과 공부에 대해서 약간의 흥미를 잃었다고 해야 하나…? 알아야 할 부분들이 많은데 커밋은 해야 하고, 커밋 하려니 모르는 게 많았다.
 그래서 나는 깃허브 블로그를 통해서 공부해야 할 부분이 많은 날에는 커밋을 블로그로 진행하기로 했다.
 
+* * *
 
+## 블로그 생성:
+#### 1. 깃허브 블로그 사용할 레퍼지토리를 생성
+![텍스트](/assets/images/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%83%9D%EC%84%B1.PNG)
+![텍스트](/assets/images/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%9D%B4%EB%A6%84%EC%A0%95%ED%95%98%EA%B8%B0.PNG)
+<br>
+\* 반드시 레퍼지토리명은 위 그림과 같이 **username.github.io** 이런식으로 만들어주세요.
+* * *
+
+#### 2. 생성한 레퍼지토리 클론
+![텍스트](/assets/images/Github/%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0.PNG)
+<br>
+주소를 복사하고 터미널을 열어서 clone하고 싶은 경로로 이동한 다음 아래 명령어로 clone을 시작한다.
+```javascript
+git clone "레퍼지토리 복사한 주소"
+```
+* * *
+
+#### 3. 폴더 열기
+![텍스트](/assets/images/Github/%ED%81%B4%EB%A1%A0%ED%99%95%EC%9D%B8.PNG)
+<br>
+복사 완료 후, 정상적으로 clone 되었는지 확인한다.
+* * *
+
+## 테마 적용하기:
+#### 1. 지킬 테마 사용
+블로그 생성을 직접 만들어서 해도되지만, 지킬이라는 서비스 플랫폼을 사용하여 본인이 적용하고 싶은 테마를 선택한다.
+<br>
+> * [지킬사이트 바로가기](http://jekyllthemes.org/ "지킬테마")
+
+* * *
+
+#### 2. 다운로드
+본인이 선택한 지킬 테마를 다운로드 받는다.
+<br>
+![텍스트](/assets/images/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%20%EB%8B%A4%EC%9A%B4.PNG)
 * * *
