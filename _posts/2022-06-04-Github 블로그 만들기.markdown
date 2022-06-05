@@ -60,3 +60,9 @@ git clone "레퍼지토리 복사한 주소"
 <br>
 ![텍스트](/assets/images/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%20%EB%8B%A4%EC%9A%B4.PNG)
 * * *
+
+#### 3. 내 github.io 폴더에 붙혀넣기
+다운받은 지킬파일들을 내 github.io 폴더에 붙혀넣기
+<br>
+![텍스트](/assets/images/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%EC%A0%81%EC%9A%A9.png)
+* * *
