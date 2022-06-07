@@ -22,12 +22,13 @@ description: Markdown summary with different options
 아래와 같이 화살표 표시된 추천버전을 다운받는다.
 => Ruby+devkit 3.x.x-x(x64)
 ```
+<span style="color:#FA5858; font-size:12px">*버전은 계속 업데이트 되어 다를 수 있습니다.</span>
+<br><br>
+다운받은 Installer를 실행하면 CMD창이 뜬다.
 <br>
-다운받은 installer를 실행하면 CMD창이 뜬다.
+1번과 3번을 선택하라는 창이 뜨면 **1번을(기본설치)** 누르고 Enter를 누른다.
 <br>
-1번과 3번을 선택하라는 창이 뜨면 **1번을(기본설치)** 누르고 엔터를 누른다.
-<br>
-설치가 완료되고 엔터를 한번더 누르면 CMD창이 종료된다.
+설치가 완료되고 Enter를 한번더 누르면 CMD창이 종료된다.
 <br>
 
 ![텍스트](/assets/images/local/ruby%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4(1).png)
@@ -35,14 +36,14 @@ description: Markdown summary with different options
 * * *
 
 ### 2. bundler 설치
-방금 루비 설치한 CMD창 **(Start Command Prompt with Ruby)** 을 열어 깃허브 블로그 디렉토리로 이동하여 아래의 명령어를 입력한다.
+방금 루비 설치한 CMD창 **"Start Command Prompt with Ruby"** 을 열어 깃허브 블로그 디렉토리로 이동하여 아래의 명령어를 입력한다.
 
 ```javascript
 $ bundler update
 $ bundler install
 ```
 
-\* ruby 호환성때문에 bundler 업데이트 한번 진행 후 설치하였습니다.
+<span style="color:#FA5858">* ruby 호환성때문에 bundler 업데이트 한번 진행 후 설치하였습니다.</span>
 
 * * *
 
