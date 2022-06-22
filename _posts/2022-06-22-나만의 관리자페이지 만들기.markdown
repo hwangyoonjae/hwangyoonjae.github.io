@@ -1,0 +1,29 @@
+---
+title: "나만의 관리자 페이지 만들기"
+layout: post
+date: 2022-06-22
+tag: jekyll
+image: https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png
+headerImage: false
+projects: true
+hidden: true # don't count this post in blog pagination
+description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
+category: project
+author: johndoe
+---
+
+![Screenshot](../assets/images/Project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.PNG)
+개발 공부를 위해서 무엇을 만들까 고민하다가 관리자페이지를 만들기로했다.
+<br>
+
+---
+
+어떤 언어를 사용하는가?
+* Front-end
+  * Vue
+<br>
+<br>
+* Back-end
+  * Springboot
+
+---
