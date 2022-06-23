@@ -1,5 +1,5 @@
 ---
-title: "jekyll 로컬 서버 실행"
+title: "Window에서 jekyll 로컬 서버 실행"
 layout: post
 date: 2022-06-07
 image: /assets/images/Post/start.png
@@ -13,7 +13,7 @@ author: hwangyoonjae
 description: Markdown summary with different options
 ---
 
-## jekyll 로컬 서버 실행:
+## Window에서 jekyll 로컬 서버 실행:
 ### 1. 루비 설치
 > * [루비 설치파일 다운받기](https://rubyinstaller.org/downloads/ "지킬테마")
 
