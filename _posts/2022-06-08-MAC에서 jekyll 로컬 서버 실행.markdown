@@ -38,3 +38,13 @@ brew install ruby
 ```javascript
 ruby -v
 ```
+
+### 3. Jekyll 설치
+
+jekyll과 bundle을 설치한다.
+```javascript
+gem install jekyll bundle
+```
+
+하지만 나는 아래 그림처럼 맥북에서도 오류가 발생하여 실행을 못했다....
+![텍스트](/assets/images/local/맥북&#32;jekyll&#32;설치&#32;오류.png)
