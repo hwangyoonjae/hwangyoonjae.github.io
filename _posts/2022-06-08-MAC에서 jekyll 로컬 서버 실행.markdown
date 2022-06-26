@@ -25,26 +25,84 @@ Jekyll은 Ruby라는 개발언어를 기반으로 만들어졌기 때문에 Ruby
 ```
 설치가 정상적으로 되었는지 확인한다.
 ```javascript
-brew -v
+$ brew -v
 ```
 
 ### 2. Ruby 설치
 
 Homebrew로 최신버전의 Ruby를 설치한다.
 ```javascript
-brew install ruby
+$ brew install ruby
 ```
 설치한 Ruby 버전을 확인한다.
 ```javascript
-ruby -v
+$ ruby -v
 ```
 
 ### 3. Jekyll 설치
 
-jekyll과 bundle을 설치한다.
+Ruby의 패키지 매니저인 gem을 통해 jekyll과 bundle을 설치한다.
 ```javascript
-gem install jekyll bundle
+$ gem install jekyll bundle
 ```
 
 하지만 나는 아래 그림처럼 맥북에서도 오류가 발생하여 실행을 못했다....
 ![텍스트](/assets/images/local/맥북&#32;jekyll&#32;설치&#32;오류.png)
+
+<span style="color:#FA5858; font-size:12px">* 오류 발생 원인은 아래와 같다.</span>
+```
+시스템 ruby를 이용하고 있기 때문에 권한이 없어 gem 설치가 안된 것이였다.
+sudo를 통해 root 권한으로 실행하면 설치가 가능하지만, 보안상 이유로 권장하지 않는 설치법이므로, rbenv를 통해서 문제를 해결해보겠다.
+```
+
+* 조치방법
+    + 먼저 brew를 통해 rbenv 를 설치한다.
+      ```
+      $ brew update
+      $ brew install rbenv ruby-build
+      ```
+    + **rbenv**가 정상적으로 설치되었는지 확인한다.
+      ```
+      $ rbenv versions
+      ```
+      <span style="color:#FA5858; font-size:10px">* 아래 그림처럼 버전을 확인할 수 있다.</span>
+      ![텍스트](/assets/images/local/rbenv&#32;정상&#32;설치&#32;확인.png)
+    + rbenv로 관리되는 Ruby를 설치한다.
+      ```
+      $ rbenv install -l
+      ```
+      ![텍스트](/assets/images/local/설치할&#32;수&#32;Ruby&#32;버전.png)
+      ```
+      $ rbenv install 2.6.10
+      ```
+    + 아래와 같이 로그가 보이면서 설치가 완료된다.
+      ![텍스트](/assets/images/local/설치할&#32;수&#32;Ruby&#32;버전&#32;설치&#32;로그.png)
+    + rbenv로 글로벌 버전을 2.6.10로 변경한다.
+      ```
+      $ rbenv versions
+      ```
+    + 마지막으로 rbenv PATH를 추가하기 위해 본인의 쉘 설정 파일 (..zshrc, .bashrc) 을 열어 다음의 코드를 추가한다.
+      ```
+      $ vim ~/.zshrc
+      ```
+      ```
+      [[ -d ~/.rbenv  ]] && \
+      export PATH=${HOME}/.rbenv/bin:${PATH} && \
+      eval "$(rbenv init -)"
+      ```
+    + 코드를 추가하면 source로 코드를 적용한다.
+    + 그리고 bundler 설치 후, jekyll과 bundle을 설치한다.
+      ```
+      $ gem install bundler
+      $ gem install jekyll bundle
+      ```
+    + MAC에서 블로그 실행해본다.
+      ```
+      $ bundle exec Jekyll serve
+      ```
+
+### 4. MAC 로컬 실행 
+**http://127.0.0.1:4000/** 로 접속하면 완료!
+![텍스트](/assets/images/local/jekyll%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
+
+* * *
