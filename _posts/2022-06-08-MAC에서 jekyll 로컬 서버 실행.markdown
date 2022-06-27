@@ -57,47 +57,47 @@ sudo를 통해 root 권한으로 실행하면 설치가 가능하지만, 보안�
 
 * 조치방법
     + 먼저 brew를 통해 rbenv 를 설치한다.
-      ```
+      ```javascript
       $ brew update
       $ brew install rbenv ruby-build
       ```
     + **rbenv**가 정상적으로 설치되었는지 확인한다.
-      ```
+      ```javascript
       $ rbenv versions
       ```
       <span style="color:#FA5858; font-size:10px">* 아래 그림처럼 버전을 확인할 수 있다.</span>
       ![텍스트](/assets/images/local/rbenv&#32;정상&#32;설치&#32;확인.png)
     + rbenv로 관리되는 Ruby를 설치한다.
-      ```
+      ```javascript
       $ rbenv install -l
       ```
       ![텍스트](/assets/images/local/설치할&#32;수&#32;Ruby&#32;버전.png)
-      ```
+      ```javascript
       $ rbenv install 2.6.10
       ```
     + 아래와 같이 로그가 보이면서 설치가 완료된다.
       ![텍스트](/assets/images/local/설치할&#32;수&#32;Ruby&#32;버전&#32;설치&#32;로그.png)
     + rbenv로 글로벌 버전을 2.6.10로 변경한다.
-      ```
+      ```javascript
       $ rbenv versions
       ```
     + 마지막으로 rbenv PATH를 추가하기 위해 본인의 쉘 설정 파일 (..zshrc, .bashrc) 을 열어 다음의 코드를 추가한다.
-      ```
+      ```javascript
       $ vim ~/.zshrc
       ```
-      ```
+      ```javascript
       [[ -d ~/.rbenv  ]] && \
       export PATH=${HOME}/.rbenv/bin:${PATH} && \
       eval "$(rbenv init -)"
       ```
     + 코드를 추가하면 source로 코드를 적용한다.
     + 그리고 bundler 설치 후, jekyll과 bundle을 설치한다.
-      ```
+      ```javascript
       $ gem install bundler
       $ gem install jekyll bundle
       ```
     + MAC에서 블로그 실행해본다.
-      ```
+      ```javascript
       $ bundle exec Jekyll serve
       ```
 
