@@ -1,0 +1,56 @@
+---
+title: "Vue 프로젝트 만들기"
+layout: post
+date: 2022-07-05
+tag: jekyll
+image: /assets/images/local/설치할&#32;수&#32;Ruby&#32;버전&#32;설치&#32;로그.png
+headerImage: false
+projects: true
+hidden: true # don't count this post in blog pagination
+description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
+category: project
+author: johndoe
+---
+
+## Vue 프로젝트 만들기:
+### 1. 세팅 환경
+* 개발 프로그램 설치하기
+    + 필자는 Visual Studio Code를 사용했다.
+[![텍스트](/assets/images/Vue/vscode%20%EC%84%A4%EC%B9%98%20%ED%9B%84%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Vue/vscode%20%EC%84%A4%EC%B9%98%20%ED%9B%84%20%ED%99%94%EB%A9%B4.PNG)
+> * [Visual Studio Code 설치하기](https://code.visualstudio.com/ "vscode 설치")
+
+* * *
+
+### 2. Vue CLI 설치
+```javascript
+npm install -g @vue/cli
+```
+
+* * *
+
+### 3. Vue 프로젝트 생성
+```javascript
+-- vue/cli 3.x 이상일 경우
+vue create 프로젝트명
+
+-- vue/cli 3.x 미만일 경우
+vue init webpack 프로젝트명
+```
+<span style="color:#FA5858; font-size:12px">* 필자는 vue/cli 3.x 미만으로 생성했다.</span>
+
+* * *
+
+### 4. Vue 프로젝트 실행
+```javascript
+npm run dev
+```
+서버가 정상적으로 실행될 경우 아래 문구를 확인할 수 있다.
+![텍스트](/assets/images/Vue/Vue%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%84%9C%EB%B2%84%20%EC%A3%BC%EC%86%8C.PNG)
+웹 브라우저에서 http://localhost:8080 로 이동하여 Vue 기본 화면을 확인할 수 있습니다.
+<br>
+프로그램 실행 시 아래 그림처럼 Vue 프로젝트 기본 화면이 나온다.
+<br>
+
+![텍스트](/assets/images/Vue/Vue%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B4.PNG)
+
+* * *
