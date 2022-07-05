@@ -31,8 +31,8 @@ description: Markdown summary with different options
 설치가 완료되고 Enter를 한번더 누르면 CMD창이 종료된다.
 <br>
 
-![텍스트](/assets/images/local/ruby%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4(1).png)
-![텍스트](/assets/images/local/ruby%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4(2).png)
+[![텍스트](/assets/images/local/ruby%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4(1).png)](/assets/images/local/ruby%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4(1).png)
+[![텍스트](/assets/images/local/ruby%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4(2).png)](/assets/images/local/ruby%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4(2).png)
 * * *
 
 ### 2. bundler 설치
@@ -55,10 +55,10 @@ $ bundle exec jekyll serve
 <br>
 (서버를 종료시키려면 ctrl + c를 누르면 된다..)
 
-![텍스트](/assets/images/local/jekyll%20%EC%84%9C%EB%B2%84%20%EC%8B%A4%ED%96%89.PNG)
+[![텍스트](/assets/images/local/jekyll%20%EC%84%9C%EB%B2%84%20%EC%8B%A4%ED%96%89.PNG)](/assets/images/local/jekyll%20%EC%84%9C%EB%B2%84%20%EC%8B%A4%ED%96%89.PNG)
 
 하지만 나는 아래 그림처럼 오류가 발생하여 실행을 못했다....
-![텍스트](/assets/images/local/jekyll%20%EC%84%9C%EB%B2%84%20%EC%8B%A4%ED%96%89%EC%95%88%EB%90%98%EB%8A%94%20%EA%B2%BD%EC%9A%B0.PNG)
+[![텍스트](/assets/images/local/jekyll%20%EC%84%9C%EB%B2%84%20%EC%8B%A4%ED%96%89%EC%95%88%EB%90%98%EB%8A%94%20%EA%B2%BD%EC%9A%B0.PNG)](/assets/images/local/jekyll%20%EC%84%9C%EB%B2%84%20%EC%8B%A4%ED%96%89%EC%95%88%EB%90%98%EB%8A%94%20%EA%B2%BD%EC%9A%B0.PNG)
 
 * 조치방법
     + [(클릭)필요한 라이브러리 다운받기 위해 사이트 이동한다.](https://curl.se/windows/ "라이브러리")
