@@ -2,7 +2,9 @@
 title: "Vue 프로젝트 만들기"
 layout: post
 date: 2022-07-05
-tag: jekyll
+tag: 
+- Vue
+- VScode
 image: /assets/images/local/설치할&#32;수&#32;Ruby&#32;버전&#32;설치&#32;로그.png
 headerImage: false
 projects: true
