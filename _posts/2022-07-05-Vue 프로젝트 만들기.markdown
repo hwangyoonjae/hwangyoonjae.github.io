@@ -5,8 +5,8 @@ date: 2022-07-05
 tag: 
 - Vue
 - VScode
-image: /assets/images/local/설치할&#32;수&#32;Ruby&#32;버전&#32;설치&#32;로그.png
-headerImage: false
+image: /assets/images/Vue/data.png
+headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
 description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
