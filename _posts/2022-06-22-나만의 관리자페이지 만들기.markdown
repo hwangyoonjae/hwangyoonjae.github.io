@@ -2,6 +2,8 @@
 title: "나만의 관리자 페이지 만들기"
 layout: post
 date: 2022-06-22
+image: /assets/images/Post/admin.png
+headerImage: true
 tag: 
 - Vue
 - Spring Boot
