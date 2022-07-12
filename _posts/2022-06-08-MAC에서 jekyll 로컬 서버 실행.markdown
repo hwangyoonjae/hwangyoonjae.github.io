@@ -2,12 +2,11 @@
 title: "MAC에서 jekyll 로컬 서버 실행"
 layout: post
 date: 2022-06-08
-image: /assets/images/Post/start.png
-headerImage: false
+image: /assets/images/Post/blogging.png
+headerImage: true
 tag:
-- markdown
-- components
-- extra
+- MAC
+- Jekyll
 category: blog
 author: hwangyoonjae
 description: Markdown summary with different options
