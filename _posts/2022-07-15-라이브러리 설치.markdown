@@ -1,0 +1,22 @@
+---
+title: "라이브러리 설치하기"
+layout: post
+date: 2022-07-15
+tag: 
+- Vue
+- VScode
+image: /assets/images/Vue/plugin.png
+headerImage: true
+projects: true
+hidden: true # don't count this post in blog pagination
+description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
+category: project
+author: johndoe
+---
+
+## 라이브러기 설치하기:
+- Vue 개발을 위해 필요한 라이브러리와 플러그인을 설치하자
+
+### 1.
+
+* * *
