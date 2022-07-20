@@ -40,6 +40,46 @@ vue init webpack 프로젝트명
 ```
 <span style="color:#FA5858; font-size:12px">* 필자는 vue/cli 3.x 미만으로 생성했다.</span>
 
+ - 실행하게 되면 프로젝트 생성하는 과정은 아래와 같다.
+[![텍스트](/assets/images/Vue/vue%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%83%9D%EC%84%B1.PNG)](/assets/images/Vue/vue%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%83%9D%EC%84%B1.PNG)
+
+```javascript
+# 프로젝트 이름
+? Project name (vue-project):
+
+# 프로젝트 설명
+? Project description (A Vue,js project):
+
+# 작성자
+? Author hwangyoonjae <hyj90632@gmail.com>
+
+# Vue 빌드 선택, 기본 선택은 Runtime + Compiler로 대부분 사용자에게 권장
+? Vue build
+
+# vue-router사용여부, 사용 시 자동으로 설정 
+? Install vue-router? (Y/n)
+
+# ESLint 적용여부, 사용 시  코드작성 스타일을 강제화함 
+? Use ESLint to lint your code? (Y/n)
+
+# Unit Test 사용여부
+? Set up unit tests (Y/n)
+
+# Unit Test에 대해 3개의 선택지가 나옴
+- Jest
+- Karma and Mocha
+- none (configure it yourself)
+
+# UI테스트 툴 Nightwatch 적용 여부 
+? Setup e2e tests with Nightwatch? (Y/n)
+
+# Should we run `npm install` for you after the project has been created? (recommended) (Use arrow keys)
+- Yes, use NPM
+- Yes, use Yarn
+- No, I will handle that myself
+
+```
+
 * * *
 
 ### 4. Vue 프로젝트 실행
