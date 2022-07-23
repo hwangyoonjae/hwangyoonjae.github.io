@@ -15,8 +15,9 @@ category: project
 author: johndoe
 ---
 
-[![Screenshot](../assets/images/Project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.PNG)](../assets/images/Project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.PNG)
 개발 공부를 위해서 무엇을 만들까 고민하다가 관리자페이지를 만들기로했다.
+[![Screenshot](../assets/images/Project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.PNG)](../assets/images/Project/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.PNG)
+<span style="color:#FA5858; font-size:12px">* 위 그림과 같이 실제 관리자페이지 구현화면은 다를 수 있다.</span>
 <br>
 
 ---
