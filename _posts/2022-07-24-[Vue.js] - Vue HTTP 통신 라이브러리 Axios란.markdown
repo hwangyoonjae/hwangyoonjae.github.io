@@ -34,7 +34,7 @@ $ yarn add axios
 
 * * *
 
-## VUe에서 Axios 사용해보기:
+## Vue에서 Axios 사용해보기:
 <span style="color:#FA5858; font-size:12px">※ Main.js에 아래 내용을 추가한다.</span>
 ```javascript
 import Vue from 'vue'
