@@ -53,3 +53,14 @@ $ npm i -D @vue/composition-api
 [![텍스트](../assets/images/Vue/echart%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)](../assets/images/Vue/echart%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
 
 * * *
+
+### 3. Axios 설치 및 사용
+- Terminal에서 Axios 설치
+```javascript
+$ npm install axios
+```
+
+- package.json에 Axios 추가 확인
+[![텍스트](../assets/images/Vue/axios%20%EC%84%A4%EC%B9%98%EB%B2%84%EC%A0%84%20%ED%99%95%EC%9D%B8.PNG)](../assets/images/Vue/axios%20%EC%84%A4%EC%B9%98%EB%B2%84%EC%A0%84%20%ED%99%95%EC%9D%B8.PNG)
+
+* * *
