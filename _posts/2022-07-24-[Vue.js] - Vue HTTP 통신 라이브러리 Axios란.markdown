@@ -1,0 +1,73 @@
+---
+title: "[Vue.js] - Vue HTTP 통신 라이브러리 Axios란"
+layout: post
+date: 2022-07-24
+image: /assets/images/Post/http.png
+headerImage: true
+tag:
+- Vue
+- HTTP
+- Axios
+- 라이브러리
+category: blog
+author: hwangyoonjae
+description: Markdown summary with different options
+---
+
+## Axios란?:
+- HTTP 통신 라이브러리이다.
+- Promise 기반의 API 형식으로 자바스크립트 비동기 처리 방식을 사용하며, IE8 이상을 포함한 모든 최신 브라우저를 지원한다.
+
+* * *
+
+## 설치:
+```javascript
+-- npm으로 설치하는 경우
+$ npm install axios
+
+-- yarn으로 설치하는 경우
+$ yarn add axios
+
+-- CDN으로 설치하는 경우
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+```
+
+* * *
+
+## VUe에서 Axios 사용해보기:
+<span style="color:#FA5858; font-size:12px">※ Main.js에 아래 내용을 추가한다.</span>
+```javascript
+import Vue from 'vue'
+import App from './App.vue'
+import axios from 'axios' // import axios
+
+Vue.prototype.$axios = axios; // prototype에 axios 추가
+
+Vue.config.productionTip = false
+
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
+})
+```
+
+* * *
+
+## API 형식:
+### GET (불러오기)
+- 말 그대로 서버로부터 데이터를 가져올 때 사용한다.
+```javascript
+// HTTP GET 요청
+axios.get('URL 주소').then().catch();
+```
+
+### POST (입력하기)
+- 말 그대로 서버에 데이터를 전달할 때 사용한다.
+```javascript
+// HTTP POST 요청
+axios.post('URL 주소').then().catch();
+```
+
+* * *
