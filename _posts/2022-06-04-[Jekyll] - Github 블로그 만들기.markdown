@@ -1,5 +1,5 @@
 ---
-title: "Github 블로그 만들기"
+title: "[Jekyll] - Github 블로그 만들기"
 layout: post
 date: 2022-06-04
 image: /assets/images/Post/start.png

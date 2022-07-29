@@ -1,5 +1,5 @@
 ---
-title: "MAC에서 jekyll 로컬 서버 실행"
+title: "[Jekyll] - MAC에서 jekyll 로컬 서버 실행"
 layout: post
 date: 2022-06-08
 image: /assets/images/Post/blogging.png
