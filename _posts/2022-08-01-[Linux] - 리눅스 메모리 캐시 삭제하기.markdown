@@ -1,0 +1,16 @@
+---
+title: "[Linux] - 리눅스 메모리 캐시 삭제하기"
+layout: post
+date: 2022-08-01
+image: /assets/images/Post/Memory.png
+headerImage: true
+tag:
+- Vue
+- HTTP
+- Axios
+- 라이브러리
+category: blog
+author: hwangyoonjae
+description: Markdown summary with different options
+---
+
