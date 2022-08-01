@@ -14,3 +14,63 @@ author: hwangyoonjae
 description: Markdown summary with different options
 ---
 
+## 메모리의 캐싱 영역을 사용하는 이유
+- 디스크를 통해 파일을 읽고 쓸 때 속도가 느리기 때문에 메모리 캐싱 영역을 통해 보다 빠르게 파일을 읽고 쓸 수 있고,<br>
+시스템의 부하가 줄어들고 데이터 입출력 속도가 빠르기 때문이다.
+
+* * *
+
+## 버퍼와 캐시에 사용된 메모리를 지워야 하는 이유
+- 일반적으로 캐시는 느린 장치의 데이터를 빠른 장치에 임시로 보관해두고 사용하여 성능을 올리는 것이 목적이다.
+- 메모리와 같은 빠른 장치는 공간이 한정되어 있기 때문에 모든 정보를 캐시할수 없기 때문에 캐시를 제거해야한다.
+
+* * *
+
+## 리눅스의 캐시와 메모리
+- 리눅스에서 free 명령어를 사용하다 보면 buffer/cache라는 것이 존재하고, <br>
+이 부분은 직접 사용하고 있는 메모리가 아닌 버퍼와 캐시에 사용된 메모리를 말한다.
+
+### Buffer란?
+- Buffer Cache로 블록 디바이스에 대한 메타데이터를 메모리에 저장한다.
+- 여기서 블록 디바이스는 CD/DVD, 하드 디스크 등 저장 장치를 말한다.
+
+### Cache란?
+- Page Cache + slab라고 한다.
+- Cache 에 대해 이해하려면 Page Cache 와 slabs에 대해 알아야 한다.
+
+#### Page Cache란?
+- 저장 장치를 통해 한 번 읽어온 파일의 내용을 메모리에 저장한다.
+- 여기서 Buffer 와 다른 점은 메타데이터를 저장하는 것이 아닌 파일의 내용을 저장한다는 점이다.
+
+#### slab란?
+- 커널 내부에서 사용하는 메모리, 캐시라고 생각하면 된다.
+
+* * *
+
+## 캐시 관리하기
+
+### 1.캐시 메모리 확인
+
+```javascript
+# 메모리 확인하기
+$ free -h
+```
+[![텍스트](/assets/images/Linux/%EB%A9%94%EB%AA%A8%EB%A6%AC%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/Linux/%EB%A9%94%EB%AA%A8%EB%A6%AC%20%ED%99%95%EC%9D%B8.PNG)<br>
+<span style="color:#FA5858; font-size:12px">※ 위 그림의 메모리 용량은 본인 서버 메모리와 다를 수 있다.</span>
+
+### 2.캐시 삭제
+
+```javascript
+# 페이지 캐시만 삭제
+$ sudo echo 1 > sudo /proc/sys/vm/drop_caches
+```
+
+```javascript
+# 리눅스에서 시스템 블록에 있는 캐시 삭제 (버퍼 캐시 삭제)
+$ sudo echo 2 > sudo /proc/sys/vm/drop_caches
+```
+
+```javascript
+# 페이지 캐시까지 모두 삭제
+$ sudo echo 3 > sudo /proc/sys/vm/drop_caches
+```
