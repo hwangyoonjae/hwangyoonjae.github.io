@@ -1,7 +1,7 @@
 ---
 title: "[Web] - WEB과 WAS 차이"
 layout: post
-date: 2022-08-02
+date: 2022-08-04
 image: /assets/images/Post/WEBWAS.png
 headerImage: true
 tag:
