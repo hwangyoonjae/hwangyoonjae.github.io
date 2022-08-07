@@ -47,6 +47,7 @@ description: Markdown summary with different options
 ```
 
 ### WAS 기능 :
+- 프로그램 실행 환경과 데이터베이스 접속 기능을 제공하고, 여러 개의 트랜잭션을 관리한다.<br>
 <span style="color:#FA5858; font-size:12px">※ 대표적인 웹 서버 : Tomcat</span>
 [![텍스트](/assets/images/Linux/WAS%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)](/assets/images/Linux/WAS%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)<br>
 △ WAS 사용자 요청 처리 과정
