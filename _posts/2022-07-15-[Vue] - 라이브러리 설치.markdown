@@ -1,5 +1,5 @@
 ---
-title: "[Vue.js] - 라이브러리 설치하기"
+title: "[Vue] - 라이브러리 설치하기"
 layout: post
 date: 2022-07-15
 tag: 
