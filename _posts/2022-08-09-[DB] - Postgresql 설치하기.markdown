@@ -14,12 +14,6 @@ author: hwangyoonjae
 description: Markdown summary with different options
 ---
 
-## PostgreSQL란? :
-- 오픈소스 데이터베이스이며, 관계형 데이터베이스 시스템(RDBMS)의 일종이다.
-- 가장 진보한 오픈소스 데이터베이스 시스템이라고 할 수 있으며, Unix/Linux, macOS, Solaris, Windows 등의 OS를 지원한다.
-
-* * *
-
 ## PostgreSQL 설치하기 :
 
 ### Yum 통해서 설치하기 :
