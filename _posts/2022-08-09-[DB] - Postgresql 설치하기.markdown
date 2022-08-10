@@ -5,10 +5,9 @@ date: 2022-08-09
 image: /assets/images/Post/postgre.png
 headerImage: true
 tag:
-- WEB
-- WAS
-- 동적페이지
-- 정적페이지
+- DBMS
+- ORDBMS
+- PostgreSQL
 category: blog
 author: hwangyoonjae
 description: Markdown summary with different options
