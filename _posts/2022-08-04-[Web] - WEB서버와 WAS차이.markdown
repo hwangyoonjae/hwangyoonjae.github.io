@@ -1,5 +1,5 @@
 ---
-title: "[Web] - WEB서버와 WAS 차이"
+title: "[WEB] - WEB서버와 WAS 차이"
 layout: post
 date: 2022-08-04
 image: /assets/images/Post/WEBWAS.png

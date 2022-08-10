@@ -1,5 +1,5 @@
 ---
-title: "[Web] - 정적페이지와 동적페이지 차이"
+title: "[WEB] - 정적페이지와 동적페이지 차이"
 layout: post
 date: 2022-08-08
 image: /assets/images/Post/WEBWAS.png
