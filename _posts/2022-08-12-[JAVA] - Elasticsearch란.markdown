@@ -2,7 +2,7 @@
 title: "[JAVA] - Elasticsearch란"
 layout: post
 date: 2022-08-12
-image: /assets/images/Post/redis.png
+image: /assets/images/Post/elasticsearch.png
 headerImage: true
 tag:
 - DB
