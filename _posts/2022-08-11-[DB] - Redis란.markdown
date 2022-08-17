@@ -6,6 +6,7 @@ image: /assets/images/Post/redis.png
 headerImage: true
 tag:
 - DB
+- NoSQL
 category: blog
 author: hwangyoonjae
 description: Markdown summary with different options

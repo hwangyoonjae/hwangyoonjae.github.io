@@ -5,7 +5,8 @@ date: 2022-08-12
 image: /assets/images/Post/elasticsearch.png
 headerImage: true
 tag:
-- DB
+- JAVA
+- DATA
 category: blog
 author: hwangyoonjae
 description: Markdown summary with different options
