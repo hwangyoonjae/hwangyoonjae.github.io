@@ -83,6 +83,24 @@ _You **can** ~~combine~~ them_
 > > This is a second blockquote.
 > > > This is a third blockquote.
 ```
-![텍스트](/assets/images/Markdown/%EC%9D%B8%EC%9A%A9%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
+![텍스트](/assets/images/Markdown/%EC%9D%B8%EC%9A%A9%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG "테스트")
+
+* * *
+
+#### 이미지(Images)
+- 링크와 비슷하지만 앞에 !가 붙습니다.
+- 이미지의 사이즈를 변경하기 위해서는 <img width="OOOpx" height="OOOpx"></img>와 같이 표현한다.
+
+```
+# 이미지 기본 설정
+Ex) ![텍스트](이미지파일경로.jpg)
+
+# 이미지 파일에 마우스 커서 시 텍스트 설정
+Ex) ![텍스트](이미지파일경로.jpg "이미지이름")
+
+# 이미지에 링크 설정
+Ex) [![텍스트](이미지URL)]( 링크URL )
+```
+![텍스트](/assets/images/mini_profile.png)
 
 * * *
