@@ -78,7 +78,7 @@ $ yum -y install logrotate
 * * *
 
 ### Logrotate 설정
-```javascript
+```
 $ vi /etc/logrotate.d/apache
 
 /app/log/*log{
