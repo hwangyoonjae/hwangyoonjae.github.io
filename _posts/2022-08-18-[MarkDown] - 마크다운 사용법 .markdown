@@ -120,7 +120,7 @@ Ex) [![텍스트](이미지URL)]( 링크URL )
 ```
 ![텍스트](/assets/images/Markdown/%ED%85%8C%EC%9D%B4%EB%B8%94%20%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
 
-- 아래 링크 클릭하여 Markdown 표를 쉡게 만들 수 있다.<br>
+- 아래 링크 클릭하여 Markdown 표를 쉽게 만들 수 있다.<br>
 [Markdown 테이블 만들기](https://www.tablesgenerator.com/markdown_tables)
 
 * * *
