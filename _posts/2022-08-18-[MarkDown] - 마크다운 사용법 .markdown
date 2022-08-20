@@ -42,7 +42,7 @@ description: Markdown summary with different options
 ##### This is an H5
 ###### This is an H6
 ```
-![텍스트](/assets/images/Markdown/%EC%A0%9C%EB%AA%A9%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
+[![텍스트](/assets/images/Markdown/%EC%A0%9C%EB%AA%A9%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)](/assets/images/Markdown/%EC%A0%9C%EB%AA%A9%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
 
 * * *
 
@@ -56,7 +56,7 @@ description: Markdown summary with different options
 - - -
 -------------------
 ```
-![텍스트](/assets/images/Markdown/%EC%88%98%ED%8F%89%EC%84%A0%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
+[![텍스트](/assets/images/Markdown/%EC%88%98%ED%8F%89%EC%84%A0%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)](/assets/images/Markdown/%EC%88%98%ED%8F%89%EC%84%A0%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
 
 * * *
 
@@ -71,7 +71,7 @@ _This will also be italic_
  
 _You **can** ~~combine~~ them_
 ```
-![텍스트](/assets/images/Markdown/%EA%B0%95%EC%A1%B0%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
+[![텍스트](/assets/images/Markdown/%EA%B0%95%EC%A1%B0%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)](/assets/images/Markdown/%EA%B0%95%EC%A1%B0%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
 
 * * *
 
@@ -83,7 +83,7 @@ _You **can** ~~combine~~ them_
 > > This is a second blockquote.
 > > > This is a third blockquote.
 ```
-![텍스트](/assets/images/Markdown/%EC%9D%B8%EC%9A%A9%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG "테스트")
+[![텍스트](/assets/images/Markdown/%EC%9D%B8%EC%9A%A9%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)](/assets/images/Markdown/%EC%9D%B8%EC%9A%A9%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
 
 * * *
 
@@ -105,7 +105,7 @@ _You **can** ~~combine~~ them_
   * 별표(asterisks)
   + 더하기(plus sign)
 ```
-![텍스트](/assets/images/Markdown/%EB%AA%A9%EB%A1%9D%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
+[![텍스트](/assets/images/Markdown/%EB%AA%A9%EB%A1%9D%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)](/assets/images/Markdown/%EB%AA%A9%EB%A1%9D%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
 
 * * *
 
@@ -123,7 +123,7 @@ Ex) ![텍스트](이미지파일경로.jpg "이미지이름")
 # 이미지에 링크 설정
 Ex) [![텍스트](이미지URL)]( 링크URL )
 ```
-![텍스트](/assets/images/mini_profile.png)
+[![텍스트](/assets/images/mini_profile.png)](/assets/images/mini_profile.png)
 
 * * *
 
@@ -140,7 +140,7 @@ Ex) [![텍스트](이미지URL)]( 링크URL )
 셀5|셀6|셀7|셀8
 셀9|셀10|셀11|셀12
 ```
-![텍스트](/assets/images/Markdown/%ED%85%8C%EC%9D%B4%EB%B8%94%20%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
+[![텍스트](/assets/images/Markdown/%ED%85%8C%EC%9D%B4%EB%B8%94%20%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)](/assets/images/Markdown/%ED%85%8C%EC%9D%B4%EB%B8%94%20%EB%AC%B8%EB%B2%95%20%EA%B2%B0%EA%B3%BC.PNG)
 
 - 아래 링크 클릭하여 Markdown 표를 쉽게 만들 수 있다.<br>
 [Markdown 테이블 만들기](https://www.tablesgenerator.com/markdown_tables)
