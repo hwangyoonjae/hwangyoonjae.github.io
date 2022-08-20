@@ -23,7 +23,7 @@ description: Markdown summary with different options
 - API를 음식점에 점원으로 비유한다면 점원은 손님에게 메뉴를 알려주고 주방에 주문받은 요리를 요청한다음 주방에서 완성된 요리를 손님께 다시 전달하는 역할을 한다. <br>
 즉, API는 손님(프로그램)이 주문할 수 있게 메뉴(명령 목록)를 정리하고, 주문(명령)을 받으면 요리사(응용프로그램)와 상호작용하여 요청된 메뉴(명령에 대한 값)를 전달한다.
 
-![텍스트](/assets/images/API/API%20%EC%97%AD%ED%95%A0.PNG)
+[![텍스트](/assets/images/API/API%20%EC%97%AD%ED%95%A0.PNG)](/assets/images/API/API%20%EC%97%AD%ED%95%A0.PNG)
 
 * * *
 
