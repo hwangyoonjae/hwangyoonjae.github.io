@@ -22,7 +22,7 @@ description: Markdown summary with different options
 ## PostgreSQL 설치하기 :
 
 ### Yum 통해서 설치하기 :
-```javascript
+```bash
 # 레퍼지토리 RPM 설치하기 :
 $ yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 
@@ -34,14 +34,14 @@ $ yum install -y postgresql14-server postgresql14-contrib
 
 ### 기본 데이터베이스 생성하기 :
 - initdb 명령어를 통해 기본 데이터베이스를 설치하고, 기본 데이터베이스는 postgres라는 이름으로 생성된다.
-```javascript
+```bash
 $ /usr/pgsql-14/bin/postgresql-14-setup initdb
 ```
 
 * * *
 
 ### 서비스 등록 및 실행 :
-```javascript
+```bash
 $ sudo systemctl enable postgresql-14
 $ sudo systemctl start postgresql-14
 ```
@@ -49,14 +49,14 @@ $ sudo systemctl start postgresql-14
 * * *
 
 ### postgresql 접속:
-```javascript
+```bash
 $ sudo -u postgres psql
 ```
 
 * * *
 
 ### 데이터베이스 생성:
-```javascript
+```
 postgres=# create database <name> encoding 'utf-8';
 ```
 
