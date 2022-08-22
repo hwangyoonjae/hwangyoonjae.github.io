@@ -21,32 +21,34 @@ description: Markdown summary with different options
 
 ### Yum 통해서 설치하기 :
 - yum 저장소에는 nginx가 없기 때문에 외부저장소를 추가해야 한다.
-```javascript
+```bash
 # yum 외부 저장소 추가 :
 $ vi /etc/yum.repos.d/nginx.repo
 ```
 
 - **/etc/yum.repos.d**경로에 **nginx.repo** 파일을 추가하고 내용은 다음과 같이 작성한다.
-```javascript
-# yum 외부 저장소 추가 :
+```bash
 [nginx]
 name=nginx repo
 baseurl=http://nginx.org/packages/centos/7/$basearch/
 gpgcheck=0
 enabled=1
 ```
-<span style="color:#FA5858; font-size:12px">※ 필자는 1.22.0버전을 사용했다.</span>
 
-```javascript
+- nginx 설치 진행
+```bash
 # yum으로 nginx 설치 :
 $ yum install -y nginx
 ```
+
+<span style="color:#FA5858; font-size:12px">※ 필자는 1.22.0버전을 사용했다.</span>
+
 * * *
 
 ### 방화벽 포트 개방 :
-```javascript
+```bash
 # 방화벽 포트 개방
-$ firewall-cmd --permanent --zone=public --add-port=포트번호/tcp
+$ firewall-cmd --permanent --zone=public --add-port=8089/tcp
 
 # 방화벽 재시작
 $ firewall-cmd --reload
@@ -59,7 +61,7 @@ $ firewall-cmd --list-all
 
 ### Nginx 포트 설정 :
 - 방금 방화벽 개방한 포트로 변경한다.
-```javascript
+```bash
 $ vi /etc/nginx/conf.d/default.conf
 ```
 [![텍스트](/assets/images/Linux/Nginx%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD.PNG)](/assets/images/Linux/Nginx%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD.PNG)
@@ -71,7 +73,7 @@ Ex) Listen 80 -> Listen 8089
 * * *
 
 ### Nginx 실행 :
-```javascript
+```bash
 $ systemctl start nginx
 $ systemctl enable nginx
 ```
