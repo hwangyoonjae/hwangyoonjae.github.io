@@ -12,7 +12,7 @@ author: hwangyoonjae
 description: Markdown summary with different options
 ---
 
-## API란 무엇인가?:
+## API란?:
 - Application Programing Interface에 약자로, 응용 프로그램에서 사용할 수 있도록 운영 체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스다.
 
 <span style="color:#FA5858; font-size:12px">※ 인터페이스란? : 서로 다른 두 개의 시스템, 장치 사이에서 정보나 신호를 주고받는 경우의 접점이나 경계면이다.</span>
