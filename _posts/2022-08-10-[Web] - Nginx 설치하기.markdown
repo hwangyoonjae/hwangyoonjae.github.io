@@ -78,7 +78,7 @@ $ systemctl start nginx
 $ systemctl enable nginx
 ```
 
-##### systemctl enable 명령어를 사용하는 이유 : 서버 부팅 시 자동으로 서비스 구동하기 위해 사용한다.
+<span style="color:#FA5858; font-size:12px">※ systemctl enable 명령어를 사용하는 이유 : 서버 부팅 시 자동으로 서비스 구동하기 위해 사용한다.</span>
 
 * * *
 
