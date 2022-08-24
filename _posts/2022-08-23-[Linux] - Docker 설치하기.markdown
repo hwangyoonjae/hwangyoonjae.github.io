@@ -13,9 +13,20 @@ description: Markdown summary with different options
 ---
 
 ## Docker란 무엇인가?:
-- 컨테이너 기술을 활용하는 앱의 개발, 제공 및 실행을 위해 설계된 소프트웨어 컨테이너 플랫폼이다.
+- 컨테이너 기반의 오픈소스 가상화 플랫폼이다.
 
-<span style="color:#FA5858; font-size:12px">※ 인터페이스란? : 서로 다른 두 개의 시스템, 장치 사이에서 정보나 신호를 주고받는 경우의 접점이나 경계면이다.</span>
+<span style="color:#FA5858; font-size:12px">※ 컨테이너란? : 격리된 공간에서 프로세스가 동작하는 기술이다.</span>
+
+* * *
+
+### 가상화 방식과 컨테이너 기술의 차이 :
+- 기존의 가상화 방식은 OS 가상화 방식이며, 예를들어 VMWare나 VirtualBox와 같다.간단하지만 너무 무겁고 느리기 때문에 운영에 쓸 수 없는 문제점을 해결하고자 CPU 가상화 기술(HVM)을 이용한 Kernel-based Virtual Machine과 반가상화 기술이 등장하였다.
+이러한 기술들은 OpenStack이나 AWS와 같은 클라우드 서비스의 기반 기술이 되었다.
+
+[![텍스트](/assets/images/Linux/%EA%B0%80%EC%83%81%ED%99%94vs%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EC%B0%A8%EC%9D%B4.PNG)](/assets/images/Linux/%EA%B0%80%EC%83%81%ED%99%94vs%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EC%B0%A8%EC%9D%B4.PNG)
+
+- 리눅스에서는 이 방식을 리눅스 컨테이너라 하고, 단순히 프로세스를 격리시키기 때문에 가볍고 빠르게 동작한다.
+- 하나의 서버에 여러개의 컨테이너를 실행하면 서로 영향을 미치지 않고 독립적으로 실행된다.
 
 * * *
 
