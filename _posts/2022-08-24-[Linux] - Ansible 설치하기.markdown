@@ -21,7 +21,7 @@ description: Markdown summary with different options
 
 ### Asible 특징 :
 1. **멱등성 지원** - 멱등성: 여러번 실행해도 같은 결과 값이 나오는 성질- Ansible에서의 멱등성: 결과의 상태값이 다르더라도 결국에 결과는 동일하게 나오게 하는 성질
-2. ""Module - 많은 모듈 지원 - Shell에 의존하지 않고 Ansible에서 지원하는 Module로 구성관리에 용이하다.
-3. YAML 형식 지원- 기존의 Shell Scripts보다 간편하게 구성 가능하다.
-4. 대형 워크로드에 용이- 많은 서버에 구성이 필요한 경우 Shell Scripts보다 신속하게 처리 가능하다.
+2. **Module** - 많은 모듈 지원 - Shell에 의존하지 않고 Ansible에서 지원하는 Module로 구성관리에 용이하다.
+3. **YAML 형식 지원** - 기존의 Shell Scripts보다 간편하게 구성 가능하다.
+4. **대형 워크로드에 용이** - 많은 서버에 구성이 필요한 경우 Shell Scripts보다 신속하게 처리 가능하다.
 * * *
