@@ -12,12 +12,12 @@ author: hwangyoonjae
 description: Markdown summary with different options
 ---
 
-## 도커 이미지 (Docker Image)란 무엇인가? :
+## 도커 이미지 (Docker Image)란 무엇인가?:
 - "이미지 = 설정파일" 즉, 가상화에 WebServer, WAS, DB 등 설치하여 구성해야하는데 도커에서 이미지는 다운받아서 하나의 컨테이너만 만들면 그 만든 컨테이너 하나로 여러 개의 도커를 생성할 수 있다.
 
 * * *
 
-### 도커 이미지 (Docker Image) 특징 :
+### 도커 이미지 (Docker Image) 특징:
 - 이미지는 컨테이너 실행에 필요한 파일과 설정값 등을 포함하고 있는 것으로 변하지 않는다.
 - 이미지에 데이터가 쓰이는 것은 아니라 Immutable(불변적)이다.
 - 이미지를 다운로드할 때 개인이 git에 올려둔 것을 사용해도 되고, 이미지 경로(url)를 안 적으면 docker.org에 있는 서버로 연결된다.
@@ -25,8 +25,8 @@ description: Markdown summary with different options
 
 * * *
 
-## 도커 컨테이너 이미지 실습 :
-### 도커 컨테이너 이미지 찾기 :
+## 도커 컨테이너 이미지 실습:
+### 도커 컨테이너 이미지 찾기:
 - 이미지는 Docker Hub 사이트에서 찾아볼 수 있고, 서버에서 명령어로 확인 가능하다.
 > * [Docker Hub 바로가기](https://hub.docker.com/search?image_filter=official&q= "Docker Hub")
 
@@ -38,7 +38,7 @@ $ docker search [이미지명]
 ```
 [![텍스트](/assets/images/Linux/docker%20image%20%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C%20%EA%B2%80%EC%83%89%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Linux/docker%20image%20%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C%20%EA%B2%80%EC%83%89%20%ED%99%94%EB%A9%B4.PNG)
 
-### 도커 컨테이너 이미지 다운로드 :
+### 도커 컨테이너 이미지 다운로드:
 - 이미지 찾기를 통해서 다운로드할 이미지 이름과 필요한 버전을 입력하여 다운로드한다.
 ```bash
 $ docker pull [이미지명]
@@ -47,7 +47,7 @@ $ docker pull [이미지명]
 
 * * *
 
-### 도커 이미지 목록 보기 :
+### 도커 이미지 목록 보기:
 - 다운받은 이미지 목록을 확인한다.
 ```bash
 $ docker images
@@ -56,7 +56,7 @@ $ docker images
 
 * * *
 
-### 도커 이미지 삭제하기 :
+### 도커 이미지 삭제하기:
 - **"docker rmi"**명령어를 사용하여 도커 이미지를 삭제한다.<br>
 <span style="color:#FA5858; font-size:12px">※ rmi는 "remove image"의 줄임말이다.</span>
 ```bash
@@ -66,7 +66,7 @@ $ docker rmi [이미지명]
 
 * * *
 
-### 이미지 강제 삭제하기 :
+### 이미지 강제 삭제하기:
 - 사용중인 이미지에 대해서는 아래와 같은 에러가 출력되며 삭제가 안된다.
 ```
 Error response from daemon: conflict: unable to remove repository reference "nginx" (must force) - container 7d603f62cb2a is using its referenced image 2b7d6430f78d

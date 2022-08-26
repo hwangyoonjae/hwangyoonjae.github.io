@@ -19,7 +19,7 @@ description: Markdown summary with different options
 
 * * *
 
-### Ansible 특징 :
+### Ansible 특징:
 1. **멱등성 지원**: 
     - 멱등성 : 여러번 실행해도 같은 결과 값이 나오는 성질
     - Ansible에서의 멱등성 : 결과의 상태값이 다르더라도 결국에 결과는 동일하게 나오게 하는 성질
