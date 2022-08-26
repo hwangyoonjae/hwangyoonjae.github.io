@@ -19,7 +19,7 @@ description: Markdown summary with different options
 
 * * *
 
-### 가상화 방식과 컨테이너 기술의 차이 :
+### 가상화 방식과 컨테이너 기술의 차이:
 - 기존의 가상화 방식은 OS 가상화 방식이며, 예를들어 VMWare나 VirtualBox와 같다.간단하지만 너무 무겁고 느리기 때문에 운영에 쓸 수 없는 문제점을 해결하고자 CPU 가상화 기술(HVM)을 이용한 Kernel-based Virtual Machine과 반가상화 기술이 등장하였다.
 이러한 기술들은 OpenStack이나 AWS와 같은 클라우드 서비스의 기반 기술이 되었다.
 
@@ -30,9 +30,19 @@ description: Markdown summary with different options
 
 * * *
 
-## Docker 설치하기 :
+## Docker 구조:
+- Docker는 **클라이언트와 서버 구조**로 되어있고, 클라이언트인 CLI(Docker)를 통해 각 커맨드로 데몬 프로세스와 통신하며, 데몬 프로세스가 Docker 레지스트리에 저장되어 있는 이미지들을 불러와 컨테이너를 실행하거나 커스터마이징한 이미지를 Docker 레지스트리에 다시 업로드하는 흐름을 가진다.
+[![텍스트](/assets/images/Linux/docker%20%EA%B5%AC%EC%A1%B0.PNG)](/assets/images/Linux/docker%20%EA%B5%AC%EC%A1%B0.PNG)
 
-### 레퍼지토리 등록 :
+- **Docker 데몬** : 다른 Docker 데몬과 통신하거나 Docker API 요청을 기다리고 이미지, 컨테이너, 네트워크, 볼륨 등을 관리하는 역할을 한다. 
+- **Docker 클라이언트** : docker 커맨드를 통해 한 개 이상의 데몬과 통신할 수 있으며 사용자가 Docker와 상호작용할 수 있는 가장 우선적인 방법이다.
+- **Docker 레지스트리** : Docker 이미지 저장소. 기본적으로 Docker Hub라는 퍼블릭 레지스트리로 설정되어 있고, 프라이빗 레지스트리도 생성할 수 있다.
+
+* * *
+
+## Docker 설치하기:
+
+### 레퍼지토리 등록:
 ```bash
 # 어플리케이션 설치를 위한 사전작업
 $ yum install -y yum-utils
@@ -41,7 +51,7 @@ $ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/doc
 
 - docker 설치 진행
 ```bash
-# yum으로 docker 설치 :
+# yum으로 docker 설치
 $ yum install docker-ce docker-ce-cli containerd.io
 ```
 
@@ -49,7 +59,7 @@ $ yum install docker-ce docker-ce-cli containerd.io
 
 * * *
 
-### docker 실행 :
+### docker 실행:
 ```bash
 $ systemctl start docker
 $ systemctl enable docker
@@ -59,7 +69,7 @@ $ systemctl enable docker
 
 * * *
 
-### docker 구동확인 :
+### docker 구동확인:
 - 아래 명령어로 구동이 되었는지 확인한다.
 ```bash
 $ docker version
@@ -70,7 +80,7 @@ $ docker ps
 
 * * *
 
-### 일반 유저 docker 실행 권한 부여 :
+### 일반 유저 docker 실행 권한 부여:
 - 필자는 root 유저로 로그인하여 설치부터 실행까지 수행하였으나, 일반 유저의 경우 install 할때 sudo를 쓰거나 su 명령어로 root 권한으로 변경해야한다. 
 ```bash
 $ usermod -a -G docker 유저계정
