@@ -31,7 +31,7 @@ $ docker run [옵션] [이미지이름 or 이미지ID] [실행할 파일]
     - <호스트포트>:<컨테이너포트><br>
     <span style="color:#FA5858; font-size:12px">※ 호스트 포트는 중복되면 안된다.</span>
 
-- **-i** 옵션
+- **-it** 옵션
     - 컨테이너쪽 Shell에 들어가서 명령 실행할 수 있는 입력이 되도록 한다.
 
 - **-t** 옵션
@@ -49,7 +49,7 @@ $ docker run [옵션] [이미지이름 or 이미지ID] [실행할 파일]
 
 ```bash
 # 예시
-$ docker container run -d -t -p 9000:8080 nginx
+$ docker container run -d -t -p 9000:8080 nginx --name nginx_server
 ```
 
 * * *
@@ -80,5 +80,17 @@ $ docker ps
 # 종료된 컨테이너까지 모두 목록 확인
 $ docker ps -a
 ```
+
+* * *
+
+### 실행중인 도커 컨테이너 (Docker Container) 명령어 전달:
+- docker exec를 통해 명령 실행이 가능하다.
+```bash
+$ docker exec -it <container-id or name> <명령어> bash
+```
+<span style="color:#FA5858; font-size:12px">※ -it는 터미널과 컨테이너가 지속적으로 연결되도록 하는 옵션이다.</span>
+
+- 위와 같은 명령어 실행 시 아래와 같이 진행된다.
+[![텍스트](/assets/images/Linux/docker%20container%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%A0%84%EB%8B%AC%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Linux/docker%20container%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%A0%84%EB%8B%AC%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
