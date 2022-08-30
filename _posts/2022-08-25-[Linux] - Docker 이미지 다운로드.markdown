@@ -57,6 +57,15 @@ $ docker images
 
 * * *
 
+### 도커 이미지 압축하기:
+- 내부망(인터넷 접근 불가)에서 사용할 이미지를 압축한다.
+```bash
+$ docker save <image명> > <image명>.tar
+```
+[![텍스트](/assets/images/Linux/docker%20image%20%EC%95%95%EC%B6%95%20%EC%A7%84%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Linux/docker%20image%20%EC%95%95%EC%B6%95%20%EC%A7%84%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)
+
+* * *
+
 ### 도커 이미지 삭제하기:
 - **"docker rmi"**명령어를 사용하여 도커 이미지를 삭제한다.<br>
 <span style="color:#FA5858; font-size:12px">※ rmi는 "remove image"의 줄임말이다.</span>
