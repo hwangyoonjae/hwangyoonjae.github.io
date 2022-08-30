@@ -24,32 +24,32 @@ $ docker run [옵션] [이미지이름 or 이미지ID] [실행할 파일]
 [![텍스트](/assets/images/Linux/docker%20container%20ID%20%EC%B6%9C%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Linux/docker%20container%20ID%20%EC%B6%9C%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)
 
 #### 옵션
-- **-d**옵션
+- **-d** 옵션
     - 실행 화면을 보지 않고 백그라운드로 컨테이너를 실행시킨다는 옵션
 
-- **-p**옵션
+- **-p** 옵션
     - <호스트포트>:<컨테이너포트><br>
     <span style="color:#FA5858; font-size:12px">※ 호스트 포트는 중복되면 안된다.</span>
 
-- **-i**옵션
+- **-i** 옵션
     - 컨테이너쪽 Shell에 들어가서 명령 실행할 수 있는 입력이 되도록 한다.
 
-- **-t**옵션
+- **-t** 옵션
     - 터미널과 비슷한 환경을 조성해준다.
 
-- **-v**옵션
+- **-v** 옵션
     - 볼륨 마운트 이용 시 사용한다.
 
-- **--name**옵션
+- **--name** 옵션
     - 컨테이너의 이름을 지정한다.<br>
-    <span style="color:#FA5858; font-size:12px">※ --name <이름> 옵션과 붙여서 사용한다.</span>
+    <span style="color:#FA5858; font-size:12px">※ --name "이름" 옵션과 붙여서 사용한다.</span>
 
-- **--rm**옵션
+- **--rm** 옵션
     - 컨테이너를 stop 시키는 동시에 삭제까지 한번에 실행한다.
 
 ```bash
 # 예시
-$ docker container run -d -t -p 9000:8080 nginx/latest
+$ docker container run -d -t -p 9000:8080 nginx
 ```
 
 * * *
