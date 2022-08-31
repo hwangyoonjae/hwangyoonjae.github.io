@@ -93,4 +93,16 @@ $ docker exec -it <container-id or name> <명령어> bash
 - 위와 같은 명령어 실행 시 아래와 같이 진행된다.
 [![텍스트](/assets/images/Linux/docker%20container%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%A0%84%EB%8B%AC%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Linux/docker%20container%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%A0%84%EB%8B%AC%20%ED%99%94%EB%A9%B4.PNG)
 
+#### 도커 컨테이너에서 명령어 실행하려면?
+- 필자는 nginx 설정파일 변경을 위해 vi 명령어를 사용할려 했으나 아래와 같이 오류가 표시된다.
+```bash
+bash: vi: command not found
+```
+
+- 아래와 같이 명령어 사용을 위해 컨테이너 內 설치를 진행한다.
+```bash
+$ apt-get update
+$ apt-get install vi
+```
+
 * * *
