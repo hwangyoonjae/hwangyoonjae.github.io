@@ -50,7 +50,7 @@ description: Markdown summary with different options
 
     - **restart** : docker container가 다운되었을 경우, 항상 재시작하는 설정이다.
 
-    - **volumes** : docker run 명령의 -v 옵션과 동일한 역할을 한다.<br>
+    - **volumes** : 로컬에서 작업 할 폴더의 위치와 컨테이너의 위치를 연결시켜준다.<br>
     <span style="color:#FA5858; font-size:12px">※ 여러 개의 volume을 지정할 수 있고, 리스트처럼 작성하면 된다.</span>
 
     - **environment** : dockerfile의 ENV 옵션과 동일한 역할을 한다.<br>
