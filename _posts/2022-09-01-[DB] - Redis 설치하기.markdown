@@ -15,7 +15,9 @@ description: Markdown summary with different options
 ## Redis 설치하기:
 ### Redis 패키지 설치하기:
 ```bash
+# epel(Extra Packages of Enterprise Linux)설치
 $ yum install epel-release yum-utils
+# redis 설치
 $ yum install redis
 ```
 
