@@ -12,13 +12,13 @@ author: hwangyoonjae
 description: Markdown summary with different options
 ---
 
-## Docker Stack이란? :
+## Docker Stack이란?:
 - 여러 개의 서비스로 구성된 어플리케이션을 관리하기 위한 도구이다.
 - Swarm mode에서만 사용 가능하다.
 
 * * *
 
-### Docker Stack의 구조 :
+### Docker Stack의 구조:
 - Docker Compose와 비슷하지만 지원하는 옵션이나 내부 로직에서 차이가 있다.
 - 기본 네트워크가 브릿지 네트워크로 생성되지만 **Docker Stack**은 Overlay 네트워크가 생성된다.
 
