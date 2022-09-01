@@ -1,0 +1,74 @@
+---
+title: "[DB] - Redis 설치하기"
+layout: post
+date: 2022-09-01
+image: /assets/images/Post/redis.png
+headerImage: true
+tag:
+- Redis
+- NoSQL
+category: blog
+author: hwangyoonjae
+description: Markdown summary with different options
+---
+
+## Redis 설치하기:
+### Redis 패키지 설치하기:
+```bash
+$ yum install epel-release yum-utils
+$ yum install redis
+```
+
+* * *
+
+### Redis 서비스 시작하기:
+```bash
+$ systemctl start redis
+$ systemctl enable redis
+```
+
+* * *
+
+### Redis 원격 액세스 설정하기:
+- 기본적으로 Redis는 원격 연결을 허용하지 않는다. Redis가 실행 중인 시스템인 127.0.0.1(로컬 호스트)에서만 Redis 서버에 연결할 수 있다.
+```bash
+$ vi /etc/redis.conf
+```
+
+- redis.conf 파일에서 bind 127.0.0.1로 시작하는 줄을 찾고 127.0.0.1 뒤에 서버 개인 IP 주소를 추가한다.
+```
+# IF YOU ARE SURE YOU WANT YOUR INSTANCE TO LISTEN TO ALL THE INTERFACES
+# JUST COMMENT THE FOLLOWING LINE.
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+bind 127.0.0.1 0.0.0.0
+```
+
+* * *
+
+### Redis 변경 내용을 저장 후 서비스 재시작하기:
+```bash
+$ sudo systemctl restart redis
+```
+
+* * *
+
+### ss 명령어로 서버가 6379 포트 수신 중인지 확인하기:
+```bash
+$ ss -an | grep 6379
+```
+[![텍스트](/assets/images/DB/Redis%206379%ED%8F%AC%ED%8A%B8%20%EC%88%98%EC%8B%A0%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/Redis%206379%ED%8F%AC%ED%8A%B8%20%EC%88%98%EC%8B%A0%20%ED%99%95%EC%9D%B8.PNG)
+
+* * *
+
+### Redis 서버 확인하기:
+```bash
+$ redis-cli ping
+```
+[![텍스트](/assets/images/DB/Redis%20%EC%84%9C%EB%B2%84%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/Redis%20%EC%84%9C%EB%B2%84%20%ED%99%95%EC%9D%B8.PNG)
+
+```bash
+# Redis 명령창 접속
+$ redis-cli
+```
+
+* * *
