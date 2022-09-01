@@ -25,9 +25,16 @@ $ yum install redis
 
 ### Redis 서비스 시작하기:
 ```bash
+# redis 서버 시작
 $ systemctl start redis
+
+# redis 서버 자동 실행
 $ systemctl enable redis
+
+# redis 서버 동작 확인
+$ systemctl status redis
 ```
+[![텍스트](/assets/images/DB/Redis%20%EC%A0%95%EC%83%81%EC%8B%A4%ED%96%89%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/Redis%20%EC%A0%95%EC%83%81%EC%8B%A4%ED%96%89%20%ED%99%95%EC%9D%B8.PNG)
 
 * * *
 
@@ -44,6 +51,7 @@ $ vi /etc/redis.conf
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 bind 127.0.0.1 0.0.0.0
 ```
+<span style="color:#FA5858; font-size:12px">※ 0.0.0.0 으로 설정해 모든 접근허용 설정이 가능하다.</span>
 
 * * *
 
