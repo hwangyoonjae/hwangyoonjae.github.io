@@ -76,4 +76,6 @@ description: Markdown summary with different options
 
     - **depends_on** : 여러 개의 docker container를  Docker Compose로 실행할 경우, 각 컨테이너가 실행되는 시점이 다르기 때문에 특정 컨테이너가 시작하자마자 바로 다른 컨테이너에 접속하면 경우에 따라서는 접속할 수 없는 상황이 발생한다.
 
+    -**deploy** : 도커 스웜에서 사용되는 여러 옵션들을 정의한다.
+
 * * *
