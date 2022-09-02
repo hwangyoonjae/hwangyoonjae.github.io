@@ -1,5 +1,5 @@
 ---
-title: "[WEB] - WEB서버와 WAS 차이"
+title: "[WEB] - WEB Server와 WAS 차이"
 layout: post
 date: 2022-08-04
 image: /assets/images/Post/WEBWAS.png
@@ -12,14 +12,14 @@ author: hwangyoonjae
 description: Markdown summary with different options
 ---
 
-## WEB과 WAS에 대해 알고 싶었던 계기 :
+## WEB Server와 WAS에 대해 알고 싶었던 계기 :
 - 서버점검이나 구축을 진행하면서 서버 OS 정보를 정리하는 경우가 있다.<br>
 서버에서 사용하는 플랫폼에 대해서는 버전 확인이나 설치 여부를 확인할 수 있지만, WEB과 WAS를 구별해서 정리를 해야하는 경우 헷갈리는게 너무 많았다.<br>
 그래서 업무에 있어 한번쯤은 이해를 해야할 거 같아서 블로그를 작성하게 되었다.
 
 * * *
 
-## WEB서버와 WAS란? :
+## WEB Server와 WAS(Web Application Server)란? :
 
 ### WEB서버(Web Server)란? :
 - 클라이언트(사용자)가 웹 브라우저에서 어떠한 페이지 요청을 하면 웹 서버에서 그 요청을 받아 **정적 컨텐츠**를 제공하는 서버
@@ -35,7 +35,7 @@ description: Markdown summary with different options
 - 서버 입장: 클라이언트의 요청을 기다리고, 웹 요청(http)에 대한 데이터를 만들어서 응답, 이때 데이터는 웹에서 처리할 수 있는 html, css, 이미지 등 정적인 데이터로 한정한다.
 ```
 
-### WEB 서버 기능 :
+### WEB Server 기능 :
 - HTTP 프로토콜을 기반으로 하여 클라이언트(웹 브라우저 또는 웹 크롤러)의 요청을 서비스 하는 기능을 담당한다.<br>
 <span style="color:#FA5858; font-size:12px">※ 대표적인 웹 서버 : Apache</span>
 
@@ -53,7 +53,7 @@ description: Markdown summary with different options
 - 웹 애플리케이션 컨테이너 : 웹 애플리케이션이 배포되는 공간이다.
 ```
 
-### WAS 기능 :
+### WAS(Web Application Server) 기능 :
 - 프로그램 실행 환경과 데이터베이스 접속 기능을 제공하고, 여러 개의 트랜잭션을 관리한다.<br>
 <span style="color:#FA5858; font-size:12px">※ 대표적인 웹 서버 : Tomcat</span>
 [![텍스트](/assets/images/Linux/WAS%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)](/assets/images/Linux/WAS%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)<br>
