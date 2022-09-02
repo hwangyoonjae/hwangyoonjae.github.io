@@ -25,11 +25,6 @@ description: Markdown summary with different options
 * * *
 
 ## 도커 스택(Docker Stack) 사용하기:
-```bash
-$ docker swarm init
-```
-[![텍스트](/assets/images/Linux/docker%20swarm%20%EC%A7%84%ED%96%89.PNG)](/assets/images/Linux/docker%20swarm%20%EC%A7%84%ED%96%89.PNG)
-
 - 아래와 같이 docker-compose.yaml 파일로 서비스를 정의한다.
 [![텍스트](/assets/images/Linux/docker%20compose%20%ED%8C%8C%EC%9D%BC%20%EC%9E%85%EB%A0%A5.PNG)](/assets/images/Linux/docker%20compose%20%ED%8C%8C%EC%9D%BC%20%EC%9E%85%EB%A0%A5.PNG)
 
