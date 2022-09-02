@@ -12,13 +12,13 @@ author: hwangyoonjae
 description: Markdown summary with different options
 ---
 
-## Docker Compose란? :
+## Docker Compose란?:
 - 여러 개의 docker container를 모아서 관리하기 위한 툴이다.
--각 서버를 docker container로 연결하여 동작시키고 docker compose를 사용하여 해당 컨테이너들을 관리한다.
+- 각 서버를 docker container로 연결하여 동작시키고 docker compose를 사용하여 해당 컨테이너들을 관리한다.
 
 * * *
 
-## Docker Compose 기본 사용법 :
+## Docker Compose 기본 사용법:
 - docker-compose.yml 파일을 작성하여 실행할 수 있고, YAML(야멜) 형식으로 작성해야 한다.
 
 ### YAML 문법
