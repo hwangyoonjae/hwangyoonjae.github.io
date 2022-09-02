@@ -16,7 +16,7 @@ description: Markdown summary with different options
 ### 1. 루비 설치
 > * [루비 설치파일 다운받기](https://rubyinstaller.org/downloads/ "지킬테마")
 
-![텍스트](/assets/images/local/ruby%20%EC%84%A4%EC%B9%98%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8.PNG)
+[![텍스트](/assets/images/local/ruby%20%EC%84%A4%EC%B9%98%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8.PNG)](/assets/images/local/ruby%20%EC%84%A4%EC%B9%98%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8.PNG)
 ```javascript
 아래와 같이 화살표 표시된 추천버전을 다운받는다.
 => Ruby+devkit 3.x.x-x(x64)
@@ -61,13 +61,14 @@ $ bundle exec jekyll serve
 
 * 조치방법
     + [(클릭)필요한 라이브러리 다운받기 위해 사이트 이동한다.](https://curl.se/windows/ "라이브러리")
-    + 본인 PC 사양에 맞춰 다운로드 진행한다.![텍스트](/assets/images/local/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%20%EB%8B%A4%EC%9A%B4%ED%81%B4%EB%A6%AD.PNG)
+    + 본인 PC 사양에 맞춰 다운로드 진행한다.
+    [![텍스트](/assets/images/local/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%20%EB%8B%A4%EC%9A%B4%ED%81%B4%EB%A6%AD.PNG)](/assets/images/local/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%20%EB%8B%A4%EC%9A%B4%ED%81%B4%EB%A6%AD.PNG)
     + 압축 해제 후 **libcurl-x64.dll**을 **Ruby31-x64\bin**에 복사한다.
     + 파일명 **libcurl-x64.dll**에서 **libcurl.dll**로 변경한다.
     + 서버 재실행한다.
 
 ### 4. Window 로컬 실행 
 **http://127.0.0.1:4000/** 로 접속하면 완료!
-![텍스트](/assets/images/local/jekyll%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/images/local/jekyll%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)](/assets/images/local/jekyll%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
 
 * * *

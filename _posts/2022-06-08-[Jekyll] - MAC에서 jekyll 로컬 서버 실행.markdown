@@ -50,7 +50,7 @@ $ gem install jekyll bundle
 ```
 
 하지만 나는 아래 그림처럼 맥북에서도 오류가 발생하여 실행을 못했다....
-![텍스트](/assets/images/local/맥북&#32;jekyll&#32;설치&#32;오류.png)
+[![텍스트](/assets/images/local/맥북&#32;jekyll&#32;설치&#32;오류.png)](/assets/images/local/맥북&#32;jekyll&#32;설치&#32;오류.png)
 
 <span style="color:#FA5858; font-size:12px">* 오류 발생 원인은 아래와 같다.</span>
 ```
@@ -69,12 +69,12 @@ sudo를 통해 root 권한으로 실행하면 설치가 가능하지만, 보안�
       $ rbenv versions
       ```
       <span style="color:#FA5858; font-size:10px">* 아래 그림처럼 버전을 확인할 수 있다.</span>
-      ![텍스트](/assets/images/local/rbenv&#32;정상&#32;설치&#32;확인.png)
+      [![텍스트](/assets/images/local/rbenv&#32;정상&#32;설치&#32;확인.png)](/assets/images/local/rbenv&#32;정상&#32;설치&#32;확인.png)
     + rbenv로 관리되는 Ruby를 설치한다.
       ```javascript
       $ rbenv install -l
       ```
-      ![텍스트](/assets/images/local/설치할&#32;수&#32;Ruby&#32;버전.png)
+      [![텍스트](/assets/images/local/설치할&#32;수&#32;Ruby&#32;버전.png)](/assets/images/local/설치할&#32;수&#32;Ruby&#32;버전.png)
       ```javascript
       $ rbenv install 2.6.10
       ```
@@ -108,6 +108,6 @@ sudo를 통해 root 권한으로 실행하면 설치가 가능하지만, 보안�
 
 ### 4. MAC 로컬 실행 
 **http://127.0.0.1:4000/** 로 접속하면 완료!
-![텍스트](/assets/images/local/jekyll%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/images/local/jekyll%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)](/assets/images/local/jekyll%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
 
 * * *
