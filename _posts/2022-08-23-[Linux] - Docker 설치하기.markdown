@@ -48,8 +48,6 @@ description: Markdown summary with different options
 $ yum install -y yum-utils
 $ yum-config-manager \ --add-repo \ https://download.docker.com/linux/centos/docker-ce.repo
 ```
-
-- docker 설치 진행
 ```bash
 # yum으로 docker 설치
 $ yum install docker-ce docker-ce-cli containerd.io
