@@ -45,9 +45,9 @@ description: Markdown summary with different options
 ```bash
 # 어플리케이션 설치를 위한 사전작업
 $ yum install -y yum-utils
-$ yum-config-manager \ 
---add-repo \ 
-https://download.docker.com/linux/centos/docker-ce.repo
+$ yum-config-manager \
+     --add-repo \
+     https://download.docker.com/linux/centos/docker-ce.repo
 ```
 ```bash
 # yum으로 docker 설치
