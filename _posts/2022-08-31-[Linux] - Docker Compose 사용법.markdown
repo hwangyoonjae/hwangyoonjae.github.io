@@ -1,5 +1,5 @@
 ---
-title: "[Linux] - Docker Compose 사용법"
+title: "[Linux] - Docker 컴포즈 사용법"
 layout: post
 date: 2022-08-31
 image: /assets/images/Post/docker.png
@@ -12,13 +12,13 @@ author: hwangyoonjae
 description: Markdown summary with different options
 ---
 
-## Docker Compose란?:
+## 도커 컴포즈(Docker Compose)란?:
 - 여러 개의 docker container를 모아서 관리하기 위한 툴이다.
 - 각 서버를 docker container로 연결하여 동작시키고 docker compose를 사용하여 해당 컨테이너들을 관리한다.
 
 * * *
 
-## Docker Compose 기본 사용법:
+## 도커 컴포즈(Docker Compose) 기본 사용법:
 - docker-compose.yml 파일을 작성하여 실행할 수 있고, YAML(야멜) 형식으로 작성해야 한다.
 
 ### YAML 문법
@@ -33,8 +33,7 @@ description: Markdown summary with different options
 
 * * *
 
-## Docker Compose 사용법 이해하기:
-
+## 도커 컴포즈(Docker Compose) 사용법 이해하기:
 ### docker-compose.yml 예시:
 - 기본적으로 docker-compose.yml은 version, services, volumes, networks의 카테고리로 작성되지만, 주로 version과 services가 많이 사용된다.<br>
 [![텍스트](/assets/images/Linux/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)](/assets/images/Linux/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)
