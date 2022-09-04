@@ -91,7 +91,7 @@ $ docker service rm <서비스 이름>
 $ docker swarm leave --force
 
 # 워커 노드(Worker Node)
-$ docker docker swarm leave
+$ docker swarm leave
 ```
 
 * * *
