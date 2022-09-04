@@ -82,6 +82,8 @@ $ docker ps
 ### 일반 유저 docker 실행 권한 부여:
 - 필자는 root 유저로 로그인하여 설치부터 실행까지 수행하였으나, 일반 유저의 경우 install 할때 sudo를 쓰거나 su 명령어로 root 권한으로 변경해야한다. 
 ```bash
+# -a : --append 사용자를 서브 그룹에 추가한다.
+# -G : --groups 사용자를 추가할 그룹을 지정한다.
 $ usermod -a -G docker 유저계정
 ```
 
