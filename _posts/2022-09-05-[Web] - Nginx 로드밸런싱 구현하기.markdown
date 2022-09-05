@@ -33,6 +33,3 @@ description: Markdown summary with different options
 - 연결 수가 가장 적으면서 평균 응답시간이 가장 적은 쪽을 선택해서 분배한다.
 
 * * *
-
-
-* * *
