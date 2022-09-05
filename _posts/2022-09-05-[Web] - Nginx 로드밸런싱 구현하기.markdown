@@ -1,0 +1,38 @@
+---
+title: "[WEB] - Nginx 로드밸런싱 구현하기"
+layout: post
+date: 2022-09-05
+image: /assets/images/Post/nginx.png
+headerImage: true
+tag:
+- WEB
+- Nginx
+- Loadbalancing
+category: blog
+author: hwangyoonjae
+description: Markdown summary with different options
+---
+
+## 로드밸런싱이란?:
+- 서버가 부담하는 부하를 분산해주는 장치 혹은 기술이다.
+
+* * *
+
+## Nginx 로드 밸런싱 메서드:
+#### Round Robin (라운드 로빈):
+- 서버의 가중치를 고려해, 실제 서버들을 처음부터 차례로 선택해 가며 모든 서버로 균등하게 분산 된다.<br>
+<span style="color:#FA5858; font-size:12px">※ </span>
+
+#### Least-connected (최소 연결):
+- 서버의 가중치를 고려해, 활성 연결 수가 가장 적은 서버로 요청을 전송 한다.
+
+#### Ip_hash:
+- 요청이 클라이언트 IP주소로 해싱하고, 한번 요청 받은 서버가 있을 때 해당 서버에만 요청을 분배한다.
+
+#### Least_time (최소 시간):
+- 연결 수가 가장 적으면서 평균 응답시간이 가장 적은 쪽을 선택해서 분배한다.
+
+* * *
+
+
+* * *
