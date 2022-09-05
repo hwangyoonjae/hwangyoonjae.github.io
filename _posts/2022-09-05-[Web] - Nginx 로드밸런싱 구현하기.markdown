@@ -21,7 +21,7 @@ description: Markdown summary with different options
 ## Nginx 로드 밸런싱 메서드:
 #### Round Robin (라운드 로빈):
 - 서버의 가중치를 고려해, 실제 서버들을 처음부터 차례로 선택해 가며 모든 서버로 균등하게 분산 된다.<br>
-<span style="color:#FA5858; font-size:12px">※ </span>
+<span style="color:#FA5858; font-size:12px">※ 로드 밸런싱 메서드 입력 안하면 default 값이다.</span>
 
 #### Least-connected (최소 연결):
 - 서버의 가중치를 고려해, 활성 연결 수가 가장 적은 서버로 요청을 전송 한다.
