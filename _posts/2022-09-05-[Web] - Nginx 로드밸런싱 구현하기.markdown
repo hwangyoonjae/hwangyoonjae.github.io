@@ -33,3 +33,30 @@ description: Markdown summary with different options
 - 연결 수가 가장 적으면서 평균 응답시간이 가장 적은 쪽을 선택해서 분배한다.
 
 * * *
+
+## Nginx 로드 밸런싱하기:
+- include를 통해서 로드밸런싱 설정 파일을 추가한다.
+```bash
+$ vi /etc/nginx/nginx.conf
+```
+[![텍스트](/assets/images/Linux/nginx.conf%20%EC%84%A4%EC%A0%95%EC%B6%94%EA%B0%80%20.PNG)](/assets/images/Linux/nginx.conf%20%EC%84%A4%EC%A0%95%EC%B6%94%EA%B0%80%20.PNG)
+
+- 아래와 같이 default.conf에 내용을 입력한다.
+```bash
+$ cd /etc/nginx
+$ mkdir site-avaliable
+$ cd site-avaliable
+$ vi default.conf
+```
+[![텍스트](/assets/images/Linux/nginx%20%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%8B%B1%20%EC%84%A4%EC%A0%95.PNG)](/assets/images/Linux/nginx%20%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%8B%B1%20%EC%84%A4%EC%A0%95.PNG)
+
+* * *
+
+## Nginx 서비스 재시작하기:
+```bash
+$ systemctl restart nginx
+또는
+$ service nginx reload
+```
+
+* * *
