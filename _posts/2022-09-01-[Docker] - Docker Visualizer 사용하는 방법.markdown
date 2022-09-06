@@ -1,5 +1,5 @@
 ---
-title: "[Linux] - Docker Visualizer 사용하는 방법"
+title: "[Docker] - Docker Visualizer 사용하는 방법"
 layout: post
 date: 2022-09-01
 image: /assets/images/Post/docker.png

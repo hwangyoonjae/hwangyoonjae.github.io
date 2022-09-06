@@ -1,5 +1,5 @@
 ---
-title: "[Linux] - Docker 컨테이너 실행"
+title: "[Docker] - Docker 컨테이너 실행"
 layout: post
 date: 2022-08-30
 image: /assets/images/Post/docker.png

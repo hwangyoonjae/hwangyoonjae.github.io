@@ -1,5 +1,5 @@
 ---
-title: "[Linux] - Docker 스웜 구성하기"
+title: "[Docker] - Docker 스웜 구성하기"
 layout: post
 date: 2022-09-02
 image: /assets/images/Post/docker.png

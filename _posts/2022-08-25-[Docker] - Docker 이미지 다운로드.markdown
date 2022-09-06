@@ -1,5 +1,5 @@
 ---
-title: "[Linux] - Docker 이미지 다운로드"
+title: "[Docker] - Docker 이미지 다운로드"
 layout: post
 date: 2022-08-25
 image: /assets/images/Post/docker.png
