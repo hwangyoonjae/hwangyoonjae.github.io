@@ -70,13 +70,15 @@ $ docker swarm join --token SWMTKN-1-4n6l6glu7zuere7uoxwuefzx7v97i0tlyyuj3xddwqe
 
 ### 도커 스웜(Docker Swarm) 서비스 시작하기:
 - 매니저 노드(Manager Node)에서 진행한다.
-```bash
+
+``` bash
 # docker-compose.yml을 통해 서비스 구성
-$ docker stack deploy -c <yaml 파일> <스택 이름>
+$ docker stack deploy -c <yaml-file> <stack-name>
 
 # docker service create를 통해 서비스 구성
 $ docker service create --name <서비스 이름> --replicas <컨테이너 개수> -p <호스트포트:컨테이너포트> <이미지 이름>
 ```
+
 [![텍스트](/assets/images/Linux/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)](/assets/images/Linux/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)
 [![텍스트](/assets/images/Linux/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Linux/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)
 
