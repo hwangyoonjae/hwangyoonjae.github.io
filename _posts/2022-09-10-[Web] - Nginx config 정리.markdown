@@ -31,6 +31,13 @@ description: Markdown summary with different options
 
 - **http**
   - **include** : http 블록에 가져올 context 파일 경로이다.
-  - **default_type** : mimetype 중에 기본값으로 사용할 값
+
+  - **default_type** : mimetype 중에 기본값으로 사용할 값을 설정한다.
+  
+  - **log_format** : 로그포멧 이름과 형식을 지정하고, 가상호스트 설정시 로그파일 뒤에 로그포멧 이름을 지정하면 해당 포멧대로 로그가 쌓인다.
+
+  - **sendfile** : on으로 설정시 read/write시 하드디스크 io를 일으키지 않고 커널 내부에서 파일을 복사하여 속도 향상된다.
+
+  - **keepalive_timeout** : 서버에 접속시 클라이언트와 커넥션을 열린채로 유지하는 시간이다.
 
 * * *
