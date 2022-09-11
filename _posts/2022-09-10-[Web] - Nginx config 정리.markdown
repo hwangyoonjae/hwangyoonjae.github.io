@@ -37,7 +37,7 @@ description: Markdown summary with different options
 
   - **pid** : nginx main process(=master process)의 pid 저장 파일경로이다.
 
-### events 블록:
+### event 블록:
 - 네트워크의 동작방법과 관련된 설정값을 가진다.
 
   - **worker_connections** : 한개의 worker process가 동시에 오픈할 수 있는 최대 연결 갯수이며, client 와의 연결만 포함하는게 아니고, 모든 connection을 포함한다.
@@ -47,7 +47,7 @@ description: Markdown summary with different options
   ```
 
 ### http 블록:
-- server, location의 루트 블록이며, http블록 안에 한 개 이상의 server 블록을 선언할 수 있고, server 블록 안에서 한 개 이상의 location 블럭을 삽입할 수 있다.
+- server, location의 루트 블록이며, http블록 안에 적어도 하나의 server 블록을 선언할 수 있고, server 블록 안에서 한 개 이상의 location 블럭을 삽입할 수 있다.
 
   - **include** : http 블록에 가져올 context 파일 경로이다.
 
@@ -79,5 +79,16 @@ description: Markdown summary with different options
       root /var/www/minimilab.com
   }
   ```
+
+#### server / location 블록:
+- location directive를 이용하여 nginx는 요청 URI에 따라 다른 서버로 트래픽을 전송할 수 있다.
+  ```bash
+  #사용문법
+  location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+  ```
+- location / 의 요청이 오면 /usr/share/nginx/html에서 정적인(static)페이지를 보여준다.
 
 * * *
