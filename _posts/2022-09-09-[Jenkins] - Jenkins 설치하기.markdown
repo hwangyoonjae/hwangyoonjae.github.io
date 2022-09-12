@@ -75,3 +75,55 @@ $ update-alternatives --config java
 [![텍스트](/assets/images/Jenkins/%EC%9E%90%EB%B0%94%20%EB%B2%84%EC%A0%84%20%EB%B3%80%EA%B2%BD%20%EB%B0%A9%EB%B2%95.PNG)](/assets/images/Jenkins/%EC%9E%90%EB%B0%94%20%EB%B2%84%EC%A0%84%20%EB%B3%80%EA%B2%BD%20%EB%B0%A9%EB%B2%95.PNG)
 
 * * *
+
+## 젠킨스(Jenkins) 설치하기:
+- yum 레포지터리에 젠킨스 레드햇 안정화 버전 레포지터리를 추가한다.
+  ```bash
+  $ wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  ```
+
+- rpm에 젠킨스를 추가한다.
+  ```bash
+  $ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+  ```
+
+- 젠킨스를 설치한다.
+  ```bash
+  # epel 설치
+  $ yum install epel-release
+
+  # 젠킨스 설치
+  $ yum install jenkins
+  ```
+  <span style="color:#FA5858; font-size:12px">※ epel이란? : Extra Packages for Enterprise Linux 의 약자로 기업용 리눅스 환경을 위한 추가 패키지를 의미한다.</span>
+
+- 젠킨스 설치가 잘 되었는지 확인한다.
+  ```bash
+  $ rpm -qa | grep jenkins
+  ```
+  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EC%84%A4%EC%B9%98%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EC%84%A4%EC%B9%98%20%ED%99%95%EC%9D%B8.PNG)
+
+- vi 편집기를 이용하여 포트를 변경하고, 해당 포트에 방화벽을 설정한다.
+  ```bash
+  # 젠킨스 포트 변경
+  $ vi /etc/sysconfig/jenkins
+  ```
+  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD%20%ED%99%94%EB%A9%B4.PNG)
+
+  ```bash
+  # 포트 방화벽 설정
+  $ firewall-cmd --permanent --zone=public --add-port=9090/tcp
+  $ firewall-cmd --reload
+  ```
+
+* * *
+
+## 젠킨스(Jenkins) 시작하기:
+- 젠킨스를 시작하기 위해 다음 명령어를 입력한다.
+  ```bash
+  $ systemctl start jenkins
+  또는
+  $ service jenkins start
+  ```
+
+* * *
