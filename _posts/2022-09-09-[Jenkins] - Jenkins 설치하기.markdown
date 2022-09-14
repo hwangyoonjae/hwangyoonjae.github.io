@@ -73,6 +73,7 @@ $ java -version
 $ update-alternatives --config java
 ```
 [![텍스트](/assets/images/Jenkins/%EC%9E%90%EB%B0%94%20%EB%B2%84%EC%A0%84%20%EB%B3%80%EA%B2%BD%20%EB%B0%A9%EB%B2%95.PNG)](/assets/images/Jenkins/%EC%9E%90%EB%B0%94%20%EB%B2%84%EC%A0%84%20%EB%B3%80%EA%B2%BD%20%EB%B0%A9%EB%B2%95.PNG)
+<span style="color:#FA5858; font-size:12px">※ 필자는 jdk11을 설치하였기에 3번을 선택하여 진행했다.</span>
 
 * * *
 
