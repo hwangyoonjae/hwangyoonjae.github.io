@@ -139,4 +139,16 @@ $ update-alternatives --config java
 - Install suggested plugins를 클릭해 기초 플러그인을 설치한다.
   [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%20%EC%84%A4%EC%B9%98.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%20%EC%84%A4%EC%B9%98.PNG)
 
+- 계정 정보를 입력하고 Save and Continue를 누른다.
+  [![텍스트](/assets/images/Jenkins/%EA%B3%84%EC%A0%95%EC%A0%95%EB%B3%B4%20%EC%9E%85%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Jenkins/%EA%B3%84%EC%A0%95%EC%A0%95%EB%B3%B4%20%EC%9E%85%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)
+
+- URL을 입력하고 Save and Finish를 누른다.
+  [![텍스트](/assets/images/Jenkins/%EC%84%9C%EB%B2%84%20%EC%A3%BC%EC%86%8C%20%EC%A7%80%EC%A0%95.PNG)](/assets/images/Jenkins/%EC%84%9C%EB%B2%84%20%EC%A3%BC%EC%86%8C%20%EC%A7%80%EC%A0%95.PNG)
+
+- 그다음 Start using Jenkins를 누른다.
+  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EC%8B%9C%EC%9E%91%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EC%8B%9C%EC%9E%91%20%ED%99%94%EB%A9%B4.PNG)
+
+- 다음과 같은 화면이 나타나면 기본 설정이 완료된거다.
+  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.PNG)
+
 * * *
