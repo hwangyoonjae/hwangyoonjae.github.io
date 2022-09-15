@@ -102,14 +102,14 @@ $ update-alternatives --config java
   ```bash
   $ rpm -qa | grep jenkins
   ```
-  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EC%84%A4%EC%B9%98%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EC%84%A4%EC%B9%98%20%ED%99%95%EC%9D%B8.PNG)
+  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD%20%ED%99%94%EB%A9%B4.PNG)
 
 - vi 편집기를 이용하여 포트를 변경하고, 해당 포트에 방화벽을 설정한다.
   ```bash
   # 젠킨스 포트 변경
-  $ vi /etc/sysconfig/jenkins
+  $ vi /usr/lib/systemd/system/jenkins.service
   ```
-  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD%20%ED%99%94%EB%A9%B4.PNG)
+  
 
   ```bash
   # 포트 방화벽 설정
@@ -119,12 +119,24 @@ $ update-alternatives --config java
 
 * * *
 
-## 젠킨스(Jenkins) 시작하기:
+## 젠킨스(Jenkins) 사용하기:
 - 젠킨스를 시작하기 위해 다음 명령어를 입력한다.
   ```bash
   $ systemctl start jenkins
   또는
   $ service jenkins start
   ```
+
+- 호스트에서 브라우저를 열고 http://IP주소:포트번호를 입력해 접속하여 화면에 표시된 경로를 통해 초기 비밀번호를 확인한다.
+  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8%20%EC%9E%85%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)]
+
+- 아래 명령어를 입력하여 초기 비밀번호를 확인 후 입력한다.
+  ```bash
+  $ cat /var/lib/jenkins/secrets/initialAdminPassword
+  ```
+  [![텍스트](/assets/images/Jenkins/%EC%B4%88%EA%B8%B0%20%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/Jenkins/%EC%B4%88%EA%B8%B0%20%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8%20%ED%99%95%EC%9D%B8.PNG)
+
+- Install suggested plugins를 클릭해 기초 플러그인을 설치한다.
+  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%20%EC%84%A4%EC%B9%98.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%20%EC%84%A4%EC%B9%98.PNG)
 
 * * *
