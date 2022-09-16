@@ -33,7 +33,7 @@ description: Markdown summary with different options
   $ yum install java-11-openjdk-devel.x86_64
   ```
 
-### 정상 설치 확인:
+### jdk 설치 확인:
 ```bash
 $ java -version
 ```
@@ -110,7 +110,6 @@ $ update-alternatives --config java
   $ vi /usr/lib/systemd/system/jenkins.service
   ```
   
-
   ```bash
   # 포트 방화벽 설정
   $ firewall-cmd --permanent --zone=public --add-port=9090/tcp
