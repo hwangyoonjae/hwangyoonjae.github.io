@@ -127,7 +127,7 @@ $ update-alternatives --config java
   ```
 
 - 호스트에서 브라우저를 열고 http://IP주소:포트번호를 입력해 접속하여 화면에 표시된 경로를 통해 초기 비밀번호를 확인한다.
-  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8%20%EC%9E%85%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)]
+  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8%20%EC%9E%85%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8%20%EC%9E%85%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)
 
 - 아래 명령어를 입력하여 초기 비밀번호를 확인 후 입력한다.
   ```bash
