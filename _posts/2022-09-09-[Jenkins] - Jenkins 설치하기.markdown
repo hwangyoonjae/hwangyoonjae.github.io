@@ -102,13 +102,13 @@ $ update-alternatives --config java
   ```bash
   $ rpm -qa | grep jenkins
   ```
-  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD%20%ED%99%94%EB%A9%B4.PNG)
 
 - vi 편집기를 이용하여 포트를 변경하고, 해당 포트에 방화벽을 설정한다.
   ```bash
   # 젠킨스 포트 변경
   $ vi /usr/lib/systemd/system/jenkins.service
   ```
+  [![텍스트](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Jenkins/%EC%A0%A0%ED%82%A8%EC%8A%A4%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD%20%ED%99%94%EB%A9%B4.PNG)
   
   ```bash
   # 포트 방화벽 설정
