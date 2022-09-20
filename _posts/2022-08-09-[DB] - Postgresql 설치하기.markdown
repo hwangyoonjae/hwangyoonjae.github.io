@@ -14,9 +14,16 @@ description: Markdown summary with different options
 ---
 
 ## PostgreSQL란?:
-- 오픈소스 데이터베이스이며, 관계형 데이터베이스 시스템(RDBMS)의 일종이다.
+- 오픈 소스 객체-관계형 데이터베이스 시스템(ORDBMS)으로, Enterprise급 DBMS의 기능과 차세대 DBMS에서나 볼 수 있을 법한 기능들을 제공한다.
 - 가장 진보한 오픈소스 데이터베이스 시스템이라고 할 수 있으며, Unix/Linux, macOS, Solaris, Windows 등의 OS를 지원한다.
 
+### ORDBMS란?: 
+- 객체 지향 데이터베이스 시스템과 관계형 데이터베이스 시스템을 기반으로하며 복잡한 객체가 중심 역할을 하는 DBMS입니다.
+```bash
+# RDBMS와 ORDBMS 차이점
+RDBMS : 행과 열이 있는 하나 이상의 관계 또는 테이블의 모음이다.
+ORDBMS : 데이터가 객체로 저장된 것처럼 작동한다.
+```
 * * *
 
 ## PostgreSQL 설치하기:
