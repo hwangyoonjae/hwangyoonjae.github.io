@@ -20,6 +20,8 @@ description: Markdown summary with different options
 - 관계형 데이터베이스를 생성하고 수정하고 관리할 수 있는 소프트웨어이다.
 - RDBMS의 테이블은 서로 연관되어 있어 일반 DBMS보다 효율적으로 데이터를 저장, 구성 및 관리할 수 있다.
 
+* * *
+
 ## MariaDB 설치하기:
 ### MariaDB yum 저장소 추가하기:
 ```bash
