@@ -1,9 +1,9 @@
 # main text of home
 title: Hwang Yoon Jae
-bio: It is better to fail in originality than to succeed in imitation.
+bio: 노력하다보면 노력한 만큼 발전하게된다.
 
 # twitter summary info
-description: It is better to fail in originality than to succeed in imitation.
+description: 노력하다보면 노력한 만큼 발전하게된다.
 
 # if it's an external image, update below for true
 # better with square images
@@ -49,7 +49,7 @@ email: hyj90632@gmail.com
 authors:
   johndoe:
     name: Hwang Yoon Jae
-    bio: It is better to fail in originality than to succeed in imitation.
+    bio: 노력하다보면 노력한 만큼 발전하게된다.
     external-image: false
     picture: assets/images/mini_profile.png
   hwangyoonjae:
