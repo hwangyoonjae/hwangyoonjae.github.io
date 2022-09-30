@@ -38,7 +38,7 @@ description: Markdown summary with different options
 $ java -version
 ```
 [![텍스트](/assets/images/Jenkins/%EC%9E%90%EB%B0%94%20%EC%A0%95%EC%83%81%20%EC%84%A4%EC%B9%98%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/Jenkins/%EC%9E%90%EB%B0%94%20%EC%A0%95%EC%83%81%20%EC%84%A4%EC%B9%98%20%ED%99%95%EC%9D%B8.PNG)<br>
-<span style="color:#FA5858; font-size:12px">※ 필자는 jdk11을 설치하여 진행하였다.</span>
+<span style="color:#FA5858; font-size:12px">※ 필자는 jdk8 설치 시 젠킨스 실행이 안되어 jdk11을 설치하여 진행하였다.</span>
 
 ### JAVA_HOME 설정:
 - 자바 설치가 완료 되었다면 설치 경로는 /usr/lib/jvm/[자바버전]의 경로를 확인한다.
