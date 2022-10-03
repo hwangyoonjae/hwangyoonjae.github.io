@@ -31,3 +31,24 @@ $ ansible --version
 <span style="color:#FA5858; font-size:12px">※ 필자는 2.9.27버전을 사용했다.</span>
 
 * * *
+
+### SSH Key 생성하기:
+- Ansible은 SSH 접속을 기반으로 원격 서버들에게 명령을 전달한다.
+- Controller 서버와 원격 서버간 SSH key가 공유되어야 하고, Controller 서버에서 모든 작업을 완료할 수 있다.
+
+```bash
+#RSA키 생성, 명령어 입력 후 나오는 것들 그냥 전부 엔터
+$ ssh-keygen
+
+# 생성한 key를 원격 서버에 복사
+$ ssh-copy-id [원격서버계정ID]@[원격서버IP]
+```
+[![텍스트](/assets/images/Ansible/SSH%20Key%20%EC%83%9D%EC%84%B1%20%EB%B0%8F%20%EB%B3%B5%EC%82%AC.PNG)](/assets/images/Ansible/SSH%20Key%20%EC%83%9D%EC%84%B1%20%EB%B0%8F%20%EB%B3%B5%EC%82%AC.PNG)
+
+- ssh key가 복사되었다면, controller 서버에서 원격 서버로 ssh 접속을 시도할 때, 비밀번호 입력없이 바로 접속되어야 한다.
+```bash
+$ ssh [원격서버계정ID]@[원격서버IP]
+```
+[![텍스트](/assets/images/Ansible/SSH%20%EC%A0%91%EC%86%8D%ED%99%95%EC%9D%B8.PNG)](/assets/images/Ansible/SSH%20%EC%A0%91%EC%86%8D%ED%99%95%EC%9D%B8.PNG)
+
+* * *
