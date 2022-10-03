@@ -51,4 +51,17 @@ $ ssh [원격서버계정ID]@[원격서버IP]
 ```
 [![텍스트](/assets/images/Ansible/SSH%20%EC%A0%91%EC%86%8D%ED%99%95%EC%9D%B8.PNG)](/assets/images/Ansible/SSH%20%EC%A0%91%EC%86%8D%ED%99%95%EC%9D%B8.PNG)
 
+#### /etc/hosts 파일에 각각의 host와 ip 매핑하기:
+```bash
+# /etc/hosts 파일에 각각의 host와 ip를 매핑 시켜주면 user@hostname 으로도 ssh 접근 가능
+$ vi /etc/hosts
+```
+[![텍스트](/assets/images/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91.PNG)](/assets/images/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91.PNG)
+
+```bash
+#명령어를 입력하면 원격서버 host파일의 원격서버계정에서 sudo id를 입력한 결과 출력
+ssh [원격서버계정ID]@[원격서버 host파일] sudo id
+```
+[![텍스트](/assets/images/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91%20%EB%8F%99%EC%9E%91%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91%20%EB%8F%99%EC%9E%91%20%ED%99%95%EC%9D%B8.PNG)
+
 * * *
