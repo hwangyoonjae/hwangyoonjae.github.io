@@ -9,10 +9,7 @@ layout: page
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>HTML&CSS</li>
-	<li>Vue</li>
-	<li>SpringBoot</li>
-	<li>Markdown</li>
+	
 </ul>
 
 <h2>Projects</h2>
