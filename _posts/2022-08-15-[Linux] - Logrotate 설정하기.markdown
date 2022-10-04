@@ -49,16 +49,16 @@ $ yum -y install logrotate
 ### Logrotate 옵션 정보
 ```javascript
 * rotate [숫자] : log파일이 5개 이상 되면 삭제한다.
-                ex) rotate 5
+  ex) rotate 5
 
 * maxage [숫자] : log파일이 30일 이상 되면 삭제한다. 
-                ex) maxage 30
+  ex) maxage 30
 
 * size : 지정된 용량보다 클 경우 로테이트 실행한다. 
-        ex)　size +100k
+  ex) size +100k
 
 * create [권한] [유저] [그룹] : 로테이트 되는 로그파일 권한 지정한다. 
-                              ex) create 644 root root
+  ex) create 644 root root
 
 * notifempty : 로그 내용이 없으면 로테이트 하지 않는다. 
 
