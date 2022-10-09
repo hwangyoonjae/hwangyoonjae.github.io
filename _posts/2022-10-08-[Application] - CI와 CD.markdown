@@ -21,6 +21,7 @@ description: Markdown summary with different options
 ### CI (Continuos Integration)
 - 빌드/테스트 자동화 과정으로 지속적인 통합을 의미한다.
 - 애플리케이션의 버그 수정이나 새로운 코드 변경이 주기적으로 빌드 및 테스트되면서 공유되는 레퍼지토리에 통합되는 것을 의미한다.
+[![텍스트](/assets/images/Application/CI%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)](/assets/images/Application/CI%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)
 
 #### CI 장점
 ```
