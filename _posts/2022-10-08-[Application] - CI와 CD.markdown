@@ -21,6 +21,7 @@ description: Markdown summary with different options
 ### CI (Continuos Integration)란?:
 - 빌드/테스트 자동화 과정으로 지속적인 통합을 의미한다.
 - 애플리케이션의 버그 수정이나 새로운 코드 변경이 주기적으로 빌드 및 테스트되면서 공유되는 레퍼지토리에 통합되는 것을 의미한다.
+
 [![텍스트](/assets/images/Application/CI%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)](/assets/images/Application/CI%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)
 
 #### CI 장점:
@@ -34,7 +35,9 @@ description: Markdown summary with different options
 
 ### CD (Continuous Delivery) & (Continuous Development)란?:
 - 배포 자동화 과정으로 지속적인 제공 또는 지속적인 배포를 의미한다.
-- Bulid 되고 Test 된 후에, 배포 단계에서 release 할 준비 단계를 거치고 문제가 없는지 수정할만한 것들이 없는지 개발자가 검증하는 팀이 검증을 하고 나온 결론으로 배포를 자동화하여 진행한다.
+- Bulid 되고 Test 된 후에, 배포 단계에서 Release 할 준비 단계를 거치고 문제가 없는지 수정할만한 것들이 없는지 개발자가 검증하는 팀이 검증을 하고 나온 결론으로 배포를 자동화하여 진행한다.
+
+[![텍스트](/assets/images/Application/CD%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)](/assets/images/Application/CD%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)
 
 #### CD 장점:
 ```
