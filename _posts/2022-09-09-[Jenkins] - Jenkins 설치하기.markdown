@@ -2,7 +2,7 @@
 title: "[Jenkins] - Jenkins 설치하기"
 layout: post
 date: 2022-09-09
-image: /assets/images/Post/Jenkins.png
+image: /assets/images/Post/jenkins.png
 headerImage: true
 tag:
 - Jenkins
