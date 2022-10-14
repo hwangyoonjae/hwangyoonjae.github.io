@@ -1,0 +1,19 @@
+---
+title: "[DB] - Join이란"
+layout: post
+date: 2022-10-14
+image: /assets/images/Post/db.png
+headerImage: true
+tag:
+- Join
+- 결합
+category: blog
+author: hwangyoonjae
+description: Markdown summary with different options
+---
+
+## 조인(Join)란?:
+- 두개 이상의 테이블을 결합하여 데이터를 검색하는 방법이다.
+
+* * *
+
