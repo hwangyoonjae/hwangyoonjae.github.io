@@ -21,3 +21,17 @@ description: Markdown summary with different options
 - 서로 관계있는 데이터가 여러 테이블로 나뉘어 저장되기 때문에 각 테이블에 저장된 데이터를 효과적으로 검색하기 위해서다.
 
 * * *
+
+## 조인(Join) 종류:
+### 이너 조인(INNER JOIN):
+- 이너 조인(INNER JOIN)은 두개의 테이블에서 공통된 요소들을 통해 결합하는 조인방식이다.
+[![텍스트](/assets/images/DB/%EC%9D%B4%EB%84%88%EC%A1%B0%EC%9D%B8%20%EA%B7%B8%EB%A6%BC.PNG)](/assets/images/DB/%EC%9D%B4%EB%84%88%EC%A1%B0%EC%9D%B8%20%EA%B7%B8%EB%A6%BC.PNG)
+- 두 테이블 모두에서 존재하는 값만 출력되기 때문에 NULL값이 없다.
+- INNER JOIN을 하는 코드는 아래와 같다.
+```sql
+SELECT COLUMN
+FROM A INNER JOIN B
+ON A.KEY = B.KEY
+```
+
+* * *
