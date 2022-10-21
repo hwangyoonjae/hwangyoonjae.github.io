@@ -15,3 +15,57 @@ description: Markdown summary with different options
 - 부팅시 자동실행 명령어 스크립트 수행하며 일반적으로 서버 부팅시마다 매번 자동 실행되길 원하는 명령어를 넣어주는 곳이다.
 
 * * *
+
+## rc.local 활성화 하기:
+### rc.local 파일의 실행 권한 부여하기:
+```bash
+$ chmod +x /etc/rc.d/rc.local
+```
+[![텍스트](/assets/images/Linux/rc.local%20%EC%8B%A4%ED%96%89%20%EA%B6%8C%ED%95%9C%20%EB%B6%80%EC%97%AC.PNG)](/assets/images/Linux/rc.local%20%EC%8B%A4%ED%96%89%20%EA%B6%8C%ED%95%9C%20%EB%B6%80%EC%97%AC.PNG)
+
+* * *
+
+### rc-local 서비스 상태 확인 및 실행하기:
+```bash
+# 서비스 상태 확인
+$ systemctl status rc-local.service
+
+# 만약에 서비스 활성화 되어있지 않다면, 서비스 활성화
+$ systemctl start rc-local.service
+```
+[![텍스트](/assets/images/Linux/rc.local%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%83%81%ED%83%9C%20%ED%99%95%EC%9D%B8%20%EB%B0%8F%20%EC%8B%A4%ED%96%89.PNG)](/assets/images/Linux/rc.local%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%83%81%ED%83%9C%20%ED%99%95%EC%9D%B8%20%EB%B0%8F%20%EC%8B%A4%ED%96%89.PNG)
+
+* * *
+
+### 재부팅 후에도 rc.local enable 상태 유지 설정하기:
+```bash
+$ vi /usr/lib/systemd/system/rc-local.service
+
+# 아래 내용 추가
+[Install]
+WantedBy=multi-user.target
+```
+[![텍스트](/assets/images/Linux/rc.local%20%EC%9C%A0%EB%8B%9B%20%EB%93%B1%EB%A1%9D.PNG)](/assets/images/Linux/rc.local%20%EC%9C%A0%EB%8B%9B%20%EB%93%B1%EB%A1%9D.PNG)
+
+* * *
+
+### 재부팅 후에도 rc.local enable 상태 유지 설정하기:
+```bash
+# 재부팅 후에도 서비스 활성화 설정되었는지 확인
+$ systemctl list-unit-files | grep rc.local
+
+# 재부팅 후에도 서비스 활성화 되도록 설정
+$ systemctl enable rc-local.service
+```
+![텍스트](/assets/images/Linux/rc.local%20%EC%9E%AC%EB%B6%80%ED%8C%85%20%ED%9B%84%EC%97%90%EB%8F%84%20%ED%99%9C%EC%84%B1%ED%99%94%20%EB%90%98%EB%8F%84%EB%A1%9D%20%EC%84%A4%EC%A0%95.PNG)
+
+* * *
+
+### 서버 재부팅 후 실행할 명령어 등록하기:
+- 명령어 또는 스크립트를 자동실행 하도록 설정한다.
+```bash
+$ vi /etc/rc.d/rc.local
+```
+[![텍스트](/assets/images/Linux/rc.local%20%EC%84%9C%EB%B2%84%20%EC%9E%AC%EB%B6%80%ED%8C%85%20%ED%9B%84%20%EC%8B%A4%ED%96%89%ED%95%A0%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EB%93%B1%EB%A1%9D.PNG)](/assets/images/Linux/rc.local%20%EC%84%9C%EB%B2%84%20%EC%9E%AC%EB%B6%80%ED%8C%85%20%ED%9B%84%20%EC%8B%A4%ED%96%89%ED%95%A0%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EB%93%B1%EB%A1%9D.PNG)
+
+* * *
