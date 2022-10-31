@@ -25,6 +25,7 @@ description: Markdown summary with different options
 
 * * *
 
+## Master Server 구성하기:
 ### Master Server 설정하기:
 - 아래와 같은 내용을 추가한다.
 
@@ -72,3 +73,55 @@ $ systemctl restart mariadb
 [![텍스트](/assets/images/DB/master%20%EC%84%9C%EB%B2%84%20%EC%83%81%ED%83%9C%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/master%20%EC%84%9C%EB%B2%84%20%EC%83%81%ED%83%9C%20%ED%99%95%EC%9D%B8.PNG)
 
 * * *
+
+## Slave Server 구성하기:
+### Slave Server 설정하기:
+- 아래와 같은 내용을 추가한다.
+
+```bash
+$ vi /etc/my.cnf.d/server.cnf
+
+[mysqld]
+# binary log의 파일명
+log-bin = mysql-bin
+# master와 slave의 값 구별
+server-id = 2
+# STATEMENT, ROW, MIXED 중 선택히여 포맷 지정
+binlog_format = row
+```
+
+* * *
+
+### Slave Server MariaDB 재시작 및 접속하기:
+```bash
+# MariaDB 재시작
+$ service mariadb restart
+또는
+$ systemctl restart mariadb
+```
+
+```sql
+> mysql -u root -p
+```
+
+* * *
+
+### Slave Server 연동 설정하기:
+```sql
+> CHANGE MASTER TO 
+  MASTER_HOST='Master Server IP주소', 
+  MASTER_USER='user', 
+  MASTER_PASSWORD='password', 
+  MASTER_PORT=3306, 
+  MASTER_LOG_FILE='Master Server File명', 
+  MASTER_LOG_POS='Master Server Position 번호';
+```
+
+* * *
+
+### Slave Server 실행 및 상태 확인하기:
+```sql
+> start slave;
+
+> show slave status;
+```
