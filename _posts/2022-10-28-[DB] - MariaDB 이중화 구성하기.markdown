@@ -25,7 +25,7 @@ description: Markdown summary with different options
 
 * * *
 
-## Master Server 구성하기:
+## Master Server 구성:
 ### Master Server 설정하기:
 - 아래와 같은 내용을 추가한다.
 
@@ -74,7 +74,7 @@ $ systemctl restart mariadb
 
 * * *
 
-## Slave Server 구성하기:
+## Slave Server 구성:
 ### Slave Server 설정하기:
 - 아래와 같은 내용을 추가한다.
 
