@@ -22,3 +22,6 @@ description: Markdown summary with different options
 - 컨텐츠 제공의 안정성
 - 웹사이트 보안 개선
 ```
+
+## CDN(Content Delivery Network)원리:
+- 서버를 분산시켜 캐싱해두고 사용자의 컨텐츠 요청이 들어오면 사용자와 가장 가까운 위치에 존재하는 서버로 매핑시켜 요청된 콘텐츠의 캐싱된 내용을 내어주는 방식으로 빠르게 데이터를 전송할 수 있게한다.
