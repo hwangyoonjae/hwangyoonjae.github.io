@@ -46,7 +46,7 @@ $ docker run [옵션] [이미지이름 or 이미지ID] [실행할 파일]
 
 ```bash
 # 예시
-$ docker container run -d -t -p 9000:8080 nginx --name nginx_server
+$ docker container run -d -t -p 9000:80 nginx --name nginx_server
 ```
 
 * * *
