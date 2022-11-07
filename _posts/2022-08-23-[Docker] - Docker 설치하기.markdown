@@ -60,8 +60,18 @@ $ yum-config-manager \
 # yum으로 docker 설치
 $ yum install docker-ce docker-ce-cli containerd.io
 ```
-
 <span style="color:#FA5858; font-size:12px">※ 필자는 20.10.17버전을 사용했다.</span>
+
+### 폐쇄망 설치:
+- 폐쇄망 서버에 Docker를 설치하는 경우 아래 URL 접속 시 CentOS 버전에 맞춰 폴더 접속한 후 **/x86_64/stable/Packages/**에서  필요한 RPM 다운받는다.
+> * [Docker RPM 패키지 다운로드](https://download.docker.com/linux/centos/ "Docker RPM 패키지 다운로드")
+```bash
+# rpm으로 설치
+$ rpm -Uvh containerd.io-1.6.9-3.1.el7.x86_64.rpm --nodeps
+$ rpm -Uvh container-selinux-17.03.3.ce-1.el7.noarch.rpm --nodeps
+$ rpm -Uvh docker-ce-cli-20.10.9-3.el7.x86_64.rpm --nodeps
+$ rpm -Uvh docker-ce-20.10.9-3.el7.x86_64.rpm --nodeps
+```
 
 * * *
 
