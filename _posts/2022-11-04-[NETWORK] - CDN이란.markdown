@@ -38,4 +38,16 @@ description: Markdown summary with different options
 - 물리적으로 가장 가깝거나 여유 트래픽이 남아 있는 곳으로 접속을 유도하는 기술이다.
 - GSLB(Global Server Load Balancing)는 서버상태를 주기적으로 health check(건강 상태)를 수행한다.
 
+### CDN의 트래픽을 감지
+- 통계자료를 고객에게 제공하고, 트래픽을 분산한다.
+
+* * *
+
+## CDN(Content Delivery Network) 캐싱 방식:
+### Static Caching
+- Contents들을 운영자가 미리 Cache Server에 복사하기 때문에 사용자가 Cache Server에 Contents를 요청 시 무조건 Cache Server에서 확인 가능하다.
+
+### Dynamic Caching
+- 사용자가 Contents 요청 시 Contents가 없을 때 Origin Server로 부터 다운로드 받아 전달한다.
+
 * * *
