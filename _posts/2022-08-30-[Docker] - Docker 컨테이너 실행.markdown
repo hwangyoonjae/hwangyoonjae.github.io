@@ -99,7 +99,7 @@ bash: vi: command not found
 - 아래와 같이 명령어 사용을 위해 컨테이너 內 설치를 진행한다.
 ```bash
 $ apt-get update
-$ apt-get install vi
+$ apt-get install vim
 ```
 
 * * *
