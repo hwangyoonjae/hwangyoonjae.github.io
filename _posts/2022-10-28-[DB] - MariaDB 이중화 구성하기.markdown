@@ -6,6 +6,8 @@ image: /assets/images/Post/mariadb.png
 headerImage: true
 tag:
 - DB 이중화
+- Active
+- Standby
 category: blog
 author: hwangyoonjae
 description: Markdown summary with different options
