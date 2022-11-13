@@ -69,7 +69,7 @@ $ yum install docker-ce docker-ce-cli containerd.io
 ```bash
 # rpm으로 설치
 $ rpm -Uvh containerd.io-1.6.9-3.1.el7.x86_64.rpm --nodeps
-$ rpm -Uvh container-selinux-17.03.3.ce-1.el7.noarch.rpm --nodeps
+$ rpm -Uvh docker-ce-selinux-17.03.2.ce-1.el7.centos.noarch --nodeps
 $ rpm -Uvh docker-ce-cli-20.10.9-3.el7.x86_64.rpm --nodeps
 $ rpm -Uvh docker-ce-20.10.9-3.el7.x86_64.rpm --nodeps
 ```
