@@ -65,6 +65,7 @@ $ yum install docker-ce docker-ce-cli containerd.io
 ### 폐쇄망 설치:
 - 폐쇄망 서버에 Docker를 설치하는 경우 아래 URL 접속 시 CentOS 버전에 맞춰 폴더 접속한 후 **/x86_64/stable/Packages/**에서  필요한 RPM 다운받는다.
 > * [Docker RPM 패키지 다운로드](https://download.docker.com/linux/centos/ "Docker RPM 패키지 다운로드")
+
 ```bash
 # rpm으로 설치
 $ rpm -Uvh containerd.io-1.6.9-3.1.el7.x86_64.rpm --nodeps
