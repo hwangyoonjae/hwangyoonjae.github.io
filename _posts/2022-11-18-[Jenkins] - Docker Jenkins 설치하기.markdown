@@ -15,6 +15,6 @@ description: Markdown summary with different options
 ---
 
 ## Docker에 Jenkins 설치하기:
-- Jenkins 설치는 해봤으니 Docker 통해서 Jenkins를 설치한다.
+- Jenkins 설치는 해봤으니 Docker 통해서 Jenkins를 설치해본다.
 
 * * *
