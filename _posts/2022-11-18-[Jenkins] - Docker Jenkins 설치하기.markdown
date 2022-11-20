@@ -53,7 +53,9 @@ $ systemctl start docker
 $ systemctl enable docker
 ```
 
-## Docker Jenkins 이미지 다운로드:
+* * *
+
+### Docker Jenkins 이미지 다운로드:
 - Jenkins 관련 이미지를 검색한다.
 ```bash
 $ docker search jenkins
@@ -73,3 +75,11 @@ $ docker images
 [![텍스트](/assets/images/Linux/docker%20jenkins%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/Linux/docker%20jenkins%20%EC%9D%B4%EB%AF%B8%EC%A7%80%20%ED%99%95%EC%9D%B8.PNG)
 
 * * *
+
+## Docker로 Jenkins 실행하기:
+```bash
+docker run -it --name jenkins_test2 -p 8080:80 -p 50000:50000 -v /home/deploy/jenkins_v:/var/lib/jenkins_home jenkins/jenkins
+```
+- **/home/deploy/jenkins_v:/var/lib/jenkins_home**부분을 고려하여 container 내부의 디렉토리를 매핑한다.
+[![텍스트](/assets/images/Linux/docker%20jenkins%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)](/assets/images/Linux/docker%20jenkins%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
+- 로그 중간의 16진수로 이루어진 문자열은 별도로 저장하여 Jenkins 실행 시 관리자 패스워드 입력하는 부분에 붙혀넣기한다.
