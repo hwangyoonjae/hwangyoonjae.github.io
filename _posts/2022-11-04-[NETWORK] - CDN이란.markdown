@@ -1,5 +1,5 @@
 ---
-title: "[NETWORK] - CDN이란"
+title: "[Network] - CDN이란"
 layout: post
 date: 2022-11-04
 image: /assets/images/Post/global-network.png
