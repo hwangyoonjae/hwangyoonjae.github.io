@@ -17,7 +17,6 @@ description: Markdown summary with different options
 ```bash
 # RPEL yum 레포지토리 추가 및 추가목록 확인
 $ yum install -y epel-release
-$ yum repolist
 
 # Ansible 설치 진행
 $ yum install -y ansible 
