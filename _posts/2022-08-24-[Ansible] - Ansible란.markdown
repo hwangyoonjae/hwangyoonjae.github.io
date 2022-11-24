@@ -1,5 +1,5 @@
 ---
-title: "[Linux] - Ansible란"
+title: "[Ansible] - Ansible란"
 layout: post
 date: 2022-08-24
 image: /assets/images/Post/ansible.png

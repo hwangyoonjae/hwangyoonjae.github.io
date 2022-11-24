@@ -1,5 +1,5 @@
 ---
-title: "[Linux] - Ansible 설치하기"
+title: "[Ansible] - Ansible 설치하기"
 layout: post
 date: 2022-10-02
 image: /assets/images/Post/ansible.png
@@ -17,7 +17,6 @@ description: Markdown summary with different options
 ```bash
 # RPEL yum 레포지토리 추가 및 추가목록 확인
 $ yum install -y epel-release
-$ yum repolist
 
 # Ansible 설치 진행
 $ yum install -y ansible 
