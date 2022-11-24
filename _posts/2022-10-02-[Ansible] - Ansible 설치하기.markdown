@@ -1,5 +1,5 @@
 ---
-title: "[Linux] - Ansible 설치하기"
+title: "[Ansible] - Ansible 설치하기"
 layout: post
 date: 2022-10-02
 image: /assets/images/Post/ansible.png
