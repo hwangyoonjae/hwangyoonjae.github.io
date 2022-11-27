@@ -1,5 +1,5 @@
 ---
-title: "2022-11-25-[Ansible] - Ansible Playbook 사용하기"
+title: "[Ansible] - Ansible Playbook 사용하기"
 layout: post
 date: 2022-11-25
 image: /assets/images/Post/ansible.png
