@@ -32,6 +32,13 @@ description: Markdown summary with different options
   - tasks: 연결할 host에서 수행할 작업
   ```
 
+#### 연결할 host 이름 지정하기:
+```bash
+$ vi /etc/ansible/hosts
+```
+[![텍스트](/assets/images/Ansible/host%20%EC%9D%B4%EB%A6%84%20%EC%A7%80%EC%A0%95.PNG)](/assets/images/Ansible/host%20%EC%9D%B4%EB%A6%84%20%EC%A7%80%EC%A0%95.PNG)
+- 위 그림과 같이 ansible에 설정한 host이름을 지정한 서버IP별로 설치할 수 있다.
+
 * * *
 
 ### Playbook 실행하기:
