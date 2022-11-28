@@ -32,6 +32,9 @@ description: Markdown summary with different options
   - tasks: 연결할 host에서 수행할 작업
   ```
 
+- CentOS는 yum을 사용하고, Ubuntu는 apt를 사용하고, present=설치, absent=삭제, latest=저장소 내의 최신버전 설치를 의미한다.
+- service는 OS의 systemctl과 같은 명령어로 started=실행, stopped=중지, restarted=재실행 을 의미한다.
+
 #### 연결할 host 이름 지정하기:
 ```bash
 $ vi /etc/ansible/hosts
