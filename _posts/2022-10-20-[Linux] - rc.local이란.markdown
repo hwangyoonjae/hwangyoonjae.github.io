@@ -57,7 +57,7 @@ $ systemctl list-unit-files | grep rc.local
 # 재부팅 후에도 서비스 활성화 되도록 설정
 $ systemctl enable rc-local.service
 ```
-![텍스트](/assets/images/Linux/rc.local%20%EC%9E%AC%EB%B6%80%ED%8C%85%20%ED%9B%84%EC%97%90%EB%8F%84%20%ED%99%9C%EC%84%B1%ED%99%94%20%EB%90%98%EB%8F%84%EB%A1%9D%20%EC%84%A4%EC%A0%95.PNG)
+[![텍스트](/assets/images/Linux/rc.local%20%EC%9E%AC%EB%B6%80%ED%8C%85%20%ED%9B%84%EC%97%90%EB%8F%84%20%ED%99%9C%EC%84%B1%ED%99%94%20%EB%90%98%EB%8F%84%EB%A1%9D%20%EC%84%A4%EC%A0%95.PNG)](/assets/images/Linux/rc.local%20%EC%9E%AC%EB%B6%80%ED%8C%85%20%ED%9B%84%EC%97%90%EB%8F%84%20%ED%99%9C%EC%84%B1%ED%99%94%20%EB%90%98%EB%8F%84%EB%A1%9D%20%EC%84%A4%EC%A0%95.PNG)
 
 * * *
 
