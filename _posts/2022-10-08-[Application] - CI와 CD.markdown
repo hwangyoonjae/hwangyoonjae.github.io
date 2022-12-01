@@ -25,11 +25,9 @@ description: Markdown summary with different options
 [![텍스트](/assets/images/Application/CI%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)](/assets/images/Application/CI%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)
 
 #### CI(Continuos Integration) 장점:
-```
 - 코드의 검증에 들어가는 시간이 줄어든다.
 - 버그 수정에 용이하다.
 - 항상 테스트 코드를 통과한 코드만이 레포지터리에 올라가기 때문에, 좋은 코드 퀄리티를 유지할 수 있다.
-```
 
 * * *
 
@@ -40,15 +38,12 @@ description: Markdown summary with different options
 [![텍스트](/assets/images/Application/CD%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)](/assets/images/Application/CD%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)
 
 #### CD(Continuous Delivery) & (Continuous Development) 장점:
-```
 - 개발자는 배포보다는 개발에 더욱 신경 쓸 수 있도록 도와준다.
 - 개발자가 원클릭으로 수작업 없이 빌드, 테스트, 배포까지의 자동화를 할 수 있다.
-```
 
 * * *
 
 ## CI/CD 파이프라인(Pipeline):
-
 ### CI/CD 파이프라인(Pipeline)이란?:
 - 제공된 데이터 또는 코드에 대해 사전 정의된 작업을 수행하는 일련의 처리 단계이다.
 - 반복적인 프로세스를 자동화하여 <span style='color: #000000; background-color: #81BEF7'>시간을 절약하고 정밀도를 높이는 것</span>이 파이프 라인 사용의 목적이다.
