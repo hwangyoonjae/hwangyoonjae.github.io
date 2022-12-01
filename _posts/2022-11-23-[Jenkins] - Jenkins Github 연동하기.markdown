@@ -35,12 +35,18 @@ description: Markdown summary with different options
 
 ## 작업 간 에러사항:
 ### 에러 1:
-- 에러로그 : **Failed to connect to repository: Command "git.exe ls-remote -h -- git@..." returned status code 128: stdout: stderr: Host key verification failed. fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.**
+- 에러로그
+  ```html
+  Failed to connect to repository: Command "git.exe ls-remote -h -- git@..." returned status code 128: stdout: stderr: Host key verification failed. fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.
+  ```
 - 조치 방법 : Repository에 대한 권한이 없어서 발생한 증상으로 Credentials Add 버튼 클릭하여 계정을 추가한다.
 [![텍스트](/assets/images/jenkins/Credentials%20Add%20%EA%B3%84%EC%A0%95%20%EC%B6%94%EA%B0%80.PNG)](/assets/images/jenkins/Credentials%20Add%20%EA%B3%84%EC%A0%95%20%EC%B6%94%EA%B0%80.PNG)
 
 ### 에러 2:
-- 에러로그 : **ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.**
+- 에러로그
+  ```html
+  Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+  ```
 - 조치방법 : */master -> */main 으로 변경 진행
 [![텍스트](/assets/images/Jenkins/github%20%EB%B8%8C%EB%9E%9C%EC%B9%98%20%EC%97%90%EB%9F%AC.PNG)](/assets/images/Jenkins/github%20%EB%B8%8C%EB%9E%9C%EC%B9%98%20%EC%97%90%EB%9F%AC.PNG)
 
