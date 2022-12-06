@@ -1,0 +1,16 @@
+---
+title: "[DB] - 서브쿼리란"
+layout: post
+date: 2022-12-06
+image: /assets/images/Post/db.png
+headerImage: true
+tag:
+- 
+category: blog
+author: hwangyoonjae
+description: Markdown summary with different options
+---
+
+## 서브쿼리란?:
+- 하나의 SQL 문에 포함되어 있는 또 다른 SQL문이다.
+- 가장 일반적으로는 WHERE절에서 사용하고, 위치에 따라 SELECT, FROM, WHERE절에서 사용한다.
