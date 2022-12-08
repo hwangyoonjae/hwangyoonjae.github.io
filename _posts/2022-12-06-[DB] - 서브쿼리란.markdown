@@ -16,15 +16,42 @@ description: Markdown summary with different options
 - 가장 일반적으로는 WHERE절에서 사용하고, 위치에 따라 SELECT, FROM, WHERE절에서 사용한다.
 
 ## SELECT절 서브쿼리:
-- 스칼라 서브쿼리 ( Scalar Subqueries )​ 라고 불리며, SELECT 절 안에 서브쿼리가 들어있다.
+- 스칼라 서브쿼리 (Scalar Subqueries)​라고 불리며, SELECT 절 안에 서브쿼리가 들어있다.
 ```sql
-SELECT columnA,
-       (  SELECT B.column1
-            FROM tableB
-           WHERE tableB.ID = tableA.ID ) AS columnname
-  FROM tableA
- WHERE tableAcolumn1 = 'name' ;
+SELECT column1,
+       ( SELECT tableB.column1
+         FROM tableB
+         WHERE tableB.ID = tableA.ID ) AS columnname
+FROM tableA
+WHERE tableA.column1 = 'name' ;
 ```
 - SELECT절 서브쿼리는 데이터의 양이 많을수록 실행속도가 느려지기 때문에 거의 사용되지 않는 명령어이다.
+
+* * *
+
+## FROM절 서브쿼리:
+- 인라인뷰 (Inline Views)라고 불리며, FROM 절 안에 서브쿼리가 들어있다.
+- 반드시 서브쿼리 결과는 하나의 테이블로 리턴되어야한다.
+```sql
+SELECT column1, column2
+FROM ( SELECT tableA.column1.column1 AS columnname1,
+              tableB.column2.column2 AS columnname2
+       FROM tableA, tableB
+       WHERE tableA.column1 = tableB.column1 ) ;
+```
+
+* * *
+
+## WHERE절 서브쿼리:
+- 중첩 서브쿼리 (Nested Subqueries)라고 불리며, WHERE 절 안에 서브쿼리가 들어있다.
+- 가장 자주 쓰이는 대중적인 서브쿼리이며 단일행과 복수행 둘 다 리턴이 가능하다.
+```sql
+SELECT *
+FROM tableA
+WHERE tableA.column1 
+IN ( SELECT tableB.column1 
+     FROM tableB 
+     WHERE tableB.column1 = 'name' ) ;
+```
 
 * * *
