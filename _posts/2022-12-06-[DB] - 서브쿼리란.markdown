@@ -5,7 +5,8 @@ date: 2022-12-06
 image: /assets/images/Post/db.png
 headerImage: true
 tag:
-- 
+- DB
+- 서브쿼리
 category: blog
 author: hwangyoonjae
 description: Markdown summary with different options
