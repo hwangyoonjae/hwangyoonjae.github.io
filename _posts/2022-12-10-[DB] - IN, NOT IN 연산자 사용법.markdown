@@ -19,12 +19,12 @@ description: Markdown summary with different options
 * * *
 
 ## IN 연산자 사용법:
+- CULUMN에 'Data1', 'Data2'가 하나라도 일치한 값이 있으면 조회한다.
 ```sql
 SELECT *
 FROM TABLE
 WHERE CULUMN IN ('Data1', 'Data2');
 ```
-- CULUMN에 'Data1', 'Data2'가 하나라도 일치한 값이 있으면 조회한다.
 
 * * *
 
@@ -53,12 +53,12 @@ WHERE
 * * *
 
 ## NOT IN 연산자 사용법:
+- CULUMN에 'Data1', 'Data2'에 있는 값을 제외하고 조회한다.
 ```sql
 SELECT *
 FROM TABLE
 WHERE CULUMN NOT IN ('Data1', 'Data2');
 ```
-- CULUMN에 'Data1', 'Data2'에 있는 값을 제외하고 조회한다.
 
 * * *
 
