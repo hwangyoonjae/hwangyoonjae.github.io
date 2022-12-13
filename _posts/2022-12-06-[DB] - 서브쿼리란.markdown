@@ -16,6 +16,8 @@ description: Markdown summary with different options
 - 하나의 SQL 문에 포함되어 있는 또 다른 SQL문이다.
 - 가장 일반적으로는 WHERE절에서 사용하고, 위치에 따라 SELECT, FROM, WHERE절에서 사용한다.
 
+* * *
+
 ## SELECT절 서브쿼리:
 - 스칼라 서브쿼리 (Scalar Subqueries)​라고 불리며, SELECT 절 안에 서브쿼리가 들어있다.
 ```sql

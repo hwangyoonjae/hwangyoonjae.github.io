@@ -39,6 +39,8 @@ WHERE CULUMN IN (
   WHERE COLUMN = 'Data1' );
 ```
 
+* * *
+
 ### IN 연산자 서브쿼리 Update문 사용:
 ```sql
 UPDATE
@@ -72,6 +74,8 @@ WHERE CULUMN NOT IN (
   FROM TABLEB
   WHERE COLUMN = 'Data1' );
 ```
+
+* * *
 
 ### NOT IN 연산자 서브쿼리 Update문 사용:
 ```sql
