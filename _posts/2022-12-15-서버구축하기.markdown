@@ -1,0 +1,23 @@
+---
+title: "서버 구축해보기"
+layout: post
+date: 2022-12-15
+image: /assets/images/post/server.png
+headerImage: true
+tag: 
+- Docker
+- Ansible
+- Jenkins
+- Redis
+- MariaDB
+category: project
+author: hwangyoonjae
+description: Markdown summary with different options
+projects: true
+---
+
+## 서버 구축 흐름도 :
+- 지금까지 설치했던 것을 바탕으로 아래 그림과 같이 서버 구축을 해볼려한다.
+[![Screenshot](../assets/images/Project/%EC%84%9C%EB%B2%84%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)](../assets/images/Project/%EC%84%9C%EB%B2%84%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)
+
+* * *
