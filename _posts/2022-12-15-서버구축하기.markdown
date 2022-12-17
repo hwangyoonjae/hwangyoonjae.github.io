@@ -6,6 +6,7 @@ image: /assets/images/post/server.png
 headerImage: true
 tag: 
 - Docker
+- Nginx
 - Ansible
 - Jenkins
 - Redis
@@ -27,5 +28,6 @@ projects: true
 - Nginx
 - Ansible
 - Jenkins
+- Redis
 - MariaDB
 - Linux CentOS 7.9
