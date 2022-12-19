@@ -38,6 +38,8 @@ $ yum install -y postgresql14-server postgresql14-contrib
 ```
 <span style="color:#FA5858; font-size:12px">※ 필자는 14버전을 사용했다.</span>
 
+* * *
+
 ### 폐쇄망 설치:
 - 폐쇄망 서버에 PostgreSQL를 설치하는 경우 아래 URL 접속 시 CentOS 버전에 맞춰 폴더 접속한 후 **/EL-Linux버전-x86_64/**
 > * [PostgreSQL RPM 패키지 다운로드](https://download.postgresql.org/pub/repos/yum/reporpms/ "PostgreSQL RPM 패키지 다운로드")
