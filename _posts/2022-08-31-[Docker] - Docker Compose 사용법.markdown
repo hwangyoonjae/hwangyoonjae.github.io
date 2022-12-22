@@ -50,6 +50,7 @@ description: Markdown summary with different options
     - **restart** : docker container가 다운되었을 경우, 항상 재시작하는 설정이다.
 
     - **volumes** : 로컬에서 작업 할 폴더의 위치와 컨테이너의 위치를 연결시켜준다.<br>
+    <span style="color:#D8D8D8; font-size:12px">left{로컬스토리지}:right{컨테이너내부}</span><br>
     <span style="color:#FA5858; font-size:12px">※ 여러 개의 volume을 지정할 수 있고, 리스트처럼 작성하면 된다.</span>
 
     - **environment** : dockerfile의 ENV 옵션과 동일한 역할을 한다.<br>
@@ -62,6 +63,7 @@ description: Markdown summary with different options
     ```
 
     - **ports** : docker run 명령의 -p 옵션과 동일한 역할을 한다.<br>
+    <span style="color:#D8D8D8; font-size:12px">호스트 머신의 포트번호: 컨테이너의 포트번호</span><br>
     <span style="color:#FA5858; font-size:12px">※ 포트번호를 입력할 때에는 반드시 쌍따옴표 안에 작성해야 한다. (YAML 문법에서 숫자:숫자 는 시간으로 해석하기 때문이다.)</span>
 
     - **networks** : docker container 간의 네트워크 분리를 위해 추가로 설정을 한다.
