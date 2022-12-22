@@ -6,6 +6,7 @@ image: /assets/images/post/server.png
 headerImage: true
 tag: 
 - Docker
+- Nginx
 - Ansible
 - Jenkins
 - Redis
@@ -21,3 +22,12 @@ projects: true
 [![Screenshot](../assets/images/Project/%EC%84%9C%EB%B2%84%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)](../assets/images/Project/%EC%84%9C%EB%B2%84%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)
 
 * * *
+
+### 사용할 기술 스택 :
+- Docker
+- Nginx
+- Ansible
+- Jenkins
+- Redis
+- MariaDB
+- Linux CentOS 7.9
