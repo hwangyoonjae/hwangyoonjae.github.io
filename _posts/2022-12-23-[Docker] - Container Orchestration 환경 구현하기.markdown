@@ -19,7 +19,7 @@ description: Markdown summary with different options
 
 * * *
 
-### 시스템 환경:
+## 시스템 환경:
 - 아래와 같은 환경으로 docker Container Orchestration 환경을 구성한다.
     ```html
     OS : CentOS Linux release 7.9.2009 (Core)
@@ -37,3 +37,22 @@ description: Markdown summary with different options
 > * [Docker 스웜 구성하기](https://hwangyoonjae.github.io/Docker-Docker-Swarm-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/ "Docker 스웜 구성하기")
 
 * * *
+
+### Visualizer 구성하기:
+- 매니저 노드의 visualizer로 Swarm 클러스터내 서비스의 상태를 모니터링할 수 있다.
+- 아래는 visualizer를 구성한 compose 파일이다.
+```html
+version: "3"
+services:
+  visualapp:
+      image: dockersamples/visualizer:latest
+      ports:
+        - "9000:8080"
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+      deploy:
+        mode: global
+        placement:
+          constraints: [node.role == manager]
+```
+[![텍스트](/assets/images/docker/docker%20visualizer%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20visualizer%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
