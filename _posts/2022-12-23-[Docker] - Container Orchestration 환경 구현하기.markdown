@@ -41,7 +41,7 @@ description: Markdown summary with different options
 ### Visualizer 구성하기:
 - 매니저 노드의 visualizer로 Swarm 클러스터내 서비스의 상태를 모니터링할 수 있다.
 - 매니저 노드와 워커노드의 서베스 상태를 걑이 확인할 수 있다.
-- 아래는 visualizer를 구성한 compose 파일이다.
+- 아래와 같이 compose 파일로 visualizer를 구성한다.
 ```html
 version: "3"
 services:
