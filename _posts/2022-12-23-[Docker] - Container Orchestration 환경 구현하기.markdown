@@ -57,3 +57,22 @@ services:
           constraints: [node.role == manager]
 ```
 [![텍스트](/assets/images/docker/docker%20visualizer%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20visualizer%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
+
+
+* * *
+### Nginx 구성하기:
+- 아래와 같이 compose 파일로 nginx를 구성한다.
+```html
+version: "3"
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "8443:8443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx/conf
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    deploy:
+      replicas: 1
+```
+[![텍스트](/assets/images/docker/docker%20nginx%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20nginx%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
