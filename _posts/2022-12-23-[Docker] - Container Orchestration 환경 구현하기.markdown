@@ -49,12 +49,15 @@ services:
       image: dockersamples/visualizer:latest
       ports:
         - "9000:8080"
+      restart: always
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
       deploy:
         mode: global
         placement:
           constraints: [node.role == manager]
+      environment:
+        TZ: "Asia/Seoul"
 ```
 [![텍스트](/assets/images/docker/docker%20visualizer%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20visualizer%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
 
@@ -69,11 +72,14 @@ services:
     image: nginx
     ports:
       - "8443:8443"
+    restart: always
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx/conf
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     deploy:
       replicas: 1
+    environment:
+      TZ: "Asia/Seoul"
 ```
 [![텍스트](/assets/images/docker/docker%20nginx%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20nginx%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
 
