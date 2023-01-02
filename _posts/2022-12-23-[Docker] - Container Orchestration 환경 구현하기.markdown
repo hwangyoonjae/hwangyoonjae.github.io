@@ -84,3 +84,33 @@ services:
 [![텍스트](/assets/images/docker/docker%20nginx%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20nginx%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
+
+### MariaDB 구성하기:
+- 아래와 같이 compose 파일로 MariaDB를 구성한다.
+```html
+version: "3"
+services:
+  mariadb:
+    image: mariadb
+    ports:
+      - "3306:3306"
+    restart: always
+    volumes:
+      - /var/lib/mysql:/var/lib/mysql
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    deploy:
+      replicas: 1
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234qwer!
+      TZ: "Asia/Seoul"
+```
+
+- docker container에 직접 접속하여 MariaDB에 접속해본다.
+```bash
+$ docker exec -it [docker_container명] /bin/bash
+```
+[![텍스트](/assets/images/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
+
+* * *
