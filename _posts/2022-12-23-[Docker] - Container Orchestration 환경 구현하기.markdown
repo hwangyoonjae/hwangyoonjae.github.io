@@ -110,7 +110,35 @@ services:
 - docker container에 직접 접속하여 MariaDB에 접속해본다.
 ```bash
 $ docker exec -it [docker_container명] /bin/bash
+
+$ mysql -u root -p
 ```
 [![텍스트](/assets/images/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
+
+* * *
+
+### Redis 구성하기:
+- 아래와 같이 compose 파일로 Redis를 구성한다.
+```html
+version: "3"
+services:
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    deploy:
+      replicas: 1
+    environment:
+      TZ: "Asia/Seoul"
+```
+
+- docker container에 직접 접속하여 Redis 서버 확인해본다.
+```bash
+$ redis-cli ping
+```
+[![텍스트](/assets/images/docker/docker%20redis%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20redis%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
