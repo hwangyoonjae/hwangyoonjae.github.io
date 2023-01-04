@@ -110,7 +110,6 @@ services:
 - docker container에 직접 접속하여 MariaDB에 접속해본다.
 ```bash
 $ docker exec -it [docker_container명] /bin/bash
-
 $ mysql -u root -p
 ```
 [![텍스트](/assets/images/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
