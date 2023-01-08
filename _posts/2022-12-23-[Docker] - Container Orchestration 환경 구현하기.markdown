@@ -23,6 +23,8 @@ description: Markdown summary with different options
 - 아래와 같은 환경으로 docker Container Orchestration 환경을 구성한다.
     ```html
     OS : CentOS Linux release 7.9.2009 (Core)
+    RAM : 4GB
+    HDD : 60GB
     Docker Version : 20.10.9
     ```
 
