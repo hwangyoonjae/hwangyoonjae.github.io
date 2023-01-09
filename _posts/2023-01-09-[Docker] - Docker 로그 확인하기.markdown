@@ -1,0 +1,23 @@
+---
+title: "[Docker] - Docker 로그 확인하기"
+layout: post
+date: 2023-01-09
+image: /assets/images/Post/docker.png
+headerImage: true
+tag:
+- Docker
+- Logs
+category: blog
+author: hwangyoonjae
+description: Markdown summary with different options
+---
+
+## Docker 관련 로그 확인하기:
+### Docker Container 실행 로그 보기:
+- 도커 컨테이너 실행에 대한 로그를 보고 싶으면 아래 명령어를 입력한다.
+```bash
+# -f를 추가하면 실시간으로 볼 수 있다.
+$ docker log -f 컨테이너 이름
+```
+
+* * *
