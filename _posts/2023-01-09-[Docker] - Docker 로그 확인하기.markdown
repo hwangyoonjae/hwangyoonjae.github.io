@@ -19,5 +19,6 @@ description: Markdown summary with different options
 # -f를 추가하면 실시간으로 볼 수 있다.
 $ docker log -f 컨테이너 이름
 ```
+[![텍스트](/assets/images/docker/docker%20container%20%EB%A1%9C%EA%B7%B8%20%ED%99%95%EC%9D%B8%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20container%20%EB%A1%9C%EA%B7%B8%20%ED%99%95%EC%9D%B8%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
