@@ -111,7 +111,7 @@ services:
 
 - docker container에 직접 접속하여 MariaDB에 접속해본다.
 ```bash
-$ docker exec -it [docker_container명] /bin/bash
+$ docker exec -it 컨테이너 이름 /bin/bash
 $ mysql -u root -p
 ```
 [![텍스트](/assets/images/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
@@ -138,7 +138,7 @@ services:
 
 - docker container에 직접 접속하여 Redis 서버 확인해본다.
 ```bash
-$ docker exec -it [docker_container명] /bin/bash
+$ docker exec -it 컨테이너 이름 /bin/bash
 $ redis-cli ping
 ```
 [![텍스트](/assets/images/docker/docker%20redis%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20redis%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
