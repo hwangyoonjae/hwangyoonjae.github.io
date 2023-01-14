@@ -23,4 +23,9 @@ description: Markdown summary with different options
 $ yum -y install oracle-database-preinstall-19c
 ```
 
+- Oracle 19c 파일을 다운받는다.
+> * [oracle 19c 다운받기](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html "oracle 19c 다운받기")
+
+[![테스트](/assets/images/DB/oracle%20%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC%20%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.PNG)](/assets/images/DB/oracle%20%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC%20%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.PNG)
+
 * * *
