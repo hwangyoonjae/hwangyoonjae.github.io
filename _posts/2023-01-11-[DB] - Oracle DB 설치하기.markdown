@@ -17,15 +17,48 @@ description: Markdown summary with different options
 
 * * *
 
-## Oracle DB 설치하기:
-- yum을 통하여 Oracle 설치에 필요한 내용을 설치한다.
-```bash
-$ yum -y install oracle-database-preinstall-19c
-```
-
-- Oracle 19c 파일을 다운받는다.
+## Oracle DB 설치 준비하기:
+### Oracle 19c 파일을 다운로드:
+- 아래 URL 참고하여 파일 다운받는다.
 > * [oracle 19c 다운받기](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html "oracle 19c 다운받기")
-
 [![테스트](/assets/images/DB/oracle%20%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC%20%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.PNG)](/assets/images/DB/oracle%20%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC%20%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.PNG)
+> * [oracle-database-preinstall-19c 다운받기](https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/oracle-database-preinstall-19c-1.0-1.el7.x86_64.rpm "oracle-database-preinstall-19c 다운받기")
+
+* * *
+
+### oracle 사용할 계정 및 폴더 생성하기:
+- oracle 사용할 계정을 생성한다.
+```bash
+# 사용자 계정 생성
+$ groupadd -g 1900 dba
+$ useradd -g dba -u 1900 ora19c
+$ passwd ora19c
+```
+[![텍스트](/assets/images/DB/oracle%20user%20%EC%83%9D%EC%84%B1.PNG)](/assets/images/DB/oracle%20user%20%EC%83%9D%EC%84%B1.PNG)
+
+- oracle 사용할 폴더를 생성한다.
+```bash
+# 폴더 생성하기
+$ mkdir -p /oracle/ora19c/19c
+$ mkdir -p /oracle/oraInventory
+$ chown -R ora19c.dba /oracle/ora19c
+$ chown -R ora19c.dba /oracle/oraInventory/
+$ chgrp -R dba /oracle/
+$ chmod -R 755 /oracle/
+```
+[![텍스트](/assets/images/DB/oracle%20%ED%8F%B4%EB%8D%94%20%EC%83%9D%EC%84%B1.PNG)](/assets/images/DB/oracle%20%ED%8F%B4%EB%8D%94%20%EC%83%9D%EC%84%B1.PNG)
+
+* * *
+
+### Oracle 19c 설치하기:
+- 위에서 진행한 oracle 19c 설치파일을 옮겨서 설치한다.
+```bash
+$ yum install binutils combat-libcap1 combat-libstdc++-33 gcc gcc-c++ glibc glibc-devel ksh libgcc libstdc++ libstdc++-devel libaio libaio-devel make sysstat
+$ cd /oracle/ora19c
+$ rpm -Uvh oracle-database-preinstall-19c-1.0-1.el7.x86_64.rpm
+$ rpm -Uvh oracle-database-ee-19c-1.0-1.x86_64.rpm
+$ /etc/init.d/oracledb_ORCLCDB-19c configure
+```
+[![텍스트](/assets/images/DB/oracle%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1.PNG)](/assets/images/DB/oracle%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1.PNG)
 
 * * *
