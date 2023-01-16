@@ -50,6 +50,43 @@ $ chmod -R 755 /oracle/
 
 * * *
 
+### 도메인의 IP 설정하기 :
+- IP에 두 도메인을 연결하여 설정한다.
+```bash
+$ vi /etc/hosts
+```
+```bash
+# 아래 내용 추가
+서버IP  DB19.itclass.co.kr  DB19
+```
+
+* * *
+
+### ora19c 계정 환경변수 설정하기:
+- ora19c 계정으로 오라클 운영관리를 설정한다.
+```bash
+# ora19c 계정으로 로그인 후 진행
+$ vi .bash_profile
+```
+```bash
+# 아래 내용 추가
+export ORACLE_OWNER=ora19c
+export ORACLE_BASE=/oracle/ora19c
+export ORACLE_HOME=/oracle/ora19c/19c
+export TNS_ADMIN=$ORACLE_HOME/network/admin
+export ORACLE_SID=testdb
+export NLS_LANG=AMERICAN_AMERICA.AL32UTF8
+export ORACLE_HOSTNAME=testdb.co.kr
+export TMP=/tmp
+export TMPDIR=$TMP
+export PATH=$PATH:$ORACLE_HOME/bin:$ORACLE_HOME:/usr/bin:.
+```
+```bash
+$ source .bash_profile
+``
+
+* * *
+
 ### Oracle 19c 설치하기:
 - 위에서 진행한 oracle 19c 설치파일을 옮겨서 설치한다.
 ```bash
