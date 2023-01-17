@@ -19,7 +19,7 @@ description: Markdown summary with different options
 
 ## Oracle DB 설치 준비하기:
 ### Oracle 19c 파일을 다운로드:
-- 아래 URL 참고하여 파일 다운받는다.
+- 아래 URL 참고하여 oracle 설치파일과 설치 시 추가로 필요한 rpm파일까지 다운받는다.
 > * [oracle 19c 다운받기](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html "oracle 19c 다운받기")
 [![테스트](/assets/images/DB/oracle%20%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC%20%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.PNG)](/assets/images/DB/oracle%20%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC%20%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.PNG)
 > * [oracle-database-preinstall-19c 다운받기](https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/oracle-database-preinstall-19c-1.0-1.el7.x86_64.rpm "oracle-database-preinstall-19c 다운받기")
