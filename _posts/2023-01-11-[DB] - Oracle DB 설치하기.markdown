@@ -57,8 +57,9 @@ $ vi /etc/hosts
 ```
 ```bash
 # 아래 내용 추가
-서버IP  DB19.itclass.co.kr  DB19
+서버IP  testdb.itclass.co.kr  testdb
 ```
+[![텍스트](/assets/images/DB/oracle%20hostname%20%EC%A7%80%EC%A0%95.PNG)](/assets/images/DB/oracle%20hostname%20%EC%A7%80%EC%A0%95.PNG)
 
 * * *
 
@@ -98,5 +99,15 @@ $ rpm -Uvh oracle-database-ee-19c-1.0-1.x86_64.rpm
 $ /etc/init.d/oracledb_ORCLCDB-19c configure
 ```
 [![텍스트](/assets/images/DB/oracle%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1.PNG)](/assets/images/DB/oracle%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1.PNG)
+
+- 오라클사 홈페이지에서 다운로드 받은 압축 파일을 해제 후 인스톨러 실행한다.
+```bash
+$ cd /oracle/ora19c/19c
+$ unzip LINUX.X64_193000_db_home.zip
+$ export DISPLAY=:0
+$ xhost +
+$ ./runInstaller
+```
+[![텍스트](/assets/images/DB/oracle%20%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/oracle%20%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
 
 * * *
