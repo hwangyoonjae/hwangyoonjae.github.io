@@ -82,8 +82,9 @@ export TMPDIR=$TMP
 export PATH=$PATH:$ORACLE_HOME/bin:$ORACLE_HOME:/usr/bin:.
 ```
 ```bash
+# 수정한 환경변수 적용
 $ source .bash_profile
-``
+```
 
 * * *
 
