@@ -102,6 +102,7 @@ $ /etc/init.d/oracledb_ORCLCDB-19c configure
 
 - 오라클사 홈페이지에서 다운로드 받은 압축 파일을 해제 후 인스톨러 실행한다.
 ```bash
+# ora19c 계정 사용
 $ cd /oracle/ora19c/19c
 $ unzip LINUX.X64_193000_db_home.zip
 $ export DISPLAY=:0
