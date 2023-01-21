@@ -100,6 +100,8 @@ $ /etc/init.d/oracledb_ORCLCDB-19c configure
 ```
 [![텍스트](/assets/images/DB/oracle%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1.PNG)](/assets/images/DB/oracle%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%83%9D%EC%84%B1.PNG)
 
+* * *
+
 - 오라클사 홈페이지에서 다운로드 받은 압축 파일을 해제 후 인스톨러 실행한다.
 ```bash
 # ora19c 계정 사용
@@ -110,5 +112,43 @@ $ xhost +
 $ ./runInstaller
 ```
 [![텍스트](/assets/images/DB/oracle%20%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/oracle%20%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
+
+* * *
+
+- 구성 옵션 선택에서 단일 인스턴스 데이터베이스 생성 및 구성을 선택한다.
+[![텍스트](/assets/images/DB/oracle%20%EA%B5%AC%EC%84%B1%20%EC%98%B5%EC%85%98%20%EC%84%A0%ED%83%9D%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/oracle%20%EA%B5%AC%EC%84%B1%20%EC%98%B5%EC%85%98%20%EC%84%A0%ED%83%9D%ED%99%94%EB%A9%B4.PNG)
+
+- 다음 버튼 클릭 후 **INS-32042** 에러가 발생할 수 있다.
+```html
+[INS-32042] 사용자(ora19c)가 중앙 인벤토리 그룹(oinstall)의 멤버인지 확인하십시오.
+```
+
+- /etc/oraInst.loc 파일 열어 inst_group을 변경한다.
+```bash
+vi /etc/oraInst.loc
+# 아래 내용 변경
+inventory_loc=/opt/oracle/oraInventory
+inst_group=dba
+```
+
+* * *
+
+- 시스템 클래스에서 데스크톱 클래스를 선택한다.
+[![텍스트](/assets/images/DB/oracle%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%84%A0%ED%83%9D%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/oracle%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%84%A0%ED%83%9D%ED%99%94%EB%A9%B4.PNG)
+
+* * *
+
+- 일반 설치 구성에서 데이터베이스 설치를 설정한다.
+[![텍스트](/assets/images/DB/oracle%20%EC%9D%BC%EB%B0%98%20%EC%84%A4%EC%B9%98%20%EA%B5%AC%EC%84%B1%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/oracle%20%EC%9D%BC%EB%B0%98%20%EC%84%A4%EC%B9%98%20%EA%B5%AC%EC%84%B1%ED%99%94%EB%A9%B4.PNG)
+
+* * *
+
+- 자동으로 구성 스크립트 실행을 선택하고 루트 사용자 인증서 비밀번호를 입력한다.
+[![텍스트](/assets/images/DB/oracle%20%EB%A3%A8%ED%8A%B8%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EC%8B%A4%ED%96%89%20%EA%B5%AC%EC%84%B1%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/oracle%20%EB%A3%A8%ED%8A%B8%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EC%8B%A4%ED%96%89%20%EA%B5%AC%EC%84%B1%ED%99%94%EB%A9%B4.PNG)
+
+* * *
+
+- 모든 설정 완료 후 설치를 진행한다.
+[![텍스트](/assets/images/DB/oracle%20%EC%A0%9C%ED%92%88%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/oracle%20%EC%A0%9C%ED%92%88%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4.PNG)
 
 * * *
