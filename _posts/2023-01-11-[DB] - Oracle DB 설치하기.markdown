@@ -152,3 +152,12 @@ inst_group=dba
 [![텍스트](/assets/images/DB/oracle%20%EC%A0%9C%ED%92%88%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/oracle%20%EC%A0%9C%ED%92%88%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4.PNG)
 
 * * *
+
+### Oracle 19c 실행하기:
+- oracle 19c에 로그인한다.
+```bash
+$ sqlplus / as sysdba
+```
+[![텍스트](/assets/images/DB/oracle%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/oracle%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
+
+* * *
