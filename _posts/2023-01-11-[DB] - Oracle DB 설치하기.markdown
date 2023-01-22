@@ -160,4 +160,15 @@ $ sqlplus / as sysdba
 ```
 [![텍스트](/assets/images/DB/oracle%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/oracle%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
 
+
+- 오라클 서비스 실행은 아래와 같다.
+```bash
+# 오라클 시작
+SQL> startup
+```
+
+```bash
+# 오라클 종료
+SQL> shutdown immediate
+```
 * * *
