@@ -144,3 +144,7 @@ $ redis-cli ping
 [![텍스트](/assets/images/docker/docker%20redis%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20redis%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
+
+### Visualizer 통해서 컨테이너 구성 확인하기:
+- docker manager에서 설치한 Visualizer 통해 Manager와 Worker에 구성된 컨테이너를 확인한다.
+[![텍스트](/assets/images/docker/docker%20manager%20worker%20%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EA%B5%AC%EC%84%B1%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20manager%20worker%20%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EA%B5%AC%EC%84%B1%ED%99%94%EB%A9%B4.PNG)
