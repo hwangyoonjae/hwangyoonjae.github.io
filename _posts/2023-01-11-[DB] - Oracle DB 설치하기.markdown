@@ -36,6 +36,8 @@ $ passwd ora19c
 ```
 [![텍스트](/assets/images/DB/oracle%20user%20%EC%83%9D%EC%84%B1.PNG)](/assets/images/DB/oracle%20user%20%EC%83%9D%EC%84%B1.PNG)
 
+* * *
+
 - oracle 사용할 폴더를 생성한다.
 ```bash
 # 폴더 생성하기
