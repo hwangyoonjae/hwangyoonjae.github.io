@@ -14,7 +14,6 @@ description: Markdown summary with different options
 
 ## Ansible(앤서블)란?:
 - 인프라 관리를 코드 기반으로 자동화하는 도구이다.
-- Infrastructure as Code (IaC)는 IT 인프라를 코드 기반으로 자동 설치 및 구축/관리/프로비저닝 하는 프로세스를 말하며 관련 도구들이 나오면서 자동화된 인프라 구축이 가능하다.
 - 코드 스크립트를 실행하기만 하면 코드가 알아서 다 해주게된다.
 
 * * *
