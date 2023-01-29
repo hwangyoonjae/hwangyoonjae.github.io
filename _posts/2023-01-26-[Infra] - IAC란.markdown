@@ -24,6 +24,10 @@ description: Markdown summary with different options
   > * [Ansible이란?](https://hwangyoonjae.github.io/Ansible-Ansible%EB%9E%80/ "Ansible이란?")
 - Saltstack
 - Terraform
-- AWS CloudFormation 
+- AWS CloudFormation
+
+```html
+※ 필자는 IAC툴 중에서 Ansible만 알고있다.
+```
 
 * * *
