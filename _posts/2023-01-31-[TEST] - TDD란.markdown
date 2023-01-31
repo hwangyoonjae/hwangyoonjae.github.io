@@ -1,0 +1,23 @@
+---
+title: "[TEST] - TDD란"
+layout: post
+date: 2023-01-31
+image: /assets/images/Post/repeat.png
+headerImage: true
+tag:
+- 테스트
+category: blog
+author: hwangyoonjae
+description: Markdown summary with different options
+---
+
+## TDD를 알고싶었던 계기:
+- IAC를 공부하는 과정에서 우연히 TDD라는 단어를 보게되어 검색하였더니 내가 모르는거라 알고싶었다.
+
+* * *
+
+## Test Driven Development(TDD)란?:
+- 테스트 주도 개발이라 한다.
+- 반복 테스트를 이용한 소프트웨어 방법론으로, 작은 단위의 테스트 케이스를 작성하고 이를 통과하는 코드를 추가하는 단계를 반복하여 구현한다.
+
+* * *
