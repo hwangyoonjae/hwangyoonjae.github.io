@@ -1,0 +1,24 @@
+---
+title: "[Bash] - 리다이렉션 기호 이해하기"
+layout: post
+date: 2023-02-08
+image: /assets/images/Post/protection.png
+headerImage: true
+tag:
+- Shell script
+- /dev/null
+- 2>&1
+category: blog
+author: hwangyoonjae
+description: Markdown summary with different options
+---
+
+## 리다이렉션 기호를 알고싶었던 계기:
+- 스크립트 실행에 대한 결과를 직접 파일에 들어가서 보는게 아닌 텍스트 파일로 저장해놓고 윈도우도 볼 수 있었으면 해서 찾아보다 리다이렉션 기호를 알게되었고, 한번 알아두면 좋을거 같아서 작성하게되었다.
+
+* * *
+
+## 리다이렉션이란?:
+- 방향을 변경하는 것을 의미하며, 파일로 표준 입력을 받고, 파일로 표준 출력을 받는 등의 기능을 의미한다.
+
+* * *
