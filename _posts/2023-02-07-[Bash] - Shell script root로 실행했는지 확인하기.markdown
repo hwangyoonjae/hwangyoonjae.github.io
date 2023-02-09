@@ -2,7 +2,7 @@
 title: "[Bash] - Shell script root로 실행했는지 확인하기"
 layout: post
 date: 2023-02-07
-image: /assets/images/Post/protection.png
+image: /assets/images/Post/gnu-bash.png
 headerImage: true
 tag:
 - Shell script

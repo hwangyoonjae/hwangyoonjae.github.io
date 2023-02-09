@@ -2,7 +2,7 @@
 title: "[Bash] - 리다이렉션 기호 이해하기"
 layout: post
 date: 2023-02-08
-image: /assets/images/Post/protection.png
+image: /assets/images/Post/gnu-bash.png
 headerImage: true
 tag:
 - Shell script
