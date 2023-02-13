@@ -2,7 +2,7 @@
 title: "서버 구축해보기"
 layout: post
 date: 2022-12-15
-image: /assets/images/post/server.png
+image: /assets/images/Post/server.png
 headerImage: true
 tag: 
 - Docker
