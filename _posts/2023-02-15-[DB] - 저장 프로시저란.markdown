@@ -12,6 +12,11 @@ author: hwangyoonjae
 description: Markdown summary with different options
 ---
 
+## 저장 프로시저(Stored Procedure)를 알고싶었던 계기:
+- Stored Procedure에서 사용중인 쿼리가 느리다고 DB 엔지니어와 얘기를 하다가 조치 및 지원부분에 대해서 확인요청 하던 중 Stored Procedure 소스를 준비해달라고 요청하였고, 나는 Stored Procedure에 대해서 몰랐기에 알고 싶었다.
+
+* * *
+
 ## 저장 프로시저(Stored Procedure)란?:
 - DB 내부에 저장된 일련의 SQL 명령문들을 하나의 함수처럼 실행하기 위한 쿼리의 집합이다.
 
