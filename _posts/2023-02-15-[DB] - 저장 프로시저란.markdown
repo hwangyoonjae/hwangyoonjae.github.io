@@ -18,8 +18,30 @@ description: Markdown summary with different options
 * * *
 
 ## 저장 프로시저(Stored Procedure)란?:
+```sql
+DELIMITER $$
+CREATE PROCEDURE 'TEST_PROC' (
+    -- 파라미터 선언
+    PARAM_NAME VARCHAR(20),
+    PARAM_AGE INT
+)
+BEGIN
+    -- 변수 선언
+    DECLARE PARAM_NUM INTEGER;
+    
+    -- 쿼리문1
+    SELECT COUNT(*) + 1
+    	INTO PARAM_NUM
+        FROM table1;
+        
+    -- 쿼리문2
+    INSERT INTO table1(total_count, user_name, user_age) VALUES(PARAM_NUM, PARAM_NAME, PARAM_AGE);
+END $$
+DELIMITER ;
+```
+- 파라미터 선언은 프로시저명() 안에서 선언하고 SQL문과 변수 선언은 BEGIN ~ END 사이에 작성하고, SELECT 사용 시에는 조회한 컬럼(데이터)을 반드시 INTO로 변수 안에 넣어줘야하며, 프로시저 내부에서 사용하는 SQL문은 일반 SQL문이기 때문에 세미콜론(;)으로 문장을 끝맺어야한다.
 - DB 내부에 저장된 일련의 SQL 명령문들을 하나의 함수처럼 실행하기 위한 쿼리의 집합이다.
-- 간단하게로는 SELECT, INSERT, UPDATE, DELETE 등의 DQL, DML을 사용할 수 있으며, 조금 더 나아가서 IF 문이나 DECLARE, SET 등의 프로그래밍 문법을 사용할 수도 있다
+- 간단하게로는 SELECT, INSERT, UPDATE, DELETE 등의 DQL, DML을 사용할 수 있으며, 조금 더 나아가서 IF 문이나 DECLARE, SET 등의 프로그래밍 문법을 사용할 수도 있다.
 
 * * *
 
