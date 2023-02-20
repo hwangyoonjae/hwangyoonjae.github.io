@@ -1,0 +1,11 @@
+---
+layout: page
+title: Categories
+---
+<section class="list">
+    {% for post in site.posts %}
+        {% if post.categories %}
+            <p>테스트 성공!</p>
+        {% endif %}
+    {% endfor %}
+</section>

@@ -29,5 +29,13 @@
                 </li>
             {% endif %}
         {% endif %}
+        
+        {% if site.projects == true %}
+            {% if page.title != "Categories" %}
+                <li class="item">
+                    <a class="link" href="{{ site.url }}/categories">Categories</a>
+                </li>
+            {% endif %}
+        {% endif %}
     </ul>
 </nav>
