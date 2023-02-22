@@ -1,0 +1,17 @@
+---
+title: "[인코딩] - Base64 인코딩이란"
+layout: post
+date: 2023-02-22
+image: /assets/images/Post/encoding.png
+headerImage: true
+tag:
+-
+category: blog
+author: hwangyoonjae
+description: Markdown summary with different options
+---
+
+## Base64 인코딩이란?:
+
+
+* * *
