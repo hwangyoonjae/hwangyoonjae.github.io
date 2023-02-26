@@ -1,5 +1,5 @@
 ---
-title: "[인코딩] - 인코딩이란"
+title: "[인코딩&디코딩] - 인코딩&디코딩이란"
 layout: post
 date: 2023-02-22
 image: /assets/images/Post/encoding.png
@@ -10,6 +10,11 @@ category: blog
 author: hwangyoonjae
 description: Markdown summary with different options
 ---
+
+## 인코딩&디코딩을 알고싶었던 계기:
+- SI사업 지원을 하면서 사용자 패스워드 암호화 후 Base64로 인코딩된 걸 인사연동 시 디코딩해서 가져오는 쿼리를 구현했다. 나는 Base64도 sha256 같은 암호화 방식으로 알고 있었고, 내가 제대로 이해한게 맞는지 확인하고 싶어서다.
+
+* * *
 
 ## 인코딩이란?:
 - 어떠한 정보/데이터의 형태나 형식을 다른 형태나 형식으로 변환하는 것을 말한다.
