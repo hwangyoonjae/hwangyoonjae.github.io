@@ -1,15 +1,15 @@
 ---
 title: "[Jekyll] - Window에서 jekyll 로컬 서버 실행"
-layout: post
+categories:
+  - Jekyll
+tags:
+  - [Window, Jekyll]
+
+toc: true
+toc_sticky: true
+
 date: 2022-06-07
-image: /assets/images/Post/blogging.png
-headerImage: true
-tag:
-- Window
-- Jekyll
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-06-07
 ---
 
 ## Window에서 jekyll 로컬 서버 실행:

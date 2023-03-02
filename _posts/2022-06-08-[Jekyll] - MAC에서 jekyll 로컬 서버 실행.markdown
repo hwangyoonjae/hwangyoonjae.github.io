@@ -1,15 +1,15 @@
 ---
 title: "[Jekyll] - MAC에서 jekyll 로컬 서버 실행"
-layout: post
+categories:
+  - Jekyll
+tags:
+  - [MAC, Jekyll, extra]
+
+toc: true
+toc_sticky: true
+
 date: 2022-06-08
-image: /assets/images/Post/blogging.png
-headerImage: true
-tag:
-- MAC
-- Jekyll
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-06-08
 ---
 
 ## MAC에서 jekyll 로컬 서버 실행:

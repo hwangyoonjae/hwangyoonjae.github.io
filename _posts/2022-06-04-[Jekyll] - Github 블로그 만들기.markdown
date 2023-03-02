@@ -1,16 +1,15 @@
 ---
 title: "[Jekyll] - Github 블로그 만들기"
-layout: post
+categories:
+  - Jekyll
+tags:
+  - [markdown, components, extra]
+
+toc: true
+toc_sticky: true
+
 date: 2022-06-04
-image: /assets/images/Post/start.png
-headerImage: true
-tag:
-- markdown
-- components
-- extra
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-06-04
 ---
 
 ## 계기:
