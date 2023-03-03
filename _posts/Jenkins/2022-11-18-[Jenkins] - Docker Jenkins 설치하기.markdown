@@ -1,17 +1,15 @@
 ---
 title: "[Jenkins] - Docker Jenkins 설치하기"
-layout: post
+categories:
+  - Jenkins
+tags:
+  - [Jenkins, Java, CI, Docker]
+
+toc: true
+toc_sticky: true
+
 date: 2022-11-18
-image: /assets/images/Post/jenkins.png
-headerImage: true
-tag:
-- Jenkins
-- Java
-- CI
-- Docker
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-11-18
 ---
 
 ## Docker에 Jenkins 설치하기:
