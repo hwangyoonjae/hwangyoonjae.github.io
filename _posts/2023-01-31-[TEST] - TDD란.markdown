@@ -1,14 +1,15 @@
 ---
-title: "[TEST] - TDD란"
-layout: post
+title: "[Test] - TDD란"
+categories:
+  - Test
+tags:
+  - [Test]
+
+toc: true
+toc_sticky: true
+
 date: 2023-01-31
-image: /assets/images/Post/repeat.png
-headerImage: true
-tag:
-- 테스트
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2023-01-31
 ---
 
 ## TDD를 알고싶었던 계기:
