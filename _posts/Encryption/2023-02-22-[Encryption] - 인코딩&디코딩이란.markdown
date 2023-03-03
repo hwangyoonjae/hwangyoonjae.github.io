@@ -1,9 +1,9 @@
 ---
-title: "[Application] - 인코딩&디코딩이란"
+title: "[Encryption] - 인코딩&디코딩이란"
 categories:
   - Encryption
 tags:
-  - [Base64]
+  - [Base64, Encoding, Decoding]
 
 toc: true
 toc_sticky: true
