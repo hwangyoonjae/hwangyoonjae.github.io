@@ -1,15 +1,15 @@
 ---
-title: "[JAVA] - Elasticsearch란"
-layout: post
-date: 2022-08-12
-image: /assets/images/Post/elasticsearch.png
-headerImage: true
-tag:
-- JAVA
-- DATA
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+title: "[Elasticsearch] - Elasticsearch란"
+categories:
+  - Elasticsearch
+tags:
+  - [JAVA, DATA]
+
+toc: true
+toc_sticky: true
+
+date: 2023-08-12
+last_modified_at: 2023-08-12
 ---
 
 ## Elasticsearch란? :
