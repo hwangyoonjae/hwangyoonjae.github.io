@@ -1,16 +1,15 @@
 ---
 title: "[Linux] - 리눅스 메모리 캐시 삭제하기"
-layout: post
+categories:
+  - Linux
+tags:
+  - [Linux, 메모리, 캐시]
+
+toc: true
+toc_sticky: true
+
 date: 2022-08-01
-image: /assets/images/Post/Memory.png
-headerImage: true
-tag:
-- Linux
-- 메모리
-- 캐시
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-08-01
 ---
 
 ## 리눅스 메모리 캐시 삭제를 알고 싶었던 계기 :

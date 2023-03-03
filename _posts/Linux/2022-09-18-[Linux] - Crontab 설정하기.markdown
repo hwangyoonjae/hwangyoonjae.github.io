@@ -1,14 +1,15 @@
 ---
 title: "[Linux] - Crontab 설정하기"
-layout: post
+categories:
+  - Linux
+tags:
+  - [Crontab]
+
+toc: true
+toc_sticky: true
+
 date: 2022-09-18
-image: /assets/images/Post/crontab.png
-headerImage: true
-tag:
-- Crontab
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-09-18
 ---
 
 ## Crontab(크론탭)에 대해 알고 싶었던 계기:

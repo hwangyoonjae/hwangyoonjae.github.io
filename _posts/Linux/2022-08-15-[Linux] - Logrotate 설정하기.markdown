@@ -1,15 +1,15 @@
 ---
 title: "[Linux] - Logrotate 설정하기"
-layout: post
+categories:
+  - Linux
+tags:
+  - [Linux, Log]
+
+toc: true
+toc_sticky: true
+
 date: 2022-08-15
-image: /assets/images/Post/log.png
-headerImage: true
-tag:
-- Linux
-- Log
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-08-15
 ---
 
 ## Logrotate는 무엇인가?:

@@ -1,14 +1,15 @@
 ---
 title: "[Linux] - OpenSSL 패치하기"
-layout: post
+categories:
+  - Linux
+tags:
+  - [SSL]
+
+toc: true
+toc_sticky: true
+
 date: 2022-10-05
-image: /assets/images/Post/ssl.png
-headerImage: true
-tag:
-- SSL
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-10-05
 ---
 
 ## OpenSSL에 대해 알고 싶었던 계기:
