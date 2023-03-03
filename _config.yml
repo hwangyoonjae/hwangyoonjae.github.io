@@ -106,10 +106,10 @@ analytics:
 # Site Author
 author:
   name             : "Hwang Yoon Jae"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  avatar           : "/assets/images/profile.jpg"
+  bio              : "Success doesn't come overnight"
+  location         : "Republic of Korea"
+  email            : "hyj90632@gmailcom"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
