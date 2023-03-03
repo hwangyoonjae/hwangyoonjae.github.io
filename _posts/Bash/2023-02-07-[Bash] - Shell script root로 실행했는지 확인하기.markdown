@@ -1,14 +1,15 @@
 ---
 title: "[Bash] - Shell script root로 실행했는지 확인하기"
-layout: post
+categories:
+  - Bash
+tags:
+  - [Shell script]
+
+toc: true
+toc_sticky: true
+
 date: 2023-02-07
-image: /assets/images/Post/gnu-bash.png
-headerImage: true
-tag:
-- Shell script
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2023-02-07
 ---
 
 ## root로 실행확인을 알고싶었던 계기:

@@ -1,16 +1,15 @@
 ---
 title: "[Bash] - 리다이렉션 기호 이해하기"
-layout: post
+categories:
+  - Bash
+tags:
+  - [Shell script, /dev/null, 2>&1]
+
+toc: true
+toc_sticky: true
+
 date: 2023-02-08
-image: /assets/images/Post/gnu-bash.png
-headerImage: true
-tag:
-- Shell script
-- /dev/null
-- 2>&1
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2023-02-08
 ---
 
 ## 리다이렉션 기호를 알고싶었던 계기:
