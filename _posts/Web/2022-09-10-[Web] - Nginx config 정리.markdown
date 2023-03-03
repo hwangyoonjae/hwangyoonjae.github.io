@@ -1,16 +1,15 @@
 ---
 title: "[Web] - Nginx config 정리"
-layout: post
+categories:
+  - Web
+tags:
+  - [Web, Nginx, config]
+
+toc: true
+toc_sticky: true
+
 date: 2022-09-10
-image: /assets/images/Post/nginx.png
-headerImage: true
-tag:
-- WEB
-- Nginx
-- conf
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-09-10
 ---
 
 ## Configuration File 구조 분석하기:

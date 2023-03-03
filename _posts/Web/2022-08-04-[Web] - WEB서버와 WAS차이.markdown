@@ -1,15 +1,15 @@
 ---
-title: "[WEB] - WEB Server와 WAS 차이"
-layout: post
+title: "[Web] - WEB Server와 WAS 차이"
+categories:
+  - Web
+tags:
+  - [Web, Was]
+
+toc: true
+toc_sticky: true
+
 date: 2022-08-04
-image: /assets/images/Post/WEBWAS.png
-headerImage: true
-tag:
-- WEB
-- WAS
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-08-04
 ---
 
 ## WEB Server와 WAS에 대해 알고 싶었던 계기 :
