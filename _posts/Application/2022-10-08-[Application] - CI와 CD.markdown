@@ -1,15 +1,15 @@
 ---
 title: "[Application] - CI/CD란"
-layout: post
+categories:
+  - Application
+tags:
+  - [CI, CD]
+
+toc: true
+toc_sticky: true
+
 date: 2022-10-08
-image: /assets/images/Post/infinity.png
-headerImage: true
-tag:
-- CI
-- CD
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-10-08
 ---
 
 ## CI/CD란?:
