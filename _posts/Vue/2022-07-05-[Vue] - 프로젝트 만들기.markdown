@@ -1,17 +1,15 @@
 ---
 title: "[Vue] - Vue 프로젝트 만들기"
-layout: post
+categories:
+  - Vue
+tags:
+  - [Vue, VScode]
+
+toc: true
+toc_sticky: true
+
 date: 2022-07-05
-tag: 
-- Vue
-- VScode
-image: /assets/images/Vue/data.png
-headerImage: true
-projects: true
-hidden: true # don't count this post in blog pagination
-description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
-category: project
-author: johndoe
+last_modified_at: 2022-07-05
 ---
 
 ## Vue 프로젝트 만들기:
