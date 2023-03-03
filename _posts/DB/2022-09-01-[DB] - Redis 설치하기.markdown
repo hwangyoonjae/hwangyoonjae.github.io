@@ -1,15 +1,15 @@
 ---
 title: "[DB] - Redis 설치하기"
-layout: post
+categories:
+  - DB
+tags:
+  - [Redis, NoSQL]
+
+toc: true
+toc_sticky: true
+
 date: 2022-09-01
-image: /assets/images/Post/redis.png
-headerImage: true
-tag:
-- Redis
-- NoSQL
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-09-01
 ---
 
 ## Redis 설치하기:

@@ -1,16 +1,15 @@
 ---
 title: "[DB] - Postgresql 설치하기"
-layout: post
+categories:
+  - DB
+tags:
+  - [DBMS, ORDBMS, PostgreSQL]
+
+toc: true
+toc_sticky: true
+
 date: 2022-08-09
-image: /assets/images/Post/postgre.png
-headerImage: true
-tag:
-- DBMS
-- ORDBMS
-- PostgreSQL
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-08-09
 ---
 
 ## PostgreSQL란?:

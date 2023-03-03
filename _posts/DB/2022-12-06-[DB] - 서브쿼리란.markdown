@@ -1,15 +1,15 @@
 ---
 title: "[DB] - 서브쿼리란"
-layout: post
+categories:
+  - DB
+tags:
+  - [DB, 서브쿼리]
+
+toc: true
+toc_sticky: true
+
 date: 2022-12-06
-image: /assets/images/Post/db.png
-headerImage: true
-tag:
-- DB
-- 서브쿼리
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-12-06
 ---
 
 ## 서브쿼리란?:

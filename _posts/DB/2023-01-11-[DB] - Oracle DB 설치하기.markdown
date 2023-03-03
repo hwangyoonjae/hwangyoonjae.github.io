@@ -1,15 +1,15 @@
 ---
 title: "[DB] - Oracle DB 설치하기"
-layout: post
+categories:
+  - DB
+tags:
+  - [Oracle, MS-SQL]
+
+toc: true
+toc_sticky: true
+
 date: 2023-01-11
-image: /assets/images/Post/oracle.png
-headerImage: true
-tag:
-- Oracle
-- MS-SQL
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2023-01-11
 ---
 
 ## Oralce이란?:

@@ -1,15 +1,15 @@
 ---
 title: "[DB] - Join이란"
-layout: post
+categories:
+  - DB
+tags:
+  - [Join, 결합]
+
+toc: true
+toc_sticky: true
+
 date: 2022-10-14
-image: /assets/images/Post/db.png
-headerImage: true
-tag:
-- Join
-- 결합
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-10-14
 ---
 
 ## 조인(Join)란?:

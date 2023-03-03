@@ -1,16 +1,15 @@
 ---
 title: "[DB] - MariaDB 이중화 구성하기"
-layout: post
+categories:
+  - DB
+tags:
+  - [DB 이중화, Active, Standby]
+
+toc: true
+toc_sticky: true
+
 date: 2022-10-28
-image: /assets/images/Post/mariadb.png
-headerImage: true
-tag:
-- DB 이중화
-- Active
-- Standby
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-10-28
 ---
 
 ## MariaDB Replication 절차:

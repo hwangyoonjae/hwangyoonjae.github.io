@@ -1,16 +1,15 @@
 ---
 title: "[DB] - IN, NOT IN 연산자 사용법"
-layout: post
+categories:
+  - DB
+tags:
+  - [DB, IN, NOT IN]
+
+toc: true
+toc_sticky: true
+
 date: 2022-12-10
-image: /assets/images/Post/db.png
-headerImage: true
-tag:
-- DB
-- IN
-- NOT IN
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-12-10
 ---
 
 ## IN, NOT IN 연산자?:

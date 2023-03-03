@@ -1,15 +1,15 @@
 ---
 title: "[DB] - Redis란"
-layout: post
+categories:
+  - DB
+tags:
+  - [DB, NoSQL]
+
+toc: true
+toc_sticky: true
+
 date: 2022-08-11
-image: /assets/images/Post/redis.png
-headerImage: true
-tag:
-- DB
-- NoSQL
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-08-11
 ---
 
 ## Redis란? :
