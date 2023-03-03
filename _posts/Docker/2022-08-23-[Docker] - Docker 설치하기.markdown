@@ -1,15 +1,15 @@
 ---
 title: "[Docker] - Docker 설치하기"
-layout: post
+categories:
+  - Docker
+tags:
+  - [Docker, Kubernetes]
+
+toc: true
+toc_sticky: true
+
 date: 2022-08-23
-image: /assets/images/Post/docker.png
-headerImage: true
-tag:
-- Docker
-- Kubernetes
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-08-23
 ---
 
 ## Docker란 무엇인가?:

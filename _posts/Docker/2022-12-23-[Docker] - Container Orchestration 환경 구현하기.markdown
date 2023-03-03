@@ -1,15 +1,15 @@
 ---
 title: "[Docker] - Container Orchestration 환경 구현하기"
-layout: post
+categories:
+  - Docker
+tags:
+  - [Docker, YAML]
+
+toc: true
+toc_sticky: true
+
 date: 2022-12-23
-image: /assets/images/Post/docker.png
-headerImage: true
-tag:
-- Docker
-- YAML
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-12-23
 ---
 
 ## Container Orchestration 환경 구현하기:

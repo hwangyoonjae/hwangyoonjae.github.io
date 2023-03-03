@@ -1,15 +1,15 @@
 ---
-title: "[Linux] - Docker Container 자동실행"
-layout: post
+title: "[Docker] - Docker Container 자동실행"
+categories:
+  - Docker
+tags:
+  - [Docker, Container]
+
+toc: true
+toc_sticky: true
+
 date: 2022-11-24
-image: /assets/images/Post/docker.png
-headerImage: true
-tag:
-- Docker
-- Container
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-11-24
 ---
 
 ## Docker Container 자동실행:

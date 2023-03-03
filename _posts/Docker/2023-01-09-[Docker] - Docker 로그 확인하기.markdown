@@ -1,15 +1,15 @@
 ---
 title: "[Docker] - Docker 로그 확인하기"
-layout: post
+categories:
+  - Docker
+tags:
+  - [Docker, Logs]
+
+toc: true
+toc_sticky: true
+
 date: 2023-01-09
-image: /assets/images/Post/docker.png
-headerImage: true
-tag:
-- Docker
-- Logs
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2023-01-09
 ---
 
 ## Docker 관련 로그 확인하기:

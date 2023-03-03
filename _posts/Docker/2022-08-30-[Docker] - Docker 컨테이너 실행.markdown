@@ -1,17 +1,17 @@
 ---
 title: "[Docker] - Docker 컨테이너 실행"
-layout: post
+categories:
+  - Docker
+tags:
+  - [Docker, Image, Container]
+
+toc: true
+toc_sticky: true
+
 date: 2022-08-30
-image: /assets/images/Post/docker.png
-headerImage: true
-tag:
-- Docker
-- Image
-- Container
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-08-30
 ---
+
 
 ## Docker 컨테이너 실행하기
 ### 도커 컨테이너 (Docker Container) 생성하기: 

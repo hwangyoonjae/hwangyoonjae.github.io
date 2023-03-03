@@ -1,16 +1,15 @@
 ---
-title: "[Docker] - Docker 스웜 구성하기"
-layout: post
+title: "[Docker] - Docker Swarm 구성하기"
+categories:
+  - Docker
+tags:
+  - [Docker, Swarm, Orchestration]
+
+toc: true
+toc_sticky: true
+
 date: 2022-09-02
-image: /assets/images/Post/docker.png
-headerImage: true
-tag:
-- Docker
-- Swarm
-- Orchestration
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-09-02
 ---
 
 ## 도커 스웜(Docker Swarm)이란?:

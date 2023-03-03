@@ -1,15 +1,15 @@
 ---
-title: "[Linux] - Docker 스택이란"
-layout: post
+title: "[Docker] - Docker Stack이란"
+categories:
+  - Docker
+tags:
+  - [Docker, YAML]
+
+toc: true
+toc_sticky: true
+
 date: 2022-09-01
-image: /assets/images/Post/docker.png
-headerImage: true
-tag:
-- Docker
-- YAML
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-09-01
 ---
 
 ## 도커 스택(Docker Stack)이란?:
