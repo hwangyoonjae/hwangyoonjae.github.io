@@ -1,14 +1,15 @@
 ---
 title: "[Linux] - rc.local이란"
-layout: post
+categories:
+  - Linux
+tags:
+  - [자동화]
+
+toc: true
+toc_sticky: true
+
 date: 2022-10-20
-image: /assets/images/Post/terminal.png
-headerImage: true
-tag:
-- 
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-10-20
 ---
 
 ## rc.local이란?:
