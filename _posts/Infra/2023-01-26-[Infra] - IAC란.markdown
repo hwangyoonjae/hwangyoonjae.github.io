@@ -1,14 +1,15 @@
 ---
 title: "[Infra] - IAC란"
-layout: post
+categories:
+  - Infra
+tags:
+  - [Ansible]
+
+toc: true
+toc_sticky: true
+
 date: 2023-01-26
-image: /assets/images/Post/infrastructure.png
-headerImage: true
-tag:
-- Ansible
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2023-01-26
 ---
 
 ## Infrastructure as Code(IAC)란?:
