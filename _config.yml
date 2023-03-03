@@ -124,13 +124,9 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "hyj90632@gmail.com"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
+    - label: "Github"
+      icon: "fab fa-fw fa-github"
       url: "https://github.com/hwangyoonjae"
-
 
 # Reading Files
 include:
