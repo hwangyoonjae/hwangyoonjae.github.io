@@ -13,15 +13,19 @@ $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
 /* system typefaces */
-$serif: "Coming Soon", Georgia, Times, serif !default;
-$sans-serif: "Iropke Batang", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+/* 오른쪽상단, 내 이름, 소개 글씨 폰트 적용 */
+$serif: "Noto Sans KR", Georgia, Times, serif !default;
+/* 게시글 내용 폰트 적용 */
+$sans-serif: "Noto Sans KR" -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
-$monospace: "Nanum Gothic Coding", Monaco, Consolas, "Lucida Console", monospace !default;
-$cute: "Cafe24Oneprettynight" !default;
+$monospace: "Noto Sans KR", Monaco, Consolas, "Lucida Console", monospace !default;
+/* 게시글 제목 폰트 적용 */
+$cute: "Noto Sans KR" !default;
 
 /* sans serif typefaces */
 $sans-serif-narrow: $sans-serif !default;
-$helvetica: "Cafe24Oneprettynight", Helvetica, "Helvetica Neue", Arial, sans-serif !default;
+/* 왼쪽 상단 제목 적용 */
+$helvetica: "Noto Sans KR", Helvetica, "Helvetica Neue", Arial, sans-serif !default;
 
 /* serif typefaces */
 $georgia: Georgia, serif !default;
