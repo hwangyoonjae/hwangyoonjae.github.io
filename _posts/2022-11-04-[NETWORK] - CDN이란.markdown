@@ -1,15 +1,15 @@
 ---
-title: "[Network] - CDN이란"
-layout: post
+title: "[Network] - TDD란"
+categories:
+  - Network
+tags:
+  - [CDN, GSLB]
+
+toc: true
+toc_sticky: true
+
 date: 2022-11-04
-image: /assets/images/Post/global-network.png
-headerImage: true
-tag:
-- CDN
-- GSLB
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-11-04
 ---
 
 ## CDN(Content Delivery Network)이란?:
