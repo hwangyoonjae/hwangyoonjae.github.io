@@ -1,16 +1,15 @@
 ---
 title: "[Jenkins] - Jenkins 설치하기"
-layout: post
+categories:
+  - Jenkins
+tags:
+  - [Jenkins, Java, CI]
+
+toc: true
+toc_sticky: true
+
 date: 2022-09-09
-image: /assets/images/Post/jenkins.png
-headerImage: true
-tag:
-- Jenkins
-- Java
-- CI
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2022-09-09
 ---
 
 ## 젠킨스(Jenkins)란?:
