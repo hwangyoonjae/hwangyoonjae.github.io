@@ -1,14 +1,15 @@
 ---
-title: "[인코딩&디코딩] - 인코딩&디코딩이란"
-layout: post
+title: "[Application] - 인코딩&디코딩이란"
+categories:
+  - Encryption
+tags:
+  - [Base64]
+
+toc: true
+toc_sticky: true
+
 date: 2023-02-22
-image: /assets/images/Post/encoding.png
-headerImage: true
-tag:
-- Base64
-category: blog
-author: hwangyoonjae
-description: Markdown summary with different options
+last_modified_at: 2023-02-22
 ---
 
 ## 인코딩&디코딩을 알고싶었던 계기:
