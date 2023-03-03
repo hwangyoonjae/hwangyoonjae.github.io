@@ -109,7 +109,7 @@ author:
   avatar           : "/assets/images/profile.jpg"
   bio              : "Success doesn't come overnight"
   location         : "Republic of Korea"
-  email            : "hyj90632@gmailcom"
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
