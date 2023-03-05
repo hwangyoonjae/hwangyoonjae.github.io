@@ -28,6 +28,7 @@ last_modified_at: 2022-06-04
 [![텍스트](/assets/images/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%9D%B4%EB%A6%84%EC%A0%95%ED%95%98%EA%B8%B0.PNG)](/assets/images/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%9D%B4%EB%A6%84%EC%A0%95%ED%95%98%EA%B8%B0.PNG)
 <br>
 \* 반드시 레퍼지토리명은 위 그림과 같이 **username.github.io** 이런식으로 만들어주세요.
+
 * * *
 
 ### 2. 생성한 레퍼지토리 클론
@@ -37,12 +38,14 @@ last_modified_at: 2022-06-04
 ```javascript
 git clone "레퍼지토리 복사한 주소"
 ```
+
 * * *
 
 ### 3. 폴더 열기
 [![텍스트](/assets/images/Github/%ED%81%B4%EB%A1%A0%ED%99%95%EC%9D%B8.PNG)](/assets/images/Github/%ED%81%B4%EB%A1%A0%ED%99%95%EC%9D%B8.PNG)
 <br>
 복사 완료 후, 정상적으로 clone 되었는지 확인한다.
+
 * * *
 
 ## 테마 적용하기:
@@ -57,18 +60,20 @@ git clone "레퍼지토리 복사한 주소"
 - 본인이 선택한 지킬 테마를 다운로드 받는다.
 <br>
 [![텍스트](/assets/images/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%20%EB%8B%A4%EC%9A%B4.PNG)](/assets/images/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%20%EB%8B%A4%EC%9A%B4.PNG)
+
 * * *
 
 ### 3. 내 github.io 폴더에 붙혀넣기
 - 다운받은 지킬파일들을 내 github.io 폴더에 붙혀넣기
 <br>
 [![텍스트](/assets/images/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%EC%A0%81%EC%9A%A9.png)](/assets/images/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%EC%A0%81%EC%9A%A9.png)
+
 * * *
 
 ### 4. 깃허브 블로그 완성
 - 그렇게 완성한 나의 블로그이다. <br>이제 구조는 다 만들어졌으므로 템플릿 안 포스트 폴더에 블로그 글을 올리고 commit하면 자동으로 업데이트된다. <br>
 
-[완성된 블로그 접속하기](https://hwangyoonjae.github.io/ "완성된 블로그 접속하기")
+- [완성된 블로그 접속하기](https://hwangyoonjae.github.io/ "완성된 블로그 접속하기")
 
 [![텍스트](/assets/images/Github/%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%99%84%EC%84%B1.PNG)](/assets/images/Github/%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%99%84%EC%84%B1.PNG)
 
