@@ -21,7 +21,7 @@ $ docker container run [옵션] [이미지이름 or 이미지ID] [실행할 파�
 또는
 $ docker run [옵션] [이미지이름 or 이미지ID] [실행할 파일]
 ```
-[![텍스트](/assets/images/Linux/docker%20container%20ID%20%EC%B6%9C%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Linux/docker%20container%20ID%20%EC%B6%9C%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/images/docker/docker%20container%20ID%20%EC%B6%9C%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20container%20ID%20%EC%B6%9C%EB%A0%A5%20%ED%99%94%EB%A9%B4.PNG)
 
 #### 옵션
 - **-d** 옵션
@@ -88,7 +88,7 @@ $ docker exec -it <container-id or name> <명령어> bash
 <span style="color:#FA5858; font-size:12px">※ -it는 터미널과 컨테이너가 지속적으로 연결되도록 하는 옵션이다.</span>
 
 - 위와 같은 명령어 실행 시 아래와 같이 진행된다.
-[![텍스트](/assets/images/Linux/docker%20container%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%A0%84%EB%8B%AC%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/Linux/docker%20container%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%A0%84%EB%8B%AC%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/images/docker/docker%20container%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%A0%84%EB%8B%AC%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20container%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%A0%84%EB%8B%AC%20%ED%99%94%EB%A9%B4.PNG)
 
 #### 도커 컨테이너에서 명령어 실행하려면?
 - 필자는 nginx 설정파일 변경을 위해 vi 명령어를 사용할려 했으나 아래와 같이 오류가 표시된다.

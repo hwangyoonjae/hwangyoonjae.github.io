@@ -36,7 +36,7 @@ last_modified_at: 2022-08-31
 ## 도커 컴포즈(Docker Compose) 사용법 이해하기:
 ### docker-compose.yml 예시:
 - 기본적으로 docker-compose.yml은 version, services, volumes, networks의 카테고리로 작성되지만, 주로 version과 services가 많이 사용된다.<br>
-[![텍스트](/assets/images/Linux/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)](/assets/images/Linux/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)
+[![텍스트](/assets/images/docker/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)](/assets/images/docker/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)
 
 - **문법**
     - **version** : docker compose의 파일 포맷 버전을 지정한다.<br>

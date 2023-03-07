@@ -17,7 +17,7 @@ last_modified_at: 2022-12-04
 ```bash
 $ docker container stats 컨테이너 이름
 ```
-[![텍스트](/assets/images/Linux/docker%20container%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/Linux/docker%20container%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)
+[![텍스트](/assets/images/docker/docker%20container%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/docker/docker%20container%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)
 
 - 각 부분별 설명은 아래와 같다.
   ```
