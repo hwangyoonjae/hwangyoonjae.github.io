@@ -19,6 +19,7 @@ last_modified_at: 2023-02-22
 
 ## 인코딩이란?:
 - 사람이 인지할 수 있는 문자(언어)를 약속된 규칙에 따라 컴퓨터가 이해하는 언어 (0과1)로 이루어진 코드로 바꾸는 것을 말하고 저장단위는 바이트(byte)이다.
+[![텍스트](/assets/images/Encryption/인코딩.png)](/assets/images/Encryption/인코딩.png)
 
 * * *
 
@@ -40,6 +41,7 @@ last_modified_at: 2023-02-22
 
 ## 디코딩이란?:
 - 컴퓨터가 이해하는 언어 (0과1)로 이루어진 코드를 약속된 규칙에 따라 사람이 인지할 수 있는 문자(언어)로 바꾸는 것을 말한다.
+[![텍스트](/assets/images/Encryption/디코딩.png)](/assets/images/Encryption/디코딩.png)
 
 * * *
 
