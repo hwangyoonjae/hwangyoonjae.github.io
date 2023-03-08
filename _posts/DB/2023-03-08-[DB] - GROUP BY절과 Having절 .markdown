@@ -37,6 +37,12 @@ GROUP BY
 ```
 <span style="color:#FA5858; font-size:12px">※ GROUP BY절은 중복되지 않게 데이터를 보여준다.</span>
 
+### DISTINCT와 GROUP BY절 사용하는 경우:
+```
+▸ DISTINCT는 주로 UNIQUE(중복을 제거)한 컬럼이나 레코드를 조회하는 경우 사용한다.
+▸ GROUP BY는 데이터를 그룹핑해서 그 결과를 가져오는 경우 사용한다.
+```
+
 * * *
 
 ## Having절이란?:
