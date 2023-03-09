@@ -1,18 +1,15 @@
 ---
 title: "나만의 관리자 페이지 만들기"
-layout: post
+categories:
+  - Operating System
+tags:
+  - [Vue, Spring Boot, 관리자 페이지]
+
+toc: true
+toc_sticky: true
+
 date: 2022-06-22
-tag: 
-- Vue
-- Spring Boot
-- 관리자 페이지
-image: /assets/images/Project/admin.png
-headerImage: true
-projects: true
-hidden: true # don't count this post in blog pagination
-description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
-category: project
-author: johndoe
+last_modified_at: 2022-06-22
 ---
 
 개발 공부를 위해서 무엇을 만들까 고민하다가 관리자페이지를 만들기로했다.

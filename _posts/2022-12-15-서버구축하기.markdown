@@ -1,20 +1,14 @@
 ---
 title: "서버 구축해보기"
-layout: post
+categories:
+tags:
+  - [Docker, Nginx, Ansible, Jenkins, Redis, MariaDB]
+
+toc: true
+toc_sticky: true
+
 date: 2022-12-15
-image: /assets/images/Post/server.png
-headerImage: true
-tag: 
-- Docker
-- Nginx
-- Ansible
-- Jenkins
-- Redis
-- MariaDB
-category: project
-author: hwangyoonjae
-description: Markdown summary with different options
-projects: true
+last_modified_at: 2022-12-15
 ---
 
 ## 서버 구축 흐름도 :
