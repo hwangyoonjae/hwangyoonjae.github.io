@@ -1,0 +1,61 @@
+---
+title: "[DB] - DB데이터 특정 문자열 바꾸기"
+categories:
+  - DB
+tags:
+  - [TRANSLATE, REPLACE]
+
+toc: true
+toc_sticky: true
+
+date: 2023-03-09
+last_modified_at: 2023-03-09
+---
+
+## DB데이터 특정 문자열 바꾸기를 알고 싶었던 계기:
+- 고객사 인사연동 DB의 사용자 패스워드가 sha256 방식에서 데이터앞에 특수문자를 적용하였다. BASE64 인코딩 방식에서 특수문자를 치환하여 적용되어있어 인사연동 진행 시 변경된 특수문자를 치환해야하기 때문이다.
+
+* * *
+
+## REPLACE란?:
+- 특정 문자열을 찾아 다른 문자열로 바꾸는 함수이다.
+
+* * *
+
+### REPLACE 사용법:
+```sql
+SELECT
+  REPLACE('String' or CULUMN, 'From_String', 'To_String')
+FROM
+  table
+```
+- String : 찾아서 바꾸는 대상이 되는 문자열
+- From_string : 찾을 문자열
+- To_string : 교체될 문자열
+
+#### REPLACE 다중으로 사용하기:
+- 문자열 바꾸는 과정에서 한개가 아닌 여러개의 문자열을 변경하고 싶은 경우가 있을거다.
+- 아래 쿼리문과 같이 **'String' or CULUMN**부분에 REPLACE 함수를 넣어 계속 넣는다.
+
+```sql
+-- replace 여러개 사용하는 경우
+SELECT
+  REPLACE(
+    REPLACE(
+      REPLACE('String' or CULUMN, 'From_String1', 'To_String1'), 
+    'From_String1', 'To_String1'), 
+  'From_String2', 'To_String2')
+FROM
+  table
+```
+
+* * *
+
+## TRANSLATE란?:
+- 
+
+* * *
+
+## TRANSLATE 사용법:
+
+* * *
