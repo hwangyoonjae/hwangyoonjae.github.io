@@ -46,8 +46,8 @@ GROUP BY
 * * *
 
 ## Having절이란?:
-- COUNT(), MAX(), MIN(), SUM(), AVG() 등 집계 함수를 사용 할 수 없다.
 - 집계함수를 가지고 조건비교를 할 때 사용한다.
+- COUNT(), MAX(), MIN(), SUM(), AVG() 등 집계 함수를 사용 할 수 없다.
 - GROUP BY절과 함께 사용한다.
 
 * * *
