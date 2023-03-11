@@ -29,11 +29,14 @@ SELECT
 FROM
   table
 ```
-- String : 찾아서 바꾸는 대상이 되는 문자열
-- From_string : 찾을 문자열
-- To_string : 교체될 문자열
 
-#### REPLACE 다중으로 사용하기:
+### REPLACE 예시:
+- 아무래도 사용법으로만 보고는 이해하기 어려울거 같아 아래와 같이 예시 쿼리문을 작성하였다.
+[![텍스트](/assets/images/DB/REPLACE%20%EC%98%88%EC%8B%9C%20%EC%BF%BC%EB%A6%AC%EB%AC%B8.png){: width="400" height="400"}](/assets/images/DB/REPLACE%20%EC%98%88%EC%8B%9C%20%EC%BF%BC%EB%A6%AC%EB%AC%B8.png)
+
+* * *
+
+### REPLACE 다중으로 사용하기:
 - 문자열 바꾸는 과정에서 한개가 아닌 여러개의 문자열을 변경하고 싶은 경우가 있을거다.
 - 아래 쿼리문과 같이 **'String' or CULUMN**부분에 REPLACE 함수를 넣어 계속 넣는다.
 
@@ -43,8 +46,8 @@ SELECT
   REPLACE(
     REPLACE(
       REPLACE('String' or CULUMN, 'From_String1', 'To_String1'), 
-    'From_String1', 'To_String1'), 
-  'From_String2', 'To_String2')
+    'From_String2', 'To_String2'), 
+  'From_String3', 'To_String3')
 FROM
   table
 ```
@@ -52,10 +55,20 @@ FROM
 * * *
 
 ## TRANSLATE란?:
-- 
+- 대상문자와 변환문자는 1:1로 변환이되며, 대상문자에는 있는데 변환문자에는 없으면 해당 문자는 제거된다.
 
 * * *
 
-## TRANSLATE 사용법:
+### TRANSLATE 사용법:
+```sql
+SELECT
+  TRANSLATE('String' or CULUMN, 'From_String', 'To_String')
+FROM
+  table
+```
+
+### TRANSLATE 예시:
+- 아무래도 사용법으로만 보고는 이해하기 어려울거 같아 아래와 같이 예시 쿼리문을 작성하였다.
+[![텍스트](/assets/images/DB/Translate%20%EC%98%88%EC%8B%9C%20%EC%BF%BC%EB%A6%AC%EB%AC%B8.png){: width="400" height="400"}](/assets/images/DB/Translate%20%EC%98%88%EC%8B%9C%20%EC%BF%BC%EB%A6%AC%EB%AC%B8.png)
 
 * * *
