@@ -16,3 +16,18 @@ last_modified_at: 2023-03-11
 - 고객사 인사연동 DB의 사용자 패스워드가 sha256 방식에서 데이터앞에 특수문자를 적용하였다. BASE64 인코딩 방식 적용 후 맨앞에 특수문자를 2개를 추가하였기 때문에 인사연동 진행 시 변경된 특수문자 2개를 지우고 가져와야하기 때문이다.
 
 * * *
+
+## SUBSTR이란?:
+- 일정 문자열에서 선택한 길이 만큼만 잘라 가져올 있는 함수이다.
+
+* * *
+
+### SUBSTR이란 사용법:
+```sql
+SELECT
+  SUBSTR('String' or CULUMN, 'Starting_Position', 'Length')
+FROM
+  table
+```
+
+* * *
