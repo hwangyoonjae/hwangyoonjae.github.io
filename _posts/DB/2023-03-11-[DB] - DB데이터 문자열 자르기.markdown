@@ -22,7 +22,9 @@ last_modified_at: 2023-03-11
 
 * * *
 
-### SUBSTR 사용법:
+## SUBSTR 사용법(앞에서 문자열 자르기):
+- 아래 쿼리문은 앞에서부터 문자열 자르기이다.
+
 ```sql
 SELECT
   SUBSTR('String' or CULUMN, 'Starting_Position', 'Length')
@@ -32,6 +34,14 @@ FROM
 
 * * *
 
-### SUBSTR 예시:
+### SUBSTR 예시(앞에서 문자열 자르기):
 - 아무래도 사용법으로만 보고는 이해하기 어려울거 같아 아래와 같이 예시 쿼리문을 작성하였다.
 [![텍스트](/assets/images/DB/SUBSTR%20%EC%98%88%EC%8B%9C%20%EC%BF%BC%EB%A6%AC.PNG){: width="400" height="400"}](/assets/images/DB/SUBSTR%20%EC%98%88%EC%8B%9C%20%EC%BF%BC%EB%A6%AC.PNG)
+
+* * *
+
+### SUBSTR 예시(뒤에서 문자열 자르기):
+- 아무래도 사용법으로만 보고는 이해하기 어려울거 같아 아래와 같이 예시 쿼리문을 작성하였다.
+[![텍스트](/assets/images/DB/SUBSTR%20%EC%98%88%EC%8B%9C%20%EC%BF%BC%EB%A6%AC(%EB%92%A4%EC%97%90%EC%84%9C%EB%B6%80%ED%84%B0).PNG){: width="400" height="400"}](/assets/images/DB/SUBSTR%20%EC%98%88%EC%8B%9C%20%EC%BF%BC%EB%A6%AC(%EB%92%A4%EC%97%90%EC%84%9C%EB%B6%80%ED%84%B0).PNG)
+
+* * *
