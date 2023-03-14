@@ -22,7 +22,7 @@ last_modified_at: 2023-03-11
 
 * * *
 
-### SUBSTR이란 사용법:
+### SUBSTR 사용법:
 ```sql
 SELECT
   SUBSTR('String' or CULUMN, 'Starting_Position', 'Length')
@@ -31,3 +31,7 @@ FROM
 ```
 
 * * *
+
+### SUBSTR 예시:
+- 아무래도 사용법으로만 보고는 이해하기 어려울거 같아 아래와 같이 예시 쿼리문을 작성하였다.
+[![텍스트](/assets/images/DB/SUBSTR%20%EC%98%88%EC%8B%9C%20%EC%BF%BC%EB%A6%AC.PNG){: width="400" height="400"}](/assets/images/DB/SUBSTR%20%EC%98%88%EC%8B%9C%20%EC%BF%BC%EB%A6%AC.PNG)
