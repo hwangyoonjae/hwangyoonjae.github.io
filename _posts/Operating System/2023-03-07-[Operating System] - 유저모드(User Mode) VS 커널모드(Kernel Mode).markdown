@@ -41,4 +41,6 @@ last_modified_at: 2023-03-07
 ### 커널모드(Kernel Mode)에서 유저모드(User Mode)로 반환:
 - **시스템 콜** 요청에 대한 일을 하고 결과 값을 리턴 값으로 전달한다.
 
+[![텍스트](/assets/images/Operating%20System/%EC%9C%A0%EC%A0%80%EB%AA%A8%EB%93%9C%20%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%ED%9D%90%EB%A6%84.png)](/assets/images/Operating%20System/%EC%9C%A0%EC%A0%80%EB%AA%A8%EB%93%9C%20%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%ED%9D%90%EB%A6%84.png)
+
 * * *
