@@ -44,3 +44,8 @@ last_modified_at: 2023-03-07
 [![텍스트](/assets/images/Operating%20System/%EC%9C%A0%EC%A0%80%EB%AA%A8%EB%93%9C%20%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%ED%9D%90%EB%A6%84.png)](/assets/images/Operating%20System/%EC%9C%A0%EC%A0%80%EB%AA%A8%EB%93%9C%20%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%ED%9D%90%EB%A6%84.png)
 
 * * *
+
+## 유저모드(User Mode)와 커널모드(Kernel Mode)를 나눈 이유:
+- 커널에서 중요한 자원, 즉 운영체제를 실행시키기 위한 자원을 관리하기 때문에 일반 사용자가 그 중요한 자원에 접근하지 못하도록 하기 위해서다.
+
+* * *
