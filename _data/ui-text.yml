@@ -22,6 +22,7 @@ en: &DEFAULT_EN
   meta_label                 :
   tags_label                 : "Tags:"
   categories_label           : "Categories:"
+  date_write                 : "Created:"
   date_label                 : "Updated:"
   comments_label             : "Leave a comment"
   comments_title             : "Comments"
@@ -81,6 +82,7 @@ es: &DEFAULT_ES
   meta_label                 :
   tags_label                 : "Etiquetas:"
   categories_label           : "Categorías:"
+  date_write                 : "Creado:"
   date_label                 : "Actualizado:"
   comments_label             : "Deja un comentario"
   comments_title             : "Comentarios"
@@ -128,7 +130,7 @@ fr: &DEFAULT_FR
   breadcrumb_separator       : "/"
   menu_label                 : "Menu"
   search_label               :
-  toc_label                  : "Sur cette page"
+  toc_label                  : "Sur cette page"Createdㅕㅔㅇㅁㅅㄷㅇ
   ext_link_label             : "Lien direct"
   less_than                  : "moins de"
   minute_read                : "minute(s) de lecture"
@@ -136,6 +138,7 @@ fr: &DEFAULT_FR
   meta_label                 :
   tags_label                 : "Tags :"
   categories_label           : "Catégories :"
+  date_write                 : "Créé:"
   date_label                 : "Mis à jour :"
   comments_label             : "Laisser un commentaire"
   comments_title             : "Commentaires"
@@ -193,6 +196,7 @@ tr: &DEFAULT_TR
   meta_label                 :
   tags_label                 : "Etiketler:"
   categories_label           : "Kategoriler:"
+  date_write                 : "oluşturuldu:"
   date_label                 : "Güncelleme tarihi:"
   comments_label             : "Yorum yapın"
   comments_title             : "Yorumlar"
@@ -243,6 +247,7 @@ pt: &DEFAULT_PT
   meta_label                 :
   tags_label                 : "Etiquetas:"
   categories_label           : "Categorias:"
+  date_write                 : "criado:"
   date_label                 : "Atualizado:"
   comments_label             : "Deixe um Comentário"
   comments_title             : "Comentários"
@@ -291,6 +296,7 @@ pt-BR:
   meta_label                 :
   tags_label                 : "Tags:"
   categories_label           : "Categorias:"
+  date_write                 : "criado:"
   date_label                 : "Atualizado em:"
   comments_label             : "Deixe um comentário"
   comments_title             : "Comentários"
@@ -342,6 +348,7 @@ it: &DEFAULT_IT
   meta_label                 :
   tags_label                 : "Tags:"
   categories_label           : "Categorie:"
+  date_write                 : "criado:"
   date_label                 : "Aggiornato:"
   comments_label             : "Scrivi un commento"
   comments_title             :
@@ -395,6 +402,7 @@ zh: &DEFAULT_ZH_HANS
   meta_label                 :
   tags_label                 : "标签:"
   categories_label           : "分类:"
+  date_write                 : "创造时间:"
   date_label                 : "更新时间:"
   comments_label             : "留下评论"
   comments_title             : "评论"
@@ -448,6 +456,7 @@ zh-TW: &DEFAULT_ZH_HANT
   meta_label                 :
   tags_label                 : "標籤:"
   categories_label           : "分類:"
+  date_write                 : "创造时间:"
   date_label                 : "更新時間:"
   comments_label             : "留言"
   comments_title             : "留言內容"
@@ -501,6 +510,7 @@ de: &DEFAULT_DE
   meta_label                 :
   tags_label                 : "Tags:"
   categories_label           : "Kategorien:"
+  date_write                 : "erstellt:"
   date_label                 : "Aktualisiert:"
   comments_label             : "Hinterlassen Sie einen Kommentar"
   comments_title             : "Kommentare"
@@ -563,6 +573,7 @@ ne: &DEFAULT_NE
   meta_label                 :
   tags_label                 : "ट्यागहरू:"
   categories_label           : "वर्गहरु:"
+  date_write                 : "सिर्जना गर्नुहोस्:"
   date_label                 : "अद्यावधिक:"
   comments_label             : "टिप्पणी दिनुहोस्"
   comments_title             : "टिप्पणीहरू"
@@ -613,6 +624,7 @@ ko: &DEFAULT_KO
   meta_label                 :
   tags_label                 : "태그:"
   categories_label           : "카테고리:"
+  date_write                 : "작성일자:"
   date_label                 : "업데이트:"
   comments_label             : "댓글남기기"
   comments_title             : "댓글"
@@ -666,6 +678,7 @@ ru: &DEFAULT_RU
   meta_label                 :
   tags_label                 : "Метки:"
   categories_label           : "Разделы:"
+  date_write                 : "Дата на създаване::"
   date_label                 : "Дата изменения:"
   comments_label             : "Оставить комментарий"
   comments_title             : "Комментарии"
@@ -718,6 +731,7 @@ lt: &DEFAULT_LT
   meta_label                 :
   tags_label                 : "Žymės:"
   categories_label           : "Kategorijos:"
+  date_write                 : "Sukurtas:"
   date_label                 : "Atnaujinta:"
   comments_label             : "Palikti komentarą"
   comments_title             : "Komentaras"
@@ -768,6 +782,7 @@ gr: &DEFAULT_GR
   meta_label                 :
   tags_label                 : "Ετικέτες:"
   categories_label           : "Κατηγορίες:"
+  date_write                 : "Δημιουργήθηκε:"
   date_label                 : "Ενημερώθηκε:"
   comments_label             : "Αφήστε ένα σχόλιο"
   comments_title             : "Σχόλια"
@@ -820,6 +835,7 @@ sv: &DEFAULT_SV
   meta_label                 :
   tags_label                 : "Taggar:"
   categories_label           : "Kategorier:"
+  date_write                 : "Skapades:"
   date_label                 : "Uppdaterades:"
   comments_label             : "Lämna en kommentar"
   comments_title             : "Kommentarer"
@@ -875,6 +891,7 @@ nl: &DEFAULT_NL
   meta_label                 :
   tags_label                 : "Labels:"
   categories_label           : "Categorieën:"
+  date_write                 : "Gemaakt:"
   date_label                 : "Bijgewerkt:"
   comments_label             : "Laat een reactie achter"
   comments_title             : "Commentaren"
@@ -930,6 +947,7 @@ id: &DEFAULT_ID
   meta_label                 :
   tags_label                 : "Label:"
   categories_label           : "Kategori:"
+  date_write                 : "Dibuat:"
   date_label                 : "Diupdate:"
   comments_label             : "Tinggalkan komentar"
   comments_title             : "Komentar"
@@ -983,6 +1001,7 @@ vi: &DEFAULT_VI
   meta_label                 :
   tags_label                 : "Thẻ:"
   categories_label           : "Danh mục:"
+  date_write                 : "Tạo ngày:"
   date_label                 : "Ngày cập nhật:"
   comments_label             : "Để lại bình luận"
   comments_title             : "Bình luận"
@@ -1036,6 +1055,7 @@ da: &DEFAULT_DA
   meta_label                 :
   tags_label                 : "Nøgleord:"
   categories_label           : "Kategorier:"
+  date_write                 : "Oprettet:"
   date_label                 : "Opdateret:"
   comments_label             : "Skriv en kommentar"
   comments_title             : "Kommentarer"
@@ -1089,6 +1109,7 @@ pl: &DEFAULT_PL
   meta_label                 :
   tags_label                 : "Tagi:"
   categories_label           : "Kategorie:"
+  date_write                 : "Pierwsza aktualizacja:"
   date_label                 : "Ostatnia aktualizacja:"
   comments_label             : "Zostaw komentarz"
   comments_title             : "Komentarze"
@@ -1139,6 +1160,7 @@ ja: &DEFAULT_JA
   meta_label                 :
   tags_label                 : "タグ:"
   categories_label           : "カテゴリー:"
+  date_write                 : "創建日期:"
   date_label                 : "更新日時:"
   comments_label             : "コメントする"
   comments_title             : "コメント"
@@ -1191,6 +1213,7 @@ sk: &DEFAULT_SK
   meta_label                 :
   tags_label                 : "Tagy:"
   categories_label           : "Kategórie:"
+  date_write                 : "Vytvorené:"
   date_label                 : "Aktualizované:"
   comments_label             : "Zanechaj odkaz"
   comments_title             : "Komentáre"
@@ -1244,6 +1267,7 @@ hu: &DEFAULT_HU
   meta_label                 :
   tags_label                 : "Tagek:"
   categories_label           : "Kategóriák:"
+  date_write                 : "Létrehozva:"
   date_label                 : "Frissítve:"
   comments_label             : "Szólj hozzá!"
   comments_title             : "Hozzászólások"
@@ -1297,6 +1321,7 @@ ro: &DEFAULT_RO
   meta_label                 :
   tags_label                 : "Etichete:"
   categories_label           : "Categorii:"
+  date_write                 : "Creată:"
   date_label                 : "Actualizat:"
   comments_label             : "Lasă un comentariu"
   comments_title             : "Comentarii"
@@ -1350,6 +1375,7 @@ pa: &DEFAULT_PA
   meta_label                 : "ਸਵੈ-ਸੰਦਰਭ ਜਾਣਕਾਰੀ"
   tags_label                 : "ਟੈਗ"
   categories_label           : "ਵਰਗ"
+  date_write                 : "ਬਣਾਇਆ ਗਿਆ:"
   date_label                 : "ਅਪਡੇਟ ਕੀਤਾ:"
   comments_label             : "ਇੱਕ ਟਿੱਪਣੀ ਛੱਡੋ"
   comments_title             : "ਟਿੱਪਣੀਆਂ"
@@ -1402,6 +1428,7 @@ fa: &DEFAULT_FA
   meta_label                 :
   tags_label                 : "تگ ها: "
   categories_label           : "دسته بندی ها: "
+  date_write                 : "ایجاد شده در:"
   date_label                 : "به روز شده در: "
   comments_label             : "ارسال نظر"
   comments_title             : "نظرات"
@@ -1456,6 +1483,7 @@ ml: &DEFAULT_ML
   meta_label                 :
   tags_label                 : "ടാഗുകൾ:"
   categories_label           : "വിഭാഗങ്ങൾ:"
+  date_write                 : "ആദ്യ മാറ്റം:"
   date_label                 : "അവസാന മാറ്റം:"
   comments_label             : "അഭിപ്രായം രേഖപ്പെടുത്തുക"
   comments_title             : "അഭിപ്രായങ്ങൾ"
@@ -1509,6 +1537,7 @@ th: &DEFAULT_TH
   meta_label                 :
   tags_label                 : "แท็ก:"
   categories_label           : "หมวดหมู่:"
+  date_write                 : "สร้างล่าสุด:"
   date_label                 : "อัพเดตล่าสุด:"
   comments_label             : "แสดงความคิดเห็น"
   comments_title             : "ความคิดเห็น"
@@ -1561,6 +1590,7 @@ hi: &DEFAULT_HI
   meta_label                 : "स्व-संदर्भात्मक जानकारी"
   tags_label                 : "अंकितक:"
   categories_label           : "श्रेणियाँ:"
+  date_write                 : "बनाया था::"
   date_label                 : "अपडेट किया गया:"
   comments_label             : "एक टिप्पणी छोड़ें"
   comments_title             : "टिप्पणियाँ"
@@ -1614,6 +1644,7 @@ ca: &DEFAULT_CA
   meta_label                 :
   tags_label                 : "Etiquetes:"
   categories_label           : "Categories:"
+  date_write                 : "Creat:"
   date_label                 : "Actualitzat:"
   comments_label             : "Deixa un comentari"
   comments_title             : "Comentaris"
@@ -1667,6 +1698,7 @@ ga: &DEFAULT_GA
   meta_label                 :
   tags_label                 : "Clibeanna:"
   categories_label           : "Catagoírí:"
+  date_write                 : "Cruthaithe:"
   date_label                 : "Nuashonraíodh:"
   comments_label             : "Fág trácht"
   comments_title             : "Tráchtanna"
@@ -1715,6 +1747,7 @@ fi: &DEFAULT_FI
   meta_label                 :
   tags_label                 : "Tagit:"
   categories_label           : "Kategoriat:"
+  date_write                 : "Luotu:"
   date_label                 : "Päivitetty:"
   comments_label             : "Jätä kommentti"
   comments_title             : "Kommentit"
@@ -1766,6 +1799,7 @@ my: &DEFAULT_MY
   meta_label                 :
   tags_label                 : "အမှတ်အသားများ -"
   categories_label           : "အမျိုးအစားများ -"
+  date_write                 : "ဖန်တီးခဲ့သည် -:"
   date_label                 : "ပြင်ဆင်ပြီး -"
   comments_label             : "မှတ်ချက်တစ်ခုချန်ထားပါ။"
   comments_title             : "မှတ်ချက်များ"
@@ -1819,6 +1853,7 @@ no: &DEFAULT_NO
   meta_label                 :
   tags_label                 : "Nøkkelord:"
   categories_label           : "Kategorier:"
+  date_write                 : "Opprettet:"
   date_label                 : "Oppdatert:"
   comments_label             : "Skriv en kommentar"
   comments_title             : "Kommentarer"
@@ -1874,6 +1909,7 @@ he: &DEFAULT_HE
   meta_label                 :
   tags_label                 : "תגיות:"
   categories_label           : "קטגוריות:"
+  date_write                 : "נוצר:"
   date_label                 : "מעודכן:"
   comments_label             : "השאירו הערה"
   comments_title             : "הערות"
@@ -1927,6 +1963,7 @@ ar: &DEFAULT_AR
   meta_label                 :
   tags_label                 : "العلامات الوصفية:"
   categories_label           : "الفئات:"
+  date_write                 : "مخلوق:"
   date_label                 : "تم التحديث:"
   comments_label             : "اترك تعليق"
   comments_title             : "التعليقات"
@@ -1986,6 +2023,7 @@ sw: &DEFAULT_SW
   meta_label                 :
   tags_label                 : "Alama:"
   categories_label           : "Aina:"
+  date_write                 : "Uongofu wa kwanza:"
   date_label                 : "Geuzi ya mwisho:"
   comments_label             : "Wacha maoni"
   comments_title             : "Maoni"
