@@ -116,64 +116,6 @@ es-ES:
 es-CO:
   <<: *DEFAULT_ES
 
-# French
-# ------
-fr: &DEFAULT_FR
-  skip_links                 :
-  skip_primary_nav           :
-  skip_content               :
-  skip_footer                :
-  page                       : "Page"
-  pagination_previous        : "Précédent"
-  pagination_next            : "Suivant"
-  breadcrumb_home_label      : "Accueil"
-  breadcrumb_separator       : "/"
-  menu_label                 : "Menu"
-  search_label               :
-  toc_label                  : "Sur cette page"Createdㅕㅔㅇㅁㅅㄷㅇ
-  ext_link_label             : "Lien direct"
-  less_than                  : "moins de"
-  minute_read                : "minute(s) de lecture"
-  share_on_label             : "Partager sur"
-  meta_label                 :
-  tags_label                 : "Tags :"
-  categories_label           : "Catégories :"
-  date_write                 : "Créé:"
-  date_label                 : "Mis à jour :"
-  comments_label             : "Laisser un commentaire"
-  comments_title             : "Commentaires"
-  more_label                 : "Lire plus"
-  related_label              : "Vous pourriez aimer aussi"
-  follow_label               : "Contact"
-  feed_label                 : "Flux"
-  powered_by                 : "Propulsé par"
-  website_label              : "Site"
-  email_label                : "Email"
-  recent_posts               : "Posts récents"
-  undefined_wpm              : "Le paramètre words_per_minute n'est pas défini dans _config.yml"
-  comment_form_info          : "Votre adresse email ne sera pas visible. Les champs obligatoires sont marqués"
-  comment_form_comment_label : "Commentaire"
-  comment_form_md_info       : "Markdown est supporté."
-  comment_form_name_label    : "Nom"
-  comment_form_email_label   : "Adresse mail"
-  comment_form_website_label : "Site web (optionnel)"
-  comment_btn_submit         : "Envoyer"
-  comment_btn_submitted      : "Envoyé"
-  comment_success_msg        : "Merci pour votre commentaire, il sera visible sur le site une fois approuvé."
-  comment_error_msg          : "Désolé, une erreur est survenue lors de la soumission. Vérifiez que les champs obligatoires ont été remplis et réessayez."
-  loading_label              : "Chargement..."
-  search_label_text          :
-  search_placeholder_text    : "Entrez votre recherche..."
-  search_algolia_no_results  :
-  results_found              : "Résultat(s) trouvé(s)"
-  back_to_top                : "Retour en haut"
-fr-FR:
-  <<: *DEFAULT_FR
-fr-BE:
-  <<: *DEFAULT_FR
-fr-CH:
-  <<: *DEFAULT_FR
-
 # Turkish
 # -------
 tr: &DEFAULT_TR
