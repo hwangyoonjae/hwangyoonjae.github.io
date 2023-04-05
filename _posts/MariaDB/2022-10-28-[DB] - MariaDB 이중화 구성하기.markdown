@@ -1,7 +1,7 @@
 ---
-title: "[DB] - MariaDB 이중화 구성하기"
+title: "[MariaDB] - MariaDB 이중화 구성하기"
 categories:
-  - DB
+  - MariaDB
 tags:
   - [DB 이중화, Active, Standby]
 

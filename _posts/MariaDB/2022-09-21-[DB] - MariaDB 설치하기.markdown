@@ -1,7 +1,7 @@
 ---
-title: "[DB] - MariaDB 설치하기"
+title: "[MariaDB] - MariaDB 설치하기"
 categories:
-  - DB
+  - MariaDB
 tags:
   - [RDBMS, MariaDB, MySQL]
 
