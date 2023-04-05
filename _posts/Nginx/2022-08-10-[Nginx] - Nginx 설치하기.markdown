@@ -1,7 +1,7 @@
 ---
-title: "[Web] - Nginx 설치하기"
+title: "[Nginx] - Nginx 설치하기"
 categories:
-  - Web
+  - Nginx
 tags:
   - [Web, Nginx]
 

@@ -1,7 +1,7 @@
 ---
-title: "[Web] - Nginx 로드밸런싱 구현하기"
+title: "[Nginx] - Nginx 로드밸런싱 구현하기"
 categories:
-  - Web
+  - Nginx
 tags:
   - [Web, Nginx, Loadbalancing]
 

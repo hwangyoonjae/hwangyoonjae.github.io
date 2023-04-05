@@ -1,7 +1,7 @@
 ---
-title: "[Web] - Nginx config 정리"
+title: "[Nginx] - Nginx config 정리"
 categories:
-  - Web
+  - Nginx
 tags:
   - [Web, Nginx, config]
 
