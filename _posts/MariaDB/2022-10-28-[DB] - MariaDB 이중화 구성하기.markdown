@@ -3,7 +3,7 @@ title: "[MariaDB] - MariaDB 이중화 구성하기"
 categories:
   - MariaDB
 tags:
-  - [DB 이중화, Active, Standby]
+  - [DB 이중화, Master, Slave]
 
 toc: true
 toc_sticky: true
