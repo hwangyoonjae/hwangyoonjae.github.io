@@ -1,7 +1,7 @@
 ---
-title: "[DB] - Oracle DB 설치하기"
+title: "[Oracle] - Oracle DB 설치하기"
 categories:
-  - DB
+  - Oracle
 tags:
   - [Oracle, MS-SQL]
 
