@@ -1,7 +1,7 @@
 ---
-title: "[DB] - Redis 설치하기"
+title: "[Redis] - Redis 설치하기"
 categories:
-  - DB
+  - Redis
 tags:
   - [Redis, NoSQL]
 
