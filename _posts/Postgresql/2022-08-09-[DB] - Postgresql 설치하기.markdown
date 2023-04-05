@@ -1,7 +1,7 @@
 ---
-title: "[DB] - Postgresql 설치하기"
+title: "[Postgresql] - Postgresql 설치하기"
 categories:
-  - DB
+  - Postgresql
 tags:
   - [DBMS, ORDBMS, PostgreSQL]
 
