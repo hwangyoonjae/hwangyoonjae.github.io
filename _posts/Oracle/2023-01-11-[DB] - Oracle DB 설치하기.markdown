@@ -26,8 +26,8 @@ last_modified_at: 2023-01-11
 
 * * *
 
-### oracle 사용할 계정 및 폴더 생성하기:
-- oracle 사용할 계정을 생성한다.
+### Oracle 사용할 계정 및 폴더 생성하기:
+- Oracle 사용할 계정을 생성한다.
 ```bash
 # 사용자 계정 생성
 $ groupadd -g 1900 dba
@@ -38,7 +38,7 @@ $ passwd ora19c
 
 * * *
 
-- oracle 사용할 폴더를 생성한다.
+- Oracle 사용할 폴더를 생성한다.
 ```bash
 # 폴더 생성하기
 $ mkdir -p /oracle/ora19c/19c
