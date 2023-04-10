@@ -130,3 +130,9 @@ $ vi databases.txt
 [![텍스트](/assets/images/DB/CUBRID%20databases.txt%20%EC%88%98%EC%A0%95.PNG)](/assets/images/DB/CUBRID%20databases.txt%20%EC%88%98%EC%A0%95.PNG)
 
 * * *
+
+## CUBRID Slave Server 설정하기:
+- CUBRID Master Server 구성한 방식 그대로 Slave 서버도 세팅한다.
+- 단, HOSTNAME만 **nodeB**로 설정한다.
+
+* * *
