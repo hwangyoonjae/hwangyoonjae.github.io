@@ -136,3 +136,22 @@ $ vi databases.txt
 - 단, HOSTNAME만 **nodeB**로 설정한다.
 
 * * *
+
+## CUBRID Replication 시작하기:
+- CUBRID 설치한 계정 경로(/home/계정)으로 들어가 명령어를 입력하여 서비스 시작한다.
+- Master 노드(nodeA)를 먼저 시작하고, Slave 노드(nodeB)를 시작한다.
+```bash
+$ . .cubrid.sh
+$ cubrid heartbeat start
+```
+
+* * *
+
+### CUBRID Replication 상태 확인하기:
+```bash
+$ cubrid heartbeat status
+```
+[![텍스트](/assets/images/DB/CUBRID%20%EC%9D%B4%EC%A4%91%ED%99%94%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/CUBRID%20%EC%9D%B4%EC%A4%91%ED%99%94%20%ED%99%95%EC%9D%B8.PNG)
+<span style="color:#FA5858; font-size:12px">※ 구축화면과 위 그림의 나와있는 DB명, DB경로는 다를 수 있습니다.</span>
+
+* * *
