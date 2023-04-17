@@ -59,7 +59,7 @@ $ ./install_server.sh
 
 * * *
 
-### ss 명령어로 서버가 6379 포트 수신 중인지 확인하기:
+### Redis 서비스 확인하기:
 ```bash
 $ ps -ef | grep redis
 ```
