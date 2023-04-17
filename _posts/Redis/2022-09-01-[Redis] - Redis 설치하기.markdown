@@ -12,16 +12,37 @@ date: 2022-09-01
 last_modified_at: 2022-09-01
 ---
 
-## Redis 설치하기:
-### Redis 패키지 설치하기:
+## Redis 설치준비:
+### Redis 필요한 gcc-c++ 설치:
 ```bash
-# epel(Extra Packages of Enterprise Linux)설치
-$ yum install epel-release yum-utils
-# redis 설치
-$ yum install redis
+$ yum -y install gcc-c++
 ```
 
+### Redis 패키지 설치하기:
+- 아래 명령어와 같이 설치파일을 다운받는다.
+```bash
+$ wget http://download.redis.io/releases/redis-7.0.8.tar.gz
+```
+<span style="color:#FA5858; font-size:12px">※ 필자는 7.0.9버전을 사용했다.</span>
+
 * * *
+
+### 폐쇄망 설치:
+- 폐쇄망 서버에 Redis를 설치하는 경우 아래 URL 접속하여 압축 파일을 다운받는다.
+> * [Redis 다운로드](http://download.redis.io/releases/ "Redis 다운로드")
+
+* * *
+
+## Redis 설치하기:
+```bash
+$ tar -zxvf redis-7.0.8.tar.gz
+$ cd redis
+$ make
+$ cd src
+$ make install
+$ cd ..
+$ ./install_server.sh
+```
 
 ### Redis 서비스 시작하기:
 ```bash
