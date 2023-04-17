@@ -73,7 +73,6 @@ replicaof "IP" "PORT"
 # 재시작
 $ /etc/init.d/redis_6379 stop
 $ /etc/init.d/redis_6379 start
-
 # 로그 확인
 $ tail -f /var/log/redis_6379.log
 ```
@@ -84,7 +83,6 @@ $ tail -f /var/log/redis_6379.log
 # 재시작
 $ /etc/init.d/redis_6380 stop
 $ /etc/init.d/redis_6380 start
-
 # 로그 확인
 $ tail -f /var/log/redis_6380.log
 ```
