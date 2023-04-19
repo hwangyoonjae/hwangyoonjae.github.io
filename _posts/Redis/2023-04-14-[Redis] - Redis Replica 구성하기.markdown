@@ -68,7 +68,7 @@ replicaof "IP" "PORT"
 * * *
 
 ## Redis replication 확인하기:
-- Redis Master Redis Daemon 재시작한다.
+- Redis Master/Slave Redis Daemon 재시작한다.
 ```bash
 # 재시작
 $ /etc/init.d/redis_6379 stop
@@ -78,12 +78,4 @@ $ tail -f /var/log/redis_6379.log
 ```
 [![Redis Master 재시작](/assets/images/DB/Redis%20Master%20%EC%9E%AC%EC%8B%9C%EC%9E%91%20%EA%B2%B0%EA%B3%BC.PNG)](/assets/images/DB/Redis%20Master%20%EC%9E%AC%EC%8B%9C%EC%9E%91%20%EA%B2%B0%EA%B3%BC.PNG)
 
-- Redis Slave Redis Daemon 재시작한다.
-```bash
-# 재시작
-$ /etc/init.d/redis_6380 stop
-$ /etc/init.d/redis_6380 start
-# 로그 확인
-$ tail -f /var/log/redis_6380.log
-```
-[![Redis Slave 재시작](/assets/images/DB/Redis%20Slave%20%EC%9E%AC%EC%8B%9C%EC%9E%91%20%EA%B2%B0%EA%B3%BC.PNG)](/assets/images/DB/Redis%20Slave%20%EC%9E%AC%EC%8B%9C%EC%9E%91%20%EA%B2%B0%EA%B3%BC.PNG)
+* * *
