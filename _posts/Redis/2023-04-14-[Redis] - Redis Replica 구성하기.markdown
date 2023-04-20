@@ -23,8 +23,7 @@ last_modified_at: 2023-04-14
 ## Redis Master 구성하기:
 - Redis 설치한 경로에서 환경설정 파일을 연다.
 ```bash
-$ cd /etc/redis
-$ vi 6379.conf
+$ vi /etc/redis/6379.conf
 ```
 
 - 아래 내용을 찾아 주석해제하고 수정한다.
@@ -37,6 +36,9 @@ repl-timeout 60
 ```
 
 - Redis 종료 시 암호를 요구하기에 스크립트 內 암호를 추가한다.
+```bash
+$ vi /etc/init.d/redis_6379
+```
 ```bash
 stop)
         if [ ! -f $PIDFILE ]
