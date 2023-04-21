@@ -37,6 +37,7 @@ $ wget http://download.redis.io/releases/redis-7.0.9.tar.gz
 * * *
 
 ## Redis 설치하기:
+- 다운받은 설치파일 압축 풀고 설치를 진행한다.
 ```bash
 $ tar -zxvf redis-7.0.9.tar.gz
 $ cd redis
