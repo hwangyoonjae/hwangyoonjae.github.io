@@ -17,8 +17,11 @@ last_modified_at: 2023-04-14
 
 * * *
 
-- Redis 설치해야하는 경우 아래 링크 참조하면된다.
-> * [Redis 설치방법](https://hwangyoonjae.github.io/redis/Redis-Redis-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/ "Redis 설치하는 방법")
+## Redis 설치하기:
+- Redis 설치해야하므로 경우 아래 링크 참조하면된다.
+> * [Redis 설치방법](https://hwangyoonjae.github.io/redis/Redis-Redis-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/ "Redis 설치방법")
+
+* * *
 
 ## Redis Master 구성하기:
 - Redis 설치한 경로에서 환경설정 파일을 연다.
