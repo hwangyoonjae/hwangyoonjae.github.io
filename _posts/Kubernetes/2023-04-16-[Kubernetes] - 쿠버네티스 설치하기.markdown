@@ -79,3 +79,32 @@ $ reboot
 ```
 
 * * *
+
+### kubernetes YUM Repository 설정하기:
+- kubernetes.repo 등록한다.
+```bash
+$ cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+```
+```
+[kubernetes]
+name=Kubernetes
+baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOF
+```
+
+* * *
+
+### kubeadm, kubelet, kubectl 패키지 설치하기:
+- kubeadm: kubernetes cluster를 구축하기 위한 명령 도구이다.
+- kubelet: master node, worker node에서 데몬 프로세스로 기동되어 있으면서, container와 pod를 생성/삭제/상태를 감시한다.
+- kubectl: 사용자가 kubernetes cluster에게 작업 요청하기 위한 명령 도구이다.
+```bash
+$ yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+$ systemctl enable --now kubelet
+```
+
+* * *
