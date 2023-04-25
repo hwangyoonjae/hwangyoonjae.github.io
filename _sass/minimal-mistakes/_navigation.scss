@@ -122,6 +122,9 @@
   @include clearfix();
   float: left;
   width: 100%;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #5f6365;
 
   /* next/previous buttons */
   &--pager {
