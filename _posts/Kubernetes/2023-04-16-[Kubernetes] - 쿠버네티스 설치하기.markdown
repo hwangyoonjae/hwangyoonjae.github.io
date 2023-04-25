@@ -59,13 +59,12 @@ $ cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF
-
 $ sudo sysctl --system
 ```
 
 - iptables는 커널상에서의 netfilter 패킷필터링 기능을 사용자 공간에서 제어하는 수준으로 사용할 수 있어 iptables의 설정을 따라가기 위해서는 br_netfilter를 enable 시켜줘야 한다.
 ```bash
-cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+$ cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
 br_netfilter
 EOF
 ```
@@ -85,7 +84,7 @@ $ reboot
 ```bash
 $ cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 ```
-```
+```html
 [kubernetes]
 name=Kubernetes
 baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
