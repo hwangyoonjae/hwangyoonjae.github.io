@@ -82,7 +82,7 @@ $ reboot
 ### kubernetes YUM Repository 설정하기:
 - kubernetes.repo 등록한다.
 ```bash
-$ cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+$ vi /etc/yum.repos.d/kubernetes.repo
 ```
 ```html
 [kubernetes]
@@ -92,7 +92,6 @@ enabled=1
 gpgcheck=1
 repo_gpgcheck=1
 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
-EOF
 ```
 
 * * *
