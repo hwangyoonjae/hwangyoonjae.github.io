@@ -102,7 +102,7 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cl
 - kubectl: 사용자가 kubernetes cluster에게 작업 요청하기 위한 명령 도구이다.
 ```bash
 $ yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
-$ systemctl enable --now kubelet
+$ systemctl enable kubelet
 ```
 
 * * *
