@@ -46,7 +46,6 @@ $ sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ### 방화벽 비활성화하기:
 - kubernetes 운영상 반드시 열려있어야 하는 필수 포트가 있는데, 이것이 닫겨 있을 경우 쿠버네티스 운영 및 설치에 장애가 될 수 있기 떄문에 우선 설치 테스트에서는 비활성화한다.
 ```bash
-$ systemctl disable firewalld
 $ systemctl stop firewalld
 ```
 
@@ -56,16 +55,16 @@ $ systemctl stop firewalld
 - kubernetes는 iptables를 이용하여 pod간 통신을 가능하게 하기에 정상 동작하도록 설정한다.
 ```bash
 $ cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
-net.bridge.bridge-nf-call-ip6tables = 1
-net.bridge.bridge-nf-call-iptables = 1
+> net.bridge.bridge-nf-call-ip6tables = 1
+> net.bridge.bridge-nf-call-iptables = 1
 EOF
-$ sudo sysctl --system
+$ sysctl --system
 ```
 
 - iptables는 커널상에서의 netfilter 패킷필터링 기능을 사용자 공간에서 제어하는 수준으로 사용할 수 있어 iptables의 설정을 따라가기 위해서는 br_netfilter를 enable 시켜줘야 한다.
 ```bash
 $ cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
-br_netfilter
+> br_netfilter
 EOF
 ```
 
