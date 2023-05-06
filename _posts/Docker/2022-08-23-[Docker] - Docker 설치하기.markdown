@@ -92,7 +92,6 @@ $ systemctl enable docker
 $ docker version
 $ docker ps
 ```
-
 [![텍스트](/assets/images/docker/docker%20%EA%B5%AC%EB%8F%99%ED%99%95%EC%9D%B8.PNG)](/assets/images/Linux/docker%20%EA%B5%AC%EB%8F%99%ED%99%95%EC%9D%B8.PNG)
 
 * * *
