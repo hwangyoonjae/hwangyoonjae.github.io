@@ -1,7 +1,7 @@
 ---
 title: "[Kubernetes] - 쿠버네티스 설치하기"
 categories:
-  - Web
+  - Kubernetes
 tags:
   - [Kubernetes, Docker, Container]
 
@@ -102,6 +102,7 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cl
 ```bash
 $ yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 $ systemctl enable kubelet
+$ systemctl start kubelet
 ```
 
 * * *
