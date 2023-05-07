@@ -78,6 +78,7 @@ $ reboot
 
 * * *
 
+## Kubernetes 설치하기:
 ### kubernetes YUM Repository 설정하기:
 - kubernetes.repo 등록한다.
 ```bash
