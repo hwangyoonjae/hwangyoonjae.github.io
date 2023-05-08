@@ -55,8 +55,8 @@ $ systemctl stop firewalld
 - kubernetes는 iptables를 이용하여 pod간 통신을 가능하게 하기에 정상 동작하도록 설정한다.
 ```bash
 $ cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
-> net.bridge.bridge-nf-call-ip6tables = 1
-> net.bridge.bridge-nf-call-iptables = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
 EOF
 $ sysctl --system
 ```
@@ -64,7 +64,7 @@ $ sysctl --system
 - iptables는 커널상에서의 netfilter 패킷필터링 기능을 사용자 공간에서 제어하는 수준으로 사용할 수 있어 iptables의 설정을 따라가기 위해서는 br_netfilter를 enable 시켜줘야 한다.
 ```bash
 $ cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
-> br_netfilter
+br_netfilter
 EOF
 ```
 
@@ -105,5 +105,33 @@ $ yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 $ systemctl enable kubelet
 $ systemctl start kubelet
 ```
+
+* * *
+
+### daemon.json 편집하기:
+```bash
+$ cat <<EOF | sudo tee /etc/docker/daemon.json
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "overlay2",
+  "storage-opts": [
+    "overlay2.override_kernel_check=true"
+  ]
+}
+EOF
+```
+
+* * *
+
+## Kubernetes Master Node 작업하기:
+```bash
+$ kubeadm reset
+$ kubeadm init --apiserver-advertise-address {k8s-master IP} --pod-network-cidr=172.16.0.0/16
+```
+
 
 * * *
