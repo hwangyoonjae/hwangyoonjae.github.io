@@ -168,9 +168,9 @@ $ sqlplus / as sysdba
 # 오라클 시작
 SQL> startup
 ```
-
 ```bash
 # 오라클 종료
 SQL> shutdown immediate
 ```
+
 * * *
