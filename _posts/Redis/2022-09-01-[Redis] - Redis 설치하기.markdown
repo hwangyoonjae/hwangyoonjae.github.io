@@ -47,16 +47,16 @@ $ make install
 $ cd ..
 $ ./install_server.sh
 ```
-[![./install_server.sh 실행화면](/assets/images/DB/Redis%20install_server.sh%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/Redis%20install_server.sh%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
+[![./install_server.sh 실행화면](/assets/images/Redis/Redis%20install_server.sh%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)](/assets/images/Redis/Redis%20install_server.sh%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
 ### ./install_server.sh 오류:
 - 아래 그림과 같은 경우
-[![./install_server.sh 오류](/assets/images/DB/Redis%20install_server.sh%20%EC%98%A4%EB%A5%98.PNG)](/assets/images/DB/Redis%20install_server.sh%20%EC%98%A4%EB%A5%98.PNG)
+[![./install_server.sh 오류](/assets/images/Redis/Redis%20install_server.sh%20%EC%98%A4%EB%A5%98.PNG)](/assets/images/Redis/Redis%20install_server.sh%20%EC%98%A4%EB%A5%98.PNG)
 
 - 다음과 같이 해당 내용에 "#"를 추가하여 주석처리한다.
-[![./install_server.sh 오류 조치방법](/assets/images/DB/Redis%20install_server.sh%20%EC%98%A4%EB%A5%98%20%EC%A1%B0%EC%B9%98%EB%B0%A9%EB%B2%95.PNG)](/assets/images/DB/Redis%20install_server.sh%20%EC%98%A4%EB%A5%98%20%EC%A1%B0%EC%B9%98%EB%B0%A9%EB%B2%95.PNG)
+[![./install_server.sh 오류 조치방법](/assets/images/Redis/Redis%20install_server.sh%20%EC%98%A4%EB%A5%98%20%EC%A1%B0%EC%B9%98%EB%B0%A9%EB%B2%95.PNG)](/assets/images/Redis/Redis%20install_server.sh%20%EC%98%A4%EB%A5%98%20%EC%A1%B0%EC%B9%98%EB%B0%A9%EB%B2%95.PNG)
 
 * * *
 
@@ -64,7 +64,7 @@ $ ./install_server.sh
 ```bash
 $ ps -ef | grep redis
 ```
-[![텍스트](/assets/images/DB/Redis%20%EC%8B%A4%ED%96%89%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/Redis%20%EC%8B%A4%ED%96%89%20%ED%99%95%EC%9D%B8.PNG)
+[![텍스트](/assets/images/Redis/Redis%20%EC%8B%A4%ED%96%89%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/Redis/Redis%20%EC%8B%A4%ED%96%89%20%ED%99%95%EC%9D%B8.PNG)
 
 * * *
 
@@ -72,6 +72,6 @@ $ ps -ef | grep redis
 ```bash
 $ redis-cli ping
 ```
-[![텍스트](/assets/images/DB/Redis%20%EC%84%9C%EB%B2%84%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/Redis%20%EC%84%9C%EB%B2%84%20%ED%99%95%EC%9D%B8.PNG)
+[![텍스트](/assets/images/Redis/Redis%20%EC%84%9C%EB%B2%84%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/Redis/Redis%20%EC%84%9C%EB%B2%84%20%ED%99%95%EC%9D%B8.PNG)
 
 * * *
