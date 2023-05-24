@@ -12,16 +12,13 @@ date: 2023-05-23
 last_modified_at: 2023-05-23
 ---
 
-<<<<<<< HEAD:_posts/Docker/2023-05-15-[Docker] - Docker 이미지 레이어 구조.markdown
 ## Docker Layer란?:
 - 도커 이미지를 받으면 마치 여러개로 분리된 조각처럼 보이는게 분리된 데이터를 말한다.
 
 * * *
 
-## Docker overlay2란?:
-=======
-## docker home 디렉토리:
-- docker home 디렉토리는 아래 명령어로 확인 가능하다.
+## Docker home 디렉토리:
+- Docker home 디렉토리는 아래 명령어로 확인 가능하다.
 ```bash
 $ docker info | grep "Docker Root Dir"
 ```
@@ -32,8 +29,7 @@ $ docker info | grep "Docker Root Dir"
 
 * * *
 
-## docker overlay2란?:
->>>>>>> bad27433c832795e9b5dedfc825c4c07c1886375:_posts/Docker/2023-05-15-[Docker] - Overlay2란.markdown
+## Docker overlay2란?:
 - 레이어 파일 시스템이라고 하며, Linux 배포판에 대해서 선호되는 스토리지 드라이버라고 한다.
 
 * * *
