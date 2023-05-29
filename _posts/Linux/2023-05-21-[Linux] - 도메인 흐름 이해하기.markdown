@@ -18,3 +18,8 @@ last_modified_at: 2023-05-21
 
 * * *
 
+## DNS의 역할:
+- 도메인 주소를 IP주소로 변환하는 역할을 한다.
+[![도메인 주소 IP 획득 과정](/assets/images/Linux/%EB%8F%84%EB%A9%94%EC%9D%B8%20%EC%A3%BC%EC%86%8C%20IP%20%ED%9A%8D%EB%93%9D%20%EA%B3%BC%EC%A0%95.PNG)](/assets/images/Linux/%EB%8F%84%EB%A9%94%EC%9D%B8%20%EC%A3%BC%EC%86%8C%20IP%20%ED%9A%8D%EB%93%9D%20%EA%B3%BC%EC%A0%95.PNG)
+
+* * *
