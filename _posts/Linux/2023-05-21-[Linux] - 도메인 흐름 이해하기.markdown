@@ -16,6 +16,11 @@ last_modified_at: 2023-05-21
 - DNS(Dnmain Name System) 서버라고도 하며, 우리가 웹 브라우저나 FTP 클라이언트를 사용할 때 http://www.nate.com 또는 ftp://mirrors.kernel.org/ 등과 같은 URL을 사용한다.
 - DNS는 도메인 주소를 IP주소로 변환하는 역할을 하여 사용자가 URL 입력한 주소를 DNS서버를 통해 IP주소를 가져온 다음 서버와 통신하게한다.
 
+```
+네트워크에서 컴퓨터를 구분하는 유일한 방법은 IP 주소다. 
+즉, 인터넷에 연결된 모든 컴퓨터는 중복되지 않는 IP 주소가 있다.
+```
+
 * * *
 
 ## DNS의 역할:
