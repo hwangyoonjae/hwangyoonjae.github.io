@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true
 
 date: 2023-04-15
-last_modified_at: 2023-04-15
+last_modified_at: 2023-05-31
 ---
 
 ## Kubernetes란?:
@@ -125,6 +125,7 @@ EOF
 * * *
 
 ## Kubernetes Master Node 작업하기:
+- **kubeadm init** 명령어를 통해 초기화를 진행한다.
 ```bash
 $ kubeadm reset
 $ kubeadm init --apiserver-advertise-address {k8s-master IP} --pod-network-cidr=172.16.0.0/16
@@ -134,5 +135,14 @@ $ kubeadm init --apiserver-advertise-address {k8s-master IP} --pod-network-cidr=
 - 혹시나 Kubernetes 설치 간에 문제 발생 시 아래 링크를 참고하여 오류를 해결하면된다.
 > * [Kubernetes 오류 해결](https://hwangyoonjae.github.io/kubernetes/Kubernetes-쿠버네티스-설치-중-오류-해결하기/ "Kubernetes 오류 해결")<br>
 <span style="color:#FA5858; font-size:12px">※ 필자가 설치한 과정에서 문제 발생 시 조치한 사항으로 독자의 테스트 과정에서 문제 발생에 대한 조치사항은 없을 수 있다.</span>
+
+* * *
+
+## Kubernetes Worker Node 작업하기:
+- **kubeadm join** 명령어를 통해 노드서버를 쿠버네티스 클러스터로 결합한다.
+```bash
+$ kubeadm join 10.10.20.90:6443 --token t4ll0a.v1jymvv48ksb7k68 --discovery-token-ca-cert-hash sha256:e2a5c8664d82b6075d800aacdd0b9122556ad73afa308d0902d7f4fa703971f0
+```
+[![Worker Node 구성완료](/assets/images/kubernetes/Worker%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)](/assets/images/kubernetes/Worker%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)
 
 * * *
