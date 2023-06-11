@@ -18,10 +18,21 @@ last_modified_at: 2023-06-07
 
 * * *
 
-Docker network 드라이버:
+## Docker network Driver:
 - Docker는 여러 Network driver들은 기본으로 제공되며, Network driver는 아래와 같다. 
 ```html
 Bridge, Host, Overlay, Macvlan, None, Network plugins
+```
+
+* * *
+
+## Docker network Driver Bridge:
+- Docker를 설치하게 되면 자동으로 Host machine의 Network interface에 Docker0라는 Virtual interface가 생성된다.
+```html
+[Docker0의 특징]
+• Gateway는 자동으로 172.17.0.1로 설정 되며 16 bit netmask(255.255.0.0)로 설정된다.
+• 이 ip는 DHCP를 통해 할당 받는 것은 아니며, docker 내부 로직에 의해 자동 할당 받는 것이다.
+• docker0 는 일반적인 interface가 아니며, virtual ethernet bridge 이다.
 ```
 
 * * *
