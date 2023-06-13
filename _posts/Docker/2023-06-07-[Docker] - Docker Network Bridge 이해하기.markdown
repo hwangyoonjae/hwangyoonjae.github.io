@@ -38,10 +38,16 @@ Bridge, Host, Overlay, Macvlan, None, Network plugins
 * * *
 
 ### Docker network Driver Bridge 확인하기:
-- Host machine의 Docker network를 확인하기 위해 다음과 같은 명령어를 입력한다
+- Host machine의 Docker network를 확인하기 위해 다음과 같은 명령어를 입력한다.
 ```bash
-docker network ls
+$ docker network ls
 ```
 [![docker network 명령어](/assets/images/docker/docker%20network%20%ED%99%95%EC%9D%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)](/assets/images/docker/docker%20network%20%ED%99%95%EC%9D%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)
+
+- Default로 생성된 bridge에 대한 정보를 확인하기 위해 다음과 같은 명령어를 입력한다. 
+```bash
+$ docker network inspect bridge
+```
+[![docker network bridge 기본값](/assets/images/docker/docker%20network%20bridge%20%EA%B8%B0%EB%B3%B8%EA%B0%92.PNG)](/assets/images/docker/docker%20network%20bridge%20%EA%B8%B0%EB%B3%B8%EA%B0%92.PNG)
 
 * * *
