@@ -34,6 +34,7 @@ Bridge, Host, Overlay, Macvlan, None, Network plugins
 • 이 ip는 DHCP를 통해 할당 받는 것은 아니며, docker 내부 로직에 의해 자동 할당 받는 것이다.
 • docker0 는 일반적인 interface가 아니며, virtual ethernet bridge 이다.
 ```
+[![docker network 흐름도](/assets/images/docker/docker%20network%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)](/assets/images/docker/docker%20network%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)
 
 * * *
 
