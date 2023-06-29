@@ -131,14 +131,14 @@ $ systemctl restart mariadb
 ## MasterDB / SlaveDB 동기화 확인하기:
 - 먼저 MasterDB에 데이터 베이스를 생성한다.
 ```sql
-create database testdb_replication character set UTF8;
+> create database testdb_replication character set UTF8;
 ```
 [![mariadb masterdb에 db생성](/assets/images/DB/mariadb%20masterdb%EC%97%90%20db%EC%83%9D%EC%84%B1.PNG)](/assets/images/DB/mariadb%20masterdb%EC%97%90%20db%EC%83%9D%EC%84%B1.PNG)
 
 - MasterDB에 테이블을 생성한다.
 ```sql
-use testdb_replication;
-create table test(
+> use testdb_replication;
+> create table test(
     -> test_idx int primary key auto_increment,
     -> test_name varchar(10) not null
     -> );
@@ -147,8 +147,8 @@ create table test(
 
 - 생성한 테이블에 데이터를 삽입하고 조회한다.
 ```sql
-insert into test(test_name) values("yoonjae");
-select * from test;
+> insert into test(test_name) values("yoonjae");
+> select * from test;
 ```
 [![mariadb masterdb에 데이터 삽입과 조회](/assets/images/DB/mariadb%20masterdb%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%82%BD%EC%9E%85%EA%B3%BC%20%EC%A1%B0%ED%9A%8C.PNG)](/assets/images/DB/mariadb%20masterdb%EC%97%90%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%82%BD%EC%9E%85%EA%B3%BC%20%EC%A1%B0%ED%9A%8C.PNG)
 
@@ -156,9 +156,9 @@ select * from test;
 
 - MasterDB에서 진행한 작업이 SlaveDB로 Sync되는지 확인한다.
 ```sql
-show databases;
-use testdb_replication
-select * from test;
+> show databases;
+> use testdb_replication
+> select * from test;
 ```
 [![mariadb slavedb sync 확인](/assets/images/DB/mariadb%20slavedb%20sync%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/mariadb%20slavedb%20sync%20%ED%99%95%EC%9D%B8.PNG)
 
