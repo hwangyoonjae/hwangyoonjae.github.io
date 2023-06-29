@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true
 
 date: 2022-08-09
-last_modified_at: 2022-08-09
+last_modified_at: 2023-06-29
 ---
 
 ## PostgreSQL란?:
@@ -29,13 +29,10 @@ ORDBMS : 데이터가 객체로 저장된 것처럼 작동한다.
 ## PostgreSQL 설치하기:
 ### Yum 통해서 설치하기:
 ```bash
-# 레퍼지토리 RPM 설치하기 :
-$ yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
-
 # PostgreSQL 설치하기 :
-$ yum install -y postgresql14-server postgresql14-contrib
+$ yum install -y postgresql
+$ yum install -y postgresql-server
 ```
-<span style="color:#FA5858; font-size:12px">※ 필자는 14버전을 사용했다.</span>
 
 * * *
 
@@ -54,21 +51,22 @@ $ rpm -Uvh pgdg-redhat-repo-latest.noarch.rpm --nodeps
 - initdb 명령어를 통해 기본 데이터베이스를 설치하고, 기본 데이터베이스는 postgres라는 이름으로 생성된다.
 ```bash
 # PostgreSQL 초기화
-$ /usr/pgsql-14/bin/postgresql-14-setup initdb
+$ postgresql-setup initdb
 ```
+[![postgres DB 초기화](/assets/images/DB/postgres%20DB%20%EC%B4%88%EA%B8%B0%ED%99%94.PNG)](/assets/images/DB/postgres%20DB%20%EC%B4%88%EA%B8%B0%ED%99%94.PNG)
 
 * * *
 
 ### 서비스 등록 및 실행하기:
 ```bash
 # 서비스 등록
-$ systemctl enable postgresql-14
+$ systemctl enable postgresql
 
 # 서비스 실행
-$ systemctl start postgresql-14
+$ systemctl start postgresql
 
 # 서비스 동작 확인
-$ systemctl status postgresql-14
+$ systemctl status postgresql
 ```
 [![텍스트](/assets/images/DB/postgres%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/postgres%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)
 
