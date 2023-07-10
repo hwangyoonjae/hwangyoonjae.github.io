@@ -35,6 +35,8 @@ last_modified_at: 2022-08-24
 ## Ansible(앤서블)의 3가지 요소
 - 앤서블은 크게 3가지인 인벤토리, 플레이북, 모듈로 이루어져있다.
 
+* * *
+
 ### 인벤토리(inventory):
 - 앤서블에 의해 제어될 대상을 정의한다.
 - 일반적으로 hosts.ini 파일에 정의해 사용 하며, 여러 서버들의 SSH접근 iP, 포트, 리눅스 사용자 와 같은 접속 정보를 아래와 같이 정의한다.
@@ -53,6 +55,8 @@ db1 ansible_host = aaa.db1.host
 db2 ansible_host = bbb.db2.host
 ```
 
+* * *
+
 ### 플레이북(Playbook):
 - 인벤토리 파일에서 정의한 대상들이 무엇을 수행할 것인지 정의하는 역할을하며, yaml 포맷으로 설정한다.
 - 단독으로 사용되는 것이 아닌 인벤터리와 플레이북의 조합으로 아래와 같이 사용한다.
@@ -67,6 +71,8 @@ db2 ansible_host = bbb.db2.host
        name: nginx
        state: installed
 ``````
+
+* * *
 
 ### 모듈(Module):
 - 플레이북에서 task가 어떻게 수행될지를 정의하는 요소이다.

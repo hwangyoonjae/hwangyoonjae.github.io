@@ -50,6 +50,8 @@ $ ssh [원격서버계정ID]@[원격서버IP]
 ```
 [![텍스트](/assets/images/Ansible/SSH%20%EC%A0%91%EC%86%8D%ED%99%95%EC%9D%B8.PNG)](/assets/images/Ansible/SSH%20%EC%A0%91%EC%86%8D%ED%99%95%EC%9D%B8.PNG)
 
+* * *
+
 #### /etc/hosts 파일에 각각의 host와 ip 매핑하기:
 ```bash
 # /etc/hosts 파일에 각각의 host와 ip를 매핑 시켜주면 user@hostname 으로도 ssh 접근 가능
