@@ -30,6 +30,10 @@ last_modified_at: 2023-03-12
 - 메모리에 여러개의 응용 프로그램을 적재하는 것이다.
 - 사용하는 이유로는 메모리에 여러개의 프로그램을 올려두어서 CPU가 하나의 프로그램이 대기중일때 다른 프로그램을 수행시켜 효율을 극대화하기 위해서다.
 
+### 운영체제 연산의 2가지 모드:
+- 운영체제 연산의 2가지 모드로는 **유저모드와 커널모드**가 있다.
+> * [유저모드와 커널모드 자세히게 알아보기](https://hwangyoonjae.github.io/operating%20system/Operating-System-%EC%9C%A0%EC%A0%80%EB%AA%A8%EB%93%9C(User-Mode)-VS-%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C(Kernel-Mode)/ "유저모드와 커널모드 자세히게 알아보기")
+
 * * *
 
 ## 커널(Kernel)이란?:
