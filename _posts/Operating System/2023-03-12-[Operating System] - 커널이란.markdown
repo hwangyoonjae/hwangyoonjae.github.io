@@ -47,8 +47,7 @@ last_modified_at: 2023-03-12
 - **파일 시스템** 관리 : 데이터를 저장하고 접근할 수 있는 인터페이스를 제공한다.
 - **입출력 관리** : 필요한 입력과 출력 서비스를 제공한다.
 - **프로세스간 통신 관리** : 공동 작업을 위한 각 프로세스 간 통신 환경을 지원한다.
-
-[![텍스트](/assets/images/Linux/%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%EA%B3%84%EC%B8%B5%EA%B5%AC%EC%A1%B0.PNG)](/assets/images/Linux/%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%EA%B3%84%EC%B8%B5%EA%B5%AC%EC%A1%B0.PNG)<br>
+[![커널계층구조](/assets/images/Linux/%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%EA%B3%84%EC%B8%B5%EA%B5%AC%EC%A1%B0.PNG)](/assets/images/Linux/%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%EA%B3%84%EC%B8%B5%EA%B5%AC%EC%A1%B0.PNG)<br>
 <span style="color:#FA5858; font-size:12px">※ 커널 계층 구조는 위 그림과 같다.</span>
 
 * * *
