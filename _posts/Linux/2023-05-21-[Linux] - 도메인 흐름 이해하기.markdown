@@ -23,6 +23,15 @@ last_modified_at: 2023-05-21
 
 * * *
 
+### 도메인 URL 정의:
+- 도메인 URL을 https://hwangyoonjae.github.io/me로 브라우저에 검색 했다고 가정한다.
+  - http:// : 통신에 사용된 프로토콜
+  - github.io : 서버의 도메인
+  - hwangyoonjae : 서버의 서브도메인
+  - /me : 요청 Path
+
+* * *
+
 ## DNS의 역할:
 - 도메인 주소를 IP주소로 변환하는 역할을 한다.
 [![도메인 주소 IP 획득 과정](/assets/images/Linux/%EB%8F%84%EB%A9%94%EC%9D%B8%20%EC%A3%BC%EC%86%8C%20IP%20%ED%9A%8D%EB%93%9D%20%EA%B3%BC%EC%A0%95.PNG)](/assets/images/Linux/%EB%8F%84%EB%A9%94%EC%9D%B8%20%EC%A3%BC%EC%86%8C%20IP%20%ED%9A%8D%EB%93%9D%20%EA%B3%BC%EC%A0%95.PNG)
