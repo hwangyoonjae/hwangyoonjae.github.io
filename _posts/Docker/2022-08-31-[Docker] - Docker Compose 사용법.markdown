@@ -9,12 +9,11 @@ toc: true
 toc_sticky: true
 
 date: 2022-08-31
-last_modified_at: 2022-08-31
+last_modified_at: 2023-07-19
 ---
 
 ## 도커 컴포즈(Docker Compose)란?:
-- 여러 개의 docker container를 모아서 관리하기 위한 툴이다.
-- 각 서버를 docker container로 연결하여 동작시키고 docker compose를 사용하여 해당 컨테이너들을 관리한다.
+- 복수 개의 컨테이너가 유기적으로 묶여서 하나의 도커 애플리케이션으로 동작할 수 있도록 구성하는 도구이며, 복수 개의 컨테이너 생성 및 실행을 자동화하고 관리하는 기능이다.
 
 * * *
 
@@ -80,3 +79,21 @@ last_modified_at: 2022-08-31
     - **deploy** : 도커 스웜에서 사용되는 여러 옵션들을 정의한다.
 
 * * *
+
+## Docker Compose 설치하기:
+- curl 명령어를 통해 docker-compose를 설치한다.
+```bash
+$ curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
+- 도커 컴포즈 파일을 실행하기 다운로드 경로에 권한을 부여한다.
+```bash
+$ chmod +x /usr/local/bin/docker-compose
+```
+
+- docker-compose 버전을 확인한다.
+```bash
+# docker compose 버전 확인
+$ docker-compose -version
+```
+[![docker compose 설치하는 과정](/assets/images/docker/docker%20compose%20설치하는%20과정.PNG)](/assets/images/docker/docker%20compose%20설치하는%20과정.PNG)
