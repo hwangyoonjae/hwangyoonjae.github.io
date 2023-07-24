@@ -27,3 +27,42 @@ last_modified_at: 2023-07-23
 > * [Docker Swarm 구성하기](https://hwangyoonjae.github.io/docker/Docker-Docker-Swarm-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/ "Docker Swarm 구성하기")
 
 * * *
+
+## Docker Compose를 이용하기:
+- 도커 구성을 아래와 같이 파일 형태로 사용한다.
+```bash
+# 파일명은 docker-web.yml
+version: "3.3"
+
+services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
+
+  tomcat1:
+    image: tomcat
+    container_name: tomcat1
+    restart: always
+    ports:
+      - 10001:8080
+    volumes:
+      - ./tomcat1/webapps/:/usr/local/tomcat/webapps/ROOT
+    deploy:
+      replicas : 2
+
+  tomcat2:
+    image: tomcat
+    container_name: tomcat2
+    restart: always
+    ports:
+      - 10002:8080
+    volumes:
+      - ./tomcat2/webapps/:/usr/local/tomcat/webapps/ROOT
+    deploy:
+      replicas: 2
+```
