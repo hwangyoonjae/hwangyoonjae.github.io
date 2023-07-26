@@ -33,8 +33,9 @@ last_modified_at: 2023-07-23
 ```bash
 # 파일명은 docker-web.yml
 version: "3.3"
-
+# 서비스 구성
 services:
+  # Nginx
   nginx:
     image: nginx
     container_name: nginx
@@ -43,7 +44,7 @@ services:
       - 80:80
     volumes:
       - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
-
+  # Tomcat1
   tomcat1:
     image: tomcat
     container_name: tomcat1
@@ -54,7 +55,7 @@ services:
       - ./tomcat1/webapps/:/usr/local/tomcat/webapps/ROOT
     deploy:
       replicas : 2
-
+  # Tomcat2
   tomcat2:
     image: tomcat
     container_name: tomcat2
