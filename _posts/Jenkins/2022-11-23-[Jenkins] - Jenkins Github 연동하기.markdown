@@ -3,7 +3,7 @@ title: "[Jenkins] - Jenkins Github 연동하기"
 categories:
   - Jenkins
 tags:
-  - [Jenkins, Java, CI, Github]
+  - [Jenkins, Github]
 
 toc: true
 toc_sticky: true
