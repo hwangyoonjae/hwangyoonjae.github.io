@@ -36,7 +36,7 @@ last_modified_at: 2023-07-31
 - ***생성한 프로젝트 > 구성***을 클릭한다.
 [![Project 구성 선택](/assets/images/Jenkins/Project%20구성%20선택.PNG)](/assets/images/Jenkins/Project%20구성%20선택.PNG)
 
-- ***invoke Gradle script***를 선택한다.
+- Build step의 Filter는 ***invoke Gradle script***를 선택한다.
 [![Gradle 빌드 환경 세팅](/assets/images/Jenkins/Gradle%20빌드%20환경%20세팅.PNG)](/assets/images/Jenkins/Gradle%20빌드%20환경%20세팅.PNG)
 
 - ***gradle*** (Global Tool Configuration에서 생성했던 걸로)를 선택한다.
