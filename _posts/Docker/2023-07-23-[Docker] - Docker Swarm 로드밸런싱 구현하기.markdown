@@ -44,6 +44,8 @@ services:
       - 80:80
     volumes:
       - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
+    environment:
+      TZ: "Asia/Seoul"
   # Tomcat1
   tomcat1:
     image: tomcat
@@ -53,6 +55,8 @@ services:
       - 10001:8080
     volumes:
       - ./tomcat1/webapps/:/usr/local/tomcat/webapps/ROOT
+    environment:
+      TZ: "Asia/Seoul"
     deploy:
       replicas : 2
   # Tomcat2
@@ -64,6 +68,8 @@ services:
       - 10002:8080
     volumes:
       - ./tomcat2/webapps/:/usr/local/tomcat/webapps/ROOT
+    environment:
+      TZ: "Asia/Seoul"
     deploy:
       replicas: 2
 ```
