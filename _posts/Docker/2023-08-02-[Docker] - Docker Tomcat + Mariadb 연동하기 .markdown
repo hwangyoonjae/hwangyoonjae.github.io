@@ -61,7 +61,13 @@ services:
 * * *
 
 ## Tomcat index.jsp 생성하기:
-```java
+- DB에 있는 데이터를 웹페이지의 보여주기 위해 아래와 같이 index.jsp를 생성한다.
+```bash
+$ cd /tomcat1/webapps/ROOT
+$ vi index.jsp
+```
+
+```html
 <%@ page contentType = "text/html; charset=utf-8" %>
 <%@ page import = "java.sql.DriverManager" %>
 <%@ page import = "java.sql.Connection" %>
@@ -126,5 +132,15 @@ services:
     </body>
 </html>
 ```
+
+* * *
+
+## MariaDB JDBC 드라이버 이용하여 연동하기:
+- 아래 URL 접속하여 MariaDB JDBC 드라이버 파일을 다운받는다. 
+> * [MariaDB JDBC 다운로드](https://downloads.mariadb.com/Connectors/java/ "MariaDB JDBC 다운로드")
+
+- 다운받은 jdbc 드라이버를 WEB-INF/lib 폴더 안에 넣어준다.
+[![docker tomcat jdbc 파일 위치](/assets/images/docker/docker%20tomcat%20jdbc%20파일%20위치.PNG)](/assets/images/docker/docker%20tomcat%20jdbc%20파일%20위치.PNG)
+
 
 * * *
