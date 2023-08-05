@@ -142,5 +142,13 @@ $ vi index.jsp
 - 다운받은 jdbc 드라이버를 WEB-INF/lib 폴더 안에 넣어준다.
 [![docker tomcat jdbc 파일 위치](/assets/images/docker/docker%20tomcat%20jdbc%20파일%20위치.PNG)](/assets/images/docker/docker%20tomcat%20jdbc%20파일%20위치.PNG)
 
+* * *
+
+## Docker Container 생성하기:
+- 위에서 작성한 compose 파일을 통하여 Docker Container를 생성한다.
+```bash
+$ docker stack deploy -c docker-tomcat.yml web
+$ docker stack deploy -c docker-mariadb.yml db
+```
 
 * * *
