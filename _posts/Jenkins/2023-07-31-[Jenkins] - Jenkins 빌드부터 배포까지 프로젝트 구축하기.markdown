@@ -14,7 +14,7 @@ last_modified_at: 2023-07-31
 
 ## Jenkins 빌드부터 배포까지 프로젝트 구축하기:
 ### Gradle 버전 세팅하기:
-- ***Jenkins  관리 > Tools***를 클릭한다.
+- ***Jenkins관리 > Tools***를 클릭한다.
 [![Jenkins Tool 설정](/assets/images/Jenkins/Jenkins%20Tool%20설정.PNG)](/assets/images/Jenkins/Jenkins%20Tool%20설정.PNG)
 
 - Gradle 버전의 맞춰 설정한다.
