@@ -54,24 +54,38 @@ services:
     container_name: tomcat1
     restart: always
     ports:
-      - 10001:8080
+      - 8443:8080
     volumes:
-      - ./tomcat1/webapps/:/usr/local/tomcat/webapps/ROOT
+      - ./tomcat1/webapps/:/usr/local/tomcat/webapps/
     environment:
       TZ: "Asia/Seoul"
-    deploy:
-      replicas : 2
   # Tomcat2
-  tomcat2:
+  tomcat1:
     image: tomcat
-    container_name: tomcat2
+    container_name: tomcat1
     restart: always
     ports:
-      - 10002:8080
+      - 8444:8080
     volumes:
-      - ./tomcat2/webapps/:/usr/local/tomcat/webapps/ROOT
+      - ./tomcat1/webapps/:/usr/local/tomcat/webapps/
     environment:
       TZ: "Asia/Seoul"
-    deploy:
-      replicas: 2
+  # mariadb
+  mariadb:
+    image: mariadb
+    container_name: mariadb
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mariadb/conf.d:/etc/mysql/conf.d
+      - ./mariadb/data:/var/lib/mysql
+    environment:
+      MARIADB_DATABASE: dockerdb
+      MARIADB_USER: test
+      MARIADB_PASSWORD: 12345
+      MARIADB_ROOT_PASSWORD: 12345
+      TZ: "Asia/Seoul"
 ```
+
+* * *
