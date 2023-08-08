@@ -152,3 +152,9 @@ $ docker stack deploy -c docker-mariadb.yml db
 ```
 
 * * *
+
+## 웹페이지에서 확인하기:
+- Tomcat에서 DB값을 제대로 불러오는지 웹페이지로 접속하여 확인한다.
+[![docker tomcat, mariadb 연동 성공 화면](/assets/images/docker/docker%20tomcat,%20mariadb%20연동%20성공%20화면.PNG)](/assets/images/docker/docker%20tomcat,%20mariadb%20연동%20성공%20화면.PNG)
+
+* * *
