@@ -51,7 +51,7 @@ services:
       - ./mariadb/master/data:/var/lib/mysql
       - ./mariadb/master/mysql-init-files/:/docker-entrypoint-initdb.d/
     environment:
-      MARIADB_DATABASE: testdb
+      MARIADB_DATABASE: dockerdb
       MARIADB_USER: test
       MARIADB_PASSWORD: 12345
       MARIADB_ROOT_PASSWORD: 12345
