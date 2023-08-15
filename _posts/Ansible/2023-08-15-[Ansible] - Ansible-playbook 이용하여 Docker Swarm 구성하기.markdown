@@ -36,3 +36,28 @@ $ ansible-playbook -i host.ini docker_manager_setup.yml
 ```
 
 * * *
+
+## Worker 노드 구성하기:
+- docker swarm join 명령을 사용하여 저장된 토큰을 읽어 Worker 노드를 클러스터에 가입한다.
+
+```bash
+---
+- name: Join Docker Swarm Workers
+  hosts: swarm_workers
+  tasks:
+    - name: Retrieve Join Token
+      slurp:
+        src: ./token.txt
+      register: token_content
+
+    - name: Join Swarm as Worker
+      # 저장한 토큰값을 가져온다.
+      shell: docker swarm join --token {{ token_content['content'] | b64decode }} ManagerIP주소:2377
+```
+
+- 위와 같이 파일 생성 후 ansible-playbook 명령을 실행한다.
+```bash
+$ ansible-playbook -i host.ini docker_worker_setup.yml
+```
+
+* * *
