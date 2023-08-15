@@ -32,7 +32,7 @@ last_modified_at: 2023-08-15
 
 - 위와 같이 파일 생성 후 ansible-playbook 명령을 실행한다.
 ```bash
-$ ansible-playbook -i host.ini docker_manager_setup.yml
+$ ansible-playbook -i host.ini docker_manager_setup.yml -u root -k
 ```
 
 * * *
