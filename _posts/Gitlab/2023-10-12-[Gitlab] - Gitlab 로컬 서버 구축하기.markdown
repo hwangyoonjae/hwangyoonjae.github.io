@@ -92,3 +92,12 @@ $ irb(main):005:0> exit
 [![GitLab 메인페이지](/assets/images/Gitlab/gitlab%20메인페이지.png)](/assets/images/Gitlab/gitlab%20메인페이지.png)
 
 * * *
+
+## GitLab 서비스 구동하기:
+- Gitlab 적용 및 재시작 해야하는 경우 아래 명령어를 입력한다.
+```bash
+$ gitlab-ctl reconfigure
+$ gitlab-ctl restart
+```
+
+* * *
