@@ -1,5 +1,5 @@
 ---
-title: "[Gitlab] - Gitlab 로컬 서버 구축하기.markdown"
+title: "[Gitlab] - Gitlab 로컬 서버 구축하기"
 categories:
   - Gitlab
 tags:
