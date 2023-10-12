@@ -58,11 +58,32 @@ $ curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.
 - 브라우저의 https://IP주소로 입력하면 로그인 페이지가 나온다.
 [![GitLab 로그인페이지](/assets/images/Gitlab/gitlab%20로그인페이지.png)](/assets/images/Gitlab/gitlab%20로그인페이지.png)
 
+* * *
+
 ### root 비밀번호 확인하기:
 ```bash
 cat /etc/gitlab/initial_root_password
 ```
 [![root 비밀번호 확인](/assets/images/Gitlab/gitlab%20root%20패스워드%20확인.png)](/assets/images/Gitlab/gitlab%20root%20패스워드%20확인.png)
+
+* * *
+
+### root 비밀번호 변경하기:
+```bash
+$ gitlab-rails console -e production
+```
+```bash
+$ irb(main):001:0> user = User.where(id: 1).first
+  => #<User id:1 @root>
+$ irb(main):002:0> user.password = '패스워드'
+  => "패스워드"
+$ irb(main):003:0> user.password_confirmation = '패스워드'
+  => "패스워드"
+$ irb(main):004:0> user.save
+  => true
+$ irb(main):005:0> exit
+```
+[![root 비밀번호 변경](/assets/images/Gitlab/gitlab%20root%20패스워드%20변경.png)](/assets/images/Gitlab/gitlab%20root%20패스워드%20변경.png)
 
 * * *
 
