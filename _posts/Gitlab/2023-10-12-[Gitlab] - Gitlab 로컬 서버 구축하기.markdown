@@ -51,6 +51,10 @@ $ apt-get install -y postfix
 ```bash
 $ curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
 ```
+```bash
+# 설치하기
+$ apt install gitlab-ee
+```
 
 * * *
 
@@ -62,7 +66,7 @@ $ curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.
 
 ### root 비밀번호 확인하기:
 ```bash
-cat /etc/gitlab/initial_root_password
+$ cat /etc/gitlab/initial_root_password
 ```
 [![root 비밀번호 확인](/assets/images/Gitlab/gitlab%20root%20패스워드%20확인.png)](/assets/images/Gitlab/gitlab%20root%20패스워드%20확인.png)
 
