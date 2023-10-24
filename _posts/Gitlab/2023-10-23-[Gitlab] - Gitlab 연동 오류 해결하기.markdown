@@ -24,6 +24,17 @@ Url is blocked: Requests to the local network are not allowed
 ```
 
 - 아래 그림과 같이 조치하면된다.
-[![url is blocked 에러 해결방법](/assets/images/Gitlab/url%20is%20blocked%20에러%20해결방법.png)]
+[![url is blocked 에러 해결방법](/assets/images/Gitlab/url%20is%20blocked%20에러%20해결방법.png)](/assets/images/Gitlab/url%20is%20blocked%20에러%20해결방법.png)
+
+* * *
+
+### Hook executed successfully but returned HTTP 403 오류 해결하기:
+- GitLab에서 Webhook 설정 후, Test 진행 시 아래와 같은 오류 메시지가 발생한다.
+```html
+Hook executed successfully but returned HTTP 403 <html> <head> <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/> <title>Error 403 No valid crumb was included in the request</title> </head> <body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
+```
+
+- GitLab에서 Webhook 설정 시 Jenkins URL 넣는 부분에서 경로 중 ***/job/ -> /project***로 변경하여 저장 후 push event 테스트 진행하면된다. 
+[![HTTP 403 에러 해결방법](/assets/images/Gitlab/HTTP%20403%20에러%20해결방법.png)](/assets/images/Gitlab/HTTP%20403%20에러%20해결방법.png)
 
 * * *
