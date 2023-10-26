@@ -15,7 +15,7 @@ last_modified_at: 2023-10-26
 ## Gitlab과 Slack 연동하기:
 ### Slack 설정하기:
 - Slack에서 왼쪽 하단에 앱 추가를 클릭하여 ***Incoming WebHooks(수신 웹후크)***를 추가한다.
-[![Slack Incoming WebHooks 추가](/assets/images/Gitlab/Slack%20Incoming%20WebHooks%20추가.png)](/assets/images/Gitlab/Slack%20Incoming%20WebHooks%20추가.png)
+[![Slack Incoming WebHooks 추가](/assets/images/Gitlab/Slack%20Incoming%20WebHooks%20추가.png)](/assets/images/Gitlab/Slack%20Incoming%20WebHooks%20추가.png)&nbsp; 
 [![Slack Webhooks 채널 추가](/assets/images/Gitlab/Slack%20Webhooks%20채널%20추가.png)](/assets/images/Gitlab/Slack%20Webhooks%20채널%20추가.png)
 
 - 추가 후, 페이지의 나오는 ***Webhook URL***를 복사하여, GitLab을 설정한다.

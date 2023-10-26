@@ -39,7 +39,7 @@ $ docker run --name portainer -p 9000:9000 -d --restart always -v /data/portaine
 
 ## Portainer 시작하기:
 - 관리자 계정 생성 후 로그인하여 접속하면 Docker 환경을 볼 수 있다.
-[![potainer 시작](/assets/images/Portainer/potainer%20시작.png)](/assets/images/Portainer/potainer%20시작.png)
+[![potainer 시작](/assets/images/Portainer/potainer%20시작.png)](/assets/images/Portainer/potainer%20시작.png)&nbsp; 
 [![potainer local 컨테이너 접속](/assets/images/Portainer/potainer%20local%20컨테이너%20접속.png)](/assets/images/Portainer/potainer%20local%20컨테이너%20접속.png)
 
 * * *
