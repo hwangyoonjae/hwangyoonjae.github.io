@@ -47,6 +47,7 @@ $ sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 - kubernetes 운영상 반드시 열려있어야 하는 필수 포트가 있는데, 이것이 닫겨 있을 경우 쿠버네티스 운영 및 설치에 장애가 될 수 있기 떄문에 우선 설치 테스트에서는 비활성화한다.
 ```bash
 $ systemctl stop firewalld
+$ systemctl disable firewalld
 ```
 
 * * *
