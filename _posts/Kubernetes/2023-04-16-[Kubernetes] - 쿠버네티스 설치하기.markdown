@@ -142,7 +142,7 @@ $ kubeadm init --apiserver-advertise-address {k8s-master IP} --pod-network-cidr=
 ## Kubernetes Worker Node 작업하기:
 - **kubeadm join** 명령어를 통해 노드서버를 쿠버네티스 클러스터로 결합한다.
 ```bash
-$ kubeadm join 10.10.20.90:6443 --token t4ll0a.v1jymvv48ksb7k68 --discovery-token-ca-cert-hash sha256:e2a5c8664d82b6075d800aacdd0b9122556ad73afa308d0902d7f4fa703971f0
+$ kubeadm join {k8s-master IP}:6443 --token {token 값} --discovery-token-ca-cert-hash {hash 값}
 ```
 [![Worker Node 구성완료](/assets/images/kubernetes/Worker%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)](/assets/images/kubernetes/Worker%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)
 
