@@ -26,7 +26,7 @@ last_modified_at: 2023-05-31
 * * *
 
 ### Selinux permissive 모드로 변경하기:
-- 컨테이너가 호스트 파일시스템에 접근하는 것을 용이하게 하게 위해서 **"disabled -> permissive"**로 변경한다.
+- 컨테이너가 호스트 파일시스템에 접근하는 것을 용이하게 하게 위해서 **"enforcing -> permissive"**로 변경한다.
 ```bash
 $ setenforce 0
 $ sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
