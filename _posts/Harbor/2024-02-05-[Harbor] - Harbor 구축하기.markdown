@@ -1,7 +1,7 @@
 ---
-title: "[Docker] - Harbor 구축하기"
+title: "[Harbor] - Harbor 구축하기"
 categories:
-  - Docker
+  - Harbor
 tags:
   - [Dockerhub, Image]
 
@@ -119,7 +119,7 @@ certificate: /etc/docker/certs.d/[도메인 또는 서버주소]/[도메인 또�
 private_key: /etc/docker/certs.d/[도메인 또는 서버주소]/[도메인 또는 서버주소].key
 ```
 
-### harbor 설치하기:
+### Harbor 설치하기:
 ```bash
 $ ./prepare
 $ ./install.sh
@@ -139,7 +139,7 @@ $ update-ca-trust
 [![Harbor 초기화면](/assets/images/docker/Harbor%20초기화면.png)](/assets/images/docker/Harbor%20초기화면.png)
 
 ```html
-⚠️ ca.crt 인증서를 로컬의 신뢰할 수 있는 로트 인증기관에 등록 시 신뢰할 수 있는 인증서로 보여집니다.
+⚠️ ca.crt 인증서를 로컬(데스크탑)의 신뢰할 수 있는 루트 인증기관에 등록 시 신뢰할 수 있는 인증서로 보여집니다.
 ```
 
 * * *
