@@ -62,7 +62,7 @@ $ helm search repo stable
 - 테스트 진행을 위해 Stable Repo 내에 prometheus가 있는지 확인하고, chart를 설치한다.
 ```bash
 $ helm search repo prometheus
-# helm install [RELEASE_NAME] [HELM_CHART]'
+# helm install [RELEASE_NAME] [HELM_CHART]
 $ helm install prometheus-test stable/prometheus
 ```
 [![Helm repo stable 에러 발생](/assets/images/kubernetes/Helm%20repo%20stable%20에러%20발생.png)](/assets/images/kubernetes/Helm%20repo%20stable%20에러%20발생.png)
@@ -70,7 +70,7 @@ $ helm install prometheus-test stable/prometheus
 - helm chart 저장소 stable은 helm v3 부터 해당 저장소의 대한 공시적인 지원을 종료하였다고 하여, 비공식 저장소 중 대표적인 bitnami를 사용한다.
 ```bash
 $ helm repo add bitnami https://charts.bitnami.com/bitnami
-# helm install [RELEASE_NAME] [HELM_CHART]'
+# helm install [RELEASE_NAME] [HELM_CHART]
 $ helm install prometheus-test bitnami/prometheus
 ```
 [![Helm chart 저장소 변경 후 prometheus 설치](/assets/images/kubernetes/Helm%20chart%20저장소%20변경%20후%20prometheus%20설치.png)](/assets/images/kubernetes/Helm%20chart%20저장소%20변경%20후%20prometheus%20설치.png)
