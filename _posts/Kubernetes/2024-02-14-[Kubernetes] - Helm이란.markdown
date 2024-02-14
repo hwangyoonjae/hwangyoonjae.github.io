@@ -1,0 +1,78 @@
+---
+title: "[Kubernetes] - Helm이란"
+categories:
+  - Kubernetes
+tags:
+  - [Kubernetes, Helm]
+
+toc: true
+toc_sticky: true
+
+date: 2024-02-14
+last_modified_at: 2024-02-14
+---
+
+## Helm이란?:
+- 쿠버네티스 오픈 소스 패키지 매니저이다.
+- ubuntu의 ***apt***, Mac의 ***brew***, Node의 ***npm***과 같이 패키지를 설치, 업데이트, 수정, 삭제하는 작업을 편리하고 안전하게 수행하기 위해 사용되는 툴이다.
+
+* * *
+
+## Helm의 주요 개념 3가지:
+- ***Chart(차트)*** : 헬름 패키지로, k8s cluster에서 애플리케이션이 기동되기 위해 필요한 모든 리소스들이 포함되어있다.
+- ***Repository(저장소)*** : 차트 저장소로, 차트를 모아두고 공유하는 장소이다.
+- ***Realease(릴리즈)*** : k8s cluster에서 구동되는 차트 인스턴스
+```html
+🙌 Helm 연계 순서 🙌
+1. k8s cluster 내부에 Helm Chart를 원하는 Repository에서 검색 후 설치
+2. 각 설치에 따른 새로운 Release 생성
+```
+
+* * *
+
+## Helm 설치하기:
+- 아래와 같이 Helm 설치를 진행한다.
+```bash
+$ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+$ chmod 700 get_helm.sh
+$ ./get_helm.sh
+```
+
+* * *
+
+### Helm 버전 확인하기:
+```bash
+$ helm version
+```
+[![Helm 버전 확인](/assets/images/kubernetes/Helm%20버전%20확인.png)](/assets/images/kubernetes/Helm%20버전%20확인.png)
+
+* * *
+
+### Helm Repostory(저장소) 추가하기:
+- Stable이라는 이름으로 Repository를 추가한다.
+```bash
+$ helm repo add stable https://charts.helm.sh/stable
+$ helm search repo stable
+```
+[![Helm Repository 목록](/assets/images/kubernetes/Helm%20Repository%20목록.png)](/assets/images/kubernetes/Helm%20Repository%20목록.png)
+
+* * *
+
+### Helm Chart 설치해보기:
+- 테스트 진행을 위해 Stable Repo 내에 prometheus가 있는지 확인하고, chart를 설치한다.
+```bash
+$ helm search repo prometheus
+# helm install [RELEASE_NAME] [HELM_CHART]'
+$ helm install prometheus-test stable/prometheus
+```
+[![Helm repo stable 에러 발생](/assets/images/kubernetes/Helm%20repo%20stable%20에러%20발생.png)](/assets/images/kubernetes/Helm%20repo%20stable%20에러%20발생.png)
+
+- helm chart 저장소 stable은 helm v3 부터 해당 저장소의 대한 공시적인 지원을 종료하였다고 하여, 비공식 저장소 중 대표적인 bitnami를 사용한다.
+```bash
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+# helm install [RELEASE_NAME] [HELM_CHART]'
+$ helm install prometheus-test bitnami/prometheus
+```
+[![Helm chart 저장소 변경 후 prometheus 설치](/assets/images/kubernetes/Helm%20chart%20저장소%20변경%20후%20prometheus%20설치.png)](/assets/images/kubernetes/Helm%20chart%20저장소%20변경%20후%20prometheus%20설치.png)
+
+* * *
