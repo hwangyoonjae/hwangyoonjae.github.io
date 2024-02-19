@@ -26,6 +26,12 @@ last_modified_at: 2024-02-14
 
 * * *
 
+## Kubernetes HA 구성도:
+- Kubernetes HA 구성은 아래 그림과 같이 구현한다.
+[![Kubernetes HAproxy 구성도](/assets/images/kubernetes/Kubernetes%20HAproxy%20구성도.png)](/assets/images/kubernetes/Kubernetes%20HAproxy%20구성도.png)
+
+* * *
+
 ## 로드밸런서 구성하기:
 - 고가용성(HA)을 위해서는 로드밸런서가 필요한데, 로드 밸런서 뒤에 있는 apiserver 중 한개의 apiserver에 장애가 발생해도, 나머지 apiserver로 정상적인 서비스를 하도록 로드를 분배한다.
 - 로드 밸런서는 ***HAproxy*** application을 설치한다.
