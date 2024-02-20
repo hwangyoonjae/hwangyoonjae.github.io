@@ -8,8 +8,8 @@ tags:
 toc: true
 toc_sticky: true
 
-date: 2024-02-14
-last_modified_at: 2024-02-14
+date: 2024-02-19
+last_modified_at: 2024-02-19
 ---
 
 ## HAproxy이란?:
