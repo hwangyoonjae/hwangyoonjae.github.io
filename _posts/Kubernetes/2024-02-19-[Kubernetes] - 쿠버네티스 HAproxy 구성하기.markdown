@@ -133,7 +133,7 @@ $ apt install haproxy
 ```bash
 $ cat << EOF | sudo tee -a /etc/haproxy/haproxy.cfg
 frontend kubernetes-master-lb
-      bind 0.0.0.0:6443
+      bind 0.0.0.0:16443
       mode tcp
       default_backend kubernetes-master-nodes
 backend kubernetes-master-nodes
