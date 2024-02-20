@@ -41,6 +41,10 @@ $ cd /etc/keepalived
 
 - k8s-master1에는 아래 내용을 입력한다.
 ```bash
+# master/backup 구분
+global_defs {
+   router_id rtr_0
+}
 vrrp_instance VI_1 {
     state MASTER
     interface [인터페이스명]
@@ -60,6 +64,10 @@ vrrp_instance VI_1 {
 
 - k8s-master2에는 아래 내용을 입력한다.
 ```bash
+# master/backup 구분
+global_defs {
+   router_id rtr_1
+}
 vrrp_instance VI_1 {
     state BACKUP
     interface [인터페이스명]
@@ -79,6 +87,10 @@ vrrp_instance VI_1 {
 
 - k8s-master3에는 아래 내용을 입력한다.
 ```bash
+# master/backup 구분
+global_defs {
+   router_id rtr_1
+}
 vrrp_instance VI_1 {
     state BACKUP
     interface [인터페이스명]
