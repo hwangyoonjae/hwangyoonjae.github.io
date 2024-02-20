@@ -136,7 +136,6 @@ frontend kubernetes-master-lb
       bind 0.0.0.0:6443
       mode tcp
       default_backend kubernetes-master-nodes
-
 backend kubernetes-master-nodes
       mode tcp
       balance roundrobin
