@@ -32,9 +32,86 @@ last_modified_at: 2024-02-14
 
 * * *
 
+## keepalived 설치 및 설정:
+- master node간의 HA를 위해 설치한다.
+```bash
+$ apt install -y keepalived
+$ cd /etc/keepalived
+```
+
+- k8s-master1에는 아래 내용을 입력한다.
+```bash
+vrrp_instance VI_1 {
+    state MASTER
+    interface [인터페이스명]
+    virtual_router_id 50
+    priority 100
+    advert_int 1
+    nopreempt
+    authentication {
+        auth_type PASS
+        auth_pass Password@
+    }
+    virtual_ipaddress {
+        VIP address
+    }
+}
+```
+
+- k8s-master2에는 아래 내용을 입력한다.
+```bash
+vrrp_instance VI_1 {
+    state BACKUP
+    interface [인터페이스명]
+    virtual_router_id 50
+    priority 99
+    advert_int 1
+    nopreempt
+    authentication {
+        auth_type PASS
+        auth_pass Password@
+    }
+    virtual_ipaddress {
+        VIP address
+    }
+}
+```
+
+- k8s-master3에는 아래 내용을 입력한다.
+```bash
+vrrp_instance VI_1 {
+    state BACKUP
+    interface [인터페이스명]
+    virtual_router_id 50
+    priority 99
+    advert_int 1
+    nopreempt
+    authentication {
+        auth_type PASS
+        auth_pass Password@
+    }
+    virtual_ipaddress {
+        VIP address
+    }
+}
+```
+
+- 모든 Master에서 keepalived 재시작 후 ping 테스트한다.
+```bash
+$ systemctl restart keepalived
+$ systemctl enable keepalived
+# ping 테스트
+$ ping [vip address]
+```
+
+* * *
+
 ## 로드밸런서 구성하기:
 - 고가용성(HA)을 위해서는 로드밸런서가 필요한데, 로드 밸런서 뒤에 있는 apiserver 중 한개의 apiserver에 장애가 발생해도, 나머지 apiserver로 정상적인 서비스를 하도록 로드를 분배한다.
 - 로드 밸런서는 ***HAproxy*** application을 설치한다.
+```html
+⚠️ 모든 Master Node의 설치한다.
+```
 ```bash
 $ apt install haproxy
 ```
