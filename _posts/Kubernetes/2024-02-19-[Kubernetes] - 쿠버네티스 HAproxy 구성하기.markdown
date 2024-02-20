@@ -151,6 +151,11 @@ $ systemctl restart haproxy
 $ systemctl enable haproxy
 ```
 
+- LoadBalancer 설정을 확인한다.
+```bash
+$ nc -v [LoadBalancer_IP] [Port]
+```
+
 * * *
 
 ## Kubernetes 설치하기:
