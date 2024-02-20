@@ -26,8 +26,8 @@ last_modified_at: 2024-02-19
 
 * * *
 
-## Kubernetes HA 구성도:
-- Kubernetes HA 구성은 아래 그림과 같이 구현한다.
+## Kubernetes HAproxy 구성도:
+- Kubernetes HAproxy 구성은 아래 그림과 같이 구현한다.
 [![Kubernetes HAproxy 구성도](/assets/images/kubernetes/Kubernetes%20HAproxy%20구성도.png)](/assets/images/kubernetes/Kubernetes%20HAproxy%20구성도.png)
 
 * * *
@@ -37,6 +37,7 @@ last_modified_at: 2024-02-19
 ```bash
 $ apt install -y keepalived
 $ cd /etc/keepalived
+$ vi keepalived.conf
 ```
 
 - k8s-master1에는 아래 내용을 입력한다.
