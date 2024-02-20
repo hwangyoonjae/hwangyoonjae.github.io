@@ -69,7 +69,7 @@ vrrp_instance VI_1 {
 global_defs {
    router_id rtr_1
 }
-vrrp_instance VI_1 {
+vrrp_instance VI_2 {
     state BACKUP
     interface [인터페이스명]
     virtual_router_id 50
@@ -92,11 +92,11 @@ vrrp_instance VI_1 {
 global_defs {
    router_id rtr_1
 }
-vrrp_instance VI_1 {
+vrrp_instance VI_3 {
     state BACKUP
     interface [인터페이스명]
     virtual_router_id 50
-    priority 99
+    priority 98
     advert_int 1
     nopreempt
     authentication {
