@@ -179,6 +179,7 @@ $ mkdir -p $HOME/.kube
 $ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 $ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
+
 * * *
 
 ### Kubernetes Master Node 조인하기:
@@ -191,6 +192,7 @@ $ kubeadm join k8s-lb:6443 --token nd6wjc.6i4fgf5ig28mp4lz \
       --discovery-token-ca-cert-hash sha256:1bddd38ae800a09195c9d52868750a1c43200957e7a2b246251f44235d301c2c \
       --control-plane --certificate-key 4c637105d0e0edcaab6979975efa61a475c1db1944e76de2d391bb2fdb7b6f05
 ```
+
 * * *
 
 ### Kubernetes Worker Node 조인하기:
@@ -202,6 +204,7 @@ $ kubeadm join k8s-lb:6443 --token nd6wjc.6i4fgf5ig28mp4lz \
 $ kubeadm join k8s-lb:6443 --token nd6wjc.6i4fgf5ig28mp4lz \
       --discovery-token-ca-cert-hash sha256:1bddd38ae800a09195c9d52868750a1c43200957e7a2b246251f44235d301c2c
 ```
+
 * * *
 
 ## Kubernetes 모든 노드 확인하기:
