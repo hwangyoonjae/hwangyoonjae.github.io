@@ -33,9 +33,16 @@ last_modified_at: 2024-02-14
 ## Helm 설치하기:
 - 아래와 같이 Helm 설치를 진행한다.
 ```bash
+# scripts로 설치
 $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
 $ chmod 700 get_helm.sh
 $ ./get_helm.sh
+# ===========================================================================================
+# 파일로 설치
+# 아래 주소 복사 후 접속하여 릴리즈 파일 다운로드
+https://github.com/helm/helm/releases
+$ tar -zxvf helm-v3.0.0-linux-amd64.tar.gz
+$ mv linux-amd64/helm /usr/local/bin/helm
 ```
 
 * * *
