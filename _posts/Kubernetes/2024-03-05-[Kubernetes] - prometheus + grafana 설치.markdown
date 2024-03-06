@@ -9,13 +9,8 @@ toc: true
 toc_sticky: true
 
 date: 2024-03-05
-last_modified_at: 2024-03-05
+last_modified_at: 2024-03-06
 ---
-
-## HAproxy이란?:
-- 고성능의 TCP/HTTP 로드 밸런서 및 프록시 서버로, 웹 서버의 로드 밸런싱과 고가용성을 제공하도록 설계되었다.
-
-* * *
 
 ## prometheus + grafana 설치 준비하기:
 ### Helm 설치하기:
@@ -82,7 +77,7 @@ $ kubectl edit service -n monitoring prometheus-grafana
 * * *
 
 ## prometheus 외부 접근 설정하기:
-- a
+- 외부에서 접근을 해서 웹브라우저로 접속하기 위해 ***type: nodePort***로 수정해야한다.
 ```bash
 $ kubectl edit service -n monitoring prometheus-kube-prometheus-prometheus
 ```
