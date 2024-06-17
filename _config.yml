@@ -159,6 +159,7 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  - _includes/notes_graph.json # Disital garden graph
 keep_files:
   - .git
   - .svn
@@ -235,6 +236,9 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+graph_archive:
+  type: liquid
+  path: /graph/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
