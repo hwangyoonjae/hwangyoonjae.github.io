@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Gitlab] - Gitlab 프로젝트 생성하기"
-categories:
-  - Gitlab
-tags:
-  - [Git, Gitlab]
-
-toc: true
-toc_sticky: true
-
 date: 2023-10-12
-last_modified_at: 2023-10-12
+categories: Gitlab
+tags: [Git, Gitlab]
+image: /assets/post/gitLab-wallpaper.jpg
 ---
 
 ## GitLab 프로젝트 생성하기:

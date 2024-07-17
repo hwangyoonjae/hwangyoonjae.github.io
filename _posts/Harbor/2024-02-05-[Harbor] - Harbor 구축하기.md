@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Harbor] - Harbor 구축하기"
-categories:
-  - Harbor
-tags:
-  - [Dockerhub, Image]
-
-toc: true
-toc_sticky: true
-
 date: 2024-02-05
-last_modified_at: 2024-02-05
+categories: Harbor
+tags: [Dockerhub, Image]
+image: /assets/post/harbor-wallpaper.jpg
 ---
 
 ## Harbor란?:

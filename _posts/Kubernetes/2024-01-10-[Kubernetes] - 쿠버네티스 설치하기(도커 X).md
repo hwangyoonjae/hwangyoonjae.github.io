@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Kubernetes] - 쿠버네티스 설치하기(도커 X)"
-categories:
-  - Kubernetes
-tags:
-  - [Kubernetes, Container]
-
-toc: true
-toc_sticky: true
-
 date: 2024-01-10
-last_modified_at: 2024-01-10
+categories: Kubernetes
+tags: [Kubernetes, Container]
+image: /assets/post/kubernetes-wallpaper.jpg
 ---
 
 ## Kubernetes Docker 지원 중단:

@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Docker] - Docker Network Bridge 이해하기"
-categories:
-  - Docker
-tags:
-  - [Docker, Network]
-
-toc: true
-toc_sticky: true
-
 date: 2023-06-07
-last_modified_at: 2023-06-07
+categories: Docker
+tags: [Docker, Network]
+image: /assets/post/docker_wallpaper.jpg
 ---
 
 ## Docker Network 개요:

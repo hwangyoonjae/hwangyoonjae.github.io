@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Redis] - Redis 데이터 처리하기"
-categories:
-  - Redis
-tags:
-  - [Redis]
-
-toc: true
-toc_sticky: true
-
 date: 2023-05-17
-last_modified_at: 2023-05-17
+categories: Redis
+tags: [Redis]
+image: /assets/post/redis-wallpaper.jpg
 ---
 
 ## Redis 데이터 입력, 수정, 삭제, 조회하기:

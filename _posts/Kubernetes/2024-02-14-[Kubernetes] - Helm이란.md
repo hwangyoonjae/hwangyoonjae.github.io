@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Kubernetes] - Helm이란"
-categories:
-  - Kubernetes
-tags:
-  - [Kubernetes, Helm]
-
-toc: true
-toc_sticky: true
-
 date: 2024-02-14
-last_modified_at: 2024-03-05
+categories: Kubernetes
+tags: [Kubernetes, Helm]
+image: /assets/post/kubernetes-wallpaper.jpg
 ---
 
 ## Helm이란?:

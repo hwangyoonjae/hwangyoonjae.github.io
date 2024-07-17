@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Gitlab] - Gitlab 로컬 서버 구축하기"
-categories:
-  - Gitlab
-tags:
-  - [Git, Gitlab]
-
-toc: true
-toc_sticky: true
-
 date: 2023-10-12
-last_modified_at: 2023-10-12
+categories: Gitlab
+tags: [Git, Gitlab]
+image: /assets/post/gitLab-wallpaper.jpg
 ---
 
 ## GitLab을 로컬 서버의 구축하고 싶었던 계기:

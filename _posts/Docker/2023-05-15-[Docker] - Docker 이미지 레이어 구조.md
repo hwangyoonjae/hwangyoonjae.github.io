@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Docker] - Docker 이미지 레이어 구조"
-categories:
-  - Docker
-tags:
-  - [Docker, Overlay2]
-
-toc: true
-toc_sticky: true
-
-date: 2023-05-23
-last_modified_at: 2023-05-25
+date: 2023-05-25
+categories: Docker
+tags: [Docker, Overlay2]
+image: /assets/post/docker_wallpaper.jpg
 ---
 
 ## Docker Layer란?:

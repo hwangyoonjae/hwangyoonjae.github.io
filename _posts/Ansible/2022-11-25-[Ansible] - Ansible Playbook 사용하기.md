@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Ansible] - Ansible Playbook 사용하기"
-categories:
-  - Ansible
-tags:
-  - [Ansible, 자동화, Playbook]
-
-toc: true
-toc_sticky: true
-
 date: 2022-11-25
-last_modified_at: 2022-11-25
+categories: Ansible
+tags: [Ansible, 자동화, Playbook]
+image: /assets/post/ansible-wallpaper.jpg
 ---
 
 ## Ansible Playbook 사용하기:

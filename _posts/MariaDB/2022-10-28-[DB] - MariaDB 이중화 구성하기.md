@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[MariaDB] - MariaDB 이중화 구성하기"
-categories:
-  - MariaDB
-tags:
-  - [DB 이중화, Master, Slave]
-
-toc: true
-toc_sticky: true
-
 date: 2022-10-28
-last_modified_at: 2023-06-27
+categories: MariaDB
+tags: [DB 이중화, Master, Slave]
+image: /assets/post/mariadb-wallpaper.jpg
 ---
 
 ## MariaDB Replication 절차:

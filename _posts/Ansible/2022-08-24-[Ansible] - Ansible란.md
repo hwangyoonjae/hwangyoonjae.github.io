@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Ansible] - Ansible란"
-categories:
-  - Ansible
-tags:
-  - [Ansible, 자동화]
-
-toc: true
-toc_sticky: true
-
 date: 2022-08-24
-last_modified_at: 2022-08-24
+categories: Ansible
+tags: [Ansible, 자동화]
+image: /assets/post/ansible-wallpaper.jpg
 ---
 
 ## Ansible(앤서블)란?:

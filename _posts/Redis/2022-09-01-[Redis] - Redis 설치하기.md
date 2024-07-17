@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Redis] - Redis 설치하기"
-categories:
-  - Redis
-tags:
-  - [Redis, NoSQL]
-
-toc: true
-toc_sticky: true
-
 date: 2022-09-01
-last_modified_at: 2023-04-18
+categories: Redis
+tags: [DB, NoSQL]
+image: /assets/post/redis-wallpaper.jpg
 ---
 
 ## Redis 설치준비:

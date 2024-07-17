@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Jenkins] - Jenkins Slack 알림 메세지 전송하기"
-categories:
-  - Jenkins
-tags:
-  - [Jenkins, CI, CD, Slack]
-
-toc: true
-toc_sticky: true
-
 date: 2023-10-30
-last_modified_at: 2023-10-30
+categories: Jenkins
+tags: [Jenkins, CI, CD, Slack]
+image: /assets/post/jenkins-wallpaper.jpg
 ---
 
 ## Jenkins Slack 알림 메세지 전송하기:

@@ -1,16 +1,12 @@
 ---
+layout: post
 title: "[Redis] - Redis란"
-categories:
-  - Redis
-tags:
-  - [DB, NoSQL]
-
-toc: true
-toc_sticky: true
-
 date: 2022-08-11
-last_modified_at: 2022-08-11
+categories: Redis
+tags: [DB, NoSQL]
+image: /assets/post/redis-wallpaper.jpg
 ---
+
 
 ## Redis란? :
 - **Remote Dictionary Server**의 약자로, Key-Value 구조의 비정형 데이터를 저장하고 관리하기 위한 오픈소스 기반의 비 관계형 데이터베이스 관리 시스템(DBMS)이다.

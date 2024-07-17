@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[VMware] - vSphere 설치하기"
-categories:
-  - VMware
-tags:
-  - [VMware, vSphere]
-
-toc: true
-toc_sticky: true
-
 date: 2024-02-25
-last_modified_at: 2024-02-25
+categories: VMware
+tags: [VMware, vSphere]
+image: /assets/post/vmware-wallpaper.jpg
 ---
 
 ## vSphere 설치하기:
@@ -45,7 +40,7 @@ last_modified_at: 2024-02-25
 - Root Password 설정 ***소문자,숫자,특수기호 혼합 7글자 이상*** 입력한다.  
 [![vSphere root 패스워드](/assets/images/VMware/vSphere%20root%20패스워드.png)](/assets/images/VMware/vSphere%20root%20패스워드.png)
 
-- 설치 진행을 위해 ***Enter*** 클릭한다.
+- 설치 진행을 위해 ***F11*** 키를 클릭한다.
 [![vSphere 설치 진행](/assets/images/VMware/vSphere%20설치%20진행.png)](/assets/images/VMware/vSphere%20설치%20진행.png)
 
 - 설치 완료 후 재부팅 진행 ***Enter*** 클릭한다.  

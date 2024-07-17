@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Operating System] - 유저모드(User Mode) VS 커널모드(Kernel Mode)"
-categories:
-  - Operating System
-tags:
-  - [User Mode, Kernel Mode]
-
-toc: true
-toc_sticky: true
-
 date: 2023-03-07
-last_modified_at: 2023-03-07
+categories: OperatingSystem
+tags: [User Mode, Kernel Mode]
+image: /assets/post/os-wallpaper.jpg
 ---
 
 ## 유저모드(User Mode) VS 커널모드(Kernel Mode):

@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Postgresql] - Postgresql 설치하기"
-categories:
-  - Postgresql
-tags:
-  - [DBMS, ORDBMS, PostgreSQL]
-
-toc: true
-toc_sticky: true
-
 date: 2022-08-09
-last_modified_at: 2023-06-29
+categories: Postgresql
+tags: [DBMS, ORDBMS, PostgreSQL]
+image: /assets/post/postgresql-wallpaper.jpg
 ---
 
 ## PostgreSQL란?:

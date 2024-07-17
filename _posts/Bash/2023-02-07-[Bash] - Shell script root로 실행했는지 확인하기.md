@@ -1,16 +1,12 @@
 ---
+layout: post
 title: "[Bash] - Shell script root로 실행했는지 확인하기"
-categories:
-  - Bash
-tags:
-  - [Shell script]
-
-toc: true
-toc_sticky: true
-
 date: 2023-02-07
-last_modified_at: 2023-02-07
+categories: Bash
+tags: [Shell script]
+image: /assets/post/bash-wallpaper.jpg
 ---
+
 
 ## root로 실행확인을 알고싶었던 계기:
 - Shell script를 작성하여 root로 실행했는지를 whoami라는 명령어로만 확인을 진행했다.<br>

@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Docker] - Docker Visualizer 사용하는 방법"
-categories:
-  - Docker
-tags:
-  - [Docker, YAML, Visualizer]
-
-toc: true
-toc_sticky: true
-
 date: 2022-09-01
-last_modified_at: 2022-09-01
+categories: Docker
+tags: [Docker, YAML, Visualizer]
+image: /assets/post/docker_wallpaper.jpg
 ---
 
 ## Docker Visualizer이란?:

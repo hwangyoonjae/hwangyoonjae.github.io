@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Docker] - Docker Container 자동실행"
-categories:
-  - Docker
-tags:
-  - [Docker, Container]
-
-toc: true
-toc_sticky: true
-
 date: 2022-11-24
-last_modified_at: 2022-11-24
+categories: Docker
+tags: [Docker, Container]
+image: /assets/post/docker_wallpaper.jpg
 ---
 
 ## Docker Container 자동실행:

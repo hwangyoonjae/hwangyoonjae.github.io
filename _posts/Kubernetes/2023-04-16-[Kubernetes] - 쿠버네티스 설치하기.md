@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Kubernetes] - 쿠버네티스 설치하기"
-categories:
-  - Kubernetes
-tags:
-  - [Kubernetes, Docker, Container]
-
-toc: true
-toc_sticky: true
-
 date: 2023-04-15
-last_modified_at: 2023-05-31
+categories: Kubernetes
+tags: [Kubernetes, Docker, Container]
+image: /assets/post/kubernetes-wallpaper.jpg
 ---
 
 ## Kubernetes란?:

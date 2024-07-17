@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Docker] - Docker Tomcat + MariaDB 연동하기"
-categories:
-  - Docker
-tags:
-  - [Docker, Tomat, MariaDB]
-
-toc: true
-toc_sticky: true
-
 date: 2023-08-02
-last_modified_at: 2023-08-02
+categories: Docker
+tags: [Docker, Tomat, MariaDB]
+image: /assets/post/docker_wallpaper.jpg
 ---
 
 ## Docker Tomcat 구성하기:

@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Vue] - Vue HTTP 통신 라이브러리 Axios란"
-categories:
-  - Vue
-tags:
-  - [Vue, HTTP, Axios, 라이브러리]
-
-toc: true
-toc_sticky: true
-
 date: 2022-07-24
-last_modified_at: 2022-07-24
+categories: Vue
+tags: [Vue, HTTP, Axios, 라이브러리]
+image: /assets/post/vue-wallpaper.jpg
 ---
 
 ## Axios란?:

@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Oracle] - Oracle DB 설치하기"
-categories:
-  - Oracle
-tags:
-  - [Oracle, MS-SQL]
-
-toc: true
-toc_sticky: true
-
 date: 2023-01-11
-last_modified_at: 2023-01-11
+categories: Oracle
+tags: [Oracle, MS-SQL]
+image: /assets/post/oracle-wallpaper.jpg
 ---
 
 ## Oralce이란?:

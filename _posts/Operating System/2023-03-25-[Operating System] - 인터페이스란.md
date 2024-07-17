@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Operating System] - 인터페이스란"
-categories:
-  - Operating System
-tags:
-  - [Interface]
-
-toc: true
-toc_sticky: true
-
 date: 2023-03-25
-last_modified_at: 2023-03-26
+categories: OperatingSystem
+tags: [Interface]
+image: /assets/post/os-wallpaper.jpg
 ---
 
 ## 인터페이스(Interface)란?:

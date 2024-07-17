@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Kubernetes] - 쿠버네티스 HAproxy 구성하기"
-categories:
-  - Kubernetes
-tags:
-  - [Kubernetes, HAproxy, Loadbalance]
-
-toc: true
-toc_sticky: true
-
 date: 2024-02-19
-last_modified_at: 2024-02-19
+categories: Kubernetes
+tags: [Kubernetes, HAproxy, Loadbalance]
+image: /assets/post/kubernetes-wallpaper.jpg
 ---
 
 ## HAproxy이란?:

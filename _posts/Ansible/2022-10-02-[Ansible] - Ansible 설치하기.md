@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Ansible] - Ansible 설치하기"
-categories:
-  - Ansible
-tags:
-  - [Ansible, 자동화]
-
-toc: true
-toc_sticky: true
-
 date: 2022-10-02
-last_modified_at: 2022-10-02
+categories: Ansible
+tags: [Ansible, 자동화]
+image: /assets/post/ansible-wallpaper.jpg
 ---
 
 ## Ansible 설치하기:

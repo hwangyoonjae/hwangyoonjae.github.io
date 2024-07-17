@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Kubernetes] - 쿠버네티스 설치 중 오류 해결하기"
-categories:
-  - Kubernetes
-tags:
-  - [Kubernetes]
-
-toc: true
-toc_sticky: true
-
 date: 2023-05-09
-last_modified_at: 2023-05-09
+categories: Kubernetes
+tags: [Kubernetes]
+image: /assets/post/kubernetes-wallpaper.jpg
 ---
 
 ## k8s 구성중 kubeadm init 안되는 증상:

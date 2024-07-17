@@ -1,16 +1,12 @@
 ---
+layout: post
 title: "[Gitlab] - Gitlab과 Slack 연동하기"
-categories:
-  - Gitlab
-tags:
-  - [Git, Gitlab, Slack]
-
-toc: true
-toc_sticky: true
-
 date: 2023-10-26
-last_modified_at: 2023-10-26
+categories: Gitlab
+tags: [Git, Gitlab, Slack]
+image: /assets/post/gitLab-wallpaper.jpg
 ---
+
 
 ## Gitlab과 Slack 연동하기:
 ### Slack 설정하기:

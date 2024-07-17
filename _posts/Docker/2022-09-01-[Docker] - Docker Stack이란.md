@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Docker] - Docker Stack이란"
-categories:
-  - Docker
-tags:
-  - [Docker, YAML]
-
-toc: true
-toc_sticky: true
-
 date: 2022-09-01
-last_modified_at: 2022-09-01
+categories: Docker
+tags: [Docker, YAML]
+image: /assets/post/docker_wallpaper.jpg
 ---
 
 ## 도커 스택(Docker Stack)이란?:

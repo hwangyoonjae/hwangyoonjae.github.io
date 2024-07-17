@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Network] - CDN이란"
-categories:
-  - Network
-tags:
-  - [CDN, GSLB]
-
-toc: true
-toc_sticky: true
-
 date: 2022-11-04
-last_modified_at: 2022-11-04
+categories: Network
+tags: [CDN, GSLB]
+image: /assets/post/network-wallpaper.jpg
 ---
 
 ## CDN(Content Delivery Network)이란?:

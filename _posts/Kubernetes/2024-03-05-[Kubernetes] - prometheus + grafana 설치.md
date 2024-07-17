@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Kubernetes] - prometheus + grafana 설치"
-categories:
-  - Kubernetes
-tags:
-  - [Kubernetes, Prometheus, Grafana]
-
-toc: true
-toc_sticky: true
-
 date: 2024-03-05
-last_modified_at: 2024-03-06
+categories: Kubernetes
+tags: [Kubernetes, Prometheus, Grafana]
+image: /assets/post/kubernetes-wallpaper.jpg
 ---
 
 ## prometheus + grafana 설치 준비하기:

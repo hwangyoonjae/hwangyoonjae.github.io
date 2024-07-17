@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Nginx] - Nginx config 정리"
-categories:
-  - Nginx
-tags:
-  - [Web, Nginx, config]
-
-toc: true
-toc_sticky: true
-
 date: 2022-09-10
-last_modified_at: 2022-09-10
+categories: Nginx
+tags: [Web, Nginx, config]
+image: /assets/post/nginx-wallpaper.jpg
 ---
 
 ## Configuration File 구조 분석하기:

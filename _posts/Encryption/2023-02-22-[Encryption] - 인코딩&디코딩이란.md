@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Encryption] - 인코딩&디코딩이란"
-categories:
-  - Encryption
-tags:
-  - [Base64, Encoding, Decoding]
-
-toc: true
-toc_sticky: true
-
 date: 2023-02-22
-last_modified_at: 2023-02-22
+categories: Encryption
+tags: [Base64, Encoding, Decoding]
+image: /assets/post/encryption.jpg
 ---
 
 ## 인코딩&디코딩을 알고싶었던 계기:

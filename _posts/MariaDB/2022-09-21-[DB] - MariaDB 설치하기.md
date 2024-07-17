@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[MariaDB] - MariaDB 설치하기"
-categories:
-  - MariaDB
-tags:
-  - [RDBMS, MariaDB, MySQL]
-
-toc: true
-toc_sticky: true
-
 date: 2022-09-21
-last_modified_at: 2022-09-21
+categories: MariaDB
+tags: [RDBMS, MariaDB, MySQL]
+image: /assets/post/mariadb-wallpaper.jpg
 ---
 
 ## MariaDB란?:

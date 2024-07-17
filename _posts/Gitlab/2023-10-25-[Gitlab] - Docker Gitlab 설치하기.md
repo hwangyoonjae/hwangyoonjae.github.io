@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Gitlab] - Docker Gitlab 설치하기"
-categories:
-  - Gitlab
-tags:
-  - [Git, Gitlab, Docker]
-
-toc: true
-toc_sticky: true
-
 date: 2023-10-25
-last_modified_at: 2023-10-25
+categories: Gitlab
+tags: [Git, Gitlab, Docker]
+image: /assets/post/gitLab-wallpaper.jpg
 ---
 
 ## Docker에 Gitlab 설치하기:

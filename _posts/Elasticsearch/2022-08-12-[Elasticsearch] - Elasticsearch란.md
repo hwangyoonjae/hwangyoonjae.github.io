@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Elasticsearch] - Elasticsearch란"
-categories:
-  - Elasticsearch
-tags:
-  - [JAVA, DATA]
-
-toc: true
-toc_sticky: true
-
 date: 2022-08-12
-last_modified_at: 2022-08-12
+categories: Elasticsearch
+tags: [JAVA, DATA]
+image: /assets/post/elasticsearch-wallpaper.jpg
 ---
 
 ## Elasticsearch란? :

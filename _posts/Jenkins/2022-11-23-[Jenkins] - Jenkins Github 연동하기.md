@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Jenkins] - Jenkins Github 연동하기"
-categories:
-  - Jenkins
-tags:
-  - [Jenkins, Github]
-
-toc: true
-toc_sticky: true
-
 date: 2022-11-23
-last_modified_at: 2022-11-23
+categories: Jenkins
+tags: [Jenkins, Github]
+image: /assets/post/jenkins-wallpaper.jpg
 ---
 
 ## Jenkins Github 연동하기:

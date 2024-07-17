@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Postgresql] - Postgresql 이중화 구성하기"
-categories:
-  - Postgresql
-tags:
-  - [DB 이중화, Master, Slave]
-
-toc: true
-toc_sticky: true
-
 date: 2023-07-04
-last_modified_at: 2023-07-04
+categories: Postgresql
+tags: [DB 이중화, Master, Slave]
+image: /assets/post/postgresql-wallpaper.jpg
 ---
 
 ## Postgresql Replication 실습하기:

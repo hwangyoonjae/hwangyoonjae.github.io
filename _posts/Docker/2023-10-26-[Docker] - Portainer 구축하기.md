@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Docker] - Portainer 구축하기"
-categories:
-  - Docker
-tags:
-  - [Docker, Portainer]
-
-toc: true
-toc_sticky: true
-
 date: 2023-10-26
-last_modified_at: 2023-10-26
+categories: Docker
+tags: [Docker, Portainer]
+image: /assets/post/docker_wallpaper.jpg
 ---
 
 ## Portainer란?:

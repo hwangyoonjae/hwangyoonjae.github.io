@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Jenkins] - Jenkins Pipeline 구축하기"
-categories:
-  - Jenkins
-tags:
-  - [Jenkins, CI, CD, Github]
-
-toc: true
-toc_sticky: true
-
 date: 2023-10-19
-last_modified_at: 2023-10-19
+categories: Jenkins
+tags: [Jenkins, CI, CD, Github]
+image: /assets/post/jenkins-wallpaper.jpg
 ---
 
 ## Jenkins Pipeline 구축하기:

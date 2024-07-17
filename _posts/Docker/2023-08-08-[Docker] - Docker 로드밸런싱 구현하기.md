@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Docker] - Docker 로드밸런싱 구현하기"
-categories:
-  - Docker
-tags:
-  - [Docker, Load Balancing]
-
-toc: true
-toc_sticky: true
-
 date: 2023-08-08
-last_modified_at: 2023-11-09
+categories: Docker
+tags: [Docker, Load Balancing]
+image: /assets/post/docker_wallpaper.jpg
 ---
 
 ## Docker 로드밸런싱 구현하기:

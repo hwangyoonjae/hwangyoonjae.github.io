@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Operating System] - 커널이란"
-categories:
-  - Operating System
-tags:
-  - [Kernel]
-
-toc: true
-toc_sticky: true
-
 date: 2023-03-12
-last_modified_at: 2023-03-12
+categories: OperatingSystem
+tags: [Kernel]
+image: /assets/post/os-wallpaper.jpg
 ---
 
 ## 컴퓨터의 구분:

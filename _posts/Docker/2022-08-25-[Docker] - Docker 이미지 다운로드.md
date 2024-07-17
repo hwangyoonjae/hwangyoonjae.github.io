@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Docker] - Docker 이미지 다운로드"
-categories:
-  - Docker
-tags:
-  - [Docker, Image, Container]
-
-toc: true
-toc_sticky: true
-
 date: 2022-08-25
-last_modified_at: 2022-08-25
+categories: Docker
+tags: [Docker, Image, Container]
+image: /assets/post/docker_wallpaper.jpg
 ---
 
 ## 도커 이미지 (Docker Image)란 무엇인가?:

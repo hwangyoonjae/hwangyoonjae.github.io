@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Nginx] - Nginx 설치하기"
-categories:
-  - Nginx
-tags:
-  - [Web, Nginx]
-
-toc: true
-toc_sticky: true
-
 date: 2022-08-10
-last_modified_at: 2022-08-10
+categories: Nginx
+tags: [Web, Nginx]
+image: /assets/post/nginx-wallpaper.jpg
 ---
 
 ## Nginx란? :

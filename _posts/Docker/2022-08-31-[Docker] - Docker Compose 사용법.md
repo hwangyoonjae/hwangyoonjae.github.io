@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Docker] - Docker 컴포즈 사용법"
-categories:
-  - Docker
-tags:
-  - [Docker, YAML]
-
-toc: true
-toc_sticky: true
-
 date: 2022-08-31
-last_modified_at: 2023-07-19
+categories: Docker
+tags: [Docker, YAML]
+image: /assets/post/docker_wallpaper.jpg
 ---
 
 ## 도커 컴포즈(Docker Compose)란?:

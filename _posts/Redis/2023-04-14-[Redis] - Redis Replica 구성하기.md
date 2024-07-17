@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Redis] - Redis Replica 구성하기"
-categories:
-  - Redis
-tags:
-  - [Redis, Replica, 복제]
-
-toc: true
-toc_sticky: true
-
 date: 2023-04-14
-last_modified_at: 2023-04-14
+categories: Redis
+tags: [Redis, Replica, 복제]
+image: /assets/post/redis-wallpaper.jpg
 ---
 
 ## Redis Replica 구성하고 싶었던 계기:

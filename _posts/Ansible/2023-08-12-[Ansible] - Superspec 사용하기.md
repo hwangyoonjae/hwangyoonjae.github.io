@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Ansible] - Superspec 사용하기"
-categories:
-  - Ansible
-tags:
-  - [Ansible, Superspec]
-
-toc: true
-toc_sticky: true
-
 date: 2023-08-12
-last_modified_at: 2023-08-12
+categories: Ansible
+tags: [Ansible, Superspec]
+image: /assets/post/ansible-wallpaper.jpg
 ---
 
 ## Superspec을 알고 싶었던 계기:

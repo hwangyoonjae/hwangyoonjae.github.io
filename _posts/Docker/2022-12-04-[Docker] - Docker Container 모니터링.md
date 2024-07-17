@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Docker] - Docker Container 모니터링"
-categories:
-  - Docker
-tags:
-  - [Docker, Container, 모니터링]
-
-toc: true
-toc_sticky: true
-
 date: 2022-12-04
-last_modified_at: 2022-12-04
+categories: Docker
+tags: [Docker, Container, 모니터링]
+image: /assets/post/docker_wallpaper.jpg
 ---
 
 ## Docker Container 모니터링하기:

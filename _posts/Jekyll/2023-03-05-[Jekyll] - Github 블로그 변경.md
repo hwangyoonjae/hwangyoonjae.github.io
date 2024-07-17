@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Jekyll] - Github 블로그 변경"
-categories:
-  - Jekyll
-tags:
-  - [Jekyll, Minimal Mistakes]
-
-toc: true
-toc_sticky: true
-
 date: 2023-03-05
-last_modified_at: 2023-03-05
+categories: Jekyll
+tags: [Jekyll, Minimal Mistakes]
+image: /assets/post/jekyll-wallpaper.jpg
 ---
 
 ## Github 블로그 변경 계기:

@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Nginx] - Nginx 로드밸런싱 구현하기"
-categories:
-  - Nginx
-tags:
-  - [Web, Nginx, Loadbalancing]
-
-toc: true
-toc_sticky: true
-
 date: 2022-09-05
-last_modified_at: 2022-09-05
+categories: Nginx
+tags: [Web, Nginx, Loadbalancing]
+image: /assets/post/nginx-wallpaper.jpg
 ---
 
 ## 로드밸런싱이란?:

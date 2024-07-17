@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Ansible] - Ansible-playbook 이용하여 Docker Swarm 구성하기"
-categories:
-  - Ansible
-tags:
-  - [Ansible, Docker, Swarm]
-
-toc: true
-toc_sticky: true
-
 date: 2023-08-15
-last_modified_at: 2023-08-15
+categories: Ansible
+tags: [Ansible, Docker]
+image: /assets/post/ansible-wallpaper.jpg
 ---
 
 ## Manager 노드 구성하기:

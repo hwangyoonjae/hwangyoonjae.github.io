@@ -1,15 +1,10 @@
 ---
+layout: post
 title: "[Gitlab] - Gitlab 연동 오류 해결하기"
-categories:
-  - Gitlab
-tags:
-  - [Git, Gitlab]
-
-toc: true
-toc_sticky: true
-
 date: 2023-10-23
-last_modified_at: 2023-10-23
+categories: Gitlab
+tags: [Git, Gitlab]
+image: /assets/post/gitLab-wallpaper.jpg
 ---
 
 ## GitLab 연동 오류 해결하기:
