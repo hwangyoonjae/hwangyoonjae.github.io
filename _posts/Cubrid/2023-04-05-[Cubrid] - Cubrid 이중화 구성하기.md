@@ -4,7 +4,7 @@ title: "[Cubrid] - Cubrid 이중화 구성하기"
 date: 2023-04-05
 categories: Cubrid
 tags: [DB, Cubrid, Master, Slave]
-image: /assets/post/cubrid-wallpaper.jpg
+image: /assets/img/post-title/cubrid-wallpaper.jpg
 ---
 
 ## CUBRID Replication 실습하기:
@@ -26,10 +26,10 @@ $ sh CUBRID-10.2-latest-Linux.x86_64.sh
 ```
 
 - 실행 후 아래와 같이 문구 나오면 q를 누르고
-[![텍스트](/assets/images/DB/CUBRID%20%EC%B4%88%EA%B8%B0%20%EC%84%A4%EC%B9%98%20%EC%8B%9C%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/CUBRID%20%EC%B4%88%EA%B8%B0%20%EC%84%A4%EC%B9%98%20%EC%8B%9C%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/DB/CUBRID%20%EC%B4%88%EA%B8%B0%20%EC%84%A4%EC%B9%98%20%EC%8B%9C%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/DB/CUBRID%20%EC%B4%88%EA%B8%B0%20%EC%84%A4%EC%B9%98%20%EC%8B%9C%20%ED%99%94%EB%A9%B4.PNG)
 
 - 아래 그림과 같이 진행한다.
-[![텍스트](/assets/images/DB/CUBRID%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/CUBRID%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/DB/CUBRID%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/DB/CUBRID%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
@@ -71,7 +71,7 @@ $ cubrid service start
 ```bash
 $ vi /etc/hosts
 ```
-[![텍스트](/assets/images/DB/CUBRID%20%EC%9D%B4%EC%A4%91%ED%99%94%20host%20%EC%84%A4%EC%A0%95%20.PNG)](/assets/images/DB/CUBRID%20%EC%9D%B4%EC%A4%91%ED%99%94%20host%20%EC%84%A4%EC%A0%95%20.PNG)
+[![텍스트](/assets/img/post/DB/CUBRID%20%EC%9D%B4%EC%A4%91%ED%99%94%20host%20%EC%84%A4%EC%A0%95%20.PNG)](/assets/img/post/DB/CUBRID%20%EC%9D%B4%EC%A4%91%ED%99%94%20host%20%EC%84%A4%EC%A0%95%20.PNG)
 
 * * *
 
@@ -90,7 +90,7 @@ $ cd CUBRID설치경로/databases
 $ mkdir masterdb
 $ cubrid createdb -F "masterdb" --log-volume-size=1024M masterdb ko_KR.utf8
 ```
-[![텍스트](/assets/images/DB/CUBRID%20DB%20%EC%83%9D%EC%84%B1.PNG)](/assets/images/DB/CUBRID%20DB%20%EC%83%9D%EC%84%B1.PNG)
+[![텍스트](/assets/img/post/DB/CUBRID%20DB%20%EC%83%9D%EC%84%B1.PNG)](/assets/img/post/DB/CUBRID%20DB%20%EC%83%9D%EC%84%B1.PNG)
 
 * * *
 
@@ -101,7 +101,7 @@ $ cd CUBRID설치경로/conf
 $ cp cubrid.conf cubrid.conf.bak
 $ vi cubrid.conf
 ```
-[![텍스트](/assets/images/DB/CUBRID%20cubrid.conf%20%EC%88%98%EC%A0%95.PNG)](/assets/images/DB/CUBRID%20cubrid.conf%20%EC%88%98%EC%A0%95.PNG)
+[![텍스트](/assets/img/post/DB/CUBRID%20cubrid.conf%20%EC%88%98%EC%A0%95.PNG)](/assets/img/post/DB/CUBRID%20cubrid.conf%20%EC%88%98%EC%A0%95.PNG)
 
 * * *
 
@@ -112,7 +112,7 @@ $ cd CUBRID설치경로/conf
 $ cp cp cubrid_ha.conf cubrid_ha.conf.bak
 $ vi cubrid_ha.conf
 ```
-[![텍스트](/assets/images/DB/CUBRID%20cubrid_ha.conf%20%EC%88%98%EC%A0%95.PNG)](/assets/images/DB/CUBRID%20cubrid_ha.conf%20%EC%88%98%EC%A0%95.PNG)
+[![텍스트](/assets/img/post/DB/CUBRID%20cubrid_ha.conf%20%EC%88%98%EC%A0%95.PNG)](/assets/img/post/DB/CUBRID%20cubrid_ha.conf%20%EC%88%98%EC%A0%95.PNG)
 
 * * *
 
@@ -121,7 +121,7 @@ $ vi cubrid_ha.conf
 $ cd CUBRID설치경로/databases
 $ vi databases.txt
 ```
-[![텍스트](/assets/images/DB/CUBRID%20databases.txt%20%EC%88%98%EC%A0%95.PNG)](/assets/images/DB/CUBRID%20databases.txt%20%EC%88%98%EC%A0%95.PNG)
+[![텍스트](/assets/img/post/DB/CUBRID%20databases.txt%20%EC%88%98%EC%A0%95.PNG)](/assets/img/post/DB/CUBRID%20databases.txt%20%EC%88%98%EC%A0%95.PNG)
 
 * * *
 
@@ -145,7 +145,7 @@ $ cubrid heartbeat start
 ```bash
 $ cubrid heartbeat status
 ```
-[![텍스트](/assets/images/DB/CUBRID%20%EC%9D%B4%EC%A4%91%ED%99%94%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/CUBRID%20%EC%9D%B4%EC%A4%91%ED%99%94%20%ED%99%95%EC%9D%B8.PNG)
+[![텍스트](/assets/img/post/DB/CUBRID%20%EC%9D%B4%EC%A4%91%ED%99%94%20%ED%99%95%EC%9D%B8.PNG)](/assets/img/post/DB/CUBRID%20%EC%9D%B4%EC%A4%91%ED%99%94%20%ED%99%95%EC%9D%B8.PNG)
 <span style="color:#FA5858; font-size:12px">※ 구축화면과 위 그림의 나와있는 DB명, DB경로는 다를 수 있습니다.</span>
 
 * * *

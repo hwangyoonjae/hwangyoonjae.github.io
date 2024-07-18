@@ -4,7 +4,7 @@ title: "[Gitlab] - Docker Gitlab 설치하기"
 date: 2023-10-25
 categories: Gitlab
 tags: [Git, Gitlab, Docker]
-image: /assets/post/gitLab-wallpaper.jpg
+image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---
 
 ## Docker에 Gitlab 설치하기:
@@ -55,19 +55,19 @@ $ systemctl enable docker
 ```bash
 $ docker search gitlab
 ```
-[![gitlab docker image 목록](/assets/images/Gitlab/gitlab%20docker%20image%20목록.png)](/assets/images/Gitlab/gitlab%20docker%20image%20목록.png)
+[![gitlab docker image 목록](/assets/img/post/Gitlab/gitlab%20docker%20image%20목록.png)](/assets/img/post/Gitlab/gitlab%20docker%20image%20목록.png)
 
 - Gitlab 관련 이미지를 확인하여 다운받는다.
 ```bash
 $ docker pull gitlab/gitlab-ee
 ```
-[![gitlab docker image 다운](/assets/images/Gitlab/gitlab%20docker%20image%20다운.png)](/assets/images/Gitlab/gitlab%20docker%20image%20다운.png)
+[![gitlab docker image 다운](/assets/img/post/Gitlab/gitlab%20docker%20image%20다운.png)](/assets/img/post/Gitlab/gitlab%20docker%20image%20다운.png)
 
 - Gitlab 이미지 설치 후 확인한다.
 ```bash
 $ docker images
 ```
-[![gitlab docker image 설치 확인](/assets/images/Gitlab/gitlab%20docker%20image%20설치%20확인.png)](/assets/images/Gitlab/gitlab%20docker%20image%20설치%20확인.png)
+[![gitlab docker image 설치 확인](/assets/img/post/Gitlab/gitlab%20docker%20image%20설치%20확인.png)](/assets/img/post/Gitlab/gitlab%20docker%20image%20설치%20확인.png)
 
 * * *
 
@@ -84,7 +84,7 @@ $ docker run --detach \
 >   --env GITLAB_ROOT_PASSWORD=new_root_password \
 >   gitlab/gitlab-ee:latest
 ```
-[![gitlab docker 서비스 실행](/assets/images/Gitlab/gitlab%20docker%20서비스%20실행.png)](/assets/images/Gitlab/gitlab%20docker%20서비스%20실행.png)
+[![gitlab docker 서비스 실행](/assets/img/post/Gitlab/gitlab%20docker%20서비스%20실행.png)](/assets/img/post/Gitlab/gitlab%20docker%20서비스%20실행.png)
 
 * * *
 

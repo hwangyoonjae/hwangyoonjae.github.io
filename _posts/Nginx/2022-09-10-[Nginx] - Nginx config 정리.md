@@ -4,13 +4,13 @@ title: "[Nginx] - Nginx config 정리"
 date: 2022-09-10
 categories: Nginx
 tags: [Web, Nginx, config]
-image: /assets/post/nginx-wallpaper.jpg
+image: /assets/img/post-title/nginx-wallpaper.jpg
 ---
 
 ## Configuration File 구조 분석하기:
 - Nginx는 여러 모듈들로 구성되며, 이러한 모듈들은 configuration파일에 있는 directives에 의해 제어된다.
 - Nginx의 기본 설정 파일은 **nginx.conf**이고, 초기 설치 시 설정 값은 아래와 같이 구성된다.<br>
-[![텍스트](/assets/images/Linux/nginx.conf%20%EC%B4%88%EA%B8%B0%EC%84%A4%EC%B9%98.PNG)](/assets/images/Linux/nginx.conf%20%EC%B4%88%EA%B8%B0%EC%84%A4%EC%B9%98.PNG)
+[![텍스트](/assets/img/post/Linux/nginx.conf%20%EC%B4%88%EA%B8%B0%EC%84%A4%EC%B9%98.PNG)](/assets/img/post/Linux/nginx.conf%20%EC%B4%88%EA%B8%B0%EC%84%A4%EC%B9%98.PNG)
 
 ### Core 모듈 설정:
 - 설정 파일 최상단에 위치하며 nginx의 프로세스 관리, 보안과 같은 기본적인 동작 방식을 정의한다.

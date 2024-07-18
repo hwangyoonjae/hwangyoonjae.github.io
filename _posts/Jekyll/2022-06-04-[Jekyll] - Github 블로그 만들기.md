@@ -4,7 +4,7 @@ title: "[Jekyll] - Github 블로그 만들기"
 date: 2022-06-04
 categories: Jekyll
 tags: [markdown, components, extra]
-image: /assets/post/jekyll-wallpaper.jpg
+image: /assets/img/post-title/jekyll-wallpaper.jpg
 ---
 
 ## 계기:
@@ -19,15 +19,15 @@ image: /assets/post/jekyll-wallpaper.jpg
 
 ## 블로그 생성:
 ### 1. 깃허브 블로그 사용할 레퍼지토리를 생성
-[![텍스트](/assets/images/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%83%9D%EC%84%B1.PNG)](/assets/images/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%83%9D%EC%84%B1.PNG)
-[![텍스트](/assets/images/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%9D%B4%EB%A6%84%EC%A0%95%ED%95%98%EA%B8%B0.PNG)](/assets/images/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%9D%B4%EB%A6%84%EC%A0%95%ED%95%98%EA%B8%B0.PNG)
+[![텍스트](/assets/img/post/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%83%9D%EC%84%B1.PNG)](/assets/img/post/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%83%9D%EC%84%B1.PNG)
+[![텍스트](/assets/img/post/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%9D%B4%EB%A6%84%EC%A0%95%ED%95%98%EA%B8%B0.PNG)](/assets/img/post/Github/%EB%A0%88%ED%8D%BC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%9D%B4%EB%A6%84%EC%A0%95%ED%95%98%EA%B8%B0.PNG)
 <br>
 \* 반드시 레퍼지토리명은 위 그림과 같이 **username.github.io** 이런식으로 만들어주세요.
 
 * * *
 
 ### 2. 생성한 레퍼지토리 클론
-[![텍스트](/assets/images/Github/%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0.PNG)](/assets/images/Github/%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0.PNG)
+[![텍스트](/assets/img/post/Github/%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0.PNG)](/assets/img/post/Github/%ED%81%B4%EB%A1%A0%ED%95%98%EA%B8%B0.PNG)
 <br>
 주소를 복사하고 터미널을 열어서 clone하고 싶은 경로로 이동한 다음 아래 명령어로 clone을 시작한다.
 ```javascript
@@ -37,7 +37,7 @@ git clone "레퍼지토리 복사한 주소"
 * * *
 
 ### 3. 폴더 열기
-[![텍스트](/assets/images/Github/%ED%81%B4%EB%A1%A0%ED%99%95%EC%9D%B8.PNG)](/assets/images/Github/%ED%81%B4%EB%A1%A0%ED%99%95%EC%9D%B8.PNG)
+[![텍스트](/assets/img/post/Github/%ED%81%B4%EB%A1%A0%ED%99%95%EC%9D%B8.PNG)](/assets/img/post/Github/%ED%81%B4%EB%A1%A0%ED%99%95%EC%9D%B8.PNG)
 <br>
 복사 완료 후, 정상적으로 clone 되었는지 확인한다.
 
@@ -54,14 +54,14 @@ git clone "레퍼지토리 복사한 주소"
 ### 2. 다운로드
 - 본인이 선택한 지킬 테마를 다운로드 받는다.
 <br>
-[![텍스트](/assets/images/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%20%EB%8B%A4%EC%9A%B4.PNG)](/assets/images/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%20%EB%8B%A4%EC%9A%B4.PNG)
+[![텍스트](/assets/img/post/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%20%EB%8B%A4%EC%9A%B4.PNG)](/assets/img/post/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%20%EB%8B%A4%EC%9A%B4.PNG)
 
 * * *
 
 ### 3. 내 github.io 폴더에 붙혀넣기
 - 다운받은 지킬파일들을 내 github.io 폴더에 붙혀넣기
 <br>
-[![텍스트](/assets/images/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%EC%A0%81%EC%9A%A9.png)](/assets/images/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%EC%A0%81%EC%9A%A9.png)
+[![텍스트](/assets/img/post/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%EC%A0%81%EC%9A%A9.png)](/assets/img/post/Github/%EC%A7%80%ED%82%AC%ED%85%8C%EB%A7%88%EC%A0%81%EC%9A%A9.png)
 
 * * *
 
@@ -70,7 +70,7 @@ git clone "레퍼지토리 복사한 주소"
 
 - [완성된 블로그 접속하기](https://hwangyoonjae.github.io/ "완성된 블로그 접속하기")
 
-[![텍스트](/assets/images/Github/%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%99%84%EC%84%B1.PNG)](/assets/images/Github/%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%99%84%EC%84%B1.PNG)
+[![텍스트](/assets/img/post/Github/%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%99%84%EC%84%B1.PNG)](/assets/img/post/Github/%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%99%84%EC%84%B1.PNG)
 
 <span style="color:#FA5858; font-size:12px">※ 현재 블로그는 변경되어 위 그림하고는 다릅니다.</span>
 

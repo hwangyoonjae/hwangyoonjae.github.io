@@ -4,7 +4,7 @@ title: "[Ansible] - Ansible란"
 date: 2022-08-24
 categories: Ansible
 tags: [Ansible, 자동화]
-image: /assets/post/ansible-wallpaper.jpg
+image: /assets/img/post-title/ansible-wallpaper.jpg
 ---
 
 ## Ansible(앤서블)란?:

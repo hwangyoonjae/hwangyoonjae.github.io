@@ -4,7 +4,7 @@ title: "[Kubernetes] - Helm이란"
 date: 2024-02-14
 categories: Kubernetes
 tags: [Kubernetes, Helm]
-image: /assets/post/kubernetes-wallpaper.jpg
+image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
 ## Helm이란?:
@@ -46,7 +46,7 @@ $ mv linux-amd64/helm /usr/local/bin/helm
 ```bash
 $ helm version
 ```
-[![Helm 버전 확인](/assets/images/kubernetes/Helm%20버전%20확인.png)](/assets/images/kubernetes/Helm%20버전%20확인.png)
+[![Helm 버전 확인](/assets/img/post/kubernetes/Helm%20버전%20확인.png)](/assets/img/post/kubernetes/Helm%20버전%20확인.png)
 
 * * *
 
@@ -56,7 +56,7 @@ $ helm version
 $ helm repo add stable https://charts.helm.sh/stable
 $ helm search repo stable
 ```
-[![Helm Repository 목록](/assets/images/kubernetes/Helm%20Repository%20목록.png)](/assets/images/kubernetes/Helm%20Repository%20목록.png)
+[![Helm Repository 목록](/assets/img/post/kubernetes/Helm%20Repository%20목록.png)](/assets/img/post/kubernetes/Helm%20Repository%20목록.png)
 
 * * *
 
@@ -67,7 +67,7 @@ $ helm search repo prometheus
 # helm install [RELEASE_NAME] [HELM_CHART]
 $ helm install prometheus-test stable/prometheus
 ```
-[![Helm repo stable 에러 발생](/assets/images/kubernetes/Helm%20repo%20stable%20에러%20발생.png)](/assets/images/kubernetes/Helm%20repo%20stable%20에러%20발생.png)
+[![Helm repo stable 에러 발생](/assets/img/post/kubernetes/Helm%20repo%20stable%20에러%20발생.png)](/assets/img/post/kubernetes/Helm%20repo%20stable%20에러%20발생.png)
 
 - helm chart 저장소 stable은 helm v3 부터 해당 저장소의 대한 공시적인 지원을 종료하였다고 하여, 비공식 저장소 중 대표적인 bitnami를 사용한다.
 ```bash
@@ -75,6 +75,6 @@ $ helm repo add bitnami https://charts.bitnami.com/bitnami
 # helm install [RELEASE_NAME] [HELM_CHART]
 $ helm install prometheus-test bitnami/prometheus
 ```
-[![Helm chart 저장소 변경 후 prometheus 설치](/assets/images/kubernetes/Helm%20chart%20저장소%20변경%20후%20prometheus%20설치.png)](/assets/images/kubernetes/Helm%20chart%20저장소%20변경%20후%20prometheus%20설치.png)
+[![Helm chart 저장소 변경 후 prometheus 설치](/assets/img/post/kubernetes/Helm%20chart%20저장소%20변경%20후%20prometheus%20설치.png)](/assets/img/post/kubernetes/Helm%20chart%20저장소%20변경%20후%20prometheus%20설치.png)
 
 * * *

@@ -4,7 +4,7 @@ title: "[Postgresql] - Postgresql 설치하기"
 date: 2022-08-09
 categories: Postgresql
 tags: [DBMS, ORDBMS, PostgreSQL]
-image: /assets/post/postgresql-wallpaper.jpg
+image: /assets/img/post-title/postgresql-wallpaper.jpg
 ---
 
 ## PostgreSQL란?:
@@ -50,7 +50,7 @@ $ rpm -Uvh pgdg-redhat-repo-latest.noarch.rpm --nodeps
 # PostgreSQL 초기화
 $ postgresql-setup initdb
 ```
-[![postgres DB 초기화](/assets/images/DB/postgres%20DB%20%EC%B4%88%EA%B8%B0%ED%99%94.PNG)](/assets/images/DB/postgres%20DB%20%EC%B4%88%EA%B8%B0%ED%99%94.PNG)
+[![postgres DB 초기화](/assets/img/post/DB/postgres%20DB%20%EC%B4%88%EA%B8%B0%ED%99%94.PNG)](/assets/img/post/DB/postgres%20DB%20%EC%B4%88%EA%B8%B0%ED%99%94.PNG)
 
 * * *
 
@@ -65,7 +65,7 @@ $ systemctl start postgresql
 # 서비스 동작 확인
 $ systemctl status postgresql
 ```
-[![텍스트](/assets/images/DB/postgres%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/postgres%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)
+[![텍스트](/assets/img/post/DB/postgres%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)](/assets/img/post/DB/postgres%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)
 
 * * *
 
@@ -89,7 +89,7 @@ $ \l
 ```sql
 ALTER USER postgres PASSWORD '변경할 비밀번호';
 ```
-[![텍스트](/assets/images/DB/postgres%20%EC%B4%88%EA%B8%B0%20%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C%20%EB%B3%80%EA%B2%BD.PNG)](/assets/images/DB/postgres%20%EC%B4%88%EA%B8%B0%20%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C%20%EB%B3%80%EA%B2%BD.PNG)
+[![텍스트](/assets/img/post/DB/postgres%20%EC%B4%88%EA%B8%B0%20%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C%20%EB%B3%80%EA%B2%BD.PNG)](/assets/img/post/DB/postgres%20%EC%B4%88%EA%B8%B0%20%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C%20%EB%B3%80%EA%B2%BD.PNG)
 
 * * *
 
@@ -104,6 +104,6 @@ postgres=# create database <name> encoding 'utf-8';
 ```bash
 $ vi /var/lib/pgsql/14/data/postgresql.conf
 ```
-[![텍스트](/assets/images/DB/%EC%9B%90%EA%B2%A9%20%EC%A0%91%EC%86%8D%EA%B3%BC%20%ED%8F%AC%ED%8A%B8%EB%B2%88%ED%98%B8%20%EC%84%A4%EC%A0%95.PNG)](/assets/images/DB/%EC%9B%90%EA%B2%A9%20%EC%A0%91%EC%86%8D%EA%B3%BC%20%ED%8F%AC%ED%8A%B8%EB%B2%88%ED%98%B8%20%EC%84%A4%EC%A0%95.PNG)
+[![텍스트](/assets/img/post/DB/%EC%9B%90%EA%B2%A9%20%EC%A0%91%EC%86%8D%EA%B3%BC%20%ED%8F%AC%ED%8A%B8%EB%B2%88%ED%98%B8%20%EC%84%A4%EC%A0%95.PNG)](/assets/img/post/DB/%EC%9B%90%EA%B2%A9%20%EC%A0%91%EC%86%8D%EA%B3%BC%20%ED%8F%AC%ED%8A%B8%EB%B2%88%ED%98%B8%20%EC%84%A4%EC%A0%95.PNG)
 
 * * *

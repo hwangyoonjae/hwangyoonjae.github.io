@@ -4,7 +4,7 @@ title: "[Elasticsearch] - Elasticsearch란"
 date: 2022-08-12
 categories: Elasticsearch
 tags: [JAVA, DATA]
-image: /assets/post/elasticsearch-wallpaper.jpg
+image: /assets/img/post-title/elasticsearch-wallpaper.jpg
 ---
 
 ## Elasticsearch란? :
@@ -23,7 +23,7 @@ image: /assets/post/elasticsearch-wallpaper.jpg
 * * *
 
 ### Elasticsearch 흐름도 :
-![텍스트](/assets/images/JAVA/ELK%20%EA%B5%AC%EC%A1%B0.PNG)
+![텍스트](/assets/img/post/JAVA/ELK%20%EA%B5%AC%EC%A1%B0.PNG)
 
 * * *
 

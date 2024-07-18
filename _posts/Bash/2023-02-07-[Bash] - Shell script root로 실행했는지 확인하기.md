@@ -4,7 +4,7 @@ title: "[Bash] - Shell script root로 실행했는지 확인하기"
 date: 2023-02-07
 categories: Bash
 tags: [Shell script]
-image: /assets/post/bash-wallpaper.jpg
+image: /assets/img/post-title/bash-wallpaper.jpg
 ---
 
 

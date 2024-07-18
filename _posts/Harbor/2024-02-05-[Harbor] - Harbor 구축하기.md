@@ -4,7 +4,7 @@ title: "[Harbor] - Harbor 구축하기"
 date: 2024-02-05
 categories: Harbor
 tags: [Dockerhub, Image]
-image: /assets/post/harbor-wallpaper.jpg
+image: /assets/img/post-title/harbor-wallpaper.jpg
 ---
 
 ## Harbor란?:
@@ -131,7 +131,7 @@ $ update-ca-trust
 
 ## Harbor 접속하기:
 - 위 설정 완료 후 ***https://서버주소:포트***로 입력하여 접속한다.
-[![Harbor 초기화면](/assets/images/docker/Harbor%20초기화면.png)](/assets/images/docker/Harbor%20초기화면.png)
+[![Harbor 초기화면](/assets/img/post/docker/Harbor%20초기화면.png)](/assets/img/post/docker/Harbor%20초기화면.png)
 
 ```html
 ⚠️ ca.crt 인증서를 로컬(데스크탑)의 신뢰할 수 있는 루트 인증기관에 등록 시 신뢰할 수 있는 인증서로 보여집니다.

@@ -4,7 +4,7 @@ title: "[DB] - GROUP BY절과 Having절"
 date: 2023-03-08
 categories: DB
 tags: [GROUP BY, Having]
-image: /assets/post/db-wallpaper.jpg
+image: /assets/img/post-title/db-wallpaper.jpg
 ---
 
 

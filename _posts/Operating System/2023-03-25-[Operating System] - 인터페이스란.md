@@ -4,7 +4,7 @@ title: "[Operating System] - 인터페이스란"
 date: 2023-03-25
 categories: OperatingSystem
 tags: [Interface]
-image: /assets/post/os-wallpaper.jpg
+image: /assets/img/post-title/os-wallpaper.jpg
 ---
 
 ## 인터페이스(Interface)란?:

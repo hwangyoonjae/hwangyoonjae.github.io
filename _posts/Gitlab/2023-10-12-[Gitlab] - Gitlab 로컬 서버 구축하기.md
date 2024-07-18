@@ -4,7 +4,7 @@ title: "[Gitlab] - Gitlab 로컬 서버 구축하기"
 date: 2023-10-12
 categories: Gitlab
 tags: [Git, Gitlab]
-image: /assets/post/gitLab-wallpaper.jpg
+image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---
 
 ## GitLab을 로컬 서버의 구축하고 싶었던 계기:
@@ -56,7 +56,7 @@ $ apt install gitlab-ee
 
 ## GitLab 로그인하기:
 - 브라우저의 https://IP주소로 입력하면 로그인 페이지가 나온다.
-[![GitLab 로그인페이지](/assets/images/Gitlab/gitlab%20로그인페이지.png)](/assets/images/Gitlab/gitlab%20로그인페이지.png)
+[![GitLab 로그인페이지](/assets/img/post/Gitlab/gitlab%20로그인페이지.png)](/assets/img/post/Gitlab/gitlab%20로그인페이지.png)
 
 * * *
 
@@ -64,7 +64,7 @@ $ apt install gitlab-ee
 ```bash
 $ cat /etc/gitlab/initial_root_password
 ```
-[![root 비밀번호 확인](/assets/images/Gitlab/gitlab%20root%20패스워드%20확인.png)](/assets/images/Gitlab/gitlab%20root%20패스워드%20확인.png)
+[![root 비밀번호 확인](/assets/img/post/Gitlab/gitlab%20root%20패스워드%20확인.png)](/assets/img/post/Gitlab/gitlab%20root%20패스워드%20확인.png)
 
 * * *
 
@@ -83,13 +83,13 @@ $ irb(main):004:0> user.save
   => true
 $ irb(main):005:0> exit
 ```
-[![root 비밀번호 변경](/assets/images/Gitlab/gitlab%20root%20패스워드%20변경.png)](/assets/images/Gitlab/gitlab%20root%20패스워드%20변경.png)
+[![root 비밀번호 변경](/assets/img/post/Gitlab/gitlab%20root%20패스워드%20변경.png)](/assets/img/post/Gitlab/gitlab%20root%20패스워드%20변경.png)
 
 * * *
 
 ## GitLab 메인페이지 확인하기:
 - 로그인 후 GitLab 메인페이지 접속이 가능하다.
-[![GitLab 메인페이지](/assets/images/Gitlab/gitlab%20메인페이지.png)](/assets/images/Gitlab/gitlab%20메인페이지.png)
+[![GitLab 메인페이지](/assets/img/post/Gitlab/gitlab%20메인페이지.png)](/assets/img/post/Gitlab/gitlab%20메인페이지.png)
 
 * * *
 

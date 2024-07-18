@@ -4,7 +4,7 @@ title: "[Nginx] - Nginx 로드밸런싱 구현하기"
 date: 2022-09-05
 categories: Nginx
 tags: [Web, Nginx, Loadbalancing]
-image: /assets/post/nginx-wallpaper.jpg
+image: /assets/img/post-title/nginx-wallpaper.jpg
 ---
 
 ## 로드밸런싱이란?:
@@ -39,7 +39,7 @@ image: /assets/post/nginx-wallpaper.jpg
 ```bash
 $ vi /etc/nginx/nginx.conf
 ```
-[![텍스트](/assets/images/Linux/nginx.conf%20%EC%84%A4%EC%A0%95%EC%B6%94%EA%B0%80%20.PNG)](/assets/images/Linux/nginx.conf%20%EC%84%A4%EC%A0%95%EC%B6%94%EA%B0%80%20.PNG)
+[![텍스트](/assets/img/post/Linux/nginx.conf%20%EC%84%A4%EC%A0%95%EC%B6%94%EA%B0%80%20.PNG)](/assets/img/post/Linux/nginx.conf%20%EC%84%A4%EC%A0%95%EC%B6%94%EA%B0%80%20.PNG)
 
 - 아래와 같이 default.conf에 내용을 입력한다.
 ```bash
@@ -48,7 +48,7 @@ $ mkdir site-avaliable
 $ cd site-avaliable
 $ vi default.conf
 ```
-[![텍스트](/assets/images/Linux/nginx%20%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%8B%B1%20%EC%84%A4%EC%A0%95.PNG)](/assets/images/Linux/nginx%20%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%8B%B1%20%EC%84%A4%EC%A0%95.PNG)<br>
+[![텍스트](/assets/img/post/Linux/nginx%20%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%8B%B1%20%EC%84%A4%EC%A0%95.PNG)](/assets/img/post/Linux/nginx%20%EB%A1%9C%EB%93%9C%EB%B0%B8%EB%9F%B0%EC%8B%B1%20%EC%84%A4%EC%A0%95.PNG)<br>
 <span style="color:#FA5858; font-size:12px">※ 위와 같이 <b>upstream</b>을 사용하여 nginx가 여러 서버에 분배할 수 있도록 설정한다.</span>
 
 * * *

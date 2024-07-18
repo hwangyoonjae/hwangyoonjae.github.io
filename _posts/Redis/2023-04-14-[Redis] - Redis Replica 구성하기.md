@@ -4,7 +4,7 @@ title: "[Redis] - Redis Replica 구성하기"
 date: 2023-04-14
 categories: Redis
 tags: [Redis, Replica, 복제]
-image: /assets/post/redis-wallpaper.jpg
+image: /assets/img/post-title/redis-wallpaper.jpg
 ---
 
 ## Redis Replica 구성하고 싶었던 계기:
@@ -76,7 +76,7 @@ $ /etc/init.d/redis_6379 start
 # 로그 확인
 $ tail -f /var/log/redis_6379.log
 ```
-[![Redis Master 재시작](/assets/images/Redis/Redis%20Master%20%EC%9E%AC%EC%8B%9C%EC%9E%91%20%EA%B2%B0%EA%B3%BC.PNG)](/assets/images/Redis/Redis%20Master%20%EC%9E%AC%EC%8B%9C%EC%9E%91%20%EA%B2%B0%EA%B3%BC.PNG)
+[![Redis Master 재시작](/assets/img/post/Redis/Redis%20Master%20%EC%9E%AC%EC%8B%9C%EC%9E%91%20%EA%B2%B0%EA%B3%BC.PNG)](/assets/img/post/Redis/Redis%20Master%20%EC%9E%AC%EC%8B%9C%EC%9E%91%20%EA%B2%B0%EA%B3%BC.PNG)
 
 * * *
 
@@ -86,7 +86,7 @@ $ tail -f /var/log/redis_6379.log
 $ cd /redis-7.0.9/src
 $ redis-cli -a "Redis에서 설정한 암호"
 ```
-[![Redis Master 데이터 입력](/assets/images/Redis/Redis%20Master%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%85%EB%A0%A5.PNG)](/assets/images/Redis/Redis%20Master%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%85%EB%A0%A5.PNG)
+[![Redis Master 데이터 입력](/assets/img/post/Redis/Redis%20Master%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%85%EB%A0%A5.PNG)](/assets/img/post/Redis/Redis%20Master%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%85%EB%A0%A5.PNG)
 
 * * *
 
@@ -95,6 +95,6 @@ $ redis-cli -a "Redis에서 설정한 암호"
 $ cd /redis-7.0.9/src
 $ redis-cli -a "Redis에서 설정한 암호"
 ```
-[![Redis Slave 데이터 출력](/assets/images/Redis/Redis%20Slave%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%B6%9C%EB%A0%A5.PNG)](/assets/images/Redis/Redis%20Slave%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%B6%9C%EB%A0%A5.PNG)
+[![Redis Slave 데이터 출력](/assets/img/post/Redis/Redis%20Slave%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%B6%9C%EB%A0%A5.PNG)](/assets/img/post/Redis/Redis%20Slave%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%B6%9C%EB%A0%A5.PNG)
 
 * * *

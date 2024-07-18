@@ -4,7 +4,7 @@ title: "[Docker] - Docker Network Bridge 이해하기"
 date: 2023-06-07
 categories: Docker
 tags: [Docker, Network]
-image: /assets/post/docker_wallpaper.jpg
+image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## Docker Network 개요:
@@ -29,7 +29,7 @@ Bridge, Host, Overlay, Macvlan, None, Network plugins
 • 이 ip는 DHCP를 통해 할당 받는 것은 아니며, docker 내부 로직에 의해 자동 할당 받는 것이다.
 • docker0 는 일반적인 interface가 아니며, virtual ethernet bridge 이다.
 ```
-[![docker network 흐름도](/assets/images/docker/docker%20network%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)](/assets/images/docker/docker%20network%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)
+[![docker network 흐름도](/assets/img/post/docker/docker%20network%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)](/assets/img/post/docker/docker%20network%20%ED%9D%90%EB%A6%84%EB%8F%84.PNG)
 
 * * *
 
@@ -38,12 +38,12 @@ Bridge, Host, Overlay, Macvlan, None, Network plugins
 ```bash
 $ docker network ls
 ```
-[![docker network 명령어](/assets/images/docker/docker%20network%20%ED%99%95%EC%9D%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)](/assets/images/docker/docker%20network%20%ED%99%95%EC%9D%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)
+[![docker network 명령어](/assets/img/post/docker/docker%20network%20%ED%99%95%EC%9D%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)](/assets/img/post/docker/docker%20network%20%ED%99%95%EC%9D%B8%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)
 
 - Default로 생성된 bridge에 대한 정보를 확인하기 위해 다음과 같은 명령어를 입력한다. 
 ```bash
 $ docker network inspect bridge
 ```
-[![docker network bridge 기본값](/assets/images/docker/docker%20network%20bridge%20%EA%B8%B0%EB%B3%B8%EA%B0%92.PNG)](/assets/images/docker/docker%20network%20bridge%20%EA%B8%B0%EB%B3%B8%EA%B0%92.PNG)
+[![docker network bridge 기본값](/assets/img/post/docker/docker%20network%20bridge%20%EA%B8%B0%EB%B3%B8%EA%B0%92.PNG)](/assets/img/post/docker/docker%20network%20bridge%20%EA%B8%B0%EB%B3%B8%EA%B0%92.PNG)
 
 * * *

@@ -4,7 +4,7 @@ title: "[Linux] - Crontab 설정하기"
 date: 2022-09-18
 categories: Linux
 tags: [Crontab]
-image: /assets/post/linux-wallpaper.jpg
+image: /assets/img/post-title/linux-wallpaper.jpg
 ---
 
 ## Crontab(크론탭)에 대해 알고 싶었던 계기:

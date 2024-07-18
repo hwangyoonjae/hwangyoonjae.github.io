@@ -4,12 +4,12 @@ title: "[Docker] - Docker 로드밸런싱 구현하기"
 date: 2023-08-08
 categories: Docker
 tags: [Docker, Load Balancing]
-image: /assets/post/docker_wallpaper.jpg
+image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## Docker 로드밸런싱 구현하기:
 - Docker로 구성하여 Tomcat을 로드밸런싱으로 구현해보려한다.
-[![docker 로드밸런싱 구현하기](/assets/images/docker/docker%20로드밸런싱%20구현하기.PNG)](/assets/images/docker/docker%20로드밸런싱%20구현하기.PNG)
+[![docker 로드밸런싱 구현하기](/assets/img/post/docker/docker%20로드밸런싱%20구현하기.PNG)](/assets/img/post/docker/docker%20로드밸런싱%20구현하기.PNG)
 
 * * *
 
@@ -83,12 +83,12 @@ services:
 
 ## Docker Visualizer 통해 컨테이너 구성확인하기:
 - docker-compose 파일로 구성한 컨테이너를  Visualizer 통해 확인한다.
-[![docker 로드밸런싱 구성 visualizer로 확인](/assets/images/docker/docker%20로드밸런싱%20구성%20visualizer로%20확인.PNG)](/assets/images/docker/docker%20로드밸런싱%20구성%20visualizer로%20확인.PNG)
+[![docker 로드밸런싱 구성 visualizer로 확인](/assets/img/post/docker/docker%20로드밸런싱%20구성%20visualizer로%20확인.PNG)](/assets/img/post/docker/docker%20로드밸런싱%20구성%20visualizer로%20확인.PNG)
 
 * * *
 
 ## Docker 로드밸런싱 확인하기:
 - 웹페이지 접속하여 새로고침을 계속하면 ***tomcat1***, ***tomcat2***가 번갈아 가면서 보인다.
-[![docker 로드밸런싱 tomcat1,2 화면](/assets/images/docker//docker%20로드밸런싱%20tomcat1,2%20화면.PNG)](/assets/images/docker//docker%20로드밸런싱%20tomcat1,2%20화면.PNG)
+[![docker 로드밸런싱 tomcat1,2 화면](/assets/img/post/docker//docker%20로드밸런싱%20tomcat1,2%20화면.PNG)](/assets/img/post/docker//docker%20로드밸런싱%20tomcat1,2%20화면.PNG)
 
 * * *

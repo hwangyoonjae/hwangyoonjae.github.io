@@ -4,7 +4,7 @@ title: "[MariaDB] - MariaDB 설치하기"
 date: 2022-09-21
 categories: MariaDB
 tags: [RDBMS, MariaDB, MySQL]
-image: /assets/post/mariadb-wallpaper.jpg
+image: /assets/img/post-title/mariadb-wallpaper.jpg
 ---
 
 ## MariaDB란?:
@@ -43,13 +43,13 @@ $ yum install MariaDB
 # 설치확인
 $ rpm -qa | grep -i mariadb
 ```
-[![텍스트](/assets/images/DB/mariadb%20%EC%84%A4%EC%B9%98%ED%99%95%EC%9D%B8.PNG)](/assets/images/DB/mariadb%20%EC%84%A4%EC%B9%98%ED%99%95%EC%9D%B8.PNG)
+[![텍스트](/assets/img/post/DB/mariadb%20%EC%84%A4%EC%B9%98%ED%99%95%EC%9D%B8.PNG)](/assets/img/post/DB/mariadb%20%EC%84%A4%EC%B9%98%ED%99%95%EC%9D%B8.PNG)
 
 ```bash
 # 버전확인
 $ mariadb --version
 ```
-[![텍스트](/assets/images/DB/mariadb%20%EB%B2%84%EC%A0%84%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0.PNG)](/assets/images/DB/mariadb%20%EB%B2%84%EC%A0%84%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0.PNG)
+[![텍스트](/assets/img/post/DB/mariadb%20%EB%B2%84%EC%A0%84%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0.PNG)](/assets/img/post/DB/mariadb%20%EB%B2%84%EC%A0%84%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0.PNG)
 
 * * *
 
@@ -61,7 +61,7 @@ $ systemctl start mariadb
 # 서비스 자동실행 등록
 $ systemctl enable mariadb
 ```
-[![텍스트](/assets/images/DB/mariadb%20%EC%8B%A4%ED%96%89%ED%99%95%EC%9D%B8%20%EB%B0%8F%20%EC%9E%90%EB%8F%99%EC%8B%A4%ED%96%89%20%EB%93%B1%EB%A1%9D.PNG)](/assets/images/DB/mariadb%20%EC%8B%A4%ED%96%89%ED%99%95%EC%9D%B8%20%EB%B0%8F%20%EC%9E%90%EB%8F%99%EC%8B%A4%ED%96%89%20%EB%93%B1%EB%A1%9D.PNG)
+[![텍스트](/assets/img/post/DB/mariadb%20%EC%8B%A4%ED%96%89%ED%99%95%EC%9D%B8%20%EB%B0%8F%20%EC%9E%90%EB%8F%99%EC%8B%A4%ED%96%89%20%EB%93%B1%EB%A1%9D.PNG)](/assets/img/post/DB/mariadb%20%EC%8B%A4%ED%96%89%ED%99%95%EC%9D%B8%20%EB%B0%8F%20%EC%9E%90%EB%8F%99%EC%8B%A4%ED%96%89%20%EB%93%B1%EB%A1%9D.PNG)
 
 * * *
 
@@ -69,7 +69,7 @@ $ systemctl enable mariadb
 ```
 $ /usr/bin/mysqladmin -u root password
 ```
-[![텍스트](/assets/images/DB/mariadb%20root%EA%B3%84%EC%A0%95%20%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C%20%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0.PNG)](/assets/images/DB/mariadb%20root%EA%B3%84%EC%A0%95%20%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C%20%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0.PNG)
+[![텍스트](/assets/img/post/DB/mariadb%20root%EA%B3%84%EC%A0%95%20%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C%20%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0.PNG)](/assets/img/post/DB/mariadb%20root%EA%B3%84%EC%A0%95%20%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C%20%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0.PNG)
 
 * * *
 
@@ -77,6 +77,6 @@ $ /usr/bin/mysqladmin -u root password
 ```bash
 $ mysql -u root -p
 ```
-[![텍스트](/assets/images/DB/mariadb%20%EC%A0%91%EC%86%8D%ED%99%94%EB%A9%B4.PNG)](/assets/images/DB/mariadb%20%EC%A0%91%EC%86%8D%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/DB/mariadb%20%EC%A0%91%EC%86%8D%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/DB/mariadb%20%EC%A0%91%EC%86%8D%ED%99%94%EB%A9%B4.PNG)
 
 * * *

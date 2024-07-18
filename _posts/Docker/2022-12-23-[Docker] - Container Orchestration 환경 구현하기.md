@@ -4,13 +4,13 @@ title: "[Docker] - Container Orchestration 환경 구현하기"
 date: 2022-12-23
 categories: Docker
 tags: [Docker, YAML]
-image: /assets/post/docker_wallpaper.jpg
+image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## Container Orchestration 환경 구현하기:
 - docker-compose.yml 파일을 통해서 Docker Container에 관한 실행 옵션을 기재하여 Container Service를 실행시킨다.
 
-    [![텍스트](/assets/images/docker/docker%20Container%20Orchestration%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%ED%98%84%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20Container%20Orchestration%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%ED%98%84%20%ED%99%94%EB%A9%B4.PNG)
+    [![텍스트](/assets/img/post/docker/docker%20Container%20Orchestration%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%ED%98%84%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20Container%20Orchestration%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%ED%98%84%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
@@ -56,7 +56,7 @@ services:
       environment:
         TZ: "Asia/Seoul"
 ```
-[![텍스트](/assets/images/docker/docker%20visualizer%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20visualizer%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20visualizer%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20visualizer%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
@@ -78,7 +78,7 @@ services:
     environment:
       TZ: "Asia/Seoul"
 ```
-[![텍스트](/assets/images/docker/docker%20nginx%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20nginx%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20nginx%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20nginx%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
@@ -109,7 +109,7 @@ services:
 $ docker exec -it 컨테이너 이름 /bin/bash
 $ mysql -u root -p
 ```
-[![텍스트](/assets/images/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20maria%20db%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
@@ -136,10 +136,10 @@ services:
 $ docker exec -it 컨테이너 이름 /bin/bash
 $ redis-cli ping
 ```
-[![텍스트](/assets/images/docker/docker%20redis%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20redis%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20redis%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20redis%20%EA%B5%AC%EC%84%B1%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
 ### Visualizer 통해서 컨테이너 구성 확인하기:
 - docker manager에서 설치한 Visualizer 통해 Manager와 Worker에 구성된 컨테이너를 확인한다.
-[![텍스트](/assets/images/docker/docker%20manager%20worker%20%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EA%B5%AC%EC%84%B1%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20manager%20worker%20%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EA%B5%AC%EC%84%B1%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20manager%20worker%20%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EA%B5%AC%EC%84%B1%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20manager%20worker%20%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EA%B5%AC%EC%84%B1%ED%99%94%EB%A9%B4.PNG)

@@ -4,7 +4,7 @@ title: "[Kubernetes] - 쿠버네티스 설치 중 오류 해결하기"
 date: 2023-05-09
 categories: Kubernetes
 tags: [Kubernetes]
-image: /assets/post/kubernetes-wallpaper.jpg
+image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
 ## k8s 구성중 kubeadm init 안되는 증상:
@@ -12,7 +12,7 @@ image: /assets/post/kubernetes-wallpaper.jpg
 ```bash
 $ kubeadm init --apiserver-advertise-address {k8s-master IP} --pod-network-cidr=172.16.0.0/16
 ```
-[![Kubeadm init 과정 에러1](/assets/images/kubernetes/Kubeadm%20init%20%EA%B3%BC%EC%A0%95%20%EC%97%90%EB%9F%AC1.PNG)](/assets/images/kubernetes/Kubeadm%20init%20%EA%B3%BC%EC%A0%95%20%EC%97%90%EB%9F%AC1.PNG)
+[![Kubeadm init 과정 에러1](/assets/img/post/kubernetes/Kubeadm%20init%20%EA%B3%BC%EC%A0%95%20%EC%97%90%EB%9F%AC1.PNG)](/assets/img/post/kubernetes/Kubeadm%20init%20%EA%B3%BC%EC%A0%95%20%EC%97%90%EB%9F%AC1.PNG)
 
 * * *
 

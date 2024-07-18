@@ -4,7 +4,7 @@ title: "[Docker] - Docker 컴포즈 사용법"
 date: 2022-08-31
 categories: Docker
 tags: [Docker, YAML]
-image: /assets/post/docker_wallpaper.jpg
+image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 도커 컴포즈(Docker Compose)란?:
@@ -30,7 +30,7 @@ image: /assets/post/docker_wallpaper.jpg
 ## 도커 컴포즈(Docker Compose) 사용법 이해하기:
 ### docker-compose.yml 예시:
 - 기본적으로 docker-compose.yml은 version, services, volumes, networks의 카테고리로 작성되지만, 주로 version과 services가 많이 사용된다.<br>
-[![텍스트](/assets/images/docker/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)](/assets/images/docker/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)
+[![텍스트](/assets/img/post/docker/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)](/assets/img/post/docker/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)
 
 - **문법**
     - **version** : docker compose의 파일 포맷 버전을 지정한다.<br>
@@ -91,4 +91,4 @@ $ chmod +x /usr/local/bin/docker-compose
 # docker compose 버전 확인
 $ docker-compose -version
 ```
-[![docker compose 설치하는 과정](/assets/images/docker/docker%20compose%20설치하는%20과정.PNG)](/assets/images/docker/docker%20compose%20설치하는%20과정.PNG)
+[![docker compose 설치하는 과정](/assets/img/post/docker/docker%20compose%20설치하는%20과정.PNG)](/assets/img/post/docker/docker%20compose%20설치하는%20과정.PNG)

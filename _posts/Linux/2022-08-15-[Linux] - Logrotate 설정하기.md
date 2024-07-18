@@ -4,7 +4,7 @@ title: "[Linux] - Logrotate 설정하기"
 date: 2022-08-15
 categories: Linux
 tags: [Linux, Log]
-image: /assets/post/linux-wallpaper.jpg
+image: /assets/img/post-title/linux-wallpaper.jpg
 ---
 
 ## Logrotate는 무엇인가?:
@@ -13,7 +13,7 @@ image: /assets/post/linux-wallpaper.jpg
 * * *
 
 ### Logrotate 실행 순서
-[![텍스트](/assets/images/Linux/Logrotate%20%EC%8B%A4%ED%96%89%EC%88%9C%EC%84%9C.PNG)](/assets/images/Linux/Logrotate%20%EC%8B%A4%ED%96%89%EC%88%9C%EC%84%9C.PNG)<br>
+[![텍스트](/assets/img/post/Linux/Logrotate%20%EC%8B%A4%ED%96%89%EC%88%9C%EC%84%9C.PNG)](/assets/img/post/Linux/Logrotate%20%EC%8B%A4%ED%96%89%EC%88%9C%EC%84%9C.PNG)<br>
 <span style="color:#FA5858; font-size:12px">※ Logrotate는 위 사진과 같은 순서대로 동작한다.</span>
 
 * * *
@@ -33,7 +33,7 @@ image: /assets/post/linux-wallpaper.jpg
 $ rpm -qa | grep logrotate
 ```
 설치가 되었다면, 아래 그림과 같이 확인된다.<br>
-[![텍스트](/assets/images/Linux/Logrotate%20%EC%84%A4%EC%B9%98%ED%99%95%EC%9D%B8.PNG)](/assets/images/Linux/Logrotate%20%EC%84%A4%EC%B9%98%ED%99%95%EC%9D%B8.PNG)<br>
+[![텍스트](/assets/img/post/Linux/Logrotate%20%EC%84%A4%EC%B9%98%ED%99%95%EC%9D%B8.PNG)](/assets/img/post/Linux/Logrotate%20%EC%84%A4%EC%B9%98%ED%99%95%EC%9D%B8.PNG)<br>
 만약 설칫가 되어 있지 않다면, 아래 명령어를 입력하여 설치를 진행한다.
 ```javascript
 $ yum -y install logrotate

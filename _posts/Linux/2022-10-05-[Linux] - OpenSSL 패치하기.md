@@ -4,7 +4,7 @@ title: "[Linux] - OpenSSL 패치하기"
 date: 2022-10-05
 categories: Linux
 tags: [SSL]
-image: /assets/post/linux-wallpaper.jpg
+image: /assets/img/post-title/linux-wallpaper.jpg
 ---
 
 ## OpenSSL에 대해 알고 싶었던 계기:
@@ -49,10 +49,10 @@ image: /assets/post/linux-wallpaper.jpg
 > * [OpenSSL 사이트 바로가기](https://www.openssl.org/source/ "OpenSSL 사이트")
 
 - OpenSSL 사이트 통해서 최신버전 파일 다운받을 수 있다.
-[![텍스트](/assets/images/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84.PNG)](/assets/images/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84.PNG)
+[![텍스트](/assets/img/post/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84.PNG)](/assets/img/post/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84.PNG)
 
 - OpenSSL 사이트 통해서 이전버전 파일 다운받을 수 있다.
-[![텍스트](/assets/images/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%9D%B4%EC%A0%84%EB%B2%84%EC%A0%84.PNG)](/assets/images/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%9D%B4%EC%A0%84%EB%B2%84%EC%A0%84.PNG)
+[![텍스트](/assets/img/post/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%9D%B4%EC%A0%84%EB%B2%84%EC%A0%84.PNG)](/assets/img/post/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%9D%B4%EC%A0%84%EB%B2%84%EC%A0%84.PNG)
 
 <span style="color:#FA5858; font-size:12px">※ 필자는 최신버전(1.1.1q)을 다운받았다.</span>
 
@@ -64,7 +64,7 @@ image: /assets/post/linux-wallpaper.jpg
   $ tar -zxvf openssl-1.1.1q.tar.gz
   $ cd openssl-1.1.1q
   ```
-  [![텍스트](/assets/images/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%95%95%EC%B6%95%ED%8C%8C%EC%9D%BC%EA%B3%BC%20%ED%95%B4%EC%A0%9C%20%ED%9B%84%20%ED%8F%B4%EB%8D%94.PNG)](/assets/images/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%95%95%EC%B6%95%ED%8C%8C%EC%9D%BC%EA%B3%BC%20%ED%95%B4%EC%A0%9C%20%ED%9B%84%20%ED%8F%B4%EB%8D%94.PNG)
+  [![텍스트](/assets/img/post/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%95%95%EC%B6%95%ED%8C%8C%EC%9D%BC%EA%B3%BC%20%ED%95%B4%EC%A0%9C%20%ED%9B%84%20%ED%8F%B4%EB%8D%94.PNG)](/assets/img/post/OpenSSL/OpenSSL%20%ED%8C%8C%EC%9D%BC%20%EC%95%95%EC%B6%95%ED%8C%8C%EC%9D%BC%EA%B3%BC%20%ED%95%B4%EC%A0%9C%20%ED%9B%84%20%ED%8F%B4%EB%8D%94.PNG)
 
 - 컴파일 및 빌드 후 설치 진행한다.
   ```bash
@@ -76,7 +76,7 @@ image: /assets/post/linux-wallpaper.jpg
   $ make install
   ```
 - 하지만 설정파일 빌드하는 과정에서 아래와 같이 에러가 발생하는데, <br>아래 사진은 Perl 언어를 사용하는 컴파일러 버전 5가 필요하다는 에러이므로, Perl5 버전을 설치하면 해결된다.
-  [![텍스트](/assets/images/OpenSSL/make%20%ED%95%98%EA%B8%B0%20%EC%9C%84%ED%95%B4%20%EC%84%A4%EC%A0%95%ED%8C%8C%EC%9D%BC%20%EB%B9%8C%EB%93%9C%20%EC%8B%9C%20%EC%97%90%EB%9F%AC%EB%B0%9C%EC%83%9D.PNG)](/assets/images/OpenSSL/make%20%ED%95%98%EA%B8%B0%20%EC%9C%84%ED%95%B4%20%EC%84%A4%EC%A0%95%ED%8C%8C%EC%9D%BC%20%EB%B9%8C%EB%93%9C%20%EC%8B%9C%20%EC%97%90%EB%9F%AC%EB%B0%9C%EC%83%9D.PNG)
+  [![텍스트](/assets/img/post/OpenSSL/make%20%ED%95%98%EA%B8%B0%20%EC%9C%84%ED%95%B4%20%EC%84%A4%EC%A0%95%ED%8C%8C%EC%9D%BC%20%EB%B9%8C%EB%93%9C%20%EC%8B%9C%20%EC%97%90%EB%9F%AC%EB%B0%9C%EC%83%9D.PNG)](/assets/img/post/OpenSSL/make%20%ED%95%98%EA%B8%B0%20%EC%9C%84%ED%95%B4%20%EC%84%A4%EC%A0%95%ED%8C%8C%EC%9D%BC%20%EB%B9%8C%EB%93%9C%20%EC%8B%9C%20%EC%97%90%EB%9F%AC%EB%B0%9C%EC%83%9D.PNG)
 
 #### Perl 5 버전 설치하기:
 > * [Perl 사이트 바로가기](https://www.cpan.org/src/5.0/ "Perl 사이트")
@@ -103,7 +103,7 @@ image: /assets/post/linux-wallpaper.jpg
 - Perl 5버전 설치가 완료되었으면 OpenSSL 컴파일 및 빌드 후 설치를 다시 진행한다.
 
 - 아래 그림과 같이 정상적으로 실행되는걸 볼 수 있다.
-[![텍스트](/assets/images/OpenSSL/OpenSSL%20Perl5%EB%B2%84%EC%A0%84%20%EC%84%A4%EC%B9%98%20%ED%9B%84%20%EC%A0%95%EC%83%81%20%EC%BB%B4%ED%8C%8C%EC%9D%BC%20%EB%90%98%EB%8A%94%20%ED%99%94%EB%A9%B4%20.PNG)](/assets/images/OpenSSL/OpenSSL%20Perl5%EB%B2%84%EC%A0%84%20%EC%84%A4%EC%B9%98%20%ED%9B%84%20%EC%A0%95%EC%83%81%20%EC%BB%B4%ED%8C%8C%EC%9D%BC%20%EB%90%98%EB%8A%94%20%ED%99%94%EB%A9%B4%20.PNG)
+[![텍스트](/assets/img/post/OpenSSL/OpenSSL%20Perl5%EB%B2%84%EC%A0%84%20%EC%84%A4%EC%B9%98%20%ED%9B%84%20%EC%A0%95%EC%83%81%20%EC%BB%B4%ED%8C%8C%EC%9D%BC%20%EB%90%98%EB%8A%94%20%ED%99%94%EB%A9%B4%20.PNG)](/assets/img/post/OpenSSL/OpenSSL%20Perl5%EB%B2%84%EC%A0%84%20%EC%84%A4%EC%B9%98%20%ED%9B%84%20%EC%A0%95%EC%83%81%20%EC%BB%B4%ED%8C%8C%EC%9D%BC%20%EB%90%98%EB%8A%94%20%ED%99%94%EB%A9%B4%20.PNG)
 
 - 라이브러리에 등록한다.
   ```bash
@@ -123,6 +123,6 @@ image: /assets/post/linux-wallpaper.jpg
   ```bash
   $ openssl version
   ```
-  [![텍스트](/assets/images/OpenSSL/OpenSSL%20%EB%B2%84%EC%A0%84%ED%99%95%EC%9D%B8.PNG)](/assets/images/OpenSSL/OpenSSL%20%EB%B2%84%EC%A0%84%ED%99%95%EC%9D%B8.PNG)
+  [![텍스트](/assets/img/post/OpenSSL/OpenSSL%20%EB%B2%84%EC%A0%84%ED%99%95%EC%9D%B8.PNG)](/assets/img/post/OpenSSL/OpenSSL%20%EB%B2%84%EC%A0%84%ED%99%95%EC%9D%B8.PNG)
 
 * * *

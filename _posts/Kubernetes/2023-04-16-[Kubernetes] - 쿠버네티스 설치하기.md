@@ -4,7 +4,7 @@ title: "[Kubernetes] - 쿠버네티스 설치하기"
 date: 2023-04-15
 categories: Kubernetes
 tags: [Kubernetes, Docker, Container]
-image: /assets/post/kubernetes-wallpaper.jpg
+image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
 ## Kubernetes란?:
@@ -126,7 +126,7 @@ EOF
 $ kubeadm reset
 $ kubeadm init --apiserver-advertise-address {k8s-master IP} --pod-network-cidr=172.16.0.0/16
 ```
-[![Master Node 구성완료](/assets/images/kubernetes/Master%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)](/assets/images/kubernetes/Master%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)
+[![Master Node 구성완료](/assets/img/post/kubernetes/Master%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)](/assets/img/post/kubernetes/Master%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)
 
 - 혹시나 Kubernetes 설치 간에 문제 발생 시 아래 링크를 참고하여 오류를 해결하면된다.
 > * [Kubernetes 오류 해결](https://hwangyoonjae.github.io/kubernetes/Kubernetes-쿠버네티스-설치-중-오류-해결하기/ "Kubernetes 오류 해결")<br>
@@ -139,6 +139,6 @@ $ kubeadm init --apiserver-advertise-address {k8s-master IP} --pod-network-cidr=
 ```bash
 $ kubeadm join {k8s-master IP}:6443 --token {token 값} --discovery-token-ca-cert-hash {hash 값}
 ```
-[![Worker Node 구성완료](/assets/images/kubernetes/Worker%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)](/assets/images/kubernetes/Worker%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)
+[![Worker Node 구성완료](/assets/img/post/kubernetes/Worker%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)](/assets/img/post/kubernetes/Worker%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)
 
 * * *

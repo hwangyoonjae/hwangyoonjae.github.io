@@ -4,7 +4,7 @@ title: "[Apache] - 주키퍼(zookeeper)란"
 date: 2023-12-28
 categories: Apache
 tags: [Apache, Zookeper, Kafka]
-image: /assets/post/apache-zookeeper-wallpaper.jpg
+image: /assets/img/post-title/apache-zookeeper-wallpaper.jpg
 ---
 
 ## zookeeper란?:
@@ -31,7 +31,7 @@ $ wget http://apache.mirror.cdnetworks.com/zookeeper/stable/zookeeper-3.6.2.tar.
 $ tar -zxvf apache-zookeeper-3.6.2-bin.tar.gz -C /usr/local
 $ ln -s /usr/local/apache-zookeeper-3.6.2-bin/ /usr/local/zookeeper
 ```
-[![zookeeper 심볼릭 링크 설정과 폴더 구성](/assets/images/Apache/zookeeper%20심볼릭%20링크%20설정과%20폴더%20구성.png)](/assets/images/Apache/zookeeper%20심볼릭%20링크%20설정과%20폴더%20구성.png)
+[![zookeeper 심볼릭 링크 설정과 폴더 구성](/assets/img/post/Apache/zookeeper%20심볼릭%20링크%20설정과%20폴더%20구성.png)](/assets/img/post/Apache/zookeeper%20심볼릭%20링크%20설정과%20폴더%20구성.png)
 
 * * *
 
@@ -79,7 +79,7 @@ $ /usr/local/zookeeper/bin/zkServer.sh stop
 
 ## zookeeper 오류:
 - zookeeper 서비스 상태 확인 시 아래와 같이 오류가 발생하였다.
-[![zookeeper 설치 오류](/assets/images/Apache/zookeeper 설치 오류.png)](/assets/images/Apache/zookeeper 설치 오류.png)
+[![zookeeper 설치 오류](/assets/img/post/Apache/zookeeper 설치 오류.png)](/assets/img/post/Apache/zookeeper 설치 오류.png)
 - 해결방법: zoo.cfg 파일 안에 데이터 디렉토리 경로 설정이 잘못되어 수정 후 조치함.
 
 * * *

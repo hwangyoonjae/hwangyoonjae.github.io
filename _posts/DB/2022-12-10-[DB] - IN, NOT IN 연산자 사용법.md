@@ -4,7 +4,7 @@ title: "[DB] - IN, NOT IN 연산자 사용법"
 date: 2022-12-10
 categories: DB
 tags: [DB, IN, NOT IN]
-image: /assets/post/db-wallpaper.jpg
+image: /assets/img/post-title/db-wallpaper.jpg
 ---
 
 ## IN, NOT IN 연산자?:

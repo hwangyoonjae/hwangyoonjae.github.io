@@ -4,7 +4,7 @@ title: "[Encryption] - 인코딩&디코딩이란"
 date: 2023-02-22
 categories: Encryption
 tags: [Base64, Encoding, Decoding]
-image: /assets/post/encryption.jpg
+image: /assets/img/post-title/encryption.jpg
 ---
 
 ## 인코딩&디코딩을 알고싶었던 계기:
@@ -14,7 +14,7 @@ image: /assets/post/encryption.jpg
 
 ## 인코딩이란?:
 - 사람이 인지할 수 있는 문자(언어)를 약속된 규칙에 따라 컴퓨터가 이해하는 언어 (0과1)로 이루어진 코드로 바꾸는 것을 말하고 저장단위는 바이트(byte)이다.
-[![텍스트](/assets/images/Encryption/인코딩.png)](/assets/images/Encryption/인코딩.png)
+[![텍스트](/assets/img/post/Encryption/인코딩.png)](/assets/img/post/Encryption/인코딩.png)
 
 * * *
 
@@ -36,7 +36,7 @@ image: /assets/post/encryption.jpg
 
 ## 디코딩이란?:
 - 컴퓨터가 이해하는 언어 (0과1)로 이루어진 코드를 약속된 규칙에 따라 사람이 인지할 수 있는 문자(언어)로 바꾸는 것을 말한다.
-[![텍스트](/assets/images/Encryption/디코딩.png)](/assets/images/Encryption/디코딩.png)
+[![텍스트](/assets/img/post/Encryption/디코딩.png)](/assets/img/post/Encryption/디코딩.png)
 
 * * *
 

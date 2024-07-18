@@ -34,7 +34,7 @@ image: /assets/featured-posts/code1.jpg
 - HTTP 프로토콜을 기반으로 하여 클라이언트(웹 브라우저 또는 웹 크롤러)의 요청을 서비스 하는 기능을 담당한다.<br>
 <span style="color:#FA5858; font-size:12px">※ 대표적인 웹 서버 : Apache</span>
 
-[![텍스트](/assets/images/Linux/%EC%9B%B9%EC%84%9C%EB%B2%84%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)](/assets/images/Linux/%EC%9B%B9%EC%84%9C%EB%B2%84%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)<br>
+[![텍스트](/assets/img/post/Linux/%EC%9B%B9%EC%84%9C%EB%B2%84%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)](/assets/img/post/Linux/%EC%9B%B9%EC%84%9C%EB%B2%84%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)<br>
 △ 웹 서버 사용자 요청 처리 과정
 * * *
 
@@ -51,7 +51,7 @@ image: /assets/featured-posts/code1.jpg
 ### WAS(Web Application Server) 기능 :
 - 프로그램 실행 환경과 데이터베이스 접속 기능을 제공하고, 여러 개의 트랜잭션을 관리한다.<br>
 <span style="color:#FA5858; font-size:12px">※ 대표적인 웹 서버 : Tomcat</span>
-[![텍스트](/assets/images/Linux/WAS%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)](/assets/images/Linux/WAS%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)<br>
+[![텍스트](/assets/img/post/Linux/WAS%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)](/assets/img/post/Linux/WAS%20%EC%9A%94%EC%B2%AD%EB%B0%A9%EC%8B%9D.PNG)<br>
 △ WAS 사용자 요청 처리 과정
 
 * * *

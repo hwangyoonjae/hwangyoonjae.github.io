@@ -4,7 +4,7 @@ title: "[Jekyll] - Github 블로그 변경"
 date: 2023-03-05
 categories: Jekyll
 tags: [Jekyll, Minimal Mistakes]
-image: /assets/post/jekyll-wallpaper.jpg
+image: /assets/img/post-title/jekyll-wallpaper.jpg
 ---
 
 ## Github 블로그 변경 계기:
@@ -18,20 +18,20 @@ image: /assets/post/jekyll-wallpaper.jpg
 <br>
 > * [지킬사이트 바로가기](http://jekyllthemes.org/ "지킬테마")
 
-[![텍스트](/assets/images/local/minimal%20mistakes%20%EB%8B%A4%EC%9A%B4%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/local/minimal%20mistakes%20%EB%8B%A4%EC%9A%B4%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/local/minimal%20mistakes%20%EB%8B%A4%EC%9A%B4%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/local/minimal%20mistakes%20%EB%8B%A4%EC%9A%B4%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
 ### 내 github.io 폴더에 붙혀넣기:
 - 다운받은 파일 압축 해제하여 github.io 폴더 內 적용한다.
-[![텍스트](/assets/images/local/minimal%20mistakes%20%EC%A0%81%EC%9A%A9%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/local/minimal%20mistakes%20%EC%A0%81%EC%9A%A9%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/local/minimal%20mistakes%20%EC%A0%81%EC%9A%A9%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/local/minimal%20mistakes%20%EC%A0%81%EC%9A%A9%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
 ### 깃허브 블로그 수정 완료:
 - 그렇게 수정한 나의 블로그이다. 
 - [수정된 블로그 접속하기](https://hwangyoonjae.github.io/ "수정된 블로그 접속하기")
-[![텍스트](/assets/images/local/minimal%20mistakes%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/local/minimal%20mistakes%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/local/minimal%20mistakes%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/local/minimal%20mistakes%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)
 
 <span style="color:#FA5858; font-size:12px">※ 디자인 수정한 부분에 추후에 게시글 작성 예정입니다. </span>
 

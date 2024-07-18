@@ -4,7 +4,7 @@ title: "[Ansible] - Ansible 설치하기"
 date: 2022-10-02
 categories: Ansible
 tags: [Ansible, 자동화]
-image: /assets/post/ansible-wallpaper.jpg
+image: /assets/img/post-title/ansible-wallpaper.jpg
 ---
 
 ## Ansible 설치하기:
@@ -21,7 +21,7 @@ $ yum install -y ansible
 ```bash
 $ ansible --version
 ```
-[![텍스트](/assets/images/Ansible/Ansible%20%EB%B2%84%EC%A0%84%ED%99%95%EC%9D%B8.PNG)](/assets/images/Ansible/Ansible%20%EB%B2%84%EC%A0%84%ED%99%95%EC%9D%B8.PNG)<br>
+[![텍스트](/assets/img/post/Ansible/Ansible%20%EB%B2%84%EC%A0%84%ED%99%95%EC%9D%B8.PNG)](/assets/img/post/Ansible/Ansible%20%EB%B2%84%EC%A0%84%ED%99%95%EC%9D%B8.PNG)<br>
 <span style="color:#FA5858; font-size:12px">※ 필자는 2.9.27버전을 사용했다.</span>
 
 * * *
@@ -37,13 +37,13 @@ $ ssh-keygen
 # 생성한 key를 원격 서버에 복사
 $ ssh-copy-id [원격서버계정ID]@[원격서버IP]
 ```
-[![텍스트](/assets/images/Ansible/SSH%20Key%20%EC%83%9D%EC%84%B1%20%EB%B0%8F%20%EB%B3%B5%EC%82%AC.PNG)](/assets/images/Ansible/SSH%20Key%20%EC%83%9D%EC%84%B1%20%EB%B0%8F%20%EB%B3%B5%EC%82%AC.PNG)
+[![텍스트](/assets/img/post/Ansible/SSH%20Key%20%EC%83%9D%EC%84%B1%20%EB%B0%8F%20%EB%B3%B5%EC%82%AC.PNG)](/assets/img/post/Ansible/SSH%20Key%20%EC%83%9D%EC%84%B1%20%EB%B0%8F%20%EB%B3%B5%EC%82%AC.PNG)
 
 - ssh key가 복사되었다면, controller 서버에서 원격 서버로 ssh 접속을 시도할 때, 비밀번호 입력없이 바로 접속되어야 한다.
 ```bash
 $ ssh [원격서버계정ID]@[원격서버IP]
 ```
-[![텍스트](/assets/images/Ansible/SSH%20%EC%A0%91%EC%86%8D%ED%99%95%EC%9D%B8.PNG)](/assets/images/Ansible/SSH%20%EC%A0%91%EC%86%8D%ED%99%95%EC%9D%B8.PNG)
+[![텍스트](/assets/img/post/Ansible/SSH%20%EC%A0%91%EC%86%8D%ED%99%95%EC%9D%B8.PNG)](/assets/img/post/Ansible/SSH%20%EC%A0%91%EC%86%8D%ED%99%95%EC%9D%B8.PNG)
 
 * * *
 
@@ -52,12 +52,12 @@ $ ssh [원격서버계정ID]@[원격서버IP]
 # /etc/hosts 파일에 각각의 host와 ip를 매핑 시켜주면 user@hostname 으로도 ssh 접근 가능
 $ vi /etc/hosts
 ```
-[![텍스트](/assets/images/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91.PNG)](/assets/images/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91.PNG)
+[![텍스트](/assets/img/post/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91.PNG)](/assets/img/post/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91.PNG)
 
 ```bash
 #명령어를 입력하면 원격서버 host파일의 원격서버계정에서 sudo id를 입력한 결과 출력
 ssh [원격서버계정ID]@[원격서버 host파일] sudo id
 ```
-[![텍스트](/assets/images/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91%20%EB%8F%99%EC%9E%91%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91%20%EB%8F%99%EC%9E%91%20%ED%99%95%EC%9D%B8.PNG)
+[![텍스트](/assets/img/post/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91%20%EB%8F%99%EC%9E%91%20%ED%99%95%EC%9D%B8.PNG)](/assets/img/post/Ansible/host%EC%99%80%20ip%20%EB%A7%A4%ED%95%91%20%EB%8F%99%EC%9E%91%20%ED%99%95%EC%9D%B8.PNG)
 
 * * *

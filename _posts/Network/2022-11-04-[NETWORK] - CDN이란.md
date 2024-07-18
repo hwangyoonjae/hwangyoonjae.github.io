@@ -4,7 +4,7 @@ title: "[Network] - CDN이란"
 date: 2022-11-04
 categories: Network
 tags: [CDN, GSLB]
-image: /assets/post/network-wallpaper.jpg
+image: /assets/img/post-title/network-wallpaper.jpg
 ---
 
 ## CDN(Content Delivery Network)이란?:
@@ -24,7 +24,7 @@ image: /assets/post/network-wallpaper.jpg
 
 ## CDN(Content Delivery Network)원리:
 - 서버를 분산시켜 캐싱해두고 사용자의 컨텐츠 요청이 들어오면 사용자와 가장 가까운 위치에 존재하는 서버로 매핑시켜 요청된 콘텐츠의 캐싱된 내용을 내어주는 방식으로 빠르게 데이터를 전송할 수 있게한다.
-[![텍스트](/assets/images/Network/CDN%20%EC%9B%90%EB%A6%AC.PNG)](/assets/images/Network/CDN%20%EC%9B%90%EB%A6%AC.PNG)
+[![텍스트](/assets/img/post/Network/CDN%20%EC%9B%90%EB%A6%AC.PNG)](/assets/img/post/Network/CDN%20%EC%9B%90%EB%A6%AC.PNG)
 
 * * *
 

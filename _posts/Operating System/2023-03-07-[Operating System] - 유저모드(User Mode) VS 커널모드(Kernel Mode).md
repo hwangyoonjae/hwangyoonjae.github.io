@@ -4,7 +4,7 @@ title: "[Operating System] - 유저모드(User Mode) VS 커널모드(Kernel Mode
 date: 2023-03-07
 categories: OperatingSystem
 tags: [User Mode, Kernel Mode]
-image: /assets/post/os-wallpaper.jpg
+image: /assets/img/post-title/os-wallpaper.jpg
 ---
 
 ## 유저모드(User Mode) VS 커널모드(Kernel Mode):
@@ -36,7 +36,7 @@ image: /assets/post/os-wallpaper.jpg
 ### 커널모드(Kernel Mode)에서 유저모드(User Mode)로 반환:
 - **시스템 콜** 요청에 대한 일을 하고 결과 값을 리턴 값으로 전달한다.
 
-[![텍스트](/assets/images/Operating%20System/%EC%9C%A0%EC%A0%80%EB%AA%A8%EB%93%9C%20%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%ED%9D%90%EB%A6%84.png)](/assets/images/Operating%20System/%EC%9C%A0%EC%A0%80%EB%AA%A8%EB%93%9C%20%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%ED%9D%90%EB%A6%84.png)
+[![텍스트](/assets/img/post/Operating%20System/%EC%9C%A0%EC%A0%80%EB%AA%A8%EB%93%9C%20%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%ED%9D%90%EB%A6%84.png)](/assets/img/post/Operating%20System/%EC%9C%A0%EC%A0%80%EB%AA%A8%EB%93%9C%20%EC%BB%A4%EB%84%90%EB%AA%A8%EB%93%9C%20%ED%9D%90%EB%A6%84.png)
 
 * * *
 

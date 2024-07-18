@@ -4,7 +4,7 @@ title: "[Kubernetes] - 쿠버네티스 Dashboard 설치하기"
 date: 2024-02-13
 categories: Kubernetes
 tags: [Kubernetes, Dashboard]
-image: /assets/post/kubernetes-wallpaper.jpg
+image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
 ## Kubernetes Dashboard란?:
@@ -32,7 +32,7 @@ $ kubectl apply -f  recommended.yaml
 ```bash
 $ kubectl get services -n kubernetes-dashboard
 ```
-[![Kubernetes dashboard 서비스 목록](/assets/images/kubernetes/Kubernetes%20dashboard%20서비스%20목록.png)](/assets/images/kubernetes/Kubernetes%20dashboard%20서비스%20목록.png)
+[![Kubernetes dashboard 서비스 목록](/assets/img/post/kubernetes/Kubernetes%20dashboard%20서비스%20목록.png)](/assets/img/post/kubernetes/Kubernetes%20dashboard%20서비스%20목록.png)
 
 * * *
 
@@ -41,19 +41,19 @@ $ kubectl get services -n kubernetes-dashboard
 ```bash
 $ kubectl edit services kubernetes-dashboard -n kubernetes-dashboard
 ```
-[![Kubernetes dashboard type 변경](/assets/images/kubernetes/Kubernetes%20dashboard%20type%20변경.png)](/assets/images/kubernetes/Kubernetes%20dashboard%20type%20변경.png)
+[![Kubernetes dashboard type 변경](/assets/img/post/kubernetes/Kubernetes%20dashboard%20type%20변경.png)](/assets/img/post/kubernetes/Kubernetes%20dashboard%20type%20변경.png)
 
 * * *
 
 ### Kubernetes Dashboard 포트 적용된 서비스 목록 확인하기:
 - 외부에서 접속가능하도록 포트 변경 후, 서비스 목록에서 ***443:{NodePort}*** 표기되는지 확인한다.
-[![Kubernetes dashboard 서비스 포트 지정 후 목록](/assets/images/kubernetes/Kubernetes%20dashboard%20서비스%20포트%20지정%20후%20목록.png)](/assets/images/kubernetes/Kubernetes%20dashboard%20서비스%20포트%20지정%20후%20목록.png)
+[![Kubernetes dashboard 서비스 포트 지정 후 목록](/assets/img/post/kubernetes/Kubernetes%20dashboard%20서비스%20포트%20지정%20후%20목록.png)](/assets/img/post/kubernetes/Kubernetes%20dashboard%20서비스%20포트%20지정%20후%20목록.png)
 
 * * *
 
 ### Kubernetes Dashboard 접속하기:
 - ***https://{k8s-masterIP}:{NodePort}***로 접속한다.
-[![Kubernetes Dashboard 토큰 인증 화면](/assets/images/kubernetes/Kubernetes%20Dashboard%20토큰%20인증%20화면.png)](/assets/images/kubernetes/Kubernetes%20Dashboard%20토큰%20인증%20화면.png)
+[![Kubernetes Dashboard 토큰 인증 화면](/assets/img/post/kubernetes/Kubernetes%20Dashboard%20토큰%20인증%20화면.png)](/assets/img/post/kubernetes/Kubernetes%20Dashboard%20토큰%20인증%20화면.png)
 
 * * *
 
@@ -105,7 +105,7 @@ $ kubectl create -f dashboard-service-rolebinding.yaml
 ```bash
 $ kubectl -n kubernetes-dashboard create token admin-user
 ```
-[![Kubernetes Dashboard 토큰 생성](/assets/images/kubernetes/Kubernetes%20Dashboard%20토큰%20생성.png)](/assets/images/kubernetes/Kubernetes%20Dashboard%20토큰%20생성.png)
+[![Kubernetes Dashboard 토큰 생성](/assets/img/post/kubernetes/Kubernetes%20Dashboard%20토큰%20생성.png)](/assets/img/post/kubernetes/Kubernetes%20Dashboard%20토큰%20생성.png)
 
 * * *
 
@@ -113,14 +113,14 @@ $ kubectl -n kubernetes-dashboard create token admin-user
 ```bash
 $ kubectl edit -n kubernetes-dashboard deployments.apps kubernetes-dashboard
 ```
-[![Kubernetes Dashboard 토큰 사용기간 무제한](/assets/images/kubernetes/Kubernetes%20Dashboard%20토큰%20사용기간%20무제한.png)](/assets/images/kubernetes/Kubernetes%20Dashboard%20토큰%20사용기간%20무제한.png)
+[![Kubernetes Dashboard 토큰 사용기간 무제한](/assets/img/post/kubernetes/Kubernetes%20Dashboard%20토큰%20사용기간%20무제한.png)](/assets/img/post/kubernetes/Kubernetes%20Dashboard%20토큰%20사용기간%20무제한.png)
 
 * * *
 
 ## Kubernetes Dashboard 메인화면:
 - 토큰 입력 후 접속 시 ***아래와 같이 표시할 데이터가 없습니다.***라고 나오는데,
-[![Kubernetes Dashboard 초기화면](/assets/images/kubernetes/Kubernetes%20Dashboard%20초기화면.png)](/assets/images/kubernetes/Kubernetes%20Dashboard%20초기화면.png)
+[![Kubernetes Dashboard 초기화면](/assets/img/post/kubernetes/Kubernetes%20Dashboard%20초기화면.png)](/assets/img/post/kubernetes/Kubernetes%20Dashboard%20초기화면.png)
 - 대쉬보드 왼쪽 상단의 'Default'를 '모든 네임스페이스'로 변경하면 아래 그림과 같이 목록을 확인 할 수 있다.
-[![Kubernetes Dashboard 모든네임스페이스 클릭 후 화면](/assets/images/kubernetes/Kubernetes%20Dashboard%20모든네임스페이스%20클릭%20후%20화면.png)](/assets/images/kubernetes/Kubernetes%20Dashboard%20모든네임스페이스%20클릭%20후%20화면.png)
+[![Kubernetes Dashboard 모든네임스페이스 클릭 후 화면](/assets/img/post/kubernetes/Kubernetes%20Dashboard%20모든네임스페이스%20클릭%20후%20화면.png)](/assets/img/post/kubernetes/Kubernetes%20Dashboard%20모든네임스페이스%20클릭%20후%20화면.png)
 
 * * *

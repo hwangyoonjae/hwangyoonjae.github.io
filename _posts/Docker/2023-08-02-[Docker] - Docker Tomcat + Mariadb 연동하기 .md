@@ -4,7 +4,7 @@ title: "[Docker] - Docker Tomcat + MariaDB 연동하기"
 date: 2023-08-02
 categories: Docker
 tags: [Docker, Tomat, MariaDB]
-image: /assets/post/docker_wallpaper.jpg
+image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## Docker Tomcat 구성하기:
@@ -135,7 +135,7 @@ $ vi index.jsp
 > * [MariaDB JDBC 다운로드](https://downloads.mariadb.com/Connectors/java/ "MariaDB JDBC 다운로드")
 
 - 다운받은 jdbc 드라이버를 WEB-INF/lib 폴더 안에 넣어준다.
-[![docker tomcat jdbc 파일 위치](/assets/images/docker/docker%20tomcat%20jdbc%20파일%20위치.PNG)](/assets/images/docker/docker%20tomcat%20jdbc%20파일%20위치.PNG)
+[![docker tomcat jdbc 파일 위치](/assets/img/post/docker/docker%20tomcat%20jdbc%20파일%20위치.PNG)](/assets/img/post/docker/docker%20tomcat%20jdbc%20파일%20위치.PNG)
 
 * * *
 
@@ -150,6 +150,6 @@ $ docker stack deploy -c docker-mariadb.yml db
 
 ## 웹페이지에서 확인하기:
 - Tomcat에서 DB값을 제대로 불러오는지 웹페이지로 접속하여 확인한다.
-[![docker tomcat, mariadb 연동 성공 화면](/assets/images/docker/docker%20tomcat,%20mariadb%20연동%20성공%20화면.PNG)](/assets/images/docker/docker%20tomcat,%20mariadb%20연동%20성공%20화면.PNG)
+[![docker tomcat, mariadb 연동 성공 화면](/assets/img/post/docker/docker%20tomcat,%20mariadb%20연동%20성공%20화면.PNG)](/assets/img/post/docker/docker%20tomcat,%20mariadb%20연동%20성공%20화면.PNG)
 
 * * *

@@ -4,7 +4,7 @@ title: "[Docker] - Docker Container 모니터링"
 date: 2022-12-04
 categories: Docker
 tags: [Docker, Container, 모니터링]
-image: /assets/post/docker_wallpaper.jpg
+image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## Docker Container 모니터링하기:
@@ -12,7 +12,7 @@ image: /assets/post/docker_wallpaper.jpg
 ```bash
 $ docker container stats 컨테이너 이름
 ```
-[![텍스트](/assets/images/docker/docker%20container%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)](/assets/images/docker/docker%20container%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)
+[![텍스트](/assets/img/post/docker/docker%20container%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)](/assets/img/post/docker/docker%20container%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%ED%99%95%EC%9D%B8.PNG)
 
 - 각 부분별 설명은 아래와 같다.
   ```

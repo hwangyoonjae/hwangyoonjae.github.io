@@ -4,7 +4,7 @@ title: "[Ansible] - Superspec 사용하기"
 date: 2023-08-12
 categories: Ansible
 tags: [Ansible, Superspec]
-image: /assets/post/ansible-wallpaper.jpg
+image: /assets/img/post-title/ansible-wallpaper.jpg
 ---
 
 ## Superspec을 알고 싶었던 계기:

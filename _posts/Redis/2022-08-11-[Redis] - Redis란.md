@@ -4,7 +4,7 @@ title: "[Redis] - Redis란"
 date: 2022-08-11
 categories: Redis
 tags: [DB, NoSQL]
-image: /assets/post/redis-wallpaper.jpg
+image: /assets/img/post-title/redis-wallpaper.jpg
 ---
 
 
@@ -16,7 +16,7 @@ image: /assets/post/redis-wallpaper.jpg
 
 ### Redis 구조
 - 주로 Cache 서버를 구현할 때 많이 쓴다.
-[![텍스트](/assets/images/Redis/Redis%20%EA%B5%AC%EC%A1%B0.PNG)](/assets/images/Redis/Redis%20%EA%B5%AC%EC%A1%B0.PNG)
+[![텍스트](/assets/img/post/Redis/Redis%20%EA%B5%AC%EC%A1%B0.PNG)](/assets/img/post/Redis/Redis%20%EA%B5%AC%EC%A1%B0.PNG)
 
 <span style="color:#FA5858; font-size:12px">※ 캐시란? : 한번 읽어온 데이터를 임의의 공간에 저장하여 다음에 읽을 때는 빠르게 결과 값을 받을 수 있도록 도와주는 공간</span>
 * * *

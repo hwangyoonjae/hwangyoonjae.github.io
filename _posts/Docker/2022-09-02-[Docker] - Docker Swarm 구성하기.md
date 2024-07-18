@@ -4,7 +4,7 @@ title: "[Docker] - Docker Swarm 구성하기"
 date: 2022-09-02
 categories: Docker
 tags: [Docker, Swarm, Orchestration]
-image: /assets/post/docker_wallpaper.jpg
+image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 도커 스웜(Docker Swarm)이란?:
@@ -49,7 +49,7 @@ image: /assets/post/docker_wallpaper.jpg
 ```bash
 $ docker swarm init
 ```
-[![텍스트](/assets/images/docker/docker%20swarm%20%EC%A7%84%ED%96%89.PNG)](/assets/images/docker/docker%20swarm%20%EC%A7%84%ED%96%89.PNG) 
+[![텍스트](/assets/img/post/docker/docker%20swarm%20%EC%A7%84%ED%96%89.PNG)](/assets/img/post/docker/docker%20swarm%20%EC%A7%84%ED%96%89.PNG) 
 
 * * *
 
@@ -58,7 +58,7 @@ $ docker swarm init
 ```bash
 $ docker swarm join --token SWMTKN-1-4n6l6glu7zuere7uoxwuefzx7v97i0tlyyuj3xddwqextk1p89-6lldmi9n7hp328oyo91city1r <Manager Node IP>:2377
 ```
-[![텍스트](/assets/images/docker/%EC%9B%8C%EC%BB%A4%20%EB%85%B8%EB%93%9C(Worker%20Node)%20%EC%84%A4%EC%A0%95%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/%EC%9B%8C%EC%BB%A4%20%EB%85%B8%EB%93%9C(Worker%20Node)%20%EC%84%A4%EC%A0%95%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/%EC%9B%8C%EC%BB%A4%20%EB%85%B8%EB%93%9C(Worker%20Node)%20%EC%84%A4%EC%A0%95%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/%EC%9B%8C%EC%BB%A4%20%EB%85%B8%EB%93%9C(Worker%20Node)%20%EC%84%A4%EC%A0%95%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
@@ -73,8 +73,8 @@ $ docker stack deploy -c <yaml-file> <stack-name>
 $ docker service create --name <서비스 이름> --replicas <컨테이너 개수> -p <호스트포트:컨테이너포트> <이미지 이름>
 ```
 
-[![텍스트](/assets/images/docker/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)](/assets/images/docker/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)
-[![텍스트](/assets/images/docker/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)](/assets/img/post/docker/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%EB%AA%85%EB%A0%B9%EC%96%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20swarm%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8B%A4%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 

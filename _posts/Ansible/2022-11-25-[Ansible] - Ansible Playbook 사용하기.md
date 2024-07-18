@@ -4,7 +4,7 @@ title: "[Ansible] - Ansible Playbook 사용하기"
 date: 2022-11-25
 categories: Ansible
 tags: [Ansible, 자동화, Playbook]
-image: /assets/post/ansible-wallpaper.jpg
+image: /assets/img/post-title/ansible-wallpaper.jpg
 ---
 
 ## Ansible Playbook 사용하기:
@@ -16,7 +16,7 @@ image: /assets/post/ansible-wallpaper.jpg
 * * *
 
 ### Playbook 예시:
-[![텍스트](/assets/images/Ansible/Playbook%20%EC%98%88%EC%8B%9C.PNG)](/assets/images/Ansible/Playbook%20%EC%98%88%EC%8B%9C.PNG)
+[![텍스트](/assets/img/post/Ansible/Playbook%20%EC%98%88%EC%8B%9C.PNG)](/assets/img/post/Ansible/Playbook%20%EC%98%88%EC%8B%9C.PNG)
 - Playbook을 통해 nginx를 설치하는 예시를 작성했고, 형식에 대한 의미는 아래와 같다.
   
   ```html
@@ -33,7 +33,7 @@ image: /assets/post/ansible-wallpaper.jpg
 ```bash
 $ vi /etc/ansible/hosts
 ```
-[![텍스트](/assets/images/Ansible/host%20%EC%9D%B4%EB%A6%84%20%EC%A7%80%EC%A0%95.PNG)](/assets/images/Ansible/host%20%EC%9D%B4%EB%A6%84%20%EC%A7%80%EC%A0%95.PNG)
+[![텍스트](/assets/img/post/Ansible/host%20%EC%9D%B4%EB%A6%84%20%EC%A7%80%EC%A0%95.PNG)](/assets/img/post/Ansible/host%20%EC%9D%B4%EB%A6%84%20%EC%A7%80%EC%A0%95.PNG)
 - 위 그림과 같이 ansible에 설정한 host이름을 지정한 서버IP별로 설치할 수 있다.
 
 * * *
@@ -42,7 +42,7 @@ $ vi /etc/ansible/hosts
 ```bash
 $ ansible-playbook 파일명.yml -k
 ```
-[![텍스트](/assets/images/Ansible/Playbook%20%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.PNG)](/assets/images/Ansible/Playbook%20%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.PNG)
+[![텍스트](/assets/img/post/Ansible/Playbook%20%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.PNG)](/assets/img/post/Ansible/Playbook%20%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.PNG)
 - **-k** 옵션은 ansible 실행 시 ansible 호스트의 비밀번호를 물어볼 수 있도록 하는 옵션이다.
 
 * * *

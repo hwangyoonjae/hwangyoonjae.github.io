@@ -4,7 +4,7 @@ title: "[Nginx] - Nginx 설치하기"
 date: 2022-08-10
 categories: Nginx
 tags: [Web, Nginx]
-image: /assets/post/nginx-wallpaper.jpg
+image: /assets/img/post-title/nginx-wallpaper.jpg
 ---
 
 ## Nginx란? :
@@ -70,7 +70,7 @@ $ firewall-cmd --list-all
 ```bash
 $ vi /etc/nginx/conf.d/default.conf
 ```
-[![텍스트](/assets/images/Linux/Nginx%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD.PNG)](/assets/images/Linux/Nginx%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD.PNG)
+[![텍스트](/assets/img/post/Linux/Nginx%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD.PNG)](/assets/img/post/Linux/Nginx%20%ED%8F%AC%ED%8A%B8%20%EB%B3%80%EA%B2%BD.PNG)
 - 밑줄 친 부분을 변경한다.
 ```javascript
 Ex) Listen 80 -> Listen 8089
@@ -90,6 +90,6 @@ $ systemctl enable nginx
 
 ### Nginx 실행화면 :
 - 위와 같은 방법 진행 후 실행하면 아래와 같은 화면이 나오면서 웹 페이지 정상 구동된다.
-[![텍스트](/assets/images/Linux/Nginx%20%EC%84%B1%EA%B3%B5%ED%99%94%EB%A9%B4.PNG)](/assets/images/Linux/Nginx%20%EC%84%B1%EA%B3%B5%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/Linux/Nginx%20%EC%84%B1%EA%B3%B5%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/Linux/Nginx%20%EC%84%B1%EA%B3%B5%ED%99%94%EB%A9%B4.PNG)
 
 * * *

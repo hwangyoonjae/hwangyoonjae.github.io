@@ -4,7 +4,7 @@ title: "[Gitlab] - Gitlab 연동 오류 해결하기"
 date: 2023-10-23
 categories: Gitlab
 tags: [Git, Gitlab]
-image: /assets/post/gitLab-wallpaper.jpg
+image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---
 
 ## GitLab 연동 오류 해결하기:
@@ -19,7 +19,7 @@ Url is blocked: Requests to the local network are not allowed
 ```
 
 - 아래 그림과 같이 조치하면된다.
-[![url is blocked 에러 해결방법](/assets/images/Gitlab/url%20is%20blocked%20에러%20해결방법.png)](/assets/images/Gitlab/url%20is%20blocked%20에러%20해결방법.png)
+[![url is blocked 에러 해결방법](/assets/img/post/Gitlab/url%20is%20blocked%20에러%20해결방법.png)](/assets/img/post/Gitlab/url%20is%20blocked%20에러%20해결방법.png)
 
 * * *
 
@@ -30,6 +30,6 @@ Hook executed successfully but returned HTTP 403 <html> <head> <meta http-equiv=
 ```
 
 - GitLab에서 Webhook 설정 시 Jenkins URL 넣는 부분에서 경로 중 ***/job/ -> /project***로 변경하여 저장 후 push event 테스트 진행하면된다. 
-[![HTTP 403 에러 해결방법](/assets/images/Gitlab/HTTP%20403%20에러%20해결방법.png)](/assets/images/Gitlab/HTTP%20403%20에러%20해결방법.png)
+[![HTTP 403 에러 해결방법](/assets/img/post/Gitlab/HTTP%20403%20에러%20해결방법.png)](/assets/img/post/Gitlab/HTTP%20403%20에러%20해결방법.png)
 
 * * *

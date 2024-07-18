@@ -4,7 +4,7 @@ title: "[Kubernetes] - 쿠버네티스 HAproxy 구성하기"
 date: 2024-02-19
 categories: Kubernetes
 tags: [Kubernetes, HAproxy, Loadbalance]
-image: /assets/post/kubernetes-wallpaper.jpg
+image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
 ## HAproxy이란?:
@@ -23,7 +23,7 @@ image: /assets/post/kubernetes-wallpaper.jpg
 
 ## Kubernetes HAproxy 구성도:
 - Kubernetes HAproxy 구성은 아래 그림과 같이 구현한다.
-[![Kubernetes HAproxy 구성도](/assets/images/kubernetes/Kubernetes%20HAproxy%20구성도.png)](/assets/images/kubernetes/Kubernetes%20HAproxy%20구성도.png)
+[![Kubernetes HAproxy 구성도](/assets/img/post/kubernetes/Kubernetes%20HAproxy%20구성도.png)](/assets/img/post/kubernetes/Kubernetes%20HAproxy%20구성도.png)
 
 * * *
 
@@ -165,7 +165,7 @@ $ nc -v [LoadBalancer_IP] [Port]
 ```bash
 $ kubeadm init --control-plane-endpoint=k8s-lb:6443 --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address={k8s-master1 IP} --cri-socket unix:///var/run/crio/crio.sock --upload-certs
 ```
-[![Kubernetes HAproxy 구성 초기화](/assets/images/kubernetes/Kubernetes%20HAproxy%20구성%20초기화.png)](/assets/images/kubernetes/Kubernetes%20HAproxy%20구성%20초기화.png)
+[![Kubernetes HAproxy 구성 초기화](/assets/img/post/kubernetes/Kubernetes%20HAproxy%20구성%20초기화.png)](/assets/img/post/kubernetes/Kubernetes%20HAproxy%20구성%20초기화.png)
 
 - ***kubectl***은 항상 ***$HOME/.kube***를 참조하므로 root가 아닌 노멀 사용자는 반드시 인증을 해야한다.
 ```bash
@@ -207,6 +207,6 @@ $ kubeadm join k8s-lb:6443 --token nd6wjc.6i4fgf5ig28mp4lz \
 ```bash
 $ kubectl get nodes
 ```
-[![Kubernetes HAproxy 클러스터 구축 노드](/assets/images/kubernetes/Kubernetes%20HAproxy%20클러스터%20구축%20노드.png)](/assets/images/kubernetes/Kubernetes%20HAproxy%20클러스터%20구축%20노드.png)
+[![Kubernetes HAproxy 클러스터 구축 노드](/assets/img/post/kubernetes/Kubernetes%20HAproxy%20클러스터%20구축%20노드.png)](/assets/img/post/kubernetes/Kubernetes%20HAproxy%20클러스터%20구축%20노드.png)
 
 * * *

@@ -4,7 +4,7 @@ title: "[Docker] - Docker 이미지 다운로드"
 date: 2022-08-25
 categories: Docker
 tags: [Docker, Image, Container]
-image: /assets/post/docker_wallpaper.jpg
+image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 도커 이미지 (Docker Image)란 무엇인가?:
@@ -25,20 +25,20 @@ image: /assets/post/docker_wallpaper.jpg
 - 이미지는 Docker Hub 사이트에서 찾아볼 수 있고, 서버에서 명령어로 확인 가능하다.
 > * [Docker Hub 바로가기](https://hub.docker.com/search?image_filter=official&q= "Docker Hub")
 
-[![텍스트](/assets/images/docker/docker%20hub%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20hub%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20hub%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20hub%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%ED%99%94%EB%A9%B4.PNG)
 
 ```bash
 # 서버에서 도커 이미지 확인 방법
 $ docker search [이미지명]
 ```
-[![텍스트](/assets/images/docker/docker%20image%20%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C%20%EA%B2%80%EC%83%89%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20image%20%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C%20%EA%B2%80%EC%83%89%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20image%20%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C%20%EA%B2%80%EC%83%89%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20image%20%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C%20%EA%B2%80%EC%83%89%20%ED%99%94%EB%A9%B4.PNG)
 
 ### 도커 컨테이너 이미지 다운로드:
 - 이미지 찾기를 통해서 다운로드할 이미지 이름과 필요한 버전을 입력하여 다운로드한다.
 ```bash
 $ docker pull [이미지명]
 ```
-[![텍스트](/assets/images/docker/docker%20image%20%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20image%20%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20image%20%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20image%20%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
@@ -47,7 +47,7 @@ $ docker pull [이미지명]
 ```bash
 $ docker images
 ```
-[![텍스트](/assets/images/docker/docker%20image%20%EB%AA%A9%EB%A1%9D%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20image%20%EB%AA%A9%EB%A1%9D%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20image%20%EB%AA%A9%EB%A1%9D%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20image%20%EB%AA%A9%EB%A1%9D%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
@@ -56,7 +56,7 @@ $ docker images
 ```bash
 $ docker save <image명> > <image명>.tar
 ```
-[![텍스트](/assets/images/docker/docker%20image%20%EC%95%95%EC%B6%95%20%EC%A7%84%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)](/assets/images/docker/docker%20image%20%EC%95%95%EC%B6%95%20%EC%A7%84%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)
+[![텍스트](/assets/img/post/docker/docker%20image%20%EC%95%95%EC%B6%95%20%EC%A7%84%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)](/assets/img/post/docker/docker%20image%20%EC%95%95%EC%B6%95%20%EC%A7%84%ED%96%89%20%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
@@ -66,7 +66,7 @@ $ docker save <image명> > <image명>.tar
 ```bash
 $ docker rmi [이미지명]
 ```
-[![텍스트](/assets/images/docker/docker%20image%20%EC%A0%95%EC%83%81%EC%82%AD%EC%A0%9C.PNG)](/assets/images/docker/docker%20image%20%EC%A0%95%EC%83%81%EC%82%AD%EC%A0%9C.PNG)
+[![텍스트](/assets/img/post/docker/docker%20image%20%EC%A0%95%EC%83%81%EC%82%AD%EC%A0%9C.PNG)](/assets/img/post/docker/docker%20image%20%EC%A0%95%EC%83%81%EC%82%AD%EC%A0%9C.PNG)
   
 * * *
 
@@ -80,6 +80,6 @@ Error response from daemon: conflict: unable to remove repository reference "ngi
 ```bash
 $ docker rmi -f [이미지명]
 ```
-[![텍스트](/assets/images/docker/docker%20image%20%EC%99%84%EC%A0%84%EC%82%AD%EC%A0%9C.PNG)](/assets/images/docker/docker%20image%20%EC%99%84%EC%A0%84%EC%82%AD%EC%A0%9C.PNG)
+[![텍스트](/assets/img/post/docker/docker%20image%20%EC%99%84%EC%A0%84%EC%82%AD%EC%A0%9C.PNG)](/assets/img/post/docker/docker%20image%20%EC%99%84%EC%A0%84%EC%82%AD%EC%A0%9C.PNG)
 
 * * *

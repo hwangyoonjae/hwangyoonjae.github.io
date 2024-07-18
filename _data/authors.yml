@@ -1,11 +1,17 @@
-# Author details.
-juan:
-  name: Juan Diaz
-  email: juan.diaz93@hotmail.com
-  web: https://www.linkedin.com/in/1diazdev/
+## Template › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#setting-author-url
+# -------------------------------------
+# {author_id}:
+#   name: {full name}
+#   twitter: {twitter_of_author}
+#   url: {homepage_of_author}
+# -------------------------------------
+
 cotes:
   name: Cotes Chung
-  email: cotes.chung@gmail.com
-  web: https://github.com/cotes2020/
-#
-# https://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
+  twitter: cotes2020
+  url: https://github.com/cotes2020/
+
+sille_bille:
+  name: Dinesh Prasanth Moluguwan Krishnamoorthy
+  twitter: dinesh_MKD
+  url: https://github.com/SilleBille/
