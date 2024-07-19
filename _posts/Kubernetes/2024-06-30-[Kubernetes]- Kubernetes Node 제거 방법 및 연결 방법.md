@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Kubernetes]- Kubernetes Node 제거 방법 및 연결 방법"
+title: "[Kubernetes] - Kubernetes Node 제거 방법 및 연결 방법"
 date: 2024-06-30
 categories: Kubernetes
-tags: [Kubernetes, Node, ]
+tags: [Kubernetes, MasterNode]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
@@ -93,3 +93,14 @@ $ kubeadm token create --certificate-key {certificate key} --print-join-command
 ```
 
 * * *
+
+## 5. 워커 노드 추가 :
+> 마스터 노드에서 작업을 진행해야한다.
+{: .prompt-warning }
+
+- 출력된 certificate key를 사용하여 join command를 생성한다.
+```bash
+$ kubeadm token create --print-join-command
+------아래 예시와 같이 출력된다.------
+kubeadm join cluster.hwabul-saas.com:6443 --token ofr8mg.ng5426tamhp57b5h --discovery-token-ca-cert-hash sha256:a140170a070e861d88373
+```
