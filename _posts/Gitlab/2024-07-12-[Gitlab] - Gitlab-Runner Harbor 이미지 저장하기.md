@@ -3,7 +3,7 @@ layout: post
 title: "[Gitlab] - Gitlab-Runner Harbor 이미지 저장하기"
 date: 2024.07.12
 categories: Gitlab
-tags: [Git, Gitlab, Runner, Harbor]
+tags: [Git, Gitlab, Runner, CI, CD]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---
 
