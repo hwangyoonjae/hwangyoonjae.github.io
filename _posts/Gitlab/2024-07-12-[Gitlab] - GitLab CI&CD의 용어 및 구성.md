@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - GitLab CI&CD 의 용어 및 구성"
+title: "[Gitlab] - GitLab CI&CD의 용어 및 구성"
 date: 2024.07.12
 categories: Gitlab
 tags: [Git, Gitlab, Runner, Harbor]
