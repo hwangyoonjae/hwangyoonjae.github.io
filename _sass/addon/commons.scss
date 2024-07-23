@@ -153,8 +153,7 @@ blockquote {
 
   @include prompt('tip', '\f0eb', 'regular'); // 새로운 정보
   @include prompt('info', '\f05a'); // 추가 정보
-  @include prompt('warning', '\f06a'); // 주의 사항
-  @include prompt('danger', '\f071');
+  @include prompt('warning', '\f071'); // 주의 사항
   @include prompt('question', '\f059'); // 질문 사항
   @include prompt('example', '\f0ca'); // 예시
 }
