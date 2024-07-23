@@ -9,12 +9,12 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 
 
 ## 1. 노드 드레이닝(Node Draining) :
-- 마스터 노드를 삭제하기 전에 해당 노드에서 실행 중인 파드를 다른 노드로 이동해야한다.
+- 마스터/워커 노드를 삭제하기 전에 해당 노드에서 실행 중인 파드를 다른 노드로 이동해야한다.
 ``` bash
-$ kubectl drain <Master Node명> --ignore-daemonsets --delete-emptydir-data
+$ kubectl drain <Master/Worker Node명> --ignore-daemonsets --delete-emptydir-data
 ```
 
->Master Node 삭제 시 왜 드레이닝(Draining)을 해야할까?
+>Master/Worker Node 삭제 시 왜 드레이닝(Draining)을 해야할까?
 >
 >👉 kubernetes 클러스터의 안정성과 데이터 손실을 방지하기 위함이다.
 >
@@ -41,15 +41,15 @@ $ kubectl drain <Master Node명> --ignore-daemonsets --delete-emptydir-data
 
 * * *   
 
-## 2. 마스터 노드를 클러스터에서 삭제 :
-- 마스터 노드를 Kubernetes 클러스터에서 삭제한다.
+## 2. 마스터/워커 노드를 클러스터에서 삭제 :
+- 마스터/워커 노드를 Kubernetes 클러스터에서 삭제한다.
 ```bash
 $ kubectl delete node <Master Node명>
 ```
 
 * * *
 
-## 3. 마스터 노드에서 데이터 삭제 :
+## 3. 마스터/워커 노드에서 데이터 삭제 :
 - etcd-pod에 접속한다.
 ```bash
 $ kubectl exec -it etcd-노드명 -n kube-system sh
@@ -67,7 +67,7 @@ $ etcdctl --cacert="/etc/kubernetes/pki/etcd/ca.crt" --cert="/etc/kubernetes/pki
 
 * * *
 
-## 4. 마스터 노드 추가 :
+## 4. 마스터/워커 노드 추가 :
 - kubeadm command를 통해 Master node join에 필요한 certificate key를 받는다.
 
 > 클러스터를 최초 구성할 때 사용한 kubeadm-config.yaml 파일이 필요하다.
