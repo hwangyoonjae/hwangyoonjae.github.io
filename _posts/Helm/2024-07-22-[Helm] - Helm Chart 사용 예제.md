@@ -78,7 +78,6 @@ $ helm create {폴더명}
 ## templates 폴더에 배포할 resource 정의하기 :
 - 기본적으로 deployment, service, serviceaccount,ingress가 존재하고, 필요에 따라 persistentvolume, configmap 등을 정의한다.
 
-
 * * *
 
 ## Helm의 template 문법 정의 :
@@ -143,6 +142,31 @@ $ helm repo update
 
 ```bash
 $ helm search repo 차트명
+```
+
+* * *
+
+## 생성한 Chart Repo의 푸시하기 :
+- 생성한 Chart를 Repo의 푸시한다.
+
+```bash
+$ helm push {package.tgz} {repo명}
+```
+
+- 위 명령어 실행 후 아래와 같은 오류 메세지가 발생한다.
+
+> Error: scheme prefix missing from remote (e.g. "oci://") 에러 발생
+{: .prompt-warning }
+
+> 발생 이유
+>
+> helm push 명령을 사용할 때 차트를 업로드할 원격 저장소 주소에 프로토콜 접두사가 없어서 발생한 원인으로
+> Helm 3.7.0 이상에서는 차트를 OCI 레지스트리나 ChartMuseum으로 푸시할 때 각각의 프로토콜 접두사를 명시해야한다.
+{: .prompt-info }
+
+### 조치 방법 :
+```bash
+$ helm plugin install https://github.com/chartmuseum/helm-push
 ```
 
 * * *
