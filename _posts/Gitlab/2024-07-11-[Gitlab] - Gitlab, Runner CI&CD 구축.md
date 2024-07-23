@@ -22,6 +22,7 @@ $ gitlab-runner restart
 ![gitlab-ci yaml 파일 생성](/assets/img/post/Gitlab/gitlab-ci%20yaml%20파일%20생성.png)
 
 3. 파일 이름`.gitlab-ci.yml`을 입력하고 큰 창에서 다음 샘플 코드를 붙여 넣는다.
+
 ```yml
 build-job:
   stage: build
