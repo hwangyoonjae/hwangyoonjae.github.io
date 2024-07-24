@@ -7,7 +7,6 @@ tags: [Kubernetes, Yaml]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-
 ## Pod 생성 방법 :
 ```yaml
 apiVersion: v1 # 리소스의 API 버전을 지정

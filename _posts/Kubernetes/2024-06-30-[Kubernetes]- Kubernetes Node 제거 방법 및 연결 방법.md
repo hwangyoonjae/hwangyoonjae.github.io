@@ -3,10 +3,9 @@ layout: post
 title: "[Kubernetes] - Kubernetes Node 제거 방법 및 연결 방법"
 date: 2024-06-30
 categories: Kubernetes
-tags: [Kubernetes, MasterNode]
+tags: [Kubernetes, MasterNode, WorkerNode]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
-
 
 ## 1. 노드 드레이닝(Node Draining) :
 - 마스터/워커 노드를 삭제하기 전에 해당 노드에서 실행 중인 파드를 다른 노드로 이동해야한다.
