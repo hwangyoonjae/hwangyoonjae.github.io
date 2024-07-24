@@ -4,7 +4,7 @@ title: "[Web] - WEB Server와 WAS 차이"
 date: 2022-08-04
 categories: Web
 tags: [Web, Was]
-image: /assets/featured-posts/code1.jpg
+image: /assets/img/post-title/web-wallpaper.jpg
 ---
 
 ## WEB Server와 WAS에 대해 알고 싶었던 계기 :
