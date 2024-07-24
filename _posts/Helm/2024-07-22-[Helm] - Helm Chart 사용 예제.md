@@ -71,7 +71,7 @@ $ helm create {폴더명}
 
 ## values.yaml 작성하기 :
 - template 폴더에 있는 manifest yaml파일에 정의된 값을 불러온다.
-- '{{ .Values.image.tag }}' 와 같이 사용  인덴테이션에 유의하여 작성하여야한다.
+- \{\{ .Values.image.tag\}\}와 같이 사용  인덴테이션에 유의하여 작성하여야한다.
 
 * * *
 
@@ -81,7 +81,7 @@ $ helm create {폴더명}
 * * *
 
 ## Helm의 template 문법 정의 :
-- {{ }} 로 변수를 사용한다.
+- \{\{ \}\}로 변수를 사용한다.
   - .Values -> values.yaml 파일에서 정의된 변수
   - .Charts -> Charts.yaml 파일에서 정의 된 변수
   - .Release -> 배포할 때에 할당한 정보들을 사용 (예: --namespeace test 로 install 시 .Release.Namespace 에 test로 할당)
@@ -150,7 +150,7 @@ $ helm search repo 차트명
 - 생성한 Chart를 Repo의 푸시한다.
 
 ```bash
-$ helm push {package.tgz} {repo명}
+$ helm cm-push {package.tgz} {repo명}
 ```
 
 - 위 명령어 실행 후 아래와 같은 오류 메세지가 발생한다.
@@ -167,6 +167,14 @@ $ helm push {package.tgz} {repo명}
 ### 조치 방법 :
 ```bash
 $ helm plugin install https://github.com/chartmuseum/helm-push
+$ helm plugin install .
+```
+
+* * *
+
+## 업로드한 helm chart 확인하기 :
+```bash
+$ helm search repo {repo명}
 ```
 
 * * *
