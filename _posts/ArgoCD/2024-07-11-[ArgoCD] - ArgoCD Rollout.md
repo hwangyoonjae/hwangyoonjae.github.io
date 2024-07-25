@@ -161,7 +161,7 @@ spec:
         - containerPort: 80
 ```
 
-> argo-rollout 배포 기능 사용 시 strategy의 **blueGreen** 또는 **canary** 중 선택하여 입력하면된다.
+> argo-rollout 배포 기능 사용 시 strategy의 **Blue/Green** 또는 **Canary** 중 선택하여 입력하면된다.
 {: .prompt-info}
 
 * * *
