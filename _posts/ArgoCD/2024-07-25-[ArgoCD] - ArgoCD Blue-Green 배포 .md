@@ -111,6 +111,6 @@ $ kubectl get svc -n argo-rollouts
 $ kubectl argo rollouts promote {rollout명} -n {namespace명}
 ```
 
-![blue green 수동 승격 후 화면](/assets/img/post/ArgoCD/argo%20rollout%20blue-green%20배포%20동작%20확인.png)
+![blue green 수동 승격 후 화면](/assets/img/post/ArgoCD/blue%20green%20수동%20승격%20후%20화면.png)
 
 * * *
