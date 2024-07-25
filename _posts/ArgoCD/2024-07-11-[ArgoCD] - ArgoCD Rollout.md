@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[ArgoCD] - ArgoCD Rollout"
+title: "[ArgoCD] - ArgoCD Rollout이란"
 date: 2024-07-11
 categories: ArgoCD
 tags: [ArgoCD, Rollout]
@@ -33,7 +33,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 
 * * *
 
-## ArgoCD와 Argo Rollouts 연동 예시 :
+## ArgoCD와 Argo Rollouts 설치하기 :
 - Argo Rollouts CLI 설치
 
 ```bash
@@ -62,83 +62,106 @@ $ kubectl create namespace argo-rollouts
 $ kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
 ```
 
-- Rollout 리소스 정의
+* * *
+
+## Argo CD 배포 방식 :
+### 롤링 업데이트 (Rolling Update)
+- 새로운 버전의 애플리케이션을 점진적으로 배포합니다. 기존의 파드가 새 버전의 파드로 점진적으로 교체된다.
+- 배포 중 다운타임이 없으며, 사용자는 점진적으로 새로운 버전을 접하게된다.
 
 ```yaml
-#rollout.yaml
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: rollout-bluegreen
-  namespace: argo-rollouts
+  name: my-app
 spec:
-  replicas: 2
-  revisionHistoryLimit: 2
+  replicas: 3
   selector:
     matchLabels:
-      app: rollout-bluegreen
+      app: my-app
   template:
     metadata:
       labels:
-        app: rollout-bluegreen
+        app: my-app
     spec:
       containers:
-      - name: rollouts-demo
-        image: harbor.com/argoproj/rollouts-demo:blue
-        imagePullPolicy: Always
+      - name: my-app-container
+        image: my-app-image:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 80
   strategy:
-    blueGreen:
-      activeService: rollout-bluegreen-active
-      previewService: rollout-bluegreen-preview
-      autoPromotionEnabled: false
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
 ```
 
-- service 정의
+### 블루-그린 배포 (Blue-Green Deployment)
+- 두 개의 독립적인 환경(블루와 그린)을 사용하여 배포를 진행하고, 새 버전이 준비되면 그린 환경에 배포하여 준비가 완료되면 블루에서 그린으로 트래픽을 전환한다.
+- 배포 중 다운타임이 없고, 새로운 버전이 정상 작동하는지 확인 후 트래픽을 전환할 수 있다.
 
 ```yaml
-# service.yaml
-kind: Service
-apiVersion: v1
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
-  name: rollout-bluegreen-active
-  namespace: argo-rollouts
+  name: my-app-rollout
 spec:
-  type: NodePort
+  replicas: 3
+  strategy:
+    blueGreen:
+      activeService: my-app-active
+      previewService: my-app-preview
+      autoPromotionEnabled: true
   selector:
-    app: rollout-bluegreen
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
-    nodePort: 30081
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: rollout-bluegreen-preview
-  namespace: argo-rollouts
-spec:
-  type: NodePort
-  selector:
-    app: rollout-bluegreen
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
-    nodePort: 30082
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app-container
+        image: my-app-image:latest
+        ports:
+        - containerPort: 80
 ```
 
-## Rollout 상태 확인하기 :
-### CLI에서 Argo Rollout 상태 확인
-```bash
-$ kubectl argo rollouts get rollout rollouts-demo --watch
-```
-![argocd rolloust 상태 cli 확인](/assets/img/post/ArgoCD/argocd%20rolloust%20상태%20cli%20확인.png)
+### 카나리 배포 (Canary Deployment)
+- 새로운 버전의 애플리케이션을 단계적으로 배포하여 처음에는 소수의 인스턴스에만 배포하고, 문제가 없으면 점진적으로 더 많은 인스턴스에 배포한다.
+- 새로운 버전의 안정성을 점진적으로 확인할 수 있다.
 
-### Argo Rollouts 도구를 사용하여 예시로 제공되는 애플리케이션 확인
-- 이 애플리케이션은 데모용으로 설계되어 있어서 Rollout 전략을 시연하고 설명하기 위해 간단하게 구성되어있다.
-![argocd rolloust 상태 gui 확인](/assets/img/post/ArgoCD//argocd%20rolloust%20상태%20gui%20확인.png)
- 
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: my-app-rollout
+spec:
+  replicas: 3
+  strategy:
+    canary:
+      steps:
+      - setWeight: 20
+      - pause: { duration: 10m }
+      - setWeight: 50
+      - pause: { duration: 10m }
+      - setWeight: 100
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app-container
+        image: my-app-image:latest
+        ports:
+        - containerPort: 80
+```
+
+> argo-rollout 배포 기능 사용 시 strategy의 **blueGreen** 또는 **canary** 중 선택하여 입력하면된다.
+{: .prompt-info}
+
 * * *
