@@ -3,7 +3,7 @@ layout: post
 title: "[ArgoCD] - ArgoCD Rollout이란"
 date: 2024-07-11
 categories: ArgoCD
-tags: [ArgoCD, Rollout]
+tags: [ArgoCD, Argo-Rollout]
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
 
