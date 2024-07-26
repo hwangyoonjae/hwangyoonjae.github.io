@@ -67,6 +67,35 @@ $ helm create {폴더명}
 | deprecated | deprecated된 차트인지 여부를 true/false로 명시 |
 | tillerVersion | 보장하는 tiller버전의 SemVer범위 |
 
+```yaml
+# Chart.yaml
+apiVersion: v2
+name: nginx
+description: A Helm chart for Kubernetes
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+# Versions are expected to follow Semantic Versioning (https://semver.org/)
+version: 0.1.0
+
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application. Versions are not expected to
+# follow Semantic Versioning. They should reflect the version the application is using.
+# It is recommended to use it with quotes.
+# 컨테이너 이미지 버전
+appVersion: "1.16.0"
+```
+
 * * *
 
 ## values.yaml 작성하기 :
@@ -150,7 +179,12 @@ $ helm search repo 차트명
 - 생성한 Chart를 Repo의 푸시한다.
 
 ```bash
-$ helm cm-push {package.tgz} {repo명}
+$ helm push {package.tgz} {repo명}
+```
+
+```bash
+# 위 명령어로 안될 경우 아래 명령어를 통해서 이미지 업로드한다.
+$ curl --data-binary @{chart.tgz} http://{repo주소}/api/charts -u admin 
 ```
 
 - 위 명령어 실행 후 아래와 같은 오류 메세지가 발생한다.
@@ -183,7 +217,13 @@ $ helm search repo {repo명}
 - 생성한 차트를 아래 명령어로 설치한다.
 
 ```bash
-$ helm install 배포할이름 레포지토리명/chart명 -n 네임스페이스
+$ helm install {배포명} {chart폴더경로} -n {네임스페이스}
+```
+
+- 차트의 내용을 변경해야하는 경우 업데이트를 진행한다.
+
+```bash
+$ helm upgrade {배포명} {chart폴더경로} -n {네임스페이스}
 ```
 
 * * *
