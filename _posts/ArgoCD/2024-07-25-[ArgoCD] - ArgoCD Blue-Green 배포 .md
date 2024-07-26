@@ -113,6 +113,6 @@ $ kubectl get svc -n argo-rollouts
 $ kubectl argo rollouts promote {rollout명} -n {namespace명}
 ```
 
-![carany 수동 승격 후 화면](/assets/img/post/ArgoCD/carany%20수동%20승격%20후%20화면.png)
+![blue green 수동 승격 후 화면](/assets/img/post/ArgoCD/blue%20green%20수동%20승격%20후%20화면.png)
 
 * * *
