@@ -25,8 +25,11 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 * * *
 
 ## 노드의 taint 설정하기 :
+- 노드의 taint 설정하는 방법은 아래와 같다.
+
 ```bash
 $ kubectl taint node {nodename} {key}={value}:{option}
+# kubectl taint node k8s-worker1 size=large:NoSchedule
 ```
 
 > option : Taint에 대한 역할 제한이다. 일반적으로 NoSchedule, PreferNoschedule, NoExecute 3가지 설정이 존재한다.
@@ -38,11 +41,44 @@ $ kubectl taint node {nodename} {key}={value}:{option}
 | NoSchedule | 스케줄하지 않음 (이미 스케줄링된 Pod는 그대로 유지) |
 | NoExecute| 실행을 허가하지 않음 (이미 스케줄링된 Pod는 정지됨) |
 
-> 예시
->
-> $ kubectl taint node k8s-worker1 role=system:NoSchedule <br>
-> $ kubectl taint node k8s-worker1 role:NoSchedule- <br>
-> $ kubectl taint node k8s-worker1 role- <br>
-{: .prompt-example }
+- taint 해제 방법은 아래와 같다.
+
+```bash
+# 특정 taint 해제 방법
+$ kubectl taint node k8s-worker1 role:NoSchedule-
+
+# 모든 taint 해제 방법
+$ kubectl taint node k8s-worker1 role-
+```
+
+* * *
+
+## 파드의 tolerations 설정하기 :
+
+```yaml
+# tolerations-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tolerations-pod
+spec:
+  containers:
+    - name: tolerations-container
+      image: harbor.com/nginx:1.25.3
+      ports:
+        - containerPort: 80
+  tolerations:
+    - key: "key1"
+      operator: "Equal"
+      value: "value1"
+      effect: "NoSchedule"
+    - key: "key2"
+      operator: "Exists"
+      effect: "NoExecute"
+```
+
+```bash
+$ kubectl create -f tolerations-pod.yaml
+```
 
 * * *
