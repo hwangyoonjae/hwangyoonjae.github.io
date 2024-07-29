@@ -86,6 +86,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
+# helm chart 이미지 버전
 version: 0.1.0
 
 # This is the version number of the application being deployed. This version number should be
@@ -100,7 +101,135 @@ appVersion: "1.16.0"
 
 ## values.yaml 작성하기 :
 - template 폴더에 있는 manifest yaml파일에 정의된 값을 불러온다.
-- \{\{ .Values.image.tag\}\}와 같이 사용  인덴테이션에 유의하여 작성하여야한다.
+- \{\{ .Values.image.tag\}\}와 같이 사용 인덴테이션에 유의하여 작성하여야한다.
+
+```yaml
+# values.yaml
+
+replicaCount: 1   # pod 수 정의
+
+image:
+  repository: {컨테이너 이미지명}
+  pullPolicy: IfNotPresent   # 다운받은 이미지가 없을 경우 다운받도록 정의
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Automatically mount a ServiceAccount's API credentials?
+  automount: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+podLabels: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: {서비스 유형 정의}   # ClusterIP , NodePort, LoadBalancer, ExternalName
+  port: 80   # 서비스를 노출하는 포트
+  targetPort: 80   # 애플리케이션(파드)를 노출하는 포트
+
+ingress:
+  enabled: false   # Ingress 리소스 활성화 여부 설정
+  className: ""   # Ingress 클래스의 이름을 정의
+  annotations: {}   # Ingress 리소스에 추가할 애노테이션을 설정
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:   # Ingress가 라우팅할 호스트와 경로를 설정
+    - host: chart-example.local   # 도메인 이름 정의
+      paths:   # 요청이 라우팅될 경로 설정
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}   # pod에서 사용하는 최소 리소스 양 정의
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+# 컨테이너의 상태를 모니터링하기 위한 설정 정의
+livenessProbe:
+  httpGet:
+    path: /
+    port: http
+readinessProbe:
+  httpGet:
+    path: /
+    port: http
+
+# HPA 설정 항목
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+# Additional volumes on the output Deployment definition.
+volumes: []   # PV 설정
+# - name: foo
+#   secret:
+#     secretName: mysecret
+#     optional: false
+
+# Additional volumeMounts on the output Deployment definition.
+volumeMounts: []   # PVC 설정
+# - name: foo
+#   mountPath: "/etc/foo"
+#   readOnly: true
+
+nodeSelector: {}   # 파드가 특정 노드에서만 실행되도록 지정
+# label-key: label-value
+
+tolerations: []   # 파드가 특정 노드의 taints를 무시할 수 있도록 설정
+#  - key: "key1"
+#    operator: "Equal"
+#    value: "value1"
+#    effect: "NoSchedule"
+#  - key: "key2"
+#    operator: "Exists"
+#    effect: "NoExecute"
+
+affinity: {}   # 파드가 특정 노드에서 실행되도록 하거나, 다른 파드와의 관계를 정의
+#  nodeAffinity:
+#      requiredDuringSchedulingIgnoredDuringExecution:
+#        nodeSelectorTerms:
+#        - matchExpressions:
+#          - key: size
+#            operator: In
+#            values:
+#            - {node label명}
+
+```
 
 * * *
 
