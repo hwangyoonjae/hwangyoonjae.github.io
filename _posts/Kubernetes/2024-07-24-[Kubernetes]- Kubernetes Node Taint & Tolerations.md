@@ -20,7 +20,7 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 - **Taint**: 노드에 설정되며, 해당 노드에서 Pod의 스케줄링을 방해한다.
   - 노드에 kubectl taint nodes nodename key=value:NoSchedule로 Taint를 설정하면, 기본적으로 이 노드에는 어떠한 Pod도 스케줄링되지 않는다.
 - **Toleration**: Pod에 설정되며, 특정 Taint를 무시하고 해당 노드에 스케줄링될 수 있도록 허용한다.
-  - Pod 명세에 Toleration을 추가하면, 해당 Taint를 가진 노드에도 Pod가 스케줄링될 수 있다.
+  - toleration의 effect, key, value가 일치하면, 해당 Taint를 가진 노드에도 Pod가 스케줄링될 수 있다.
 
 * * *
 
@@ -76,6 +76,10 @@ spec:
       operator: "Exists"
       effect: "NoExecute"
 ```
+
+> tolerations에서 여러 개의 key 값을 작성하는 이유는?
+> 파드가 노드의 다양한 taints를 무시(생성)하도록 허용하기 위해서다.
+{: .prompt-tip}
 
 ```bash
 $ kubectl create -f tolerations-pod.yaml
