@@ -45,10 +45,10 @@ $ kubectl taint node {nodename} {key}={value}:{option}
 
 ```bash
 # 특정 taint 해제 방법
-$ kubectl taint node k8s-worker1 role:NoSchedule-
+$ kubectl taint node k8s-worker1 {value}:{option}-
 
 # 모든 taint 해제 방법
-$ kubectl taint node k8s-worker1 role-
+$ kubectl taint node k8s-worker1 {value}-
 ```
 
 * * *
