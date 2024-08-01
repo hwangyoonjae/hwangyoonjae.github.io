@@ -62,10 +62,14 @@ spec:
 - Project : ArgoCD 내 어플리케이션 그룹 (default)
 - SYNC POLICY : (Manual, Automatic) Git 변동사항을 자동으로 반영할 것인지, 수동으로 반영할 것인지 선택 (Manual)
 
+* * *
+
 ![argocd 어플리케이션 생성 화면 2](/assets/img/post/ArgoCD/argocd%20어플리케이션%20생성%20화면%202.png)
 - Repository URL : Git 저장소 URL 입력 Ex.) https://gitlab.com:/root/agocd.git
 - Revision : Git의 어떤 Revision을 바라 볼 것인지 지정 (HEAD, main, tag 등) (main)
-- Path : Repository 내 변경사항을 관리할 파일이 위치한 경로 지정 (. 일 경우 root) (.)
+- Path : Git 레포지토리 내의 특정 디렉토리 경로를 가리키며, 해당 경로에 저장된 Kubernetes 매니페스트 파일이나 Helm 차트를 Argo CD가 읽고 배포하는 데 사용 (. 일 경우 root)
+
+* * *
 
 ![argocd 어플리케이션 생성 화면 3](/assets/img/post/ArgoCD/argocd%20어플리케이션%20생성%20화면%203.png)
 - Cluster URL : 배포 대상 Kubernetes Cluster 지정 (https://kubernetes.default.svc)
