@@ -75,7 +75,7 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 |image|interruptible|retry|
 |services|tags|timeout|
 
-- default 키워드 사용 예시
+- default 키워드 사용 (예시)
 
 ```yml
 default:
@@ -84,7 +84,7 @@ default:
     - echo "Starting job..."
 ```
 
-- default 키워드 사용 예시 (실습)
+- default 키워드 사용 (예시) (실습)
 
 ```yml
 default:
@@ -111,10 +111,10 @@ deploy-job:
 
 > 설명
 >
-> image: 모든 작업에서 기본적으로 node:16 Docker 이미지를 사용
-> before_script: 각 작업 시작 전에 npm install을 실행하여 의존성을 설치
-> after_script: 각 작업 후에 "Cleaning up..." 메시지를 출력
-> tags: docker 태그를 사용하여 특정 Runner에서 작업이 실행되도록 설정
+> **image**: 모든 작업에서 기본적으로 node:16 Docker 이미지를 사용 <br>
+> **before_script**: 각 작업 시작 전에 npm install을 실행하여 의존성을 설치 <br>
+> **after_script**: 각 작업 후에 "Cleaning up..." 메시지를 출력 <br>
+> **tags**: docker 태그를 사용하여 특정 Runner에서 작업이 실행되도록 설정 <br>
 {: .prompt-example}
 
 * * *
@@ -122,7 +122,7 @@ deploy-job:
 ### include :
 - CI/CD 구성에 외부 YAML 파일을 가져와 현재 파일의 설정에 병합하는 데 사용된다.
 
-- include 키워드 사용 예시
+- include 키워드 사용 (예시)
 
 ```yml
 # 같은 프로젝트 내 파일 포함인 경우
@@ -143,7 +143,7 @@ include:
   - template: 'Auto-DevOps.gitlab-ci.yml'
 ```
 
-- include 키워드 사용 예시 (실습)
+- include 키워드 사용 (예시) (실습)
 
 ```yml
 # .gitlab-ci.yml
@@ -178,7 +178,7 @@ test-job:
   - **Test 단계**: test-job이 실행됩니다. build 단계가 성공적으로 완료되면 시작됩니다.
   - **Deploy 단계**: deploy-job이 실행됩니다. test 단계가 성공적으로 완료되면 시작됩니다.
 
-- stages 키워드 사용 예시
+- stages 키워드 사용 (예시)
 
 ```yml
 stages:
@@ -187,7 +187,7 @@ stages:
   - deploy
 ```
 
-- stages 키워드 사용 예시 (실습)
+- stages 키워드 사용 (예시) (실습)
 
 ```yml
 # .gitlab-ci.yml
