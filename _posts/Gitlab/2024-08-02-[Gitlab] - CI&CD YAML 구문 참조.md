@@ -143,7 +143,7 @@ include:
   - template: 'Auto-DevOps.gitlab-ci.yml'
 ```
 
-- include 키워드 사용 (예시) (실습)
+- include 키워드 사용 (실습)
 
 ```yml
 # .gitlab-ci.yml
@@ -187,7 +187,7 @@ stages:
   - deploy
 ```
 
-- stages 키워드 사용 (예시) (실습)
+- stages 키워드 사용 (실습)
 
 ```yml
 # .gitlab-ci.yml
@@ -210,6 +210,60 @@ deploy-job:
   stage: deploy
   script:
     - echo "Deploying the application" # 배포 관련 스크립트 실행
+```
+
+* * *
+
+## workflow :
+- CI/CD 파이프라인의 단계별 실행을 제어하는 데 사용되는 기능이다.
+- 특정 조건을 기반으로 파이프라인의 실행 여부를 결정하는 데 도움을 준다.
+
+- 역할
+- **파이프라인 실행 제어**: workflow 키워드는 조건에 따라 전체 파이프라인의 실행 여부를 결정하고, 이 키워드를 사용하면 특정 브랜치, 파일 변경, 또는 특정 변수를 기반으로 파이프라인의 실행을 결정할 수 있다.
+- **효율적인 리소스 사용**: 조건에 따라 파이프라인을 실행하지 않음으로써 CI/CD 리소스를 절약할 수 있다. <br> 예를 들어, 문서 파일만 변경되었을 때 빌드나 테스트를 실행할 필요가 없다면, 이러한 조건을 설정할 수 있다.
+
+- workflow 키워드 사용 (예시)
+
+```yml
+workflow:
+  rules:
+    - 조건
+```
+
+- workflow 키워드 사용 (실습)
+
+```yml
+default:
+  image: node:16 # 모든 잡에 대해 기본 Node.js 16 이미지를 사용
+
+stages:
+  - build
+  - test
+  - deploy
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"' # 'main' 브랜치에서만 파이프라인 실행
+    - if: '$CI_COMMIT_TAG' # 태그가 달린 커밋에서만 파이프라인 실행
+
+build-job:
+  stage: build
+  script:
+    - echo "Building the project"
+    - npm install
+    - npm run build
+
+test-job:
+  stage: test
+  script:
+    - echo "Running tests"
+    - pip install -r requirements.txt
+    - pytest
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying the application"
 ```
 
 * * *
