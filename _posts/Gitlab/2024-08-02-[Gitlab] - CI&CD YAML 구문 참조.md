@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - Gitlab CI/CD YAML 구문 참조"
+title: "[Gitlab] - Gitlab CI&CD YAML 구문 참조"
 date: 2024.08.02
 categories: Gitlab
 tags: [Git, Gitlab, Runner, CI, CD]
@@ -214,13 +214,13 @@ deploy-job:
 
 * * *
 
-## workflow :
+### workflow :
 - CI/CD 파이프라인의 단계별 실행을 제어하는 데 사용되는 기능이다.
 - 특정 조건을 기반으로 파이프라인의 실행 여부를 결정하는 데 도움을 준다.
 
 - 역할
-- **파이프라인 실행 제어**: workflow 키워드는 조건에 따라 전체 파이프라인의 실행 여부를 결정하고, 이 키워드를 사용하면 특정 브랜치, 파일 변경, 또는 특정 변수를 기반으로 파이프라인의 실행을 결정할 수 있다.
-- **효율적인 리소스 사용**: 조건에 따라 파이프라인을 실행하지 않음으로써 CI/CD 리소스를 절약할 수 있다. <br> 예를 들어, 문서 파일만 변경되었을 때 빌드나 테스트를 실행할 필요가 없다면, 이러한 조건을 설정할 수 있다.
+  - **파이프라인 실행 제어**: workflow 키워드는 조건에 따라 전체 파이프라인의 실행 여부를 결정하고, 이 키워드를 사용하면 특정 브랜치, 파일 변경, 또는 특정 변수를 기반으로 파이프라인의 실행을 결정할 수 있다.
+  - **효율적인 리소스 사용**: 조건에 따라 파이프라인을 실행하지 않음으로써 CI/CD 리소스를 절약할 수 있다. <br> 예를 들어, 문서 파일만 변경되었을 때 빌드나 테스트를 실행할 필요가 없다면, 이러한 조건을 설정할 수 있다.
 
 - workflow 키워드 사용 (예시)
 
@@ -244,7 +244,6 @@ stages:
 workflow:
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"' # 'main' 브랜치에서만 파이프라인 실행
-    - if: '$CI_COMMIT_TAG' # 태그가 달린 커밋에서만 파이프라인 실행
 
 build-job:
   stage: build
@@ -253,12 +252,86 @@ build-job:
     - npm install
     - npm run build
 
+build-job-test:
+  stage: build
+  script:
+    - echo "Building the project"
+    - npm install
+    - npm run build
+  rules:
+    - if : '$CI_COMMIT_BRANCH == "test"' # 'test' 브랜치에서만 파이프라인 실행
+
 test-job:
   stage: test
   script:
     - echo "Running tests"
     - pip install -r requirements.txt
     - pytest
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying the application"
+```
+
+> 'workflow: rules'와 rules in Jobs의 차이
+> 
+> **workflow: rules**: 전체 파이프라인의 실행 여부를 결정하며, 조건이 맞지 않으면 파이프라인 자체가 실행되지 않는다.<br>
+> **rules in Jobs**: 개별 잡의 실행 여부를 결정하며, 파이프라인이 실행되더라도 특정 잡이 실행되지 않을 수 있다.
+{: .prompt-tip}
+
+* * *
+
+## 잡 키워드 :
+### after_script :
+- 각 잡(job)이 완료된 후에 실행할 스크립트를 지정하는 데 사용된다.
+
+- after_script 사용 목적
+  - **정리 작업**: 테스트 중 생성된 임시 파일이나 디렉토리 등을 삭제하는 등의 정리 작업에 사용됩니다.
+  - **로그 수집**: 로그 파일이나 시스템 상태를 수집하여 외부 저장소에 업로드하거나 저장하는 데 사용됩니다.
+  - **알림 전송**: 잡의 결과를 슬랙(Slack)이나 이메일 등으로 알리는 스크립트를 실행할 수 있습니다.
+  - **상태 보고**: 잡의 종료 상태와 관련된 메타데이터를 기록하거나 보고서에 추가할 수 있습니다.
+  - **리소스 해제**: 사용한 외부 리소스(예: 데이터베이스 연결, 원격 서버 등)를 해제하는 작업을 포함할 수 있습니다.
+
+> 잡이 성공(SUCCESS), 실패(FAILURE), 취소(CANCELED)된 경우 모두 실행된다.<br>
+> script 키워드로 정의된 작업이 완료된 후에 실행된다.
+{: .prompt-info}
+
+- after_script 키워드 사용 (예시)
+
+```yml
+job_name:
+  script:
+    - echo "Running main script"
+    - touch temp_file.txt  # 임시 파일 생성
+  after_script:
+    - echo "Running cleanup"
+    - rm temp_file.txt  # 임시 파일 삭제
+    - tar -czf logs.tar.gz log/  # 로그 디렉토리를 압축
+```
+
+- after_script 키워드 사용 (실습)
+
+```yml
+default:
+  image: harbor.inno.com/secloudit-util/nginx:1.25.3
+
+stages:
+  - build
+  - test
+  - deploy
+
+build-job:
+  stage: build
+  script:
+    - echo "Building the project"
+
+test-job:
+  stage: test
+  script:
+    - echo "Running tests"
+  after_script:
+    - echo "This is after script"
 
 deploy-job:
   stage: deploy
