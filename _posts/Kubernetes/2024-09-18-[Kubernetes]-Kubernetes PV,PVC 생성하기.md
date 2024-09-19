@@ -110,6 +110,7 @@ $ exportfs -v
 ```
 
 - 테스트 파일 생성하기
+
 ```bash
 $ echo 'hello Persistent Volume!!' >> /k8s-nas/share/index.html
 ```
@@ -135,11 +136,13 @@ $ systemctl enable rpcbind
 ```
 
 - NFS 서버의 공유 상태 확인
+
 ```bash
 $ showmount -e Server_IP
 ```
 
 - 클라이언트에서 NFS 마운트
+
 ```bash
 $ mount -t nfs server_IP:/path/to/share /path/to/local_mount_point
 ```
