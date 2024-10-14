@@ -18,7 +18,7 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 * * *
 
 ## PV, PVC 생명주기 :
-[![pv,pvc 생명주기](/assets/img/post/kubernetes/pv,pvc%20생명주기.png)](/assets/img/post/kubernetes/pv,pvc%20생명주기.png)
+![pv,pvc 생명주기](/assets/img/post/kubernetes/pv,pvc%20생명주기.png)
 
 ### Provisioning(프로비저닝) :
 - PV를 만드는 단계를 프로비저닝(Provisioning)이라고 합니다. 프로비저닝 방법에는 두 가지가 있는데, PV를 미리 만들어 두고 사용하는 정적(static) 방법과 요청이 있을 때 마다 PV를 만드는 동적(dynamic) 방법이다.
@@ -252,6 +252,6 @@ $ cat /usr/share/nginx/html/index.html
 # hello Persistent Volume! 메세지 확인
 ```
 
-[![pv,pvc 테스트 nginx 웹서비스 확인](/assets/img/post/kubernetes/pv,pvc%20테스트%20nginx%20웹서비스%20확인.png)](/assets/img/post/kubernetes/pv,pvc%20테스트%20nginx%20웹서비스%20확인.png)
+![pv,pvc 테스트 nginx 웹서비스 확인](/assets/img/post/kubernetes/pv,pvc%20테스트%20nginx%20웹서비스%20확인.png)
 
 * * *

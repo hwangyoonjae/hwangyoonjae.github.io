@@ -33,7 +33,7 @@ $ git diff
 ```
 
 - 아래 그림과 같이 붉은색 부분은 고치기 이전 버전, 연두색 부분은 고친 이후 버전이다.
-[![git diff 명령어 실행 결과 화면](/assets/img/post/Gitlab/git%20diff%20명령어%20실행%20결과%20화면.png)](/assets/img/post/Gitlab/git%20diff%20명령어%20실행%20결과%20화면.png)
+![git diff 명령어 실행 결과 화면](/assets/img/post/Gitlab/git%20diff%20명령어%20실행%20결과%20화면.png)
 
 > @@ -21,7 +21,15 @@ 해석
 >
