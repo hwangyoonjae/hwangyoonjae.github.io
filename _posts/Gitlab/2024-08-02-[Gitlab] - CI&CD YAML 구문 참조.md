@@ -80,7 +80,26 @@ include: # Local 파일 포함
   - local: "template/build/build.gitlab-ci.yml"
 ```
 
-<!--include는 추후 수정 필요-->
+* * *
+
+### stages :
+- Job들을 단계적으로 실행하기 위해 사용
+- Job이 어느 단계(Stage)에 속하는지 명시할 때 사용
+
+> Job이 Stage에 속해야 하는 이유?
+>
+> 파이프라인 흐름을 정의하기 위해서다.
+> 
+> 스테이지를 지정하지 않은 Job은 오류가 발생하며, 파이프라인이 올바르게 실행되지 않는다.
+> 
+{: .prompt-info}
+
+```yaml
+stages:
+  - build
+  - test
+  - deploy
+```
 
 * * *
 
@@ -111,5 +130,41 @@ job_name:
 > Gitlab 브라우저 → Pipelines → Job 상세 페이지에서도 다운로드 가능하다.
 > 
 {: .prompt-info}
+
+* * *
+
+### needs :
+- 특정 Job이 다른 Job의 실행 결과에 의존할 때 사용한다.
+- 다른 stage나 Job이 먼저 실행되도록 명시적으로 설정할 수 있다.
+
+```yaml
+stages:
+  - build
+  - test
+
+job_name:
+  stage: build
+  script:
+    - echo "빌드 실행 중"
+    - mkdir out/
+    - echo "결과물 파일" > out/output.txt
+  artifacts:
+    paths:
+      - out/output.txt
+    expire_in: 1 week
+
+job2_name:
+  stage: test
+  before_script:
+    - echo "before"
+  script:
+    - echo "main script"
+  after_script:
+    - echo "after script"
+  needs:
+    - job: job_name
+```
+
+![needs 키워드 job 실행화면](/assets/img/post/Gitlab/needs%20키워드%20job%20실행화면.png)
 
 * * *
