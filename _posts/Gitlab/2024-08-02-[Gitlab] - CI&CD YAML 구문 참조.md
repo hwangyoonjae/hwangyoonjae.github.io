@@ -175,3 +175,37 @@ job2_name:
 ![needs 키워드 job 실행화면](/assets/img/post/Gitlab/needs%20키워드%20job%20실행화면.png)
 
 * * *
+
+### before_script, script, after_script :
+- **before_script**: 각 job의 메인 스크립트(script)가 실행되기 전에 공통적으로 실행할 명령어를 정의
+- **script**: 해당 job의 핵심 작업을 수행하는 명령어를 정의하고 반드시 필요한 작업
+- **after_script**: **script**가 끝난 후, 성공 여부와 상관없이 항상 실행되는 명령어를 정의
+
+```yaml
+stages:
+  - build
+
+build_job:
+  stage: build
+  before_script:
+    - echo "Setting up build environment"
+  script:
+    - echo "Building project"
+    - mkdir output
+    - echo "Build complete" > output/result.txt
+  after_script:
+    - echo "Cleaning up..."
+    - rm -rf output/
+```
+
+![script 키워드 job 실행화면](/assets/img/post/Gitlab/script%20키워드%20job%20실행화면.png)
+
+> script에서 환경 변수나 설정 파일 재적용 방법
+>
+> 파이프라인의 일부 환경변수나 특정 설정은 init.var와 같은 파일에 정의하는데 **after_script**에서는 리소스를 정리하거나 마무리 작업을 수행해야 하므로, 해당 환경변수들이 필요하다.
+> 
+> 만약 이러한 변수나 경로 설정이 없다면, 정리 작업이 실패하거나 리소스 삭제가 누락될 수 있다.
+> 
+{: .prompt-tip}
+
+* * *
