@@ -70,7 +70,14 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 
 ## 글로벌 키워드 :
 ### include :
-- 파이프라인 설정을 여러 파일로 분할해 관리하는 기능이다.
+- 파이프라인 설정을 여러 파일로 분할해 관리하는 기능으로 외부 yaml 파일의 확장자가 반드시 .yml 혹은 .yaml 이어야 한다.
+
+|옵션|설명|
+|-----|-----|
+|local|로컬 프로젝트 repository 안의 파일을 포함|
+|file|다른 프로젝트 repository 안의 파일을 포함|
+|remote|원격 URL의 파일을 포함|
+|template|GitLab 에서 제공하는 템플릿 포함|
 
 - YAML 파일을 포함하는 가장 간단하고 직접적인 방법인 로컬 파일을 포함하는 방법은 아래와 같다.
 
