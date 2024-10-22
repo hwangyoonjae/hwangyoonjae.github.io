@@ -259,3 +259,36 @@ test_job:
 {: .prompt-warning}
 
 * * *
+
+### allow_failure :
+- GitLab CI/CD에서 특정 Job이 실패해도 전체 파이프라인의 실패로 간주하지 않도록 설정하는 옵션
+- 실패해도 파이프라인을 멈추지 않고 다음 Job을 계속 실행할 수 있다.
+
+```yaml
+stages:
+  - build
+  - test
+
+job1:
+  stage: build
+  script:
+    - echo "빌드 진행 중..."
+    - exit 1 
+  allow_failure: true
+
+job2:
+  stage: test
+  script:
+    - echo "테스트 진행 중..."
+```
+
+![allow_failure 키워드 job 실행화면](/assets/img/post/Gitlab/allow_failure%20키워드%20job%20실행화면.png)
+
+> 주의할 점
+> 
+> **모니터링 어려움**: allow_failure를 설정하면 Job 실패가 무시되므로, 실패 상황을 놓칠 위험이 있습니다. 중요한 Job에는 사용하지 않는 것이 좋다.
+> 
+> **디버깅 어려움**: 여러 Job에 대해 allow_failure를 활성화하면, 파이프라인 문제를 추적하고 해결하기 어려울 수 있다.
+{: .prompt-warning}
+
+* * *
