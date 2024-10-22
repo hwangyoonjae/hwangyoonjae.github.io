@@ -209,3 +209,53 @@ build_job:
 {: .prompt-tip}
 
 * * *
+
+### extends :
+- 공통 설정을 재사용하고자 할 때 사용하는 기능
+- 여러 Job에서 동일한 설정을 반복하지 않고, 공통된 Job 템플릿을 정의한 후 이를 상속하여 재사용할 수 있다.
+
+```yaml
+stages:
+  - build
+  - test
+
+.default_template:
+  stage: build
+  before_script:
+    - echo "Setting up environment"
+  script:
+    - echo "Running build"
+  artifacts:
+    paths:
+      - build_output/
+    expire_in: 1 week
+
+build_job:
+  extends: .default_template
+  script:
+    - echo "Compiling source code"
+
+test_job:
+  extends: .default_template
+  stage: test
+  script:
+    - echo "Running tests"
+```
+
+![extends 키워드 job 실행화면](/assets/img/post/Gitlab/extends%20키워드%20job%20실행화면.png)
+
+> extends 사용 시의 규칙
+>
+> **점(.)으로 시작하는 템플릿**: 보통 공통 템플릿은 이름 앞에 .을 붙여 표시하는데 이 점(.)으로 시작하는 이름은 GitLab에서 직접 실행되지 않는 템플릿으로 간주한다.
+> 
+{: .prompt-info}
+
+> 템플릿 사용 시의 주의 사항
+>
+> **1. 이름 중복 방지**: 점(.)으로 시작하는 이름은 고유해야 하며, 실행되지 않는 템플릿으로 간주되기 때문에 이름을 구별하여 사용
+>
+> **2. 오버라이드 주의**: 개별 Job에서 템플릿 설정을 오버라이드할 때는 완전히 대체되기 때문에, 원하는 설정이 포함되었는지 확인 필요 (Job 내용이 우선)
+> 
+{: .prompt-warning}
+
+* * *
