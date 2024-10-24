@@ -355,3 +355,56 @@ deploy_job:
 {: .prompt-info}
 
 * * *
+
+### when :
+- 특정 조건이 충족되었을 때 Job을 실행할지 건너뛸지를 결정하는 데 사용
+
+#### when 키워드의 옵션:
+1. on_success (기본값) :
+  - Job이 이전 단계가 성공했을 때 실행
+
+2. on_failure :
+  - 이전 단계의 Job이 실패했을 때만 실행
+
+3. always :
+  - 항상 실행되고, 이전 단계의 성공 여부에 관계없이 무조건 실행
+
+4. manual :
+  - Job이 수동으로 트리거되어야 실행되고, 파이프라인 내에서 사용자가 "실행" 버튼을 눌러야 해당 Job이 시작
+
+5. delayed :
+  - Job이 일정 시간 후에 실행되도록 예약되고, start_in 키워드와 함께 사용되며, 특정 대기 시간 이후에 실행되도록 설정 가능
+
+```yaml
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo "Building the application..."
+
+test_job:
+  stage: test
+  script:
+    - echo "Testing the application..."
+  when: on_failure
+
+cleanup_job1:
+  stage: deploy
+  script:
+    - echo "Cleaning up 1..."
+  when: always
+
+cleanup_job2:
+  stage: deploy
+  script:
+    - echo "Cleaning up 2..."
+  when: manual
+```
+
+![when 키워드 job 실행화면](/assets/img/post/Gitlab/when%20키워드%20job%20실행화면.png)
+
+* * *
