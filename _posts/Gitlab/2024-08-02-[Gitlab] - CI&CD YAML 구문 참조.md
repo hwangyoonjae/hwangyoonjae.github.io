@@ -313,3 +313,45 @@ job_name:
 ```
 
 * * *
+
+### dependencies :
+- 특정 Job이 이전의 특정 Job들에서 생성된 artifacts를 가져오도록 지정할 때 사용
+
+```yaml
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo "Building the project..."
+  artifacts:
+    paths:
+      - build_output/
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+  dependencies:
+    - build_job
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying..."
+  dependencies:
+    - build_job
+```
+
+> 사용 이유
+>
+> 불필요한 파일 전송을 줄여서 파이프라인의 성능을 최적화할 수 있다.
+> 
+> 이전 단계의 특정 결과만을 활용해 의도한 빌드나 테스트를 수행할 수 있습니다.
+>
+{: .prompt-info}
+
+* * *
