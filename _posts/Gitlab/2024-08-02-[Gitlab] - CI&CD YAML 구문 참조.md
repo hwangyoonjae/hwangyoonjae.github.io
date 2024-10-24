@@ -292,3 +292,24 @@ job2:
 {: .prompt-warning}
 
 * * *
+
+### rules :
+- 파이프라인의 특정 Job을 언제 실행할지 결정하는 조건을 설정
+
+```yaml
+job_name:
+  script:
+    - echo "Running Job"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"' 
+```
+
+```yaml
+job_name:
+  script:
+    - echo "Merge Request Event"
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+```
+
+* * *
