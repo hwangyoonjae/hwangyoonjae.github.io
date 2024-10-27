@@ -110,6 +110,62 @@ stages:
 
 * * *
 
+### variables :
+- 환경변수를 설정하는데 사용
+- 이프라인의 글로벌 수준, 특정 단계(stage), Job 등 다양한 레벨에서 변수를 설정할 수 있어, 파이프라인 실행 시 유용한 정보를 저장하거나 커스텀 값을 사용할 수 있다.
+
+```yaml
+# 글로벌 변수 (모든 Job에서 사용 가능)
+variables:
+  VARIABLE_NAME: "value"
+```
+
+```yaml
+# Job 별 변수 (특정 Job에서만 사용)
+job_name:
+  variables:
+    VARIABLE_NAME: "specific_value"
+  script:
+    - echo "$VARIABLE_NAME"
+```
+
+- 아래와 같이 variables를 지정할 수 있다.
+
+```yaml
+variables:
+  GROBAL_BAR: "global_value"
+
+stages:
+  - build
+  - test
+
+build_job:
+  stage: build
+  variables:
+    BUILD_VAR: "build_value"
+  script:
+    - echo "Global: $GROBAL_BAR"
+    - echo "Build: $BUILD_VAR"
+
+test_job:
+  stage: test
+  script:
+    - echo "Server_ip: $SERVER_IP"
+```
+
+- Gitlab UI 화면에서 VARIABLE 등록방법은 아래 그림과 같다.
+
+![variable gitlab ui화면에서 등록방법](/assets/img/post/Gitlab/variable%20gitlab%20ui화면에서%20등록방법.png)
+
+> variables 작성 시 주의사항
+>
+> 변수 이름은 대문자로 작성하는 것이 일반적이며, 특수 문자는 피하는 것이 좋다.
+>
+> 보안이 중요한 변수는 GitLab UI에서 설정하고, .gitlab-ci.yml 파일에서는 사용하지 않는 것이 안전하다.
+{: .prompt-warning}
+
+* * *
+
 ## 잡 키워드 :
 ### artifats :
 - 빌드나 테스트 과정에서 생성된 파일을 저장하고 공유한다.
