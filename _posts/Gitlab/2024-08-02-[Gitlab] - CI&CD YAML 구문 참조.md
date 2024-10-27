@@ -464,3 +464,26 @@ cleanup_job2:
 ![when 키워드 job 실행화면](/assets/img/post/Gitlab/when%20키워드%20job%20실행화면.png)
 
 * * *
+
+### tags :
+- 작업 키워드는 특정 Runner에서만 파이프라인 Job을 실행하도록 지정
+- Runner가 가지고 있는 태그와 매칭되어, Job이 해당 Runner에서만 실행되도록 제한
+
+```yaml
+job_name:
+  script:
+    - echo "Job 실행 중"
+  tags:
+    - docker
+    - production
+```
+
+> tags 주의사항
+>
+> **Runner 태그 설정 확인:** 지정한 태그가 실제 Runner 설정에 있는지 확인해야한다.
+>
+> **공백 주의:** 태그 이름은 공백 없이 작성해야한다.
+> 
+{: .prompt-warning}
+
+* * *
