@@ -221,20 +221,7 @@ $ kubectl rollout restart deployment argocd-repo-server -n argocd
 
 * * *
 
-## 4. ArgoCD Application 생성하기 :
-- NEW APP으로 추가된 APPS는 SYNC를 수행하기 전 상태로 OutOfSync 상태의 App으로 되고, 하단의 SYNC 버튼을 클릭한 후 SYNCHRONIZE를 클릭한다.
-![[Pasted image 20240705124811.png]]
-![[Pasted image 20240705140227.png]]
-
-- 연동 후 정상적으로 pod 구성되면 아래 화면과 같이 나온다.
-![[Pasted image 20240705140557.png]]
-
-- 구성된 pod의 대한 Application 배포를 확인한다.
-![[Pasted image 20240705141439.png]]
-
-* * *
-
-## 5. ArgoCD 자동 배포 적용하기 :
+## 4. ArgoCD 자동 배포 적용하기 :
 - gitlab의 이벤트 발생 시 변경사항 확인하여 자동으로 배포되도록 설정한다.
 
 ```bash
