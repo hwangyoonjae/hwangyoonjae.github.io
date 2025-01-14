@@ -49,8 +49,12 @@ $ vi requirements.txt
 
 ```bash
 $ pip3 install -r requirements.txt
+
 # 오프라인 환경에서 설치해야하는 경우에는 아래 명령어를 통해 설치파일을 다운로드 받는다.
 $ pip3 download -r requirements.txt
+
+# 다운받은 설치파일들은 아래 명령어를 통해 설치한다.
+$ pip3 install --no-index --find-links=[폴더 경로로] *.whl
 ```
 
 [![requirements.txt 파일에서 의존성 설치](/assets/img/post/kubespray/requirements.txt%20파일에서%20의존성%20설치.png)](/assets/img/post/kubespray/requirements.txt%20파일에서%20의존성%20설치.png)
