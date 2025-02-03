@@ -58,7 +58,7 @@ Configuration (with the authentication token) was saved in "/etc/gitlab-runner/c
 
 ```
 
->[!HELP]- Gitlab 주소를 도메인으로 지정해서 연결해야하는 경우
+> Gitlab 주소를 도메인으로 지정해서 연결해야하는 경우
 >- /etc/hosts의 **IP주소 도메인명** 형태로 저장한다.
 {: .prompt-warning }
 
