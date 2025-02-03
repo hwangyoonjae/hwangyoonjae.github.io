@@ -50,8 +50,8 @@ data:
 >- Trigger는 "Push events" 체크
 {: .prompt-tip }
 
-![argocd webhook 이벤트 생성 클릭](/assets/img/post/ArgoCD/argocd%20webhook%20이벤트%20생성%20클릭.png)
 ![argocd webhook 이벤트 생성 화면](/assets/img/post/ArgoCD/argocd%20webhook%20이벤트%20생성%20화면.png)
+![argocd webhook 이벤트 생성 클릭](/assets/img/post/ArgoCD/argocd%20webhook%20이벤트%20생성%20클릭.png)
 
 * * *
 
