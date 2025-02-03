@@ -255,3 +255,20 @@ spec:
 ```
 
 * * *
+
+- 프로젝트 생성 시 자동으로 동기화 정책이 포함되도록 설정할 수 있다.
+
+```bash
+$ kubectl edit configmap argocd-cm -n argocd
+
+# 아래 내용 추가
+data:
+  application.default.syncPolicy: |
+    automated:
+      prune: true
+      selfHeal: true
+
+$ kubectl rollout restart deployment/argocd-server -n argocd
+```
+
+* * *
