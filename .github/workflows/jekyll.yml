@@ -44,19 +44,12 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: |
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          ls -al _site # _site 디렉터리 내 파일 확인
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: jekyll-site
-          path: ./_site # 빌드된 파일 경로
-      #   # Automatically uploads an artifact from the './_site' directory by default
-      #   uses: actions/upload-pages-artifact@v1
-      
+        # Automatically uploads an artifact from the './_site' directory by default
+        uses: actions/upload-pages-artifact@v1
 
   # Deployment job
   deploy:
