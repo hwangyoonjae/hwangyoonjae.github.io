@@ -221,6 +221,54 @@ $ vi dashboard_pipelines.json
 
 * * *
 
+## gitlab-ci-pipelines-exporter 다운로드(폐쇄망인 경우우) :
+
+- grafana 플러그인 다운로드
+
+> * [yesoreyeram-boomtable-panel 플러그인 다운로드](https://github.com/yesoreyeram/yesoreyeram-boomtable-panel/releases "yesoreyeram-boomtable-panel 플러그인 다운로드")
+> * [grafana-polystat-panel 플러그인 다운로드](https://github.com/grafana/grafana-polystat-panel/releases "grafana-polystat-panel 플러그인")
+
+![grafana 모니터링 플러그인 사용](/assets/img/post/Gitlab/grafana%20모니터링%20플러그인%20사용.png)
+
+- grafana 플러그인 압축 파일 복사
+
+```bash
+$ unzip yesoreyeram-boomtable-panel-1.6.0.zip
+$ unzip grafana-polystat-panel-2.1.14.any.zip
+
+$ cd /gitlab-ci-pipelines-exporter-main/examples/quickstart/grafana/
+$ mkdir plugins
+
+$ cp yesoreyeram-boomtable-panel-1.6.0 {grafana path}
+$ cp grafana-polystat-panel-2.1.14.any {grafana path}
+```
+
+- grafana plugin 컨테이너 볼륨 설정
+
+```bash
+$ vi /gitlab-ci-pipelines-exporter-main/examples/quickstart/docker-compose.yml
+
+---
+version: '3.8'
+services:
+  .
+  .
+  .
+grafana:
+  .
+  .
+  volumes:
+      - ./grafana/plugins:/var/lib/grafana/plugins  # 내용 추가가
+```
+
+- grafana container 재시작
+
+```bash
+$ docker restart <grafana-container-name>
+```
+
+* * *
+
 ## gitlab-ci-pipelines-exporter(Gitlab CI/CD 파이프라인 메트릭 수집기) 접속하기 :
 
 - gitlab-ci-pipelines-exporter 주소 (http://서버IP주소:8080/metrics) 접속하여 CI/CD 파이프라인 메트릭 수집 데이터가 표기되는지 확인합니다.
