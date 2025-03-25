@@ -1,14 +1,14 @@
 <!-- Post sharing snippet -->
 
-<div class="share-wrapper">
+<!-- <div class="share-wrapper">
   <span class="share-label text-muted me-1">{{ site.data.locales[include.lang].post.share }}</span>
   <span class="share-icons">
     {% capture title %}{{ page.title }} - {{ site.title }}{% endcapture %}
     {% assign title = title | uri_escape %}
-    {% assign url = page.url | absolute_url | url_encode %}
+    {% assign url = page.url | absolute_url | url_encode %} -->
 
     <!-- Share Link to Kakao -->
-    {% capture pre_img %}{{ page.image.path | default: page.image }}"{% endcapture %}
+    <!-- {% capture pre_img %}{{ page.image.path | default: page.image }}"{% endcapture %}
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script> Kakao.init('85d7b653c0d4f963bdafcc1c07338e51'); </script>
     <script>
@@ -32,10 +32,10 @@
       aria-label="KakaoTalk"
     >
       <i class="fa-fw fa-solid fa-comment"></i>
-    </a>
+    </a> -->
     
     <!-- Telegram, Linkedin -->
-    {% for share in site.data.share.platforms %}
+    <!-- {% for share in site.data.share.platforms %}
       {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}
       <a
         href="{{ link }}"
@@ -48,10 +48,10 @@
       >
         <i class="fa-fw {{ share.icon }}"></i>
       </a>
-    {% endfor %}
+    {% endfor %} -->
 
     <!-- Copy Link -->
-    <i
+    <!-- <i
       id="copy-link"
       class="fa-fw fas fa-link small"
       data-bs-toggle="tooltip"
@@ -61,5 +61,5 @@
     >
     </i>
   </span>
-</div>
+</div> -->
 
