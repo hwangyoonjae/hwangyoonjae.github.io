@@ -2,7 +2,7 @@
 layout: post
 title: "[Ansible] - Ansible Playbook 사용하기"
 date: 2022-11-25
-categories: Ansible
+categories: Ansible Test
 tags: [Ansible, 자동화, Playbook]
 image: /assets/img/post-title/ansible-wallpaper.jpg
 ---
