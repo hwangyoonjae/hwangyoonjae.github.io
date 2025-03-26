@@ -2,7 +2,7 @@
 layout: post
 title: "[Apache] - 주키퍼(zookeeper)란"
 date: 2023-12-28
-categories: Apache
+categories: Apache Concept
 tags: [Apache, Zookeper, Kafka]
 image: /assets/img/post-title/apache-zookeeper-wallpaper.jpg
 ---
