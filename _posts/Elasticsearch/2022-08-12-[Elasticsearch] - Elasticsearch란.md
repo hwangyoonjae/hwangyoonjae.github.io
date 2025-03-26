@@ -2,7 +2,7 @@
 layout: post
 title: "[Elasticsearch] - Elasticsearch란"
 date: 2022-08-12
-categories: Elasticsearch
+categories: Elasticsearch Concept
 tags: [JAVA, DATA]
 image: /assets/img/post-title/elasticsearch-wallpaper.jpg
 ---
