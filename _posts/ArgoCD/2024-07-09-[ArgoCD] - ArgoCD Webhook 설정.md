@@ -2,7 +2,7 @@
 layout: post
 title: "[ArgoCD] - ArgoCD Webhook 설정"
 date: 2024-07-09
-categories: ArgoCD Test
+categories: ArgoCD
 tags: [ArgoCD, Gitlab, Webhook]
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---

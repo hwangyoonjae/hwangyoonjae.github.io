@@ -2,7 +2,7 @@
 layout: post
 title: "[Bash] - Shell script root로 실행했는지 확인하기"
 date: 2023-02-07
-categories: Bash Test
+categories: Bash
 tags: [Shell script]
 image: /assets/img/post-title/bash-wallpaper.jpg
 ---

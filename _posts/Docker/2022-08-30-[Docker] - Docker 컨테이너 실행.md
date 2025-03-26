@@ -2,7 +2,7 @@
 layout: post
 title: "[Docker] - Docker 컨테이너 실행"
 date: 2022-08-30
-categories: Docker Test
+categories: Docker
 tags: [Docker, Image, Container]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "[Gitlab] - Gitlab 프로젝트 생성하기"
 date: 2023-10-12
-categories: Gitlab Test
+categories: Gitlab
 tags: [Git, Gitlab]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

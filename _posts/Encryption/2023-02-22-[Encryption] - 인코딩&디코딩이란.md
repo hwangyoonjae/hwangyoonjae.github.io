@@ -2,7 +2,7 @@
 layout: post
 title: "[Encryption] - 인코딩&디코딩이란"
 date: 2023-02-22
-categories: Encryption Concept
+categories: Encryption 
 tags: [Base64, Encoding, Decoding]
 image: /assets/img/post-title/encryption.jpg
 ---

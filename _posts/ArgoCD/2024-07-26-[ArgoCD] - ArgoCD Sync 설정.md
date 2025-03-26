@@ -2,7 +2,7 @@
 layout: post
 title: "[ArgoCD] - ArgoCD Sync 설정"
 date: 2024-07-26
-categories: ArgoCD Test
+categories: ArgoCD
 tags: [ArgoCD, Sync]
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---

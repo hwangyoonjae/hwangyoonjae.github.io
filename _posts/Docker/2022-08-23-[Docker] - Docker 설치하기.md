@@ -2,7 +2,7 @@
 layout: post
 title: "[Docker] - Docker 설치하기"
 date: 2022-08-23
-categories: Docker Install
+categories: Docker
 tags: [Docker, Kubernetes]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

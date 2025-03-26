@@ -2,7 +2,7 @@
 layout: post
 title: "[Kubernetes]- k9s란"
 date: 2024-07-30
-categories: Kubernetes Concept
+categories: Kubernetes 
 tags: [Kubernetes, k9s]
 image: /assets/img/post-title/k9s-wallpaper.jpg
 ---

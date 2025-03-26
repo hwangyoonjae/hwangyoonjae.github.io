@@ -2,7 +2,7 @@
 layout: post
 title: "[Kubernetes] - 쿠버네티스 설치하기(도커 X)"
 date: 2024-01-10
-categories: Kubernetes Install
+categories: Kubernetes
 tags: [Kubernetes, Container]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

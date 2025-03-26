@@ -2,7 +2,7 @@
 layout: post
 title: "[Ansible] - Ansible-playbook 이용하여 원격 서버 Docker 설치하기"
 date: 2025-01-07
-categories: Ansible Install
+categories: Ansible
 tags: [Ansible, Docker]
 image: /assets/img/post-title/ansible-wallpaper.jpg
 ---
