@@ -2,7 +2,7 @@
 layout: post
 title: "[Kubernetes]- Kubernetes Node Taint & Tolerations"
 date: 2024-07-24
-categories: Kubernetes 개념
+categories: Kubernetes Concept
 tags: [Kubernetes, taint, toleration]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

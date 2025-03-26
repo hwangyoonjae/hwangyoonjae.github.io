@@ -2,7 +2,7 @@
 layout: post
 title: "[Kubernetes] - Kubernetes Node 제거 방법 및 연결 방법"
 date: 2024-06-30
-categories: Kubernetes 트러블슈팅
+categories: Kubernetes Test
 tags: [Kubernetes, MasterNode, WorkerNode]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

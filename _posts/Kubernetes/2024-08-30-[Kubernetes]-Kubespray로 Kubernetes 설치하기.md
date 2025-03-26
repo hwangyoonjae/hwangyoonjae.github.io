@@ -2,7 +2,7 @@
 layout: post
 title: "[Kubernetes]- Kubespray로 Kubernetes 설치하기"
 date: 2024-08-30
-categories: Kubernetes 설치
+categories: Kubernetes Install
 tags: [Kubernetes, Kubespray]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
