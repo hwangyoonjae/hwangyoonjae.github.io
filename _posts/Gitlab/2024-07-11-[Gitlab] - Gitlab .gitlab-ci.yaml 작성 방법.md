@@ -2,7 +2,7 @@
 layout: post
 title: "[Gitlab] - Gitlab .gitlab-ci.yaml 작성 방법"
 date: 2024.07.11
-categories: Gitlab
+categories: Gitlab Concept
 tags: [Git, Gitlab, Runner]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

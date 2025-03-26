@@ -2,7 +2,7 @@
 layout: post
 title: "[Gitlab] - Docker Gitlab 설치하기"
 date: 2023-10-25
-categories: Gitlab
+categories: Gitlab Install
 tags: [Git, Gitlab, Docker]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

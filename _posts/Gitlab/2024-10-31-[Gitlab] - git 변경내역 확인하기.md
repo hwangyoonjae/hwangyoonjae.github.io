@@ -2,7 +2,7 @@
 layout: post
 title: "[Gitlab] - git 변경내역 확인하기"
 date: 2024.10.31
-categories: Gitlab
+categories: Gitlab Test
 tags: [Git, fetch, pull]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

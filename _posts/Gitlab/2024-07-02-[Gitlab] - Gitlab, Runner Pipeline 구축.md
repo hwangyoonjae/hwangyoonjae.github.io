@@ -2,7 +2,7 @@
 layout: post
 title: "[Gitlab] - Gitlab, Runner Pipeline 구축"
 date: 2024.07.02
-categories: Gitlab
+categories: Gitlab Install
 tags: [Git, Gitlab, Runner, Pipeline]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

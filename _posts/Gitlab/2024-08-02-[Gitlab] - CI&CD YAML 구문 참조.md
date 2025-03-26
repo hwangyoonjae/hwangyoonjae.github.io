@@ -2,7 +2,7 @@
 layout: post
 title: "[Gitlab] - Gitlab CI&CD YAML 구문 참조"
 date: 2024.08.02
-categories: Gitlab
+categories: Gitlab Concept
 tags: [Git, Gitlab, Runner, CI, CD]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "[Gitlab] - Gitlab 연동 오류 해결하기"
 date: 2023-10-23
-categories: Gitlab
+categories: Gitlab Test
 tags: [Git, Gitlab]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---
