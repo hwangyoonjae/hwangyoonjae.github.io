@@ -2,7 +2,7 @@
 layout: post
 title: "[Jenkins] - Jenkins 설치하기"
 date: 2022-09-09
-categories: Jenkins
+categories: Jenkins Install
 tags: [Jenkins, Java, CI]
 image: /assets/img/post-title/jenkins-wallpaper.jpg
 ---

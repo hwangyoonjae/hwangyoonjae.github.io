@@ -2,7 +2,7 @@
 layout: post
 title: "[Jenkins] - Jenkins Github 연동하기"
 date: 2022-11-23
-categories: Jenkins
+categories: Jenkins Test
 tags: [Jenkins, Github]
 image: /assets/img/post-title/jenkins-wallpaper.jpg
 ---
