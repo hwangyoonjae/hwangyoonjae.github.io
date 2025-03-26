@@ -2,7 +2,7 @@
 layout: post
 title: "[DB] - GROUP BY절과 Having절"
 date: 2023-03-08
-categories: DB
+categories: DB Concept
 tags: [GROUP BY, Having]
 image: /assets/img/post-title/db-wallpaper.jpg
 ---

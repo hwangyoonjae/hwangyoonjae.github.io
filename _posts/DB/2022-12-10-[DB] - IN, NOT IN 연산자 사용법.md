@@ -2,7 +2,7 @@
 layout: post
 title: "[DB] - IN, NOT IN 연산자 사용법"
 date: 2022-12-10
-categories: DB
+categories: DB Concept
 tags: [DB, IN, NOT IN]
 image: /assets/img/post-title/db-wallpaper.jpg
 ---
