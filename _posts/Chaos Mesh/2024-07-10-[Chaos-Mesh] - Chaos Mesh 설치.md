@@ -2,7 +2,7 @@
 layout: post
 title: "[Chaos-Mesh] - Chaos Mesh 설치"
 date: 2024-07-10
-categories: Chaos-Mesh
+categories: Chaos-Mesh Install
 tags: [chaos-mesh]
 image: /assets/img/post-title/chaos-mesh-wallpaper.jpg
 ---
