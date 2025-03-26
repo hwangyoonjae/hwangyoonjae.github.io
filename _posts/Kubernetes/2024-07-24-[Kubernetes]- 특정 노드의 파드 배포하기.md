@@ -2,7 +2,7 @@
 layout: post
 title: "[Kubernetes]- 특정 노드의 파드 배포하기"
 date: 2024-07-24
-categories: Kubernetes
+categories: Kubernetes 
 tags: [Kubernetes, label, selector]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

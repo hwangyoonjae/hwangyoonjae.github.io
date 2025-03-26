@@ -2,7 +2,7 @@
 layout: post
 title: "[Kubernetes]- Kubernetes Node Cordon & Drain"
 date: 2024-07-31
-categories: Kubernetes
+categories: Kubernetes 개념
 tags: [Kubernetes, Cordon, Drain]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

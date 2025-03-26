@@ -2,7 +2,7 @@
 layout: post
 title: "[Kubernetes] - 쿠버네티스 Dashboard 설치하기"
 date: 2024-02-13
-categories: Kubernetes
+categories: Kubernetes 설치
 tags: [Kubernetes, Dashboard]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
