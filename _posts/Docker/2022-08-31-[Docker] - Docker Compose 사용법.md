@@ -2,7 +2,7 @@
 layout: post
 title: "[Docker] - Docker 컴포즈 사용법"
 date: 2022-08-31
-categories: Docker
+categories: Docker Concept
 tags: [Docker, YAML]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

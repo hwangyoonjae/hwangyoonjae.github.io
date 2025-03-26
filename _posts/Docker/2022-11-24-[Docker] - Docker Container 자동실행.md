@@ -2,7 +2,7 @@
 layout: post
 title: "[Docker] - Docker Container 자동실행"
 date: 2022-11-24
-categories: Docker
+categories: Docker Test
 tags: [Docker, Container]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "[Docker] - Docker Tomcat + MariaDB 연동하기"
 date: 2023-08-02
-categories: Docker
+categories: Docker Test
 tags: [Docker, Tomat, MariaDB]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

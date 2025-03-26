@@ -2,7 +2,7 @@
 layout: post
 title: "[Docker] - Docker Swarm 구성하기"
 date: 2022-09-02
-categories: Docker
+categories: Docker Install
 tags: [Docker, Swarm, Orchestration]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---
