@@ -2,7 +2,7 @@
 layout: post
 title: "[DevOps] - CI/CD란"
 date: 2022-10-08
-categories: DevOps
+categories: DevOps Concept
 tags: [CI, CD]
 image: /assets/img/post-title/devops.jpg
 ---
