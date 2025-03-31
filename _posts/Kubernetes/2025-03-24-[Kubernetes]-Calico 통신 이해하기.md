@@ -39,9 +39,9 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
 ### IP-in-IP (IPIP) 모드 :
-- 클러스터 외부 네트워크와의 충돌을 방지하고, Pod 간 통신을 안정적으로 유지하기 위해 사용된다.
+- Pod 간 트래픽을 IPIP 터널을 통해 전달하여 Kubernetes 클러스터 내에서 간단한 네트워크 구성을 가능하게 한다.
 
-![Calico-ipip 설정 확인](/assets/img/post/kubernetes/Calico-ipip%20설정%20확인.png)
+![ipip 모드 통신 구조](/assets/img/post/kubernetes/ipip%20모드%20통신%20구조.png)
 
 > Direct (BGP) 모드가 기본이 아닌 이유
 > 
@@ -51,3 +51,26 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 
 ---
 
+### Direct (BGP) 모드 :
+- BGP를 활용하여 각 노드가 직접 라우팅 정보를 교환하며, 터널링 없이 최상의 네트워크 성능을 제공한다.
+
+![direct 모드 통신구조](/assets/img/post/kubernetes/direct%20모드%20통신%20구조.png)
+
+### BGP 연동 :
+- Kubernetes 클러스터 내부 네트워크와 IDC 내부망 네트워크 간 직접 라우팅도 가능하다.
+
+![direct 모드 bgp 연동](/assets/img/post/kubernetes/direct%20모드%20bgp%20연동.png)
+
+> Direct모드에서 BGP를 활용하는 이유?
+> 
+> Pod 간의 네트워크 트래픽을 터널링(IPIP, VXLAN) 없이 직접 전달하는 방식이다. 이 방식을 사용하면 네트워크 성능이 향상되지만, 각 노드가 Pod 네트워크에 대한 라우팅 정보를 알아야 한다는 문제가 생긴다.
+> 
+> 이 문제를 해결하기 위해 BGP(Border Gateway Protocol) 를 활용하여 노드 간 라우팅 정보를 자동으로 교환하고, Pod 네트워크 간 최적의 경로를 설정한다.
+{: .prompt-info}
+
+---
+
+### VXLAN 모드 :
+- L2 오버레이 네트워크 기술인 VXLAN을 사용하여 Pod 간 통신을 수행하며, BGP 없이도 사용할 수 있다.
+
+![vxlan 모드 통신구조](/assets/img/post/kubernetes/vlxan%20모드%20통신%20구조.png)
