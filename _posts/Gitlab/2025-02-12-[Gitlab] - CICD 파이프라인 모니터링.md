@@ -221,7 +221,7 @@ $ vi dashboard_pipelines.json
 
 * * *
 
-## gitlab-ci-pipelines-exporter 다운로드(폐쇄망인 경우우) :
+## gitlab-ci-pipelines-exporter 다운로드(폐쇄망인 경우) :
 
 - grafana 플러그인 다운로드
 
