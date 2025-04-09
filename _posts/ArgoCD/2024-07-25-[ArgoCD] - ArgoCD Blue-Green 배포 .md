@@ -87,6 +87,11 @@ spec:
     nodePort: 30082
 ```
 
+```bash
+$ kubectl apply -f blue-green-service-active.yaml
+$ kubectl apply -f blue-green-service-preview.yaml
+```
+
 * * *
 
 ## Gitlab repo에 파일 커밋하기 :
