@@ -15,6 +15,9 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 
 ## rollout App 배포방법 :
 
+> 아래 yaml 파일들은 Gitlab Repository에 저장합니다.
+{: .prompt-warning}
+
 ```yaml
 # rollout.yaml
 apiVersion: argoproj.io/v1alpha1
@@ -85,11 +88,6 @@ spec:
     port: 80
     targetPort: 8080
     nodePort: 30082
-```
-
-```bash
-$ kubectl apply -f blue-green-service-active.yaml
-$ kubectl apply -f blue-green-service-preview.yaml
 ```
 
 * * *
