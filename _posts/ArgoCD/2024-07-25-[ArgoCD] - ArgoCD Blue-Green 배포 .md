@@ -49,7 +49,7 @@ spec:
 * * *
 
 ## Service 생성하기 :
-- blueGreen 전략에는 activeService와 previewService라는 두 가지 서비스가 필요하여 두 설정 모두 Kubernetes 서비스 리소스를 참조한다.
+- BlueGreen 전략에는 activeService와 previewService라는 두 가지 서비스가 필요하여 두 설정 모두 Kubernetes 서비스 리소스를 참조한다.
 
 ```yaml
 # service-active.yaml
