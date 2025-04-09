@@ -95,7 +95,7 @@ $ kubectl apply -f blue-green-service-preview.yaml
 * * *
 
 ## Gitlab repo에 파일 커밋하기 :
-- 생성한 파일들을 girlab repo의 커밋하면, webhook을 통해 파일 변경을 전달받은 argocd에서 자동으로 배포하는 것을 확인한다.
+- 생성한 파일들을 gitlab repo의 커밋하면, webhook을 통해 파일 변경을 전달받은 argocd에서 자동으로 배포하는 것을 확인한다.
 ![argo rollout blue-green 배포 동작 확인](/assets/img/post/ArgoCD/argo%20rollout%20blue-green%20배포%20동작%20확인.png)
 
 * * *
