@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Nginx] - Nginx config 정리"
+title: "Nginx config 정리"
 date: 2022-09-10
 categories: Nginx
 tags: [Web, Nginx, config]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Nginx] - Nginx 설치하기"
+title: "Nginx 설치하기"
 date: 2022-08-10
 categories: Nginx
 tags: [Web, Nginx]

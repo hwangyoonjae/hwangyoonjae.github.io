@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Nginx] - Nginx 로드밸런싱 구현하기"
+title: "Nginx 로드밸런싱 구현하기"
 date: 2022-09-05
 categories: Nginx
 tags: [Web, Nginx, Loadbalancing]
