@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[CKA] - etcd 백업하기"
+title: "etcd 백업하기"
 date: 2024-07-17
-categories: CKA
-tags: [Kubernetes, etcd, CKA]
+categories: Kubernetes
+tags: [Kubernetes, etcd]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
