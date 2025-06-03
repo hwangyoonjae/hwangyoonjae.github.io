@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Ansible] - Ansible 설치하기"
+title: "Ansible 설치하기"
 date: 2022-10-02
 categories: Ansible
 tags: [Ansible, 자동화]

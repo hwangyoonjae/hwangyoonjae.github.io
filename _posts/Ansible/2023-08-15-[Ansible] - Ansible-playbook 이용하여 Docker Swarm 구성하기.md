@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Ansible] - Ansible-playbook 이용하여 Docker Swarm 구성하기"
+title: "Ansible-playbook 이용하여 Docker Swarm 구성하기"
 date: 2023-08-15
 categories: Ansible
 tags: [Ansible, Docker]

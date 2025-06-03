@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Ansible] - Ansible란"
+title: "Ansible란"
 date: 2022-08-24
 categories: Ansible
 tags: [Ansible, 자동화]

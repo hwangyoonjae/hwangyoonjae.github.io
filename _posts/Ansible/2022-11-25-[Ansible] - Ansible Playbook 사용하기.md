@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Ansible] - Ansible Playbook 사용하기"
+title: "Ansible Playbook 사용하기"
 date: 2022-11-25
 categories: Ansible
 tags: [Ansible, 자동화, Playbook]
