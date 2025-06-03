@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Redis] - Redis 설치하기"
+title: "Redis 설치하기"
 date: 2022-09-01
 categories: Redis
 tags: [DB, NoSQL]

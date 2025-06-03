@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Redis] - Redis Replica 구성하기"
+title: "Redis Replica 구성하기"
 date: 2023-04-14
 categories: Redis
 tags: [Redis, Replica, 복제]

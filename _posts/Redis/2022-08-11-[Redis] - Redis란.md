@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Redis] - Redis란"
+title: "Redis란"
 date: 2022-08-11
 categories: Redis
 tags: [DB, NoSQL]

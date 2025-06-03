@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Redis] - Redis 데이터 처리하기"
+title: "Redis 데이터 처리하기"
 date: 2023-05-17
 categories: Redis
 tags: [Redis]
