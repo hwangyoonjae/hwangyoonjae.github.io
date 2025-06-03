@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - Gitlab CI&CD YAML 구문 참조"
+title: "Gitlab CI&CD YAML 구문 참조"
 date: 2024.08.02
 categories: Gitlab 
 tags: [Git, Gitlab, Runner, CI, CD]

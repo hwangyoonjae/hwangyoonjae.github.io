@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - Gitlab & Runner 설치하기"
+title: "Gitlab & Runner 설치하기"
 date: 2024.06.18
 categories: Gitlab
 tags: [Git, Gitlab, Runner]

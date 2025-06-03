@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - Gitlab, Runner Pipeline 구축"
+title: "Gitlab, Runner Pipeline 구축"
 date: 2024.07.02
 categories: Gitlab
 tags: [Git, Gitlab, Runner, Pipeline]

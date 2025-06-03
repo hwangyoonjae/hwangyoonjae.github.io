@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - Gitlab, Runner CI&CD 구축"
+title: "Gitlab, Runner CI&CD 구축"
 date: 2024.07.11
 categories: Gitlab
 tags: [Git, Gitlab, Runner, CI, CD]

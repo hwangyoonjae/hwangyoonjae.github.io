@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - Gitlab과 Slack 연동하기"
+title: "Gitlab과 Slack 연동하기"
 date: 2023-10-26
 categories: Gitlab
 tags: [Git, Gitlab, Slack]

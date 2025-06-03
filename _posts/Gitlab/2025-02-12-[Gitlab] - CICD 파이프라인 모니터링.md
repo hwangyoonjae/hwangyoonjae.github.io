@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - CI/CD 파이프라인 모니터링"
+title: "CI/CD 파이프라인 모니터링"
 date: 2025.02.12
 categories: Gitlab
 tags: [Git, branch]

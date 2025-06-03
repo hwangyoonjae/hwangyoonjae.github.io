@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - Gitlab .gitlab-ci.yaml 작성 방법"
+title: "Gitlab .gitlab-ci.yaml 작성 방법"
 date: 2024.07.11
 categories: Gitlab 
 tags: [Git, Gitlab, Runner]

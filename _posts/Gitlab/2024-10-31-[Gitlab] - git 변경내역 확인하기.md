@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - git 변경내역 확인하기"
+title: "git 변경내역 확인하기"
 date: 2024.10.31
 categories: Gitlab
 tags: [Git, fetch, pull]

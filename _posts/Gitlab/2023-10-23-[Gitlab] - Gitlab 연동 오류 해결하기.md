@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - Gitlab 연동 오류 해결하기"
+title: "Gitlab 연동 오류 해결하기"
 date: 2023-10-23
 categories: Gitlab
 tags: [Git, Gitlab]

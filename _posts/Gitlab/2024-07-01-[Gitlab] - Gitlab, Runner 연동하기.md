@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - Gitlab, Runner 연동하기"
+title: "Gitlab, Runner 연동하기"
 date: 2024.07.01
 categories: Gitlab
 tags: [Git, Gitlab, Runner]

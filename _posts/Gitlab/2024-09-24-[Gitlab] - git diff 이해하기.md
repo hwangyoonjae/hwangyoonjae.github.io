@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Gitlab] - git diff 이해하기"
+title: "git diff 이해하기"
 date: 2024.09.24
 categories: Gitlab 
 tags: [Git, Gitlab, Runner, CI, CD]
