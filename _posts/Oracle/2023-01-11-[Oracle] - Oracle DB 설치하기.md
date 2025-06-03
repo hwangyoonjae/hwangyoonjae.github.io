@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Oracle] - Oracle DB 설치하기"
+title: "Oracle DB 설치하기"
 date: 2023-01-11
 categories: Oracle
 tags: [Oracle, MS-SQL]
