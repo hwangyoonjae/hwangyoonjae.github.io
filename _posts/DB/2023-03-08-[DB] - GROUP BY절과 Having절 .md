@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[DB] - GROUP BY절과 Having절"
+title: "GROUP BY절과 Having절"
 date: 2023-03-08
 categories: DB 
 tags: [GROUP BY, Having]
