@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Postgresql] - Postgresql 이중화 구성하기"
+title: "Postgresql 이중화 구성하기"
 date: 2023-07-04
 categories: Postgresql
 tags: [DB 이중화, Master, Slave]

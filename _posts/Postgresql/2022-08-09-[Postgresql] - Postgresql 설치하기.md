@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Postgresql] - Postgresql 설치하기"
+title: "Postgresql 설치하기"
 date: 2022-08-09
 categories: Postgresql
 tags: [DBMS, ORDBMS, PostgreSQL]
