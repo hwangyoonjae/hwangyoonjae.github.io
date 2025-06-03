@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[NEXUS] - Nexus Repository 설치하기"
+title: "Nexus Repository 설치하기"
 date: 2024-11-10
 categories: Nexus
 tags: [Nexus, Docker, Repo]
