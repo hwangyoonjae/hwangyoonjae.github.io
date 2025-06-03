@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Chaos-Mesh] - Chaos Mesh 개념 정의"
+title: "Chaos Mesh 개념 정의"
 date: 2024-07-10
 categories: Chaos-Mesh 
 tags: [chaos-mesh]
