@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Network] - CDN이란"
+title: "CDN이란"
 date: 2022-11-04
 categories: Network
 tags: [CDN, GSLB]
