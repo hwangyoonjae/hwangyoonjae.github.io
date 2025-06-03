@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker 설치하기"
+title: "Docker 설치하기"
 date: 2022-08-23
 categories: Docker
 tags: [Docker, Kubernetes]

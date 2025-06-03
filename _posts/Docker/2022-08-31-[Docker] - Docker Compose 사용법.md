@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker 컴포즈 사용법"
+title: "Docker 컴포즈 사용법"
 date: 2022-08-31
 categories: Docker 
 tags: [Docker, YAML]

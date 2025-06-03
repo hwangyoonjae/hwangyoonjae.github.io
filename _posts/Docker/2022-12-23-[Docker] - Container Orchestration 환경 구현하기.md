@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Container Orchestration 환경 구현하기"
+title: "Container Orchestration 환경 구현하기"
 date: 2022-12-23
 categories: Docker
 tags: [Docker, YAML]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker Swarm 구성하기"
+title: "Docker Swarm 구성하기"
 date: 2022-09-02
 categories: Docker
 tags: [Docker, Swarm, Orchestration]

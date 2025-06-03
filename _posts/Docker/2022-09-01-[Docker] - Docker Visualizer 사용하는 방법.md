@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker Visualizer 사용하는 방법"
+title: "Docker Visualizer 사용하는 방법"
 date: 2022-09-01
 categories: Docker 
 tags: [Docker, YAML, Visualizer]

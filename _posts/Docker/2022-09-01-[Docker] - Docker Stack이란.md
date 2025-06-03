@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker Stack이란"
+title: "Docker Stack이란"
 date: 2022-09-01
 categories: Docker 
 tags: [Docker, YAML]

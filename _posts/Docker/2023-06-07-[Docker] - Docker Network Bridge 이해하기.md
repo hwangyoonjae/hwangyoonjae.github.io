@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker Network Bridge 이해하기"
+title: "Docker Network Bridge 이해하기"
 date: 2023-06-07
 categories: Docker 
 tags: [Docker, Network]

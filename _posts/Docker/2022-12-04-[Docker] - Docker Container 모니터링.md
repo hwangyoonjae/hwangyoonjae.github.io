@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker Container 모니터링"
+title: "Docker Container 모니터링"
 date: 2022-12-04
 categories: Docker
 tags: [Docker, Container, 모니터링]

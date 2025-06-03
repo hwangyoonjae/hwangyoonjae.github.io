@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker 로드밸런싱 구현하기"
+title: "Docker 로드밸런싱 구현하기"
 date: 2023-08-08
 categories: Docker
 tags: [Docker, Load Balancing]

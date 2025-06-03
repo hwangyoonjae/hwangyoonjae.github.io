@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker 로그 확인하기"
+title: "Docker 로그 확인하기"
 date: 2023-01-09
 categories: Docker
 tags: [Docker, Logs]

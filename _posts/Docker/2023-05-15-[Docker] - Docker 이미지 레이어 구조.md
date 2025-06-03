@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker 이미지 레이어 구조"
+title: "Docker 이미지 레이어 구조"
 date: 2023-05-25
 categories: Docker 
 tags: [Docker, Overlay2]

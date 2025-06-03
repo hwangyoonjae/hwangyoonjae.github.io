@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker Container 자동실행"
+title: "Docker Container 자동실행"
 date: 2022-11-24
 categories: Docker
 tags: [Docker, Container]

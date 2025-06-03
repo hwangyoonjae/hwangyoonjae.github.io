@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker 이미지 다운로드"
+title: "Docker 이미지 다운로드"
 date: 2022-08-25
 categories: Docker
 tags: [Docker, Image, Container]

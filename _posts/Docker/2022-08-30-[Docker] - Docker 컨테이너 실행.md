@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Docker] - Docker 컨테이너 실행"
+title: "Docker 컨테이너 실행"
 date: 2022-08-30
 categories: Docker
 tags: [Docker, Image, Container]
