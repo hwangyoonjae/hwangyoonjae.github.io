@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Elasticsearch] - Elasticsearch란"
+title: "Elasticsearch란"
 date: 2022-08-12
 categories: Elasticsearch 
 tags: [JAVA, DATA]
