@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[MariaDB] - MariaDB 설치하기"
+title: "MariaDB 설치하기"
 date: 2022-09-21
 categories: MariaDB
 tags: [RDBMS, MariaDB, MySQL]

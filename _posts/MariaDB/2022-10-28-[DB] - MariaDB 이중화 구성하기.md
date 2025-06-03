@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[MariaDB] - MariaDB 이중화 구성하기"
+title: "MariaDB 이중화 구성하기"
 date: 2022-10-28
 categories: MariaDB
 tags: [DB 이중화, Master, Slave]
