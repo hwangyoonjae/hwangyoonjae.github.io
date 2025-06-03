@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Cubrid] - Cubrid 이중화 구성하기"
+title: "Cubrid 이중화 구성하기"
 date: 2023-04-05
 categories: Cubrid
 tags: [DB, Cubrid, Master, Slave]
