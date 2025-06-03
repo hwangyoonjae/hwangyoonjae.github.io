@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Web] - WEB Server와 WAS 차이"
+title: "WEB Server와 WAS 차이"
 date: 2022-08-04
 categories: Web
 tags: [Web, Was]
