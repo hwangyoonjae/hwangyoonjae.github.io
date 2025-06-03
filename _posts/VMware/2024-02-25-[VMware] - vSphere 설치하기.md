@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[VMware] - vSphere 설치하기"
+title: "vSphere 설치하기"
 date: 2024-02-25
 categories: VMware
 tags: [VMware, vSphere]
