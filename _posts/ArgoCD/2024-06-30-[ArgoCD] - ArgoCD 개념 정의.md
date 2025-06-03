@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[ArgoCD] - ArgoCD 개념 정의"
+title: "ArgoCD 개념 정의"
 date: 2024-06-30
 categories: ArgoCD 
 tags: [ArgoCD]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[ArgoCD] - Gitops (ArgoCD, Gitlab) 연동하기"
+title: "Gitops (ArgoCD, Gitlab) 연동하기"
 date: 2024-07-05
 categories: ArgoCD
 tags: [ArgoCD, Gitlab, Gitops]

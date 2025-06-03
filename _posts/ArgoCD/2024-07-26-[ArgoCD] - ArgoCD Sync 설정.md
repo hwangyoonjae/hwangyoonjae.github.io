@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[ArgoCD] - ArgoCD Sync 설정"
+title: "ArgoCD Sync 설정"
 date: 2024-07-26
 categories: ArgoCD
 tags: [ArgoCD, Sync]

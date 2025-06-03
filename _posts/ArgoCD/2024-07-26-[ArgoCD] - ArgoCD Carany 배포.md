@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[ArgoCD] - ArgoCD Carany 배포"
+title: "ArgoCD Carany 배포"
 date: 2024-07-26
 categories: ArgoCD
 tags: [ArgoCD, Argo-Rollout, Carany]

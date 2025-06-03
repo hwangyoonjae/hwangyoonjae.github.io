@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[ArgoCD] - ArgoCD Blue-Green 배포"
+title: "ArgoCD Blue-Green 배포"
 date: 2024-07-25
 categories: ArgoCD
 tags: [ArgoCD, Argo-Rollout, Blue-Green]
