@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Linux] - Crontab 설정하기"
+title: "Crontab 설정하기"
 date: 2022-09-18
 categories: Linux
 tags: [Crontab]

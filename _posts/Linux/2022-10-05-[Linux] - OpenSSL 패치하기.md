@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Linux] - OpenSSL 패치하기"
+title: "OpenSSL 패치하기"
 date: 2022-10-05
 categories: Linux
 tags: [SSL]

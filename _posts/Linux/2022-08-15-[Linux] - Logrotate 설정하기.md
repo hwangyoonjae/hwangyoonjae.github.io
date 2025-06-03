@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Linux] - Logrotate 설정하기"
+title: "Logrotate 설정하기"
 date: 2022-08-15
 categories: Linux
 tags: [Linux, Log]
