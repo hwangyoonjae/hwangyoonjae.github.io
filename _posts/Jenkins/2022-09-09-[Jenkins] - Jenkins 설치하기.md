@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Jenkins] - Jenkins 설치하기"
+title: "Jenkins 설치하기"
 date: 2022-09-09
 categories: Jenkins
 tags: [Jenkins, Java, CI]

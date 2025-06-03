@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Jenkins] - Jenkins Pipeline 구축하기"
+title: "Jenkins Pipeline 구축하기"
 date: 2023-10-19
 categories: Jenkins
 tags: [Jenkins, CI, CD, Github]

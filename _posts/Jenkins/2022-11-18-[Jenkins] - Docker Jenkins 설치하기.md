@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Jenkins] - Docker Jenkins 설치하기"
+title: "Docker Jenkins 설치하기"
 date: 2022-11-18
 categories: Jenkins
 tags: [Jenkins, Java, CI, Docker]
