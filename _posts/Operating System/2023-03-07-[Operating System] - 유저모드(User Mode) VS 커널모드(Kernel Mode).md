@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Operating System] - 유저모드(User Mode) VS 커널모드(Kernel Mode)"
+title: "유저모드(User Mode) VS 커널모드(Kernel Mode)"
 date: 2023-03-07
 categories: OperatingSystem
 tags: [User Mode, Kernel Mode]

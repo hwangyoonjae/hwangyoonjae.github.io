@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Operating System] - 커널이란"
+title: "커널이란"
 date: 2023-03-12
 categories: OperatingSystem
 tags: [Kernel]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Operating System] - 인터페이스란"
+title: "인터페이스란"
 date: 2023-03-25
 categories: OperatingSystem
 tags: [Interface]
