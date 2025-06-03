@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Jekyll] - Github 블로그 만들기"
+title: "Github 블로그 만들기"
 date: 2022-06-04
 categories: Jekyll
 tags: [markdown, components, extra]

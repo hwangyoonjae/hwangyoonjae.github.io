@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Jekyll] - Window에서 jekyll 로컬 서버 실행"
+title: "Window에서 jekyll 로컬 서버 실행"
 date: 2022-06-07
 categories: Jekyll
 tags: [Window, Jekyll]

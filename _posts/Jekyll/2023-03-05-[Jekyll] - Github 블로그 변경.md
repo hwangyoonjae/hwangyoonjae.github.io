@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Jekyll] - Github 블로그 변경"
+title: "Github 블로그 변경"
 date: 2023-03-05
 categories: Jekyll
 tags: [Jekyll, Minimal Mistakes]

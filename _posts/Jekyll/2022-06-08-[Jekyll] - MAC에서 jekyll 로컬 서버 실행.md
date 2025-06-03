@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Jekyll] - MAC에서 jekyll 로컬 서버 실행"
+title: "MAC에서 jekyll 로컬 서버 실행"
 date: 2022-06-08
 categories: Jekyll
 tags: [MAC, Jekyll, extra]
