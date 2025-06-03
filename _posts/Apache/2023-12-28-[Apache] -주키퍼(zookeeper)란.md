@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Apache] - 주키퍼(zookeeper)란"
+title: "주키퍼(zookeeper)란"
 date: 2023-12-28
 categories: Apache
 tags: [Apache, Zookeper, Kafka]
