@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes]- k9s란"
+title: "k9s란"
 date: 2024-07-30
 categories: Kubernetes 
 tags: [Kubernetes, k9s]

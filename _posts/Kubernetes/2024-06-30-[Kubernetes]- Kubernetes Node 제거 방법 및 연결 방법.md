@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes] - Kubernetes Node 제거 방법 및 연결 방법"
+title: "Kubernetes Node 제거 방법 및 연결 방법"
 date: 2024-06-30
 categories: Kubernetes
 tags: [Kubernetes, MasterNode, WorkerNode]

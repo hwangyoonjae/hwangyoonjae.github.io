@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes]- Kubernetes Node Cordon & Drain"
+title: "Kubernetes Node Cordon & Drain"
 date: 2024-07-31
 categories: Kubernetes 
 tags: [Kubernetes, Cordon, Drain]

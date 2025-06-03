@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes] - 쿠버네티스 HAproxy 구성하기"
+title: "Kubernetes HAproxy 구성하기"
 date: 2024-02-19
 categories: Kubernetes
 tags: [Kubernetes, HAproxy, Loadbalance]

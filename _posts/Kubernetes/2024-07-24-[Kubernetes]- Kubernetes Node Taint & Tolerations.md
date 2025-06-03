@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes]- Kubernetes Node Taint & Tolerations"
+title: "Kubernetes Node Taint & Tolerations"
 date: 2024-07-24
 categories: Kubernetes 
 tags: [Kubernetes, taint, toleration]

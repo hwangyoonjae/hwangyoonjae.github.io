@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes] - 쿠버네티스 설치 중 오류 해결하기"
+title: "kubernetes 설치 중 오류 해결하기"
 date: 2023-05-09
 categories: Kubernetes
 tags: [Kubernetes]

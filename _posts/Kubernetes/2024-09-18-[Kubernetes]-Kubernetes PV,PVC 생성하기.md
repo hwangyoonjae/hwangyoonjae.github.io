@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes]- Kubernetes PV,PVC 생성하기"
+title: "Kubernetes PV,PVC 생성하기"
 date: 2024-09-18
 categories: Kubernetes 
 tags: [Kubernetes, PV, PVC]

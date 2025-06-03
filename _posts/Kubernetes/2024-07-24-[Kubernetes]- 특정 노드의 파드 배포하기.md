@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes]- 특정 노드의 파드 배포하기"
+title: "특정 노드의 파드 배포하기"
 date: 2024-07-24
 categories: Kubernetes
 tags: [Kubernetes, label, selector]

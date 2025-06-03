@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes]-Kubernetes 클러스터 Grafana 모니터링"
+title: "Kubernetes 클러스터 Grafana 모니터링"
 date: 2025-03-31
 categories: Kubernetes 
 tags: [Kubernetes, Prometheus, Grafana]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes]-nfs-subdir-external-provisioner 사용하기"
+title: "nfs-subdir-external-provisioner 사용하기"
 date: 2025-04-07
 categories: Kubernetes 
 tags: [Kubernetes, nfs]

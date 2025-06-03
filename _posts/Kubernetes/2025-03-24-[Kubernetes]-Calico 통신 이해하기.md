@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes] - Calico 통신 이해하기"
+title: "Calico 통신 이해하기"
 date: 2025-03-24
 categories: Kubernetes 
 tags: [Kubernetes, Calico]

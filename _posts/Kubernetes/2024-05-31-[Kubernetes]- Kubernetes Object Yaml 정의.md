@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes] - Kubernetes Object Yaml 정의"
+title: "Kubernetes Object Yaml 정의"
 date: 2024-05-31
 categories: Kubernetes 
 tags: [Kubernetes, Yaml]
