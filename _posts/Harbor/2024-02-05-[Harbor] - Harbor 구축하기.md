@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Harbor] - Harbor 구축하기"
+title: "Harbor 구축하기"
 date: 2024-02-05
 categories: Harbor
 tags: [Dockerhub, Image]
