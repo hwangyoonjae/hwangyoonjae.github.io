@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Helm] - Helm Chart 사용 예제"
+title: "Helm Chart 사용 예제"
 date: 2024-07-22
 categories: Helm
 tags: [Helm, Kubernetes]
