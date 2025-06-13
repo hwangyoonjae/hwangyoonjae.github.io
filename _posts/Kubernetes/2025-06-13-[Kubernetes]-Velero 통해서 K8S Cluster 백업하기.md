@@ -24,12 +24,14 @@ sudo tee /etc/systemd/system/minio.service > /dev/null <<EOF
 [Unit]
 Description=MinIO
 After=network.target
+
 [Service]
 User=minio-user
 Group=minio-user
 ExecStart=/usr/local/bin/minio server /opt/minio/data --console-address ":9001"
 Restart=always
 LimitNOFILE=65536
+
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -48,7 +50,7 @@ sudo systemctl enable --now minio
 * * *
 
 ## MinIO 설정하기:
-- 브라우저 접속 (http://<MinIO_IP>:9001)
+- 브라우저 접속 (http://{MinIO_IP}:9001)
 
 > ID : minioadmin / PW : minioadmin 
 {: .prompt-info }
@@ -162,8 +164,9 @@ $ velero uninstall
 $ velero backup create cluster-backup --wait
 ```
 
-> ***cluster-backup:*** 백업 이름 (원하는 이름으로 변경 가능)
-> ***--wait:*** 백업이 완료될 때까지 기다림
+> ***`cluster-backup:`*** 백업 이름 (원하는 이름으로 변경 가능)
+> 
+> ***`--wait:`*** 백업이 완료될 때까지 기다림
 {: .prompt-example }
 
 * * *
@@ -184,9 +187,11 @@ $ velero backup create partial-backup \
   --wait
 ```
 
-> ***partial-backup:*** 백업 이름 (원하는 이름으로 변경 가능)
-> ***persistentvolumes,persistentvolumeclaims,pods:*** 리소스 목록(컴마로 구분)
-> ***--wait:*** 백업이 완료될 때까지 기다림
+> ***`partial-backup`:*** 백업 이름 (원하는 이름으로 변경 가능)
+> 
+> ***`persistentvolumes,persistentvolumeclaims,pods`:*** 리소스 목록(컴마로 구분)
+> 
+> ***`--wait`:*** 백업이 완료될 때까지 기다림
 {: .prompt-example }
 
 * * *
