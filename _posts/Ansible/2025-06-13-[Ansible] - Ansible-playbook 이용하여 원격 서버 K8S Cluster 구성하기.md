@@ -23,9 +23,7 @@ image: /assets/img/post-title/ansible-wallpaper.jpg
 ├── cluster.yml
 ├── install_rpm
 │   ├── ansible-7.7.0-1.el9.noarch.rpm
-│   ├── ansible-core-2.14.17-1.el9.x86_64.rpm
 │   ├── ansible-core-2.14.18-1.el9.x86_64.rpm
-│   ├── git-core-2.43.5-2.el9_5.x86_64.rpm
 │   ├── git-core-2.47.1-2.el9_6.x86_64.rpm
 │   ├── python3-cffi-1.14.5-5.el9.x86_64.rpm
 │   ├── python3-cryptography-36.0.1-4.el9.x86_64.rpm
@@ -86,7 +84,7 @@ $ ansible --version
 # 모든 Script는 해당 변수 값을 사용합니다.
 
 # 도메인 주소
-DEFAULT_DOMAIN="inno.com"
+DEFAULT_DOMAIN="<고객사명>.com"
 HARBOR_DOMAIN="harbor.$DEFAULT_DOMAIN"
 INGRESS_DOMAIN="$DEFAULT_DOMAIN"
 
@@ -96,7 +94,7 @@ LOADBALANCER_SERVER_NAME=""
 
 # 설치 파일 폴더 경로
 INSTALL_BASE_PATH="/root"
-INSTALL_PATH="$INSTALL_BASE_PATH/secloudit-v2.2-install"
+INSTALL_PATH="$INSTALL_BASE_PATH/<Install_Directory>"
 
 # 노드 IP 목록(개수 만큼 입력)
 MASTER_IPS=("")
