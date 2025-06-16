@@ -215,3 +215,41 @@ $ velero backup logs cluster-backup
 - 백업 파일 MinIO 웹 콘솔에서 확인
 
 ![백업 파일 MinIO 웹 콘솔에서 확인](/assets/img/post/kubernetes/백업%20파일%20MinIO%20웹%20콘솔에서%20확인.png)
+
+## Velero 백업 주기 설정하기:
+- 주기적인 백업 설정 방법
+
+```bash
+# 매일 오전 3시에 전체 백업
+velero schedule create daily-backup \
+  --schedule="0 3 * * *" \
+  --include-namespaces=* \
+  --ttl 168h
+```
+
+- 각 옵션 설명
+
+|옵션|설명|
+|---|---|
+|daily-backup|스케줄 이름|
+|--schedule="0 3 * * *"|Cron 형식|
+|--include-namespaces=*|전체 네임스페이스 백업|
+|--ttl 168h|백업 보관 기간|
+
+> Velero에서 일 단위를 공식 지원하지 않아 백업 보관 기간은 반드시 시간 단위로 설정해야한다.
+{:prompt-warning}
+
+* * *
+
+- 스케줄 확인 및 관리 명령어
+
+```bash
+# 등록된 스케줄 확인
+$ velero schedule get
+
+# 상세 정보 확인
+$ velero schedule describe <NAME>
+
+# 스케줄 삭제
+$ velero schedule delete <NAME>
+```
