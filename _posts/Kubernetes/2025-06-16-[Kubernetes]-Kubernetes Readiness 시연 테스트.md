@@ -40,7 +40,7 @@ spec:
 ```
 
 > 해당 Pod는 /ready 경로가 없으므로, 초기 상태부터 Readiness에 실패하게 된다.
-{:prompt-warning}
+{: .prompt-warning}
 
 * * *
 
@@ -60,7 +60,7 @@ $ kubectl describe pod <pod-name>
 ```
 
 > 출력 중 Readiness probe failed: 메시지가 보이면, probe가 작동 중이다.
-{:prompt-tip}
+{: .prompt-tip}
 
 ![Readiness 실패 로그](/assets/img/post/kubernetes/Readiness%20실패%20로그.png)
 
