@@ -140,6 +140,7 @@ $ velero install \
   --bucket velero \
   --secret-file ./credentials-velero \
   --backup-location-config region=minio,s3ForcePathStyle=true,s3Url=http://<LB_SERVER_IP>:9000
+  --use-node-agent
 ```
 
 > LB 서버 아이피 주소 입력 시 kubectl 명령어 사용이 가능해야합니다.
