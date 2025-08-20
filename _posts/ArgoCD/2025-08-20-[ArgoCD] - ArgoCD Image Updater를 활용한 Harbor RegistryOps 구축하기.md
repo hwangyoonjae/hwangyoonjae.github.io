@@ -113,3 +113,78 @@ metadata:
 ![argocd application annotations 웹에서 추가](/assets/img/post/ArgoCD/argocd%20application%20annotations%20웹에서%20추가.png)
 
 ---
+
+## ArgoCD 배포 파일 생성하기:
+
+- 파일 구조는 아래와 같다.
+
+```bash
+kustomize-dir/
+├── kustomization.yaml
+├── deployment.yaml
+├── service.yaml
+```
+
+```yaml
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custom-nginx
+  labels:
+    app: custom-nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: custom-nginx
+  template:
+    metadata:
+      labels:
+        app: custom-nginx
+    spec:
+      containers:
+      - name: custom-nginx
+        image: [Harbor_Project_URL]
+        ports:
+        - containerPort: 80
+```
+
+---
+
+```yaml
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: custom-nginx-service
+spec:
+  selector:
+    app: custom-nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+```
+
+---
+
+```yaml
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - deployment.yaml
+  - service.yaml
+images:
+  - name: [Harbor_Project_URL]
+    newTag: [version]
+```
+
+> ArgoCD Image Updater와 함께 배포할 때 Deployment YAML에서 Kustomize를 사용하는 이유?
+>
+> Deployment YAML을 그대로 쓰면, 하드코딩된 이미지 때문에 자동 배포가 불가능하기 때문에, Kustomize를 사용하여 이미지 태그 업데이트를 자동화하기 위해 사용한다. 
+{: .prompt-info}
+
+---
