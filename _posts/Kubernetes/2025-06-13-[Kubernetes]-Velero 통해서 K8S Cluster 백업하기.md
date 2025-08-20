@@ -238,7 +238,7 @@ velero schedule create daily-backup \
 |--ttl 168h|백업 보관 기간|
 
 > Velero에서 일 단위를 공식 지원하지 않아 백업 보관 기간은 반드시 시간 단위로 설정해야한다.
-{:prompt-warning}
+{: .prompt-warning}
 
 * * *
 
