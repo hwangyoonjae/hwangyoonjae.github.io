@@ -3,7 +3,7 @@ layout: post
 title: "Harbor 구축하기"
 date: 2024-02-05
 categories: Harbor
-tags: [Dockerhub, Image]
+tags: [Harbor, Dockerhub, Image]
 image: /assets/img/post-title/harbor-wallpaper.jpg
 ---
 

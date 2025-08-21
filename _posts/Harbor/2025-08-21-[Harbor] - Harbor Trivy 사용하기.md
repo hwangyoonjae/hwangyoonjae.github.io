@@ -3,7 +3,7 @@ layout: post
 title: "Harbor Trivy 사용하기"
 date: 2025-08-21
 categories: Harbor
-tags: [Dockerhub, Image, Trivy]
+tags: [Harbor, Dockerhub, Image, Trivy]
 image: /assets/img/post-title/harbor-wallpaper.jpg
 ---
 
