@@ -2,7 +2,7 @@
 layout: post
 title: "Docker 로그 확인하기"
 date: 2023-01-09
-categories: Docker
+categories: [컨테이너, Docker]
 tags: [Docker, Logs]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

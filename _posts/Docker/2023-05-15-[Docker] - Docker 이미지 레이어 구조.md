@@ -2,7 +2,7 @@
 layout: post
 title: "Docker 이미지 레이어 구조"
 date: 2023-05-25
-categories: Docker 
+categories: [컨테이너, Docker] 
 tags: [Docker, Overlay2]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "CICD 프로젝트 Runner 자동 등록 파이프라인"
 date: 2025-08-20
-categories: Gitlab
+categories: [DevOps, Gitlab]
 tags: [Git, Project, Runner]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

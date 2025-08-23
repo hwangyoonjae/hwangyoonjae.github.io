@@ -2,7 +2,7 @@
 layout: post
 title: "Calico 통신 이해하기"
 date: 2025-03-24
-categories: Kubernetes 
+categories: [컨테이너, Kubernetes] 
 tags: [Kubernetes, Calico]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

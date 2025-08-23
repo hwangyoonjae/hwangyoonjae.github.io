@@ -2,7 +2,7 @@
 layout: post
 title: "커널이란"
 date: 2023-03-12
-categories: OperatingSystem
+categories: [운영체제 & 네트워크, OperatingSystem]
 tags: [Kernel]
 image: /assets/img/post-title/os-wallpaper.jpg
 ---

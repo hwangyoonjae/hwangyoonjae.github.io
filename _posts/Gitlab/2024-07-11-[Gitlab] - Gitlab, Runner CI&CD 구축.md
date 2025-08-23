@@ -2,7 +2,7 @@
 layout: post
 title: "Gitlab, Runner CI&CD 구축"
 date: 2024.07.11
-categories: Gitlab
+categories: [DevOps, Gitlab]
 tags: [Git, Gitlab, Runner, CI, CD]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

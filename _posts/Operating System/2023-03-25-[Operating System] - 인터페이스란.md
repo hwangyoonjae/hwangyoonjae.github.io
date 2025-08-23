@@ -2,7 +2,7 @@
 layout: post
 title: "인터페이스란"
 date: 2023-03-25
-categories: OperatingSystem
+categories: [운영체제 & 네트워크, OperatingSystem]
 tags: [Interface]
 image: /assets/img/post-title/os-wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Docker 이미지 다운로드"
 date: 2022-08-25
-categories: Docker
+categories: [컨테이너, Docker]
 tags: [Docker, Image, Container]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Redis 데이터 처리하기"
 date: 2023-05-17
-categories: Redis
+categories: [DB, Redis]
 tags: [Redis]
 image: /assets/img/post-title/redis-wallpaper.jpg
 ---

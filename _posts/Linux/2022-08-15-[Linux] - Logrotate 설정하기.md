@@ -2,7 +2,7 @@
 layout: post
 title: "Logrotate 설정하기"
 date: 2022-08-15
-categories: Linux
+categories: [운영체제 & 네트워크, Linux]
 tags: [Linux, Log]
 image: /assets/img/post-title/linux-wallpaper.jpg
 ---

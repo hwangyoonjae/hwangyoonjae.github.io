@@ -2,7 +2,7 @@
 layout: post
 title: "Nginx config 정리"
 date: 2022-09-10
-categories: Nginx
+categories: [Server, Nginx]
 tags: [Web, Nginx, config]
 image: /assets/img/post-title/nginx-wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Github 블로그 변경"
 date: 2023-03-05
-categories: Jekyll
+categories: [Blog, Jekyll]
 tags: [Jekyll, Minimal Mistakes]
 image: /assets/img/post-title/jekyll-wallpaper.jpg
 ---

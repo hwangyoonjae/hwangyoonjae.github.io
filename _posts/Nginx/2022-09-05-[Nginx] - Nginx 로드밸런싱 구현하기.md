@@ -2,7 +2,7 @@
 layout: post
 title: "Nginx 로드밸런싱 구현하기"
 date: 2022-09-05
-categories: Nginx
+categories: [Server, Nginx]
 tags: [Web, Nginx, Loadbalancing]
 image: /assets/img/post-title/nginx-wallpaper.jpg
 ---

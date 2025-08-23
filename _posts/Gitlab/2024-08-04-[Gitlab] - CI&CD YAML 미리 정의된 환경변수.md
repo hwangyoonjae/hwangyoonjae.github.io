@@ -2,7 +2,7 @@
 layout: post
 title: "Gitlab CI&CD YAML 미리 정의된 환경변수"
 date: 2024.08.04
-categories: Gitlab 
+categories: [DevOps, Gitlab] 
 tags: [Git, Gitlab, Runner, CI, CD]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Gitlab, Runner 연동하기"
 date: 2024.07.01
-categories: Gitlab
+categories: [DevOps, Gitlab]
 tags: [Git, Gitlab, Runner]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

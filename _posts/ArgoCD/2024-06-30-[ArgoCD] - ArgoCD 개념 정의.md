@@ -2,7 +2,7 @@
 layout: post
 title: "ArgoCD 개념 정의"
 date: 2024-06-30
-categories: ArgoCD 
+categories: [DevOps, ArgoCD] 
 tags: [ArgoCD]
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---

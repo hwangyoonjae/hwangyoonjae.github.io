@@ -2,7 +2,7 @@
 layout: post
 title: "Crontab 설정하기"
 date: 2022-09-18
-categories: Linux
+categories: [운영체제 & 네트워크, Linux]
 tags: [Crontab]
 image: /assets/img/post-title/linux-wallpaper.jpg
 ---

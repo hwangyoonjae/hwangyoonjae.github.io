@@ -2,7 +2,7 @@
 layout: post
 title: "Portainer 구축하기"
 date: 2023-10-26
-categories: Docker
+categories: [컨테이너, Docker]
 tags: [Docker, Portainer]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Helm Chart 사용 예제"
 date: 2024-07-22
-categories: Helm
+categories: [컨테이너, Helm]
 tags: [Helm, Kubernetes]
 image: /assets/img/post-title/helm-wallpaper.jpg
 ---

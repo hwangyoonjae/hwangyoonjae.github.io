@@ -2,7 +2,7 @@
 layout: post
 title: "kubernetes 설치 중 오류 해결하기"
 date: 2023-05-09
-categories: Kubernetes
+categories: [컨테이너, Kubernetes]
 tags: [Kubernetes]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Oracle DB 설치하기"
 date: 2023-01-11
-categories: Oracle
+categories: [DB, Oracle]
 tags: [Oracle, MS-SQL]
 image: /assets/img/post-title/oracle-wallpaper.jpg
 ---

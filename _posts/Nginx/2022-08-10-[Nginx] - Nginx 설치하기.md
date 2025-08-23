@@ -2,7 +2,7 @@
 layout: post
 title: "Nginx 설치하기"
 date: 2022-08-10
-categories: Nginx
+categories: [Server, Nginx]
 tags: [Web, Nginx]
 image: /assets/img/post-title/nginx-wallpaper.jpg
 ---

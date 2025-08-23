@@ -2,7 +2,7 @@
 layout: post
 title: "vSphere 설치하기"
 date: 2024-02-25
-categories: VMware
+categories: [인프라, VMware]
 tags: [VMware, vSphere]
 image: /assets/img/post-title/vmware-wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Kubernetes Rollout 시연 테스트"
 date: 2025-06-16
-categories: Kubernetes 
+categories: [컨테이너, Kubernetes] 
 tags: [Kubernetes, Deployment, Rollout]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

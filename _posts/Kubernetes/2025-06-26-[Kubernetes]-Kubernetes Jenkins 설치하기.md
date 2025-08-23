@@ -2,7 +2,7 @@
 layout: post
 title: "Kubernetes Jenkins 설치하기"
 date: 2025-06-26
-categories: Kubernetes 
+categories: [컨테이너, Kubernetes] 
 tags: [Kubernetes, Jenkins]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

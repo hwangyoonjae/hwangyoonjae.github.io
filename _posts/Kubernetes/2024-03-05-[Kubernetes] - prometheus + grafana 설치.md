@@ -2,7 +2,7 @@
 layout: post
 title: "prometheus + grafana 설치"
 date: 2024-03-05
-categories: Kubernetes
+categories: [컨테이너, Kubernetes]
 tags: [Kubernetes, Prometheus, Grafana]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Velero 통해서 K8S Cluster 백업하기"
 date: 2025-06-13
-categories: Kubernetes 
+categories: [컨테이너, Kubernetes] 
 tags: [Kubernetes, Velero, Backup]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

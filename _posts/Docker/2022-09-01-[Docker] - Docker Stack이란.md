@@ -2,7 +2,7 @@
 layout: post
 title: "Docker Stack이란"
 date: 2022-09-01
-categories: Docker 
+categories: [컨테이너, Docker] 
 tags: [Docker, YAML]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

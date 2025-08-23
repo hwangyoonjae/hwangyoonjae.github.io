@@ -2,7 +2,7 @@
 layout: post
 title: "Jenkins Slack 알림 메세지 전송하기"
 date: 2023-10-30
-categories: Jenkins
+categories: [DevOps, Jenkins]
 tags: [Jenkins, CI, CD, Slack]
 image: /assets/img/post-title/jenkins-wallpaper.jpg
 ---

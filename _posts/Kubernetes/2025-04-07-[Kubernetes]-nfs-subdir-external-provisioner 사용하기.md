@@ -2,7 +2,7 @@
 layout: post
 title: "nfs-subdir-external-provisioner 사용하기"
 date: 2025-04-07
-categories: Kubernetes 
+categories: [컨테이너, Kubernetes] 
 tags: [Kubernetes, nfs]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

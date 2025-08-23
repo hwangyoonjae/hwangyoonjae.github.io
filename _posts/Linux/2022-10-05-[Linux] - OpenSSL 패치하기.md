@@ -2,7 +2,7 @@
 layout: post
 title: "OpenSSL 패치하기"
 date: 2022-10-05
-categories: Linux
+categories: [운영체제 & 네트워크, Linux]
 tags: [SSL]
 image: /assets/img/post-title/linux-wallpaper.jpg
 ---

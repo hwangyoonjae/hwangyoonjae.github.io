@@ -2,7 +2,7 @@
 layout: post
 title: "WEB Server와 WAS 차이"
 date: 2022-08-04
-categories: Web
+categories: [프로그래밍, Web]
 tags: [Web, Was]
 image: /assets/img/post-title/web-wallpaper.jpg
 ---
