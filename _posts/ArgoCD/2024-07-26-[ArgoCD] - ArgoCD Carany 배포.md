@@ -75,7 +75,7 @@ spec:
 
 ## Gitlab repo에 파일 커밋하기 :
 - 생성한 파일들을 girlab repo의 커밋하면, webhook을 통해 파일 변경을 전달받은 argocd에서 자동으로 배포하는 것을 확인한다.
-![argo rollout Canary 배포 동작 확인](/assets/img/post/ArgoCD/argo%20rollout%20Canary%20배포%20동작%20확인.png)
+![argo rollout Canary 배포 동작 확인](/assets/img/post/ArgoCD/argo%20rollout%20carany%20배포%20동작%20확인.png)
 
 * * *
 
@@ -86,7 +86,7 @@ spec:
 $ kubectl get pod -n argo-rollouts
 $ kubectl get svc -n argo-rollouts
 ```
-![argo rollout Canary service 확인](/assets/img/post/ArgoCD/argo%20rollout%20Canary%20service%20확인.png)
+![argo rollout Canary service 확인](/assets/img/post/ArgoCD/argo%20rollout%20carany%20service%20확인.png)
 
 * * *
 
@@ -97,6 +97,6 @@ $ kubectl get svc -n argo-rollouts
 $ kubectl argo rollouts promote {rollout명} -n {namespace명}
 ```
 
-![Canary 수동 승격 후 화면](/assets/img/post/ArgoCD/Canary%20수동%20승격%20후%20화면.png)
+![Canary 수동 승격 후 화면](/assets/img/post/ArgoCD/carany%20수동%20승격%20후%20화면.png)
 
 * * *
