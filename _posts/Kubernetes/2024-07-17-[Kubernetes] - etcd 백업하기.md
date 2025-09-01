@@ -2,7 +2,7 @@
 layout: post
 title: "etcd 백업하기"
 date: 2024-07-17
-categories: Kubernetes
+categories: [컨테이너, Kubernetes]
 tags: [Kubernetes, etcd]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

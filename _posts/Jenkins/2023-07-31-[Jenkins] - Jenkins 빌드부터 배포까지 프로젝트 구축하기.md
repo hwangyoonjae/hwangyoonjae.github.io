@@ -2,7 +2,7 @@
 layout: post
 title: "Jenkins 빌드부터 배포까지 프로젝트 구축하기"
 date: 2023-07-31
-categories: Jenkins
+categories: [DevOps, Jenkins]
 tags: [Jenkins, CI, CD, Github]
 image: /assets/img/post-title/jenkins-wallpaper.jpg
 ---

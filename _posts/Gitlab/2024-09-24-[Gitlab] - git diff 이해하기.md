@@ -2,7 +2,7 @@
 layout: post
 title: "git diff 이해하기"
 date: 2024.09.24
-categories: Gitlab 
+categories: [DevOps, Gitlab] 
 tags: [Git, Gitlab, Runner, CI, CD]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

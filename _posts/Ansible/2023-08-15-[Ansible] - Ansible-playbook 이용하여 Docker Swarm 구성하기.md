@@ -2,7 +2,7 @@
 layout: post
 title: "Ansible-playbook 이용하여 Docker Swarm 구성하기"
 date: 2023-08-15
-categories: Ansible
+categories: [DevOps, Ansible]
 tags: [Ansible, Docker]
 image: /assets/img/post-title/ansible-wallpaper.jpg
 ---

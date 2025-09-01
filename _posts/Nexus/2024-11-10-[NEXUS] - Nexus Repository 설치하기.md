@@ -2,7 +2,7 @@
 layout: post
 title: "Nexus Repository 설치하기"
 date: 2024-11-10
-categories: Nexus
+categories: [DevOps, Nexus]
 tags: [Nexus, Docker, Repo]
 image: /assets/img/post-title/nexus-wallpaper.jpg
 ---

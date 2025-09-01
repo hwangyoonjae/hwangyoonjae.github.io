@@ -2,7 +2,7 @@
 layout: post
 title: "Github 블로그 만들기"
 date: 2022-06-04
-categories: Jekyll
+categories: [Blog, Jekyll]
 tags: [markdown, components, extra]
 image: /assets/img/post-title/jekyll-wallpaper.jpg
 ---

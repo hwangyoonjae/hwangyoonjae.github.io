@@ -2,7 +2,7 @@
 layout: post
 title: "Window에서 jekyll 로컬 서버 실행"
 date: 2022-06-07
-categories: Jekyll
+categories: [Blog, Jekyll]
 tags: [Window, Jekyll]
 image: /assets/img/post-title/jekyll-wallpaper.jpg
 ---

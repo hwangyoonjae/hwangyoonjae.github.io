@@ -2,7 +2,7 @@
 layout: post
 title: "MariaDB 설치하기"
 date: 2022-09-21
-categories: MariaDB
+categories: [DB, MariaDB]
 tags: [RDBMS, MariaDB, MySQL]
 image: /assets/img/post-title/mariadb-wallpaper.jpg
 ---

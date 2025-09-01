@@ -2,7 +2,7 @@
 layout: post
 title: "Docker 로드밸런싱 구현하기"
 date: 2023-08-08
-categories: Docker
+categories: [컨테이너, Docker]
 tags: [Docker, Load Balancing]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

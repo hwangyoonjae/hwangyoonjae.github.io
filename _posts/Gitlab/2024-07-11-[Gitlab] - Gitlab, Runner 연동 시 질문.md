@@ -2,7 +2,7 @@
 layout: post
 title: "Gitlab, Runner 연동 시 질문"
 date: 2024.07.11
-categories: Gitlab 
+categories: [DevOps, Gitlab] 
 tags: [Git, Gitlab, Runner]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

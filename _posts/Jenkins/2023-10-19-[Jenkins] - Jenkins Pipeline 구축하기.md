@@ -2,7 +2,7 @@
 layout: post
 title: "Jenkins Pipeline 구축하기"
 date: 2023-10-19
-categories: Jenkins
+categories: [DevOps, Jenkins]
 tags: [Jenkins, CI, CD, Github]
 image: /assets/img/post-title/jenkins-wallpaper.jpg
 ---

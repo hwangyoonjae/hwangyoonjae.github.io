@@ -2,7 +2,7 @@
 layout: post
 title: "Docker Container 모니터링"
 date: 2022-12-04
-categories: Docker
+categories: [컨테이너, Docker]
 tags: [Docker, Container, 모니터링]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---

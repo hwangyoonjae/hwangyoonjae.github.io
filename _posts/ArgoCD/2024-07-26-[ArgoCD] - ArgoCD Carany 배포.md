@@ -2,8 +2,13 @@
 layout: post
 title: "ArgoCD Canary 배포"
 date: 2024-07-26
+<<<<<<< HEAD
 categories: ArgoCD
 tags: [ArgoCD, Argo-Rollout, Canary]
+=======
+categories: [DevOps, ArgoCD]
+tags: [ArgoCD, Argo-Rollout, Carany]
+>>>>>>> 55740a736c31664cf09ad9eb2a75e3f9fa8d581d
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
 

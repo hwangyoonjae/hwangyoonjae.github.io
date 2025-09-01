@@ -2,7 +2,7 @@
 layout: post
 title: "Gitlab 로컬 서버 구축하기"
 date: 2023-10-12
-categories: Gitlab
+categories: [DevOps, Gitlab]
 tags: [Git, Gitlab]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Redis란"
 date: 2022-08-11
-categories: Redis
+categories: [DB, Redis]
 tags: [DB, NoSQL]
 image: /assets/img/post-title/redis-wallpaper.jpg
 ---

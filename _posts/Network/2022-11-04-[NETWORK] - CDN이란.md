@@ -2,7 +2,7 @@
 layout: post
 title: "CDN이란"
 date: 2022-11-04
-categories: Network
+categories: [운영체제 & 네트워크, Network]
 tags: [CDN, GSLB]
 image: /assets/img/post-title/network-wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Ansible-playbook 이용하여 원격 서버 K8S Cluster 구성하기"
 date: 2025-06-13
-categories: Ansible
+categories: [DevOps, Ansible]
 tags: [Ansible, Kubernetes]
 image: /assets/img/post-title/ansible-wallpaper.jpg
 ---

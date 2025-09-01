@@ -2,7 +2,7 @@
 layout: post
 title: "ArgoCD Image Updater를 활용한 Harbor RegistryOps 구축하기"
 date: 2025-08-20
-categories: ArgoCD
+categories: [DevOps, ArgoCD]
 tags: [ArgoCD, ImageUpdater]
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---

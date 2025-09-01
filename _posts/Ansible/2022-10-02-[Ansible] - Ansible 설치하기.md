@@ -2,7 +2,7 @@
 layout: post
 title: "Ansible 설치하기"
 date: 2022-10-02
-categories: Ansible
+categories: [DevOps, Ansible]
 tags: [Ansible, 자동화]
 image: /assets/img/post-title/ansible-wallpaper.jpg
 ---

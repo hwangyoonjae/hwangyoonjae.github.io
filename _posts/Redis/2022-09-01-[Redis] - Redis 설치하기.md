@@ -2,7 +2,7 @@
 layout: post
 title: "Redis 설치하기"
 date: 2022-09-01
-categories: Redis
+categories: [DB, Redis]
 tags: [DB, NoSQL]
 image: /assets/img/post-title/redis-wallpaper.jpg
 ---

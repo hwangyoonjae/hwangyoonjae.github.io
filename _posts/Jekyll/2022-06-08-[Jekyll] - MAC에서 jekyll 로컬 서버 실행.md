@@ -2,7 +2,7 @@
 layout: post
 title: "MAC에서 jekyll 로컬 서버 실행"
 date: 2022-06-08
-categories: Jekyll
+categories: [Blog, Jekyll]
 tags: [MAC, Jekyll, extra]
 image: /assets/img/post-title/jekyll-wallpaper.jpg
 ---

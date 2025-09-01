@@ -2,7 +2,7 @@
 layout: post
 title: "Kubernetes 설치하기"
 date: 2023-04-15
-categories: Kubernetes
+categories: [컨테이너, Kubernetes]
 tags: [Kubernetes, Docker, Container]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---

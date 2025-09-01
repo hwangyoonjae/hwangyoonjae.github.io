@@ -2,7 +2,7 @@
 layout: post
 title: "MariaDB 이중화 구성하기"
 date: 2022-10-28
-categories: MariaDB
+categories: [DB, MariaDB]
 tags: [DB 이중화, Master, Slave]
 image: /assets/img/post-title/mariadb-wallpaper.jpg
 ---

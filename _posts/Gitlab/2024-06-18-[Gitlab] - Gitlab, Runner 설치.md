@@ -2,7 +2,7 @@
 layout: post
 title: "Gitlab & Runner 설치하기"
 date: 2024.06.18
-categories: Gitlab
+categories: [DevOps, Gitlab]
 tags: [Git, Gitlab, Runner]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

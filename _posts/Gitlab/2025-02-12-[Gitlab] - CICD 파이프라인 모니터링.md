@@ -2,7 +2,7 @@
 layout: post
 title: "CI/CD 파이프라인 모니터링"
 date: 2025.02.12
-categories: Gitlab
+categories: [DevOps, Gitlab]
 tags: [Git, branch]
 image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---

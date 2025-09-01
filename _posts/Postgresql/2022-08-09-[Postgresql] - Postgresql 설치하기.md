@@ -2,7 +2,7 @@
 layout: post
 title: "Postgresql 설치하기"
 date: 2022-08-09
-categories: Postgresql
+categories: [DB, Postgresql]
 tags: [DBMS, ORDBMS, PostgreSQL]
 image: /assets/img/post-title/postgresql-wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "ArgoCD Blue-Green 배포"
 date: 2024-07-25
-categories: ArgoCD
+categories: [DevOps, ArgoCD]
 tags: [ArgoCD, Argo-Rollout, Blue-Green]
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
