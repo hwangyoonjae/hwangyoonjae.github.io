@@ -14,89 +14,200 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 * * *
 
 ## rollout App 배포방법 :
+### rollout 생성하기:
 
 ```yaml
 # rollout.yaml
 apiVersion: argoproj.io/v1alpha1
-kind: Rollout # Rollout으로 생성
+kind: Rollout
 metadata:
-  name: canary-rollout
-  namespace: argo-rollouts
+  name: my-svc
 spec:
-  replicas: 8
-  revisionHistoryLimit: 2 # 보관할 이전 버전의 최대 수
+  replicas: 4
+  revisionHistoryLimit: 3
+  progressDeadlineSeconds: 600
+  strategy:
+    canary:
+      maxSurge: 25%
+      maxUnavailable: 0
+      stableService: my-svc
+      canaryService: my-svc-canary
+      trafficRouting:
+        nginx:
+          stableIngress: my-svc     # base/ingress.yaml 의 Ingress 이름과 동일
+      steps:
+        - setWeight: 10             # 새 버전이 10% 트랙픽 받음
+        - pause: { duration: 120 }  # 2분 관찰 후 자동 진행
+        - setWeight: 30             # 새 버전이 30% 트랙픽 받음
+        - pause: { duration: 180 }  # 3분 관찰
+        - setWeight: 60             # 새 버전이 60% 트랙픽 받음
+        - pause: { duration: 300 }  # 5분 관찰
+        # 마지막 스텝이 끝나면 자동으로 100%로 승격됨(별도 promote 필요 없음)
   selector:
     matchLabels:
-      app: canary
+      app: my-svc
   template:
     metadata:
       labels:
-        app: canary
+        app: my-svc
     spec:
       containers:
-      - name: canary-rollouts-demo
-        image: harbor.com/argo-rollout/particule/simplecolorapi:3.0
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 5000
-  strategy:
-    canary: # Canary 배포 전략을 사용할 것임을 지정
-      maxSurge: "25%"    # canary 배포로 생성할 pod의 비율
-      maxUnavailable: 0  # 업데이트 될 때 사용할 수 없는 pod의 최대 수
-      steps:
-      - setWeight: 25    # 카나리로 배포된 서버로 전송해야될 트래픽 비율
-      - pause: {}        # AutoPromotion Time
+        - name: app
+          # 태그는 overlays/kustomization.yaml의 images.newTag에서 관리(Image Updater write-back)
+          image: harbor.test.com/util/custom-nginx
+          ports:
+            - name: http
+              containerPort: 80
 ```
 
 * * *
 
-## Service 생성하기 :
+### Service 생성하기 :
 - 새 버전과 기존 버전의 애플리케이션 간의 트래픽을 효율적으로 라우팅하고 관리하기 위해 서비스를 생성한다.
 
 ```yaml
-# service-active.yaml
-kind: Service
+# service-stable.yaml
 apiVersion: v1
+kind: Service
 metadata:
-  name: canary-service
-  namespace: argo-rollouts
+  name: my-svc
 spec:
   selector:
-    app: canary
+    app: my-svc
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 5000
-    nodePort: 30083
-  type: NodePort
+    - port: 80
+      targetPort: http
+```
+
+```yaml
+# service-canary.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-svc-canary
+spec:
+  selector:
+    app: my-svc
+  ports:
+    - port: 80
+      targetPort: http
+```
+
+> svc-stable: 운영 중인 안정 버전
+> 
+> svc-canary: 새 버전 테스트용
+> 
+> 둘로 나눠야 Argo Rollouts가 퍼센트 기반 트래픽 분할 + 모니터링 + 롤백을 제대로 할 수 있음
+{: .prompt-info}
+
+* * *
+
+### Ingress 생성하기 : 
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-svc
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: placeholder.test.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: my-svc
+                port:
+                  number: 80
 ```
 
 * * *
 
-## Gitlab repo에 파일 커밋하기 :
-- 생성한 파일들을 girlab repo의 커밋하면, webhook을 통해 파일 변경을 전달받은 argocd에서 자동으로 배포하는 것을 확인한다.
+### kustomization 생성하기 :
+
+```yaml
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - rollout.yaml
+  - svc-stable.yaml
+  - svc-canary.yaml
+  - ingress.yaml
+images:
+  - name: harbor.test.com/util/custom-nginx
+    newTag: 1.0.19 # Nginx 버전
+```
+
+> kustomization.yaml이란?
+> 
+> Kubernetes 리소스를 모아주고, 공통 설정을 적용하고, 환경별 Overlay까지 지원하는 배포 단위 정의서
+{: .prompt-info}
+
+* * *
+
+### Gitlab repo에 파일 커밋하기 :
+- 생성한 파일들을 gitlab repo의 커밋하면, webhook을 통해 파일 변경을 전달받은 argocd에서 자동으로 배포하는 것을 확인한다.
 ![argo rollout Canary 배포 동작 확인](/assets/img/post/ArgoCD/argo%20rollout%20carany%20배포%20동작%20확인.png)
 
 * * *
 
-## Canary 배포한 Pod 및 Service 확인하기 :
+### Canary 배포한 Pod 및 Service 확인하기 :
 - 서버에서 생성한 Pod와 Service 목록을 확인한다.
 
 ```bash
-$ kubectl get pod -n argo-rollouts
-$ kubectl get svc -n argo-rollouts
+$ kubectl get pod -n [namespace명]
+$ kubectl get svc -n [namespace명]
 ```
 ![argo rollout Canary service 확인](/assets/img/post/ArgoCD/argo%20rollout%20carany%20service%20확인.png)
 
 * * *
 
-## 수동 승격 방법 :
-- Argo Rollouts의 블루-그린 전략을 사용하여 autoPromotionEnabled를 false로 설정한 경우, 수동으로 새 버전의 애플리케이션을 활성화하는 과정으로 수동 승격을 수행하는 방법은 아래와 같다.
+## 배포 확인하기 :
+### 배포 매니페스트 환경별 패치 파일 생성하기 :
 
-```bash
-$ kubectl argo rollouts promote {rollout명} -n {namespace명}
+- 이 Kustomization은 base 리소스를 가져와 dev-int 네임스페이스에 배포하고, Ingress 설정만 환경에 맞게 수정하는 오버레이 설정한다.
+
+```yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: dev-int
+resources:
+  - ../../base
+patchesStrategicMerge:
+  - ingress-patch.yaml
 ```
 
-![Canary 수동 승격 후 화면](/assets/img/post/ArgoCD/carany%20수동%20승격%20후%20화면.png)
+```yaml
+# ingress-patch.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-svc
+spec:
+  rules:
+    - host: web.dev-test.com # 프로젝트를 분리할 경우 각 폴더별 ingress 파일 생성하여 도메인 주소 변경 필요
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: my-svc
+                port:
+                  number: 80
+```
+
+* * *
+
+### 웹페이지 확인하기 :
+
+- 아래 그림과 같이 배포되어 정상 접속 되는것을 확인한다.
+
+![argo rollout canary 배포 후 웹 접속](/assets/img/post/ArgoCD/argo%20rollout%20canary%20배포%20후%20웹%20접속.png)
 
 * * *
