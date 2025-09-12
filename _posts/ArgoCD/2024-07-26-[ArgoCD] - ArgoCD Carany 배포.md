@@ -13,7 +13,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 
 * * *
 
-## rollout App 배포방법 :
+## Canary App 배포방법 :
 ### rollout 생성하기:
 
 ```yaml
