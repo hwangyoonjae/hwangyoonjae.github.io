@@ -137,7 +137,7 @@ spec:
 > Blue-Green 배포에서 Ingress를 2개 생성하는 이유
 >
 > “현재 운영 트래픽(Active)” 과 “새 버전 검증(Preview)”을 동시에 다뤄야 하기 때문
-{: .prompt-info}
+{: .prompt-tip}
 
 * * *
 
