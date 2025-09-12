@@ -7,7 +7,7 @@ tags: [ArgoCD, Prometheus]
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
 
-## 파일 구조 :
+## 파일 구조:
 
 - Gitlab Repo의 저장한 파일 경로는 아래와 같다.
 
@@ -116,6 +116,8 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 ```
 
 * * *
+
+## Argocd Application 생성하기:
 
 - 아래와 같이 Argocd의 Application을 생성한다.
 
