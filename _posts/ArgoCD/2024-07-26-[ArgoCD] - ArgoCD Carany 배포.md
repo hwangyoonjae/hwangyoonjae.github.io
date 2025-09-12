@@ -187,6 +187,8 @@ $ kubectl argo rollouts get rollout [rollout_name] -n [namespace]
 
 ![canary rollout 상태 확인](/assets/img/post/ArgoCD/canary%20rollout%20상태%20확인.png)
 
+* * *
+
 ## 배포 확인하기 :
 ### 배포 매니페스트 환경별 패치 파일 생성하기 :
 
