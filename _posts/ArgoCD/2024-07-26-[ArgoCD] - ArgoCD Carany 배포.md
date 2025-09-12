@@ -167,6 +167,26 @@ $ kubectl get svc -n [namespace명]
 
 * * *
 
+### Rollout 상태 확인하기 :
+
+- 현재 생성한 Rollout 목록 조회한다.
+
+```bash
+$ kubectl -n [namespace] get rollout
+```
+
+![canary rollout 목록 조회](/assets/img/post/ArgoCD/canary%20rollout%20목록%20조회.png)
+
+* * *
+
+- Rollout 이름을 통해서 Blue-Green 배포 상태를 확인한다.
+
+```bash
+$ kubectl argo rollouts get rollout [rollout_name] -n [namespace]
+```
+
+![canary rollout 상태 확인](/assets/img/post/ArgoCD/canary%20rollout%20상태%20확인.png)
+
 ## 배포 확인하기 :
 ### 배포 매니페스트 환경별 패치 파일 생성하기 :
 
