@@ -22,7 +22,7 @@ maven-test:
     - export MAVEN_OPTS="$MAVEN_OPTS -Djavax.net.ssl.trustStore=$CI_PROJECT_DIR/cacerts -Djavax.net.ssl.trustStorePassword=changeit"
   script:
     - cd maven-app
-    - mvn -B -s "$CI_PROJECT_DIR/ci/maven/settings.xml" test
+    - mvn clean -B -s "$CI_PROJECT_DIR/ci/maven/settings.xml" test
   artifacts:
     when: always
     reports:
@@ -47,7 +47,7 @@ gradle-test:
     - export JAVA_TOOL_OPTIONS="-Djavax.net.ssl.trustStore=$CI_PROJECT_DIR/cacerts -Djavax.net.ssl.trustStorePassword=changeit $JAVA_TOOL_OPTIONS"
   script:
     - cd gradle-app
-    - if [ -f ./gradlew ]; then chmod +x ./gradlew && ./gradlew --no-daemon -I "$CI_PROJECT_DIR/ci/gradle/init.gradle" test; else gradle --no-daemon -I "$CI_PROJECT_DIR/ci/gradle/init.gradle" test; fi
+    - if [ -f ./gradlew ]; then chmod +x ./gradlew && ./gradlew clean --no-daemon -I "$CI_PROJECT_DIR/ci/gradle/init.gradle" test; else gradle clean --no-daemon -I "$CI_PROJECT_DIR/ci/gradle/init.gradle" test; fi
   artifacts:
     when: always
     reports:
