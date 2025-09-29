@@ -251,3 +251,74 @@ spec:
 ![argo rollout blue-green 배포 후 웹 접속](/assets/img/post/ArgoCD/argo%20rollout%20blue-green%20배포%20후%20웹%20접속.png)
 
 * * *
+
+## 자동 승격 방법 :
+
+> 필자는 Blue-Green 배포도 자동으로 승격하여 문제 발생 시 롤백하는 방식으로 구현하고 싶어 테스트를 진행하였다.
+{: .prompt-example}
+
+- Blue-Green Rollout 매니페스트 파일은 아래와 같이 구성하고, 환경에 따라 옵션을 사용하면 된다.
+
+```yaml
+  strategy:
+    blueGreen:                                     # 블루-그린 배포 전략을 사용할 것임을 지정
+      activeService: my-svc-blue-green             # 현재 서비스
+      previewService: my-svc-blue-green-preview    # 새 버전 검증 서비스
+      # autoPromotionEnabled: false                # 수동 승격(권장: 테스트용)
+      autoPromotionEnabled: true
+      # autoPromotionSeconds: 120                  # 120초 후 자동 승격
+      scaleDownDelaySeconds: 1800                  # 서비스 전환 후 구버전 유지 시간 (ex. 30분)
+      scaleDownDelayRevisionLimit: 1               # 최근 1개 버전은 지연된 상태로 유지
+      # postPromotionAnalysis:                     # 승격 후 배포 성공 여부 확인
+      prePromotionAnalysis:                        # 승격 전에 분석(헬스체크) 통과해야만 트래픽 전환
+        templates:
+          - templateName: http-200-check
+        args:
+          - name: url
+            value: # http://{service}.{namespace}.svc.cluster.local
+```
+
+- 헬스체크(자동화된 검증)를 표준화해서 Rollout이 참조할 수 있도록 따로 정의한다.
+
+```yaml
+# analysis-template.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: http-200-check
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+spec:
+  args:
+    - name: url
+  metrics:
+    - name: http-ok
+      interval: 10s             # 10초마다
+      count: 3                  # 3회 시도
+      failureLimit: 1           # 1번이라도 실패하면 Fail
+      provider:
+        job:
+          spec:
+            ttlSecondsAfterFinished: 30   # ← Job/Pod 생성 완료 30초 후 Job/Pod 자동 삭제
+            backoffLimit: 0
+            template:
+              spec:
+                restartPolicy: Never
+                containers:
+                  - name: curl
+                    image: harbor.test.com/curlimages/curl:8.10.1
+                    command: ["/bin/sh","-c"]
+                    args:
+                      - |
+                        set -e
+                        CODE=$(curl -m 7 -s -o /dev/null -w "%{http_code}" "{{args.url}}")
+                        echo "HTTP ${CODE}"
+                        [ "$CODE" -eq 200 ]
+                    # 자동 승격 실패를 위한 테스트
+                    # args:
+                    #   - |
+                    #     echo "Forcing failure"
+                    #     exit 1
+```
+
+* * *
