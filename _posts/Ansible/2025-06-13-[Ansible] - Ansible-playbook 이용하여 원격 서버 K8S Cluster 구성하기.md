@@ -66,7 +66,7 @@ image: /assets/img/post-title/ansible-wallpaper.jpg
 ## Ansible 설치하기:
 
 ```bash
-$ dnf install -y /root/ansible/install_rpm/*.rpm --disablerepo=*
+$ dnf install -y /root/ansible/install_rpm/*.rpm --disablerepo=* --nobest --skip-broken
 ```
 
 ```bash
