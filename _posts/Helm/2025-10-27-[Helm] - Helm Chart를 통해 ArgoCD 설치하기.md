@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Helm Chart를 통해 ArgoCD 설치하기.md"
-date: 2025-10-27
+title: "Helm Chart를 통해 ArgoCD 설치하기"
+date: 2025-10-28
 categories: [컨테이너, Helm]
 tags: [Helm, ArgoCD]
 image: /assets/img/post-title/helm-wallpaper.jpg
