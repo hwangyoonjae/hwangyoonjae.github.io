@@ -59,7 +59,8 @@ $ kubectl create namespace cert-manager
 
 ```bash
 $ vi values.yaml
-
+```
+```yaml
 # values.yaml
 installCRDs: true
 
