@@ -3,8 +3,8 @@ layout: post
 title: "Helm Chart를 통해 cert-manager 설치하기"
 date: 2025-10-27
 categories: [컨테이너, Helm] 
-tags: [Kubernetes, Jenkins]
-image: /assets/img/post-title/kubernetes-wallpaper.jpg
+tags: [Helm, Cert-manager]
+image: /assets/img/post-title/helm-wallpaper.jpg
 ---
 
 ## cert-manager 설치하기:
