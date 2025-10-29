@@ -28,6 +28,7 @@ vault login [Root Token]
 ![vault CLI 로그인 진행](/assets/img/post/docker/vault%20CLI%20로그인%20진행.png)
 
 > vault 로그인 진행 시 Error 발생하는 이유
+> 
 > vault 서버는 HTTP로 열려 있는데, vault CLI는 HTTPS로 접속하려고 해서 생긴 문제다.
 {: .prompt-warning}
 
@@ -64,7 +65,7 @@ vault write pki/root/generate/internal \
 
 ![vault Root CA 생성](/assets/img/post/docker/vault%20Root%20CA%20생성.png)
 
-> 실제 운영에서는 pki/root 대신 pki_int를 만들어 중간 CA(Intermediate CA) 로 구성하고, 조직의 루트 CA로부터 서명받는 구조로 쓴다.
+> 실제 운영에서는 pki/root 대신 pki_int를 만들어 중간 CA(Intermediate CA)로 구성하고, 조직의 루트 CA로부터 서명받는 구조로 쓴다.
 {: .prompt-tip}
 
 * * *
@@ -198,6 +199,7 @@ spec:
 | **Always** | 인증서가 갱신될 때 새 private key를 새로 생성함 |
 
 > cert-manager 1.18에서 바뀐 점
+> 
 > 기존(1.17 이하)은 기본이 Never라 한 번 생성된 private key는 계속 재사용했다.
 > 하지만 1.18부터는 기본이 Always로 바뀌면서 인증서가 갱신될 때마다 새 key를 자동으로 만들어 준다.
 {: .prompt-info}
