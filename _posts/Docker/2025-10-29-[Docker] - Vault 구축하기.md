@@ -8,7 +8,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## Vault란?:
-- 
+- ashiCorp에 의해서 개발된 크로스플랫폼 패스워드 및 인증 관리 시스템이다. 공개되면 안되는 비밀번호, API 키, 토큰 등을 저장하고 관리한다.
 
 * * *
 
