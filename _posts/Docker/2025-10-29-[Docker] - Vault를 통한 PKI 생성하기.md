@@ -9,7 +9,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
 ## Vault 설치하기 :
 - 해당 작업을 위해 사전에 vault가 구축되어있어야 한다.
-> * [vault 설치하기](https://hwangyoonjae.github.io/posts/Docker-vault-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/ "vault 설치하기")
+> * [vault 설치하기](https://hwangyoonjae.github.io/posts/Docker-Vault-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/ "vault 설치하기")
 
 * * *
 
