@@ -7,14 +7,14 @@ tags: [Docker, vault]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
-## Vault 설치하기 :
+## 1. Vault 설치하기 :
 - 해당 작업을 위해 사전에 vault가 구축되어있어야 한다.
 > * [vault 설치하기](https://hwangyoonjae.github.io/posts/Docker-Vault-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/ "vault 설치하기")
 
 * * *
 
-## PKI 생성하기 :
-### Vault Container 접속하기 :
+## 2. PKI 생성하기 :
+### 2.1 Vault Container 접속하기 :
 
 ```bash
 $ docker exec -it vault sh
@@ -34,7 +34,7 @@ vault login [Root Token]
 
 * * *
 
-### PKI 엔진 활성화하기 :
+### 2.2 PKI 엔진 활성화하기 :
 
 - vault는 처음에 PKI 기능이 꺼져있어 활성화해야한다.
 
@@ -47,7 +47,7 @@ vault secrets tune -max-lease-ttl=87600h pki
 
 * * *
 
-### Root CA 생성하기 :
+### 2.3 Root CA 생성하기 :
 
 - 테스트용 Root CA를 vault 내부에서 직접 생성한다.
 
@@ -70,7 +70,7 @@ vault write pki/root/generate/internal \
 
 * * *
 
-### CA URL 구성하기 :
+### 2.4 CA URL 구성하기 :
 
 - 외부에서 인증서 체인과 CRL을 가져갈 수 있게 URL을 등록한다.
 
@@ -84,7 +84,7 @@ vault write pki/config/urls \
 
 * * *
 
-### 인증서 발급용 Role 생성하기 :
+### 2.5 인증서 발급용 Role 생성하기 :
 
 - 이 Role은 cert-manager나 사용자들이 CSR을 제출할 때 어떤 인증서를 발급할 수 있는지 정의한다.
 
@@ -108,7 +108,7 @@ vault write pki/roles/test-certificates \
 
 * * *
 
-### cert-manager용 Policy 생성하기 :
+### 2.6 cert-manager용 Policy 생성하기 :
 
 - cert-manager가 Vault에서 인증서를 서명받을 때 필요한 최소 권한 정책을 만들어준다.
 
@@ -126,7 +126,7 @@ vault policy write pki-sign /vault/config/pki-sign.hcl
 
 * * *
 
-### cert-manager용 Token 발급하기 :
+### 2.7 cert-manager용 Token 발급하기 :
 
 - cert-manager가 Vault API를 호출할 때 사용할 토큰을 발급한다.
 
@@ -141,7 +141,7 @@ vault token create -policy=pki-sign -ttl=17520h -format=json | grep '"client_tok
 
 * * *
 
-### Kubernetes에 Vault Token 등록하기 :
+### 2.8 Kubernetes에 Vault Token 등록하기 :
 
 - cert-manager가 있는 namespace(cert-manager)에 Secret 생성한다.
 
@@ -154,7 +154,7 @@ $ kubectl -n cert-manager create secret generic cert-manager-vault-auth \
 
 * * *
 
-### ClusterIssuer 생성하기 :
+### 2.9 ClusterIssuer 생성하기 :
 
 - cert-manager가 Vault를 사용해서 인증서를 발급할 수 있도록 설정한다.
 
@@ -194,7 +194,7 @@ spec:
 ```
 
 | 값 | 의미 |
-|------|------|
+|:------:|:------:|
 | **Never** | 인증서가 갱신될 때 기존 private key를 그대로 사용함 |
 | **Always** | 인증서가 갱신될 때 새 private key를 새로 생성함 |
 
