@@ -7,8 +7,8 @@ tags: [Helm, Cert-manager]
 image: /assets/img/post-title/helm-wallpaper.jpg
 ---
 
-## cert-manager 설치하기:
-### cert-manager helm chart 다운로드:
+## 1. cert-manager 설치하기 :
+### 1.1 cert-manager helm chart 다운로드 :
 
 ```bash
 $ helm repo add jetstack https://charts.jetstack.io
@@ -29,7 +29,7 @@ $ helm pull jetstack/cert-manager --version 1.18.3
 
 * * *
 
-### cert-manager container image 다운로드:
+### 1.2 cert-manager container image 다운로드 :
 
 - helm chart를 통해 설치될 Application verion대로 이미지를 다운로그한다.
 
@@ -45,7 +45,7 @@ $ docker pull quay.io/jetstack/cert-manager-startupapicheck:v1.18.3
 
 * * *
 
-### Helm을 통해 Cert-Manager 설치하기:
+### 1.3 Helm을 통해 Cert-Manager 설치하기 :
 
 - cert-manager 설치를 위해 네임스페이스를 생성한다.
 
@@ -136,8 +136,8 @@ $ kubectl get all -n cert-manager
 
 * * *
 
-## cert-manager CRDs(CustomResourceDefinitions) 설치하기 :
-### CRDs란? :
+## 2. cert-manager CRDs(CustomResourceDefinitions) 설치하기 :
+### 2.1 CRDs란? :
 
 - 쿠버네티스에 새로운 리소스 타입(API 오브젝트)을 추가하기 위한 확장 메커니즘이다.
 
@@ -146,7 +146,7 @@ $ kubectl get all -n cert-manager
 
 * * *
 
-### cert-manager가 추가하는 CRD 종류 :
+### 2.2 cert-manager가 추가하는 CRD 종류 :
 
 - TLS 인증서 자동화를 위해 아래와 같은 커스텀 리소스(Custom Resources) 를 정의하고 사용한다.
 
@@ -164,7 +164,7 @@ $ kubectl get all -n cert-manager
 
 * * *
 
-### CRDs 설치하기 :
+### 2.3 CRDs 설치하기 :
 
 - 차트만 오프라인으로 가져오면 CRD는 자동 설치되지 않기 때문에, Repo의 CRDs 디렉터리에서 직접 적용한다.
 
@@ -196,7 +196,7 @@ $ kubectl get crd | grep cert-manager.io
 
 * * *
 
-### Vault Token을 Secret으로 만들기 :
+### 2.4 Vault Token을 Secret으로 만들기 :
 
 - tokenSecretRef가 가리키는 Secret을 cert-manager 네임스페이스의 생성한다.
 
@@ -212,7 +212,7 @@ $ kubectl -n cert-manager create secret generic cert-manager-vault-auth \
 
 * * *
 
-### ClusterIssuer 생성 파일 작성 및 적용하기 :
+### 2.5 ClusterIssuer 생성 파일 작성 및 적용하기 :
 
 ```yaml
 # vault-issuer.yaml
@@ -236,5 +236,61 @@ $ kubectl describe clusterissuer vault-issuer
 ```
 
 ![vault-issuer 배포](/assets/img/post/helm/vault-issuer%20배포.png)
+
+* * *
+
+### 2.6 인증서 요청서 생성해보기 :
+
+- 필자는 ArgoCD에 인증서를 자동으로 발급받도록 Certificate 리소스를 생성했다.
+
+```yaml
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: argocd-tls
+  namespace: argocd
+spec:
+  secretName: argocd-server-tls
+  duration: 720h        # 30일 예시
+  renewBefore: 120h     # 만료 5일 전 갱신
+  dnsNames:
+    - argocd.test.com
+  issuerRef: # 발급자 서명
+    kind: ClusterIssuer
+    name: vault-issuer   # 위에서 만든 ClusterIssuer 이름
+```
+
+> 각 Namespace마다 사용할 Secret을 만들어야 합니다.
+{: .prompt-warning}
+
+* * *
+
+- cert-manager가 vault를 통해 인증서를 발급하도록 지시하는 Certificate 리소스 생성 시 아래와 같이 알림(Warning) 발생한다.
+
+```html
+# 단순히 “기본값이 바뀌었어요” 라는 안내 메시지
+Warning: spec.privateKey.rotationPolicy: In cert-manager >= v1.18.0,
+the default value changed from `Never` to `Always`.
+```
+![cert-manager 생성 시 warning 발생](/assets/img/post/helm/cert-manager%20생성%20시%20warning%20발생.png)
+
+- cert-manager가 인증서를 갱신할 때(예: 만료가 다가오면 새로 발급할 때), 기존 private key를 계속 쓸지, 새로 만들지를 결정하는 설정이 있다.
+
+```yaml
+spec:
+  privateKey:
+    rotationPolicy: <값>
+```
+
+| 값 | 의미 |
+|:------:|:------:|
+| **Never** | 인증서가 갱신될 때 기존 private key를 그대로 사용함 |
+| **Always** | 인증서가 갱신될 때 새 private key를 새로 생성함 |
+
+> cert-manager 1.18에서 바뀐 점
+> 
+> 기존(1.17 이하)은 기본이 Never라 한 번 생성된 private key는 계속 재사용했다.
+> 하지만 1.18부터는 기본이 Always로 바뀌면서 인증서가 갱신될 때마다 새 key를 자동으로 만들어 준다.
+{: .prompt-info}
 
 * * *
