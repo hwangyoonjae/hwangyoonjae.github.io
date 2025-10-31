@@ -205,3 +205,29 @@ spec:
 {: .prompt-info}
 
 * * *
+
+### 2.10 인증서 요청서 생성해보기 :
+
+- 필자는 ArgoCD에 인증서를 자동으로 발급받도록 Certificate 리소스를 생성했다.
+
+```yaml
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: argocd-tls
+  namespace: argocd
+spec:
+  secretName: argocd-server-tls
+  duration: 720h        # 30일 예시
+  renewBefore: 120h     # 만료 5일 전 갱신
+  dnsNames:
+    - argocd.test.com
+  issuerRef: # 발급자 서명
+    kind: ClusterIssuer
+    name: vault-issuer   # 위에서 만든 ClusterIssuer 이름
+```
+
+> 각 Namespace마다 사용할 Secret을 만들어야 합니다.
+{: .prompt-warning}
+
+* * *
