@@ -30,14 +30,14 @@ $ vi values.yaml
 ```
 ```yaml
 # values.yaml
-namespaceOverride: {{ argocd_namespace }}
+namespaceOverride: [ argocd_namespace ]
 
 global:
-  domain: {{ argocd_domain }}
+  domain: [ argocd_domain ]
 
   image:
-    repository: {{ argocd_image_registry }}/{{ argocd_namespace }}/argocd
-    tag: {{ argocd_image_tag }}
+    repository: [ argocd_image_registry ]/[ argocd_namespace ]/argocd
+    tag: [ argocd_image_tag ]
 
 server:
   ingress:
@@ -48,7 +48,7 @@ server:
 
     ingressClassName: "nginx"
 
-    hostname: {{ argocd_domain }}
+    hostname: [ argocd_domain ]
 
     path: /
     pathType: Prefix
@@ -56,21 +56,21 @@ server:
     tls:
       - secretName: "argocd-server-tls"
         hosts:
-          - {{ argocd_domain }}
+          - [ argocd_domain ]
 
   resources:
     requests:
-      cpu: "{{ argocd_cpu_request }}"
-      memory: "{{ argocd_memory_request }}"
+      cpu: "[ argocd_cpu_request ]"
+      memory: "[ argocd_memory_request ]"
     limits:
-      cpu: "{{ argocd_cpu_limit }}"
-      memory: "{{ argocd_memory_limit }}"
+      cpu: "[ argocd_cpu_limit ]"
+      memory: "[ argocd_memory_limit ]"
 
 redis:
   image:
-    repository: {{ argocd_image_registry }}/{{ argocd_namespace }}/redis
-    tag: {{ argocd_image_version }}
-    imagePullPolicy: {{ argocd_image_pull_policy }}
+    repository: [ argocd_image_registry ]/[ argocd_namespace ]/redis
+    tag: [ argocd_image_version ]
+    imagePullPolicy: [ argocd_image_pull_policy ]
 
 configs:
   params:
@@ -113,7 +113,7 @@ $ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.p
 configs:
   secret:
     ## `htpasswd -nbBC 10 "" $ARGO_PWD | tr -d ':\n' | sed 's/$2y/$2a/'`
-    argocdServerAdminPassword: {{ argocd_admin_password }}
+    argocdServerAdminPassword: [ argocd_admin_password ]
 ```
 
 * * *
