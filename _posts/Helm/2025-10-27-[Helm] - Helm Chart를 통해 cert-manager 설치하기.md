@@ -31,7 +31,7 @@ $ helm pull jetstack/cert-manager --version 1.18.3
 
 ### 1.2 cert-manager container image 다운로드 :
 
-- helm chart를 통해 설치될 Application verion대로 이미지를 다운로그한다.
+- helm chart를 통해 설치될 Application version대로 이미지를 다운로그한다.
 
 ```bash
 $ docker pull quay.io/jetstack/cert-manager-controller:v1.18.3
