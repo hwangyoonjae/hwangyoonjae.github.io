@@ -110,7 +110,7 @@ spec:
       server: "https://[Vault_Server_Domain]:8200"
       path: "secret"
       version: "v2"
-      caBundle: 
+      caBundle: [rootCA.crt_BASE64] # cat rootCA.crt | base64 | tr -d '\n' 명령어로 확인
       auth:
         kubernetes:
           mountPath: "kubernetes"
