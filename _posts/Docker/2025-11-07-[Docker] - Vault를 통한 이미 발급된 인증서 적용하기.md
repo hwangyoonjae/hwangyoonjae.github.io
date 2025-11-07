@@ -53,7 +53,7 @@ $ docker compose up -d
 ```bash
 # 환경변수 등록
 export VAULT_ADDR="https://vault.inno.com:8200"
-export VAULT_CACERT="/vault/certs/rootCA.crt"
+export VAULT_CACERT="/vault/certs/fullchain.crt"
 
 # (최초 1회) KV v2 마운트
 vault secrets enable -path=secret kv-v2
@@ -128,5 +128,55 @@ vault write auth/kubernetes/role/eso-wildcard-role \
   policies="policy-wildcard-tls" \
   ttl="24h"
 ```
+
+* * *
+
+## 3. 인증서 변경하기 :
+### 3.1 변경할 인증서를 Vault/ESO에 바로 적용하기 :
+
+- 인증서가 만료되어 변경해야하는 경우 아래와 같이 진행한다.
+
+```bash
+# vault 로그인 진행
+vault login [Root Token]
+
+# Vault에 등록
+vault kv put secret/tls/wildcard \
+  tls.crt=@fullchain.crt \
+  tls.key=@server.key
+```
+
+* * *
+
+### 3.2 서버 인증서가 전체 변경된 경우 :
+
+- ClusterSecretStore 안의 caBundle 값 또는 ESO의 CA 신뢰 설정을 변경된 인증서 값으로 적용해야한다.
+
+```bash
+# Base64 인코딩 값 확인
+$ cat rootCA.crt | base64 | tr -d '\n'
+```
+
+![rootCA 인증서 base64 인코딩](/assets/img/post/docker/rootCA%20인증서%20base64%20인코딩.png)
+
+* * *
+
+- ClusterSecretStore의 caBundle 값을 변경한다.
+
+```yaml
+      path: "secret"
+      version: "v2"
+      caBundle: "[여기에 새 base64 값]"
+```
+
+* * *
+
+- ESO 정상 동작 확인한다.
+
+```bash
+$ kubectl get clustersecretstore
+```
+
+![ESO 정상 동작 확인](/assets/img/post/docker/ESO%20정상%20동작%20확인.png)
 
 * * *
