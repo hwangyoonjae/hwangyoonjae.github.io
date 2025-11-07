@@ -80,8 +80,11 @@ ui = true
 listener "tcp" {
   address     = "0.0.0.0:8200"
   cluster_address = "0.0.0.0:8201"
-  tls_disable = 1
-}
+  #tls_disable = 1
+
+  # 기존 tls_disable=1 은 주석 처리 또는 삭제
+  tls_cert_file   = "/vault/certs/fullchain.crt"
+  tls_key_file    = "/vault/certs/server.key"
 
 storage "raft" {
   path    = "/vault/data"
