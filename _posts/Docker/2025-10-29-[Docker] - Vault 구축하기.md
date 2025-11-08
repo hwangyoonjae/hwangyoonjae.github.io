@@ -7,13 +7,13 @@ tags: [Docker, Vault]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
-## Vault란?:
+## 1. Vault란? :
 - ashiCorp에 의해서 개발된 크로스플랫폼 패스워드 및 인증 관리 시스템이다. 공개되면 안되는 비밀번호, API 키, 토큰 등을 저장하고 관리한다.
 
 * * *
 
-## Vault 설치하기 :
-### Vault 이미지 다운로드 :
+## 2. Vault 설치하기 :
+### 2.1 Vault 이미지 다운로드 :
 
 ```bash
 $ docker pull hashicorp/vault:{version}
@@ -28,7 +28,7 @@ $ docker pull hashicorp/vault:{version}
 
 * * *
 
-### Vault Docker Compose 생성하기 :
+### 2.3 Vault Docker Compose 생성하기 :
 
 - vault 디렉토리 구조는 아래와 같습니다.
 
@@ -114,7 +114,7 @@ $ docker logs -f vault
 
 * * *
 
-## Vault UI 접속하기 :
+## 3. Vault UI 접속하기 :
 
 - 브라우저에서 Vault UI 접속한다.
 
@@ -170,7 +170,7 @@ $ docker logs -f vault
 
 * * *
 
-### Vault 로그인 하기 :
+### 3.1 Vault 로그인 하기 :
 
 - 위 단계에서 복사한 **Initial Root Token** 값을 입력하여 로그인 한다.
 

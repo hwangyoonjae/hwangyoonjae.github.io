@@ -7,18 +7,20 @@ tags: [Helm, Kubernetes]
 image: /assets/img/post-title/helm-wallpaper.jpg
 ---
 
-## Helm Chart란? :
+## 1. Helm Chart란? :
 - Kubernetes 애플리케이션의 패키징 형식
 - Kubernetes에서 애플리케이션 배포를 관리하기 위한 도구이며, Helm Chart는 이러한 배포를 정의하는 템플릿
 
 * * *
 
-## Helm Chart 기본 구조 생성 :
+## 2. Helm Chart 기본 구조 생성 :
 - helm create 명령어를 통해 차트 기본 디렉토리를 생성한다.
 
 ```bash
 $ helm create {폴더명}
 ```
+
+* * *
 
 - 위와 같이 생성된 기본 구조는 아래와 같다.
 
@@ -48,7 +50,7 @@ $ helm create {폴더명}
 
 * * *
 
-## Chart.yaml 작성하기 :
+## 3. Chart.yaml 작성하기 :
 - Chart.yaml에 정의하는 내용은 아래와 같다.
 
 | 이름 | 설명 |
@@ -99,7 +101,7 @@ appVersion: "1.16.0"
 
 * * *
 
-## values.yaml 작성하기 :
+## 4. values.yaml 작성하기 :
 - template 폴더에 있는 manifest yaml파일에 정의된 값을 불러온다.
 - \{\{ .Values.image.tag\}\}와 같이 사용 인덴테이션에 유의하여 작성하여야한다.
 
@@ -233,12 +235,12 @@ affinity: {}   # 파드가 특정 노드에서 실행되도록 하거나, 다른
 
 * * *
 
-## templates 폴더에 배포할 resource 정의하기 :
+## 5. templates 폴더에 배포할 resource 정의하기 :
 - 기본적으로 deployment, service, serviceaccount,ingress가 존재하고, 필요에 따라 persistentvolume, configmap 등을 정의한다.
 
 * * *
 
-## Helm의 template 문법 정의 :
+## 6. Helm의 template 문법 정의 :
 - \{\{ \}\}로 변수를 사용한다.
   - .Values -> values.yaml 파일에서 정의된 변수
   - .Charts -> Charts.yaml 파일에서 정의 된 변수
@@ -248,18 +250,22 @@ affinity: {}   # 파드가 특정 노드에서 실행되도록 하거나, 다른
 
 * * *
 
-## Helm Chart 검사하기 :
+## 7. Helm Chart 검사하기 :
 - 정의한 chart가 문법적으로 이상이 없는지 확인
 
 ```bash
 $ helm lint <Chart.yaml 경로>
 ```
 
+* * *
+
 - templates을 기반으로 변수들 참조하여 리소스 배포시 결과 미리보기
 
 ```bash
 $ helm template <Chart.yaml 경로>
 ```
+
+* * *
 
 - chart를 시험설치하여 오류 확인
 
@@ -272,7 +278,7 @@ $ helm install <release name> <Chart.yaml경로>  --debug --dry-run
 
 * * *
 
-## Chart 생성하고 Repo에 등록하기 :
+## 8. Chart 생성하고 Repo에 등록하기 :
 > helm repository는 차트 저장소의 각 차트의 대한 정보를 담고 있는 index.yaml파일이 있어야한다.
 {: .prompt-warning }
 
@@ -284,17 +290,23 @@ $ helm package <Chart.yaml 경로>
 > 저장소에 등록하지않고 생성한 압축파일로 로컬에서 사용할거라면 helm install <name> 가능하다.
 {: .prompt-tip }
 
+* * *
+
 - chart를 생성하였으니 차트정보를 담고있는 index파일 업데이트
 
 ```bash
 $ helm repo index <index파일 경로>
 ```
 
+* * *
+
 - 깃헙repository인경우 git push를 진행한 후, chart목록을 repository에서 다시 가져와 업데이트를 진행
 
 ```bash
 $ helm repo update
 ```
+
+* * *
 
 - 업데이트되었는지 검색하여 확인을 진행
 
@@ -304,7 +316,7 @@ $ helm search repo 차트명
 
 * * *
 
-## 생성한 Chart Repo의 푸시하기 :
+## 9. 생성한 Chart Repo의 푸시하기 :
 - 생성한 Chart를 Repo의 푸시한다.
 
 ```bash
@@ -327,7 +339,9 @@ $ curl --data-binary @{chart.tgz} http://{repo주소}/api/charts -u admin
 > Helm 3.7.0 이상에서는 차트를 OCI 레지스트리나 ChartMuseum으로 푸시할 때 각각의 프로토콜 접두사를 명시해야한다.
 {: .prompt-info }
 
-### 조치 방법 :
+* * *
+
+### 9.1 조치 방법 :
 ```bash
 $ helm plugin install https://github.com/chartmuseum/helm-push
 $ helm plugin install .
@@ -335,19 +349,21 @@ $ helm plugin install .
 
 * * *
 
-## 업로드한 helm chart 확인하기 :
+## 10. 업로드한 helm chart 확인하기 :
 ```bash
 $ helm search repo {repo명}
 ```
 
 * * *
 
-## 생성한 Chart를 이용해 설치하기 :
+## 11. 생성한 Chart를 이용해 설치하기 :
 - 생성한 차트를 아래 명령어로 설치한다.
 
 ```bash
 $ helm install {배포명} {chart폴더경로} -n {네임스페이스}
 ```
+
+* * *
 
 - 차트의 내용을 변경해야하는 경우 업데이트를 진행한다.
 

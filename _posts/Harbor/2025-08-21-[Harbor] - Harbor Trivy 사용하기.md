@@ -1,13 +1,13 @@
----
+* * *
 layout: post
 title: "Harbor Trivy 사용하기"
 date: 2025-08-21
 categories: [DevOps, Harbor]
 tags: [Harbor, Dockerhub, Image, Trivy]
 image: /assets/img/post-title/harbor-wallpaper.jpg
----
+* * *
 
-## harbor.yml 수정하기:
+## 1. harbor.yml 수정하기 :
 
 ```bash
 $ vi harbor.yml
@@ -24,10 +24,10 @@ trivy:
 
 ![harbor.yml 수정](/assets/img/post/harbor/harbor.yml%20수정.png)
 
----
+* * *
 
-## Trivy 취약점 DB 다운로드:
-### ORAS 릴리즈 설치하기:
+## 2. Trivy 취약점 DB 다운로드 :
+### 2.1 ORAS 릴리즈 설치하기 :
 
 ```bash
 $ curl -fL -o "oras_1.2.2_linux_amd64.tar.gz" \
@@ -42,9 +42,9 @@ $ oras version
 
 ![oras 릴리즈 설치](/assets/img/post/harbor/oras%20릴리즈%20설치.png)
 
----
+* * *
 
-### 취약점 다운로드:
+### 2.2 취약점 다운로드 :
 
 ```bash
 $ oras pull ghcr.io/aquasecurity/trivy-db:2
@@ -66,10 +66,10 @@ $ ls -l ./java-db
 
 ![trivy 취약점 db 다운로드](/assets/img/post/harbor/trivy%20취약점%20db%20다운로드.png)
 
----
+* * *
 
-## Trivy 실행하기:
-### Trivy 적용하기:
+## 3. Trivy 실행하기 :
+### 3.1 Trivy 적용하기 :
 
 ```bash
 # trivy 취약점 db 경로 복사 및 권한 부여
@@ -89,10 +89,12 @@ $ docker compose up -d
 
 ![trivy 설치](/assets/img/post/harbor/trivy%20설치.png)
 
----
+* * *
 
-### Trivy 적용 확인하기:
+### 3.2 Trivy 적용 확인하기 :
 
 ```bash
 $ docker exec -it trivy-adapter ls -l /home/scanner/.cache/trivy/db /home/scanner/.cache/trivy/java-db
 ```
+
+* * *

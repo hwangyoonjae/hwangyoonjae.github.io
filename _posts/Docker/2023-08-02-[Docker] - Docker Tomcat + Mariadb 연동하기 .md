@@ -7,9 +7,10 @@ tags: [Docker, Tomat, MariaDB]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
-## Docker Tomcat 구성하기:
+## 1. Docker Tomcat 구성하기 :
 - Docker Tomcat 구성을 아래와 같이 파일 형태로 사용한다.
-```bash
+
+```yaml
 # 파일명은 docker-tomcat.yml
 version: "3.3"
 # 서비스 구성
@@ -28,9 +29,10 @@ services:
 
 * * *
 
-## Docker MariaDB 구성하기:
+## 2. Docker MariaDB 구성하기 :
 - Docker MariaDB 구성을 아래와 같이 파일 형태로 사용한다.
-```bash
+
+```yaml
 # 파일명은 docker-mariadb.yml
 version: "3.3"
 # 서비스 구성
@@ -55,8 +57,9 @@ services:
 
 * * *
 
-## Tomcat index.jsp 생성하기:
+## 3. Tomcat index.jsp 생성하기 :
 - DB에 있는 데이터를 웹페이지의 보여주기 위해 아래와 같이 index.jsp를 생성한다.
+
 ```bash
 $ cd /tomcat1/webapps/ROOT
 $ vi index.jsp
@@ -130,17 +133,19 @@ $ vi index.jsp
 
 * * *
 
-## MariaDB JDBC 드라이버 이용하여 연동하기:
+## 4. MariaDB JDBC 드라이버 이용하여 연동하기 :
 - 아래 URL 접속하여 MariaDB JDBC 드라이버 파일을 다운받는다. 
 > * [MariaDB JDBC 다운로드](https://downloads.mariadb.com/Connectors/java/ "MariaDB JDBC 다운로드")
 
 - 다운받은 jdbc 드라이버를 WEB-INF/lib 폴더 안에 넣어준다.
-[![docker tomcat jdbc 파일 위치](/assets/img/post/docker/docker%20tomcat%20jdbc%20파일%20위치.PNG)](/assets/img/post/docker/docker%20tomcat%20jdbc%20파일%20위치.PNG)
+
+![docker tomcat jdbc 파일 위치](/assets/img/post/docker/docker%20tomcat%20jdbc%20파일%20위치.PNG)
 
 * * *
 
-## Docker Container 생성하기:
+## 5. Docker Container 생성하기 :
 - 위에서 작성한 compose 파일을 통하여 Docker Container를 생성한다.
+
 ```bash
 $ docker stack deploy -c docker-tomcat.yml web
 $ docker stack deploy -c docker-mariadb.yml db
@@ -148,8 +153,9 @@ $ docker stack deploy -c docker-mariadb.yml db
 
 * * *
 
-## 웹페이지에서 확인하기:
+## 6. 웹페이지에서 확인하기 :
 - Tomcat에서 DB값을 제대로 불러오는지 웹페이지로 접속하여 확인한다.
-[![docker tomcat, mariadb 연동 성공 화면](/assets/img/post/docker/docker%20tomcat,%20mariadb%20연동%20성공%20화면.PNG)](/assets/img/post/docker/docker%20tomcat,%20mariadb%20연동%20성공%20화면.PNG)
+
+![docker tomcat, mariadb 연동 성공 화면](/assets/img/post/docker/docker%20tomcat,%20mariadb%20연동%20성공%20화면.PNG)
 
 * * *

@@ -7,13 +7,13 @@ tags: [Nexus, Docker, Repo]
 image: /assets/img/post-title/nexus-wallpaper.jpg
 ---
 
-## Nexus Repository란?:
+## 1. Nexus Repository란? :
 -  개발 프로젝트에서 필요한 패키지, 라이브러리, 아티팩트(예: JAR 파일, NPM 패키지, Docker 이미지 등)를 저장, 관리, 배포하는 중앙 저장소 역할을 하는 툴이다.
 
 * * *
 
-## Nexus Repository 구축하기:
-### docker compose 파일 통하여 Nexus 설치하기:
+## 2. Nexus Repository 구축하기 :
+### 2.1 docker compose 파일 통하여 Nexus 설치하기 :
 - docker를 통해 Nexus Repository를 구축한다.
 
 ```yaml
@@ -50,14 +50,14 @@ $ docker-compose up -d
 
 * * *
 
-### Nexus Repository 대시보드 화면 접속하기:
+### 2.2 Nexus Repository 대시보드 화면 접속하기 :
 - 위와 같이 컨테이너 구축 후 **IP주소:8443** 주소로 대시보드 화면에 접속한다.
 
 ![Nexus 대시보드 화면](/assets/img/post/Nexus/Nexus%20대시보드%20화면.png)
 
 * * *
 
-### Nexus Repository 대시보드 로그인 하기:
+### 2.3 Nexus Repository 대시보드 로그인 하기 :
 - nexus 를 처음 실행하면 Admin 계정으로 로그인이 필요하다.
   - ID: admin
   - Password: nexus 설치 디렉토리의 admin.password 파일에 최초 비밀번호가 저장되어 있다.

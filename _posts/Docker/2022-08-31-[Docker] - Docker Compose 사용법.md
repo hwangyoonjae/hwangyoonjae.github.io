@@ -7,15 +7,17 @@ tags: [Docker, YAML]
 image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
-## 도커 컴포즈(Docker Compose)란?:
+## 1. 도커 컴포즈(Docker Compose)란? :
 - 복수 개의 컨테이너가 유기적으로 묶여서 하나의 도커 애플리케이션으로 동작할 수 있도록 구성하는 도구이며, 복수 개의 컨테이너 생성 및 실행을 자동화하고 관리하는 기능이다.
 
 * * *
 
-## 도커 컴포즈(Docker Compose) 기본 사용법:
+## 2. 도커 컴포즈(Docker Compose) 기본 사용법 :
 - docker-compose.yml 파일을 작성하여 실행할 수 있고, YAML(야멜) 형식으로 작성해야 한다.
 
-### YAML 문법
+* * *
+
+### 2.1 YAML 문법 :
 - 들여쓰기와 함게 key와 value를 중심으로 작성되고, 기본적으로 숫자형, 문자형, Boolean 자료형을 지원한다.
 
 - **기본 문법**
@@ -27,10 +29,11 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
 * * *
 
-## 도커 컴포즈(Docker Compose) 사용법 이해하기:
-### docker-compose.yml 예시:
-- 기본적으로 docker-compose.yml은 version, services, volumes, networks의 카테고리로 작성되지만, 주로 version과 services가 많이 사용된다.<br>
-[![텍스트](/assets/img/post/docker/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)](/assets/img/post/docker/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)
+## 3. 도커 컴포즈(Docker Compose) 사용법 이해하기 :
+### 3.1 docker-compose.yml 예시 :
+- 기본적으로 docker-compose.yml은 version, services, volumes, networks의 카테고리로 작성되지만, 주로 version과 services가 많이 사용된다.
+
+![텍스트](/assets/img/post/docker/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)
 
 - **문법**
     - **version** : docker compose의 파일 포맷 버전을 지정한다.<br>
@@ -75,20 +78,28 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
 * * *
 
-## Docker Compose 설치하기:
+## 4.1 Docker Compose 설치하기 :
 - curl 명령어를 통해 docker-compose를 설치한다.
+
 ```bash
 $ curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
+* * *
+
 - 도커 컴포즈 파일을 실행하기 다운로드 경로에 권한을 부여한다.
+
 ```bash
 $ chmod +x /usr/local/bin/docker-compose
 ```
 
+* * *
+
 - docker-compose 버전을 확인한다.
+
 ```bash
 # docker compose 버전 확인
 $ docker-compose -version
 ```
-[![docker compose 설치하는 과정](/assets/img/post/docker/docker%20compose%20설치하는%20과정.PNG)](/assets/img/post/docker/docker%20compose%20설치하는%20과정.PNG)
+
+![docker compose 설치하는 과정](/assets/img/post/docker/docker%20compose%20설치하는%20과정.PNG)

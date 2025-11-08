@@ -7,8 +7,8 @@ tags: [Helm, ArgoCD]
 image: /assets/img/post-title/helm-wallpaper.jpg
 ---
 
-## ArgoCD 설치하기 :
-### ArgoCD Helm Chart 다운로드 :
+## 1. ArgoCD 설치하기 :
+### 1.1 ArgoCD Helm Chart 다운로드 :
 
 - curl 또는 wget으로 직접 다운로드한다.
 
@@ -21,7 +21,7 @@ $ waget https://github.com/argoproj/argo-helm/releases/download/argo-cd-[version
 
 * * *
 
-### Helm을 통해 ArgoCD 설치하기:
+### 1.2 Helm을 통해 ArgoCD 설치하기 :
 
 - values.yaml 파일에 값을 수정한다.
 
@@ -103,8 +103,8 @@ $ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.p
 
 * * *
 
-## ArgoCD 설치 과정에서 변경사항 :
-### admin password 지정하고 싶은 경우 :
+## 2. ArgoCD 설치 과정에서 변경사항 :
+### 2.1 admin password 지정하고 싶은 경우 :
 
 - values.yaml에서 비밀번호를 직접 지정할 수 있다.
 
@@ -126,7 +126,7 @@ $ htpasswd -nbBC 10 "" '[password]' | tr -d ':\n'
 
 * * *
 
-### CRD 소유권을 완전히 새로 가져가고 싶은 경우 :
+### 2.2 CRD 소유권을 완전히 새로 가져가고 싶은 경우 :
 
 - Argo CD 관련 CRD를 삭제한다.
 

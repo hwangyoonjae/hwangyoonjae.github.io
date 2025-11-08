@@ -7,8 +7,8 @@ tags: [Harbor, Image, Tag]
 image: /assets/img/post-title/harbor-wallpaper.jpg
 ---
 
-## Harbor Tag Retention 사용하기:
-### Harbor Tag Retention 규칙 설정하기:
+## 1. Harbor Tag Retention 사용하기 :
+### 1.1 Harbor Tag Retention 규칙 설정하기 :
 
 - Harbor 관리자 로그인 > 좌측 메뉴 > Projects(프로젝트) 선택 > 관리하려는 프로젝트 클릭 > Tag Retention(정책) 탭 클릭한다.
 
@@ -53,7 +53,7 @@ image: /assets/img/post-title/harbor-wallpaper.jpg
 
 * * *
 
-### 실제 디스크 삭제하기:
+### 1.2 실제 디스크 삭제하기 :
 - Harbor 관리자 로그인 > 관리 > 정리를 클릭한다.
 
 > Retention은 태그만 삭제하기 때문에, 디스크 공간을 줄이려면 Harbor의 정리 기능(GC) 을 실행해야 한다.
