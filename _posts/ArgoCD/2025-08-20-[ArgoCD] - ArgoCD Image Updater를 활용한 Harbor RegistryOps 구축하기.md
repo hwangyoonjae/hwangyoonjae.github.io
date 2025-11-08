@@ -7,7 +7,7 @@ tags: [ArgoCD, ImageUpdater]
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
 
-## ArgoCD Image Updater 설치파일 다운로드:
+## 1. ArgoCD Image Updater 설치파일 다운로드 :
 
 ```bash
 $ wget https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stable/manifests/install.yaml
@@ -17,8 +17,8 @@ $ wget https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stab
 
 ---
 
-## ArgoCD Image Updater 인증 설정하기:
-### TLS 인증서 적용하기:
+## 2. ArgoCD Image Updater 인증 설정하기 :
+### 2.1 TLS 인증서 적용하기 :
 
 ```bash
 $ kubectl -n [namespace] create secret generic [secret명] --from-file=ca.crt=[인증서 경로]
@@ -31,7 +31,7 @@ $ kubectl -n [namespace] create secret generic [secret명] --from-file=ca.crt=[�
 
 ---
 
-### Harbor 인증 Secret 생성하기:
+### 2.2 Harbor 인증 Secret 생성하기 :
 
 ```bash
 $ kubectl create secret docker-registry [secret명] \
@@ -46,7 +46,7 @@ $ kubectl create secret docker-registry [secret명] \
 
 ---
 
-### registries.conf ConfigMap 생성하기:
+### 2.3 registries.conf ConfigMap 생성하기 :
 
 ```yaml
 apiVersion: v1
@@ -70,7 +70,7 @@ data:
 
 ---
 
-## ArgoCD Image Updater Deployment 수정하기:
+## 3. ArgoCD Image Updater Deployment 수정하기 :
 
 ```yaml
 apiVersion: apps/v1
@@ -85,7 +85,7 @@ spec:
 
 ```
 
-## ArgoCD Application Annotations 추가하기:
+## 4. ArgoCD Application Annotations 추가하기 :
 
 ```bash
 $ kubectl edit application [application명] -n [namespace]
@@ -114,7 +114,7 @@ metadata:
 
 ---
 
-## ArgoCD 배포 파일 생성하기:
+## 5. ArgoCD 배포 파일 생성하기 :
 
 - 파일 구조는 아래와 같다.
 

@@ -7,14 +7,14 @@ tags: [ArgoCD, Argo-Rollout]
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
 
-## ArgoCD Rollout이란? :
+## 1. ArgoCD Rollout이란? :
 - Argo Rollouts와 연동하여 점진적인 배포 전략을 관리하고 자동화하기 위해 사용한다.
 - Argo Rollouts는 Kubernetes 애플리케이션의 점진적 배포를 위한 고급 기능을 제공하며, Canary, Blue-Green, Experiment 등의 배포 전략을 지원한다.
 ![argocd rollout 아키텍처](/assets/img/post/ArgoCD/argocd%20rollout%20아키텍처.png)
 
 * * *
 
-## ArgoCD Rollout의 필요성 및 장점 :
+## 2. ArgoCD Rollout의 필요성 및 장점 :
 1. **점진적 배포**:
     - 애플리케이션을 단계적으로 배포함으로써 전체 시스템에 미치는 영향을 최소화한다.
     - 예를 들어, Canary 배포는 새로운 버전의 애플리케이션을 일부 트래픽에만 노출시켜 검증한 후 전체 트래픽으로 확장한다.
@@ -33,7 +33,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 
 * * *
 
-## ArgoCD와 Argo Rollouts 설치하기 :
+## 3. ArgoCD와 Argo Rollouts 설치하기 :
 - Argo Rollouts CLI 설치
 
 ```bash
@@ -64,8 +64,8 @@ $ kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/re
 
 * * *
 
-## Argo CD 배포 방식 :
-### 롤링 업데이트 (Rolling Update)
+## 4. Argo CD 배포 방식 :
+### 4.1 롤링 업데이트 (Rolling Update) : 
 - 새로운 버전의 애플리케이션을 점진적으로 배포합니다. 기존의 파드가 새 버전의 파드로 점진적으로 교체된다.
 - 배포 중 다운타임이 없으며, 사용자는 점진적으로 새로운 버전을 접하게된다.
 
@@ -96,7 +96,9 @@ spec:
       maxSurge: 1
 ```
 
-### 블루-그린 배포 (Blue-Green Deployment)
+* * *
+
+### 4.2 블루-그린 배포 (Blue-Green Deployment) :
 - 두 개의 독립적인 환경(블루와 그린)을 사용하여 배포를 진행하고, 새 버전이 준비되면 그린 환경에 배포하여 준비가 완료되면 블루에서 그린으로 트래픽을 전환한다.
 - 배포 중 다운타임이 없고, 새로운 버전이 정상 작동하는지 확인 후 트래픽을 전환할 수 있다.
 
@@ -127,7 +129,9 @@ spec:
         - containerPort: 80
 ```
 
-### 카나리 배포 (Canary Deployment)
+* * *
+
+### 4.3 카나리 배포 (Canary Deployment) :
 - 새로운 버전의 애플리케이션을 단계적으로 배포하여 처음에는 소수의 인스턴스에만 배포하고, 문제가 없으면 점진적으로 더 많은 인스턴스에 배포한다.
 - 새로운 버전의 안정성을 점진적으로 확인할 수 있다.
 

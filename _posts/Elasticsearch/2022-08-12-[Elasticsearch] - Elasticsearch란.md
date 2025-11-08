@@ -7,12 +7,12 @@ tags: [JAVA, DATA]
 image: /assets/img/post-title/elasticsearch-wallpaper.jpg
 ---
 
-## Elasticsearch란? :
+## 1. Elasticsearch란? :
 - Elasticsearch는 Apache Lucene(아파치 루씬) 기반의 java 오픈소스 분산 검색 엔진이다.
 - 방대한 양의 데이터를 신속하고 거의 실시간으로 저장,검색,분석할 수 있다.
 - 검색을 위해 단독으로 사용되기도 하며,  ELK( Elasticsearch / Logstatsh / Kibana )스택으로 사용되기도 한다.
 
-#### [ELK 스택]
+### 1.1 ELK 스택 :
 - **Logstash**
   - 다양한 소스( DB, csv파일 등 )의 로그 또는 트랜잭션 데이터를 수집, 집계, 파싱하여 Elasticsearch로 전달
 - **Elasticsearch**
@@ -22,12 +22,12 @@ image: /assets/img/post-title/elasticsearch-wallpaper.jpg
 
 * * *
 
-### Elasticsearch 흐름도 :
+### 1.2 Elasticsearch 흐름도 :
 ![텍스트](/assets/img/post/JAVA/ELK%20%EA%B5%AC%EC%A1%B0.PNG)
 
 * * *
 
-### Elasticsearch 핵심 개념 :
+### 1.3 Elasticsearch 핵심 개념 :
 1. 클러스터 :
    - 클러스터는 하나 이상의 노드(서버)가 모인 것이며, 이를 통해 전체 데이터를 저장하고 모든 노드를 포관하는 통합 색인화 및 검색 기능을 제공한다.
    - 클러스터는 고유한 이름으로 식별 되는데, 기본 이름은 "elasticsearch"이다.

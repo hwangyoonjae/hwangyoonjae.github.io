@@ -7,12 +7,12 @@ tags: [ArgoCD, Gitlab, Gitops]
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
 
-## ArgoCD Architecture :
+## 1. ArgoCD Architecture :
 ![argocd 아키텍처](/assets/img/post/ArgoCD/argocd%20아키텍처.png)
 
 * * *
 
-## 1. Gitlab 구성하기 :
+## 2. Gitlab 구성하기 :
 - root path에 deployment.yaml 파일과 service.yaml 파일을 생성하여 gitlab repository의 commit하여 저장한다.
 
 ```yaml
@@ -56,7 +56,7 @@ spec:
 
 * * *
 
-## 2. 배포할 Application 생성하기 :
+## 3. 배포할 Application 생성하기 :
 ![argocd 어플리케이션 생성 화면 1](/assets/img/post/ArgoCD/argocd%20어플리케이션%20생성%20화면%201.png)
 - Application Name : 배포할 어플리케이션 이름 (sample-argocd-test)
 - Project : ArgoCD 내 어플리케이션 그룹 (default)
@@ -81,10 +81,12 @@ spec:
 * * *
 
 ## 3. 연동 중 에러 발생사항 :
-### 10.96.0.10:53: no such host 에러 발생한 경우
+### 3.1 "10.96.0.10:53: no such host" 에러 발생한 경우
 
 > Unable to create application: application spec for argo-test is invalid: InvalidSpecError: repository not accessible: repositories not accessible: &Repository{Repo: "https://gitlab.com:8443/root/argocd.git", Type: "", Name: "", Project: ""}: repo client error while testing repository: rpc error: code = Unknown desc = error testing repository connectivity: Get "https://gitlab.com:8443/root/argocd.git/info/refs?service=git-upload-pack": dial tcp: lookup gitlab.com on 10.96.0.10:53: no such host
 {: .prompt-warning }
+
+* * *
 
 ### 조치 방법 :
 - coredns configmap의 hosts 플러그인 추가
@@ -129,10 +131,12 @@ $ kubectl -n kube-system rollout restart deployment coredns
 
 * * *
 
-### x509: certificate signed by unknown authority 에러 발생한 경우
+### 3.2 "x509: certificate signed by unknown authority" 에러 발생한 경우 :
 
 > Unable to create application: application spec for argo-test is invalid: InvalidSpecError: repository not accessible: repositories not accessible: &Repository{Repo: "https://gitlab.com:8443/root/argocd.git", Type: "", Name: "", Project: ""}: repo client error while testing repository: rpc error: code = Unknown desc = error testing repository connectivity: Get "https://gitlab.com:8443/root/argocd.git/info/refs?service=git-upload-pack": x509: certificate signed by unknown authority
 {: .prompt-warning }
+
+* * *
 
 ### 조치 방법 :
 - argocd-tls-certs-cm.yaml 파일 생성
@@ -202,18 +206,22 @@ data:
 
 * * *
  
-### "gitlab-credentials" not found 에러 발생한 경우
+### 3.3 "gitlab-credentials not found" 에러 발생한 경우 :
 
 >Unable to create application: error while validating and normalizing app: error validating the repo: secret "gitlab-credentials" not found
 {: .prompt-warning }
 
+* * *
+
 ### 조치 방법 :
 - Gitlab 자격 증명 시크릿 생성
+
 ```bash
 $ kubectl -n argocd create secret generic gitlab-credentials --from-literal=username=<your-username> --from-literal=password=<your-personal-access-token>
 ```
 
 - ArgoCD를 재시작하여 설정 반영
+
 ```bash
 $ kubectl rollout restart deployment argocd-server -n argocd
 $ kubectl rollout restart deployment argocd-repo-server -n argocd

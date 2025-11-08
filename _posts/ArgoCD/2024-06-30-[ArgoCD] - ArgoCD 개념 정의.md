@@ -7,14 +7,14 @@ tags: [ArgoCD]
 image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
 
-## ArgoCD란? :
+## 1. ArgoCD란? :
 - Kubernetes 환경에서의 애플리케이션 배포와 관리를 지원하는 도구
 - GitOps 원칙에 기반하여 설계
 - 기본적으로 Git 저장소에 기록된 애플리케이션의 상태를 Kubernetes 클러스터와 동기화하는 역할을 수행
 
 * * *
 
-## 도입 배경 :
+## 2. 도입 배경 :
 - 딜라이트룸의 기술 스택 중 Kubernetes는 알라미 서비스 API, 내부 서비스, 데이터 파이프라인 등이 동작하는 중요한 기반 환경
 	1. Git 저장소에 기록된 상태와 Kubernetes 클러스터의 현재 상태는 일치해야 한다.
 	2. 대표적인 배포 방식은 이미지를 빌드하여 컨테이너 레지스트리에 업로드한 후, k8s 리소스로 정의하고 적용하는 것입니다. 그러나 이 방식에는 변경 사항이 있을 때마다 새롭게 적용해야하는 번거로움이 있다.
@@ -22,7 +22,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 
 * * *
 
-## ArgoCD의 선택 이유 :
+## 3. ArgoCD의 선택 이유 :
 1. Git과 Kubernetes 상태의 효율적인 동기화
 2. 간결하면서도 직관적인 설치 및 운영 경험
 3. 다양한 도구(helm, kustomize 등)와의 원활한 연동
@@ -32,12 +32,12 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 
 * * *
 
-## 활용 사례 :
-### 1. 일반적인 백엔드 서비스 배포
+## 4. 활용 사례 :
+### 4.1 일반적인 백엔드 서비스 배포 :
 - 현대의 DevOps 환경에서는 다양한 스테이지(dev, stg, prod 등)를 거치며 소프트웨어를 빠르게, 안전하게 배포하는 것이 일반화 되어 있어 환경에 따라 다양한 설정값 이를테면 이미지 태그, 자원 제약사항, 스케일링 옵션, 환경 변수 등을 변경해가며 배포되어야 하는데 ArgoCD를 이용하면 이를 어렵지 않게 지원할 수 있다.
 - 가장 기초적인 방법으로 ArgoCD의 Application를 환경에 따라 한벌씩 만드는 방식을 시도해 볼 수 있는데 Application은 ArgoCD에서 배포의 가장 기본이 되는 단위라고 보면 되고, 하나의 Application은 클러스터에 배포되어야 할 각종 resource의 위치, 배포 방법, 목표 네임스페이스나 클러스터 등 다양한 설정 정보를 담고 있다.
 
-### 2. 모든 클러스터에 기반이 되는 서비스 배포하기
+### 4.2 모든 클러스터에 기반이 되는 서비스 배포하기 :
 - 몇몇 종류의 기반이 되는 공통 서비스들(예를 들어 ingress-controller, agents for observability, autoscaler 등)은 클러스터의 종류와 상관 없이 전반적으로 배포되어야 할 필요하다.
 - 위에서 언급한 ApplicationSet은 이러한 배포 문제를 해결하는데 있어 매우 유용한 도구로, 단순한 일괄 배포 외에도 환경별로 다른 설정값을 적용할 필요가 있는데 추가적인 helm values 파일이나 ConfigMap을 활용하여 동일한 서비스를 배포하면서 환경마다 특정 설정을 적용할 수 있다.
 - ArgoCD와 ApplicationSet를 활용하면, 다양한 클러스터에 필요한 서비스들을 효과적으로, 일관되게 배포하는 것이 가능하다.

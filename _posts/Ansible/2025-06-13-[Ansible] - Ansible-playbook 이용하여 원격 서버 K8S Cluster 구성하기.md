@@ -7,7 +7,7 @@ tags: [Ansible, Kubernetes]
 image: /assets/img/post-title/ansible-wallpaper.jpg
 ---
 
-## Ansible 파일 구조:
+## 1. Ansible 파일 구조 :
 
 - Ansible 통해서 Kubernetes Cluster 구성 파일 구조는 아래와 같습니다.
 
@@ -63,7 +63,7 @@ image: /assets/img/post-title/ansible-wallpaper.jpg
 
 * * *
 
-## Ansible 설치하기:
+## 2. Ansible 설치하기 :
 
 ```bash
 $ dnf install -y /root/ansible/install_rpm/*.rpm --disablerepo=* --nobest --skip-broken
@@ -78,8 +78,9 @@ $ ansible --version
 
 * * *
 
-## Ansible로 K8S Cluster 구성하기:
-### 원격 서버 아이피 주소 및 설치 경로 변수 입력:
+## 3. Ansible로 K8S Cluster 구성하기 :
+### 3.1 원격 서버 아이피 주소 및 설치 경로 변수 입력 :
+
 ```bash
 # 모든 Script는 해당 변수 값을 사용합니다.
 
@@ -108,7 +109,7 @@ INVENTORY_BACKUP_FILE="${INVENTORY_FILE}.bak"
 HAPROXY_YML_FILE="$INVENTORY_PATH/group_vars/haproxy.yml"
 ```
 
-### 각 파일별 변수 변환 스크립트 실행:
+### 3.2 각 파일별 변수 변환 스크립트 실행 :
 ```bash
 #!/bin/bash
 
@@ -252,7 +253,7 @@ echo "📄 변경 로그: $log_file"
 
 * * *
 
-### inventory.ini에 등록된 서버들 ssh-key 자동 생성 스크립트 실행:
+### 3.3 inventory.ini에 등록된 서버들 ssh-key 자동 생성 스크립트 실행 :
 
 ```bash
 #!/bin/bash
@@ -301,7 +302,7 @@ echo "[+] SSH 키 공유 완료!"
 
 * * *
 
-### Ansible 인벤토리 그룹별 변수 정의:
+### 3.4 Ansible 인벤토리 그룹별 변수 정의 :
 - all.yml 파일에서는 원격서버들의 IP 주소와 설치 파일 경로들을 지정한다.
 - ***1_replace_vars.sh*** 파일을 통해서 해당 변수에 값을 변경한다.
 
@@ -381,7 +382,7 @@ K8S_INIT_FILE_REMOTE_DIR: "/root/config"
 
 * * *
 
-### Ansible 역할 단위 플레이북 구성:
+### 3.5 Ansible 역할 단위 플레이북 구성 :
 ```yml
 # ansible/roles/haproxy/handlers/main.yml
 
@@ -818,7 +819,7 @@ server {{ node }} {{ node }}:{{ HTTP_NODEPORT }} check
 
 * * *
 
-### Ansible 통해서 K8S Cluster 배포:
+### 3.6 Ansible 통해서 K8S Cluster 배포 :
 
 ```bash
 $ ansible-playbook -i inventory/inventory.ini cluster.yml -vvv

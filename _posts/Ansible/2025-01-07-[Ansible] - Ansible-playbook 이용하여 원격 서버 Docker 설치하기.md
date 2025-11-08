@@ -7,7 +7,7 @@ tags: [Ansible, Docker]
 image: /assets/img/post-title/ansible-wallpaper.jpg
 ---
 
-## Ansible 설치 파일 준비하기:
+## 1. Ansible 설치 파일 준비하기 :
 > 폐쇄망에서 설치하기 위해 인터넷이 되는 서버로부터 RPM 파일을 다운로드 받는다.
 {: .prompt-warning}
 
@@ -15,7 +15,7 @@ image: /assets/img/post-title/ansible-wallpaper.jpg
 
 * * *
 
-## Docker 설치하는 Ansible-Playbook 생성하기:
+## 2. Docker 설치하는 Ansible-Playbook 생성하기 :
 
 - 아래와 같이 Ansible-Playbook 생성하여 원격서버들로부터 Docker 설치를 진행한다.
 
@@ -82,16 +82,21 @@ image: /assets/img/post-title/ansible-wallpaper.jpg
         enabled: yes
 ```
 
+* * *
+
 - Ansible hosts파일의 배포할 원격서버 IP주소를 입력한다.
 
 ```bash
 $ vi /etc/ansible/host
 ```
+
 ```bash
 [docker_install]
 192.168.1.2
 192.168.1.3
 ```
+
+* * *
 
 - 배포를 진행한다.
 

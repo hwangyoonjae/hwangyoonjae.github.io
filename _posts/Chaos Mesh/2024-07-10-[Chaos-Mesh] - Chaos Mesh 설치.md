@@ -80,7 +80,7 @@ $ helm install chaos-mesh helm/chaos-mesh -n=chaos-mesh --set images.registry=$D
 
 * * *
 
-## 3. Chaos Mesh Dashboard 접속하기:
+## 3. Chaos Mesh Dashboard 접속하기 :
 - dashboard를 ingress 통해서 접속하기 위해 설정한다.
 
 ```yaml
@@ -117,9 +117,11 @@ $ kubectl create -f chaos-ingress.yaml
 ```
 
 - 설치 후 dashboard에 접속 후 **Click here to generate**를 클릭한다.
+
 [![Token 입력 요청 화면](/assets/img/post/chaos-mesh/Token%20입력%20요청%20화면.png)](/assets/img/post/chaos-mesh/Token%20입력%20요청%20화면.png)
 
 - Token 생성하는 방법 참고하여 RBAC권한을 생성
+
 [![액세스 요청 화면](/assets/img/post/chaos-mesh/액세스%20요청%20화면.png)](/assets/img/post/chaos-mesh/액세스%20요청%20화면.png)
 
 >RBAC란?
@@ -128,6 +130,7 @@ $ kubectl create -f chaos-ingress.yaml
 {: .prompt-tip }
 
 - 위 과정 진행 후 아래와 같이 Dashboard가 보인다.
+
 [![대시보드 화면](/assets/img/post/chaos-mesh/대시보드%20화면.png)](/assets/img/post/chaos-mesh/대시보드%20화면.png)
 
 * * *

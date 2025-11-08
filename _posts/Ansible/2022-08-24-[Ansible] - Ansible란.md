@@ -7,13 +7,13 @@ tags: [Ansible, 자동화]
 image: /assets/img/post-title/ansible-wallpaper.jpg
 ---
 
-## Ansible(앤서블)란?:
+## 1. Ansible(앤서블)란? :
 - 인프라 관리를 코드 기반으로 자동화하는 도구이다.
 - 코드 스크립트를 실행하기만 하면 코드가 알아서 다 해주게된다.
 
 * * *
 
-### Ansible(앤서블) 특징:
+### 1.1 Ansible(앤서블) 특징 :
 1. **멱등성 지원**: 
     - 멱등성 : 여러번 실행해도 같은 결과 값이 나오는 성질
     - Ansible에서의 멱등성 : 결과의 상태값이 다르더라도 결국에 결과는 동일하게 나오게 하는 성질
@@ -27,12 +27,12 @@ image: /assets/img/post-title/ansible-wallpaper.jpg
     
 * * *
 
-## Ansible(앤서블)의 3가지 요소
+## 2. Ansible(앤서블)의 3가지 요소 :
 - 앤서블은 크게 3가지인 인벤토리, 플레이북, 모듈로 이루어져있다.
 
 * * *
 
-### 인벤토리(inventory):
+### 2.1 인벤토리(inventory) :
 - 앤서블에 의해 제어될 대상을 정의한다.
 - 일반적으로 hosts.ini 파일에 정의해 사용 하며, 여러 서버들의 SSH접근 iP, 포트, 리눅스 사용자 와 같은 접속 정보를 아래와 같이 정의한다.
 
@@ -52,7 +52,7 @@ db2 ansible_host = bbb.db2.host
 
 * * *
 
-### 플레이북(Playbook):
+### 2.2 플레이북(Playbook) :
 - 인벤토리 파일에서 정의한 대상들이 무엇을 수행할 것인지 정의하는 역할을하며, yaml 포맷으로 설정한다.
 - 단독으로 사용되는 것이 아닌 인벤터리와 플레이북의 조합으로 아래와 같이 사용한다.
 
@@ -65,11 +65,12 @@ db2 ansible_host = bbb.db2.host
     yum:
        name: nginx
        state: installed
-``````
+```
 
 * * *
 
-### 모듈(Module):
+### 2.3 모듈(Module) :
+
 - 플레이북에서 task가 어떻게 수행될지를 정의하는 요소이다.
 Python Code를 호출하여 실행하기 때문에 Python이 필수적으로 필요하며, 실제로 앤서블을 설치해보면 다양한 모듈이 같이 설치되는 것을 볼 수가 있다.
 

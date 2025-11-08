@@ -56,13 +56,16 @@ data:
 * * *
 
 ## 3. 연동 중 에러 발생사항 :
-### Url is blocked: Requests to the local network are not allowed 에러 발생한 경우
+### 3.1 Url is blocked: Requests to the local network are not allowed 에러 발생한 경우 :
 
 >Url is blocked: Requests to the local network are not allowed
 {: .prompt-warning }
 
+* * *
+
 ### 조치 방법 :
 - Admin Area > Settings > Network > Outbound requests 접속하여 **Allow requests to the local network from webhooks and integrations** 체크 후 저장
+
 ![argocd webhook 연동 에러 조치 방법 1](/assets/img/post/ArgoCD/argocd%20webhook%20연동%20에러%20조치%20방법%201.png)
 
 * * *
