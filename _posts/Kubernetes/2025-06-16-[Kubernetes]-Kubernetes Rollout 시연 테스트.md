@@ -7,8 +7,8 @@ tags: [Kubernetes, Deployment, Rollout]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## 커스터마이징된 Nginx 이미지 만들기:
-### ***custom-v1*** Nginx 이미지 생성하기:
+## 1. 커스터마이징된 Nginx 이미지 만들기 :
+### 1.1 ***custom-v1*** Nginx 이미지 생성하기 :
 - Dockerfile 작성하기
 
 ```bash
@@ -30,7 +30,7 @@ $ docker push <Harbor주소>/<프로젝트명>/nginx:custom-v1
 
 * * *
 
-### ***custom-v2*** Nginx 이미지 생성하기:
+### 1.2 ***custom-v2*** Nginx 이미지 생성하기 :
 - Dockerfile 작성하기
 
 ```bash
@@ -52,8 +52,8 @@ $ docker push <Harbor주소>/<프로젝트명>/nginx:custom-v2
 
 * * *
 
-## Deployment 생성 및 배포하기:
-### ***custom-v1*** deployment 배포하기:
+## 2. Deployment 생성 및 배포하기 :
+### 2.1 ***custom-v1*** deployment 배포하기 :
 
 ```yaml
 # deployment.yaml
@@ -88,7 +88,7 @@ $ kubectl expose deployment <서비스명> --type=NodePort --port=80
 
 * * *
 
-## 버전 업데이트:
+## 3. 버전 업데이트 :
 
 - 기존에 사용했던 이미지를 변경하여 업데이트한다.
 
@@ -101,7 +101,7 @@ $ kubectl rollout status deployment demo-app
 
 * * *
 
-## 확인 테스트:
+## 4. 확인 테스트 :
 
 ```bash
 # NodePort 확인
@@ -115,7 +115,7 @@ curl http://<NodeIP>:<NodePort>
 
 * * *
 
-## 롤백 테스트:
+## 5. 롤백 테스트 :
 
 ```bash
 $ kubectl rollout undo deployment <deployment명>

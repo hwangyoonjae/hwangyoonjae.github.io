@@ -7,7 +7,7 @@ tags: [Kubernetes, Prometheus, Grafana]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## Grafana Ingress 생성하기 :
+## 1. Grafana Ingress 생성하기 :
 
 ```bash
 $ vi grafana-ingress.yaml
@@ -37,14 +37,13 @@ spec:
         pathType: Prefix
 ```
 
-
 ```bash
 $ kubectl apply -f grafana-ingress.yaml
 ```
 
 ---
 
-## Coredns의 정적 호스트 매핑하기 :
+## 2. Coredns의 정적 호스트 매핑하기 :
 - configmap에 IP, 도메인 주소를 입력한다.
 
 ```bash
@@ -85,18 +84,24 @@ data:
 
 ---
 
-## Prometheus 데이터 소스 URL 입력하기 :
+## 3. Prometheus 데이터 소스 URL 입력하기 :
 - 햄버거 버튼 > Connections > Your Connections 클릭한다.
 
 ![prometheus 데이터 소스URL 입력 1](/assets/img/post/kubernetes/prometheus%20데이터%20소스URL%20입력%201.png)
+
+* * *
 
 - Add new data source 버튼 클릭한다.
 
 ![prometheus 데이터 소스URL 입력 2](/assets/img/post/kubernetes/prometheus%20데이터%20소스URL%20입력%202.png)
 
+* * *
+
 - Prometheus 클릭한다.
 
 ![prometheus 데이터 소스URL 입력 3](/assets/img/post/kubernetes/prometheus%20데이터%20소스URL%20입력%203.png)
+
+* * *
 
 - 이름, URL 주소 입력 후, 스크롤 내려서 아래 “Save & test“ 버튼 클릭한다.
 
@@ -108,10 +113,12 @@ data:
 
 ---
 
-## Grafana 모니터링 확인하기 :
+## 4. Grafana 모니터링 확인하기 :
 - 햄버거 버튼 > Dashboards 클릭한다.
 
 ![Grafana 모니터링 확인하기 1](/assets/img/post/kubernetes/Grafana%20모니터링%20확인하기%201.png)
+
+* * *
 
 - Default 클릭하여 아래 대시보드를 클릭하여 필요한 대시보드를 띄웁니다.
 
@@ -119,6 +126,8 @@ data:
 {: .prompt-warning}
 
 ![Grafana 모니터링 확인하기 2](/assets/img/post/kubernetes/Grafana%20모니터링%20확인하기%202.png)
+
+* * *
 
 - 필자는 아래 주소를 통해 Grafana Dashboard 오픈소스를 사용했다.
 > * [Grafana Dashboard 다운로드](https://grafana.com/grafana/dashboards/15661-k8s-dashboard-en-20250125/ "Grafana Dashboard 다운로드")

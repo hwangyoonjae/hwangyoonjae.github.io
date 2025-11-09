@@ -7,7 +7,7 @@ tags: [Kubernetes, Yaml]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## Pod 생성 방법 :
+## 1. Pod 생성 방법 :
 ```yaml
 apiVersion: v1 # 리소스의 API 버전을 지정
 kind: Pod # 리소스의 종류 지정
@@ -24,7 +24,7 @@ spec: # 파드의 사양을 정의 (컨테이너, 볼륨, 네트워크 설정 �
 
 * * *
 
-## Replicaset 생성 방법 :
+## 2. Replicaset 생성 방법 :
 ```yaml
 apiVersion: apps/v1 # 리소스의 API 버전을 지정
 kind: ReplicaSet # 리소스의 종류 지정
@@ -52,7 +52,7 @@ spec:
 
 * * *
 
-## Deployment 생성 방법 :
+## 3. Deployment 생성 방법 :
 ```yaml
 apiVersion: apps/v1 # 리소스의 API 버전을 지정
 kind: Deployment # 리소스의 종류 지정
@@ -88,7 +88,7 @@ spec:
 
 * * *
 
-## Service 생성 방법 :
+## 4. Service 생성 방법 :
 ```yaml
 apiVersion: v1 # 리소스의 API 버전을 지정
 kind: Service # 리소스의 종류 지정
@@ -108,7 +108,7 @@ spec:
 
 * * *
 
-## PV 생성 방법 :
+## 5. PV 생성 방법 :
 ```yaml
 apiVersion: v1 # 리소스의 API 버전을 지정
 kind: PersistentVolume # 리소스의 종류 지정
@@ -128,7 +128,7 @@ spec:
 
 * * *
 
-## PVC 생성 방법 :
+## 6. PVC 생성 방법 :
 ```yaml
 apiVersion: v1 # 리소스의 API 버전을 지정
 kind: PersistentVolumeClaim # 리소스의 종류 지정
@@ -150,7 +150,7 @@ spec:
 
 * * *
 
-## Ingress 생성 방법 :
+## 7. Ingress 생성 방법 :
 ```yaml
 apiVersion: networking.k8s.io/v1 # 리소스의 API 버전을 지정
 kind: Ingress # 리소스의 종류 지정

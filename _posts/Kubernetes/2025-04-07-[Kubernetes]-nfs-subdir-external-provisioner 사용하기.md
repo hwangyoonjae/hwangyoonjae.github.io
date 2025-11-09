@@ -7,7 +7,7 @@ tags: [Kubernetes, nfs]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## nfs-provisioner 다운로드 :
+## 1. nfs-provisioner 다운로드 :
 - nfs-provisioner 구성 파일을 직접 다운로드 받거나 git 명령어를 통해서 다운받습니다.
 > * [nfs-provisioner 다운로드](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/ "nfs-provisioner 다운로드")
 
@@ -17,8 +17,8 @@ $ git clone https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner.g
 
 ---
 
-## nfs-provisioner 설치하기 :
-### RBAC 및 서비스 계정 생성하기 :
+## 2. nfs-provisioner 설치하기 :
+### 2.1 RBAC 및 서비스 계정 생성하기 :
 ```yaml
 apiVersion: v1
 kind: ServiceAccount
@@ -94,7 +94,9 @@ roleRef:
 $ kubectl apply -f rbac.yaml
 ```
 
-### Deployment 생성하기 :
+* * *
+
+### 2.2 Deployment 생성하기 :
 ```bash
 apiVersion: apps/v1
 kind: Deployment
@@ -141,7 +143,9 @@ spec:
 $ kubectl apply -f deployment.yaml
 ```
 
-### StorageClass 생성하기 :
+* * *
+
+### 2.3 StorageClass 생성하기 :
 ```bash
 # storageclass.yaml
 apiVersion: storage.k8s.io/v1
@@ -161,7 +165,7 @@ $ kubectl apply -f storageclass.yaml
 
 ---
 
-## PVC 생성하기 :
+## 3. PVC 생성하기 :
 
 ```yaml
 apiVersion: v1
@@ -179,7 +183,7 @@ spec:
 
 ---
 
-## Grafana Deployment에서 PVC 연결하기 :
+## 4. Grafana Deployment에서 PVC 연결하기 :
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -218,3 +222,5 @@ $ kubectl apply -f grafana-deployment.yaml
 > Pod가 재시작되거나 삭제돼도 PVC에 저장된 데이터가 유지되고,
 > NFS 서버의 특정 디렉토리 하위에 PVC 이름 기반으로 서브 디렉토리를 자동으로 생성하고, 거기에 데이터를 저장해준다.
 {: .prompt-info}
+
+* * *

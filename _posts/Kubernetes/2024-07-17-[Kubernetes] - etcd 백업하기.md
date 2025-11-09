@@ -7,7 +7,7 @@ tags: [Kubernetes, etcd]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## etcd-master-endpoint 확인하기 :
+## 1. etcd-master-endpoint 확인하기 :
 ```bash
 # etcd API 버전 3을 사용하도록 설정
 $ ETCDCTL_API=3;
@@ -25,7 +25,7 @@ etcdctl endpoint status --write-out=table \
 
 * * *
 
-## etcd 백업하기 :
+## 2. etcd 백업하기 :
 ```bash
 $ ETCDCTL_API=3;
 etcdctl --endpoints=https://127.0.0.1:2379 \
@@ -44,7 +44,7 @@ etcdctl --endpoints=https://127.0.0.1:2379 \
 Snapshot saved at /opt/snapshot-pre-boot.db
 ```
 
-## 백업 파일 확인하기 :
+## 3. 백업 파일 확인하기 :
 ```bash
 $ ls -al /opt
 # -rw-------   1 root root 36724768 Jul 17 10:18 snapshot-pre-boot.db
@@ -52,7 +52,7 @@ $ ls -al /opt
 
 * * *
 
-## etcd snapshot restore하기 :
+## 4. etcd snapshot restore하기 :
 ```bash
 $ ETCDCTL_API=3;
 etcdctl --data-dir /var/lib/etcd-from-backup \
@@ -61,7 +61,7 @@ etcdctl --data-dir /var/lib/etcd-from-backup \
 
 * * *
 
-## etcd.yaml 수정 :
+## 5. etcd.yaml 수정 :
 - etcd 스냅샷을  /var/lib/etcd-from-backup 경로로 복원했으므로 볼륨에 대한 호스트 경로를 변경해야한다.
 
 ```bash
@@ -81,7 +81,7 @@ volumes:
 
 * * *
 
-## etcd 정상 동작 확인 :
+## 6. etcd 정상 동작 확인 :
 ```bash
 $ docker ps -a | grep etcd -> up 상태 확인
 ```

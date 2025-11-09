@@ -7,13 +7,13 @@ tags: [Kubernetes, k9s]
 image: /assets/img/post-title/k9s-wallpaper.jpg
 ---
 
-## k9s란? :
+## 1. k9s란? :
 - Kubernetes 클러스터를 터미널에서 사용하기 위한 CLI 도구이다.
 - k9s를 사용하면 kubectl과 함께 사용할 수 있어서 필요에 따라 kubectl과 k9s를 자유롭게 전환하여 사용할 수 있다.
 
 * * *
 
-## k9s 설치하기 :
+## 2. k9s 설치하기 :
 
 ```bash
 # 파일 다운로드
@@ -32,7 +32,7 @@ $ k9s info
 
 * * *
 
-## k9s 메인화면 :
+## 3. k9s 메인화면 :
 ```bash
 $ k9s
 ```
@@ -40,12 +40,14 @@ $ k9s
 - 위 명령어 입력시 아래와 같이 전체 pod 정보를 확인할 수 있다.
 ![k9s 메인화면](/assets/img/post/kubernetes/k9s%20메인화면.png)
 
+* * *
+
 - 메인화면에서 단축키 **?**를 입력하면 help 화면으로 이동되어, 단축키 사용법에 대해서 알 수 있다.
 ![k9s help 화면](/assets/img/post/kubernetes/k9s%20help%20화면.png)
 
 * * *
 
-## CLI 인수 :
+## 4. CLI 인수 :
 ```bash
 # 사용 가능한 모든 CLI 옵션 나열
 $ k9s help
@@ -64,7 +66,6 @@ $ k9s --context coolCtx
 
 # 모든 수정 명령이 비활성화된 상태에서 K9s 읽기 전용 모드로 시작
 $ k9s --readonly
-
 ```
 
 * * *

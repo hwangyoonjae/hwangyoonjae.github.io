@@ -7,8 +7,8 @@ tags: [Kubernetes, Jenkins]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## Jenkins 설치하기:
-### Namespace 생성하기:
+## 1. Jenkins 설치하기 :
+### 1.1 Namespace 생성하기 :
 
 ```yaml
 apiVersion: v1
@@ -23,8 +23,7 @@ $ kubectl create -f namespace.yaml
 
 * * *
 
-### ServiceAccount 생성하기:
-
+### 1.2 ServiceAccount 생성하기 :
 ```yaml
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -62,8 +61,7 @@ $ kubectl create -f serviceaccount.yaml
 
 * * *
 
-### PVC 생성하기:
-
+### 1.3 PVC 생성하기 :
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -85,8 +83,7 @@ $ kubectl create -f pvc.yaml
 
 * * *
 
-### Deployment 생성하기:
-
+### 1.4 Deployment 생성하기 :
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -153,8 +150,7 @@ $ kubectl create -f deployment.yaml
 
 * * *
 
-### Service 생성하기:
-
+### 1.5 Service 생성하기 :
 ```yaml
 apiVersion: v1
 kind: Service
@@ -179,8 +175,7 @@ $ kubectl create -f service.yaml
 
 * * *
 
-### Ingress 생성하기:
-
+### 1.6 Ingress 생성하기 :
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -211,12 +206,14 @@ $ kubectl create -f ingress.yaml
 
 * * *
 
-## Jenkins 세팅하기:
-### Ingress를 통해서 Jenkins 접속하기:
+## 2. Jenkins 세팅하기 :
+### 2.1 Ingress를 통해서 Jenkins 접속하기 :
 - Ingress 구성 시 작성한 Domain 주소로 접속합니다.
 
 > DNS 서버가 없을 경우 PC /etc/hosts의 등록해줘야 접속 가능합니다.
 {: .prompt-warning}
+
+* * *
 
 - 접속 시 아래와 같이 패스워드 입력 화면이 나옵니다.
 
@@ -224,7 +221,7 @@ $ kubectl create -f ingress.yaml
 
 * * *
 
-### Administor Password 입력하기:
+### 2.2 Administor Password 입력하기 :
 
 - Jenkins POD의 접속하여 Administor 패스워드를 확인하여 입력한다.
 
@@ -237,7 +234,7 @@ $ cat /var/jenkins_home/secrets/initialAdminPassword
 
 * * *
 
-### Plugin 설치하기:
+### 2.3 Plugin 설치하기 :
 
 - 필자는 인터넷 연결이 안된 상태에서 설치 진행하여 skip 하였습니다.
 
@@ -245,19 +242,19 @@ $ cat /var/jenkins_home/secrets/initialAdminPassword
 
 * * *
 
-### Jenkins 계정 생성하기:
+### 2.4 Jenkins 계정 생성하기 :
 
 ![jenkins 계정 생성](/assets/img/post/kubernetes/jenkins%20계정%20생성.png)
 
 * * *
 
-### Jenkins 접속 주소 지정하기:
+### 2.5 Jenkins 접속 주소 지정하기 :
 
 ![jenkins 접속 주소 지정](/assets/img/post/kubernetes/jenkins%20접속%20주소%20지정.png)
 
 * * *
 
-### Jenkins 웹 페이지 확인하기:
+### 2.6 Jenkins 웹 페이지 확인하기 :
 
 ![Jenkins 설정 완료](/assets/img/post/kubernetes/Jenkins%20설정%20완료.png)
 ![Jenkins 로그인 후 화면](/assets/img/post/kubernetes/Jenkins%20로그인%20후%20화면.png)

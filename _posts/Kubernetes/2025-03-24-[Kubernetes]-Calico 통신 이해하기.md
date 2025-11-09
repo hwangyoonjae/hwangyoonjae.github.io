@@ -7,38 +7,38 @@ tags: [Kubernetes, Calico]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## Calico의 구조 :
+## 1. Calico의 구조 :
 - Calico CNI를 설치하면 Calico-node POD가 배포되고, Felix, BIRD, Confd라는 3가지 프로세스를 통해 Calico가 동작한다.
 
-  ![Calico 통신 구조](/assets/img/post/kubernetes/Calico%20통신%20구조.png)
+![Calico 통신 구조](/assets/img/post/kubernetes/Calico%20통신%20구조.png)
 
-  - **Felix (필릭스)** : 인터페이스 관리, 라우팅 정보 관리, ACL 관리, 상태 체크
-  - **BIRD (버드)**: BGP Peer 에 라우팅 정보 전파 및 수신, BGP RR(Route Reflector)
-  - **Confd** : calico global 설정과 BGP 설정 변경 시(트리거) BIRD 에 적용해줌
-  - **Datastore plugin** : calico 설정 정보를 저장하는 곳 - k8s API datastore(kdd) 혹은 etcd 중 선택
-  - **Calico IPAM plugin** : 클러스터 내에서 파드에 할당할 IP 대역
-  - **calico-kube-controllers** : calico 동작 관련 감시(watch)
-  - **calicoctl** : calico 오브젝트를 CRUD 할 수 있다, 즉 datastore 접근 가능
+- **Felix (필릭스)** : 인터페이스 관리, 라우팅 정보 관리, ACL 관리, 상태 체크
+- **BIRD (버드)**: BGP Peer 에 라우팅 정보 전파 및 수신, BGP RR(Route Reflector)
+- **Confd** : calico global 설정과 BGP 설정 변경 시(트리거) BIRD 에 적용해줌
+- **Datastore plugin** : calico 설정 정보를 저장하는 곳 - k8s API datastore(kdd) 혹은 etcd 중 선택
+- **Calico IPAM plugin** : 클러스터 내에서 파드에 할당할 IP 대역
+- **calico-kube-controllers** : calico 동작 관련 감시(watch)
+- **calicoctl** : calico 오브젝트를 CRUD 할 수 있다, 즉 datastore 접근 가능
 
-  > Calico에서 노드간 라우팅 정보 공유는 어떤 통신을 통해 일어나는가?
-  >
-  > 각 노드간 통신을 하려면 각각의 라우팅 정보를 공유해야하기에 BGP 프로토콜을 사용한다.
-  {: .prompt-question}
+> Calico에서 노드간 라우팅 정보 공유는 어떤 통신을 통해 일어나는가?
+>
+> 각 노드간 통신을 하려면 각각의 라우팅 정보를 공유해야하기에 BGP 프로토콜을 사용한다.
+{: .prompt-question}
 
 ---
 
-## Calico 네트워크 모드 :
+## 2. Calico 네트워크 모드 :
 - Kubernetes 클러스터에서 노드 간 Pod 네트워크를 연결하기 위해 여러 가지 네트워크 모드를 지원한다.
 
-  |모드|설명|기본값|
-  |------|------|------|
-  |IP-in-IP (IPIP)|노드 간 통신 시 Pod IP를 IP-in-IP 터널로 캡슐화하여 전달|기본값|
-  |VXLAN|IPIP 대신 VXLAN을 사용하여 오버레이 네트워크를 구성|IPIP 대신 설정 필요|
-  |Direct (BGP)|BGP를 사용하여 노드 간 Pod IP를 직접 라우팅|IPIP 대신 설정 필요|
+|모드|설명|기본값|
+|------|------|------|
+|IP-in-IP (IPIP)|노드 간 통신 시 Pod IP를 IP-in-IP 터널로 캡슐화하여 전달|기본값|
+|VXLAN|IPIP 대신 VXLAN을 사용하여 오버레이 네트워크를 구성|IPIP 대신 설정 필요|
+|Direct (BGP)|BGP를 사용하여 노드 간 Pod IP를 직접 라우팅|IPIP 대신 설정 필요|
 
 ---
 
-### IP-in-IP (IPIP) 모드 :
+### 2.1 IP-in-IP (IPIP) 모드 :
 - Pod 간 트래픽을 IPIP 터널을 통해 전달하여 Kubernetes 클러스터 내에서 간단한 네트워크 구성을 가능하게 한다.
 
 ![ipip 모드 통신 구조](/assets/img/post/kubernetes/ipip%20모드%20통신%20구조.png)
@@ -51,12 +51,14 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 
 ---
 
-### Direct (BGP) 모드 :
+### 2.2 Direct (BGP) 모드 :
 - BGP를 활용하여 각 노드가 직접 라우팅 정보를 교환하며, 터널링 없이 최상의 네트워크 성능을 제공한다.
 
 ![direct 모드 통신구조](/assets/img/post/kubernetes/direct%20모드%20통신%20구조.png)
 
-### BGP 연동 :
+* * *
+
+### 2.3 BGP 연동 :
 - Kubernetes 클러스터 내부 네트워크와 IDC 내부망 네트워크 간 직접 라우팅도 가능하다.
 
 ![direct 모드 bgp 연동](/assets/img/post/kubernetes/direct%20모드%20bgp%20연동.png)
@@ -70,7 +72,9 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 
 ---
 
-### VXLAN 모드 :
+### 2.4 VXLAN 모드 :
 - L2 오버레이 네트워크 기술인 VXLAN을 사용하여 Pod 간 통신을 수행하며, BGP 없이도 사용할 수 있다.
 
 ![vxlan 모드 통신구조](/assets/img/post/kubernetes/vlxan%20모드%20통신%20구조.png)
+
+---

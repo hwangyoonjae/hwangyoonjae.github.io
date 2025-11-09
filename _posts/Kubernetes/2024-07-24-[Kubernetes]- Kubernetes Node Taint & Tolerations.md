@@ -7,16 +7,18 @@ tags: [Kubernetes, taint, toleration]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## Taints와 Toleration? :
-### Taint란? :
+## 1. Taints와 Toleration? :
+### 1.1 Taint란? :
 - 특정 노드에 추가되는 속성으로, 그 노드에 특정 Pod가 스케줄링되는 것을 제한하거나 방지한다.
 
-### Toleration이란? :
+* * *
+
+### 1.2 Toleration이란? :
 - Pod의 속성으로, 특정 Taint를 무시하고 해당 노드에 스케줄링될 수 있도록 허용하는 것이다.
 
 * * *
 
-## Taints와 Tolerations 동작 원리 :
+## 2.Taints와 Tolerations 동작 원리 :
 - **Taint**: 노드에 설정되며, 해당 노드에서 Pod의 스케줄링을 방해한다.
   - 노드에 kubectl taint nodes nodename key=value:NoSchedule로 Taint를 설정하면, 기본적으로 이 노드에는 어떠한 Pod도 스케줄링되지 않는다.
 - **Toleration**: Pod에 설정되며, 특정 Taint를 무시하고 해당 노드에 스케줄링될 수 있도록 허용한다.
@@ -24,7 +26,7 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 
 * * *
 
-## 노드의 taint 설정하기 :
+## 3. 노드의 taint 설정하기 :
 - 노드의 taint 설정하는 방법은 아래와 같다.
 
 ```bash
@@ -41,6 +43,8 @@ $ kubectl taint node {nodename} {key}={value}:{option}
 | NoSchedule | 스케줄하지 않음 (이미 스케줄링된 Pod는 그대로 유지) |
 | NoExecute| 실행을 허가하지 않음 (이미 스케줄링된 Pod는 정지됨) |
 
+* * *
+
 - taint 해제 방법은 아래와 같다.
 
 ```bash
@@ -53,7 +57,7 @@ $ kubectl taint node k8s-worker1 {value}-
 
 * * *
 
-## 파드의 tolerations 설정하기 :
+## 4. 파드의 tolerations 설정하기 :
 
 ```yaml
 # tolerations-pod.yaml

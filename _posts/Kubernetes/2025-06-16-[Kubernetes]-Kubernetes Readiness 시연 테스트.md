@@ -7,7 +7,7 @@ tags: [Kubernetes, Readiness, Service]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## Readiness Probe가 설정된 Deployment 작성하기:
+## 1. Readiness Probe가 설정된 Deployment 작성하기 :
 
 - "/ready" 경로로 HTTP 요청을 보내 확인하도록 구성
 
@@ -44,7 +44,7 @@ spec:
 
 * * *
 
-## 배포 후 Pod 상태 확인하기:
+## 2. 배포 후 Pod 상태 확인하기 :
 ```bash
 $ kubectl get pods
 ```
@@ -53,7 +53,7 @@ $ kubectl get pods
 
 * * *
 
-## 서비스에 연결되지 않는지 확인하기:
+## 3. 서비스에 연결되지 않는지 확인하기 :
 
 ```bash
 $ kubectl describe pod <pod-name>
@@ -66,8 +66,8 @@ $ kubectl describe pod <pod-name>
 
 * * *
 
-## 정상 상태로 변경하여 Ready 상태 확인하기:
-### Nginx 경로 수정하기:
+## 4. 정상 상태로 변경하여 Ready 상태 확인하기 :
+### 4.1 Nginx 경로 수정하기 :
 - Nginx의 경우 /ready 경로가 없기 때문에, 대신 /index.html을 readiness path로 바꾸면 통과한다.
 
 ```yaml
@@ -82,7 +82,7 @@ $ kubectl apply -f readiness-demo.yaml
 
 * * *
 
-### Pod Ready 상태 확인하기:
+### 4.2 Pod Ready 상태 확인하기 :
 - Ready 상태가 1/1이 된다.
 
 ```bash

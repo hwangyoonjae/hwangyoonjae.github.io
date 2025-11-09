@@ -7,8 +7,8 @@ tags: [Kubernetes, Cordon, Drain]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## Cordon :
-### Cordon이란? :
+## 1. Cordon :
+### 1.1 Cordon이란? :
 - 특정 노드를 비활성화하여 그 노드에 새로운 파드가 스케줄링되는 것을 막는 기능으로, 이미 그 노드에서 실행 중인 파드는 영향을 받지 않으며 계속 실행된다.
 
 > 주로 노드를 유지 보수하거나 점검할 때 사용한다.
@@ -16,7 +16,7 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 
 * * *
 
-### Cordon 설정하기 :
+### 1.2 Cordon 설정하기 :
 ```bash
 # cordon 적용
 $ kubectl cordon {node name}
@@ -28,8 +28,8 @@ $ kubectl uncordon {node name}
 
 * * *
 
-## Drain :
-### Drain이란? :
+## 2. Drain :
+### 2.1 Drain이란? :
 - 특정 노드에서 실행 중인 모든 파드를 안전하게 다른 노드로 이동시키며 파드를 강제로 종료하고, 해당 노드에서 파드가 실행되지 않도록 처리한다.
 
 > 노드를 비우고 유지보수나 점검을 위해 파드를 안전하게 다른 노드로 이동시킬 때 사용한다.
@@ -37,7 +37,7 @@ $ kubectl uncordon {node name}
 
 * * *
 
-### Drain 설정하기 :
+### 2.2 Drain 설정하기 :
 ```bash
 # 드레인 적용
 $ kubectl drain {node name} --ignore-daemonsets --force
@@ -58,7 +58,7 @@ $ kubectl uncordon {node name}
 
 * * *
 
-## Cordon과 Drain의 차이점 :
+## 2.3 Cordon과 Drain의 차이점 :
 - Cordon : 노드에 새로운 파드가 스케줄링되지 않도록 막는 역할을 하며, 이미 실행 중인 파드는 영향을 받지 않는다.
 - Drain : 실행 중인 모든 파드를 다른 노드로 옮기고, 노드를 비우는 작업을 수행하며, 서비스 중단을 최소화하면서 노드를 비우는 데 사용한다.
 
@@ -69,7 +69,7 @@ $ kubectl uncordon {node name}
 
 * * *
 
-## 질문사항 :
+## 3. 질문사항 :
 
 > 노드를 단순히 종료할 때는 이러한 과정을 하지 않는 이유는?
 >

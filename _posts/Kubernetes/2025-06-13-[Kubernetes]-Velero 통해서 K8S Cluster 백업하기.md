@@ -7,7 +7,7 @@ tags: [Kubernetes, Velero, Backup]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## MinIO 설치하기:
+## 1. MinIO 설치하기 :
 ```bash
 # minio-user 계정 생성
 $ sudo mkdir -p /opt/minio/data
@@ -49,7 +49,7 @@ sudo systemctl enable --now minio
 
 * * *
 
-## MinIO 설정하기:
+## 2. MinIO 설정하기 :
 - 브라우저 접속 (http://{MinIO_IP}:9001)
 
 > ID : minioadmin / PW : minioadmin 
@@ -106,7 +106,7 @@ $ mc rb minio/<버킷명>
 
 * * *
 
-## Velero 설치하기:
+## 3. Velero 설치하기 :
 
 - Velero CLI 설치하기
 
@@ -158,7 +158,7 @@ $ velero uninstall
 
 * * *
 
-## Velero 백업하기:
+## 4. Velero 백업하기 :
 - 클러스터 전체 백업하기
 
 ```bash
@@ -217,7 +217,9 @@ $ velero backup logs cluster-backup
 
 ![백업 파일 MinIO 웹 콘솔에서 확인](/assets/img/post/kubernetes/백업%20파일%20MinIO%20웹%20콘솔에서%20확인.png)
 
-## Velero 백업 주기 설정하기:
+* * *
+
+## 5. Velero 백업 주기 설정하기 :
 - 주기적인 백업 설정 방법
 
 ```bash
@@ -227,6 +229,8 @@ velero schedule create daily-backup \
   --include-namespaces=* \
   --ttl 168h
 ```
+
+* * *
 
 - 각 옵션 설명
 
@@ -254,3 +258,5 @@ $ velero schedule describe <NAME>
 # 스케줄 삭제
 $ velero schedule delete <NAME>
 ```
+
+* * *
