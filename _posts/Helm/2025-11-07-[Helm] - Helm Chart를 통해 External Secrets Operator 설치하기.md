@@ -76,9 +76,10 @@ $ kubectl create namespace external-secrets
 
 # 설치 진행
 $ helm install external-secrets ./ \
-> -n external-secrets \
-> --set installCRDs=true \
-> --set serviceAccount.name=eso-sa
+  -n external-secrets \
+  --set installCRDs=true \
+  --set rbac.create=true \
+  --set serviceAccount.create=true
 ```
 
 * * *
@@ -124,6 +125,10 @@ spec:
           serviceAccountRef:
             name: external-secrets        # ← 이 둘이
             namespace: external-secrets   # ← Vault Role과 일치해야 함
+```
+
+```bash
+$ kubectl apply -f ClusterSecretStore.yaml
 ```
 
 * * *
