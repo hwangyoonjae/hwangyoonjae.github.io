@@ -104,7 +104,7 @@ $ kubectl api-resources | grep -i secretstore
 ## 3. Vault Secret 연동 구성 등록하기 :
 ### 3.1 ClusterSecretStore 설치하기 :
 
-- External Secrets Operator에서 사용할 **Vault 연동 설정(ClusterSecretStore)을 등록한다.
+- External Secrets Operator에서 사용할 **Vault 연동 설정(ClusterSecretStore)**을 등록한다.
 
 ```yaml
 apiVersion: external-secrets.io/v1
