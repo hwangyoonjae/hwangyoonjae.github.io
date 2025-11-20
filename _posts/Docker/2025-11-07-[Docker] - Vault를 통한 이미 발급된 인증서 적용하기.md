@@ -90,7 +90,7 @@ vault policy write policy-wildcard-tls policy-wildcard-tls.hcl
 ### 2.3 Kubernetes Auth 설정하기 :
 
 ```bash
-# 이미 enable 돼 있지 않다면
+# Kubernetes 인증 방식(Kubernetes Auth Method)”을 사용하도록 활성화
 vault auth enable kubernetes
 
 # 쿠버네티스 API 서버 주소/CA로 설정 (환경 맞게 치환)
@@ -106,6 +106,7 @@ vault write auth/kubernetes/config \
 - 인증서는 API 서버 인증서(/etc/kubernetes/pki/apiserver.crt)를 서명한 루트로 Vault 서버가 실행 중인 곳으로 옮기고, 경로를 지정한다.
 
 ```bash
+# Master Node에서 진행
 cat /etc/kubernetes/pki/ca.crt
 ```
 
@@ -114,6 +115,8 @@ vault write auth/kubernetes/config \
   kubernetes_host="https://<API_SERVER_IP>:6443" \
   kubernetes_ca_cert=@/vault/config/k8s-ca.crt
 ```
+
+![vault k8s 인증서 적용](/assets/img/post/docker/vault%20k8s%20인증서%20적용.png)
 
 * * *
 
@@ -128,6 +131,8 @@ vault write auth/kubernetes/role/eso-wildcard-role \
   policies="policy-wildcard-tls" \
   ttl="24h"
 ```
+
+![ESO용 Role 생성하기](/assets/img/post/docker/ESO용%20Role%20생성하기.png)
 
 * * *
 
