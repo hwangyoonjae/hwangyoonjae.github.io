@@ -52,6 +52,8 @@ $ helm repo list
 
 * * *
 
+- 폐쇄망에서 진행하는 경우 아래와 같이 진행하면됩니다.
+
 ```bash
 $ helm pull external-secrets/external-secrets --version 0.20.3
 ```
