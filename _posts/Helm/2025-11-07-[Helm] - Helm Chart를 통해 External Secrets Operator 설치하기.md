@@ -241,7 +241,7 @@ metadata:
 spec:
   refreshInterval: 1h
   secretStoreRef:
-    kind: ClusterSecretStore
+    kind: ClusterSecretStore  # ESO의 동기화 주기
     name: vault-wildcard
   target:
     name: argocd-server-tls   # Argo CD values.yaml의 server.certificate.secretName과 일치
