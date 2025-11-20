@@ -71,6 +71,10 @@ $ docker pull ghcr.io/external-secrets/external-secrets:v0.20.3
 ### 2.3 External Secrets Operator Helm Chart 설치하기 :
 
 ```bash
+# namespace 생성
+$ kubectl create namespace external-secrets
+
+# 설치 진행
 $ helm install external-secrets ./ \
 > -n external-secrets \
 > --set installCRDs=true \
