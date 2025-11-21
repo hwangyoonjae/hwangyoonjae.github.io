@@ -97,6 +97,8 @@ vault auth enable kubernetes
 vault write auth/kubernetes/config \
   kubernetes_host="https://<K8S_API_HOST>:443" \
   kubernetes_ca_cert=@/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+  disable_iss_validation=true \
+  disable_local_ca_jwt=true
 ```
 
 * * *
@@ -113,8 +115,24 @@ cat /etc/kubernetes/pki/ca.crt
 ```bash
 vault write auth/kubernetes/config \
   kubernetes_host="https://<API_SERVER_IP>:6443" \
-  kubernetes_ca_cert=@/vault/config/k8s-ca.crt
+  kubernetes_ca_cert=@/vault/config/k8s-ca.crt \
+  disable_local_ca_jwt=true \
+  token_reviewer_jwt=@/vault/config/reviewer.jwt
 ```
+
+> kubernetes_ca_cert의 값은 **/etc/kubernetes/pki/ca.crt** 값이다.
+{: .prompt-info}
+
+* * *
+
+- **token_reviewer_jwt** 값은 아래 명령어를 통해 확인한다.
+
+```bash
+# --duration 옵션을 통해 JWT의 유효기간을 지정할 수 있다.
+$ kubectl -n kube-system create token vault-auth --duration=720h > vault-auth.jwt
+```
+> token_reviewer_jwt의 값은 Vault가 Kubernetes API에 TokenReview 요청을 보낼 때 사용할 **리뷰용 ServiceAccount JWT**이다
+{: .prompt-info}
 
 ![vault k8s 인증서 적용](/assets/img/post/docker/vault%20k8s%20인증서%20적용.png)
 
