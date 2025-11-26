@@ -109,9 +109,12 @@ $ gitlab-runner register  --url https://gitlab.test.com  --token glrt-FMgTy3LsVm
   executor = "kubernetes"
 
   [runners.kubernetes]
-    namespace = "secloudit-console"
     privileged = true
-    service_account = "gitlab-runner"
+    namespace = "secloudit-console"
+    host = "https://kubernetes.default.svc"
+    ca_file = "/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
+    # /var/run/secrets/kubernetes.io/serviceaccount/token 값 입력
+    bearer_token = "[seviceaccount_token_값]"
 ```
 
 ```bash
