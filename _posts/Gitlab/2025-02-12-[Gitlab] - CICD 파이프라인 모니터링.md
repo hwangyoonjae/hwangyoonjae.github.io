@@ -2,9 +2,9 @@
 layout: post
 title: "CI/CD 파이프라인 모니터링"
 date: 2025.02.12
-categories: [DevOps, Gitlab]
+categories: [DevOps, Grafana]
 tags: [Git, branch]
-image: /assets/img/post-title/gitLab-wallpaper.jpg
+image: /assets/img/post-title/grafana-wallpaper.jpg
 ---
 
 ## gitlab-ci-pipelines-exporter 다운로드 :

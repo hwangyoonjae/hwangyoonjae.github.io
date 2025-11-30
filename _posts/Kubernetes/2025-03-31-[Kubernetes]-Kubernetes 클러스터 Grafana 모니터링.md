@@ -2,9 +2,9 @@
 layout: post
 title: "Kubernetes 클러스터 Grafana 모니터링"
 date: 2025-03-31
-categories: [컨테이너, Kubernetes] 
+categories: [Devops, Grafana] 
 tags: [Kubernetes, Prometheus, Grafana]
-image: /assets/img/post-title/kubernetes-wallpaper.jpg
+image: /assets/img/post-title/grafana-wallpaper.jpg
 ---
 
 ## 1. Grafana Ingress 생성하기 :
