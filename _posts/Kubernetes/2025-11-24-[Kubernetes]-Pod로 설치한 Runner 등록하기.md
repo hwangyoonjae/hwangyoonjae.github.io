@@ -110,11 +110,8 @@ $ gitlab-runner register  --url https://gitlab.test.com  --token glrt-FMgTy3LsVm
 
   [runners.kubernetes]
     privileged = true
-    namespace = "secloudit-console"
-    host = "https://kubernetes.default.svc"
-    ca_file = "/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
-    # /var/run/secrets/kubernetes.io/serviceaccount/token 값 입력
-    bearer_token = "[seviceaccount_token_값]"
+    namespace = "gitlab-runner"
+    service_account = "gitlab-runner-sa"
 ```
 
 ```bash
@@ -123,5 +120,10 @@ $ gitlab-runner restart
 ```
 
 ![runner kubernetes 접속 정보 config의 저장](/assets/img/post/kubernetes/runner%20kubernetes%20접속%20정보%20config의%20저장.png)
+
+> Runner Config의 service_account만 추가해도 동작하는 이유?
+>
+> GitLab Runner가 “Kubernetes 안에서 실행 중인 Pod”일 경우, 쿠버네티스 클라이언트가 자동으로 in-cluster config를 사용하기 때문이다.
+{: .prompt-tip}
 
 * * *
