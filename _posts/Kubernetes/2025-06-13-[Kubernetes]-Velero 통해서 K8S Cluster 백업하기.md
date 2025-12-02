@@ -136,14 +136,15 @@ aws_secret_access_key=velero123
 ```bash
 $ velero install \
   --provider aws \
-  --plugins {Harbor Domain}/velero/velero-plugin-for-aws:v1.8.0 \
+  --plugins {Harbor Domain}/velero/velero-plugin-for-aws:v1.12.1 \
+  --image   {Harbor Domain}/velero/velero:v1.16.1 \
   --bucket velero \
   --secret-file ./credentials-velero \
-  --backup-location-config region=minio,s3ForcePathStyle=true,s3Url=http://<LB_SERVER_IP>:9000
+  --backup-location-config region=minio,s3ForcePathStyle=true,s3Url=http://<MinIO_IP>:9000
   --use-node-agent
 ```
 
-> LB 서버 아이피 주소 입력 시 kubectl 명령어 사용이 가능해야합니다.
+> 위 작업은 Master Node에서 진행합니다.
 {: .prompt-warning }
 
 * * *
