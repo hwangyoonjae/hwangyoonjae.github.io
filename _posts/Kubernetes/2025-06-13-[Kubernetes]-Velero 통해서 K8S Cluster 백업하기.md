@@ -261,3 +261,14 @@ $ velero schedule delete <NAME>
 ```
 
 * * *
+
+## 6. Velero 백업 파일 복구하기 :
+
+```bash
+$ velero restore [backup_name]
+```
+
+> Velero Restore 과정에서는 이미 존재하는 리소스는 기본적으로 **강제 덮어쓰지 않고**, 생성(Create)이 가능한 것만 복구하며, 이름이 같은 기존 리소스는 충돌을 피하기 위해 대부분 그대로 둔다.
+{: .prompt-tip}
+
+* * *
