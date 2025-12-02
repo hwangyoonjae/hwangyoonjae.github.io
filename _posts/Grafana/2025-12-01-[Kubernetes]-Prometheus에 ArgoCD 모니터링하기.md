@@ -9,7 +9,7 @@ image: /assets/img/post-title/grafana-wallpaper.jpg
 
 ## 1. ArgoCD Metric 옵션 활성화하기 :
 
-> 필자는 ArgoCD를 Helm Chart를 통해서 설치했다.
+> 필자는 ArgoCD를 Helm Chart 통해서 설치했다.
 {: .prompt-info}
 
 - ArgoCD Chart의 values.yaml 에서 컨트롤러 metrics를 켠다.
@@ -17,7 +17,7 @@ image: /assets/img/post-title/grafana-wallpaper.jpg
 ```yaml
 controllers:
   metrics:
-    enabled: false
+    enabled: true
 ```
 
 ![argocd metric 활성화](/assets/img/post/grafana/argocd%20metric%20활성화.png)
