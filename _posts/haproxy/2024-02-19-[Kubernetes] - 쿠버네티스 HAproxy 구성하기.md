@@ -2,9 +2,9 @@
 layout: post
 title: "Kubernetes HAproxy 구성하기"
 date: 2024-02-19
-categories: [컨테이너, Kubernetes]
-tags: [Kubernetes, HAproxy, Loadbalance]
-image: /assets/img/post-title/kubernetes-wallpaper.jpg
+categories: [운영체제 & 네트워크, HAproxy]
+tags: [Kubernetes, HAproxy, Loadbalancer]
+image: /assets/img/post-title/haproxy-wallpaper.jpg
 ---
 
 ## 1. HAproxy이란? :
