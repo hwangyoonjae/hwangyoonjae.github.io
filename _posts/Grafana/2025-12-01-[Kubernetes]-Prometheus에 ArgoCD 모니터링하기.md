@@ -2,7 +2,7 @@
 layout: post
 title: "Prometheus에 ArgoCD 모니터링하기"
 date: 2025-12-01
-categories: [Devops, Grafana] 
+categories: [DevOps, Grafana] 
 tags: [Kubernetes, Prometheus, Grafana]
 image: /assets/img/post-title/grafana-wallpaper.jpg
 ---
