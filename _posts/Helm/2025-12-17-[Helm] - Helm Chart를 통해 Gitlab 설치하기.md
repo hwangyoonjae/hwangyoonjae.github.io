@@ -3,7 +3,7 @@ layout: post
 title: "Helm Chart를 통해 Gitlab 설치하기"
 date: 2025-12-17
 categories: [컨테이너, Helm] 
-tags: [Helm, Cert-manager]
+tags: [Helm, Gitlab, Runner]
 image: /assets/img/post-title/helm-wallpaper.jpg
 ---
 
