@@ -122,15 +122,15 @@ appVersion: "18.6.2-ce.0"
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Release.Name }}-config
+  name: `{{ .Release.Name }}'-config
 data:
   gitlab.rb: |
-    external_url "{{ .Values.gitlab.externalUrl }}"
-    gitlab_rails['time_zone'] = '{{ .Values.gitlab.timeZone }}'
-    gitlab_rails['gitlab_shell_ssh_port'] = {{ .Values.gitlab.sshPort }}
+    external_url "`{{ .Values.gitlab.externalUrl }}'"
+    gitlab_rails['time_zone'] = '`{{ .Values.gitlab.timeZone }}''
+    gitlab_rails['gitlab_shell_ssh_port'] = `{{ .Values.gitlab.sshPort }}'
 
     # Ingress에서 TLS 종료하는 구조면 내부는 HTTP만
-    nginx['listen_https'] = {{ ternary "true" "false" .Values.gitlab.omnibusNginxHttps }}
+    nginx['listen_https'] = `{{ ternary "true" "false" .Values.gitlab.omnibusNginxHttps }}'
     nginx['listen_port'] = 80
 
     # root password는 환경변수에서 읽음
@@ -139,33 +139,33 @@ data:
 
 ```yaml
 # ingress.yaml
-{{- if .Values.ingress.enabled }}
+`{{- if .Values.ingress.enabled }}'
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Release.Name }}
+  name: `{{ .Release.Name }}'
   annotations:
-{{- range $k, $v := .Values.ingress.annotations }}
-    {{ $k }}: {{ $v | quote }}
-{{- end }}
+`{{- range $k, $v := .Values.ingress.annotations }}'
+    `{{ $k }}': `{{ $v | quote }}'
+`{{- end }}'
 spec:
-  ingressClassName: {{ .Values.ingress.className }}
+  ingressClassName: `{{ .Values.ingress.className }}'
   tls:
     - hosts:
-        - {{ .Values.host }}
-      secretName: {{ .Values.ingress.tls.secretName }}
+        - `{{ .Values.host }}'
+      secretName: `{{ .Values.ingress.tls.secretName }}'
   rules:
-    - host: {{ .Values.host }}
+    - host: `{{ .Values.host }}'
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: {{ .Release.Name }}
+                name: `{{ .Release.Name }}'
                 port:
-                  number: {{ .Values.service.httpPort }}
-{{- end }}
+                  number: `{{ .Values.service.httpPort }}'
+`{{- end }}'
 ```
 
 ```yaml
@@ -173,10 +173,10 @@ spec:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: {{ .Release.Name }}-root
+  name: `{{ .Release.Name }}'-root
 type: Opaque
 stringData:
-  password: {{ .Values.gitlab.rootPassword | quote }}
+  password: `{{ .Values.gitlab.rootPassword | quote }}'
 ```
 
 ```yaml
@@ -184,17 +184,17 @@ stringData:
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}
+  name: `{{ .Release.Name }}'
 spec:
-  type: {{ .Values.service.type }}
+  type: `{{ .Values.service.type }}'
   selector:
-    app: {{ .Release.Name }}
+    app: `{{ .Release.Name }}'
   ports:
     - name: http
-      port: {{ .Values.service.httpPort }}
+      port: `{{ .Values.service.httpPort }}'
       targetPort: 80
     - name: ssh
-      port: {{ .Values.service.sshPort }}
+      port: `{{ .Values.service.sshPort }}'
       targetPort: 22
 ```
 
@@ -203,34 +203,40 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ .Release.Name }}
+  name: `{{ .Release.Name }}'
 spec:
-  serviceName: {{ .Release.Name }}
+  serviceName: `{{ .Release.Name }}'
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Release.Name }}
+      app: `{{ .Release.Name }}'
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}
+        app: `{{ .Release.Name }}'
     spec:
       securityContext:
-        fsGroup: {{ .Values.podSecurityContext.fsGroup }}
+        fsGroup: `{{ .Values.podSecurityContext.fsGroup }}'
       imagePullSecrets:
-      {{- range .Values.image.imagePullSecrets }}
-        - name: {{ . }}
-      {{- end }}
+      `{{- range .Values.image.imagePullSecrets }}'
+        - name: `{{ . }}'
+      `{{- end }}'
       containers:
         - name: gitlab
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "`{{ .Values.image.repository }}':`{{ .Values.image.tag }}'"
+          imagePullPolicy: `{{ .Values.image.pullPolicy }}'
           env:
             - name: GITLAB_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Release.Name }}-root
+                  name: `{{ .Release.Name }}'-root
                   key: password
+            - name: GITLAB_OMNIBUS_CONFIG
+              value: |
+                external_url '`{{ .Values.gitlab.externalUrl }}''
+                # Ingress/외부 LB에서 TLS 종료(HTTPS)하는 경우 보통 아래처럼:
+                nginx['listen_port'] = 80
+                nginx['listen_https'] = false
           ports:
             - containerPort: 80
             - containerPort: 22
@@ -245,27 +251,27 @@ spec:
     - metadata:
         name: config
       spec:
-        accessModes: {{ toYaml .Values.persistence.accessModes | nindent 8 }}
-        storageClassName: {{ .Values.persistence.storageClassName }}
+        accessModes: `{{ toYaml .Values.persistence.accessModes | nindent 8 }}'
+        storageClassName: `{{ .Values.persistence.storageClassName }}'
         resources:
           requests:
-            storage: {{ .Values.persistence.configSize }}
+            storage: `{{ .Values.persistence.configSize }}'
     - metadata:
         name: data
       spec:
-        accessModes: {{ toYaml .Values.persistence.accessModes | nindent 8 }}
-        storageClassName: {{ .Values.persistence.storageClassName }}
+        accessModes: `{{ toYaml .Values.persistence.accessModes | nindent 8 }}'
+        storageClassName: `{{ .Values.persistence.storageClassName }}'
         resources:
           requests:
-            storage: {{ .Values.persistence.dataSize }}
+            storage: `{{ .Values.persistence.dataSize }}'
     - metadata:
         name: logs
       spec:
-        accessModes: {{ toYaml .Values.persistence.accessModes | nindent 8 }}
-        storageClassName: {{ .Values.persistence.storageClassName }}
+        accessModes: `{{ toYaml .Values.persistence.accessModes | nindent 8 }}'
+        storageClassName: `{{ .Values.persistence.storageClassName }}'
         resources:
           requests:
-            storage: {{ .Values.persistence.logsSize }}
+            storage: `{{ .Values.persistence.logsSize }}'
 ```
 
 * * *
