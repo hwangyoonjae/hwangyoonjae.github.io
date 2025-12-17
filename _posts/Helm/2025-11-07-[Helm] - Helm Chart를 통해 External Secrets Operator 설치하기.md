@@ -175,7 +175,7 @@ $ kubectl create clusterrolebinding vault-reviewer-binding \
 $ kubectl -n kube-system create token vault-reviewer --duration=24h > reviewer.jwt
 ```
 
-> 리뷰어 SA/RBAC를 지우면, 이전에 Vault에 저장된 token_reviewer_jwt가 더 이상 유효하지 않아 재생성 진행해야합니다.
+> 리뷰어 SA/RBAC를 지우면, 이전에 Vault에 저장된 token_reviewer_jwt가 더 이상 유효하지 않아 재생성 진행해야한다.
 {: .prompt-warning}
 
 * * *
