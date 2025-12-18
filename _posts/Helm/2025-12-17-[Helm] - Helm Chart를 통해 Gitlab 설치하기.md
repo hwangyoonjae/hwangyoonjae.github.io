@@ -80,7 +80,7 @@ ingress:
 persistence:
   storageClassName: nfs-client   # NFS provisioner SC
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   configSize: 5Gi
   dataSize: 200Gi
   logsSize: 50Gi

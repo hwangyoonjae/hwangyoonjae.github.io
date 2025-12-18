@@ -71,13 +71,6 @@ gitlab:
   # 프로젝트/그룹/인스턴스 Registration Token (권장: Secret로 넣고 values에는 비워두기)
   registrationToken: ""
 
-runner:
-  name: "omnibus-k8s-runner"
-  tags: "k8s,omnibus"
-  locked: "false"
-  runUntagged: "true"
-  executor: "kubernetes"
-
 image:
   repository: "[HARBOR_DOMAIN]/gitlab/gitlab-runner"
   tag: "alpine-v17.5.5"
@@ -99,7 +92,7 @@ certs:
 persistence:
   enabled: true
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   size: 1Gi
   storageClassName: "nfs-client" # nfs-provisioner storage class 입력
 ```
