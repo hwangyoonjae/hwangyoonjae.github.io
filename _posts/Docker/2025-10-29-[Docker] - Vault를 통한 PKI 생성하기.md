@@ -21,7 +21,7 @@ $ docker exec -it vault sh
 
 vault login [Root Token]
 Error authenticating: error looking up token: Get "https://127.0.0.1:8200/v1/auth/token/lookup-self": http: server gave HTTP response to HTTPS client
-export vault_ADDR='http://127.0.0.1:8200'
+export VAULT_ADDR='http://127.0.0.1:8200'
 vault login [Root Token]
 ```
 
