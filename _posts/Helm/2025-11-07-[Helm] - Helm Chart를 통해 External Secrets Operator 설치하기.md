@@ -196,9 +196,9 @@ vault write auth/kubernetes/role/eso-wildcard-role \
 vault write auth/kubernetes/role/eso-wildcard-role \
   bound_service_account_names=external-secrets \
   bound_service_account_namespaces=external-secrets \
+  bound_audiences="https://kubernetes.default.svc.cluster.local \
   token_policies=policy-wildcard-tls \
-  token_ttl=24h \
-  token_audiences="https://kubernetes.default.svc.cluster.local"
+  token_ttl=24h"
 ```
 
 * * *
