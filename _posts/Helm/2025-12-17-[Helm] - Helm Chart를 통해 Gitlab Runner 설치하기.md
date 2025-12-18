@@ -120,7 +120,6 @@ appVersion: "17.5.5"
 * * *
 
 ## 2.4 templates 생성하기 :
-
 ```yaml
 # deployment.yaml
 apiVersion: apps/v1
@@ -137,24 +136,24 @@ spec:
       labels:
         app: gitlab-runner
     spec:
-      serviceAccountName: `{{ .Values.serviceAccount.name }}`
-      `{{- if .Values.image.imagePullSecrets }}`
+      serviceAccountName: {{ "{{" }} .Values.serviceAccount.name {{ "}}" }}
+      {{ "{{" }}- if .Values.image.imagePullSecrets {{ "}}" }}
       imagePullSecrets:
-      `{{- range .Values.image.imagePullSecrets }}`
-        - name: `{{ . }}`
-      `{{- end }}`
-      `{{- end }}`
+      {{ "{{" }}- range .Values.image.imagePullSecrets {{ "}}" }}
+        - name: {{ "{{" }} . {{ "}}" }}
+      {{ "{{" }}- end {{ "}}" }}
+      {{ "{{" }}- end {{ "}}" }}
       containers:
         - name: runner
-          image: "`{{ .Values.image.repository }}`:`{{ .Values.image.tag }}`"
-          imagePullPolicy: `{{ .Values.image.pullPolicy }}`
+          image: "{{ "{{" }} .Values.image.repository {{ "}}" }}:{{ "{{" }} .Values.image.tag {{ "}}" }}"
+          imagePullPolicy: {{ "{{" }} .Values.image.pullPolicy {{ "}}" }}
           volumeMounts:
             - name: runner-config
               mountPath: /etc/gitlab-runner
-            `{{- if .Values.certs.enabled }}`
+            {{ "{{" }}- if .Values.certs.enabled {{ "}}" }}
             - name: gitlab-ca
               mountPath: /etc/gitlab-runner/certs
-            `{{- end }}`
+            {{ "{{" }}- end {{ "}}" }}
           command: ["gitlab-runner"]
           args:
             - "run"
@@ -163,35 +162,35 @@ spec:
         - name: runner-config
           persistentVolumeClaim:
             claimName: gitlab-runner-pvc
-        `{{- if .Values.certs.enabled }}`
+        {{ "{{" }}- if .Values.certs.enabled {{ "}}" }}
         - name: gitlab-ca
           secret:
             secretName: gitlab-runner-secret
             items:
               - key: ca.crt
                 path: ca.crt
-        `{{- end }}`
+        {{ "{{" }}- end {{ "}}" }}
 ```
 
 ```yaml
 # pvc.yaml
-`{{- if .Values.persistence.enabled }}`
+{{ "{{" }}- if .Values.persistence.enabled {{ "}}" }}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: gitlab-runner-pvc
 spec:
   accessModes:
-`{{- range .Values.persistence.accessModes }}`
-    - `{{ . }}`
-`{{- end }}`
+{{ "{{" }}- range .Values.persistence.accessModes {{ "}}" }}
+    - {{ "{{" }} . {{ "}}" }}
+{{ "{{" }}- end {{ "}}" }}
   resources:
     requests:
-      storage: `{{ .Values.persistence.size }}`
-  `{{- if .Values.persistence.storageClassName }}`
-  storageClassName: `{{ .Values.persistence.storageClassName }}`
-  `{{- end }}`
-`{{- end }}`
+      storage: {{ "{{" }} .Values.persistence.size {{ "}}" }}
+  {{ "{{" }}- if .Values.persistence.storageClassName {{ "}}" }}
+  storageClassName: {{ "{{" }} .Values.persistence.storageClassName {{ "}}" }}
+  {{ "{{" }}- end {{ "}}" }}
+{{ "{{" }}- end {{ "}}" }}
 ```
 
 ```yaml
@@ -227,8 +226,8 @@ roleRef:
   name: gitlab-runner
 subjects:
   - kind: ServiceAccount
-    name: ``{{ .Values.serviceAccount.name }}``
-    namespace: ``{{ .Release.Namespace }}``
+    name: {{ "{{" }} .Values.serviceAccount.name {{ "}}" }}
+    namespace: {{ "{{" }} .Release.Namespace {{ "}}" }}
 ```
 
 ```yaml
@@ -239,10 +238,10 @@ metadata:
   name: gitlab-runner-secret
 type: Opaque
 stringData:
-  `{{- if .Values.certs.enabled }}`
+  {{ "{{" }}- if .Values.certs.enabled {{ "}}" }}
   ca.crt: |
-`{{ .Values.certs.caCrt | indent 4 }}`
-  `{{- end }}`
+{{ "{{" }} .Values.certs.caCrt | indent 4 {{ "}}" }}
+  {{ "{{" }}- end {{ "}}" }}
 ```
 
 ```yaml
@@ -250,7 +249,7 @@ stringData:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: `{{ .Values.serviceAccount.name }}`
+  name: {{ "{{" }} .Values.serviceAccount.name {{ "}}" }}
 ```
 
 * * *
@@ -280,5 +279,12 @@ $ kubectl get pvc -n gitlab-runner
 ![gitlab helm chart 배포 후 리소스 확인](/assets/img/post/helm/gitlab-runner%20helm%20chart%20배포%20후%20리소스%20확인.png)
 
 * * *
+
+## 2.6 Gitlab-Runner 등록하기 :
+
+- Gitlab에 Runner 등록을 진행한다.
+
+![gitlab-runner helm chart 배포 후 Runner 등록](/assets/img/post/helm/gitlab-runner%20helm%20chart%20배포%20후%20Runner%20등록.png)
+![gitlab-runner helm chart 배포 후 Runner 등록 확인](/assets/img/post/helm/gitlab-runner%20helm%20chart%20배포%20후%20Runner%20등록%20확인.png)
 
 * * *
