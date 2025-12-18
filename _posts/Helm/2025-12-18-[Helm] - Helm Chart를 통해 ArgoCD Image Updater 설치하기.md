@@ -7,9 +7,6 @@ tags: [Helm, Argocd]
 image: /assets/img/post-title/helm-wallpaper.jpg
 ---
 
-> 필자는 Omnibus 단일 Pod로 구성하여 설치하였습니다.
-{: .prompt-info}
-
 ## 1. ArgoCD Image Updater 설치하기 :
 ### 1.1 ArgoCD Image Updater Helm Chart 다운로드 :
 
