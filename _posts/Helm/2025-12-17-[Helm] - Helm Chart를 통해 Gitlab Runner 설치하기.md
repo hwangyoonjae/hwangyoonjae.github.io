@@ -120,6 +120,7 @@ appVersion: "17.5.5"
 * * *
 
 ## 2.4 templates 생성하기 :
+{% raw %}
 ```yaml
 # deployment.yaml
 apiVersion: apps/v1
@@ -136,24 +137,24 @@ spec:
       labels:
         app: gitlab-runner
     spec:
-      serviceAccountName: {{ "{{" }} .Values.serviceAccount.name {{ "}}" }}
-      {{ "{{" }}- if .Values.image.imagePullSecrets {{ "}}" }}
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      {{- if .Values.image.imagePullSecrets }}
       imagePullSecrets:
-      {{ "{{" }}- range .Values.image.imagePullSecrets {{ "}}" }}
-        - name: {{ "{{" }} . {{ "}}" }}
-      {{ "{{" }}- end {{ "}}" }}
-      {{ "{{" }}- end {{ "}}" }}
+      {{- range .Values.image.imagePullSecrets }}
+        - name: {{ . }}
+      {{- end }}
+      {{- end }}
       containers:
         - name: runner
-          image: "{{ "{{" }} .Values.image.repository {{ "}}" }}:{{ "{{" }} .Values.image.tag {{ "}}" }}"
-          imagePullPolicy: {{ "{{" }} .Values.image.pullPolicy {{ "}}" }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           volumeMounts:
             - name: runner-config
               mountPath: /etc/gitlab-runner
-            {{ "{{" }}- if .Values.certs.enabled {{ "}}" }}
+            {{- if .Values.certs.enabled }}
             - name: gitlab-ca
               mountPath: /etc/gitlab-runner/certs
-            {{ "{{" }}- end {{ "}}" }}
+            {{- end }}
           command: ["gitlab-runner"]
           args:
             - "run"
@@ -162,37 +163,41 @@ spec:
         - name: runner-config
           persistentVolumeClaim:
             claimName: gitlab-runner-pvc
-        {{ "{{" }}- if .Values.certs.enabled {{ "}}" }}
+        {{- if .Values.certs.enabled }}
         - name: gitlab-ca
           secret:
             secretName: gitlab-runner-secret
             items:
               - key: ca.crt
                 path: ca.crt
-        {{ "{{" }}- end {{ "}}" }}
+        {{- end }}
 ```
+{% endraw %}
 
+{% raw %}
 ```yaml
 # pvc.yaml
-{{ "{{" }}- if .Values.persistence.enabled {{ "}}" }}
+{{- if .Values.persistence.enabled }}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: gitlab-runner-pvc
 spec:
   accessModes:
-{{ "{{" }}- range .Values.persistence.accessModes {{ "}}" }}
-    - {{ "{{" }} . {{ "}}" }}
-{{ "{{" }}- end {{ "}}" }}
+{{- range .Values.persistence.accessModes }}
+    - {{ . }}
+{{- end }}
   resources:
     requests:
-      storage: {{ "{{" }} .Values.persistence.size {{ "}}" }}
-  {{ "{{" }}- if .Values.persistence.storageClassName {{ "}}" }}
-  storageClassName: {{ "{{" }} .Values.persistence.storageClassName {{ "}}" }}
-  {{ "{{" }}- end {{ "}}" }}
-{{ "{{" }}- end {{ "}}" }}
+      storage: {{ .Values.persistence.size }}
+  {{- if .Values.persistence.storageClassName }}
+  storageClassName: {{ .Values.persistence.storageClassName }}
+  {{- end }}
+{{- end }}
 ```
+{% endraw %}
 
+{% raw %}
 ```yaml
 # rbac.yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -214,7 +219,6 @@ rules:
     resources:
       - deployments
     verbs: ["get","list","watch","create","update","delete"]
-
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -226,10 +230,12 @@ roleRef:
   name: gitlab-runner
 subjects:
   - kind: ServiceAccount
-    name: {{ "{{" }} .Values.serviceAccount.name {{ "}}" }}
-    namespace: {{ "{{" }} .Release.Namespace {{ "}}" }}
+    name: {{ .Values.serviceAccount.name }}
+    namespace: {{ .Release.Namespace }}
 ```
+{% endraw %}
 
+{% raw %}
 ```yaml
 # secret.yaml
 apiVersion: v1
@@ -238,19 +244,22 @@ metadata:
   name: gitlab-runner-secret
 type: Opaque
 stringData:
-  {{ "{{" }}- if .Values.certs.enabled {{ "}}" }}
+  {{- if .Values.certs.enabled }}
   ca.crt: |
-{{ "{{" }} .Values.certs.caCrt | indent 4 {{ "}}" }}
-  {{ "{{" }}- end {{ "}}" }}
+{{ .Values.certs.caCrt | indent 4 }}
+  {{- end }}
 ```
+{% endraw %}
 
+{% raw %}
 ```yaml
 # serviceaccount
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: {{ "{{" }} .Values.serviceAccount.name {{ "}}" }}
+  name: {{ .Values.serviceAccount.name }}
 ```
+{% endraw %}
 
 * * *
 
