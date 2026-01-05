@@ -10,9 +10,9 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 > 필자는 Omnibus 단일 Pod로 구성하여 설치하였습니다.
 {: .prompt-info}
 
-## 1. Gitlab 네임스페이스 생성 및 컨테이너 이미지 준비하기 :
-
 * * *
+
+## 1. Gitlab 네임스페이스 생성 및 컨테이너 이미지 준비하기 :
 
 - gitlab 네임스페이스를 생성한다.
 
