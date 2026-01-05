@@ -60,6 +60,7 @@ $ kubectl create namespace cert-manager
 ```bash
 $ vi values.yaml
 ```
+{% raw %}
 ```yaml
 # values.yaml
 installCRDs: true
@@ -106,6 +107,7 @@ startupapicheck:
     tag: {{ cert_manager_image_version }}
     pullPolicy: {{ cert_manager_image_pull_policy }}
 ```
+{% endraw %}
 
 * * *
 
