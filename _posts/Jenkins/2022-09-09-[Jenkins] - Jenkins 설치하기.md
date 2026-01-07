@@ -84,7 +84,7 @@ $ echo $JAVA_HOME
 $ update-alternatives --config java
 ```
 ![텍스트](/assets/img/post/Jenkins/%EC%9E%90%EB%B0%94%20%EB%B2%84%EC%A0%84%20%EB%B3%80%EA%B2%BD%20%EB%B0%A9%EB%B2%95.PNG)
-> 필자는 jdk11을 설치하였기에 3번을 선택하여 진행했다.
+> 필자는 jdk11을 설치하였기에 3번을 선택하여 진행했습니다.
 {: .prompt-info}
 
 * * *

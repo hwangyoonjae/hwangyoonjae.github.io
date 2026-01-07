@@ -57,7 +57,7 @@ $ bundle exec jekyll serve
 
 * * *
 
-- 하지만 필자는 아래 그림처럼 오류가 발생하여 실행을 못했다....
+- 하지만 필자는 아래 그림처럼 오류가 발생하여 실행을 못했습니다....
 
 ![jekyll 서버 실행안되는 경우](/assets/img/post/local/jekyll%20%EC%84%9C%EB%B2%84%20%EC%8B%A4%ED%96%89%EC%95%88%EB%90%98%EB%8A%94%20%EA%B2%BD%EC%9A%B0.PNG)
 

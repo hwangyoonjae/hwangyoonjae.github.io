@@ -243,7 +243,7 @@ $ kubectl describe clusterissuer vault-issuer
 
 ### 2.6 인증서 요청서 생성해보기 :
 
-- 필자는 ArgoCD에 인증서를 자동으로 발급받도록 Certificate 리소스를 생성했다.
+- 필자는 ArgoCD에 인증서를 자동으로 발급받도록 Certificate 리소스를 생성했습니다.
 
 ```yaml
 apiVersion: cert-manager.io/v1
@@ -291,7 +291,7 @@ spec:
 
 > cert-manager 1.18에서 바뀐 점
 > 
-> 기존(1.17 이하)은 기본이 Never라 한 번 생성된 private key는 계속 재사용했다.
+> 기존(1.17 이하)은 기본이 Never라 한 번 생성된 private key는 계속 재사용했습니다.
 > 하지만 1.18부터는 기본이 Always로 바뀌면서 인증서가 갱신될 때마다 새 key를 자동으로 만들어 준다.
 {: .prompt-info}
 

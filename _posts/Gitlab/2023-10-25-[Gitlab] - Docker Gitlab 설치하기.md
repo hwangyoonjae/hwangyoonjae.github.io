@@ -25,7 +25,7 @@ $ yum-config-manager \
 # yum으로 docker 설치
 $ yum install docker-ce docker-ce-cli containerd.io
 ```
-<span style="color:#FA5858; font-size:12px">※ 필자는 20.10.17버전을 사용했다.</span>
+<span style="color:#FA5858; font-size:12px">※ 필자는 20.10.17버전을 사용했습니다.</span>
 
 * * *
 

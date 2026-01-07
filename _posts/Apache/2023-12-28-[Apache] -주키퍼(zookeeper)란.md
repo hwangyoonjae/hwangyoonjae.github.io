@@ -90,7 +90,7 @@ $ /usr/local/zookeeper/bin/zkServer.sh stop
 
 [![zookeeper 설치 오류](/assets/img/post/Apache/zookeeper 설치 오류.png)](/assets/img/post/Apache/zookeeper 설치 오류.png)
 
-> 해결방법: zoo.cfg 파일 안에 데이터 디렉토리 경로 설정이 잘못되어 수정 후 조치했다.
+> 해결방법: zoo.cfg 파일 안에 데이터 디렉토리 경로 설정이 잘못되어 수정 후 조치했습니다.
 {. prompt-danger}
 
 * * *

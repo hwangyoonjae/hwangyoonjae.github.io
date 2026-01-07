@@ -129,7 +129,7 @@ data:
 
 * * *
 
-- 필자는 아래 주소를 통해 Grafana Dashboard 오픈소스를 사용했다.
+- 필자는 아래 주소를 통해 Grafana Dashboard 오픈소스를 사용했습니다.
 > * [Grafana Dashboard 다운로드](https://grafana.com/grafana/dashboards/15661-k8s-dashboard-en-20250125/ "Grafana Dashboard 다운로드")
 
 ![grafana 대시보드 화면](/assets/img/post/kubernetes/grafana%20대시보드%20화면.png)

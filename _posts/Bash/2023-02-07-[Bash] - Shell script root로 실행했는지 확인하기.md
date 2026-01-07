@@ -9,13 +9,13 @@ image: /assets/img/post-title/bash-wallpaper.jpg
 
 
 ## 1. root로 실행확인을 알고싶었던 계기 :
-- Shell script를 작성하여 root로 실행했는지를 whoami라는 명령어로만 확인을 진행했다.<br>
+- Shell script를 작성하여 root로 실행했는지를 whoami라는 명령어로만 확인을 진행했습니다.<br>
 하지만 서버 보안 취약점 스크립트를 만들려고 찾아보다가 root로 실행했는지 내가 구현한 방법과 다른게 있어 알고싶어졌다.
 
 * * *
 
 ## 2. root로 실행했는지 확인방법 :
-- 새로 알기전에는 **whoami**로 확인해서 root 권한인지를아래와 같이 구현했다.
+- 새로 알기전에는 **whoami**로 확인해서 root 권한인지를아래와 같이 구현했습니다.
 
 ```bash
 # 기존에 사용했던 방법
@@ -29,7 +29,7 @@ else
 fi
 ```
 
-- 새로 알게된 부분을 적용하였을 때는 **EUID**를 확인해서 root 권한인지를 아래와 같이 구현했다.
+- 새로 알게된 부분을 적용하였을 때는 **EUID**를 확인해서 root 권한인지를 아래와 같이 구현했습니다.
 
 ```bash
 if [ "$EUID" -ne 0 ] ; then

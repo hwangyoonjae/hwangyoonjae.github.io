@@ -22,7 +22,7 @@ $ yum install -y ansible
 $ ansible --version
 ```
 [![텍스트](/assets/img/post/Ansible/Ansible%20%EB%B2%84%EC%A0%84%ED%99%95%EC%9D%B8.PNG)](/assets/img/post/Ansible/Ansible%20%EB%B2%84%EC%A0%84%ED%99%95%EC%9D%B8.PNG)<br>
-<span style="color:#FA5858; font-size:12px">※ 필자는 2.9.27버전을 사용했다.</span>
+<span style="color:#FA5858; font-size:12px">※ 필자는 2.9.27버전을 사용했습니다.</span>
 
 * * *
 

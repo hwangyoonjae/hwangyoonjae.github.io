@@ -42,7 +42,7 @@ enabled=1
 $ yum install -y nginx
 ```
 
-> 필자는 1.22.0버전을 사용했다.
+> 필자는 1.22.0버전을 사용했습니다.
 {: .prompt-info}
 
 * * *

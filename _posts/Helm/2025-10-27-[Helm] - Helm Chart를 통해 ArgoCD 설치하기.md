@@ -16,7 +16,7 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 $ wget https://github.com/argoproj/argo-helm/releases/download/argo-cd-[version]/argo-cd-[버전].tgz
 ```
 
-> 필자는 현 시점 최신버전인 **9.0.5**를 사용했다.
+> 필자는 현 시점 최신버전인 **9.0.5**를 사용했습니다.
 {: .prompt-tip}
 
 * * *

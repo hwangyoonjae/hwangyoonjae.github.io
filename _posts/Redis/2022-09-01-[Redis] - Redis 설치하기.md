@@ -23,7 +23,7 @@ $ yum -y install gcc-c++
 ```bash
 $ wget http://download.redis.io/releases/redis-7.0.9.tar.gz
 ```
-> 필자는 7.0.9버전을 사용했다.
+> 필자는 7.0.9버전을 사용했습니다.
 {: .prompt-tip}
 
 * * *
