@@ -30,7 +30,7 @@ $ yum install docker-ce docker-ce-cli containerd.io
 * * *
 
 ### 폐쇄망 설치:
-- 폐쇄망 서버에 Docker를 설치하는 경우 아래 URL 접속 시 CentOS 버전에 맞춰 폴더 접속한 후 **/x86_64/stable/Packages/**에서  필요한 RPM 다운받는다.
+- 폐쇄망 서버에 Docker를 설치하는 경우 아래 URL 접속 시 CentOS 버전에 맞춰 폴더 접속한 후 **/x86_64/stable/Packages/**에서  필요한 RPM 다운받습니다.
 > * [Docker RPM 패키지 다운로드](https://download.docker.com/linux/centos/ "Docker RPM 패키지 다운로드")
 
 ```bash
@@ -57,7 +57,7 @@ $ docker search gitlab
 ```
 [![gitlab docker image 목록](/assets/img/post/Gitlab/gitlab%20docker%20image%20목록.png)](/assets/img/post/Gitlab/gitlab%20docker%20image%20목록.png)
 
-- Gitlab 관련 이미지를 확인하여 다운받는다.
+- Gitlab 관련 이미지를 확인하여 다운받습니다.
 ```bash
 $ docker pull gitlab/gitlab-ee
 ```

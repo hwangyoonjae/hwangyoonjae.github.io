@@ -23,7 +23,7 @@ image: /assets/img/post-title/apache-zookeeper-wallpaper.jpg
 * * *
 
 ### 2.1 zookeper 설치 파일 다운로드 :
-- 아래 URL 접속하여 zookeeper 설치 파일을 다운 받는다.
+- 아래 URL 접속하여 zookeeper 설치 파일을 다운 받습니다.
 > * [zookeper 설치 파일 다운로드](https://zookeeper.apache.org/releases.html "zookeper 설치 파일 다운로드")
 - 다운이 완료되었으면 압축을 해제합니다.
 

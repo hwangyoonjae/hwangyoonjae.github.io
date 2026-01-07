@@ -14,7 +14,7 @@ image: /assets/img/post-title/cubrid-wallpaper.jpg
 
 ## 2. CUBRID 설치 준비하기 :
 ### 2.1 CUBRID 설치파일 다운로드 :
-- 아래 URL 참고하여 CUBRID 설치파일을 다운받는다.
+- 아래 URL 참고하여 CUBRID 설치파일을 다운받습니다.
 > * [CUBRID 다운받기](https://www.cubrid.com/downloads "CUBRID 다운받기")
 
 * * *

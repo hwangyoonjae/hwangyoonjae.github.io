@@ -134,7 +134,7 @@ $ vi index.jsp
 * * *
 
 ## 4. MariaDB JDBC 드라이버 이용하여 연동하기 :
-- 아래 URL 접속하여 MariaDB JDBC 드라이버 파일을 다운받는다. 
+- 아래 URL 접속하여 MariaDB JDBC 드라이버 파일을 다운받습니다. 
 > * [MariaDB JDBC 다운로드](https://downloads.mariadb.com/Connectors/java/ "MariaDB JDBC 다운로드")
 
 - 다운받은 jdbc 드라이버를 WEB-INF/lib 폴더 안에 넣어준다.

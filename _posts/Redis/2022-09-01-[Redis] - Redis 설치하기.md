@@ -9,7 +9,7 @@ image: /assets/img/post-title/redis-wallpaper.jpg
 
 ## 1. Redis 설치준비 :
 ### 1.1 Redis 필요한 gcc-c++ 설치 :
-- Redis Compile에 필요한 패키지를 다운받는다.
+- Redis Compile에 필요한 패키지를 다운받습니다.
 
 ```bash
 $ yum -y install gcc-c++
@@ -18,7 +18,7 @@ $ yum -y install gcc-c++
 * * *
 
 ### 1.2 Redis 패키지 설치하기 :
-- 아래 명령어와 같이 설치파일을 다운받는다.
+- 아래 명령어와 같이 설치파일을 다운받습니다.
 
 ```bash
 $ wget http://download.redis.io/releases/redis-7.0.9.tar.gz
@@ -29,7 +29,7 @@ $ wget http://download.redis.io/releases/redis-7.0.9.tar.gz
 * * *
 
 ### 1.3폐쇄망 설치하기 :
-- 폐쇄망 서버에 Redis를 설치하는 경우 아래 URL 접속하여 압축 파일을 다운받는다.
+- 폐쇄망 서버에 Redis를 설치하는 경우 아래 URL 접속하여 압축 파일을 다운받습니다.
 > * [Redis 다운로드](http://download.redis.io/releases/ "Redis 다운로드")
 
 * * *

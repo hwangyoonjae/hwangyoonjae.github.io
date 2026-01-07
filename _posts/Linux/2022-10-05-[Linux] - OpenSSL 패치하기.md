@@ -99,7 +99,7 @@ $ make install
 #### 4.4 Perl 5 버전 설치하기:
 > * [Perl 사이트 바로가기](https://www.cpan.org/src/5.0/ "Perl 사이트")
 
-- 위 사이트 접속하여 **perl-5.X.X.tar.gz**를 다운받는다.<br>
+- 위 사이트 접속하여 **perl-5.X.X.tar.gz**를 다운받습니다.<br>
 
 > 필자는 최신버전(5.32.0)을 다운받았다.
 {: .promt-tip}

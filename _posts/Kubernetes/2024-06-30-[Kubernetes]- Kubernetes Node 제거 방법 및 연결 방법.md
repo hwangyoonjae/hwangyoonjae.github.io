@@ -67,7 +67,7 @@ $ etcdctl --cacert="/etc/kubernetes/pki/etcd/ca.crt" --cert="/etc/kubernetes/pki
 * * *
 
 ## 4. 마스터/워커 노드 추가 :
-- kubeadm command를 통해 Master node join에 필요한 certificate key를 받는다.
+- kubeadm command를 통해 Master node join에 필요한 certificate key를 받습니다.
 
 > 클러스터를 최초 구성할 때 사용한 kubeadm-config.yaml 파일이 필요하다.
 {: .prompt-warning }

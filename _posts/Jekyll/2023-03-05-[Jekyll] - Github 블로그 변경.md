@@ -14,7 +14,7 @@ image: /assets/img/post-title/jekyll-wallpaper.jpg
 
 ## 2. 블로그 변경하기 :
 ### 2.1 지킬 테마 사용하기 :
-- 지킬사이트 접속하여 **Minimal Mistakes** 검색 후 다운받는다.
+- 지킬사이트 접속하여 **Minimal Mistakes** 검색 후 다운받습니다.
 
 > * [지킬사이트 바로가기](http://jekyllthemes.org/ "지킬테마")
 

@@ -8,7 +8,7 @@ image: /assets/img/post-title/ansible-wallpaper.jpg
 ---
 
 ## 1. Ansible 설치 파일 준비하기 :
-> 폐쇄망에서 설치하기 위해 인터넷이 되는 서버로부터 RPM 파일을 다운로드 받는다.
+> 폐쇄망에서 설치하기 위해 인터넷이 되는 서버로부터 RPM 파일을 다운로드 받습니다.
 {: .prompt-warning}
 
 ![Ansible 설치파일 준비](/assets/img/post/Ansible/Ansible%20설치파일%20준비.png)

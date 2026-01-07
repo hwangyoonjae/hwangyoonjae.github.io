@@ -136,7 +136,7 @@ $ kubectl create -f chaos-ingress.yaml
 * * *
 
 ## 4. 전체 Namespace를 관리하고 싶은 경우 :
-- 특정 namespace가 아닌 전체 관리를 하고 싶은경우에는 admin token을 발급받는다.
+- 특정 namespace가 아닌 전체 관리를 하고 싶은경우에는 admin token을 발급받습니다.
 
 ```yaml
 # serviceaccount.yaml

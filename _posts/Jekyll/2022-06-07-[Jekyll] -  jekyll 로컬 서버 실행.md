@@ -14,7 +14,7 @@ image: /assets/img/post-title/jekyll-wallpaper.jpg
 ![ruby 설치프로그램](/assets/img/post/local/ruby%20%EC%84%A4%EC%B9%98%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8.PNG)
 
 ```bash
-# 아래와 같이 화살표 표시된 추천버전을 다운받는다.
+# 아래와 같이 화살표 표시된 추천버전을 다운받습니다.
 => Ruby+devkit 3.x.x-x(x64)
 ```
 > 버전은 계속 업데이트 되어 다를 수 있습니다.

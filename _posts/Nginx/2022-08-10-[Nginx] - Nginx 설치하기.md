@@ -48,7 +48,7 @@ $ yum install -y nginx
 * * *
 
 ### 2.2 폐쇄망 설치하기 :
-- 폐쇄망 서버에 Nginx를 설치하는 경우 아래 URL 접속 시 CentOS 버전에 맞춰 폴더 접속한 후 **/Linux버전/x86_64/RPMS/**에서  필요한 RPM 다운받는다.
+- 폐쇄망 서버에 Nginx를 설치하는 경우 아래 URL 접속 시 CentOS 버전에 맞춰 폴더 접속한 후 **/Linux버전/x86_64/RPMS/**에서  필요한 RPM 다운받습니다.
 > * [Nginx RPM 패키지 다운로드](https://nginx.org/packages/centos/ "Nginx RPM 패키지 다운로드")
 
 ```bash
