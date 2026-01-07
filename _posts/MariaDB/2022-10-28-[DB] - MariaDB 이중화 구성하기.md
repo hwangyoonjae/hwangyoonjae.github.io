@@ -8,10 +8,10 @@ image: /assets/img/post-title/mariadb-wallpaper.jpg
 ---
 
 ## 1. MariaDB Replication 절차 :
-- MariaDB에서 기본적으로 제공하는 Replication 기능으로 Master-Slave 구조로 되어있다.
+- MariaDB에서 기본적으로 제공하는 Replication 기능으로 Master-Slave 구조로 되어있습니다.
 - Master 서버의 Binary로그를 Slave서버가 Relay로그에 저장해서 복제하는 방식이다.
-- MasterDB에 이벤트가 발생하면 SlaveDB와 복제를 위해 생성한 Binaary log에 DB업데이트와 동시에 기록한다.
-- SlaveDB는 자신이 MasterDB의 몇 번째 위치의 데이터를 마지막으로 가져왔는지 기록했다가 MasterDB의 Binaary Log에 새로운 기록이 업데이트 되면 가져오고 가져온 위치를 기억한 후 SlaveDB는 전달받은 Binaary log를 Relay Logdp 기록하여 순차적으로 DB에 저장한다.
+- MasterDB에 이벤트가 발생하면 SlaveDB와 복제를 위해 생성한 Binaary log에 DB업데이트와 동시에 기록합니다.
+- SlaveDB는 자신이 MasterDB의 몇 번째 위치의 데이터를 마지막으로 가져왔는지 기록했다가 MasterDB의 Binaary Log에 새로운 기록이 업데이트 되면 가져오고 가져온 위치를 기억한 후 SlaveDB는 전달받은 Binaary log를 Relay Logdp 기록하여 순차적으로 DB에 저장합니다.
 
 ![텍스트](/assets/img/post/DB/MariaDB%20Replication.PNG)
 
@@ -24,7 +24,7 @@ image: /assets/img/post-title/mariadb-wallpaper.jpg
 
 ## 3. Master Server 구성 :
 ### 3.1 Master Server 설정하기 :
-- 아래와 같은 내용을 추가한다.
+- 아래와 같은 내용을 추가합니다.
 
 ```bash
 $ vi /etc/my.cnf.d/server.cnf
@@ -73,7 +73,7 @@ $ systemctl restart mariadb
 
 ## 4. Slave Server 구성하기 :
 ### 4.1 Slave Server 설정하기 :
-- 아래와 같은 내용을 추가한다.
+- 아래와 같은 내용을 추가합니다.
 
 ```bash
 $ vi /etc/my.cnf.d/server.cnf
@@ -127,7 +127,7 @@ $ systemctl restart mariadb
 * * *
 
 ## 5. MasterDB / SlaveDB 동기화 확인하기 :
-- 먼저 MasterDB에 데이터 베이스를 생성한다.
+- 먼저 MasterDB에 데이터 베이스를 생성합니다.
 
 ```sql
 > create database testdb_replication character set UTF8;
@@ -136,7 +136,7 @@ $ systemctl restart mariadb
 
 * * *
 
-- MasterDB에 테이블을 생성한다.
+- MasterDB에 테이블을 생성합니다.
 
 ```sql
 > use testdb_replication;
@@ -149,7 +149,7 @@ $ systemctl restart mariadb
 
 * * *
 
-- 생성한 테이블에 데이터를 삽입하고 조회한다.
+- 생성한 테이블에 데이터를 삽입하고 조회합니다.
 
 ```sql
 > insert into test(test_name) values("yoonjae");
@@ -159,7 +159,7 @@ $ systemctl restart mariadb
 
 * * *
 
-- MasterDB에서 진행한 작업이 SlaveDB로 Sync되는지 확인한다.
+- MasterDB에서 진행한 작업이 SlaveDB로 Sync되는지 확인합니다.
 
 ```sql
 > show databases;

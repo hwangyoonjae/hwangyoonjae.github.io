@@ -11,7 +11,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 - git과 쿠버네티스 현재 상태를 비교한 결과를 보여준다.
 - 디폴트로 3분마다 또는 사용자가 Refresh을 수행하면 Sync Status가 업데이트된다.
 
-> sync status는 **Synced**, **Out Of Sync** 2종류가 있다.
+> sync status는 **Synced**, **Out Of Sync** 2종류가 있습니다.
 >
 > Synced : git과 클러스터 현재 상태가 같은 경우
 > Out Of Sync : git과 클러스터 현재 상태가 다른 경우
@@ -28,11 +28,11 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 
 ## 2. Sync와 Sync Policy :
 ### 2.1 Sync :
-- git에 있는 의도된 상태를 쿠버네티스 클러스터에 배포하는 작업으로 동기화라고 불리며, sync의 조건은 git과 쿠버네티스 현재 상태와 차이가 있어야 한다.
+- git에 있는 의도된 상태를 쿠버네티스 클러스터에 배포하는 작업으로 동기화라고 불리며, sync의 조건은 git과 쿠버네티스 현재 상태와 차이가 있어야 합니다.
 
 ### 2.2 Sync Policy :
 - Auto sync와 Manual sync가 있는데 누가 sync을 수행하는가에 따라 수행하는 방법이 다르다.
-- git과 쿠버네티스 현재 상태를 비교해서 차이가 있다면, Auto Sync는 argocd가 자동으로 sync 수행한다.
+- git과 쿠버네티스 현재 상태를 비교해서 차이가 있다면, Auto Sync는 argocd가 자동으로 sync 수행합니다.
 
 ![sync policy 적용](/assets/img/post/ArgoCD/sync%20policy%20적용.png)
 
@@ -56,23 +56,23 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 * * *
 
 ### 3.4 Progressing 상태 :
-- Sync작업(git의 의도된 상태를 클러스터로 동기화)이 수행 중이면 Progressing으로 표시한다.
+- Sync작업(git의 의도된 상태를 클러스터로 동기화)이 수행 중이면 Progressing으로 표시합니다.
 ![progressing 상태](/assets/img/post/ArgoCD/progressing%20상태.png)
 
 * * *
 
 ### 3.5 Degraded 상태 :
-- Sync작업을 실패했다는 의미로, 쿠버네티스 설정 문제(Ex: serviceaccount 권한 없음, 노드에 스케쥴링 불가 등) 또는 네트워크 등 인프라 문제 등 때문에 동기화를 실패할 수 있다.
+- Sync작업을 실패했다는 의미로, 쿠버네티스 설정 문제(Ex: serviceaccount 권한 없음, 노드에 스케쥴링 불가 등) 또는 네트워크 등 인프라 문제 등 때문에 동기화를 실패할 수 있습니다.
 
 * * *
 
 ### 3.6 Suspended 상태 :
-- sync작업이 일시중지된 상태로 다른 작업이 끝나야 수행되거나 외부 이벤트가 필요한 경우 발생한다.
+- sync작업이 일시중지된 상태로 다른 작업이 끝나야 수행되거나 외부 이벤트가 필요한 경우 발생합니다.
 ![suspended 상태](/assets/img/post/ArgoCD/suspended%20상태.png)
 
 > Blue-Green 배포로 인한 Suspended 상태 발생
 >
-> argo-rollout 배포 기능 중 하나인 Blue-Green 배포 방식을 사용하는 경우 수동으로 승격을 하지 않는 이상 변경된 파드에 대해서는 배포를 하지 않아 위와 같은 상태로 될 가능성이 있다.
+> argo-rollout 배포 기능 중 하나인 Blue-Green 배포 방식을 사용하는 경우 수동으로 승격을 하지 않는 이상 변경된 파드에 대해서는 배포를 하지 않아 위와 같은 상태로 될 가능성이 있습니다.
 {: .prompt-tip }
 
 * * *

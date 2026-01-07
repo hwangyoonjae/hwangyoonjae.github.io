@@ -8,11 +8,11 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
 
 ## 1. ArgoCD 비밀키 구성하기 :
-- Kubernetes 비밀키에서 `argocd-secret`1단계에서 구성한 Git 공급자의 웹훅 비밀을 사용하여 다음 키 중 하나를 구성한다.
+- Kubernetes 비밀키에서 `argocd-secret`1단계에서 구성한 Git 공급자의 웹훅 비밀을 사용하여 다음 키 중 하나를 구성합니다.
 
 ![argocd 비밀키 구성](/assets/img/post/ArgoCD/argocd%20비밀키%20구성.png)
 
-- argocd configmap의 비밀키 값을 명시한다.
+- argocd configmap의 비밀키 값을 명시합니다.
 
 ```bash
 $ kubectl edit configmap argocd-cm -n argocd
@@ -42,7 +42,7 @@ data:
 * * *
 
 ## 2. Gitlab Webhook 설정 후 정상 동작 확인하기 :
-- gitlab 프로젝트 > Settings > Webhooks 접속하여 필요한 값을 입력 후 저장한다.
+- gitlab 프로젝트 > Settings > Webhooks 접속하여 필요한 값을 입력 후 저장합니다.
 
 > webhook 입력 내용
 >- URL : argocd DNS 주소명 입력

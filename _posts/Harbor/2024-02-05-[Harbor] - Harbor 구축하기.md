@@ -160,7 +160,7 @@ $ update-ca-trust
 * * *
 
 ## 4. Harbor 접속하기 :
-- 위 설정 완료 후 ***https://서버주소:포트***로 입력하여 접속한다.
+- 위 설정 완료 후 ***https://서버주소:포트***로 입력하여 접속합니다.
 
 ![Harbor 초기화면](/assets/img/post/docker/Harbor%20초기화면.png)
 

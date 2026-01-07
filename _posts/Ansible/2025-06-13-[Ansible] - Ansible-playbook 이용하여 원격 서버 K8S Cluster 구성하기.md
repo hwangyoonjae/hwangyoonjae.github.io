@@ -303,8 +303,8 @@ echo "[+] SSH 키 공유 완료!"
 * * *
 
 ### 3.4 Ansible 인벤토리 그룹별 변수 정의 :
-- all.yml 파일에서는 원격서버들의 IP 주소와 설치 파일 경로들을 지정한다.
-- ***1_replace_vars.sh*** 파일을 통해서 해당 변수에 값을 변경한다.
+- all.yml 파일에서는 원격서버들의 IP 주소와 설치 파일 경로들을 지정합니다.
+- ***1_replace_vars.sh*** 파일을 통해서 해당 변수에 값을 변경합니다.
 
 ```yml
 # ansible/inventory/group_vars/all.yml
@@ -329,7 +329,7 @@ K8S_NODE_INSTALL_PATH: "{{ INSTALL_PATH }}/kubernetes/k8s-node-pack"
 
 * * *
 
-- haproxy.yml 파일에서는 haproxy 설정에 관련된 변수들을 지정한다.
+- haproxy.yml 파일에서는 haproxy 설정에 관련된 변수들을 지정합니다.
 
 ```yml
 # ansible/inventory/group_vars/hapoxy.yml
@@ -357,7 +357,7 @@ K8S_WORKER_NODES:
 
 * * *
 
-- kubernetes.yml 파일에서는 kubernetes 설정에 관련된 변수들을 지정한다.
+- kubernetes.yml 파일에서는 kubernetes 설정에 관련된 변수들을 지정합니다.
 
 ```yml
 # ansible/inventory/group_vars/kubernetes.yml

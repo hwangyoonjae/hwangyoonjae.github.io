@@ -35,7 +35,7 @@ $ wget http://download.redis.io/releases/redis-7.0.9.tar.gz
 * * *
 
 ## 2. Redis 설치하기 :
-- 다운받은 설치파일 압축 풀고 설치를 진행한다.
+- 다운받은 설치파일 압축 풀고 설치를 진행합니다.
 
 ```bash
 $ tar -zxvf redis-7.0.9.tar.gz
@@ -57,7 +57,7 @@ $ ./install_server.sh
 
 * * *
 
-- 다음과 같이 해당 내용에 "#"를 추가하여 주석처리한다.
+- 다음과 같이 해당 내용에 "#"를 추가하여 주석처리합니다.
 
 ![./install_server.sh 오류 조치방법](/assets/img/post/Redis/Redis%20install_server.sh%20%EC%98%A4%EB%A5%98%20%EC%A1%B0%EC%B9%98%EB%B0%A9%EB%B2%95.PNG)
 

@@ -8,7 +8,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 1. Vault란? :
-- ashiCorp에 의해서 개발된 크로스플랫폼 패스워드 및 인증 관리 시스템이다. 공개되면 안되는 비밀번호, API 키, 토큰 등을 저장하고 관리한다.
+- ashiCorp에 의해서 개발된 크로스플랫폼 패스워드 및 인증 관리 시스템이다. 공개되면 안되는 비밀번호, API 키, 토큰 등을 저장하고 관리합니다.
 
 * * *
 
@@ -42,7 +42,7 @@ $ docker pull hashicorp/vault:{version}
 
 * * *
 
-- docker-compose.yaml 파일을 수정한다.
+- docker-compose.yaml 파일을 수정합니다.
 
 ```yaml
 version: "3.8"
@@ -71,7 +71,7 @@ services:
 
 * * *
 
-- config/vault.hcl 작성한다.
+- config/vault.hcl 작성합니다.
 
 ```bash
 ui = true
@@ -101,7 +101,7 @@ log_level = "info"
 
 * * *
 
-- Docker Compose 파일을 통하여 Vault 컨테이너를 설치한다.
+- Docker Compose 파일을 통하여 Vault 컨테이너를 설치합니다.
 
 ```bash
 $ docker compose up -d
@@ -116,7 +116,7 @@ $ docker logs -f vault
 
 ## 3. Vault UI 접속하기 :
 
-- 브라우저에서 Vault UI 접속한다.
+- 브라우저에서 Vault UI 접속합니다.
 
 ![vault 초기 화면](/assets/img/post/docker/vault%20초기%20화면.png)
 
@@ -125,12 +125,12 @@ $ docker logs -f vault
 | **Join an existing Raft cluster** | 이미 초기화된 Vault 노드가 존재하고, 현재 노드는 그 클러스터에 두 번째 이상 멤버로 합류할 때 사용 |
 | **Create a new Raft cluster** | 현재 이 Vault가 클러스터의 첫 번째 노드(Leader)로서 새 Raft 저장소를 초기화할 때 사용 (대부분의 단일 서버 또는 첫 구성 시 선택해야 함) |
 
-> “Create a new Raft cluster”를 선택한다.
+> “Create a new Raft cluster”를 선택합니다.
 {: .prompt-info}
 
 * * *
 
-- Vault는 기동 시마다 자동으로 잠긴(sealed) 상태이고, 운영 중에도 서버가 재시작되면 반드시 언실(unseal)해야 한다.
+- Vault는 기동 시마다 자동으로 잠긴(sealed) 상태이고, 운영 중에도 서버가 재시작되면 반드시 언실(unseal)해야 합니다.
 
 ![vault sealed 화면](/assets/img/post/docker/vault%20sealed%20화면.png)
 
@@ -156,23 +156,23 @@ $ docker logs -f vault
 
 * * *
 
-- Vault가 초기화 후 로그인 할 수 있는 관리자 토큰과 Unseal Key 조각들을 확인한다.
+- Vault가 초기화 후 로그인 할 수 있는 관리자 토큰과 Unseal Key 조각들을 확인합니다.
 
 ![vault 초기화 완료 화면](/assets/img/post/docker/vault%20초기화%20완료%20화면.png)
 
 | 항목 | 설명 |
 |------|------|
 | **Initial Root Token** | Vault에 로그인할 수 있는 “최고 관리자 토큰”이다. UI나 CLI에서 인증 시 반드시 필요하다. (예: vault login <root-token>) |
-| **Key 1 ~ Key 5**	| Vault의 마스터 키를 분할(Shamir Secret Sharing)한 Unseal Key 조각들이다. Vault가 재시작되거나 sealed 상태일 때, 이 중 일부(threshold 수 만큼)를 입력해야 Vault를 “해제(Unseal)”할 수 있다.
+| **Key 1 ~ Key 5**	| Vault의 마스터 키를 분할(Shamir Secret Sharing)한 Unseal Key 조각들이다. Vault가 재시작되거나 sealed 상태일 때, 이 중 일부(threshold 수 만큼)를 입력해야 Vault를 “해제(Unseal)”할 수 있습니다.
 
-> Initial Root Token이랑 Key 1~3 값을 복사하고, [Continue to Unseal] 버튼을 클릭하면 다음 단계로 이동한다.
+> Initial Root Token이랑 Key 1~3 값을 복사하고, [Continue to Unseal] 버튼을 클릭하면 다음 단계로 이동합니다.
 {: .prompt-info}
 
 * * *
 
 ### 3.1 Vault 로그인 하기 :
 
-- 위 단계에서 복사한 **Initial Root Token** 값을 입력하여 로그인 한다.
+- 위 단계에서 복사한 **Initial Root Token** 값을 입력하여 로그인 합니다.
 
 ![vault 로그인 화면](/assets/img/post/docker/vault%20로그인%20화면.png)
 ![vault 로그인 후 화면](/assets/img/post/docker/vault%20로그인%20후%20화면.png)

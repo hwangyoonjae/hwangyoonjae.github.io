@@ -9,7 +9,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 
 ## 1. Prometheus 배포 파일 구조:
 
-- Gitlab Repo의 저장한 파일 경로는 아래와 같다.
+- Gitlab Repo의 저장한 파일 경로는 아래와 같습니다.
 
 ```bash
 .
@@ -119,7 +119,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 
 ## 2. Argocd Application 생성하기 :
 
-- 아래와 같이 Argocd의 Application을 생성한다.
+- 아래와 같이 Argocd의 Application을 생성합니다.
 
 ```yaml
 project: default

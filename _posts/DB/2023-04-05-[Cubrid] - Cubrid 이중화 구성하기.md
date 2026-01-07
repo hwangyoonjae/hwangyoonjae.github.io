@@ -20,7 +20,7 @@ image: /assets/img/post-title/cubrid-wallpaper.jpg
 * * *
 
 ## 3. CUBRID 설치하기 :
-- FTP 통해서 CUBRID 설치파일을 서버에 복사 후 파일을 실행한다.
+- FTP 통해서 CUBRID 설치파일을 서버에 복사 후 파일을 실행합니다.
 
 ```bash
 $ sh CUBRID-10.2-latest-Linux.x86_64.sh
@@ -30,14 +30,14 @@ $ sh CUBRID-10.2-latest-Linux.x86_64.sh
 
 ![텍스트](/assets/img/post/DB/CUBRID%20%EC%B4%88%EA%B8%B0%20%EC%84%A4%EC%B9%98%20%EC%8B%9C%20%ED%99%94%EB%A9%B4.PNG)
 
-- 아래 그림과 같이 진행한다.
+- 아래 그림과 같이 진행합니다.
 
 ![텍스트](/assets/img/post/DB/CUBRID%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
 ## 4. CUBRID 서비스 시작하기 :
-- CUBRID 설치한 계정 경로(/home/계정)으로 들어가 명령어를 입력하여 서비스 시작한다.
+- CUBRID 설치한 계정 경로(/home/계정)으로 들어가 명령어를 입력하여 서비스 시작합니다.
 
 ```bash
 $ . .cubrid.sh
@@ -48,11 +48,11 @@ $ cubrid service start
 
 ## 5. CUBRID Replication 구성하기 :
 ### 5.1 CUBRID HA란? :
-- CUBRID의 HA(High Availability) 기능은 shared-nothing 구조이며, 액티브 서버(Active Server)에서 스탠바이 서버(Standby Server)로 데이터를 동기화하기 위해 다음 두 단계를 수행한다.
+- CUBRID의 HA(High Availability) 기능은 shared-nothing 구조이며, 액티브 서버(Active Server)에서 스탠바이 서버(Standby Server)로 데이터를 동기화하기 위해 다음 두 단계를 수행합니다.
 
 ```
-1. 트랜잭션 로그 다중화: 액티브 서버(Active Server)에서 생성되는 트랜잭션 로그를 실시간으로 다른 노드에 복제한다.
-2. 트랜잭션 로그 반영: 실시간으로 복제된 트랜잭션 로그를 분석하여 스탠바이 서버에 데이터를 반영한다.
+1. 트랜잭션 로그 다중화: 액티브 서버(Active Server)에서 생성되는 트랜잭션 로그를 실시간으로 다른 노드에 복제합니다.
+2. 트랜잭션 로그 반영: 실시간으로 복제된 트랜잭션 로그를 분석하여 스탠바이 서버에 데이터를 반영합니다.
 ```
 
 > HA란? : 하드웨어, 소프트웨어, 네트워크 등에 장애가 발생해도 지속적인 서비스를 제공하는 기능
@@ -66,7 +66,7 @@ $ cubrid service start
 * * *
 
 ### 5.3 노드(Node) 구분 :
-- **마스터 노드(Master Node)** : 복제의 대상이 되는 노드로, 액티브 서버를 사용한 읽기, 쓰기 등 모든 서비스를 제공한다.
+- **마스터 노드(Master Node)** : 복제의 대상이 되는 노드로, 액티브 서버를 사용한 읽기, 쓰기 등 모든 서비스를 제공합니다.
 - **슬레이브 노드(Slave Node)** : 마스터 노드와 동일한 내용을 갖는 노드로, 마스터 노드의 변경이 자동으로 반영된다. 스탠바이 서버를 사용한 읽기 서비스를 제공하며 마스터 노드 장애 시 failover가 일어난다.
 - **레플리카 노드(Replica Node)** : 마스터 노드와 동일한 내용을 갖는 노드로, 마스터 노드의 변경이 자동으로 반영된다. 스탠바이 서버를 사용한 읽기 서비스를 제공하며 마스터 노드 장애 시 failover가 일어나지 않는다.<br>
 
@@ -105,7 +105,7 @@ $ cubrid createdb -F "masterdb" --log-volume-size=1024M masterdb ko_KR.utf8
 * * *
 
 ### 6.4 cubrid.conf 내용 수정하기 :
-- 아래 그림과 같이 cubrid.conf 內 내용을 추가한다.
+- 아래 그림과 같이 cubrid.conf 內 내용을 추가합니다.
 
 ```bash
 $ cd CUBRID설치경로/conf
@@ -139,14 +139,14 @@ $ vi databases.txt
 * * *
 
 ## 6.7 CUBRID Slave Server 설정하기 :
-- CUBRID Master Server 구성한 방식 그대로 Slave 서버도 세팅한다.
-- 단, HOSTNAME만 **nodeB**로 설정한다.
+- CUBRID Master Server 구성한 방식 그대로 Slave 서버도 세팅합니다.
+- 단, HOSTNAME만 **nodeB**로 설정합니다.
 
 * * *
 
 ## 6.8 CUBRID Replication 시작하기 :
-- CUBRID 설치한 계정 경로(/home/계정)으로 들어가 명령어를 입력하여 서비스 시작한다.
-- Master 노드(nodeA)를 먼저 시작하고, Slave 노드(nodeB)를 시작한다.
+- CUBRID 설치한 계정 경로(/home/계정)으로 들어가 명령어를 입력하여 서비스 시작합니다.
+- Master 노드(nodeA)를 먼저 시작하고, Slave 노드(nodeB)를 시작합니다.
 
 ```bash
 $ . .cubrid.sh

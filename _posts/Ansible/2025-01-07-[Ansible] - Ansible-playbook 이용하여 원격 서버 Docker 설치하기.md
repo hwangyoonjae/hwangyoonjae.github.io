@@ -17,7 +17,7 @@ image: /assets/img/post-title/ansible-wallpaper.jpg
 
 ## 2. Docker 설치하는 Ansible-Playbook 생성하기 :
 
-- 아래와 같이 Ansible-Playbook 생성하여 원격서버들로부터 Docker 설치를 진행한다.
+- 아래와 같이 Ansible-Playbook 생성하여 원격서버들로부터 Docker 설치를 진행합니다.
 
 ```yaml
 ---
@@ -84,7 +84,7 @@ image: /assets/img/post-title/ansible-wallpaper.jpg
 
 * * *
 
-- Ansible hosts파일의 배포할 원격서버 IP주소를 입력한다.
+- Ansible hosts파일의 배포할 원격서버 IP주소를 입력합니다.
 
 ```bash
 $ vi /etc/ansible/host
@@ -98,7 +98,7 @@ $ vi /etc/ansible/host
 
 * * *
 
-- 배포를 진행한다.
+- 배포를 진행합니다.
 
 ```bash
 $ ansible-playbook -i /etc/ansible/hosts docker-install.yml --limit docker_install -vvv

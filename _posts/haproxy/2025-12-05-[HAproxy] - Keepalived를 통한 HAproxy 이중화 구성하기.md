@@ -11,7 +11,7 @@ image: /assets/img/post-title/haproxy-wallpaper.jpg
 ### 1.1 설치하기 :
 
 ```bash
-# 2대 노드(VM)에 진행한다.
+# 2대 노드(VM)에 진행합니다.
 $ dnf install -y haproxy
 ```
 
@@ -22,7 +22,7 @@ $ dnf install -y haproxy
 ```bash
 $ vi /etc/haproxy/haproxy.cfg
 
-# 아래는 예시이고, 환경에 맞게 설정한다.
+# 아래는 예시이고, 환경에 맞게 설정합니다.
 global
     log         127.0.0.1 local2
     chroot      /var/lib/haproxy
@@ -92,7 +92,7 @@ listen stats
 ### 2.1 설치하기 :
 
 ```bash
-# 2대 노드(VM)에 진행한다.
+# 2대 노드(VM)에 진행합니다.
 $ dnf install -y keepalived
 ```
 
@@ -100,12 +100,12 @@ $ dnf install -y keepalived
 
 ### 2.2 Keepalived 기본 설정하기 :
 
-- Loadbalancer1 (MASTER) 설정은 아래와 같다.
+- Loadbalancer1 (MASTER) 설정은 아래와 같습니다.
 
 ```bash
 $ vi /etc/keepalived/keepalived.conf
 
-# 아래는 예시이고, 환경에 맞게 설정한다.
+# 아래는 예시이고, 환경에 맞게 설정합니다.
 vrrp_instance VI_1 {
     state MASTER          # LB1는 MASTER
     interface [NIC_NAME]
@@ -124,12 +124,12 @@ vrrp_instance VI_1 {
 }
 ```
 
-- Loadbalancer2 (WORKER) 설정은 아래와 같다.
+- Loadbalancer2 (WORKER) 설정은 아래와 같습니다.
 
 ```bash
 $ vi /etc/keepalived/keepalived.conf
 
-# 아래는 예시이고, 환경에 맞게 설정한다.
+# 아래는 예시이고, 환경에 맞게 설정합니다.
 vrrp_instance VI_1 {
     state BACKUP          # LB2는 BACKUP
     interface [NIC_NAME]
@@ -158,7 +158,7 @@ vrrp_instance VI_1 {
 ## 3. 서비스 시작 & 동작 확인하기 :
 ### 3.1 서비스 시작하기 :
 
-- 2대 노드(VM)에서 진행한다.
+- 2대 노드(VM)에서 진행합니다.
 
 ```bash
 # HAproxy 서비스 enabled 활성화 및 시작
@@ -174,7 +174,7 @@ $ systemctl start keepalived
 
 ### 3.2 VIP 연결 확인하기 :
 
-- Loadbalancer1 (MASTER)에서 VIP가 연결되었는지 확인한다.
+- Loadbalancer1 (MASTER)에서 VIP가 연결되었는지 확인합니다.
 
 ```bash
 $ ip addr show dev [NIC_NAME] | grep [VIP_Address]
@@ -184,7 +184,7 @@ $ ip addr show dev [NIC_NAME] | grep [VIP_Address]
 
 ## 4. Failover 테스트하기 :
 
-- Loadbalancer1 (MASTER)에서 일부러 HAproxy나 Keepalived를 중지한다.
+- Loadbalancer1 (MASTER)에서 일부러 HAproxy나 Keepalived를 중지합니다.
 
 ```bash
 # 방법 1: haproxy 죽이기
@@ -194,7 +194,7 @@ $ systemctl stop haproxy
 $ systemctl stop keepalived
 ```
 
-- Loadbalancer2 (WORKER)에서 지정한 네트워크 인터페이스의 VIP가 보이는지 확인한다.
+- Loadbalancer2 (WORKER)에서 지정한 네트워크 인터페이스의 VIP가 보이는지 확인합니다.
 
 ```bash
 $ ip addr show dev [NIC_NAME] | grep [VIP_Address]

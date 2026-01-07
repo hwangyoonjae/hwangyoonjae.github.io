@@ -18,7 +18,7 @@ $ kubeadm init --apiserver-advertise-address {k8s-master IP} --pod-network-cidr=
 * * *
 
 ## 2. k8s 구성중 kubeadm init 안되는 증상 해결하기:
-- 아래와 같이 명령어를 순착적으로 입력하여 해결한다.
+- 아래와 같이 명령어를 순착적으로 입력하여 해결합니다.
 
 ```bash
 $ rm /etc/containerd/config.toml

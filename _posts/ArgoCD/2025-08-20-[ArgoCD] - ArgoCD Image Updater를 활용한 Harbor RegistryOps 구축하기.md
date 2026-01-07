@@ -116,7 +116,7 @@ metadata:
 
 ## 5. ArgoCD 배포 파일 생성하기 :
 
-- 파일 구조는 아래와 같다.
+- 파일 구조는 아래와 같습니다.
 
 ```bash
 kustomize-dir/
@@ -184,7 +184,7 @@ images:
 
 > ArgoCD Image Updater와 함께 배포할 때 Deployment YAML에서 Kustomize를 사용하는 이유?
 >
-> Deployment YAML을 그대로 쓰면, 하드코딩된 이미지 때문에 자동 배포가 불가능하기 때문에, Kustomize를 사용하여 이미지 태그 업데이트를 자동화하기 위해 사용한다. 
+> Deployment YAML을 그대로 쓰면, 하드코딩된 이미지 때문에 자동 배포가 불가능하기 때문에, Kustomize를 사용하여 이미지 태그 업데이트를 자동화하기 위해 사용합니다. 
 {: .prompt-info}
 
 ---

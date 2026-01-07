@@ -51,7 +51,7 @@ $ systemctl enable docker
 * * *
 
 ### Docker Gitlab 이미지 다운로드:
-- Gitlab 관련 이미지를 검색한다.
+- Gitlab 관련 이미지를 검색합니다.
 ```bash
 $ docker search gitlab
 ```
@@ -63,7 +63,7 @@ $ docker pull gitlab/gitlab-ee
 ```
 [![gitlab docker image 다운](/assets/img/post/Gitlab/gitlab%20docker%20image%20다운.png)](/assets/img/post/Gitlab/gitlab%20docker%20image%20다운.png)
 
-- Gitlab 이미지 설치 후 확인한다.
+- Gitlab 이미지 설치 후 확인합니다.
 ```bash
 $ docker images
 ```
@@ -89,7 +89,7 @@ $ docker run --detach \
 * * *
 
 ### Docker로 Gitlab 실행 로그 확인하기:
-- 아래 명령어를 통해서 Docker로 Gitlab 실행 로그를 확인할 수 있다.
+- 아래 명령어를 통해서 Docker로 Gitlab 실행 로그를 확인할 수 있습니다.
 ```bash
 $ docekr logs -f gitlab
 ```

@@ -31,7 +31,7 @@ $ helm pull jetstack/cert-manager --version 1.18.3
 
 ### 1.2 cert-manager container image 다운로드 :
 
-- helm chart를 통해 설치될 Application version대로 이미지를 다운로드한다.
+- helm chart를 통해 설치될 Application version대로 이미지를 다운로드합니다.
 
 ```bash
 $ docker pull quay.io/jetstack/cert-manager-controller:v1.18.3
@@ -47,7 +47,7 @@ $ docker pull quay.io/jetstack/cert-manager-startupapicheck:v1.18.3
 
 ### 1.3 Helm을 통해 Cert-Manager 설치하기 :
 
-- cert-manager 설치를 위해 네임스페이스를 생성한다.
+- cert-manager 설치를 위해 네임스페이스를 생성합니다.
 
 ```bash
 $ kubectl create namespace cert-manager
@@ -55,7 +55,7 @@ $ kubectl create namespace cert-manager
 
 * * *
 
-- values.yaml 파일에 값을 수정한다.
+- values.yaml 파일에 값을 수정합니다.
 
 ```bash
 $ vi values.yaml
@@ -111,7 +111,7 @@ startupapicheck:
 
 * * *
 
-- 쿠버네티스에 cert-manager 애플리케이션을 설치한다.
+- 쿠버네티스에 cert-manager 애플리케이션을 설치합니다.
 
 ```bash
 $ helm install cert-manager ./ \
@@ -124,7 +124,7 @@ $ helm install cert-manager ./ \
 
 * * *
 
-- 쿠버네티스 클러스터의 정상적으로 설치되었는지 확인한다.
+- 쿠버네티스 클러스터의 정상적으로 설치되었는지 확인합니다.
 
 ```bash
 # pod 목록 조회
@@ -150,7 +150,7 @@ $ kubectl get all -n cert-manager
 
 ### 2.2 cert-manager가 추가하는 CRD 종류 :
 
-- TLS 인증서 자동화를 위해 아래와 같은 커스텀 리소스(Custom Resources) 를 정의하고 사용한다.
+- TLS 인증서 자동화를 위해 아래와 같은 커스텀 리소스(Custom Resources) 를 정의하고 사용합니다.
 
 | CRD 리소스 | 역할 설명 |
 |-------------|------------|
@@ -161,14 +161,14 @@ $ kubectl get all -n cert-manager
 | **Order** (`orders.acme.cert-manager.io`) | ACME 프로토콜(Let’s Encrypt)에서 인증서 발급 과정을 추적하기 위한 내부 리소스 |
 | **Challenge** (`challenges.acme.cert-manager.io`) | ACME 인증(HTTP-01, DNS-01 등) 과정을 나타내는 내부 리소스 |
 
-> CRDs가 없으면 cert-manager는 아무런 커스텀 리소스를 인식하지 못해서 **kubectl apply -f certificate.yaml** 같은 명령이 오류가 발생한다.
+> CRDs가 없으면 cert-manager는 아무런 커스텀 리소스를 인식하지 못해서 **kubectl apply -f certificate.yaml** 같은 명령이 오류가 발생합니다.
 {: .prompt-tip}
 
 * * *
 
 ### 2.3 CRDs 설치하기 :
 
-- 차트만 오프라인으로 가져오면 CRD는 자동 설치되지 않기 때문에, Repo의 CRDs 디렉터리에서 직접 적용한다.
+- 차트만 오프라인으로 가져오면 CRD는 자동 설치되지 않기 때문에, Repo의 CRDs 디렉터리에서 직접 적용합니다.
 
 ```bash
 # (온라인 PC에서) 필요한 CRD들만 폴더째로 수집
@@ -188,7 +188,7 @@ $ kubectl apply -f acme.cert-manager.io_challenges.yaml
 
 * * *
 
-- CRDs 리소스 배포 확인한다.
+- CRDs 리소스 배포 확인합니다.
 
 ```bash
 $ kubectl get crd | grep cert-manager.io
@@ -200,7 +200,7 @@ $ kubectl get crd | grep cert-manager.io
 
 ### 2.4 Vault Token을 Secret으로 만들기 :
 
-- tokenSecretRef가 가리키는 Secret을 cert-manager 네임스페이스의 생성한다.
+- tokenSecretRef가 가리키는 Secret을 cert-manager 네임스페이스의 생성합니다.
 
 ```bash
 $ kubectl -n cert-manager create secret generic cert-manager-vault-auth \
@@ -267,7 +267,7 @@ spec:
 
 * * *
 
-- cert-manager가 vault를 통해 인증서를 발급하도록 지시하는 Certificate 리소스 생성 시 아래와 같이 알림(Warning) 발생한다.
+- cert-manager가 vault를 통해 인증서를 발급하도록 지시하는 Certificate 리소스 생성 시 아래와 같이 알림(Warning) 발생합니다.
 
 ```html
 # 단순히 “기본값이 바뀌었어요” 라는 안내 메시지
@@ -276,7 +276,7 @@ the default value changed from `Never` to `Always`.
 ```
 ![cert-manager 생성 시 warning 발생](/assets/img/post/helm/cert-manager%20생성%20시%20warning%20발생.png)
 
-- cert-manager가 인증서를 갱신할 때(예: 만료가 다가오면 새로 발급할 때), 기존 private key를 계속 쓸지, 새로 만들지를 결정하는 설정이 있다.
+- cert-manager가 인증서를 갱신할 때(예: 만료가 다가오면 새로 발급할 때), 기존 private key를 계속 쓸지, 새로 만들지를 결정하는 설정이 있습니다.
 
 ```yaml
 spec:

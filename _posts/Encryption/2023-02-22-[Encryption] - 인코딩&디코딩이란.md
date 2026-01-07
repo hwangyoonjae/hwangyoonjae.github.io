@@ -21,7 +21,7 @@ image: /assets/img/post-title/encryption.jpg
 
 ## 3. 바이트(byte) 컴퓨터 기본 저장단위 :
 - 1바이트(1byte)는 8bit이다.
-- 1바이트에는 2의 8승, 즉 256개의 값을 저장할수 있다.
+- 1바이트에는 2의 8승, 즉 256개의 값을 저장할수 있습니다.
 
 * * *
 
@@ -36,7 +36,7 @@ image: /assets/img/post-title/encryption.jpg
 * * *
 
 ## 5. 디코딩이란? :
-- 컴퓨터가 이해하는 언어 (0과1)로 이루어진 코드를 약속된 규칙에 따라 사람이 인지할 수 있는 문자(언어)로 바꾸는 것을 말한다.
+- 컴퓨터가 이해하는 언어 (0과1)로 이루어진 코드를 약속된 규칙에 따라 사람이 인지할 수 있는 문자(언어)로 바꾸는 것을 말합니다.
 
 [![텍스트](/assets/img/post/Encryption/디코딩.png)](/assets/img/post/Encryption/디코딩.png)
 

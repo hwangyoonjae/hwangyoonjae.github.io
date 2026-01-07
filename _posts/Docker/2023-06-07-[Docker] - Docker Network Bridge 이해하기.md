@@ -8,13 +8,13 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 1. Docker Network 개요 :
-- Docker Network는 Docker container 간 Network 연결을 할 수 있으며 Docker container와 Docker container가 아닌 워크로드에 연결할 수 있다.
-- Docker 호스트는 Docker를 이용해 플랫폼에 구애받지 않고 Docker container들을 관리, 연결할 수 있다.
+- Docker Network는 Docker container 간 Network 연결을 할 수 있으며 Docker container와 Docker container가 아닌 워크로드에 연결할 수 있습니다.
+- Docker 호스트는 Docker를 이용해 플랫폼에 구애받지 않고 Docker container들을 관리, 연결할 수 있습니다.
 
 * * *
 
 ## 2. Docker network Driver :
-- Docker는 여러 Network driver들은 기본으로 제공되며, Network driver는 아래와 같다. 
+- Docker는 여러 Network driver들은 기본으로 제공되며, Network driver는 아래와 같습니다. 
 ```html
 Bridge, Host, Overlay, Macvlan, None, Network plugins
 ```
@@ -35,7 +35,7 @@ Bridge, Host, Overlay, Macvlan, None, Network plugins
 * * *
 
 ### 3.1 Docker network Driver Bridge 확인하기 :
-- Host machine의 Docker network를 확인하기 위해 다음과 같은 명령어를 입력한다.
+- Host machine의 Docker network를 확인하기 위해 다음과 같은 명령어를 입력합니다.
 
 ```bash
 $ docker network ls
@@ -44,7 +44,7 @@ $ docker network ls
 
 * * *
 
-- Default로 생성된 bridge에 대한 정보를 확인하기 위해 다음과 같은 명령어를 입력한다.
+- Default로 생성된 bridge에 대한 정보를 확인하기 위해 다음과 같은 명령어를 입력합니다.
 
 ```bash
 $ docker network inspect bridge

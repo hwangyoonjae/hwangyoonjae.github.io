@@ -14,14 +14,14 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
 ## 2. Docker Visualizer 사용하기 :
 ### 2.1 visualizer.yml 파일 만들기 :
-- 아래와 같이 visualizer.yml 파일을 생성한다.
+- 아래와 같이 visualizer.yml 파일을 생성합니다.
 
 ![텍스트](/assets/img/post/docker/docker%20visualizer%20%ED%8C%8C%EC%9D%BC.PNG)
 
 * * *
 
 ### 2.2 Visualizer 배포하기 :
-- 아래와 같이 **docker stack** 명령어 사용하여 진행한다.
+- 아래와 같이 **docker stack** 명령어 사용하여 진행합니다.
 
 ```bash
 $ docker stack deploy -c <yaml-file> <stack-name>
@@ -40,7 +40,7 @@ $ docker service ls
 * * *
 
 ## 3. 웹브라우저 접속하기 :
-- localhost:9000 또는 서버IP:9000로 접속한다.
+- localhost:9000 또는 서버IP:9000로 접속합니다.
 
 ![텍스트](/assets/img/post/docker/docker%20visualizer%20%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%20%EC%A0%91%EC%86%8D%ED%99%94%EB%A9%B4.PNG)
 

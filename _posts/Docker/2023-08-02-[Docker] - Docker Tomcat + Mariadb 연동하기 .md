@@ -8,7 +8,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 1. Docker Tomcat 구성하기 :
-- Docker Tomcat 구성을 아래와 같이 파일 형태로 사용한다.
+- Docker Tomcat 구성을 아래와 같이 파일 형태로 사용합니다.
 
 ```yaml
 # 파일명은 docker-tomcat.yml
@@ -30,7 +30,7 @@ services:
 * * *
 
 ## 2. Docker MariaDB 구성하기 :
-- Docker MariaDB 구성을 아래와 같이 파일 형태로 사용한다.
+- Docker MariaDB 구성을 아래와 같이 파일 형태로 사용합니다.
 
 ```yaml
 # 파일명은 docker-mariadb.yml
@@ -58,7 +58,7 @@ services:
 * * *
 
 ## 3. Tomcat index.jsp 생성하기 :
-- DB에 있는 데이터를 웹페이지의 보여주기 위해 아래와 같이 index.jsp를 생성한다.
+- DB에 있는 데이터를 웹페이지의 보여주기 위해 아래와 같이 index.jsp를 생성합니다.
 
 ```bash
 $ cd /tomcat1/webapps/ROOT
@@ -144,7 +144,7 @@ $ vi index.jsp
 * * *
 
 ## 5. Docker Container 생성하기 :
-- 위에서 작성한 compose 파일을 통하여 Docker Container를 생성한다.
+- 위에서 작성한 compose 파일을 통하여 Docker Container를 생성합니다.
 
 ```bash
 $ docker stack deploy -c docker-tomcat.yml web
@@ -154,7 +154,7 @@ $ docker stack deploy -c docker-mariadb.yml db
 * * *
 
 ## 6. 웹페이지에서 확인하기 :
-- Tomcat에서 DB값을 제대로 불러오는지 웹페이지로 접속하여 확인한다.
+- Tomcat에서 DB값을 제대로 불러오는지 웹페이지로 접속하여 확인합니다.
 
 ![docker tomcat, mariadb 연동 성공 화면](/assets/img/post/docker/docker%20tomcat,%20mariadb%20연동%20성공%20화면.PNG)
 

@@ -8,7 +8,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 1. 도커 이미지 (Docker Image)란 무엇인가? :
-- "이미지 = 설정파일" 즉, 가상화에 WebServer, WAS, DB 등 설치하여 구성해야하는데 도커에서 이미지는 다운받아서 하나의 컨테이너만 만들면 그 만든 컨테이너 하나로 여러 개의 도커를 생성할 수 있다.
+- "이미지 = 설정파일" 즉, 가상화에 WebServer, WAS, DB 등 설치하여 구성해야하는데 도커에서 이미지는 다운받아서 하나의 컨테이너만 만들면 그 만든 컨테이너 하나로 여러 개의 도커를 생성할 수 있습니다.
 
 * * *
 
@@ -34,7 +34,7 @@ $ docker search [이미지명]
 ![텍스트](/assets/img/post/docker/docker%20image%20%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C%20%EA%B2%80%EC%83%89%20%ED%99%94%EB%A9%B4.PNG)
 
 ### 2.2 도커 컨테이너 이미지 다운로드 :
-- 이미지 찾기를 통해서 다운로드할 이미지 이름과 필요한 버전을 입력하여 다운로드한다.
+- 이미지 찾기를 통해서 다운로드할 이미지 이름과 필요한 버전을 입력하여 다운로드합니다.
 
 ```bash
 $ docker pull [이미지명]
@@ -44,7 +44,7 @@ $ docker pull [이미지명]
 * * *
 
 ### 2.3 도커 이미지 목록 보기 :
-- 다운받은 이미지 목록을 확인한다.
+- 다운받은 이미지 목록을 확인합니다.
 
 ```bash
 $ docker images
@@ -54,7 +54,7 @@ $ docker images
 * * *
 
 ### 2.4 도커 이미지 압축하기 :
-- 내부망(인터넷 접근 불가)에서 사용할 이미지를 압축한다.
+- 내부망(인터넷 접근 불가)에서 사용할 이미지를 압축합니다.
 
 ```bash
 $ docker save <image명> > <image명>.tar
@@ -64,7 +64,7 @@ $ docker save <image명> > <image명>.tar
 * * *
 
 ### 2.5 도커 이미지 삭제하기 :
-- **"docker rmi"**명령어를 사용하여 도커 이미지를 삭제한다.
+- **"docker rmi"**명령어를 사용하여 도커 이미지를 삭제합니다.
 
 > rmi는 "remove image"의 줄임말이다.
 {: .prompt-info}
@@ -82,7 +82,7 @@ $ docker rmi [이미지명]
 Error response from daemon: conflict: unable to remove repository reference "nginx" (must force) - container 7d603f62cb2a is using its referenced image 2b7d6430f78d
 ```
 
-- 강제로 삭제하는 -f 옵션을 넣어 강제 삭제한다.
+- 강제로 삭제하는 -f 옵션을 넣어 강제 삭제합니다.
 
 ```bash
 $ docker rmi -f [이미지명]

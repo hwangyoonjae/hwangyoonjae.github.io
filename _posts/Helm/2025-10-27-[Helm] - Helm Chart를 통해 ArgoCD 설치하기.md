@@ -10,7 +10,7 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 ## 1. ArgoCD 설치하기 :
 ### 1.1 ArgoCD Helm Chart 다운로드 :
 
-- curl 또는 wget으로 직접 다운로드한다.
+- curl 또는 wget으로 직접 다운로드합니다.
 
 ```bash
 $ wget https://github.com/argoproj/argo-helm/releases/download/argo-cd-[version]/argo-cd-[버전].tgz
@@ -23,7 +23,7 @@ $ wget https://github.com/argoproj/argo-helm/releases/download/argo-cd-[version]
 
 ### 1.2 Helm을 통해 ArgoCD 설치하기 :
 
-- values.yaml 파일에 값을 수정한다.
+- values.yaml 파일에 값을 수정합니다.
 
 ```bash
 $ vi values.yaml
@@ -83,7 +83,7 @@ dex:
 
 * * *
 
-- argocd 설치한다.
+- argocd 설치합니다.
 
 ```bash
 $ helm install argocd ./ -n argocd -f values.yaml
@@ -93,7 +93,7 @@ $ helm install argocd ./ -n argocd -f values.yaml
 
 * * *
 
-- 초기 비밀번호는 아래 명령어를 통해서 확인하여 로그인한다.
+- 초기 비밀번호는 아래 명령어를 통해서 확인하여 로그인합니다.
 
 ```bash
 $ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
@@ -106,7 +106,7 @@ $ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.p
 ## 2. ArgoCD 설치 과정에서 변경사항 :
 ### 2.1 admin password 지정하고 싶은 경우 :
 
-- values.yaml에서 비밀번호를 직접 지정할 수 있다.
+- values.yaml에서 비밀번호를 직접 지정할 수 있습니다.
 
 ```yaml
 # configs.secret.argocdServerAdminPassword 값에 bcrypt 해시값을 넣는다.
@@ -118,7 +118,7 @@ configs:
 
 * * *
 
-- bcrypt 해시 생성하여 새 비밀번호를 반영한다.
+- bcrypt 해시 생성하여 새 비밀번호를 반영합니다.
 
 ```bash
 $ htpasswd -nbBC 10 "" '[password]' | tr -d ':\n'
@@ -128,7 +128,7 @@ $ htpasswd -nbBC 10 "" '[password]' | tr -d ':\n'
 
 ### 2.2 CRD 소유권을 완전히 새로 가져가고 싶은 경우 :
 
-- Argo CD 관련 CRD를 삭제한다.
+- Argo CD 관련 CRD를 삭제합니다.
 
 ```bash
 $ kubectl delete crd applications.argoproj.io appprojects.argoproj.io applicationsets.argoproj.io
@@ -137,7 +137,7 @@ $ kubectl delete crd applications.argoproj.io appprojects.argoproj.io applicatio
 $ helm install argocd ./ -n argocd -f values.yaml
 ```
 
-> Helm 차트가 CRD를 언인스톨 시 자동 제거하지 않는 경우가 많아 이전에 삭제해도 CRD가 남아 충돌이 자주 발생한다.
+> Helm 차트가 CRD를 언인스톨 시 자동 제거하지 않는 경우가 많아 이전에 삭제해도 CRD가 남아 충돌이 자주 발생합니다.
 {: .prompt-warning}
 
 * * *

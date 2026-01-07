@@ -14,7 +14,7 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 * * *
 
 ## Specific runners에 있는 URL과 Token값을 확인하기 :
-- Gitlab-Runner 연동 시 사용할 URL과 Token 값을 확인한다.
+- Gitlab-Runner 연동 시 사용할 URL과 Token 값을 확인합니다.
 [![gitlab runner 설정 토큰값 확인](/assets/img/post/Gitlab/gitlab%20runner%20설정%20토큰값%20확인.png)](/assets/img/post/Gitlab/gitlab%20runner%20설정%20토큰값%20확인.png)
 
 * * *
@@ -59,10 +59,10 @@ Configuration (with the authentication token) was saved in "/etc/gitlab-runner/c
 ```
 
 > Gitlab 주소를 도메인으로 지정해서 연결해야하는 경우
->- /etc/hosts의 **IP주소 도메인명** 형태로 저장한다.
+>- /etc/hosts의 **IP주소 도메인명** 형태로 저장합니다.
 {: .prompt-warning }
 
-- 아래와 같이 컨이이너 내부의 /etc/hosts 파일에 등록한다.
+- 아래와 같이 컨이이너 내부의 /etc/hosts 파일에 등록합니다.
 ```bash
 $ echo "192.168.150.140 gitlab.inno.com" >> /etc/hosts
 ```

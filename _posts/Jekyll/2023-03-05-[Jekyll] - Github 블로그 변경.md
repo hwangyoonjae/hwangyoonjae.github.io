@@ -23,7 +23,7 @@ image: /assets/img/post-title/jekyll-wallpaper.jpg
 * * *
 
 ### 2.2 내 github.io 폴더에 붙혀넣기 :
-- 다운받은 파일 압축 해제하여 github.io 폴더 內 적용한다.
+- 다운받은 파일 압축 해제하여 github.io 폴더 內 적용합니다.
 
 ![텍스트](/assets/img/post/local/minimal%20mistakes%20%EC%A0%81%EC%9A%A9%20%ED%99%94%EB%A9%B4.PNG)
 

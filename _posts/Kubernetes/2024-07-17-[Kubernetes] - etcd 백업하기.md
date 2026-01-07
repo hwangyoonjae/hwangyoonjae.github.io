@@ -19,8 +19,8 @@ etcdctl endpoint status --write-out=table \
 
 >API 버전 3을 사용하도록 지정할까?
 >
->API v3는 여러 면에서 개선된 기능을 제공하며, 특히 대규모 시스템이나 높은 트랜잭션 빈도 환경에서 더 나은 성능과 안정성을 제공한다.
->따라서 새로운 프로젝트나 시스템에서는 v3 API를 사용하는 것이 권장한다고 한다.
+>API v3는 여러 면에서 개선된 기능을 제공하며, 특히 대규모 시스템이나 높은 트랜잭션 빈도 환경에서 더 나은 성능과 안정성을 제공합니다.
+>따라서 새로운 프로젝트나 시스템에서는 v3 API를 사용하는 것이 권장한다고 합니다.
 {: .prompt-warning }
 
 * * *
@@ -62,7 +62,7 @@ etcdctl --data-dir /var/lib/etcd-from-backup \
 * * *
 
 ## 5. etcd.yaml 수정 :
-- etcd 스냅샷을  /var/lib/etcd-from-backup 경로로 복원했으므로 볼륨에 대한 호스트 경로를 변경해야한다.
+- etcd 스냅샷을  /var/lib/etcd-from-backup 경로로 복원했으므로 볼륨에 대한 호스트 경로를 변경해야합니다.
 
 ```bash
 $ vi /etc/kubernetes/manifests/etcd.yaml

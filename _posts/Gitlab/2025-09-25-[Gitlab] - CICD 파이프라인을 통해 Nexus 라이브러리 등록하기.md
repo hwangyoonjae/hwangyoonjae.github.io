@@ -175,7 +175,7 @@ allprojects {
 
 ### GitLab CI 변수에 Base64로 인코딩된 사내 CA 인증서 저장하기 :
 
-- 사내 CA 인증서를 Base64로 인코딩하여 결과 값을 복사한다.
+- 사내 CA 인증서를 Base64로 인코딩하여 결과 값을 복사합니다.
 
 ```bash
 $ base64 -w0 ca.crt > ca.crt.b64
@@ -188,11 +188,11 @@ $ cat ca.crt.b64
 
 * * *
 
-- 복사한 인코딩 값을 Gitlab CI 변수에 저장한다.
+- 복사한 인코딩 값을 Gitlab CI 변수에 저장합니다.
 
 ![인증서 인코딩 값 Gitlab 변수 저장](/assets/img/post/Gitlab/인증서%20인코딩%20값%20Gitlab%20변수%20저장.png)
 
-> CI 파이프라인을 통해 빌드된 라이브러리를 Nexus Hosted 저장소에 배포(업로드)한다.
+> CI 파이프라인을 통해 빌드된 라이브러리를 Nexus Hosted 저장소에 배포(업로드)합니다.
 {: .prompt-info}
 
 * * *

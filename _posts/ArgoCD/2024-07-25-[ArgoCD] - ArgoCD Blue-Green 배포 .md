@@ -52,7 +52,7 @@ spec:
 * * *
 
 ### 2.2 Service 생성하기 :
-- BlueGreen 전략에는 activeService와 previewService라는 두 가지 서비스가 필요하여 두 설정 모두 Kubernetes 서비스 리소스를 참조한다.
+- BlueGreen 전략에는 activeService와 previewService라는 두 가지 서비스가 필요하여 두 설정 모두 Kubernetes 서비스 리소스를 참조합니다.
 
 ```yaml
 # svc-stable.yaml
@@ -159,13 +159,13 @@ images:
 ```
 
 ### 2.5 Gitlab repo에 파일 커밋하기 :
-- 생성한 파일들을 gitlab repo의 커밋하면, webhook을 통해 파일 변경을 전달받은 argocd에서 자동으로 배포하는 것을 확인한다.
+- 생성한 파일들을 gitlab repo의 커밋하면, webhook을 통해 파일 변경을 전달받은 argocd에서 자동으로 배포하는 것을 확인합니다.
 ![argo rollout blue-green 배포 동작 확인](/assets/img/post/ArgoCD/argo%20rollout%20blue-green%20배포%20동작%20확인.png)
 
 * * *
 
 ### 2.6 Blue-Green 배포한 Pod 및 Service 확인하기 :
-- 서버에서 생성한 Pod와 Service 목록을 확인한다.
+- 서버에서 생성한 Pod와 Service 목록을 확인합니다.
 
 ```bash
 $ kubectl get pod -n argo-rollouts
@@ -177,7 +177,7 @@ $ kubectl get svc -n argo-rollouts
 
 ### 2.7 Rollout 상태 확인하기 :
 
-- 현재 생성한 Rollout 목록 조회한다.
+- 현재 생성한 Rollout 목록 조회합니다.
 
 ```bash
 $ kubectl -n [namespace] get rollout
@@ -187,7 +187,7 @@ $ kubectl -n [namespace] get rollout
 
 * * *
 
-- Rollout 이름을 통해서 Blue-Green 배포 상태를 확인한다.
+- Rollout 이름을 통해서 Blue-Green 배포 상태를 확인합니다.
 
 ```bash
 $ kubectl argo rollouts get rollout [rollout_name] -n [namespace]
@@ -198,7 +198,7 @@ $ kubectl argo rollouts get rollout [rollout_name] -n [namespace]
 * * *
 
 ## 3. 수동 승격 방법 :
-- Argo Rollouts의 블루-그린 전략을 사용하여 autoPromotionEnabled를 false로 설정한 경우, 수동으로 새 버전의 애플리케이션을 활성화하는 과정으로 수동 승격을 수행하는 방법은 아래와 같다.
+- Argo Rollouts의 블루-그린 전략을 사용하여 autoPromotionEnabled를 false로 설정한 경우, 수동으로 새 버전의 애플리케이션을 활성화하는 과정으로 수동 승격을 수행하는 방법은 아래와 같습니다.
 
 ```bash
 $ kubectl argo rollouts promote {rollout명} -n {namespace명}
@@ -211,7 +211,7 @@ $ kubectl argo rollouts promote {rollout명} -n {namespace명}
 ## 4. 배포 확인하기 :
 ### 4.1 배포 매니페스트 환경별 패치 파일 생성하기 :
 
-- 이 Kustomization은 base 리소스를 가져와 dev-int 네임스페이스에 배포하고, Ingress 설정만 환경에 맞게 수정하는 오버레이 설정한다.
+- 이 Kustomization은 base 리소스를 가져와 dev-int 네임스페이스에 배포하고, Ingress 설정만 환경에 맞게 수정하는 오버레이 설정합니다.
 
 ```yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
@@ -246,7 +246,7 @@ spec:
 
 ### 4.2 웹페이지 확인하기 :
 
-- 아래 그림과 같이 배포되어 정상 접속 되는것을 확인한다.
+- 아래 그림과 같이 배포되어 정상 접속 되는것을 확인합니다.
 
 ![argo rollout blue-green 배포 후 웹 접속](/assets/img/post/ArgoCD/argo%20rollout%20blue-green%20배포%20후%20웹%20접속.png)
 
@@ -278,7 +278,7 @@ spec:
             value: # http://{service}.{namespace}.svc.cluster.local
 ```
 
-- 헬스체크(자동화된 검증)를 표준화해서 Rollout이 참조할 수 있도록 따로 정의한다.
+- 헬스체크(자동화된 검증)를 표준화해서 Rollout이 참조할 수 있도록 따로 정의합니다.
 
 ```yaml
 # analysis-template.yaml

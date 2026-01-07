@@ -9,7 +9,7 @@ image: /assets/img/post-title/redis-wallpaper.jpg
 
 ## 1. Redis 데이터 입력, 수정, 삭제, 조회하기 :
 ### 1.1 Redis 데이터 입력(저장)하기 :
-- 데이터를 저장할 때는 **set** 명령을 사용한다.
+- 데이터를 저장할 때는 **set** 명령을 사용합니다.
 
 ```bash
 set key value
@@ -21,7 +21,7 @@ ex) set data “hello”
 * * *
 
 ### 1.2 Redis 데이터 조회하기 :
-- 데이터를 조회할 때는 **get** 명령을 사용한다.
+- 데이터를 조회할 때는 **get** 명령을 사용합니다.
 
 ```bash
 get key
@@ -33,7 +33,7 @@ ex) get data
 * * *
 
 ### 1.3 Redis 데이터 변경하기 :
-- 데이터를 변경할 때는 **rename** 명령을 사용한다.
+- 데이터를 변경할 때는 **rename** 명령을 사용합니다.
 
 ```bash
 rename key new_key

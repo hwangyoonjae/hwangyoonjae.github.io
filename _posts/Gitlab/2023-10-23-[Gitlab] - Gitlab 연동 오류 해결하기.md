@@ -13,7 +13,7 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 * * *
 
 ### Url is Blocked 오류 해결하기:
-- GitLab을 이용해서 Webhooks Push 이벤트 등록할 때, 아래와 같은 오류 메시지가 발생한다.
+- GitLab을 이용해서 Webhooks Push 이벤트 등록할 때, 아래와 같은 오류 메시지가 발생합니다.
 ```html
 Url is blocked: Requests to the local network are not allowed
 ```
@@ -24,7 +24,7 @@ Url is blocked: Requests to the local network are not allowed
 * * *
 
 ### Hook executed successfully but returned HTTP 403 오류 해결하기:
-- GitLab에서 Webhook 설정 후, Test 진행 시 아래와 같은 오류 메시지가 발생한다.
+- GitLab에서 Webhook 설정 후, Test 진행 시 아래와 같은 오류 메시지가 발생합니다.
 ```html
 Hook executed successfully but returned HTTP 403 <html> <head> <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/> <title>Error 403 No valid crumb was included in the request</title> </head> <body><h2>HTTP ERROR 403 No valid crumb was included in the request</h2>
 ```

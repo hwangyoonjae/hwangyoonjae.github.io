@@ -8,7 +8,7 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---
 
 ## GitLab 프로젝트 생성하기:
-- 아래그림과 같이 프로젝트를 생성한다.
+- 아래그림과 같이 프로젝트를 생성합니다.
 
 [![프로젝트 생성하기](/assets/img/post/Gitlab/gitlab%20프로젝트%20생성하기.png)](/assets/img/post/Gitlab/gitlab%20프로젝트%20생성하기.png)
 

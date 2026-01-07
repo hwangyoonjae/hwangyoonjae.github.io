@@ -14,22 +14,22 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 >Enter an executor: docker-autoscaler, docker-windows, ssh, virtualbox, parallels, shell, docker+machine, docker-ssh+machine, instance, custom, docker, docker-ssh, kubernetes:
 {: .prompt-warning }
 
-- 선택한 실행기는 GitLab Runner가 CI/CD 파이프라인을 실행할 환경을 결정한다.
+- 선택한 실행기는 GitLab Runner가 CI/CD 파이프라인을 실행할 환경을 결정합니다.
 
 >실행기 유형
->- **docker-autoscaler**: Docker 환경을 자동으로 확장하여 실행한다.
->- **docker-windows**: Windows 기반 Docker 컨테이너에서 실행한다.
->- **ssh**: 원격 서버에서 SSH를 통해 실행한다.
->- **virtualbox**: VirtualBox VM에서 실행한다.
->- **parallels**: Parallels VM에서 실행한다.
->- **shell**: 로컬 셸 환경에서 실행한다.
->- **docker+machine**: Docker와 Docker Machine을 함께 사용하여 실행한다.
->- **docker-ssh+machine**: Docker, SSH, Docker Machine을 함께 사용하여 실행한다.
->- **instance**: 특정 인스턴스에서 실행한다.
->- **custom**: 사용자 정의 실행기에서 실행한다.
->- **docker**: Docker 컨테이너에서 실행한다.
->- **docker-ssh**: Docker 컨테이너에서 SSH를 통해 실행한다.
->- **kubernetes**: Kubernetes 클러스터에서 실행한다.
+>- **docker-autoscaler**: Docker 환경을 자동으로 확장하여 실행합니다.
+>- **docker-windows**: Windows 기반 Docker 컨테이너에서 실행합니다.
+>- **ssh**: 원격 서버에서 SSH를 통해 실행합니다.
+>- **virtualbox**: VirtualBox VM에서 실행합니다.
+>- **parallels**: Parallels VM에서 실행합니다.
+>- **shell**: 로컬 셸 환경에서 실행합니다.
+>- **docker+machine**: Docker와 Docker Machine을 함께 사용하여 실행합니다.
+>- **docker-ssh+machine**: Docker, SSH, Docker Machine을 함께 사용하여 실행합니다.
+>- **instance**: 특정 인스턴스에서 실행합니다.
+>- **custom**: 사용자 정의 실행기에서 실행합니다.
+>- **docker**: Docker 컨테이너에서 실행합니다.
+>- **docker-ssh**: Docker 컨테이너에서 SSH를 통해 실행합니다.
+>- **kubernetes**: Kubernetes 클러스터에서 실행합니다.
 {: .prompt-tip }
 
 ---
@@ -41,6 +41,6 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 {: .prompt-warning }
 
 - 이 이미지는 .gitlab-ci.yml 파일에서 특정 이미지가 지정되지 않은 경우 사용된다.
-- 예를 들어, 빌드, 테스트, 배포 작업에서 사용할 도구가 포함된 이미지를 지정하면, 해당 이미지가 기본적으로 사용한다.
+- 예를 들어, 빌드, 테스트, 배포 작업에서 사용할 도구가 포함된 이미지를 지정하면, 해당 이미지가 기본적으로 사용합니다.
 
 ---

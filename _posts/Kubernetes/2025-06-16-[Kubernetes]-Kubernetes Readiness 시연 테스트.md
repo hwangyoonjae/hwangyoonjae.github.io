@@ -68,7 +68,7 @@ $ kubectl describe pod <pod-name>
 
 ## 4. 정상 상태로 변경하여 Ready 상태 확인하기 :
 ### 4.1 Nginx 경로 수정하기 :
-- Nginx의 경우 /ready 경로가 없기 때문에, 대신 /index.html을 readiness path로 바꾸면 통과한다.
+- Nginx의 경우 /ready 경로가 없기 때문에, 대신 /index.html을 readiness path로 바꾸면 통과합니다.
 
 ```yaml
 readinessProbe:

@@ -14,7 +14,7 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 
 ## 1. Gitlab 네임스페이스 생성 및 컨테이너 이미지 준비하기 :
 
-- gitlab 네임스페이스를 생성한다.
+- gitlab 네임스페이스를 생성합니다.
 
 ```bash
 $ kubectl create namespace gitlab
@@ -22,7 +22,7 @@ $ kubectl create namespace gitlab
 
 * * *
 
-- Gitlab 컨테이너 이미지를 다운받고, 이미지 레포지토리(HARBOR)의 Push한다.
+- Gitlab 컨테이너 이미지를 다운받고, 이미지 레포지토리(HARBOR)의 Push합니다.
 
 ```bash
 $ docker pull gitlab/gitlab-ce:18.6.2-ce.0
@@ -288,7 +288,7 @@ spec:
 
 ## 2.5 Gitlab 설치하기 :
 
-- 위 과정에서 생성한 Helm Chart를 이용하여 Gitlab 설치를 진행한다.
+- 위 과정에서 생성한 Helm Chart를 이용하여 Gitlab 설치를 진행합니다.
 
 ```bash
 $ helm install gitlab ./ -n gitlab 
@@ -298,7 +298,7 @@ $ helm install gitlab ./ -n gitlab
 
 * * *
 
-- 설치 후 리소스들이 정상적으로 되었는지 확인한다.
+- 설치 후 리소스들이 정상적으로 되었는지 확인합니다.
 
 ```bash
 # gitlab 리소스 전체 확인
@@ -312,7 +312,7 @@ $ kubectl get pvc -n gitlab
 
 * * *
 
-- 설정한 Ingress 주소로 접속되는지 확인한다.
+- 설정한 Ingress 주소로 접속되는지 확인합니다.
 
 ![gitlab helm chart 배포 후 페이지 접속](/assets/img/post/helm/gitlab%20helm%20chart%20배포%20후%20페이지%20접속.png)
 

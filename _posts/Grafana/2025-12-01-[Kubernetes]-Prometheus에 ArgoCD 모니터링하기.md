@@ -51,7 +51,7 @@ spec:
 
 ## 3. Prometheus RBAC 열어주기 :
 
-- Prometheus ServiceAccount가 ArgoCD Namespace의 Service/Endpoints/Pods를 볼 권한(RBAC)을 생성한다.
+- Prometheus ServiceAccount가 ArgoCD Namespace의 Service/Endpoints/Pods를 볼 권한(RBAC)을 생성합니다.
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -90,13 +90,13 @@ $ kubectl apply -f prometheus-argocd-rbac.yaml
 
 ## 4. ArgoCD 대시보드 생성하기 :
 
-- Prometheus UI -> Status -> Targets에서 확인한다.
+- Prometheus UI -> Status -> Targets에서 확인합니다.
 
 ![argocd prometheus target 확인](/assets/img/post/grafana/argocd%20prometheus%20target%20확인.png)
 
 * * *
 
-- Grafana 홈페이지에서 제공하는 대시보드 다운받아서 사용한다.
+- Grafana 홈페이지에서 제공하는 대시보드 다운받아서 사용합니다.
 > * [Grafana ArrgoCD 대시보드 다운로드](https://grafana.com/grafana/dashboards/?search=argocd "Grafana ArrgoCD 대시보드 다운로드")
 
 ![argocd 모니터링 대시보드](/assets/img/post/grafana/argocd%20모니터링%20대시보드.png)

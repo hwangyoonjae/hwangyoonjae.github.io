@@ -28,14 +28,14 @@ $ docker run --name portainer -p 9000:9000 -d --restart always -v /data/portaine
 * * *
 
 ## 3. Portainer 관리자 계정 설정하기 :
-- 설치 후 웹브라우저 Portainer 서버에 접속하여 괸리자 계정 패스워드를 설정한다.
+- 설치 후 웹브라우저 Portainer 서버에 접속하여 괸리자 계정 패스워드를 설정합니다.
 
 ![potainer 계정 패스워드 설정](/assets/img/post//Portainer/potainer%20계정%20패스워드%20설정.png)
 
 * * *
 
 ## 4. Portainer 시작하기 :
-- 관리자 계정 생성 후 로그인하여 접속하면 Docker 환경을 볼 수 있다.
+- 관리자 계정 생성 후 로그인하여 접속하면 Docker 환경을 볼 수 있습니다.
 
 ![potainer 시작](/assets/img/post/Portainer/potainer%20시작.png)
 

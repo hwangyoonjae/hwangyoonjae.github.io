@@ -30,7 +30,7 @@ $ helm pull jenkins/jenkins
 
 ### 1.2 Jenkins container image 다운로드 :
 
-- helm chart를 통해 설치될 Application version대로 이미지를 다운로드한다.
+- helm chart를 통해 설치될 Application version대로 이미지를 다운로드합니다.
 
 ```bash
 $ docker pull jenkins/jenkins:2.544-jdk25
@@ -42,7 +42,7 @@ $ docker pull jenkins/jenkins:2.544-jdk25
 
 ### 1.3 Helm을 통해 Jenkins 설치하기 :
 
-- Jenkins 설치를 위해 네임스페이스를 생성한다.
+- Jenkins 설치를 위해 네임스페이스를 생성합니다.
 
 ```bash
 $ kubectl create namespace jenkins
@@ -50,7 +50,7 @@ $ kubectl create namespace jenkins
 
 * * *
 
-- values.yaml 파일에 값을 수정한다.
+- values.yaml 파일에 값을 수정합니다.
 
 ```bash
 $ vi values.yaml
@@ -103,7 +103,7 @@ persistence:
 
 * * *
 
-- 쿠버네티스에 Jenkins 애플리케이션을 설치한다.
+- 쿠버네티스에 Jenkins 애플리케이션을 설치합니다.
 
 ```bash
 $ helm install jenkins ./jenkins -n jenkins -f values.yaml
@@ -113,7 +113,7 @@ $ helm install jenkins ./jenkins -n jenkins -f values.yaml
 
 * * *
 
-- 쿠버네티스 클러스터의 정상적으로 설치되었는지 확인한다.
+- 쿠버네티스 클러스터의 정상적으로 설치되었는지 확인합니다.
 
 ```bash
 # pod 목록 조회

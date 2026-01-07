@@ -8,7 +8,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 1. Vault 설치하기 :
-- 해당 작업을 위해 사전에 vault가 구축되어있어야 한다.
+- 해당 작업을 위해 사전에 vault가 구축되어있어야 합니다.
 > * [vault 설치하기](https://hwangyoonjae.github.io/posts/Docker-Vault-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/ "vault 설치하기")
 
 * * *
@@ -36,7 +36,7 @@ vault login [Root Token]
 
 ### 2.2 PKI 엔진 활성화하기 :
 
-- vault는 처음에 PKI 기능이 꺼져있어 활성화해야한다.
+- vault는 처음에 PKI 기능이 꺼져있어 활성화해야합니다.
 
 ```bash
 vault secrets enable pki
@@ -49,7 +49,7 @@ vault secrets tune -max-lease-ttl=87600h pki
 
 ### 2.3 Root CA 생성하기 :
 
-- 테스트용 Root CA를 vault 내부에서 직접 생성한다.
+- 테스트용 Root CA를 vault 내부에서 직접 생성합니다.
 
 ```bash
 vault write pki/root/generate/internal \
@@ -72,7 +72,7 @@ vault write pki/root/generate/internal \
 
 ### 2.4 CA URL 구성하기 :
 
-- 외부에서 인증서 체인과 CRL을 가져갈 수 있게 URL을 등록한다.
+- 외부에서 인증서 체인과 CRL을 가져갈 수 있게 URL을 등록합니다.
 
 ```bash
 vault write pki/config/urls \
@@ -86,7 +86,7 @@ vault write pki/config/urls \
 
 ### 2.5 인증서 발급용 Role 생성하기 :
 
-- 이 Role은 cert-manager나 사용자들이 CSR을 제출할 때 어떤 인증서를 발급할 수 있는지 정의한다.
+- 이 Role은 cert-manager나 사용자들이 CSR을 제출할 때 어떤 인증서를 발급할 수 있는지 정의합니다.
 
 ```bash
 vault write pki/roles/test-certificates \

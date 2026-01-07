@@ -8,7 +8,7 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---
 
 ## 미리 정의된 주요 GitLab CI/CD 환경 변수 :
-- GitLab CI/CD는 여러 가지 자동 환경 변수를 제공하여 파이프라인 내에서 다양한 정보를 사용할 수 있도록 지원한다.
+- GitLab CI/CD는 여러 가지 자동 환경 변수를 제공하여 파이프라인 내에서 다양한 정보를 사용할 수 있도록 지원합니다.
 
 |환경변수|설명|
 |-----|-----|

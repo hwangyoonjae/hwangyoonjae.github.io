@@ -9,7 +9,7 @@ image: /assets/img/post-title/chaos-mesh-wallpaper.jpg
 
 
 ## 1. Helm 설치하기 :
-- Chaos Mesh를 설치하기 위해 Helm 설치가 되어있어야한다.
+- Chaos Mesh를 설치하기 위해 Helm 설치가 되어있어야합니다.
 
 ```bash
 # helm 버전 확인
@@ -25,7 +25,7 @@ version.BuildInfo{Version:"v3.15.1", GitCommit:"e211f2aa62992bd72586b395de50979e
 * * *
 
 ## 2. Chaos Mesh 설치하기 :
-- 외부 네트워크 연결이 있는 컴퓨터에서 모든 Chaos Mesh 이미지와 저장소 압축 패키지를 다운로드해야한다.
+- 외부 네트워크 연결이 있는 컴퓨터에서 모든 Chaos Mesh 이미지와 저장소 압축 패키지를 다운로드해야합니다.
 
 ```bash
 # 버전 지정
@@ -45,7 +45,7 @@ $ docker save ghcr.io/chaos-mesh/chaos-dashboard:${CHAOS_MESH_VERSION} > image-c
 $ curl -fsSL -o chaos-mesh.zip https://github.com/chaos-mesh/chaos-mesh/archive/refs/tags/v2.6.3.zip
 ```
 
-- Private Registry의 이미지 push한다.
+- Private Registry의 이미지 push합니다.
 
 ```bash
 # 버전 지정 및 docker registry 주소 지정
@@ -65,7 +65,7 @@ $ docker push $CHAOS_DAEMON_IMAGE
 $ docker push $CHAOS_DASHBOARD_IMAGE
 ```
 
-- Chaos Mesh zip 패키지 풀고, 설치를 진행한다.
+- Chaos Mesh zip 패키지 풀고, 설치를 진행합니다.
 
 ```bash
 # chaos mesh zip 패키지 풀기
@@ -81,7 +81,7 @@ $ helm install chaos-mesh helm/chaos-mesh -n=chaos-mesh --set images.registry=$D
 * * *
 
 ## 3. Chaos Mesh Dashboard 접속하기 :
-- dashboard를 ingress 통해서 접속하기 위해 설정한다.
+- dashboard를 ingress 통해서 접속하기 위해 설정합니다.
 
 ```yaml
 # chaos-ingress.yaml
@@ -110,13 +110,13 @@ spec:
         pathType: Prefix
 ```
 
-- 위와 같이 작성 후 ingress를 생성한다.
+- 위와 같이 작성 후 ingress를 생성합니다.
 
 ```bash
 $ kubectl create -f chaos-ingress.yaml
 ```
 
-- 설치 후 dashboard에 접속 후 **Click here to generate**를 클릭한다.
+- 설치 후 dashboard에 접속 후 **Click here to generate**를 클릭합니다.
 
 [![Token 입력 요청 화면](/assets/img/post/chaos-mesh/Token%20입력%20요청%20화면.png)](/assets/img/post/chaos-mesh/Token%20입력%20요청%20화면.png)
 

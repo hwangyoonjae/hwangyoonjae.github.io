@@ -36,11 +36,11 @@ openssl req -sha512 -new \
 cat > v3.ext <<-EOF
 # 기본 제약 사항: 이 인증서는 CA가 아닌 서버용으로 사용된다.
 basicConstraints=CA:FALSE
-# 키 사용: 인증서의 공개 키가 어떻게 사용될 수 있는지를 제어한다.
+# 키 사용: 인증서의 공개 키가 어떻게 사용될 수 있는지를 제어합니다.
 keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
-# 확장 키 사용: 이 인증서는 서버 인증용으로 사용될 수 있도록 한다.
+# 확장 키 사용: 이 인증서는 서버 인증용으로 사용될 수 있도록 합니다.
 extendedKeyUsage = serverAuth
-# 대체 이름: 인증서에 대한 대체 식별 정보를 제공한다.
+# 대체 이름: 인증서에 대한 대체 식별 정보를 제공합니다.
 subjectAltName = @alt_names
 [alt_names]
 DNS.1=$DOMAIN

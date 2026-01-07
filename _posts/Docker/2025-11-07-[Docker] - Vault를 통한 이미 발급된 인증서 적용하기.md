@@ -10,7 +10,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ## 1. Vault에 HTTPS 인증서 사용하기 :
 ### 1.1 Vault 이미 발급된 인증서 볼륨 마운트하기 :
 
-- Vault 설정 파일의 인증서 경로 작성한다.
+- Vault 설정 파일의 인증서 경로 작성합니다.
 
 ```bash
 $ vi config/vault.hcl
@@ -28,7 +28,7 @@ listener "tcp" {
 
 * * *
 
-- Vault 컨테이너 기동 시 인증서 마운트 경로 수정 후 컨테이너 재시작한다.
+- Vault 컨테이너 기동 시 인증서 마운트 경로 수정 후 컨테이너 재시작합니다.
 
 ```bash
 $ vi docker-compose.yaml
@@ -105,7 +105,7 @@ vault write auth/kubernetes/config \
 
 ### 2.4 Vault가 클러스터 외부 (Docker / VM) 에서 동작한다면 :
 
-- 인증서는 API 서버 인증서(/etc/kubernetes/pki/apiserver.crt)를 서명한 루트로 Vault 서버가 실행 중인 곳으로 옮기고, 경로를 지정한다.
+- 인증서는 API 서버 인증서(/etc/kubernetes/pki/apiserver.crt)를 서명한 루트로 Vault 서버가 실행 중인 곳으로 옮기고, 경로를 지정합니다.
 
 ```bash
 # Master Node에서 진행
@@ -125,10 +125,10 @@ vault write auth/kubernetes/config \
 
 * * *
 
-- **token_reviewer_jwt** 값은 아래 명령어를 통해 확인한다.
+- **token_reviewer_jwt** 값은 아래 명령어를 통해 확인합니다.
 
 ```bash
-# --duration 옵션을 통해 JWT의 유효기간을 지정할 수 있다.
+# --duration 옵션을 통해 JWT의 유효기간을 지정할 수 있습니다.
 $ kubectl -n kube-system create token vault-auth --duration=720h > vault-auth.jwt
 ```
 > token_reviewer_jwt의 값은 Vault가 Kubernetes API에 TokenReview 요청을 보낼 때 사용할 **리뷰용 ServiceAccount JWT**이다
@@ -140,7 +140,7 @@ $ kubectl -n kube-system create token vault-auth --duration=720h > vault-auth.jw
 
 ### 2.5 ESO용 Role 생성하기 :
 
-- ESO가 사용할 ServiceAccount와 Namespace에 바인딩한다.
+- ESO가 사용할 ServiceAccount와 Namespace에 바인딩합니다.
 
 ```bash
 vault write auth/kubernetes/role/eso-wildcard-role \
@@ -158,7 +158,7 @@ vault write auth/kubernetes/role/eso-wildcard-role \
 ## 3. 인증서 변경하기 :
 ### 3.1 변경할 인증서를 Vault/ESO에 바로 적용하기 :
 
-- 인증서가 만료되어 변경해야하는 경우 아래와 같이 진행한다.
+- 인증서가 만료되어 변경해야하는 경우 아래와 같이 진행합니다.
 
 ```bash
 # vault 로그인 진행
@@ -174,7 +174,7 @@ vault kv put secret/tls/wildcard \
 
 ### 3.2 서버 인증서가 전체 변경된 경우 :
 
-- ClusterSecretStore 안의 caBundle 값 또는 ESO의 CA 신뢰 설정을 변경된 인증서 값으로 적용해야한다.
+- ClusterSecretStore 안의 caBundle 값 또는 ESO의 CA 신뢰 설정을 변경된 인증서 값으로 적용해야합니다.
 
 ```bash
 # Base64 인코딩 값 확인
@@ -185,7 +185,7 @@ $ cat rootCA.crt | base64 | tr -d '\n'
 
 * * *
 
-- ClusterSecretStore의 caBundle 값을 변경한다.
+- ClusterSecretStore의 caBundle 값을 변경합니다.
 
 ```yaml
       path: "secret"
@@ -195,7 +195,7 @@ $ cat rootCA.crt | base64 | tr -d '\n'
 
 * * *
 
-- ESO 정상 동작 확인한다.
+- ESO 정상 동작 확인합니다.
 
 ```bash
 $ kubectl get clustersecretstore
