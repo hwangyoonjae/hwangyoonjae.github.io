@@ -8,7 +8,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
 
 ## 1. Argo rollout 설치하기 :
-- Argo rollout 설치해야 하므로, 아래 링크를 통해서 설치 진행하면된다.
+- Argo rollout 설치해야 하므로, 아래 링크를 통해서 설치 진행하면됩니다.
 > * [Argo rollout 설치하기](https://hwangyoonjae.github.io/posts/ArgoCD-ArgoCD-Rollout/ "Argo rollout 설치하기")
 
 * * *
@@ -63,7 +63,7 @@ spec:
 * * *
 
 ### 2.2 Service 생성하기 :
-- 새 버전과 기존 버전의 애플리케이션 간의 트래픽을 효율적으로 라우팅하고 관리하기 위해 서비스를 생성한다.
+- 새 버전과 기존 버전의 애플리케이션 간의 트래픽을 효율적으로 라우팅하고 관리하기 위해 서비스를 생성합니다.
 
 ```yaml
 # service-stable.yaml
@@ -151,13 +151,13 @@ images:
 * * *
 
 ### 2.5 Gitlab repo에 파일 커밋하기 :
-- 생성한 파일들을 gitlab repo의 커밋하면, webhook을 통해 파일 변경을 전달받은 argocd에서 자동으로 배포하는 것을 확인한다.
+- 생성한 파일들을 gitlab repo의 커밋하면, webhook을 통해 파일 변경을 전달받은 argocd에서 자동으로 배포하는 것을 확인합니다.
 ![argo rollout Canary 배포 동작 확인](/assets/img/post/ArgoCD/argo%20rollout%20carany%20배포%20동작%20확인.png)
 
 * * *
 
 ### 2.6 Canary 배포한 Pod 및 Service 확인하기 :
-- 서버에서 생성한 Pod와 Service 목록을 확인한다.
+- 서버에서 생성한 Pod와 Service 목록을 확인합니다.
 
 ```bash
 $ kubectl get pod -n [namespace명]
@@ -169,7 +169,7 @@ $ kubectl get svc -n [namespace명]
 
 ### 2.7 Rollout 상태 확인하기 :
 
-- 현재 생성한 Rollout 목록 조회한다.
+- 현재 생성한 Rollout 목록 조회합니다.
 
 ```bash
 $ kubectl -n [namespace] get rollout
@@ -179,7 +179,7 @@ $ kubectl -n [namespace] get rollout
 
 * * *
 
-- Rollout 이름을 통해서 Blue-Green 배포 상태를 확인한다.
+- Rollout 이름을 통해서 Blue-Green 배포 상태를 확인합니다.
 
 ```bash
 $ kubectl argo rollouts get rollout [rollout_name] -n [namespace]
@@ -192,7 +192,7 @@ $ kubectl argo rollouts get rollout [rollout_name] -n [namespace]
 ## 3. 배포 확인하기 :
 ### 3.1 배포 매니페스트 환경별 패치 파일 생성하기 :
 
-- 이 Kustomization은 base 리소스를 가져와 dev-int 네임스페이스에 배포하고, Ingress 설정만 환경에 맞게 수정하는 오버레이 설정한다.
+- 이 Kustomization은 base 리소스를 가져와 dev-int 네임스페이스에 배포하고, Ingress 설정만 환경에 맞게 수정하는 오버레이 설정합니다.
 
 ```yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
@@ -228,7 +228,7 @@ spec:
 
 ### 3.2 웹페이지 확인하기 :
 
-- 아래 그림과 같이 배포되어 정상 접속 되는것을 확인한다.
+- 아래 그림과 같이 배포되어 정상 접속 되는것을 확인합니다.
 
 ![argo rollout canary 배포 후 웹 접속](/assets/img/post/ArgoCD/argo%20rollout%20canary%20배포%20후%20웹%20접속.png)
 

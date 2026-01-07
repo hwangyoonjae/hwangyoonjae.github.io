@@ -44,7 +44,7 @@ $ kubectl apply -f grafana-ingress.yaml
 ---
 
 ## 2. Coredns의 정적 호스트 매핑하기 :
-- configmap에 IP, 도메인 주소를 입력한다.
+- configmap에 IP, 도메인 주소를 입력합니다.
 
 ```bash
 $ kubectl edit configmap coredns -n kube-system
@@ -85,25 +85,25 @@ data:
 ---
 
 ## 3. Prometheus 데이터 소스 URL 입력하기 :
-- 햄버거 버튼 > Connections > Your Connections 클릭한다.
+- 햄버거 버튼 > Connections > Your Connections 클릭합니다.
 
 ![prometheus 데이터 소스URL 입력 1](/assets/img/post/kubernetes/prometheus%20데이터%20소스URL%20입력%201.png)
 
 * * *
 
-- Add new data source 버튼 클릭한다.
+- Add new data source 버튼 클릭합니다.
 
 ![prometheus 데이터 소스URL 입력 2](/assets/img/post/kubernetes/prometheus%20데이터%20소스URL%20입력%202.png)
 
 * * *
 
-- Prometheus 클릭한다.
+- Prometheus 클릭합니다.
 
 ![prometheus 데이터 소스URL 입력 3](/assets/img/post/kubernetes/prometheus%20데이터%20소스URL%20입력%203.png)
 
 * * *
 
-- 이름, URL 주소 입력 후, 스크롤 내려서 아래 “Save & test“ 버튼 클릭한다.
+- 이름, URL 주소 입력 후, 스크롤 내려서 아래 “Save & test“ 버튼 클릭합니다.
 
 > Prometheus의 도메인 주소는 환경에 맞게 입력 필요합니다.
 {: .prompt-warning}
@@ -114,7 +114,7 @@ data:
 ---
 
 ## 4. Grafana 모니터링 확인하기 :
-- 햄버거 버튼 > Dashboards 클릭한다.
+- 햄버거 버튼 > Dashboards 클릭합니다.
 
 ![Grafana 모니터링 확인하기 1](/assets/img/post/kubernetes/Grafana%20모니터링%20확인하기%201.png)
 
@@ -129,7 +129,7 @@ data:
 
 * * *
 
-- 필자는 아래 주소를 통해 Grafana Dashboard 오픈소스를 사용했다.
+- 필자는 아래 주소를 통해 Grafana Dashboard 오픈소스를 사용했습니다.
 > * [Grafana Dashboard 다운로드](https://grafana.com/grafana/dashboards/15661-k8s-dashboard-en-20250125/ "Grafana Dashboard 다운로드")
 
 ![grafana 대시보드 화면](/assets/img/post/kubernetes/grafana%20대시보드%20화면.png)

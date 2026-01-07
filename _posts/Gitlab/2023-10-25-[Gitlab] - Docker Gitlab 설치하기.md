@@ -25,12 +25,12 @@ $ yum-config-manager \
 # yum으로 docker 설치
 $ yum install docker-ce docker-ce-cli containerd.io
 ```
-<span style="color:#FA5858; font-size:12px">※ 필자는 20.10.17버전을 사용했다.</span>
+<span style="color:#FA5858; font-size:12px">※ 필자는 20.10.17버전을 사용했습니다.</span>
 
 * * *
 
 ### 폐쇄망 설치:
-- 폐쇄망 서버에 Docker를 설치하는 경우 아래 URL 접속 시 CentOS 버전에 맞춰 폴더 접속한 후 **/x86_64/stable/Packages/**에서  필요한 RPM 다운받는다.
+- 폐쇄망 서버에 Docker를 설치하는 경우 아래 URL 접속 시 CentOS 버전에 맞춰 폴더 접속한 후 **/x86_64/stable/Packages/**에서  필요한 RPM 다운받습니다.
 > * [Docker RPM 패키지 다운로드](https://download.docker.com/linux/centos/ "Docker RPM 패키지 다운로드")
 
 ```bash
@@ -51,19 +51,19 @@ $ systemctl enable docker
 * * *
 
 ### Docker Gitlab 이미지 다운로드:
-- Gitlab 관련 이미지를 검색한다.
+- Gitlab 관련 이미지를 검색합니다.
 ```bash
 $ docker search gitlab
 ```
 [![gitlab docker image 목록](/assets/img/post/Gitlab/gitlab%20docker%20image%20목록.png)](/assets/img/post/Gitlab/gitlab%20docker%20image%20목록.png)
 
-- Gitlab 관련 이미지를 확인하여 다운받는다.
+- Gitlab 관련 이미지를 확인하여 다운받습니다.
 ```bash
 $ docker pull gitlab/gitlab-ee
 ```
 [![gitlab docker image 다운](/assets/img/post/Gitlab/gitlab%20docker%20image%20다운.png)](/assets/img/post/Gitlab/gitlab%20docker%20image%20다운.png)
 
-- Gitlab 이미지 설치 후 확인한다.
+- Gitlab 이미지 설치 후 확인합니다.
 ```bash
 $ docker images
 ```
@@ -89,7 +89,7 @@ $ docker run --detach \
 * * *
 
 ### Docker로 Gitlab 실행 로그 확인하기:
-- 아래 명령어를 통해서 Docker로 Gitlab 실행 로그를 확인할 수 있다.
+- 아래 명령어를 통해서 Docker로 Gitlab 실행 로그를 확인할 수 있습니다.
 ```bash
 $ docekr logs -f gitlab
 ```

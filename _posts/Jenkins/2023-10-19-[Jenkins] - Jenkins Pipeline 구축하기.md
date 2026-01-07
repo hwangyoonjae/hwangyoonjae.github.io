@@ -9,14 +9,14 @@ image: /assets/img/post-title/jenkins-wallpaper.jpg
 
 ## 1. Jenkins Pipeline 구축하기 :
 ### 1.1 Pipeline 아이템 생성하기 :
-- Jenkins 접속하여 아이템 생성 클릭 후, ***Pipeline***를 선택한다.
+- Jenkins 접속하여 아이템 생성 클릭 후, ***Pipeline***를 선택합니다.
 
 ![Pipeline 아이템 생성하기](/assets/img/post/Jenkins/Pipeline%20아이템%20생성하기.png)
 
 * * *
 
 ### 1.2 Pipeline 깃연결하기 :
-- 아이템의 설명과 깃을 연결한다.
+- 아이템의 설명과 깃을 연결합니다.
 
 ![Pipeline 설명과 깃연결](/assets/img/post/Jenkins/Pipeline%20설명과%20깃연결.png)
 
@@ -24,14 +24,14 @@ image: /assets/img/post-title/jenkins-wallpaper.jpg
 
 ### 1.3 Pipeline script 작성하기 :
 
-- 파이프라인이 어떤 동작을 할 지 스크립트로 내용을 작성한다.
+- 파이프라인이 어떤 동작을 할 지 스크립트로 내용을 작성합니다.
 
 ![Pipeline 스크립트](/assets/img/post/Jenkins/Pipeline%20스크립트.png)
 
 * * *
 
 ### 1.4 스크립트 내용 상세보기 :
-- 위에서 작성한 파이프라인 스크립트는 아래와 같다.
+- 위에서 작성한 파이프라인 스크립트는 아래와 같습니다.
 
 ```bash
 pipeline {
@@ -79,7 +79,7 @@ pipeline {
 * * *
 
 ### 1.6 Pipeline 빌드하기 :
-- 위에서 만든 스크립트를 통해 Pipeline을 빌드한다.
+- 위에서 만든 스크립트를 통해 Pipeline을 빌드합니다.
 
 ![Pipeline 빌드 실행과 결과](/assets/img/post/Jenkins/Pipeline%20빌드%20실행과%20결과.png)
 

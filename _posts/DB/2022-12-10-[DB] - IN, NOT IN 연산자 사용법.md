@@ -8,12 +8,12 @@ image: /assets/img/post-title/db-wallpaper.jpg
 ---
 
 ## 1. IN, NOT IN 연산자? :
-- 값이 포함되는 혹은 포함되지 않는 데이터를 추출하고 싶을 때 사용하는 것이 IN, NOT IN문이다.
+- 값이 포함되는 혹은 포함되지 않는 데이터를 추출하고 싶을 때 사용하는 것이 IN, NOT IN문입니다.
 
 * * *
 
 ## 2. IN 연산자 사용법 :
-- CULUMN에 'Data1', 'Data2'가 하나라도 일치한 값이 있으면 조회한다.
+- CULUMN에 'Data1', 'Data2'가 하나라도 일치한 값이 있으면 조회합니다.
 
 ```sql
 SELECT *
@@ -52,7 +52,7 @@ WHERE
 * * *
 
 ## 3.3 NOT IN 연산자 사용법 :
-- CULUMN에 'Data1', 'Data2'에 있는 값을 제외하고 조회한다.
+- CULUMN에 'Data1', 'Data2'에 있는 값을 제외하고 조회합니다.
 
 ```sql
 SELECT *

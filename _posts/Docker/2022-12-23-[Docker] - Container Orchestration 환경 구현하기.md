@@ -15,7 +15,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 * * *
 
 ## 2. 시스템 환경:
-- 아래와 같은 환경으로 docker Container Orchestration 환경을 구성한다.
+- 아래와 같은 환경으로 docker Container Orchestration 환경을 구성합니다.
 
 ```html
 OS : CentOS Linux release 7.9.2009 (Core)
@@ -27,20 +27,20 @@ Docker Version : 20.10.9
 * * *
 
 ## 3. 설치 구성하기:
-- 먼저 docker 설치는 아래 게시글 통해서 설치한다.
+- 먼저 docker 설치는 아래 게시글 통해서 설치합니다.
 > * [Docker 설치방법](https://hwangyoonjae.github.io/Docker-Docker-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/ "Docker 설치방법")
 
 * * *
 
-- docker 스웜 구성은 아래 게시글 통해서 진행한다.
+- docker 스웜 구성은 아래 게시글 통해서 진행합니다.
 > * [Docker 스웜 구성하기](https://hwangyoonjae.github.io/Docker-Docker-Swarm-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/ "Docker 스웜 구성하기")
 
 * * *
 
 ### 3.1 Visualizer 구성하기 :
-- 매니저 노드의 visualizer로 Swarm 클러스터내 서비스의 상태를 모니터링할 수 있다.
-- 매니저 노드와 워커노드의 서베스 상태를 걑이 확인할 수 있다.
-- 아래와 같이 compose 파일로 visualizer를 구성한다.
+- 매니저 노드의 visualizer로 Swarm 클러스터내 서비스의 상태를 모니터링할 수 있습니다.
+- 매니저 노드와 워커노드의 서베스 상태를 걑이 확인할 수 있습니다.
+- 아래와 같이 compose 파일로 visualizer를 구성합니다.
 
 ```html
 version: "3"
@@ -65,7 +65,7 @@ services:
 * * *
 
 ### 3.2 Nginx 구성하기 :
-- 아래와 같이 compose 파일로 nginx를 구성한다.
+- 아래와 같이 compose 파일로 nginx를 구성합니다.
 
 ```html
 version: "3"
@@ -89,7 +89,7 @@ services:
 * * *
 
 ### 3.3 MariaDB 구성하기 :
-- 아래와 같이 compose 파일로 MariaDB를 구성한다.
+- 아래와 같이 compose 파일로 MariaDB를 구성합니다.
 
 ```html
 version: "3"
@@ -123,7 +123,7 @@ $ mysql -u root -p
 * * *
 
 ### 3.4 Redis 구성하기 :
-- 아래와 같이 compose 파일로 Redis를 구성한다.
+- 아래와 같이 compose 파일로 Redis를 구성합니다.
 
 ```html
 version: "3"
@@ -153,6 +153,6 @@ $ redis-cli ping
 * * *
 
 ### 3.5 Visualizer 통해서 컨테이너 구성 확인하기 :
-- docker manager에서 설치한 Visualizer 통해 Manager와 Worker에 구성된 컨테이너를 확인한다.
+- docker manager에서 설치한 Visualizer 통해 Manager와 Worker에 구성된 컨테이너를 확인합니다.
 
 ![텍스트](/assets/img/post/docker/docker%20manager%20worker%20%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EA%B5%AC%EC%84%B1%ED%99%94%EB%A9%B4.PNG)

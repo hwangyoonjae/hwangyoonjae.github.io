@@ -9,7 +9,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
 ## 1. Docker 컨테이너 실행하기 :
 ### 1.1 도커 컨테이너 (Docker Container) 생성하기 : 
-- run 명령어를 사용하면 컨테이너 ID가 출력된다.
+- run 명령어를 사용하면 컨테이너 ID가 출력됩니다.
 
 ```bash
 $ docker container run [옵션] [이미지이름 or 이미지ID] [실행할 파일]
@@ -22,10 +22,10 @@ $ docker run [옵션] [이미지이름 or 이미지ID] [실행할 파일]
 |:-----:|-----|
 | **-d** | 실행 화면을 보지 않고 백그라운드로 컨테이너를 실행시킨다는 옵션 |
 | **-p** | <호스트포트>:<컨테이너포트> |
-| **-it** | 표준 입력을 열어두고(-i), 가상 터미널을 열어(-t) 키보드의 입력을 표준 입력으로 전달할 수 있도록한다. |
-| **-v** | 볼륨 마운트 이용 시 사용한다. |
-| **--name** | 컨테이너의 이름을 지정한다. |
-| **--rm** | 컨테이너를 stop 시키는 동시에 삭제까지 한번에 실행한다.|
+| **-it** | 표준 입력을 열어두고(-i), 가상 터미널을 열어(-t) 키보드의 입력을 표준 입력으로 전달할 수 있도록합니다. |
+| **-v** | 볼륨 마운트 이용 시 사용합니다. |
+| **--name** | 컨테이너의 이름을 지정합니다. |
+| **--rm** | 컨테이너를 stop 시키는 동시에 삭제까지 한번에 실행합니다.|
 
 ```bash
 # 예시
@@ -35,16 +35,16 @@ $ docker container run -d -t -p 9000:80 nginx --name nginx_server
 * * *
 
 ### 1.2 도커 컨테이너 (Docker Container) 이름 바꾸기 :
-- 컨테이너를 실행시킬 때 이름을 지정해서 만드는 경우가 많은데 이름을 지정하면 나중에 컨테이너에서 명령, 실행, 삭제, 중지 등을 실행할 때 지정해준 이름을 사용할 수 있다.
+- 컨테이너를 실행시킬 때 이름을 지정해서 만드는 경우가 많은데 이름을 지정하면 나중에 컨테이너에서 명령, 실행, 삭제, 중지 등을 실행할 때 지정해준 이름을 사용할 수 있습니다.
 
-- docker 컨테이너 이름을 바꾸기 위해서는 docker rename 명령어를 사용하면 된다. 구체적으로는 docker rename [이전 container  이름] [새 container 이름] 형태로 실행한다.
+- docker 컨테이너 이름을 바꾸기 위해서는 docker rename 명령어를 사용하면 됩니다. 구체적으로는 docker rename [이전 container  이름] [새 container 이름] 형태로 실행합니다.
 
 ```bash
 $ docker rename <old_name> <new_name>
 ```
 
 ### 1.3 도커 이미지 (Docker Image)의 이름(tag)을 바꾸려면? :
-- docker image의 이름(tag)은 그저 docker image hash의 alias이기 때문에 docker tag 명령어로 새로운 이름(tag)을 생성하고 기존의 이름(tag)을 삭제하면 된다.
+- docker image의 이름(tag)은 그저 docker image hash의 alias이기 때문에 docker tag 명령어로 새로운 이름(tag)을 생성하고 기존의 이름(tag)을 삭제하면 됩니다.
 
 ```bash
 $ docker image tag <이전 tag> <새 tag>
@@ -71,15 +71,15 @@ $ docker ps -a
 ```bash
 $ docker exec -it <container-id or name> <명령어> bash
 ```
-> it는 터미널과 컨테이너가 지속적으로 연결되도록 하는 옵션이다.
+> it는 터미널과 컨테이너가 지속적으로 연결되도록 하는 옵션입니다.
 {: .prompt-info}
 
-- 위와 같은 명령어 실행 시 아래와 같이 진행된다.
+- 위와 같은 명령어 실행 시 아래와 같이 진행됩니다.
 
 ![텍스트](/assets/img/post/docker/docker%20container%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EC%A0%84%EB%8B%AC%20%ED%99%94%EB%A9%B4.PNG)
 
 ### 1.6 도커 컨테이너에서 명령어 실행하려면? :
-- 필자는 nginx 설정파일 변경을 위해 vi 명령어를 사용할려 했으나 아래와 같이 오류가 표시된다.
+- 필자는 nginx 설정파일 변경을 위해 vi 명령어를 사용할려 했으나 아래와 같이 오류가 표시됩니다.
 
 ```bash
 bash: vi: command not found
@@ -87,7 +87,7 @@ bash: vi: command not found
 
 * * *
 
-- 아래와 같이 명령어 사용을 위해 컨테이너 內 설치를 진행한다.
+- 아래와 같이 명령어 사용을 위해 컨테이너 內 설치를 진행합니다.
 
 ```bash
 $ apt-get update

@@ -8,12 +8,12 @@ image: /assets/img/post-title/harbor-wallpaper.jpg
 ---
 
 ## 1. Harbor란? :
-- Docker 이미지를 저장, 관리 및 배포하기 위한 오픈 소스 컨테이너 레지스트리이다.
+- Docker 이미지를 저장, 관리 및 배포하기 위한 오픈 소스 컨테이너 레지스트리입니다.
 
 * * *
 
 ### 1.1 Harbor를 사용하는 이유? :
-- 회사에서 쿠버네티스 Pod 구성을 위해 컨테이너 이미지를 DockerHub에서 이미지 Pull 진행하였으나, ***Too Many Requests. You have reached your pull rate limit.*** 오류가 발생하여 private docker registry 운영하기 위해 Harbor를 사용하게 되었다.
+- 회사에서 쿠버네티스 Pod 구성을 위해 컨테이너 이미지를 DockerHub에서 이미지 Pull 진행하였으나, ***Too Many Requests. You have reached your pull rate limit.*** 오류가 발생하여 private docker registry 운영하기 위해 Harbor를 사용하게 되었습니다.
 
 * * *
 
@@ -160,7 +160,7 @@ $ update-ca-trust
 * * *
 
 ## 4. Harbor 접속하기 :
-- 위 설정 완료 후 ***https://서버주소:포트***로 입력하여 접속한다.
+- 위 설정 완료 후 ***https://서버주소:포트***로 입력하여 접속합니다.
 
 ![Harbor 초기화면](/assets/img/post/docker/Harbor%20초기화면.png)
 

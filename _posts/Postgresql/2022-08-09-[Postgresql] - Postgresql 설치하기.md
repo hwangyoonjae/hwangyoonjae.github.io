@@ -8,8 +8,8 @@ image: /assets/img/post-title/postgresql-wallpaper.jpg
 ---
 
 ## 1. PostgreSQL란? :
-- 오픈 소스 객체-관계형 데이터베이스 시스템(ORDBMS)으로, Enterprise급 DBMS의 기능과 차세대 DBMS에서나 볼 수 있을 법한 기능들을 제공한다.
-- 가장 진보한 오픈소스 데이터베이스 시스템이라고 할 수 있으며, Unix/Linux, macOS, Solaris, Windows 등의 OS를 지원한다.
+- 오픈 소스 객체-관계형 데이터베이스 시스템(ORDBMS)으로, Enterprise급 DBMS의 기능과 차세대 DBMS에서나 볼 수 있을 법한 기능들을 제공합니다.
+- 가장 진보한 오픈소스 데이터베이스 시스템이라고 할 수 있으며, Unix/Linux, macOS, Solaris, Windows 등의 OS를 지원합니다.
 
 * * *
 
@@ -18,8 +18,8 @@ image: /assets/img/post-title/postgresql-wallpaper.jpg
 
 ```bash
 # RDBMS와 ORDBMS 차이점
-RDBMS : 행과 열이 있는 하나 이상의 관계 또는 테이블의 모음이다.
-ORDBMS : 데이터가 객체로 저장된 것처럼 작동한다.
+RDBMS : 행과 열이 있는 하나 이상의 관계 또는 테이블의 모음입니다.
+ORDBMS : 데이터가 객체로 저장된 것처럼 작동합니다.
 ```
 
 * * *
@@ -46,7 +46,7 @@ $ rpm -Uvh pgdg-redhat-repo-latest.noarch.rpm --nodeps
 * * *
 
 ### 2.3 기본 데이터베이스 생성하기 :
-- initdb 명령어를 통해 기본 데이터베이스를 설치하고, 기본 데이터베이스는 postgres라는 이름으로 생성된다.
+- initdb 명령어를 통해 기본 데이터베이스를 설치하고, 기본 데이터베이스는 postgres라는 이름으로 생성됩니다.
 
 ```bash
 # PostgreSQL 초기화

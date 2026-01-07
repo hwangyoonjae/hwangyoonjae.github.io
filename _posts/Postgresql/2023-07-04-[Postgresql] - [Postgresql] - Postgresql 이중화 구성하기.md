@@ -8,14 +8,14 @@ image: /assets/img/post-title/postgresql-wallpaper.jpg
 ---
 
 ## 1. Postgresql Replication 실습하기 :
-- Postgresql가 설치된 후 진행되는 실습으로 설치가 필요한 경우에는 아래 게시글 통해서 설치한다.
+- Postgresql가 설치된 후 진행되는 실습으로 설치가 필요한 경우에는 아래 게시글 통해서 설치합니다.
 > * [Postgresql 설치하기](https://hwangyoonjae.github.io/postgresql/DB-Postgresql-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/ "Postgresql 설치하기")
 
 * * *
 
 ## 2. Master Server 구성하기 :
 ### 2.1 Master Server 설정하기 :
-- 아카이브 디렉토리 생성한다.
+- 아카이브 디렉토리 생성합니다.
 
 ```bash
 $ mkdir -p /var/lib/pgsql/archive
@@ -24,7 +24,7 @@ $ chown -R postgres:postgres /var/lib/pgsql/archive
 
 * * *
 
-- Mater -> Slave로 DB 복제할 계정을 생성한다.
+- Mater -> Slave로 DB 복제할 계정을 생성합니다.
 
 ```bash
 $ su - postgres
@@ -36,7 +36,7 @@ $ \du
 
 * * *
 
-- Postgresql 환경 설정을 위해 postgresql.conf 파일을 수정한다.
+- Postgresql 환경 설정을 위해 postgresql.conf 파일을 수정합니다.
 
 ```bash
 $ su – postgres
@@ -57,7 +57,7 @@ logging_collector = on
 
 * * *
 
-- 클라이언트의 주소와 역할 이름을 지정하고 모든 데이터베이스에 연결을 허용할지 여부를 설정하는데 사용하기 위해 pg_hba.conf 파일을 수정한다.
+- 클라이언트의 주소와 역할 이름을 지정하고 모든 데이터베이스에 연결을 허용할지 여부를 설정하는데 사용하기 위해 pg_hba.conf 파일을 수정합니다.
 
 ```bash
 $ su – postgres
@@ -71,7 +71,7 @@ host   DATABASE  USER  ADDRESS  METHOD  [OPTIONS]
 
 * * *
 
-- 위 설정 후 DB 재기동한다.
+- 위 설정 후 DB 재기동합니다.
 ```bash
 $ systemctl restart postgresql
 ```
@@ -79,7 +79,7 @@ $ systemctl restart postgresql
 * * *
 
 ### 2.2 Slave Server 설정하기 :
-- Master -> Slave로 DB 복제를 위해 폴더명을 변경한다.
+- Master -> Slave로 DB 복제를 위해 폴더명을 변경합니다.
 
 ```bash
 $ mv /var/lib/pgsql/10/data /var/lib/pgsql/data_bak
@@ -95,7 +95,7 @@ $ ./pg_basebackup -h [MasterDB IP주소] -D /var/lib/pgsql/data -U [복제계정
 
 * * *
 
-- Postgresql 환경 설정을 위해 postgresql.conf 파일을 수정한다.
+- Postgresql 환경 설정을 위해 postgresql.conf 파일을 수정합니다.
 
 ```bash
 $ su – postgres
@@ -116,7 +116,7 @@ logging_collector = on
 
 * * *
 
-- 이중화 복제 설정을 위해 recovery.conf 파일을 수정한다.
+- 이중화 복제 설정을 위해 recovery.conf 파일을 수정합니다.
 
 ```bash
 standby_mode = 'on'
@@ -128,7 +128,7 @@ trigger_file = '/tmp/postgresql.trigger.5432'
 
 * * *
 
-- 위 설정 후 DB 재기동한다.
+- 위 설정 후 DB 재기동합니다.
 
 ```bash
 $ systemctl restart postgresql

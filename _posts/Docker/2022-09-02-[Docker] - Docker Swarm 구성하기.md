@@ -8,11 +8,11 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 1. 도커 스웜(Docker Swarm)이란? :
-- 서로다른 호스트에 있는 여러 대의 컨테이너를 하나의 묶어 마치 하나의 호스트인 것처럼 사용할 수 있도록 도와주는 **컨테이너 오케스트레이션** 도구이다.<br>
+- 서로다른 호스트에 있는 여러 대의 컨테이너를 하나의 묶어 마치 하나의 호스트인 것처럼 사용할 수 있도록 도와주는 **컨테이너 오케스트레이션** 도구입니다.<br>
 
 ### 1.1 컨테이너 오케스트레이션(Container Orchestration)이란? :
-- 컨테이너의 **배포, 관리, 확장, 네트워킹을 자동화**하는 것이다.
-- 아래와 같은 작업을 자동화한다.
+- 컨테이너의 **배포, 관리, 확장, 네트워킹을 자동화**하는 것입니다.
+- 아래와 같은 작업을 자동화합니다.
     - 프로비저닝 및 배포
     - 구성 및 일정 조정
     - 리소스 할당
@@ -27,25 +27,25 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
 ### 1.2 도커 스웜(Docker Swarm) 구조 :
 - **분산 코디네이터(Distributed Coordinator)**
-    - 여러 개의 도커 서버를 하나의 클러스터로 구성하기 위해 각종 정보를 저장하고 동기화하는 역할이다.
+    - 여러 개의 도커 서버를 하나의 클러스터로 구성하기 위해 각종 정보를 저장하고 동기화하는 역할입니다.
 
 - **에이전트(Agent)**
-    - 각 서버를 제어하는 역할이다.
+    - 각 서버를 제어하는 역할입니다.
 
 - **워커 노드(Worker Node)**
-    - 실제 컨테이너가 생성되고 관리되는 도커 서버이다.
-    - 워커 노드는 없을 수도 있다.
+    - 실제 컨테이너가 생성되고 관리되는 도커 서버입니다.
+    - 워커 노드는 없을 수도 있습니다.
 
 - **매니저 노드(Manager Node)**
-    - 클러스터 내의 워커 노드를 관리하기 위한 도커 서버이다.
-    - 매니저 노드는 워커 노드의 역할도 포함하고있다.
-    - 매니저 노드는 무조건 1개 이상 존재해야 한다.
+    - 클러스터 내의 워커 노드를 관리하기 위한 도커 서버입니다.
+    - 매니저 노드는 워커 노드의 역할도 포함하고있습니다.
+    - 매니저 노드는 무조건 1개 이상 존재해야 합니다.
 
 * * *
 
 ## 2. 도커 스웜(Docker Swarm)설정하기 :
 ### 2.1 도커 스웜(Docker Swarm) - 매니저 노드(Manager Node) 설정하기 :
-- 매니저 노드(Manager Node)에서 진행한다.
+- 매니저 노드(Manager Node)에서 진행합니다.
 
 ```bash
 $ docker swarm init
@@ -55,7 +55,7 @@ $ docker swarm init
 * * *
 
 ### 2.2 도커 스웜(Docker Swarm) - 워커 노드(Worker Node) 설정하기 :
-- 워커 노드(Worker Node)에서 진행한다.
+- 워커 노드(Worker Node)에서 진행합니다.
 
 ```bash
 $ docker swarm join --token SWMTKN-1-4n6l6glu7zuere7uoxwuefzx7v97i0tlyyuj3xddwqextk1p89-6lldmi9n7hp328oyo91city1r <Manager Node IP>:2377
@@ -65,7 +65,7 @@ $ docker swarm join --token SWMTKN-1-4n6l6glu7zuere7uoxwuefzx7v97i0tlyyuj3xddwqe
 * * *
 
 ### 2.3 도커 스웜(Docker Swarm) 서비스 시작하기 :
-- 매니저 노드(Manager Node)에서 진행한다.
+- 매니저 노드(Manager Node)에서 진행합니다.
 
 ``` bash
 # docker-compose.yml을 통해 서비스 구성

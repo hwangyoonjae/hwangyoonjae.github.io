@@ -8,12 +8,12 @@ image: /assets/img/post-title/redis-wallpaper.jpg
 ---
 
 ## 1. Redis Replica 구성하고 싶었던 계기 :
-- Redis 설치는 할 줄 알지만 실제 서비스를 운영하고 있는 곳에서는 구성만이 아니라 동일한 프로세스를 복제하여 한곳에서 이슈가 발생하면 백업본으로 구성한 프로세스로 연결하도록 하는 방식을 알고 싶어서다.
+- Redis 설치는 할 줄 알지만 실제 서비스를 운영하고 있는 곳에서는 구성만이 아니라 동일한 프로세스를 복제하여 한곳에서 이슈가 발생하면 백업본으로 구성한 프로세스로 연결하도록 하는 방식을 알고 싶어서입니다.
 
 * * *
 
 ## 2. Redis 설치하기 :
-- Redis 설치해야하므로 경우 아래 링크 참조하면된다.
+- Redis 설치해야하므로 경우 아래 링크 참조하면됩니다.
 > * [Redis 설치방법](https://hwangyoonjae.github.io/redis/Redis-Redis-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/ "Redis 설치방법")
 
 * * *
@@ -27,7 +27,7 @@ $ vi /etc/redis/6379.conf
 
 * * *
 
-- 아래 내용을 찾아 주석해제하고 수정한다.
+- 아래 내용을 찾아 주석해제하고 수정합니다.
 
 ```bash
 bind 0.0.0.0
@@ -39,7 +39,7 @@ repl-timeout 60
 
 * * *
 
-- Redis 종료 시 암호를 요구하기에 스크립트 內 암호를 추가한다.
+- Redis 종료 시 암호를 요구하기에 스크립트 內 암호를 추가합니다.
 
 ```bash
 $ vi /etc/init.d/redis_6379
@@ -52,7 +52,7 @@ stop)
         else
             PID=$(cat $PIDFILE)
             echo "Stopping ..."
-            $CLIEXEC -p $REDISPORT -a mypassword shutdown  # shutdown 앞에 "-a [Redis 암호]"를 입력한다.
+            $CLIEXEC -p $REDISPORT -a mypassword shutdown  # shutdown 앞에 "-a [Redis 암호]"를 입력합니다.
             while [ -x /proc/${PID} ]
             do
                 echo "Waiting for Redis to shutdown ..."
@@ -66,8 +66,8 @@ stop)
 * * *
 
 ## 4. Redis Slave 구성하기 :
-- Master와 동일하게 환경설정 파일 수정과 스크립트 內 암호를 추가한다.
-- 추가로 Redis Slave 환경설정 파일에는 Redis Master의 IP:PORT를 입력한다.
+- Master와 동일하게 환경설정 파일 수정과 스크립트 內 암호를 추가합니다.
+- 추가로 Redis Slave 환경설정 파일에는 Redis Master의 IP:PORT를 입력합니다.
 
 ```bash
 replicaof "IP" "PORT"
@@ -76,7 +76,7 @@ replicaof "IP" "PORT"
 * * *
 
 ## 4. Redis replication 확인하기 :
-- Redis Master/Slave Redis Daemon 재시작한다.
+- Redis Master/Slave Redis Daemon 재시작합니다.
 
 ```bash
 # 재시작
@@ -90,7 +90,7 @@ $ tail -f /var/log/redis_6379.log
 * * *
 
 ## 5. Redis replication 테스트하기 :
-- Redis Master에 데이터를 입력한다.
+- Redis Master에 데이터를 입력합니다.
 
 ```bash
 $ cd /redis-7.0.9/src
@@ -100,7 +100,7 @@ $ redis-cli -a "Redis에서 설정한 암호"
 
 * * *
 
-- Redis Master에 입력한 데이터를 Redis Slave에서 확인한다.
+- Redis Master에 입력한 데이터를 Redis Slave에서 확인합니다.
 
 ```bash
 $ cd /redis-7.0.9/src

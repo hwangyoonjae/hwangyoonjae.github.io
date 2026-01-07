@@ -39,7 +39,7 @@ spec:
           periodSeconds: 5
 ```
 
-> 해당 Pod는 /ready 경로가 없으므로, 초기 상태부터 Readiness에 실패하게 된다.
+> 해당 Pod는 /ready 경로가 없으므로, 초기 상태부터 Readiness에 실패하게 됩니다.
 {: .prompt-warning}
 
 * * *
@@ -59,7 +59,7 @@ $ kubectl get pods
 $ kubectl describe pod <pod-name>
 ```
 
-> 출력 중 Readiness probe failed: 메시지가 보이면, probe가 작동 중이다.
+> 출력 중 Readiness probe failed: 메시지가 보이면, probe가 작동 중입니다.
 {: .prompt-tip}
 
 ![Readiness 실패 로그](/assets/img/post/kubernetes/Readiness%20실패%20로그.png)
@@ -68,7 +68,7 @@ $ kubectl describe pod <pod-name>
 
 ## 4. 정상 상태로 변경하여 Ready 상태 확인하기 :
 ### 4.1 Nginx 경로 수정하기 :
-- Nginx의 경우 /ready 경로가 없기 때문에, 대신 /index.html을 readiness path로 바꾸면 통과한다.
+- Nginx의 경우 /ready 경로가 없기 때문에, 대신 /index.html을 readiness path로 바꾸면 통과합니다.
 
 ```yaml
 readinessProbe:
@@ -83,7 +83,7 @@ $ kubectl apply -f readiness-demo.yaml
 * * *
 
 ### 4.2 Pod Ready 상태 확인하기 :
-- Ready 상태가 1/1이 된다.
+- Ready 상태가 1/1이 됩니다.
 
 ```bash
 $ kubectl get pods

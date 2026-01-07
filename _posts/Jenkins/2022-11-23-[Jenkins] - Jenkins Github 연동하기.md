@@ -9,14 +9,14 @@ image: /assets/img/post-title/jenkins-wallpaper.jpg
 
 ## 1. Jenkins Github 연동하기 :
 ### 1.1 Item 생성하기 :
-- Jenkins 메인페이지에서 **새로운 Item** 클릭하여 생성한다.
+- Jenkins 메인페이지에서 **새로운 Item** 클릭하여 생성합니다.
 
 ![텍스트](/assets/img/post/Jenkins/Item%20%EC%83%9D%EC%84%B1%ED%99%94%EB%A9%B4.PNG)
 
 * * *
 
 ### 1.2 Githuib Repository 연결하기 :
-- 소스 코드 관리 밑에 부분에 Github 연결정보를 입력한다.
+- 소스 코드 관리 밑에 부분에 Github 연결정보를 입력합니다.
 
 ![텍스트](/assets/img/post/Jenkins/git%20%EC%97%B0%EA%B2%B0%ED%99%94%EB%A9%B4.PNG)
 
@@ -39,7 +39,7 @@ Failed to connect to repository: Command "git.exe ls-remote -h -- git@..." retur
 
 * * *
 
-- 조치 방법 : Repository에 대한 권한이 없어서 발생한 증상으로 Credentials Add 버튼 클릭하여 계정을 추가한다.
+- 조치 방법 : Repository에 대한 권한이 없어서 발생한 증상으로 Credentials Add 버튼 클릭하여 계정을 추가합니다.
 
 ![텍스트](/assets/img/post/jenkins/Credentials%20Add%20%EA%B3%84%EC%A0%95%20%EC%B6%94%EA%B0%80.PNG)
 

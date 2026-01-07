@@ -15,11 +15,11 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 $ git fetch origin
 ```
 
-- fetch 명령어 실행 시 변경 사항이 있을 경우 아래 그림과 같이 실행된다.
+- fetch 명령어 실행 시 변경 사항이 있을 경우 아래 그림과 같이 실행됩니다.
 
 ![git fetch 명령어 실행화면](/assets/img/post/Gitlab/git%20fetch%20명령어%20실행화면.png)
 
-> **git fetch**는 git pull을 하기 전의 준비 단계라고 생각하면 된다.
+> **git fetch**는 git pull을 하기 전의 준비 단계라고 생각하면 됩니다.
 > 
 {: .prompt-info}
 
@@ -45,7 +45,7 @@ $ git pull origin main
 
 > **변경 사항을 미리 확인하고 싶을 때**는 git fetch를 사용하여 원격 브랜치를 업데이트한 뒤, git log나 git diff로 변경 사항을 검토할 수 있고,
 > 
-> **즉시 최신 상태로 작업을 동기화하고 싶을 때**는 git pull을 사용해 원격 브랜치의 최신 상태를 로컬에 바로 반영할 수 있다.
+> **즉시 최신 상태로 작업을 동기화하고 싶을 때**는 git pull을 사용해 원격 브랜치의 최신 상태를 로컬에 바로 반영할 수 있습니다.
 {: .prompt-tip}
 
 * * *

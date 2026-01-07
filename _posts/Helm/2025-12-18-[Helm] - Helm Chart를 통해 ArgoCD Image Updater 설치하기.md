@@ -41,7 +41,7 @@ $ docker push [HARBOR_DOMAIN]/argocd/argocd-image-updater:v1.0.1
 
 ### 1.3 values.yaml 수정하기 :
 
-- 위 과정에서 다운받은 컨테이너 이미지로 수정한다.
+- 위 과정에서 다운받은 컨테이너 이미지로 수정합니다.
 
 ```yaml
 replicaCount: 1
@@ -69,7 +69,7 @@ $ helm upgrade --install argocd-image-updater ./ -n argocd
 
 * * *
 
-- Helm Chart 설치 후, 파드 목록을 조회하여 정상 설치 되었는지 확인한다.
+- Helm Chart 설치 후, 파드 목록을 조회하여 정상 설치 되었는지 확인합니다.
 
 ```bash
 # pod 목록 조회

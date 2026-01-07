@@ -14,7 +14,7 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 
 * * *
 
-- gitlab 네임스페이스를 생성한다.
+- gitlab 네임스페이스를 생성합니다.
 
 ```bash
 $ kubectl create namespace gitlab-runner
@@ -22,7 +22,7 @@ $ kubectl create namespace gitlab-runner
 
 * * *
 
-- Gitlab Runner 컨테이너 이미지를 다운받고, 이미지 레포지토리(HARBOR)의 Push한다.
+- Gitlab Runner 컨테이너 이미지를 다운받고, 이미지 레포지토리(HARBOR)의 Push합니다.
 
 ```bash
 $ docker pull gitlab/gitlab-runner:alpine-v17.5.5
@@ -41,7 +41,7 @@ $ docker push [HARBOR_DOMAIN]/gitlab/gitlab-runner-helper:x86_64-v17.5.5
 
 > Gitlab Runner Helper 이미지가 Runner 버전과 맞아야하는 이유?
 >
-> Runner ↔ helper는 내부 프로토콜로 통신하여, 버전 불일치 시 ***Job 멈춤, artifact 업로드 실패, Pod 생성은 되는데 Job 실패***하므로 반드시 같은 mirror 버전을 사용해야한다.
+> Runner ↔ helper는 내부 프로토콜로 통신하여, 버전 불일치 시 ***Job 멈춤, artifact 업로드 실패, Pod 생성은 되는데 Job 실패***하므로 반드시 같은 mirror 버전을 사용해야합니다.
 {: .prompt-tip}
 
 * * *
@@ -258,7 +258,7 @@ metadata:
 
 ## 2.5 Gitlab-Runner 설치하기 :
 
-- 위 과정에서 생성한 Helm Chart를 이용하여 Gitlab-Runner 설치를 진행한다.
+- 위 과정에서 생성한 Helm Chart를 이용하여 Gitlab-Runner 설치를 진행합니다.
 
 ```bash
 $ helm install gitlab-runner ./ -n gitlab-runner
@@ -268,7 +268,7 @@ $ helm install gitlab-runner ./ -n gitlab-runner
 
 * * *
 
-- 설치 후 리소스들이 정상적으로 되었는지 확인한다.
+- 설치 후 리소스들이 정상적으로 되었는지 확인합니다.
 
 ```bash
 # gitlab 리소스 전체 확인
@@ -284,7 +284,7 @@ $ kubectl get pvc -n gitlab-runner
 
 ## 2.6 Gitlab-Runner 등록하기 :
 
-- Gitlab에 Runner 등록을 진행한다.
+- Gitlab에 Runner 등록을 진행합니다.
 
 ![gitlab-runner helm chart 배포 후 Runner 등록](/assets/img/post/helm/gitlab-runner%20helm%20chart%20배포%20후%20Runner%20등록.png)
 ![gitlab-runner helm chart 배포 후 Runner 등록 확인](/assets/img/post/helm/gitlab-runner%20helm%20chart%20배포%20후%20Runner%20등록%20확인.png)

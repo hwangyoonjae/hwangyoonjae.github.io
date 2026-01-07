@@ -9,12 +9,12 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 
 ## 1. prometheus + grafana 설치 준비하기 :
 ### 1.1 Helm 설치하기 :
-- prometheus와 grafana를 설치하려면 Helm을 설치해야한다. 
+- prometheus와 grafana를 설치하려면 Helm을 설치해야합니다. 
 > * [Helm 설치방법](https://hwangyoonjae.github.io/kubernetes/Kubernetes-Helm%EC%9D%B4%EB%9E%80/ "Helm 설치방법")
 
 * * *
 
-- Helm 설치 후 Helm repo 추가 및 업데이트한다.
+- Helm 설치 후 Helm repo 추가 및 업데이트합니다.
 
 ```bash
 $ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
@@ -23,7 +23,7 @@ $ helm repo update
 
 * * *
 
-- kube-prometheus-stack을 다운로드한다.
+- kube-prometheus-stack을 다운로드합니다.
 
 ```bash
 $ helm pull prometheus-community/kube-prometheus-stack
@@ -33,7 +33,7 @@ $ cd kube-prometheus-stack/
 
 * * *
 
-- grafana의 접속할 관리자 계정 패스워드를 설정한다.
+- grafana의 접속할 관리자 계정 패스워드를 설정합니다.
 
 ```bash
 $ vi values.yaml
@@ -45,7 +45,7 @@ adminPassword: [관리자패스워드]
 
 * * *
 
-- monitoring namespace 생성한다.
+- monitoring namespace 생성합니다.
 
 ```bash
 $ kubectl create namespace monitoring
@@ -54,7 +54,7 @@ $ kubectl create namespace monitoring
 * * *
 
 ## 2. prometheus + grafana 설치하기 :
-- prometheus 설치한다.
+- prometheus 설치합니다.
 
 ```bash
 $ helm install prometheus . -n monitoring -f values.yaml
@@ -63,7 +63,7 @@ $ helm install prometheus . -n monitoring -f values.yaml
 
 * * *
 
-- kubectl 명령어를 통해서 정상설치되었는지 확인한다.
+- kubectl 명령어를 통해서 정상설치되었는지 확인합니다.
 
 ```bash
 $ kubectl get pod -n monitoring 
@@ -72,7 +72,7 @@ $ kubectl get pod -n monitoring
 
 * * *
 
-- prometheus, grafana 서비스도 확인한다.
+- prometheus, grafana 서비스도 확인합니다.
 
 ```bash
 $ kubectl get svc -n monitoring 
@@ -82,7 +82,7 @@ $ kubectl get svc -n monitoring
 * * *
 
 ## 3. grafana 외부 접근 설정하기 :
-- 외부에서 접근을 해서 웹브라우저로 접속하기 위해 ***type: nodePort***로 수정해야한다.
+- 외부에서 접근을 해서 웹브라우저로 접속하기 위해 ***type: nodePort***로 수정해야합니다.
 
 ```bash
 $ kubectl edit service -n monitoring prometheus-grafana
@@ -92,7 +92,7 @@ $ kubectl edit service -n monitoring prometheus-grafana
 * * *
 
 ## 4. prometheus 외부 접근 설정하기 :
-- 외부에서 접근을 해서 웹브라우저로 접속하기 위해 ***type: nodePort***로 수정해야한다.
+- 외부에서 접근을 해서 웹브라우저로 접속하기 위해 ***type: nodePort***로 수정해야합니다.
 
 ```bash
 $ kubectl edit service -n monitoring prometheus-kube-prometheus-prometheus

@@ -223,7 +223,7 @@ $ kubectl create -f ingress.yaml
 
 ### 2.2 Administor Password 입력하기 :
 
-- Jenkins POD의 접속하여 Administor 패스워드를 확인하여 입력한다.
+- Jenkins POD의 접속하여 Administor 패스워드를 확인하여 입력합니다.
 
 ```bash
 $ kubectl exec {jenkins pod명} -n jenkins -it /bin/bash

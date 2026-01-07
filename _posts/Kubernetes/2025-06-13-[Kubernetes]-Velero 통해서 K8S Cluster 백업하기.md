@@ -74,7 +74,7 @@ sudo systemctl enable --now minio
 
 - 사용자 생성하기
 
-> MinIO가 "standalone server" 모드로 실행 중이면서 IAM 기능이 비활성화되어 있기 때문에 mc 클라이언트 도구를 사용하여 계성 생성한다.
+> MinIO가 "standalone server" 모드로 실행 중이면서 IAM 기능이 비활성화되어 있기 때문에 mc 클라이언트 도구를 사용하여 계성 생성합니다.
 {: .prompt-warning }
 
 ```bash
@@ -242,7 +242,7 @@ velero schedule create daily-backup \
 |--include-namespaces=*|전체 네임스페이스 백업|
 |--ttl 168h|백업 보관 기간|
 
-> Velero에서 일 단위를 공식 지원하지 않아 백업 보관 기간은 반드시 시간 단위로 설정해야한다.
+> Velero에서 일 단위를 공식 지원하지 않아 백업 보관 기간은 반드시 시간 단위로 설정해야합니다.
 {: .prompt-warning}
 
 * * *

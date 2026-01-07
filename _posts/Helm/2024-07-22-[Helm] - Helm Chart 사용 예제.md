@@ -14,7 +14,7 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 * * *
 
 ## 2. Helm Chart 기본 구조 생성 :
-- helm create 명령어를 통해 차트 기본 디렉토리를 생성한다.
+- helm create 명령어를 통해 차트 기본 디렉토리를 생성합니다.
 
 ```bash
 $ helm create {폴더명}
@@ -22,7 +22,7 @@ $ helm create {폴더명}
 
 * * *
 
-- 위와 같이 생성된 기본 구조는 아래와 같다.
+- 위와 같이 생성된 기본 구조는 아래와 같습니다.
 
 ```bash
 폴더명
@@ -51,7 +51,7 @@ $ helm create {폴더명}
 * * *
 
 ## 3. Chart.yaml 작성하기 :
-- Chart.yaml에 정의하는 내용은 아래와 같다.
+- Chart.yaml에 정의하는 내용은 아래와 같습니다.
 
 | 이름 | 설명 |
 | :---------------- | :-------------------------------------------- |
@@ -103,7 +103,7 @@ appVersion: "1.16.0"
 
 ## 4. values.yaml 작성하기 :
 - template 폴더에 있는 manifest yaml파일에 정의된 값을 불러온다.
-- \{\{ .Values.image.tag\}\}와 같이 사용 인덴테이션에 유의하여 작성하여야한다.
+- \{\{ .Values.image.tag\}\}와 같이 사용 인덴테이션에 유의하여 작성하여야합니다.
 
 ```yaml
 # values.yaml
@@ -236,12 +236,12 @@ affinity: {}   # 파드가 특정 노드에서 실행되도록 하거나, 다른
 * * *
 
 ## 5. templates 폴더에 배포할 resource 정의하기 :
-- 기본적으로 deployment, service, serviceaccount,ingress가 존재하고, 필요에 따라 persistentvolume, configmap 등을 정의한다.
+- 기본적으로 deployment, service, serviceaccount,ingress가 존재하고, 필요에 따라 persistentvolume, configmap 등을 정의합니다.
 
 * * *
 
 ## 6. Helm의 template 문법 정의 :
-- \{\{ \}\}로 변수를 사용한다.
+- \{\{ \}\}로 변수를 사용합니다.
   - .Values -> values.yaml 파일에서 정의된 변수
   - .Charts -> Charts.yaml 파일에서 정의 된 변수
   - .Release -> 배포할 때에 할당한 정보들을 사용 (예: --namespeace test 로 install 시 .Release.Namespace 에 test로 할당)
@@ -279,7 +279,7 @@ $ helm install <release name> <Chart.yaml경로>  --debug --dry-run
 * * *
 
 ## 8. Chart 생성하고 Repo에 등록하기 :
-> helm repository는 차트 저장소의 각 차트의 대한 정보를 담고 있는 index.yaml파일이 있어야한다.
+> helm repository는 차트 저장소의 각 차트의 대한 정보를 담고 있는 index.yaml파일이 있어야합니다.
 {: .prompt-warning }
 
 ```bash
@@ -317,18 +317,18 @@ $ helm search repo 차트명
 * * *
 
 ## 9. 생성한 Chart Repo의 푸시하기 :
-- 생성한 Chart를 Repo의 푸시한다.
+- 생성한 Chart를 Repo의 푸시합니다.
 
 ```bash
 $ helm push {package.tgz} {repo명}
 ```
 
 ```bash
-# 위 명령어로 안될 경우 아래 명령어를 통해서 이미지 업로드한다.
+# 위 명령어로 안될 경우 아래 명령어를 통해서 이미지 업로드합니다.
 $ curl --data-binary @{chart.tgz} http://{repo주소}/api/charts -u admin 
 ```
 
-- 위 명령어 실행 후 아래와 같은 오류 메세지가 발생한다.
+- 위 명령어 실행 후 아래와 같은 오류 메세지가 발생합니다.
 
 > Error: scheme prefix missing from remote (e.g. "oci://") 에러 발생
 {: .prompt-warning }
@@ -336,7 +336,7 @@ $ curl --data-binary @{chart.tgz} http://{repo주소}/api/charts -u admin
 > 발생 이유
 >
 > helm push 명령을 사용할 때 차트를 업로드할 원격 저장소 주소에 프로토콜 접두사가 없어서 발생한 원인으로
-> Helm 3.7.0 이상에서는 차트를 OCI 레지스트리나 ChartMuseum으로 푸시할 때 각각의 프로토콜 접두사를 명시해야한다.
+> Helm 3.7.0 이상에서는 차트를 OCI 레지스트리나 ChartMuseum으로 푸시할 때 각각의 프로토콜 접두사를 명시해야합니다.
 {: .prompt-info }
 
 * * *
@@ -357,7 +357,7 @@ $ helm search repo {repo명}
 * * *
 
 ## 11. 생성한 Chart를 이용해 설치하기 :
-- 생성한 차트를 아래 명령어로 설치한다.
+- 생성한 차트를 아래 명령어로 설치합니다.
 
 ```bash
 $ helm install {배포명} {chart폴더경로} -n {네임스페이스}
@@ -365,7 +365,7 @@ $ helm install {배포명} {chart폴더경로} -n {네임스페이스}
 
 * * *
 
-- 차트의 내용을 변경해야하는 경우 업데이트를 진행한다.
+- 차트의 내용을 변경해야하는 경우 업데이트를 진행합니다.
 
 ```bash
 $ helm upgrade {배포명} {chart폴더경로} -n {네임스페이스}

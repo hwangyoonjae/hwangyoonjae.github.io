@@ -13,7 +13,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 * * *
 
 ## 2. Gitlab 구성하기 :
-- root path에 deployment.yaml 파일과 service.yaml 파일을 생성하여 gitlab repository의 commit하여 저장한다.
+- root path에 deployment.yaml 파일과 service.yaml 파일을 생성하여 gitlab repository의 commit하여 저장합니다.
 
 ```yaml
 # deployment.yaml
@@ -76,7 +76,7 @@ spec:
 - Namespace : 배포 할 Kubernetes Cluster 내 Namespace 지정 (default)
 - DIRECTORY RECURSE : Path 하위 경로 디렉토리의 변동사항 체크 확인 여부
 
-위와 같이 입력 후 CREATE 버튼을 클릭한다.
+위와 같이 입력 후 CREATE 버튼을 클릭합니다.
 
 * * *
 
@@ -165,7 +165,7 @@ $ kubectl rollout restart deployment argocd-server -n argocd
 $ kubectl rollout restart deployment argocd-repo-server -n argocd
 ```
 
-- argocd-cm ConfigMap에도 GitLab 인증서가 설정되어 있는지 확인하여 해당 ConfigMap을 편집하여 인증서가 제대로 설정되어 있는지 확인한다.
+- argocd-cm ConfigMap에도 GitLab 인증서가 설정되어 있는지 확인하여 해당 ConfigMap을 편집하여 인증서가 제대로 설정되어 있는지 확인합니다.
 
 ```bash
 $ kubectl -n argocd edit configmap argocd-cm
@@ -230,7 +230,7 @@ $ kubectl rollout restart deployment argocd-repo-server -n argocd
 * * *
 
 ## 4. ArgoCD 자동 배포 적용하기 :
-- gitlab의 이벤트 발생 시 변경사항 확인하여 자동으로 배포되도록 설정한다.
+- gitlab의 이벤트 발생 시 변경사항 확인하여 자동으로 배포되도록 설정합니다.
 
 ```bash
 $ kubectl edit application {Application name} -n argocd
@@ -255,7 +255,7 @@ spec:
     path: .
     repoURL: https://gitlab.com:8443/root/argocd.git
     targetRevision: HEAD
-# 아래 내용을 추가한다.
+# 아래 내용을 추가합니다.
   syncPolicy: # 애플리케이션 동기화 정책 설명
     automated: # 애플리케이션을 자동으로 동기화하도록 설정
       prune: true # 더 이상 원격 저장소의 존재하지 않는 리소스 클러스터에서 삭제
@@ -264,7 +264,7 @@ spec:
 
 * * *
 
-- 프로젝트 생성 시 자동으로 동기화 정책이 포함되도록 설정할 수 있다.
+- 프로젝트 생성 시 자동으로 동기화 정책이 포함되도록 설정할 수 있습니다.
 
 ```bash
 $ kubectl edit configmap argocd-cm -n argocd

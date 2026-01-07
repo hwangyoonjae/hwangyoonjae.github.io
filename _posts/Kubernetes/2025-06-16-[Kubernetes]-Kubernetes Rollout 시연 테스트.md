@@ -90,7 +90,7 @@ $ kubectl expose deployment <서비스명> --type=NodePort --port=80
 
 ## 3. 버전 업데이트 :
 
-- 기존에 사용했던 이미지를 변경하여 업데이트한다.
+- 기존에 사용했던 이미지를 변경하여 업데이트합니다.
 
 ```bash
 $ kubectl set image deployment/<deployment명> demo-app=<Harbor주소>/<프로젝트명>/nginx:custom-v2
