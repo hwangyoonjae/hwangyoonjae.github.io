@@ -8,7 +8,7 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---
 
 ## git diff 명령어란? :
-- commit 이나 branch 사이에 다른점 혹은 파일이나 Repository와 Working Directory 사이의 다른점을 보여주는 명령어이다.
+- commit 이나 branch 사이에 다른점 혹은 파일이나 Repository와 Working Directory 사이의 다른점을 보여주는 명령어입니다.
 
 * * *
 
@@ -32,7 +32,7 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 $ git diff 
 ```
 
-- 아래 그림과 같이 붉은색 부분은 고치기 이전 버전, 연두색 부분은 고친 이후 버전이다.
+- 아래 그림과 같이 붉은색 부분은 고치기 이전 버전, 연두색 부분은 고친 이후 버전입니다.
 ![git diff 명령어 실행 결과 화면](/assets/img/post/Gitlab/git%20diff%20명령어%20실행%20결과%20화면.png)
 
 > @@ -21,7 +21,15 @@ 해석

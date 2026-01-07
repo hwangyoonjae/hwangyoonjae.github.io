@@ -8,7 +8,7 @@ image: /assets/img/post-title/db-wallpaper.jpg
 ---
 
 ## 1. IN, NOT IN 연산자? :
-- 값이 포함되는 혹은 포함되지 않는 데이터를 추출하고 싶을 때 사용하는 것이 IN, NOT IN문이다.
+- 값이 포함되는 혹은 포함되지 않는 데이터를 추출하고 싶을 때 사용하는 것이 IN, NOT IN문입니다.
 
 * * *
 

@@ -123,7 +123,7 @@ $ gitlab-runner restart
 
 > Runner Config의 service_account만 추가해도 동작하는 이유?
 >
-> GitLab Runner가 “Kubernetes 안에서 실행 중인 Pod”일 경우, 쿠버네티스 클라이언트가 자동으로 in-cluster config를 사용하기 때문이다.
+> GitLab Runner가 “Kubernetes 안에서 실행 중인 Pod”일 경우, 쿠버네티스 클라이언트가 자동으로 in-cluster config를 사용하기 때문입니다.
 {: .prompt-tip}
 
 * * *

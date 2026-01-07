@@ -15,7 +15,7 @@ image: /assets/img/post-title/linux-wallpaper.jpg
 * * *
 
 ## 2. OpenSSL란? :
-- 네트워크를 통한 데이터 통신에 쓰이는 프로토콜인 TLS와 SSL의 오픈 소스 구현판이다.
+- 네트워크를 통한 데이터 통신에 쓰이는 프로토콜인 TLS와 SSL의 오픈 소스 구현판입니다.
 
 ### 2.1 SSL란? :
 - 클라이언트와 서버간의 통신을 제3자가 보증해주는 전자화된 문서

@@ -8,7 +8,7 @@ image: /assets/img/post-title/harbor-wallpaper.jpg
 ---
 
 ## 1. Harbor란? :
-- Docker 이미지를 저장, 관리 및 배포하기 위한 오픈 소스 컨테이너 레지스트리이다.
+- Docker 이미지를 저장, 관리 및 배포하기 위한 오픈 소스 컨테이너 레지스트리입니다.
 
 * * *
 

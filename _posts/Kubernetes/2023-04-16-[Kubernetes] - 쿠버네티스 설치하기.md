@@ -8,7 +8,7 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
 ## 1. Kubernetes란? :
-- 컨테이너화된 워크로드와 서비스를 관리하기 위한 이식성이 있고, 확장가능한 오픈소스 플랫폼이다.
+- 컨테이너화된 워크로드와 서비스를 관리하기 위한 이식성이 있고, 확장가능한 오픈소스 플랫폼입니다.
 - 선언적 구성과 자동화를 모두 용이하게 해주며 크고, 빠르게 성장하는 생태계를 가지고 있습니다.
 
 * * *
@@ -103,9 +103,9 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cl
 * * *
 
 ### 3.2 kubeadm, kubelet, kubectl 패키지 설치하기 :
-- kubeadm: kubernetes cluster를 구축하기 위한 명령 도구이다.
+- kubeadm: kubernetes cluster를 구축하기 위한 명령 도구입니다.
 - kubelet: master node, worker node에서 데몬 프로세스로 기동되어 있으면서, container와 pod를 생성/삭제/상태를 감시합니다.
-- kubectl: 사용자가 kubernetes cluster에게 작업 요청하기 위한 명령 도구이다.
+- kubectl: 사용자가 kubernetes cluster에게 작업 요청하기 위한 명령 도구입니다.
 
 ```bash
 $ yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes

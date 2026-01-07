@@ -46,7 +46,7 @@ image: /assets/img/post-title/web-wallpaper.jpg
 
 ```javascript
 - 컨테이너 : jsp, servlet을 실행시킬 수 있는 소프트웨어, 자바 계열에선 웹 애플리케이션을 컨테이너라고 부른다.
-- 웹 애플리케이션 컨테이너 : 웹 애플리케이션이 배포되는 공간이다.
+- 웹 애플리케이션 컨테이너 : 웹 애플리케이션이 배포되는 공간입니다.
 ```
 
 ### 2.4 WAS(Web Application Server) 기능 :

@@ -8,7 +8,7 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
 ## 1. PV(PersistentVolume)란? :
-- ***PersistentVolume의 약자***로, 관리자가 프로비저닝하거나, Storage class를 사용해서 동적으로 프로비저닝한 클러스터의 스토리지이다.
+- ***PersistentVolume의 약자***로, 관리자가 프로비저닝하거나, Storage class를 사용해서 동적으로 프로비저닝한 클러스터의 스토리지입니다.
 
 * * *
 
@@ -23,7 +23,7 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 * * *
 
 ### 3.1 Provisioning(프로비저닝) :
-- PV를 만드는 단계를 프로비저닝(Provisioning)이라고 합니다. 프로비저닝 방법에는 두 가지가 있는데, PV를 미리 만들어 두고 사용하는 정적(static) 방법과 요청이 있을 때 마다 PV를 만드는 동적(dynamic) 방법이다.
+- PV를 만드는 단계를 프로비저닝(Provisioning)이라고 합니다. 프로비저닝 방법에는 두 가지가 있는데, PV를 미리 만들어 두고 사용하는 정적(static) 방법과 요청이 있을 때 마다 PV를 만드는 동적(dynamic) 방법입니다.
 
 * * *
 

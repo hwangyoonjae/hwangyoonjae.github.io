@@ -41,9 +41,9 @@ image: /assets/img/post-title/devops.jpg
 
 ## 2. CI/CD 파이프라인(Pipeline):
 ### 2.1 CI/CD 파이프라인(Pipeline)이란?:
-- 제공된 데이터 또는 코드에 대해 사전 정의된 작업을 수행하는 일련의 처리 단계이다.
-- 반복적인 프로세스를 자동화하여 <span style='color: #000000; background-color: #81BEF7'>시간을 절약하고 정밀도를 높이는 것</span>이 파이프 라인 사용의 목적이다.
-- <span style='color: #000000; background-color: #F78181'>빌드, 테스트 및 제공을 수동 처리</span>보다 <span style='color: #000000; background-color: #81BEF7'>더 빠르고 자동화되고 안정적으로 만드는 것이다.</span>
+- 제공된 데이터 또는 코드에 대해 사전 정의된 작업을 수행하는 일련의 처리 단계입니다.
+- 반복적인 프로세스를 자동화하여 <span style='color: #000000; background-color: #81BEF7'>시간을 절약하고 정밀도를 높이는 것</span>이 파이프 라인 사용의 목적입니다.
+- <span style='color: #000000; background-color: #F78181'>빌드, 테스트 및 제공을 수동 처리</span>보다 <span style='color: #000000; background-color: #81BEF7'>더 빠르고 자동화되고 안정적으로 만드는 것입니다.</span>
 
 * * *
 

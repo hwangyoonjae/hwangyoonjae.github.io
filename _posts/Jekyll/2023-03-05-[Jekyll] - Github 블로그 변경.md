@@ -30,7 +30,7 @@ image: /assets/img/post-title/jekyll-wallpaper.jpg
 * * *
 
 ### 2.3 깃허브 블로그 수정 완료 :
-- 그렇게 수정한 나의 블로그이다. 
+- 그렇게 수정한 나의 블로그입니다. 
 
 > * [수정된 블로그 접속하기](https://hwangyoonjae.github.io/ "수정된 블로그 접속하기")
 

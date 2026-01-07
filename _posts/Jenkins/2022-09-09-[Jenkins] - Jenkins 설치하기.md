@@ -8,13 +8,13 @@ image: /assets/img/post-title/jenkins-wallpaper.jpg
 ---
 
 ## 1. 젠킨스(Jenkins)란? :
-- Java로 제작된 오픈소스 CI(Continous Integration) 툴이다.
-- Build나 Deloy, Test 프로세스를 상시적으로 실시하는 자동화 서비스이다.
+- Java로 제작된 오픈소스 CI(Continous Integration) 툴입니다.
+- Build나 Deloy, Test 프로세스를 상시적으로 실시하는 자동화 서비스입니다.
 
 * * *
 
 ### 1.2 CI(Continous Integration)란? :
-- 팀의 구성원들이 작업한 내용을 정기적으로 통합하는 것이다.
+- 팀의 구성원들이 작업한 내용을 정기적으로 통합하는 것입니다.
 
 * * *
 

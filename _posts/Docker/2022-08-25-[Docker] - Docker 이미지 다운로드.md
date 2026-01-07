@@ -14,7 +14,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
 ### 1.1 도커 이미지 (Docker Image) 특징 :
 - 이미지는 컨테이너 실행에 필요한 파일과 설정값 등을 포함하고 있는 것으로 변하지 않는다.
-- 이미지에 데이터가 쓰이는 것은 아니라 Immutable(불변적)이다.
+- 이미지에 데이터가 쓰이는 것은 아니라 Immutable(불변적)입니다.
 - 이미지를 다운로드할 때 개인이 git에 올려둔 것을 사용해도 되고, 이미지 경로(url)를 안 적으면 docker.org에 있는 서버로 연결된다.
 - 최상위 layer에만 읽기 쓰기가 가능하다.
 
@@ -66,7 +66,7 @@ $ docker save <image명> > <image명>.tar
 ### 2.5 도커 이미지 삭제하기 :
 - **"docker rmi"**명령어를 사용하여 도커 이미지를 삭제합니다.
 
-> rmi는 "remove image"의 줄임말이다.
+> rmi는 "remove image"의 줄임말입니다.
 {: .prompt-info}
 
 ```bash

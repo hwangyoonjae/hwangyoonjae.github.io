@@ -16,7 +16,7 @@ image: /assets/img/post-title/nginx-wallpaper.jpg
 ### 1.2 Core 모듈 설정 :
 - 설정 파일 최상단에 위치하며 nginx의 프로세스 관리, 보안과 같은 기본적인 동작 방식을 정의합니다.
 
-  - **user** : nginx의 worker process가 실행되는 user권한이다.
+  - **user** : nginx의 worker process가 실행되는 user권한입니다.
   ```bash
   #사용문법
   user [user];
@@ -28,9 +28,9 @@ image: /assets/img/post-title/nginx-wallpaper.jpg
   worker_processes [number] or [auto];
   ```
 
-  - **error_log** : 로그파일 경로와 남기고자 하는 심각도 레벨이다.
+  - **error_log** : 로그파일 경로와 남기고자 하는 심각도 레벨입니다.
 
-  - **pid** : nginx main process(=master process)의 pid 저장 파일경로이다.
+  - **pid** : nginx main process(=master process)의 pid 저장 파일경로입니다.
 
 * * *
 
@@ -48,7 +48,7 @@ image: /assets/img/post-title/nginx-wallpaper.jpg
 ### 1.4 http 블록 :
 - server, location의 루트 블록이며, http블록 안에 적어도 하나의 server 블록을 선언할 수 있고, server 블록 안에서 한 개 이상의 location 블럭을 삽입할 수 있습니다.
 
-  - **include** : http 블록에 가져올 context 파일 경로이다.
+  - **include** : http 블록에 가져올 context 파일 경로입니다.
 
   - **default_type** : mimetype 중에 기본값으로 사용할 값을 설정합니다.
   
@@ -56,7 +56,7 @@ image: /assets/img/post-title/nginx-wallpaper.jpg
 
   - **sendfile** : on으로 설정시 read/write시 하드디스크 io를 일으키지 않고 커널 내부에서 파일을 복사하여 속도 향상된다.
 
-  - **keepalive_timeout** : 서버에 접속시 클라이언트와 커넥션을 열린채로 유지하는 시간이다.
+  - **keepalive_timeout** : 서버에 접속시 클라이언트와 커넥션을 열린채로 유지하는 시간입니다.
 
   - **access_log** : access 로그를 저장할 파일을 지정합니다.
   ```bash

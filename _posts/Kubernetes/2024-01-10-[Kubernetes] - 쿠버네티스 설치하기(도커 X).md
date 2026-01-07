@@ -125,9 +125,9 @@ EOF
 * * *
 
 ### 4.2 kubeadm, kubelet, kubectl 패키지 설치하기 :
-- kubeadm: kubernetes cluster를 구축하기 위한 명령 도구이다.
+- kubeadm: kubernetes cluster를 구축하기 위한 명령 도구입니다.
 - kubelet: master node, worker node에서 데몬 프로세스로 기동되어 있으면서, container와 pod를 생성/삭제/상태를 감시합니다.
-- kubectl: 사용자가 kubernetes cluster에게 작업 요청하기 위한 명령 도구이다.
+- kubectl: 사용자가 kubernetes cluster에게 작업 요청하기 위한 명령 도구입니다.
 
 ```bash
 $ yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes

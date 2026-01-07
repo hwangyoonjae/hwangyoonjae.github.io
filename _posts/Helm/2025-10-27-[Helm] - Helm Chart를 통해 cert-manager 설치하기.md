@@ -141,9 +141,9 @@ $ kubectl get all -n cert-manager
 ## 2. cert-manager CRDs(CustomResourceDefinitions) 설치하기 :
 ### 2.1 CRDs란? :
 
-- 쿠버네티스에 새로운 리소스 타입(API 오브젝트)을 추가하기 위한 확장 메커니즘이다.
+- 쿠버네티스에 새로운 리소스 타입(API 오브젝트)을 추가하기 위한 확장 메커니즘입니다.
 
-> 쿠버네티스 기본에는 없는 리소스를 “추가로 등록”해서 kubectl get certificate, kubectl get issuer 같은 명령을 사용할 수 있게 만들어주는 정의 파일이다.
+> 쿠버네티스 기본에는 없는 리소스를 “추가로 등록”해서 kubectl get certificate, kubectl get issuer 같은 명령을 사용할 수 있게 만들어주는 정의 파일입니다.
 {: .prompt-info}
 
 * * *

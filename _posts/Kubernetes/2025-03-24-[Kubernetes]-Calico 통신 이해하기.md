@@ -65,7 +65,7 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 
 > Direct모드에서 BGP를 활용하는 이유?
 > 
-> Pod 간의 네트워크 트래픽을 터널링(IPIP, VXLAN) 없이 직접 전달하는 방식이다. 이 방식을 사용하면 네트워크 성능이 향상되지만, 각 노드가 Pod 네트워크에 대한 라우팅 정보를 알아야 한다는 문제가 생긴다.
+> Pod 간의 네트워크 트래픽을 터널링(IPIP, VXLAN) 없이 직접 전달하는 방식입니다. 이 방식을 사용하면 네트워크 성능이 향상되지만, 각 노드가 Pod 네트워크에 대한 라우팅 정보를 알아야 한다는 문제가 생긴다.
 > 
 > 이 문제를 해결하기 위해 BGP(Border Gateway Protocol) 를 활용하여 노드 간 라우팅 정보를 자동으로 교환하고, Pod 네트워크 간 최적의 경로를 설정합니다.
 {: .prompt-info}

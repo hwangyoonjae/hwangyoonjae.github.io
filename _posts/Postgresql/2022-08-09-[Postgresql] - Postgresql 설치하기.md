@@ -18,7 +18,7 @@ image: /assets/img/post-title/postgresql-wallpaper.jpg
 
 ```bash
 # RDBMS와 ORDBMS 차이점
-RDBMS : 행과 열이 있는 하나 이상의 관계 또는 테이블의 모음이다.
+RDBMS : 행과 열이 있는 하나 이상의 관계 또는 테이블의 모음입니다.
 ORDBMS : 데이터가 객체로 저장된 것처럼 작동합니다.
 ```
 

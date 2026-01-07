@@ -46,7 +46,7 @@ $ ansible-playbook 파일명.yml -k
 ```
 [![텍스트](/assets/img/post/Ansible/Playbook%20%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.PNG)](/assets/img/post/Ansible/Playbook%20%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.PNG)
 
-> **-k** 옵션은 ansible 실행 시 ansible 호스트의 비밀번호를 물어볼 수 있도록 하는 옵션이다.
+> **-k** 옵션은 ansible 실행 시 ansible 호스트의 비밀번호를 물어볼 수 있도록 하는 옵션입니다.
 {: .prompt-info}
 
 * * *

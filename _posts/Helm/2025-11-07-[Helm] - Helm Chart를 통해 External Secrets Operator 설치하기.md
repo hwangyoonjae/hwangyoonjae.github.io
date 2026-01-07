@@ -10,7 +10,7 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 ## 1. External Secrets Operator 이해하기 :
 ### 1.1 External Secrets Operator란? :
 
-- 외부 비밀 저장소(Vault, AWS Secrets Manager, GCP Secret Manager 등)에 저장된 값을 자동으로 Kubernetes Secret으로 동기화해주는 오퍼레이터(Controller)이다.
+- 외부 비밀 저장소(Vault, AWS Secrets Manager, GCP Secret Manager 등)에 저장된 값을 자동으로 Kubernetes Secret으로 동기화해주는 오퍼레이터(Controller)입니다.
 
 ![external secret operator 아키텍처](/assets/img/post/helm/external%20secret%20operator%20아키텍처.png)
 
@@ -18,7 +18,7 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 
 ### 1.2 External Secrets Operator가 왜 필요한가? :
 
-- 외부 API를 통해 비밀 정보를 자동으로 동기화하여 Kubernetes Secrets을 사용할 수 있다는 점이다.
+- 외부 API를 통해 비밀 정보를 자동으로 동기화하여 Kubernetes Secrets을 사용할 수 있다는 점입니다.
 - 외부 시스템에서 Secret이 변경되면, Kubernetes에서 자동으로 이를 반영할 수 있어 운영 부담을 크게 줄일 수 있습니다.
 
 * * *

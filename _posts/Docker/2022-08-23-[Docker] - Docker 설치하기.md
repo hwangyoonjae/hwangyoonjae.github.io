@@ -8,9 +8,9 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 1. Docker란 무엇인가? :
-- 컨테이너 기반의 오픈소스 가상화 플랫폼이다.
+- 컨테이너 기반의 오픈소스 가상화 플랫폼입니다.
 
-> 컨테이너란? : 격리된 공간에서 프로세스가 동작하는 기술이다.
+> 컨테이너란? : 격리된 공간에서 프로세스가 동작하는 기술입니다.
 {: .prompt-info}
 
 * * *
@@ -39,7 +39,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ![텍스트](/assets/img/post/docker/docker%20%EA%B5%AC%EC%A1%B0.PNG)
 
 - **Docker 데몬** : 다른 Docker 데몬과 통신하거나 Docker API 요청을 기다리고 이미지, 컨테이너, 네트워크, 볼륨 등을 관리하는 역할을 합니다. 
-- **Docker 클라이언트** : docker 커맨드를 통해 한 개 이상의 데몬과 통신할 수 있으며 사용자가 Docker와 상호작용할 수 있는 가장 우선적인 방법이다.
+- **Docker 클라이언트** : docker 커맨드를 통해 한 개 이상의 데몬과 통신할 수 있으며 사용자가 Docker와 상호작용할 수 있는 가장 우선적인 방법입니다.
 - **Docker 레지스트리** : Docker 이미지 저장소. 기본적으로 Docker Hub라는 퍼블릭 레지스트리로 설정되어 있고, 프라이빗 레지스트리도 생성할 수 있습니다.
 
 * * *

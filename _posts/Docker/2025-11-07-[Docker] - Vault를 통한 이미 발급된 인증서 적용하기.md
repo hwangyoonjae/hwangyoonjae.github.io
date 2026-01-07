@@ -120,7 +120,7 @@ vault write auth/kubernetes/config \
   token_reviewer_jwt=@/vault/config/reviewer.jwt
 ```
 
-> kubernetes_ca_cert의 값은 **/etc/kubernetes/pki/ca.crt** 값이다.
+> kubernetes_ca_cert의 값은 **/etc/kubernetes/pki/ca.crt** 값입니다.
 {: .prompt-info}
 
 * * *

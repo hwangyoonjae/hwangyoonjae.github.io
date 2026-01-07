@@ -73,7 +73,7 @@ $ kubectl uncordon {node name}
 
 > 노드를 단순히 종료할 때는 이러한 과정을 하지 않는 이유는?
 >
-> Kubernetes의 내재된 기능과 동작 원리 때문이다.
+> Kubernetes의 내재된 기능과 동작 원리 때문입니다.
 {: .prompt-question}
 
 - 위 질문에 대한 자세한 내용은 아래와 같습니다.

@@ -8,7 +8,7 @@ image: /assets/img/post-title/network-wallpaper.jpg
 ---
 
 ## 1. CDN(Content Delivery Network)이란? :
-- Content Delivery Network의 약자로, 지리적 제약 없이 전 세계 사용자에게 빠르고 안전하게 콘텐츠를 전송할 수 있도록 하는 콘텐츠 전송 기술이다.
+- Content Delivery Network의 약자로, 지리적 제약 없이 전 세계 사용자에게 빠르고 안전하게 콘텐츠를 전송할 수 있도록 하는 콘텐츠 전송 기술입니다.
 
 * * *
 
@@ -32,7 +32,7 @@ image: /assets/img/post-title/network-wallpaper.jpg
 ## 4. CDN(Content Delivery Network) 필요기술 :
 ### 4.1 로드밸런싱(Load Balance) :
 - 사용자에게 콘텐츠 전송 요청(Delivery Request)을 받았을 때, 최적의 네트워크 환경을 찾아 연결하는 기술로 GSLB(Global Server Load Balancing)이라고 합니다.
-- 물리적으로 가장 가깝거나 여유 트래픽이 남아 있는 곳으로 접속을 유도하는 기술이다.
+- 물리적으로 가장 가깝거나 여유 트래픽이 남아 있는 곳으로 접속을 유도하는 기술입니다.
 - GSLB(Global Server Load Balancing)는 서버상태를 주기적으로 health check(건강 상태)를 수행합니다.
 
 * * *

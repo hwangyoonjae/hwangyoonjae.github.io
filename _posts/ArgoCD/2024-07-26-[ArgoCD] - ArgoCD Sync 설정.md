@@ -44,7 +44,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 - sync status의 상세정보를 보여준다.
 
 ### 3.2 Healthy 상태 :
-- 동기화 한 쿠버네티스 리소스가 이상없는 상태이다.
+- 동기화 한 쿠버네티스 리소스가 이상없는 상태입니다.
 ![healthy 상태](/assets/img/post/ArgoCD/healthy%20상태.png)
 
 * * *
@@ -78,7 +78,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 * * *
 
 ## 4. Prune :
-- 동기화된 리소스 삭제옵션으로 argocd를 통해 쿠버네티스 리소스를 동기화하고 git에서 리소스를 삭제할 때, 해당 리소스를 쿠버네티스에서 삭제할지 유지할지 결정하는 옵션이다.
+- 동기화된 리소스 삭제옵션으로 argocd를 통해 쿠버네티스 리소스를 동기화하고 git에서 리소스를 삭제할 때, 해당 리소스를 쿠버네티스에서 삭제할지 유지할지 결정하는 옵션입니다.
 - prune이 비활성화되어 있으면 argocd로 동기화한 쿠버네티스 리소스는, git에 리소스가 삭제되더라도 쿠버네티스에 삭제되지 않고 유지되고, prune이 활성화되면 git에 삭제되면 쿠버네티스 리소스도 삭제된다.
 
 * * *

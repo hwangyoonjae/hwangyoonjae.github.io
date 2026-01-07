@@ -71,7 +71,7 @@ $ docker ps -a
 ```bash
 $ docker exec -it <container-id or name> <명령어> bash
 ```
-> it는 터미널과 컨테이너가 지속적으로 연결되도록 하는 옵션이다.
+> it는 터미널과 컨테이너가 지속적으로 연결되도록 하는 옵션입니다.
 {: .prompt-info}
 
 - 위와 같은 명령어 실행 시 아래와 같이 진행된다.

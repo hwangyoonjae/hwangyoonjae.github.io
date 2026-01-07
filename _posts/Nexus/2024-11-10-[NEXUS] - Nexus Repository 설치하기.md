@@ -8,7 +8,7 @@ image: /assets/img/post-title/nexus-wallpaper.jpg
 ---
 
 ## 1. Nexus Repository란? :
--  개발 프로젝트에서 필요한 패키지, 라이브러리, 아티팩트(예: JAR 파일, NPM 패키지, Docker 이미지 등)를 저장, 관리, 배포하는 중앙 저장소 역할을 하는 툴이다.
+-  개발 프로젝트에서 필요한 패키지, 라이브러리, 아티팩트(예: JAR 파일, NPM 패키지, Docker 이미지 등)를 저장, 관리, 배포하는 중앙 저장소 역할을 하는 툴입니다.
 
 * * *
 

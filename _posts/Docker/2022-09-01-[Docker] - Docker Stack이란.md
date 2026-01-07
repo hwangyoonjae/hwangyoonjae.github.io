@@ -8,7 +8,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 1. 도커 스택(Docker Stack)이란? :
-- 여러 개의 서비스로 구성된 어플리케이션을 관리하기 위한 도구이다.
+- 여러 개의 서비스로 구성된 어플리케이션을 관리하기 위한 도구입니다.
 - Swarm mode에서만 사용 가능하다.
 
 * * *

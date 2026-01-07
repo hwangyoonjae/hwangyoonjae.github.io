@@ -61,7 +61,7 @@ $ cubrid service start
 * * *
 
 ### 5.2 노드(Node)? :
-- 노드(Node)는 CUBRID HA를 구성하는 논리적인 단위이다.
+- 노드(Node)는 CUBRID HA를 구성하는 논리적인 단위입니다.
 
 * * *
 

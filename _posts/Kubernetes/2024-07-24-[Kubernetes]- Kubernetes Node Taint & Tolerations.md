@@ -14,7 +14,7 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 * * *
 
 ### 1.2 Toleration이란? :
-- Pod의 속성으로, 특정 Taint를 무시하고 해당 노드에 스케줄링될 수 있도록 허용하는 것이다.
+- Pod의 속성으로, 특정 Taint를 무시하고 해당 노드에 스케줄링될 수 있도록 허용하는 것입니다.
 
 * * *
 
@@ -34,7 +34,7 @@ $ kubectl taint node {nodename} {key}={value}:{option}
 # kubectl taint node k8s-worker1 size=large:NoSchedule
 ```
 
-> option : Taint에 대한 역할 제한이다. 일반적으로 NoSchedule, PreferNoschedule, NoExecute 3가지 설정이 존재합니다.
+> option : Taint에 대한 역할 제한입니다. 일반적으로 NoSchedule, PreferNoschedule, NoExecute 3가지 설정이 존재합니다.
 {: .prompt-info }
 
 | Effect 종류 | 개요 |
@@ -82,7 +82,7 @@ spec:
 ```
 
 > tolerations에서 여러 개의 key 값을 작성하는 이유는?
-> 파드가 노드의 다양한 taints를 무시(생성)하도록 허용하기 위해서다.
+> 파드가 노드의 다양한 taints를 무시(생성)하도록 허용하기 위해서입니다.
 {: .prompt-tip}
 
 ```bash

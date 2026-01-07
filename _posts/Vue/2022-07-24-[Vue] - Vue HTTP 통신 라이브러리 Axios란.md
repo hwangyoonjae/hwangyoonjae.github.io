@@ -8,7 +8,7 @@ image: /assets/img/post-title/vue-wallpaper.jpg
 ---
 
 ## 1. Axios란? :
-- HTTP 통신 라이브러리이다.
+- HTTP 통신 라이브러리입니다.
 - Promise 기반의 API 형식으로 자바스크립트 비동기 처리 방식을 사용하며, IE8 이상을 포함한 모든 최신 브라우저를 지원합니다.
 
 * * *
@@ -80,7 +80,7 @@ axios.post('URL 주소'[, data[,config]]).then().catch();
 
 | 옵션 | 내용 |
 |:-----:|:-----:|
-|**method**|요청을 할 때 사용할 요청 메서드이고, method의 기본값은 get이다.|
+|**method**|요청을 할 때 사용할 요청 메서드이고, method의 기본값은 get입니다.|
 |**url**|액시오스 요청에 사용될 서버의 URL을 말합니다.|
 |**baseURL**|액시오스 인스턴스를 생성할 때, 인스턴스의 기본 URL 값을 정할 수 있는 속성이며, 보통 API 서버의 기본 도메인을 설정하고, 인스턴스 별로 URL을 뒤에 추가하여 사용합니다.|
 |**headers**|헤더를 수정해서 보내야 한다면 headers를 사용합니다.|
@@ -88,6 +88,6 @@ axios.post('URL 주소'[, data[,config]]).then().catch();
 |**data**|HTTP 요청 보디에 실어서 보낼 데이터를 의미하고, 주로 데이터를 조작해야 하는 PUT, POST, DELETE, PATCH 등의 메서드에서 사용합니다.|
 |**timeout**|HTTP 요청을 보내고 응답을 받기까지의 제한 시간을 설정하는 속성이고, 요청 시간이 지정된 값을 초과하면 에러가 발생합니다.|
 |**responseType**|서버로부터 어떠한 데이터 형식으로 응답받을지 지정하는 것이고, 옵션으로는 arraybuffer, 
-document, json, text, stream이 가능하며, 기본 값은 json이다.|
+document, json, text, stream이 가능하며, 기본 값은 json입니다.|
 
 * * *

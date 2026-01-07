@@ -8,7 +8,7 @@ image: /assets/img/post-title/redis-wallpaper.jpg
 ---
 
 ## 1. Redis란? :
-- **Remote Dictionary Server**의 약자로, Key-Value 구조의 비정형 데이터를 저장하고 관리하기 위한 오픈소스 기반의 비 관계형 데이터베이스 관리 시스템(DBMS)이다.
+- **Remote Dictionary Server**의 약자로, Key-Value 구조의 비정형 데이터를 저장하고 관리하기 위한 오픈소스 기반의 비 관계형 데이터베이스 관리 시스템(DBMS)입니다.
 - 별도의 쿼리 없이 Key를 통해 빠르게 결과를 가져올 수 있고, 디스크에 데이터를 쓰는 구조가 아닌 메모리에서 데이터를 처리하기 때문에 작업 속도가 상당히 빠르다.
 
 * * *

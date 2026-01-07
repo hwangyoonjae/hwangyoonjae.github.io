@@ -8,10 +8,10 @@ image: /assets/img/post-title/mariadb-wallpaper.jpg
 ---
 
 ## 1. MariaDB란? :
-- 오픈 소스의 관계형 데이터베이스 관리 시스템(RDBMS)이다.
+- 오픈 소스의 관계형 데이터베이스 관리 시스템(RDBMS)입니다.
 
 ### 1.1 RDBMS(Relational Database Management System)란? :
-- 관계형 데이터베이스를 생성하고 수정하고 관리할 수 있는 소프트웨어이다.
+- 관계형 데이터베이스를 생성하고 수정하고 관리할 수 있는 소프트웨어입니다.
 - RDBMS의 테이블은 서로 연관되어 있어 일반 DBMS보다 효율적으로 데이터를 저장, 구성 및 관리할 수 있습니다.
 
 * * *

@@ -8,7 +8,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 1. 도커 컴포즈(Docker Compose)란? :
-- 복수 개의 컨테이너가 유기적으로 묶여서 하나의 도커 애플리케이션으로 동작할 수 있도록 구성하는 도구이며, 복수 개의 컨테이너 생성 및 실행을 자동화하고 관리하는 기능이다.
+- 복수 개의 컨테이너가 유기적으로 묶여서 하나의 도커 애플리케이션으로 동작할 수 있도록 구성하는 도구이며, 복수 개의 컨테이너 생성 및 실행을 자동화하고 관리하는 기능입니다.
 
 * * *
 
@@ -24,8 +24,8 @@ image: /assets/img/post-title/docker_wallpaper.jpg
     - **#** : 해당 라인을 주석처리합니다.
     - **---** : 문서의 시작을 알린다.(옵션)
     - **...** : 문서의 끝을 알린다.(옵션)
-    - **key** : 딕셔너리 자료형의 키 값과 동일 개념이다.
-    - **value** : 딕셔너리 자료형의 벨류 값과 동일 개념이다.
+    - **key** : 딕셔너리 자료형의 키 값과 동일 개념입니다.
+    - **value** : 딕셔너리 자료형의 벨류 값과 동일 개념입니다.
 
 * * *
 
@@ -37,14 +37,14 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
 - **문법**
     - **version** : docker compose의 파일 포맷 버전을 지정합니다.<br>
-    <span style="color:#FA5858; font-size:12px">※ 기본적으로 버전 3을 사용하는 것이 일반적이다.</span>
+    <span style="color:#FA5858; font-size:12px">※ 기본적으로 버전 3을 사용하는 것이 일반적입니다.</span>
 
     - **services** : 한개 또는 여러 개의 docker container를 설정합니다.
 
     - **image** : docker container의 이름을 정의합니다.<br>
     <span style="color:#FA5858; font-size:12px">※ Docker Hub에 있는 이미지를 사용하여 docker container를 작성할 경우 image를 설정할 수 있습니다.</span>
 
-    - **restart** : docker container가 다운되었을 경우, 항상 재시작하는 설정이다.
+    - **restart** : docker container가 다운되었을 경우, 항상 재시작하는 설정입니다.
 
     - **volumes** : 로컬에서 작업 할 폴더의 위치와 컨테이너의 위치를 연결시켜준다.<br>
     <span style="color:#D8D8D8; font-size:12px">left{로컬스토리지}:right{컨테이너내부}</span><br>
@@ -61,7 +61,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
     - **ports** : docker run 명령의 -p 옵션과 동일한 역할을 합니다.<br>
     <span style="color:#D8D8D8; font-size:12px">호스트 머신의 포트번호: 컨테이너의 포트번호</span><br>
-    <span style="color:#FA5858; font-size:12px">※ 포트번호를 입력할 때에는 반드시 쌍따옴표 안에 작성해야 합니다. (YAML 문법에서 숫자:숫자 는 시간으로 해석하기 때문이다.)</span>
+    <span style="color:#FA5858; font-size:12px">※ 포트번호를 입력할 때에는 반드시 쌍따옴표 안에 작성해야 합니다. (YAML 문법에서 숫자:숫자 는 시간으로 해석하기 때문입니다.)</span>
 
     - **networks** : docker container 간의 네트워크 분리를 위해 추가로 설정을 합니다.
 

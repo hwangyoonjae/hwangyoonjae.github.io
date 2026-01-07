@@ -41,7 +41,7 @@ fi
 * * *
 
 ## 3. EUID란?:
-- Effective User ID의 약어로 어떤 유저권한으로 프로세스를 실행하고 있는지를 나타내는 값이다.
-- shell script 파일을 실행하게 되면 Bash Shell은 항상 순차적으로 실행되기 때문에 스크립트 맨 위에서 if 구문으로 root가 맞는지 확인하면 되고, root의 EUID 값은 “0”이다.
+- Effective User ID의 약어로 어떤 유저권한으로 프로세스를 실행하고 있는지를 나타내는 값입니다.
+- shell script 파일을 실행하게 되면 Bash Shell은 항상 순차적으로 실행되기 때문에 스크립트 맨 위에서 if 구문으로 root가 맞는지 확인하면 되고, root의 EUID 값은 “0”입니다.
 
 * * *

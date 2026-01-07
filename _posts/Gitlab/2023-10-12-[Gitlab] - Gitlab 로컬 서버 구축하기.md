@@ -13,7 +13,7 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 * * *
 
 ## GitLab이란?:
-- 웹 기반 협업 및 DevOps 플랫폼으로, 소프트웨어 개발 및 버전 관리를 지원하는 강력한 도구이다.
+- 웹 기반 협업 및 DevOps 플랫폼으로, 소프트웨어 개발 및 버전 관리를 지원하는 강력한 도구입니다.
 
 * * *
 

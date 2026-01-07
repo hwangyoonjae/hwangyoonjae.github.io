@@ -104,6 +104,6 @@ $ crontab -e
 00 00 * * 7 /usr/sbin/logrotate -f /etc/logrotate.conf
 ```
 
-<span style="color:#FA5858; font-size:12px">※ cron 형식 : (분) (시) (날짜) (달) (요일) (작업) 순으로 입력되며, cron에 대해서는 블로그 게시글 추가 예정이다.</span>
+<span style="color:#FA5858; font-size:12px">※ cron 형식 : (분) (시) (날짜) (달) (요일) (작업) 순으로 입력되며, cron에 대해서는 블로그 게시글 추가 예정입니다.</span>
 
 * * *

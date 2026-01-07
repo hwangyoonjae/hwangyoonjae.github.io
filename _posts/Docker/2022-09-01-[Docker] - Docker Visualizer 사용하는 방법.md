@@ -8,7 +8,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 ---
 
 ## 1. Docker Visualizer이란? :
-- Swarm mode에서 노드와 컨테이너의 분포상태를 시각적으로 볼 수 있게해주는 도구이다.
+- Swarm mode에서 노드와 컨테이너의 분포상태를 시각적으로 볼 수 있게해주는 도구입니다.
 
 * * *
 
