@@ -22,11 +22,11 @@ Bridge, Host, Overlay, Macvlan, None, Network plugins
 * * *
 
 ## 3. Docker network Driver Bridge :
-- Docker를 설치하게 되면 자동으로 Host machine의 Network interface에 Docker0라는 Virtual interface가 생성된다.
+- Docker를 설치하게 되면 자동으로 Host machine의 Network interface에 Docker0라는 Virtual interface가 생성됩니다.
 
 ```html
 [Docker0의 특징]
-• Gateway는 자동으로 172.17.0.1로 설정 되며 16 bit netmask(255.255.0.0)로 설정된다.
+• Gateway는 자동으로 172.17.0.1로 설정 되며 16 bit netmask(255.255.0.0)로 설정됩니다.
 • 이 ip는 DHCP를 통해 할당 받는 것은 아니며, docker 내부 로직에 의해 자동 할당 받는 것입니다.
 • docker0 는 일반적인 interface가 아니며, virtual ethernet bridge 입니다.
 ```

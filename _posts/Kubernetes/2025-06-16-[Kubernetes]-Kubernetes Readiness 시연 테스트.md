@@ -39,7 +39,7 @@ spec:
           periodSeconds: 5
 ```
 
-> 해당 Pod는 /ready 경로가 없으므로, 초기 상태부터 Readiness에 실패하게 된다.
+> 해당 Pod는 /ready 경로가 없으므로, 초기 상태부터 Readiness에 실패하게 됩니다.
 {: .prompt-warning}
 
 * * *
@@ -83,7 +83,7 @@ $ kubectl apply -f readiness-demo.yaml
 * * *
 
 ### 4.2 Pod Ready 상태 확인하기 :
-- Ready 상태가 1/1이 된다.
+- Ready 상태가 1/1이 됩니다.
 
 ```bash
 $ kubectl get pods

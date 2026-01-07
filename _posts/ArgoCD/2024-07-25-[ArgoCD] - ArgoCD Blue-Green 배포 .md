@@ -8,7 +8,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
 
 ## 1. Argo rollout 설치하기 :
-- Argo rollout 설치해야 하므로, 아래 링크를 통해서 설치 진행하면된다.
+- Argo rollout 설치해야 하므로, 아래 링크를 통해서 설치 진행하면됩니다.
 > * [Argo rollout 설치하기](https://hwangyoonjae.github.io/posts/ArgoCD-ArgoCD-Rollout/ "Argo rollout 설치하기")
 
 * * *
@@ -257,7 +257,7 @@ spec:
 > 필자는 Blue-Green 배포도 자동으로 승격하여 문제 발생 시 롤백하는 방식으로 구현하고 싶어 테스트를 진행하였다.
 {: .prompt-example}
 
-- Blue-Green Rollout 매니페스트 파일은 아래와 같이 구성하고, 환경에 따라 옵션을 사용하면 된다.
+- Blue-Green Rollout 매니페스트 파일은 아래와 같이 구성하고, 환경에 따라 옵션을 사용하면 됩니다.
 
 ```yaml
   strategy:

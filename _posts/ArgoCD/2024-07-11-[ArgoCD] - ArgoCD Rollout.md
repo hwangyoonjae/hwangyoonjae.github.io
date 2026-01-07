@@ -66,8 +66,8 @@ $ kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/re
 
 ## 4. Argo CD 배포 방식 :
 ### 4.1 롤링 업데이트 (Rolling Update) : 
-- 새로운 버전의 애플리케이션을 점진적으로 배포합니다. 기존의 파드가 새 버전의 파드로 점진적으로 교체된다.
-- 배포 중 다운타임이 없으며, 사용자는 점진적으로 새로운 버전을 접하게된다.
+- 새로운 버전의 애플리케이션을 점진적으로 배포합니다. 기존의 파드가 새 버전의 파드로 점진적으로 교체됩니다.
+- 배포 중 다운타임이 없으며, 사용자는 점진적으로 새로운 버전을 접하게됩니다.
 
 ```yaml
 apiVersion: apps/v1
@@ -165,7 +165,7 @@ spec:
         - containerPort: 80
 ```
 
-> argo-rollout 배포 기능 사용 시 strategy의 **Blue-Green** 또는 **Canary** 중 선택하여 입력하면된다.
+> argo-rollout 배포 기능 사용 시 strategy의 **Blue-Green** 또는 **Canary** 중 선택하여 입력하면됩니다.
 {: .prompt-info}
 
 * * *

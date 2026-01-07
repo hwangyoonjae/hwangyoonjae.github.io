@@ -8,7 +8,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 ---
 
 ## 1. Argo rollout 설치하기 :
-- Argo rollout 설치해야 하므로, 아래 링크를 통해서 설치 진행하면된다.
+- Argo rollout 설치해야 하므로, 아래 링크를 통해서 설치 진행하면됩니다.
 > * [Argo rollout 설치하기](https://hwangyoonjae.github.io/posts/ArgoCD-ArgoCD-Rollout/ "Argo rollout 설치하기")
 
 * * *

@@ -152,7 +152,7 @@ $ docker logs -f vault
 | 항목 | 설명 |
 |------|------|
 | **Unseal Key** | Portion 입력칸 위에서 받은 5개의 Unseal Key 중에서 하나를 입력하는 곳입니다.
-| **Unseal** | 버튼 입력 후 클릭하면, Vault가 이 키 조각을 기억하고 몇 개가 더 필요한지 알려준다. 예를 들어 threshold가 3이면, “1 of 3 unseal keys provided” 식으로 표시된다.
+| **Unseal** | 버튼 입력 후 클릭하면, Vault가 이 키 조각을 기억하고 몇 개가 더 필요한지 알려준다. 예를 들어 threshold가 3이면, “1 of 3 unseal keys provided” 식으로 표시됩니다.
 
 * * *
 

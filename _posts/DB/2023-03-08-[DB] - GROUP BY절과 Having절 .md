@@ -15,7 +15,7 @@ image: /assets/img/post-title/db-wallpaper.jpg
 
 ## 2. GROUP BY절이란? :
 - 같은 값을 가진 행을 그룹짓는 SQL 명령어
-- COUNT(), MAX(), MIN(), SUM(), AVG() 등 집계 함수와 함께 사용된다.
+- COUNT(), MAX(), MIN(), SUM(), AVG() 등 집계 함수와 함께 사용됩니다.
 - FROM절과 WHERE절 뒤에 위치합니다.
 
 * * *

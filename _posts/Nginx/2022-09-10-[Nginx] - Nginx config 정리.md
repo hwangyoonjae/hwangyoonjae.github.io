@@ -8,8 +8,8 @@ image: /assets/img/post-title/nginx-wallpaper.jpg
 ---
 
 ## 1. Configuration File 구조 분석하기 :
-- Nginx는 여러 모듈들로 구성되며, 이러한 모듈들은 configuration파일에 있는 directives에 의해 제어된다.
-- Nginx의 기본 설정 파일은 **nginx.conf**이고, 초기 설치 시 설정 값은 아래와 같이 구성된다.
+- Nginx는 여러 모듈들로 구성되며, 이러한 모듈들은 configuration파일에 있는 directives에 의해 제어됩니다.
+- Nginx의 기본 설정 파일은 **nginx.conf**이고, 초기 설치 시 설정 값은 아래와 같이 구성됩니다.
   
 ![텍스트](/assets/img/post/Linux/nginx.conf%20%EC%B4%88%EA%B8%B0%EC%84%A4%EC%B9%98.PNG)
 
@@ -54,7 +54,7 @@ image: /assets/img/post-title/nginx-wallpaper.jpg
   
   - **log_format** : 로그포멧 이름과 형식을 지정하고, 가상호스트 설정시 로그파일 뒤에 로그포멧 이름을 지정하면 해당 포맷대로 로그가 쌓인다.
 
-  - **sendfile** : on으로 설정시 read/write시 하드디스크 io를 일으키지 않고 커널 내부에서 파일을 복사하여 속도 향상된다.
+  - **sendfile** : on으로 설정시 read/write시 하드디스크 io를 일으키지 않고 커널 내부에서 파일을 복사하여 속도 향상됩니다.
 
   - **keepalive_timeout** : 서버에 접속시 클라이언트와 커넥션을 열린채로 유지하는 시간입니다.
 

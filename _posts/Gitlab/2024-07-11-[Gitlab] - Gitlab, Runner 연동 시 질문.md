@@ -40,7 +40,7 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 >Enter the default Docker image (for example, ruby:2.7):
 {: .prompt-warning }
 
-- 이 이미지는 .gitlab-ci.yml 파일에서 특정 이미지가 지정되지 않은 경우 사용된다.
+- 이 이미지는 .gitlab-ci.yml 파일에서 특정 이미지가 지정되지 않은 경우 사용됩니다.
 - 예를 들어, 빌드, 테스트, 배포 작업에서 사용할 도구가 포함된 이미지를 지정하면, 해당 이미지가 기본적으로 사용합니다.
 
 ---

@@ -81,7 +81,7 @@ $ gem install jekyll bundle
       ```bash
       $ rbenv install 2.6.10
       ```
-    + 아래와 같이 로그가 보이면서 설치가 완료된다.
+    + 아래와 같이 로그가 보이면서 설치가 완료됩니다.
       ![설치할 수 Ruby 버전 설치 로그](/assets/img/post/local/설치할&#32;수&#32;Ruby&#32;버전&#32;설치&#32;로그.png)
     + rbenv로 글로벌 버전을 2.6.10로 변경합니다.
       ```bash
@@ -110,7 +110,7 @@ $ gem install jekyll bundle
 * * *
 
 ### 1.4 MAC 로컬 실행하기 :
-- **http://127.0.0.1:4000/**로 아래와 같이 접속된다.
+- **http://127.0.0.1:4000/**로 아래와 같이 접속됩니다.
 
 ![jekyll 로컬 실행화면](/assets/img/post/local/jekyll%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
 

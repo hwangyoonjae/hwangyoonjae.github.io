@@ -8,7 +8,7 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 ---
 
 ## 키워드 :
-- GitLab CI/CD 파이프라인 구성에는 다음이 포함된다.
+- GitLab CI/CD 파이프라인 구성에는 다음이 포함됩니다.
 
 ### 파이프라인 동작을 구성하는 글로벌 키워드 :
 

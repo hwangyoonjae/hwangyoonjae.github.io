@@ -43,7 +43,7 @@ $ kubectl describe nodes/{node명}
 * * *
 
 ### 1.3 label selector 삭제하기 :
-- 라벨을 삭제하려면 라벨 키 뒤에 대시(-)를 붙여 명령어를 실행하면된다.
+- 라벨을 삭제하려면 라벨 키 뒤에 대시(-)를 붙여 명령어를 실행하면됩니다.
 
 ```bash
 $ kubectl label node {node명} {label-key}-

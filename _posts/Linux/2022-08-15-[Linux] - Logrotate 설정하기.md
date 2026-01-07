@@ -33,7 +33,7 @@ image: /assets/img/post-title/linux-wallpaper.jpg
 $ rpm -qa | grep logrotate
 ```
 
-- 설치가 되었다면, 아래 그림과 같이 확인된다.
+- 설치가 되었다면, 아래 그림과 같이 확인됩니다.
 
 ![텍스트](/assets/img/post/Linux/Logrotate%20%EC%84%A4%EC%B9%98%ED%99%95%EC%9D%B8.PNG)
 

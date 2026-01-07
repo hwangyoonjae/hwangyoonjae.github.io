@@ -15,11 +15,11 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 $ git fetch origin
 ```
 
-- fetch 명령어 실행 시 변경 사항이 있을 경우 아래 그림과 같이 실행된다.
+- fetch 명령어 실행 시 변경 사항이 있을 경우 아래 그림과 같이 실행됩니다.
 
 ![git fetch 명령어 실행화면](/assets/img/post/Gitlab/git%20fetch%20명령어%20실행화면.png)
 
-> **git fetch**는 git pull을 하기 전의 준비 단계라고 생각하면 된다.
+> **git fetch**는 git pull을 하기 전의 준비 단계라고 생각하면 됩니다.
 > 
 {: .prompt-info}
 

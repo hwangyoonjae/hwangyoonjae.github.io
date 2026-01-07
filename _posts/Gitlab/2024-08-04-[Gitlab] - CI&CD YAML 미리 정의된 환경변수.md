@@ -13,7 +13,7 @@ image: /assets/img/post-title/gitLab-wallpaper.jpg
 |환경변수|설명|
 |-----|-----|
 |CI_COMMIT_BRANCH|현재 커밋이 속한 브랜치를 나타낸다.|
-|CI_COMMIT_TAG|현재 커밋이 태그로 작성된 경우 이 변수에 태그 이름이 포함된다.|
+|CI_COMMIT_TAG|현재 커밋이 태그로 작성된 경우 이 변수에 태그 이름이 포함됩니다.|
 |CI_PIPELINE_ID|현재 파이프라인의 고유 ID를 나타낸다.|
 |CI_PROJECT_NAME|현재 파이프라인이 실행되고 있는 프로젝트의 이름을 나타낸다.|
 |CI_JOB_NAME|현재 실행 중인 잡의 이름을 나타낸다.|

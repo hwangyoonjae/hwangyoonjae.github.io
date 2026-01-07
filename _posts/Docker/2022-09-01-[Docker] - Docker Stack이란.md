@@ -15,7 +15,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
 ### 1.1 도커 스택(Docker Stack)의 구조 :
 - Docker Compose와 비슷하지만 지원하는 옵션이나 내부 로직에서 차이가 있습니다.
-- 기본 네트워크가 브릿지 네트워크로 생성되지만 **Docker Stack**은 Overlay 네트워크가 생성된다.
+- 기본 네트워크가 브릿지 네트워크로 생성되지만 **Docker Stack**은 Overlay 네트워크가 생성됩니다.
 
 * * *
 

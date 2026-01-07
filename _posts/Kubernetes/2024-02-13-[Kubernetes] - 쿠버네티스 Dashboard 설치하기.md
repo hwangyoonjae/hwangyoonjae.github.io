@@ -14,7 +14,7 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 
 ## 2. Kubernetes 설치 전 준비사항 :
 - Kubernetes 클러스터 구축을 해야합니다.
-- Kubernetes 설치를 해야하는 경우 아래 링크 참조하면된다.
+- Kubernetes 설치를 해야하는 경우 아래 링크 참조하면됩니다.
 > * [Kubernetes 설치방법](https://hwangyoonjae.github.io/kubernetes/Kubernetes-%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0(%EB%8F%84%EC%BB%A4-X)/ "Kubernetes 설치방법")
 
 * * *

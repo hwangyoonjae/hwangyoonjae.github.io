@@ -102,7 +102,7 @@ $ systemctl enable nginx
 * * *
 
 ### 2.6 Nginx 실행화면 :
-- 위와 같은 방법 진행 후 실행하면 아래와 같은 화면이 나오면서 웹 페이지 정상 구동된다.
+- 위와 같은 방법 진행 후 실행하면 아래와 같은 화면이 나오면서 웹 페이지 정상 구동됩니다.
 
 ![텍스트](/assets/img/post/Linux/Nginx%20%EC%84%B1%EA%B3%B5%ED%99%94%EB%A9%B4.PNG)
 

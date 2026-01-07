@@ -9,7 +9,7 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 
 ## 1. Sync Status :
 - git과 쿠버네티스 현재 상태를 비교한 결과를 보여준다.
-- 디폴트로 3분마다 또는 사용자가 Refresh을 수행하면 Sync Status가 업데이트된다.
+- 디폴트로 3분마다 또는 사용자가 Refresh을 수행하면 Sync Status가 업데이트됩니다.
 
 > sync status는 **Synced**, **Out Of Sync** 2종류가 있습니다.
 >
@@ -79,6 +79,6 @@ image: /assets/img/post-title/argocd-wallpaper.jpg
 
 ## 4. Prune :
 - 동기화된 리소스 삭제옵션으로 argocd를 통해 쿠버네티스 리소스를 동기화하고 git에서 리소스를 삭제할 때, 해당 리소스를 쿠버네티스에서 삭제할지 유지할지 결정하는 옵션입니다.
-- prune이 비활성화되어 있으면 argocd로 동기화한 쿠버네티스 리소스는, git에 리소스가 삭제되더라도 쿠버네티스에 삭제되지 않고 유지되고, prune이 활성화되면 git에 삭제되면 쿠버네티스 리소스도 삭제된다.
+- prune이 비활성화되어 있으면 argocd로 동기화한 쿠버네티스 리소스는, git에 리소스가 삭제되더라도 쿠버네티스에 삭제되지 않고 유지되고, prune이 활성화되면 git에 삭제되면 쿠버네티스 리소스도 삭제됩니다.
 
 * * *

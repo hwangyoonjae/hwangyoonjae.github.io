@@ -35,7 +35,7 @@ services:
 
 > 컨테이너 외부의 호스트 디렉토리 /data/volume/nexus/data UID 200 권한 부여하기
 >
-> Nexus Repository Manager는 컨테이너 내부에서 기본적으로 사용자 ID (UID) 200을 사용해 실행된다.
+> Nexus Repository Manager는 컨테이너 내부에서 기본적으로 사용자 ID (UID) 200을 사용해 실행됩니다.
 > 
 > 이 UID는 Nexus 애플리케이션을 실행하는 사용자에 해당하며, 이 사용자만이 /nexus-data 디렉토리에 접근하여 파일을 읽고 쓸 수 있습니다.
 {: .prompt-tip}

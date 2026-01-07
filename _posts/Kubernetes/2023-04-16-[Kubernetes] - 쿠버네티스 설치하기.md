@@ -15,7 +15,7 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 
 ## 2. Kubernetes 설치 전 준비사항 :
 ### 2.1 Docker 설치하기 :
-- docker 설치를 진행해야하므로 아래 링크 참조하면된다.
+- docker 설치를 진행해야하므로 아래 링크 참조하면됩니다.
 > * [Docker 설치방법](https://hwangyoonjae.github.io/docker/Docker-Docker-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/ "Docker 설치방법")
 
 * * *
@@ -140,7 +140,7 @@ $ kubeadm init --apiserver-advertise-address {k8s-master IP} --pod-network-cidr=
 ```
 ![Master Node 구성완료](/assets/img/post/kubernetes/Master%20Node%20%EA%B5%AC%EC%84%B1%EC%99%84%EB%A3%8C.PNG)
 
-- 혹시나 Kubernetes 설치 간에 문제 발생 시 아래 링크를 참고하여 오류를 해결하면된다.
+- 혹시나 Kubernetes 설치 간에 문제 발생 시 아래 링크를 참고하여 오류를 해결하면됩니다.
 > * [Kubernetes 오류 해결](https://hwangyoonjae.github.io/kubernetes/Kubernetes-쿠버네티스-설치-중-오류-해결하기/ "Kubernetes 오류 해결")<br>
 
 > 필자가 설치한 과정에서 문제 발생 시 조치한 사항으로 독자의 테스트 과정에서 문제 발생에 대한 조치사항은 없을 수 있습니다.

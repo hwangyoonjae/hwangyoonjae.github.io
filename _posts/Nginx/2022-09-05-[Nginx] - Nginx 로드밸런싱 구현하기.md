@@ -14,7 +14,7 @@ image: /assets/img/post-title/nginx-wallpaper.jpg
 
 ## 2. Nginx 로드 밸런싱 메서드 :
 ### 2.1 Round Robin (라운드 로빈) :
-- 서버의 가중치를 고려해, 실제 서버들을 처음부터 차례로 선택해 가며 모든 서버로 균등하게 분산 된다.<br>
+- 서버의 가중치를 고려해, 실제 서버들을 처음부터 차례로 선택해 가며 모든 서버로 균등하게 분산 됩니다.<br>
 <span style="color:#FA5858; font-size:12px">※ 로드 밸런싱 메서드 입력 안하면 default 값입니다.</span>
 - 장점 : 거의 균등하게 분산 가능하다.
 - 단점 : 경로가 보장 되지 않는다.

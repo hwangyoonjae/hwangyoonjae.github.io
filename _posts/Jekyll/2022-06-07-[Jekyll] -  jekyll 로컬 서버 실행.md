@@ -25,7 +25,7 @@ image: /assets/img/post-title/jekyll-wallpaper.jpg
 <br>
 1번과 3번을 선택하라는 창이 뜨면 **1번을(기본설치)** 누르고 Enter를 누른다.
 <br>
-설치가 완료되고 Enter를 한번더 누르면 CMD창이 종료된다.
+설치가 완료되고 Enter를 한번더 누르면 CMD창이 종료됩니다.
 <br>
 
 ![ruby 설치화면(1)](/assets/img/post/local/ruby%20%EC%84%A4%EC%B9%98%ED%99%94%EB%A9%B4(1).png)
@@ -47,7 +47,7 @@ $ bundler install
 
 ### 1.3 서버 실행하기 :
 
-- 명령어를 통해 서버를 로컬서버를 실행합니다. (서버를 종료시키려면 ctrl + c를 누르면 된다.)
+- 명령어를 통해 서버를 로컬서버를 실행합니다. (서버를 종료시키려면 ctrl + c를 누르면 됩니다.)
 
 ```bash
 $ bundle exec jekyll serve 
@@ -72,7 +72,7 @@ $ bundle exec jekyll serve
 * * *
 
 ### 1.4 Window 로컬 실행하기 :
-- **http://127.0.0.1:4000/**로 접속하면 아래와 같이 접속된다.
+- **http://127.0.0.1:4000/**로 접속하면 아래와 같이 접속됩니다.
   
 ![jekyll 로컬 실행화면](/assets/img/post/local/jekyll%20%EB%A1%9C%EC%BB%AC%20%EC%8B%A4%ED%96%89%ED%99%94%EB%A9%B4.PNG)
 

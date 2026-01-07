@@ -34,7 +34,7 @@ openssl req -sha512 -new \
 - x509 v3 확장 파일 생성
 ```bash
 cat > v3.ext <<-EOF
-# 기본 제약 사항: 이 인증서는 CA가 아닌 서버용으로 사용된다.
+# 기본 제약 사항: 이 인증서는 CA가 아닌 서버용으로 사용됩니다.
 basicConstraints=CA:FALSE
 # 키 사용: 인증서의 공개 키가 어떻게 사용될 수 있는지를 제어합니다.
 keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment

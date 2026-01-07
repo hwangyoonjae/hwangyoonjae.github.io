@@ -13,7 +13,7 @@ image: /assets/img/post-title/redis-wallpaper.jpg
 * * *
 
 ## 2. Redis 설치하기 :
-- Redis 설치해야하므로 경우 아래 링크 참조하면된다.
+- Redis 설치해야하므로 경우 아래 링크 참조하면됩니다.
 > * [Redis 설치방법](https://hwangyoonjae.github.io/redis/Redis-Redis-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/ "Redis 설치방법")
 
 * * *

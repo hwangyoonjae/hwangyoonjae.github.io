@@ -30,7 +30,7 @@ image: /assets/img/post-title/jenkins-wallpaper.jpg
 
 * * *
 
-- Jenkins Github 연동이 필요한 경우에는 아래 게시글 참고하면 된다.
+- Jenkins Github 연동이 필요한 경우에는 아래 게시글 참고하면 됩니다.
 > * [Jenkins Github 연동하기](https://hwangyoonjae.github.io/jenkins/Jenkins-Jenkins-Github-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/ "Jenkins Github 연동하기")
 
 * * *

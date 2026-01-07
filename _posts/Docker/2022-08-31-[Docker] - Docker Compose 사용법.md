@@ -31,7 +31,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
 ## 3. 도커 컴포즈(Docker Compose) 사용법 이해하기 :
 ### 3.1 docker-compose.yml 예시 :
-- 기본적으로 docker-compose.yml은 version, services, volumes, networks의 카테고리로 작성되지만, 주로 version과 services가 많이 사용된다.
+- 기본적으로 docker-compose.yml은 version, services, volumes, networks의 카테고리로 작성되지만, 주로 version과 services가 많이 사용됩니다.
 
 ![텍스트](/assets/img/post/docker/docker%20compose%20%EC%9E%91%EC%84%B1%20%EC%98%88%EC%8B%9C.PNG)
 
@@ -48,7 +48,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
     - **volumes** : 로컬에서 작업 할 폴더의 위치와 컨테이너의 위치를 연결시켜준다.<br>
     <span style="color:#D8D8D8; font-size:12px">left{로컬스토리지}:right{컨테이너내부}</span><br>
-    <span style="color:#FA5858; font-size:12px">※ 여러 개의 volume을 지정할 수 있고, 리스트처럼 작성하면 된다.</span>
+    <span style="color:#FA5858; font-size:12px">※ 여러 개의 volume을 지정할 수 있고, 리스트처럼 작성하면 됩니다.</span>
 
     - **environment** : dockerfile의 ENV 옵션과 동일한 역할을 합니다.<br>
      <span style="color:#FA5858; font-size:12px">※ env_file 옵션으로 환경변수 값이 들어있는 파일을 읽을 수도 있습니다. (패스워드 등의 보안을 위한 방법)</span>

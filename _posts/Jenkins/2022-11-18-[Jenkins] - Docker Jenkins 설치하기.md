@@ -90,7 +90,7 @@ docker run -d -p 9000:8080 -v /jenkins:/var/jenkins_home --name jenkins_server -
 * * *
 
 ### 3.1 Jenkins 비밀번호 입력하기 :
-- Jenkins 실행 시 아래와 같이 실행된다.
+- Jenkins 실행 시 아래와 같이 실행됩니다.
 
 ![텍스트](/assets/img/post/docker/docker%20jenkins%20%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8.PNG
 

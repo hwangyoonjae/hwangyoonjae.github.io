@@ -22,7 +22,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 [![텍스트](/assets/img/post/docker/%EA%B0%80%EC%83%81%ED%99%94vs%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EC%B0%A8%EC%9D%B4.PNG)](/assets/img/post/docker/%EA%B0%80%EC%83%81%ED%99%94vs%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EC%B0%A8%EC%9D%B4.PNG)
 
 - 리눅스에서는 이 방식을 리눅스 컨테이너라 하고, 단순히 프로세스를 격리시키기 때문에 가볍고 빠르게 동작합니다.
-- 하나의 서버에 여러개의 컨테이너를 실행하면 서로 영향을 미치지 않고 독립적으로 실행된다.
+- 하나의 서버에 여러개의 컨테이너를 실행하면 서로 영향을 미치지 않고 독립적으로 실행됩니다.
 
 * * *
 

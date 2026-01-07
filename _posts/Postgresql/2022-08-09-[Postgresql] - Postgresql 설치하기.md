@@ -46,7 +46,7 @@ $ rpm -Uvh pgdg-redhat-repo-latest.noarch.rpm --nodeps
 * * *
 
 ### 2.3 기본 데이터베이스 생성하기 :
-- initdb 명령어를 통해 기본 데이터베이스를 설치하고, 기본 데이터베이스는 postgres라는 이름으로 생성된다.
+- initdb 명령어를 통해 기본 데이터베이스를 설치하고, 기본 데이터베이스는 postgres라는 이름으로 생성됩니다.
 
 ```bash
 # PostgreSQL 초기화
