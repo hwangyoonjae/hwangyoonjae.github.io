@@ -13,7 +13,7 @@ image: /assets/img/post-title/harbor-wallpaper.jpg
 * * *
 
 ### 1.1 Harbor를 사용하는 이유? :
-- 회사에서 쿠버네티스 Pod 구성을 위해 컨테이너 이미지를 DockerHub에서 이미지 Pull 진행하였으나, ***Too Many Requests. You have reached your pull rate limit.*** 오류가 발생하여 private docker registry 운영하기 위해 Harbor를 사용하게 되었다.
+- 회사에서 쿠버네티스 Pod 구성을 위해 컨테이너 이미지를 DockerHub에서 이미지 Pull 진행하였으나, ***Too Many Requests. You have reached your pull rate limit.*** 오류가 발생하여 private docker registry 운영하기 위해 Harbor를 사용하게 되었습니다.
 
 * * *
 

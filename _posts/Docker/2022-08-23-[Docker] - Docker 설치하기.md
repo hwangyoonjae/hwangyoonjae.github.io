@@ -17,7 +17,7 @@ image: /assets/img/post-title/docker_wallpaper.jpg
 
 ### 1.1 가상화 방식과 컨테이너 기술의 차이 :
 - 기존의 가상화 방식은 OS 가상화 방식이며, 예를들어 VMWare나 VirtualBox와 같습니다.간단하지만 너무 무겁고 느리기 때문에 운영에 쓸 수 없는 문제점을 해결하고자 CPU 가상화 기술(HVM)을 이용한 Kernel-based Virtual Machine과 반가상화 기술이 등장하였다.
-- 이러한 기술들은 OpenStack이나 AWS와 같은 클라우드 서비스의 기반 기술이 되었다.
+- 이러한 기술들은 OpenStack이나 AWS와 같은 클라우드 서비스의 기반 기술이 되었습니다.
 
 [![텍스트](/assets/img/post/docker/%EA%B0%80%EC%83%81%ED%99%94vs%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EC%B0%A8%EC%9D%B4.PNG)](/assets/img/post/docker/%EA%B0%80%EC%83%81%ED%99%94vs%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EC%B0%A8%EC%9D%B4.PNG)
 
