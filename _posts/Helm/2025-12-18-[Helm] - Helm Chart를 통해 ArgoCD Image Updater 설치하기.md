@@ -33,8 +33,8 @@ $ helm pull argo/argocd-image-updater --version 1.0.2 --destination .
 ```bash
 $ docker pull quay.io/argoprojlabs/argocd-image-updater:v1.0.1
 
-$ docker tag quay.io/argoprojlabs/argocd-image-updater:v1.0.1 [HARBOR_DOMAIN]/argocd/argocd-image-updater:v1.0.1
-$ docker push [HARBOR_DOMAIN]/argocd/argocd-image-updater:v1.0.1
+$ docker tag quay.io/argoprojlabs/argocd-image-updater:v1.0.1 harbor.test.com/argocd/argocd-image-updater:v1.0.1
+$ docker push harbor.test.com/argocd/argocd-image-updater:v1.0.1
 ```
 
 * * *
@@ -47,7 +47,7 @@ $ docker push [HARBOR_DOMAIN]/argocd/argocd-image-updater:v1.0.1
 replicaCount: 1
 image:
   # -- Default image repository
-  repository: [HARBOR_DOMAIN]/argocd/argocd-image-updater # 수정
+  repository: harbor.test.com/argocd/argocd-image-updater # 수정
   # -- Default image pull policy
   pullPolicy: Always
   # -- Overrides the image tag whose default is the chart appVersion

@@ -33,8 +33,8 @@ $ helm pull argo/argo-rollouts --version 2.40.5 --destination .
 ```bash
 $ docker pull quay.io/argoproj/argo-rollouts:v1.8.3
 
-$ docker tag quay.io/argoproj/argo-rollouts:v1.8.3 [HARBOR_DOMAIN]/argocd/argo-rollouts:v1.8.3
-$ docker push [HARBOR_DOMAIN]/argocd/argo-rollouts:v1.8.3
+$ docker tag quay.io/argoproj/argo-rollouts:v1.8.3 harbor.test.com/argocd/argo-rollouts:v1.8.3
+$ docker push harbor.test.com/argocd/argo-rollouts:v1.8.3
 ```
 
 * * *
@@ -47,7 +47,7 @@ $ docker push [HARBOR_DOMAIN]/argocd/argo-rollouts:v1.8.3
 controller:
   image:
     # -- Registry to use
-    registry: [HARBOR_DOMAIN]
+    registry: harbor.test.com
     # --  Repository to use
     repository: argocd/kubectl-argo-rollouts
     # -- Overrides the image tag (default is the chart appVersion)
@@ -58,7 +58,7 @@ controller:
 dashboard:
   image:
     # -- Registry to use
-    registry: [HARBOR_DOMAIN]
+    registry: harbor.test.com
     # --  Repository to use
     repository: argocd/kubectl-argo-rollouts
     # -- Overrides the image tag (default is the chart appVersion)

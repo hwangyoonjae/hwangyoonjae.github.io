@@ -27,8 +27,8 @@ $ kubectl create namespace gitlab
 ```bash
 $ docker pull gitlab/gitlab-ce:18.6.2-ce.0
 
-$ docker tag gitlab/gitlab-ce:18.6.2-ce.0 [HARBOR_DOMAIN]/gitlab/gitlab-ce:18.6.2-ce.0
-$ docker push [HARBOR_DOMAIN]/gitlab/gitlab-ce:18.6.2-ce.0
+$ docker tag gitlab/gitlab-ce:18.6.2-ce.0 harbor.test.com/gitlab/gitlab-ce:18.6.2-ce.0
+$ docker push harbor.test.com/gitlab/gitlab-ce:18.6.2-ce.0
 ```
 
 * * *
@@ -54,7 +54,7 @@ $ docker push [HARBOR_DOMAIN]/gitlab/gitlab-ce:18.6.2-ce.0
 
 ```yaml
 image:
-  repository: [HARBOR_DOMAIN]/gitlab/gitlab-ce
+  repository: harbor.test.com/gitlab/gitlab-ce
   tag: "18.6.2-ce.0"
   pullPolicy: IfNotPresent
   imagePullSecrets:

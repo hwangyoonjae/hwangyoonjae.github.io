@@ -27,16 +27,16 @@ $ kubectl create namespace gitlab-runner
 ```bash
 $ docker pull gitlab/gitlab-runner:alpine-v17.5.5
 
-$ docker tag docker pull gitlab/gitlab-runner:alpine-v17.5.5 [HARBOR_DOMAIN]/gitlab/gitlab-runner:alpine-v17.5.5
-$ docker push [HARBOR_DOMAIN]/gitlab/gitlab-runner:alpine-v17.5.5
+$ docker tag docker pull gitlab/gitlab-runner:alpine-v17.5.5 harbor.test.com/gitlab/gitlab-runner:alpine-v17.5.5
+$ docker push harbor.test.com/gitlab/gitlab-runner:alpine-v17.5.5
 ```
 
 ```bash
 # 
 $ docker pull gitlab/gitlab-runner-helper:x86_64-v17.5.5
 
-$ docker tag docker pull gitlab/gitlab-runner-helper:x86_64-v17.5.5 [HARBOR_DOMAIN]/gitlab/gitlab-runner-helper:x86_64-v17.5.5
-$ docker push [HARBOR_DOMAIN]/gitlab/gitlab-runner-helper:x86_64-v17.5.5
+$ docker tag docker pull gitlab/gitlab-runner-helper:x86_64-v17.5.5 harbor.test.com/gitlab/gitlab-runner-helper:x86_64-v17.5.5
+$ docker push harbor.test.com/gitlab/gitlab-runner-helper:x86_64-v17.5.5
 ```
 
 > Gitlab Runner Helper 이미지가 Runner 버전과 맞아야하는 이유?
@@ -72,7 +72,7 @@ gitlab:
   registrationToken: ""
 
 image:
-  repository: "[HARBOR_DOMAIN]/gitlab/gitlab-runner"
+  repository: "harbor.test.com/gitlab/gitlab-runner"
   tag: "alpine-v17.5.5"
   pullPolicy: IfNotPresent
   imagePullSecrets: []   # ["harbor-regcred"] 같은 시크릿 이름

@@ -63,7 +63,7 @@ controller:
   componentName: "jenkins-controller"
   image:
     # -- Controller image registry
-    registry: "[HARBOR_DOMAIN]"
+    registry: "harbor.test.com"
     # -- Controller image repository
     repository: "jenkins/jenkins"
 
