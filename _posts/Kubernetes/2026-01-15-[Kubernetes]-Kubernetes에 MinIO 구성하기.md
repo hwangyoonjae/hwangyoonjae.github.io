@@ -7,6 +7,9 @@ tags: [Kubernetes, Velero, MinIO]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
+> 필자는 MinIO를 Kubernetes Cluster의 구축해보고 싶어 진행하였고, 실제 운영환경 및 DR환경 구성 시에는 가장 안전한 방법인 systemd로 설치하였습니다.
+{: .prompt-tip}
+
 ## 1. MinIO Container Image 다운로드 :
 
 ```bash
