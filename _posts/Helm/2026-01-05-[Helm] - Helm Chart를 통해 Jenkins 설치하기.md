@@ -16,7 +16,7 @@ $ helm repo update
 $ helm repo list
 ```
 
-![helm chart 목록 조회](/assets/img/post/helm/helm%20chart%20목록%20조회.png)#변경해야함
+![jenkins helm chart 목록 조회](/assets/img/post/helm/jenkins%20helm%20chart%20목록%20조회.png)
 
 * * *
 
