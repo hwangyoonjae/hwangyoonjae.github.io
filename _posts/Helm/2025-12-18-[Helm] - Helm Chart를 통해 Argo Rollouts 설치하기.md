@@ -23,7 +23,7 @@ $ helm search repo argo/argo-rollouts --versions | head
 - 폐쇄망에서 진행하는 경우 아래와 같이 진행하면됩니다.
 
 ```bash
-$ helm pull argo/argo-rollouts -version 2.40.5 --destination .
+$ helm pull argo/argo-rollouts --version 2.40.5 --destination .
 ```
 
 * * *
