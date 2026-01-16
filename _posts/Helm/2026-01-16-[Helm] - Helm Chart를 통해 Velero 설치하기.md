@@ -32,27 +32,6 @@ $ kubectl apply -f velero-credentials.yaml
 
 * * *
 
-### 4.2 BackupStorageLocation 생성하기 :
-
-```yaml
-
-```
-
-| 항목 | 값 | 의미 |
-|:---:|:---:|:---|
-| provider | aws | MinIO도 AWS SDK 사용 |
-| bucket | velero | MinIO에 만든 버킷 |
-| prefix | backups | 버킷 내부 경로 |
-| s3Url | http://minio.minio.svc.cluster.local:9000 | MinIO 서비스 주소 |
-| s3ForcePathStyle | "true" | MinIO 필수 옵션 |
-| region | minio | 아무 문자열이나 가능 |
-| credential | cloud-credentials | 위 Secret 연결 |
-
-> MinIO 서비스 주소는 Ingress 주소가 아닌 ClusterIP(Service) 주소를 작성합니다.
-{: .prompt-warning}
-
-* * *
-
 ### 1.2 Velero Helm Chart 다운로드 :
 
 ```bash
@@ -76,7 +55,14 @@ $ helm pull vmware-tanzu/velero --version 11.3.2 --destination .
 ### 1.3 Velero Container Image 다운로드 : 
 
 ```bash
+$ docker pull velero/velero-plugin-for-aws:v1.13.1
+$ docker pull velero/velero:v1.17.1
 
+$ docker tag velero/velero-plugin-for-aws:v1.13.1 harbor.test.com/velero/velero-plugin-for-aws:v1.13.1
+$ docker tag velero/velero:v1.17.1 harbor.test.com/velero/velero:v1.17.1
+
+$ docker push harbor.test.com/velero/velero-plugin-for-aws:v1.13.1
+$ docker push harbor.test.com/velero/velero:v1.17.1
 ```
 
 * * *
@@ -120,6 +106,19 @@ deployNodeAgent: true
 
 snapshotsEnabled: false
 ```
+
+| 항목 | 값 | 의미 |
+|:---:|:---:|:---|
+| provider | aws | MinIO도 AWS SDK 사용 |
+| bucket | velero | MinIO에 만든 버킷 |
+| prefix | backups | 버킷 내부 경로 |
+| s3Url | http://minio.minio.svc.cluster.local:9000 | MinIO 서비스 주소 |
+| s3ForcePathStyle | "true" | MinIO 필수 옵션 |
+| region | minio | 아무 문자열이나 가능 |
+| credential | cloud-credentials | 위 Secret 연결 |
+
+> MinIO 서비스 주소는 Ingress 주소가 아닌 ClusterIP(Service) 주소를 작성합니다.
+{: .prompt-warning}
 
 * * *
 
