@@ -125,6 +125,10 @@ global:
     #   secretName:
     path: /
     pathType: Prefix
+    annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 
   certificates:
     image:
@@ -277,7 +281,6 @@ $ vi templates/shared-secrets/_generate_secrets.sh.tpl
 
 # Initial root password
 #generate_secret_if_needed {{ template "gitlab.migrations.initialRootPassword.secret" . }} --from-literal={{ template "gitlab.migrations.initialRootPassword.key" . }}=$(gen_random 'a-zA-Z0-9' 64)
-# Initial root password
 # Initial root password
 generate_secret_if_needed {{ template "gitlab.migrations.initialRootPassword.secret" . }} \
   --from-literal={{ template "gitlab.migrations.initialRootPassword.key" . }}={{- if .Values.global.initialRootPassword.plaintext -}}{{ .Values.global.initialRootPassword.plaintext | quote }}{{- else -}}$(gen_random 'a-zA-Z0-9' 64){{- end -}}
