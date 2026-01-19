@@ -142,6 +142,13 @@ global:
     image:
       repository: harbor.test.com/native-gitlab/gitlab-org/build/cng/gitlab-base
 
+  registry:
+    enabled: false
+ 
+  # 파이프라인 실행 시 artifacts 사용할 경우 활성화
+  minio:
+    enabled: true
+
 installCertmanager: false
 
 certmanager:
