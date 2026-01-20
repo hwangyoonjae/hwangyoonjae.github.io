@@ -208,10 +208,6 @@ postgresql:
   # ✅ Bitnami 공통(전역)
   global:
     storageClass: nfs-client
-  volumePermissions:
-    enabled: false
-    image:
-      repository: harbor.test.com/native-gitlab/bitnamilegacy/os-shell
   primary:
     persistence:
       enabled: true
@@ -219,6 +215,11 @@ postgresql:
       accessModes:
         - ReadWriteMany
       size: 20Gi
+  metrics:
+    enabled: true
+    image:
+      registry: harbor.test.com
+      repository: native-gitlab/bitnamilegacy/postgres-exporter
 
 registry:
   enabled: false
