@@ -284,6 +284,7 @@ openbao:
 > 기본적으로 root 패스워드는 Helm Chart에서 랜덤 비밀번호를 생성하기에 사용자가 직접 비밀번호를 지정해야하는 경우 아래와 같이 변경하면됩니다.
 {: .prompt-tip}
 
+{% raw %}
 ```bash
 $ vi templates/shared-secrets/_generate_secrets.sh.tpl
 
@@ -293,6 +294,7 @@ $ vi templates/shared-secrets/_generate_secrets.sh.tpl
 generate_secret_if_needed {{ template "gitlab.migrations.initialRootPassword.secret" . }} \
   --from-literal={{ template "gitlab.migrations.initialRootPassword.key" . }}={{- if .Values.global.initialRootPassword.plaintext -}}{{ .Values.global.initialRootPassword.plaintext | quote }}{{- else -}}$(gen_random 'a-zA-Z0-9' 64){{- end -}}
 ```
+{% endraw %}
 
 * * *
 
