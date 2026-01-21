@@ -87,7 +87,21 @@ serviceAccount:
 certs:
   # Omnibus GitLab이 사설 인증서면 CA 번들 필요
   enabled: true
-  caCrt: ""   # 여기에 PEM 내용 넣거나, 별도 시크릿으로 만들어서 mount하도록 변경 가능
+
+  # ✅ ESO가 만든 Secret 이름/키
+  secretName: gitlab-runner-tls
+  secretKey: tls.crt
+
+  # ✅ Runner 컨테이너에 마운트될 위치/파일명
+  mountPath: /etc/gitlab-runner/certs
+  fileName: tls.crt
+
+  # ✅ gitlab-runner가 참조할 tls-ca-file 경로
+  tlsCaFile: /etc/gitlab-runner/certs/ca.crt
+
+  # (옵션) inline PEM을 values에 직접 넣는 방식도 지원하려면 사용
+  caCrt: ""
+
 
 persistence:
   enabled: true
