@@ -51,7 +51,7 @@ $ helm search repo gitlab/gitlab
 - 폐쇄망에서 진행하는 경우 아래와 같이 진행하면됩니다.
 
 ```bash
-$ helm pull gitlab/gitlab -version 9.6.1 --destination .
+$ helm pull gitlab/gitlab --version 9.6.1 --destination .
 ```
 
 * * *
@@ -61,8 +61,10 @@ $ helm pull gitlab/gitlab -version 9.6.1 --destination .
 - helm template을 통한 컨테이너 이미지 추출하여 이미지를 다운받습니다.
 
 ```bash
+# values.yaml global.ingress.configureCertmanager: false로 지정 후 아래 작업을 진행합니다.
 # values.yaml을 적용했을 때 Kubernetes 리소스(YAML)가 어떻게 생성되는지 미리 렌더링해서 파일로 뽑기
 $ helm template gitlab gitlab/gitlab \
+  --version {gitlab-version} \
   -n native-gitlab \
   -f values.yaml \
   > rendered.yaml
@@ -79,18 +81,10 @@ $ grep -RohE 'image:\s*[^ ]+' rendered.yaml | awk '{print $2}' | sort -u > image
 
 * * *
 
-### 2.3 values.yaml 작성하기 :
+### 2.3 values.yaml 수정하기 :
 
 ```yaml
 global:
-  image:
-    registry: harbor.test.com
-
-  initialRootPassword:
-    secret: gitlab-initial-root-password
-    key: password
-    plaintext: "qwe1212!Q" # root 패스워드 입력
-
   edition: ce
 
   hosts:
@@ -122,13 +116,17 @@ global:
     tls:
       enabled: true
       secretName: gitlab-ingress-tls
-    #   secretName:
     path: /
     pathType: Prefix
-    annotations:
-      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
-      nginx.ingress.kubernetes.io/ssl-redirect: "true"
-      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+
+  initialRootPassword:
+    # secret: RELEASE-gitlab-initial-root-password
+    # key: password
+    plaintext: "qwe1212!Q"
+
+  # 파이프라인 실행 시 artifacts 사용할 경우 활성화
+  minio:
+    enabled: true
 
   certificates:
     image:
@@ -141,13 +139,6 @@ global:
   gitlabBase:
     image:
       repository: harbor.test.com/native-gitlab/gitlab-org/build/cng/gitlab-base
-
-  registry:
-    enabled: false
- 
-  # 파이프라인 실행 시 artifacts 사용할 경우 활성화
-  minio:
-    enabled: true
 
 installCertmanager: false
 
@@ -182,22 +173,6 @@ redis:
     image:
       registry: harbor.test.com
       repository: native-gitlab/bitnamilegacy/redis-exporter
-  sentinel:
-    enabled: false
-    image:
-      repository: harbor.test.com/native-gitlab/bitnamilegacy/redis-sentinel
-  kubectl:
-    enabled: false
-    image:
-      repository: harbor.test.com/native-gitlab/bitnamilegacy/kubectl
-  sysctl:
-    enabled: false
-    image:
-      repository: harbor.test.com/native-gitlab/bitnamilegacy/os-shell
-  volumePermissions:
-    enabled: false
-    image:
-      repository: harbor.test.com/native-gitlab/bitnamilegacy/os-shell
 
 postgresql:
   install: true
@@ -205,9 +180,6 @@ postgresql:
     registry: harbor.test.com
     repository: native-gitlab/bitnamilegacy/postgresql
     tag: 16.6.0
-  # ✅ Bitnami 공통(전역)
-  global:
-    storageClass: nfs-client
   primary:
     persistence:
       enabled: true
@@ -220,9 +192,6 @@ postgresql:
     image:
       registry: harbor.test.com
       repository: native-gitlab/bitnamilegacy/postgres-exporter
-
-registry:
-  enabled: false
 
 shared-secrets:
   enabled: true
@@ -255,8 +224,6 @@ gitlab:
       storageClass: nfs-client
       accessMode: ReadWriteMany
       size: 50Gi
-    init:
-      repository: harbor.test.com/native-gitlab/gitlab-org/build/cng/gitaly-init-cgroups
 
   gitlab-exporter:
     image:
@@ -269,12 +236,36 @@ gitlab:
   kas:
     image:
       repository: harbor.test.com/native-gitlab/gitlab-org/build/cng/gitlab-kas
+```
 
-gitlab-zoekt:
-  install: false
+* * *
 
-openbao:
-  install: false
+- minio 서브차트 values.yaml 수정하기
+
+```yaml
+# charts/minio/values.yaml
+image: "harbor.test.com/native-gitlab/minio/minio"
+imageTag: "RELEASE.2017-12-28T01-21-00Z"
+
+minioMc:
+  image: "harbor.test.com/native-gitlab/minio/mc"
+  tag: "RELEASE.2018-07-13T00-53-22Z"
+
+persistence:
+  storageClass: "nfs-client"
+  accessMode: ReadWriteMany
+  size: 10Gi
+```
+
+* * *
+
+- registry 서브차트 values.yaml 수정하기
+
+```yaml
+# charts/registry/values.yaml
+image:
+  repository: harbor.test.com/native-gitlab/gitlab-org/build/cng/gitlab-container-registry
+  tag: 'v4.33.0-gitlab'
 ```
 
 * * *
