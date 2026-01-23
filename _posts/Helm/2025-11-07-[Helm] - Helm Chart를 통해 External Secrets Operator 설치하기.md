@@ -75,11 +75,7 @@ $ docker pull ghcr.io/external-secrets/external-secrets:v0.20.3
 $ kubectl create namespace external-secrets
 
 # 설치 진행
-$ helm install external-secrets ./ \
-  -n external-secrets \
-  --set installCRDs=true \
-  --set rbac.create=true \
-  --set serviceAccount.create=true
+$ helm install external-secrets ./ -n external-secrets \
 ```
 
 * * *
