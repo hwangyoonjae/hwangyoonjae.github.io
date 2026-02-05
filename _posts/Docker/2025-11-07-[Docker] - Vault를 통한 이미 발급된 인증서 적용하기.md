@@ -52,19 +52,14 @@ $ docker compose up -d
 
 ```bash
 # 환경변수 등록
-export VAULT_ADDR="https://vault.inno.com:8200"
+export VAULT_ADDR="https://127.0.0.1:8200"
 export VAULT_CACERT="/vault/certs/fullchain.crt"
 
-# (최초 1회) KV v2 마운트
-vault secrets enable -path=secret kv-v2
-
-# 배포용 fullchain 생성 (이미 했다면 생략)
-cat server.crt server_chain.crt > fullchain.crt
-
 # 와일드카드 인증서 저장
-vault kv put secret/tls/wildcard \
-  tls.crt=@fullchain.crt \
-  tls.key=@server.key
+vault kv put secret/certs/ssl \
+  certificate="$(cat server.crt)" \
+  private_key="$(cat server.key)" \
+  chain="$(cat fullchain.crt)"
 
 # 확인
 vault kv get secret/tls/wildcard
@@ -75,8 +70,13 @@ vault kv get secret/tls/wildcard
 ### 2.2 Vault 읽기 전용 정책 생성하고 적용하기 :
 
 ```bash
-cat > /vault/config/policy-wildcard-tls.hcl <<'EOF'
-path "secret/data/tls/wildcard" {
+# ESO용 Vault Policy 생성
+vault policy write eso-ingress-tls-policy - <<EOF
+path "secret/data/certs/ssl" {
+  capabilities = ["read"]
+}
+
+path "secret/metadata/certs/ssl" {
   capabilities = ["read"]
 }
 EOF
@@ -94,64 +94,12 @@ vault policy write policy-wildcard-tls policy-wildcard-tls.hcl
 vault auth enable kubernetes
 
 # 쿠버네티스 API 서버 주소/CA로 설정 (환경 맞게 치환)
-vault write auth/kubernetes/config \
-  kubernetes_host="https://<K8S_API_HOST>:443" \
-  kubernetes_ca_cert=@/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
-  disable_iss_validation=true \
-  disable_local_ca_jwt=true
+vault write auth/kubernetes/role/eso-ingress-tls \
+  bound_service_account_names=external-secrets \
+  bound_service_account_namespaces=external-secrets \
+  policies=eso-ingress-tls-policy \
+  ttl=24h
 ```
-
-* * *
-
-### 2.4 Vault가 클러스터 외부 (Docker / VM) 에서 동작한다면 :
-
-- 인증서는 API 서버 인증서(/etc/kubernetes/pki/apiserver.crt)를 서명한 루트로 Vault 서버가 실행 중인 곳으로 옮기고, 경로를 지정합니다.
-
-```bash
-# Master Node에서 진행
-cat /etc/kubernetes/pki/ca.crt
-```
-
-```bash
-vault write auth/kubernetes/config \
-  kubernetes_host="https://<API_SERVER_IP>:6443" \
-  kubernetes_ca_cert=@/vault/config/k8s-ca.crt \
-  disable_local_ca_jwt=true \
-  token_reviewer_jwt=@/vault/config/reviewer.jwt
-```
-
-> kubernetes_ca_cert의 값은 **/etc/kubernetes/pki/ca.crt** 값입니다.
-{: .prompt-info}
-
-* * *
-
-- **token_reviewer_jwt** 값은 아래 명령어를 통해 확인합니다.
-
-```bash
-# --duration 옵션을 통해 JWT의 유효기간을 지정할 수 있습니다.
-$ kubectl -n kube-system create token vault-auth --duration=720h > vault-auth.jwt
-```
-> token_reviewer_jwt의 값은 Vault가 Kubernetes API에 TokenReview 요청을 보낼 때 사용할 **리뷰용 ServiceAccount JWT**이다
-{: .prompt-info}
-
-![vault k8s 인증서 적용](/assets/img/post/docker/vault%20k8s%20인증서%20적용.png)
-
-* * *
-
-### 2.5 ESO용 Role 생성하기 :
-
-- ESO가 사용할 ServiceAccount와 Namespace에 바인딩합니다.
-
-```bash
-vault write auth/kubernetes/role/eso-wildcard-role \
-  bound_service_account_names="external-secrets" \
-  bound_service_account_namespaces="external-secrets" \
-  audience="https://kubernetes.default.svc.cluster.local" \
-  token_policies="eso-wildcard-policy" \
-  ttl="24h"
-```
-
-![ESO용 Role 생성하기](/assets/img/post/docker/ESO용%20Role%20생성하기.png)
 
 * * *
 
@@ -165,9 +113,10 @@ vault write auth/kubernetes/role/eso-wildcard-role \
 vault login [Root Token]
 
 # Vault에 등록
-vault kv put secret/tls/wildcard \
-  tls.crt=@fullchain.crt \
-  tls.key=@server.key
+vault kv put secret/certs/ssl \
+  certificate="$(cat server.crt)" \
+  private_key="$(cat server.key)" \
+  chain="$(cat fullchain.crt)"
 ```
 
 * * *
