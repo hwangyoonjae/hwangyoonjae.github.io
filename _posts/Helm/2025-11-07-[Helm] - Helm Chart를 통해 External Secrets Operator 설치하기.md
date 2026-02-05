@@ -75,7 +75,9 @@ $ docker pull ghcr.io/external-secrets/external-secrets:v0.20.3
 $ kubectl create namespace external-secrets
 
 # 설치 진행
-$ helm install external-secrets ./ -n external-secrets \
+$ helm upgrade --install external-secrets ./ \
+  -n external-secrets \
+  --set installCRDs=true
 ```
 
 * * *
@@ -153,26 +155,25 @@ $ kubectl get clustersecretstore
 - K8s 1.24+에서는 자동 생성되는 SA Secret이 없으므로, Vault에 줄 token_reviewer_jwt를 직접 발급해서 넣어줘야합니다.
 
 ```bash
-# kube-system(또는 vault 네임스페이스)에 리뷰어 SA 생성
-$ kubectl -n kube-system create serviceaccount vault-reviewer
+# Token Reviewer ServiceAccount 생성
+$ kubectl -n external-secrets create sa vault-token-reviewer
 
-# 방법 A: 내장 ClusterRole 사용
-$ kubectl create clusterrolebinding vault-reviewer-binding \
+# Token Reviewer RBAC 바인딩
+$ kubectl create clusterrolebinding vault-token-reviewer-auth-delegator \
   --clusterrole=system:auth-delegator \
-  --serviceaccount=kube-system:vault-reviewer
+  --serviceaccount=external-secrets:vault-token-reviewer
+
+# ServiceAccount 토큰을 담을 Secret 수동 생성
+kubectl -n external-secrets apply -f - <<EOF
+apiVersion: v1
+kind: Secret
+metadata:
+  name: vault-token-reviewer-token
+  annotations:
+    kubernetes.io/service-account.name: vault-token-reviewer
+type: kubernetes.io/service-account-token
+EOF
 ```
-
-* * *
-
-### 4.2 리뷰어 토큰 발급하기 :
-
-```bash
-# 새 reviewer 토큰 발급(24h 유효)
-$ kubectl -n kube-system create token vault-reviewer --duration=24h > reviewer.jwt
-```
-
-> 리뷰어 SA/RBAC를 지우면, 이전에 Vault에 저장된 token_reviewer_jwt가 더 이상 유효하지 않아 재생성 진행해야합니다.
-{: .prompt-warning}
 
 * * *
 
@@ -181,20 +182,15 @@ $ kubectl -n kube-system create token vault-reviewer --duration=24h > reviewer.j
 - ESO 파드의 SA 토큰 aud가 보통 "https://kubernetes.default.svc.cluster.local"이므로, Role의 token_audiences를 아예 제거(미지정)하거나, 정확히 그 값 맞춰야합니다.
 
 ```bash
-# (선택1) audiences 미지정으로 단순화
-vault write auth/kubernetes/role/eso-wildcard-role \
-  bound_service_account_names=external-secrets \
-  bound_service_account_namespaces=external-secrets \
-  token_policies=policy-wildcard-tls \
-  token_ttl=24h
+# Token Reviewer Secret 값 확인
+TOKEN_REVIEWER_JWT=$(kubectl -n external-secrets get secret vault-token-reviewer-token -o jsonpath='{.data.token}' | base64 -d)
+K8S_CA_CERT=$(kubectl -n external-secrets get secret vault-token-reviewer-token -o jsonpath='{.data.ca.\crt}' | base64 -d)
 
-# (선택2) aud를 명시해 고정
-vault write auth/kubernetes/role/eso-wildcard-role \
-  bound_service_account_names=external-secrets \
-  bound_service_account_namespaces=external-secrets \
-  bound_audiences="https://kubernetes.default.svc.cluster.local \
-  token_policies=policy-wildcard-tls \
-  token_ttl=24h"
+# 위 값을 통해 Vault Kubernetes Auth Config 설정
+vault write auth/kubernetes/config \
+  kubernetes_host="https://k8s-lb:6443" \
+  kubernetes_ca_cert="<K8S_CA_CERT>" \
+  token_reviewer_jwt="<TOKEN_REVIEWER_JWT>"
 ```
 
 * * *
