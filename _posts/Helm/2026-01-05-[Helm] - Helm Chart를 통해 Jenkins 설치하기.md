@@ -98,6 +98,15 @@ persistence:
   accessMode: "ReadWriteMany"
   # -- The size of the PVC
   size: "20Gi"
+
+agent:
+  image:
+    # -- Registry to pull the agent jnlp image from
+    registry: "harbor.test.com"
+    # -- Repository to pull the agent jnlp image from
+    repository: "jenkins/inbound-agent"
+    # -- Tag of the image to pull
+    tag: "3355.v388858a_47b_33-3"
 ```
 {% endraw %}
 
