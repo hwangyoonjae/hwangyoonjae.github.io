@@ -10,7 +10,6 @@ image: /assets/img/post-title/nexus-wallpaper.jpg
 > 폐쇄망 환경에서는 외부 인터넷 접근이 제한되어 있어 라이브러리나 NPM 패키지를 직접 다운로드할 수 없습니다.
 > 
 > 따라서 별도의 Nexus Repository를 구축하여 필요한 라이브러리 및 NPM 패키지를 사전에 업로드하고, 소스 빌드 시 Nexus Repository를 통해 해당 파일을 다운로드하여 사용하도록 구성합니다.
-
 {: .prompt-info}
 
 ## 1. 스타트킷에 사용되는 NPM 패키지 다운받기 :
