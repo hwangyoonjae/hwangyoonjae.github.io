@@ -4,7 +4,7 @@ title: "OKD 설치하기"
 date: 2026-04-08
 categories: [컨테이너, Openshift]
 tags: [Openshift, OKD]
-image: /assets/img/post-title/openshift-wallpaper.jpg
+image: /assets/img/post-title/openshift-wallpaper.png
 ---
 
 ## 1. OKD를 설치하게 된 계기 :
