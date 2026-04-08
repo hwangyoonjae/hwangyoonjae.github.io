@@ -106,6 +106,38 @@ $ mc rb minio/<버킷명>
 
 * * *
 
+### 2.1 MinIO SSL 인증서 적용하기 :
+
+> 환경에 맞게 SSL 인증서 적용해야하는 경우 아래 과정 진행하면됩니다.
+{: .prompt-warnig}
+
+```bash
+# ssl 인증서 폴더 생성
+$ mkdir /etc/minio/certs
+
+# minio.service의 "--cert-dir" 옵션 추가
+$ vi /etc/systemd/system/minio.service
+````````````
+[Service]
+User=minio-user
+Group=minio-user
+Environment="MINIO_DOMAIN={도메인}"
+ExecStart=/usr/local/bin/minio server {Velero Backup 경로} --console-address ":9001" --certs-dir /etc/minio/certs
+Restart=always
+LimitNOFILE=65536
+``````````````````
+
+# cert 인증서 생성
+$ cat khug_server.crt khug_chain.crt > public.crt
+
+# key 인증서 이름 변경
+$ cp khug_server.key private.key
+
+# 위 인증서 생성 후 "/etc/minio/certs" 폴더의 복사
+```
+
+* * *
+
 ## 3. Velero 설치하기 :
 
 - Velero CLI 설치하기
