@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OKD 설치하기"
-date: 2026-04-08
+date: 2026-04-03
 categories: [컨테이너, Openshift]
 tags: [Openshift, OKD]
 image: /assets/img/post-title/openshift-wallpaper.png
