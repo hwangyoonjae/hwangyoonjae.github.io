@@ -468,6 +468,15 @@ $ ll
 ```
 ![manifest 생성](/assets/img/post/Openshift/manifest%20생성.png)
 
+> - manifests/cluster-scheduler-02-config.yml 파일의 mastersSchedulable 파라미터 값은 아래와 같습니다.
+> 
+>    - true : Master에 POD 가 스케쥴링 될 수 있으며, Master 가 Worker 의 역할까지 수행 (Default 값)
+>    - false : Master는 컨트롤플레인의 역할만 하게 되어 Worker 노드가 추가로 필요 함. (권장 사항)
+{: .promt-tip}
+
+> 필자의 환경에서는 워커노드를 별도로 둘 예정이 아니므로, mastersSchedulable 파라미터 값은 true로 합니다.
+{: .promt-warning}
+
 * * *
 
 ### 6.5 ignition 파일 생성하기 :
@@ -632,5 +641,34 @@ $ oc get nodes
 ```
 
 ![ 마스터 노드 연결 확인](/assets/img/post/Openshift/마스터%20노드%20연결%20확인.png)
+
+* * *
+
+## 9. OKD 관리 콘솔 페이지 접속하기 :
+
+- OKD 설치 후, 도메인 주소를 통해서 접속 시 아래와 같이 로그인 페이지가 출력됩니다.
+
+![okd 콘솔 화면](/assets/img/post/Openshift/okd%20콘솔%20화면.png)
+
+* * *
+
+> 접속정보는 아래와 같습니다.
+{: .prompt-example}
+
+| 구분 | 값 |
+|------|-------------------------------|
+| URL  | console-openshift-console.apps.lb.okd.local |
+| ID   | kubeadmin |
+| PW   | auth/kubeadmin-password 값 |
+
+* * *
+
+- kubeadmin 패드워드는 OKD 설치하면 kubeadmin 비밀번호 파일이 생성되어 설치 디렉토리에서 확인합니다.
+
+```bash
+$ cat installation_directory/auth/kubeadmin-password
+```
+
+![kubeadmin 패스워드 확인방법](/assets/img/post/Openshift/kubeadmin%20패스워드%20확인방법.png)
 
 * * *
