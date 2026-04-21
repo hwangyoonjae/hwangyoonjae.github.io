@@ -7,7 +7,7 @@ tags: [Helm, Velero]
 image: /assets/img/post-title/helm-wallpaper.jpg
 ---
 
-## 설치하기 :
+## 1. 설치하기 :
 ### 1.1 Velero credentials Secret 생성하기 :
 
 - ***aws_access_key_id / aws_secret_access_key***는 MinIO에 만든 velero 유저로 입력합니다.
