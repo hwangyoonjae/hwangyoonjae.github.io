@@ -69,7 +69,7 @@ $ docker push harbor.test.com/velero/velero:v1.17.1
 
 ### 1.4 values.yaml 수정하기 :
 
-- 위 가정에서 다운받은 컨테이너 이미지로 수정 및 배포 관련 설정사항을 수정합니다.
+- 위 과정에서 다운받은 컨테이너 이미지로 수정 및 배포 관련 설정사항을 수정합니다.
 
 ```yaml
 image:
