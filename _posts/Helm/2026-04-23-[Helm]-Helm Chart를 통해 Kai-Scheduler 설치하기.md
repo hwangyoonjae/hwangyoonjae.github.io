@@ -114,7 +114,7 @@ $ helm install kai-scheduler ./ \
 $ kubectl get po -n kai-scheduler
 ```
 
-[kai-scheduler helm chart 배포 완료](/assets/img/post/helm/kai-scheduler%20helm%20chart%20배포%20완료.png)
+![kai-scheduler helm chart 배포 완료](/assets/img/post/helm/kai-scheduler%20helm%20chart%20배포%20완료.png)
 
 * * *
 
