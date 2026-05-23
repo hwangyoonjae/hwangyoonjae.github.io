@@ -7,7 +7,7 @@ tags: [Helm, GPU]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## 설치하기 :
+## 1. 설치하기 :
 ### 1.1 kai-scheduler Helm Chart 다운로드 :
 
 > KAI Scheduler는 Helm chart를 컨테이너 이미지와 동일한 방식으로 관리하고, 폐쇄망 및 DevOps 환경에서의 효율성과 보안성을 높이기 위해 OCI Registry 방식을 사용합니다.
