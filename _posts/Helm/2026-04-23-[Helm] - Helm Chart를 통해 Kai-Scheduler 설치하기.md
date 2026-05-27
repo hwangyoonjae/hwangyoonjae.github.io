@@ -4,7 +4,7 @@ title: "Helm Chart를 통해 Kai-Scheduler 설치하기"
 date: 2026-04-23
 categories: [Helm]
 tags: [Helm, GPU]
-image: /assets/img/post-title/kubernetes-wallpaper.jpg
+image: /assets/img/post-title/helm-wallpaper.jpg
 ---
 
 ## 1. 설치하기 :
