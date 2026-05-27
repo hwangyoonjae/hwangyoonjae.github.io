@@ -66,7 +66,7 @@ image:
 ### 2.4 Headlamp Helm Chart 설치하기 :
 
 ```bash
-# argocd가 설치된 상태에서 진행하는 경우 생성 필요없습니다.
+# 네임스페이스 생성
 $ kubectl create namespace headlamp-system
 
 # 설치 진행
