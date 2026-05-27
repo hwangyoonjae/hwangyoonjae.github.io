@@ -192,7 +192,7 @@ bash-5.1$ mysql -uroot -p < /tmp/dump.sql
 > ERROR 1105 (HY000) at line 51: Percona-XtraDB-Cluster prohibits use of LOCK TABLE/FLUSH TABLE <table> WITH READ LOCK/FOR EXPORT with pxc_strict_mode = ENFORCING
 >
 > 위와 같이 에러가 발생할 경우 다음과 같이 명령어를 입력합니다.
-{: .prompt-error}
+{: .prompt-warning}
 
 ```bash
 # 명령어를 실행해서 잠시 끄기
