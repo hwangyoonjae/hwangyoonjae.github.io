@@ -4,7 +4,7 @@ title: "NVIDIA GPU서버의 GPU-Operator 설치하기"
 date: 2026-04-22
 categories: [Helm]
 tags: [Helm, GPU]
-image: /assets/img/post-title/kubernetes-wallpaper.jpg
+image: /assets/img/post-title/nvidia-wallpaper.jpg
 ---
 
 ## 설치하기 :
