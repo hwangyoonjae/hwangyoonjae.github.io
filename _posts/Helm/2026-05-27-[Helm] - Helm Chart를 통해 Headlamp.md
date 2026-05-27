@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Helm Chart를 통해 Velero 설치하기"
+title: "Helm Chart를 통해 Headlamp 설치하기"
 date: 2026-05-27
 categories: [컨테이너, Helm] 
 tags: [Helm, Dashboard, Monitoring]
