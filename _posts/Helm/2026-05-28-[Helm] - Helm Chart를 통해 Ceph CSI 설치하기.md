@@ -156,7 +156,7 @@ storageClass:
 
 * * *
 
-### 2.3 Secret 생성하기 :
+### 2.4 Secret 생성하기 :
 - Ceph에서 CSI 계정을 생성합니다.
 
 ```bash
@@ -196,7 +196,7 @@ $ kubectl apply -f ceph-secret.yaml
 
 * * *
 
-### 2.4 Ceph CSI Helm Chart 설치하기 :
+### 2.5 Ceph CSI Helm Chart 설치하기 :
 
 ```bash
 # 이미 생성했다면 해당 작업은 생략
@@ -232,7 +232,7 @@ $ kubectl get sc -n ceph-csi-rbd
 
 * * *
 
-### 2.5 PVC 생성 테스트 하기:
+### 2.6 PVC 생성 테스트 하기:
 
 ```yaml
 apiVersion: v1
