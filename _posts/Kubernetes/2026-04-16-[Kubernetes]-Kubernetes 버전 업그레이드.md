@@ -370,5 +370,7 @@ $ systemctl daemon-reload
 $ systemctl restart kubelet
 ```
 
-![워컨노드 kubelet, kubectl 업그레이드](/assets/img/post/kubernetes/워커노드%20kubelet,%20kubectl%20업그레이드.png)
+![워커노드 kubelet, kubectl 업그레이드](/assets/img/post/kubernetes/워커노드%20kubelet,%20kubectl%20업그레이드.png)
 ![워커노드 kubelet, kubectl 업그레이드 후 노드 버전 확인](/assets/img/post/kubernetes/워커노드%20kubelet,%20kubectl%20업그레이드%20후%20노드%20버전%20확인.png)
+
+* * *
