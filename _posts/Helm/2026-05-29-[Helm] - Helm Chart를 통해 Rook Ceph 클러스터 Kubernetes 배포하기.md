@@ -4,7 +4,7 @@ title: "Helm Chart를 통해 Rook Ceph 클러스터 Kubernetes 배포하기"
 date: 2026-05-28
 categories: [Helm]
 tags: [Helm, CSI, Rook, Ceph]
-image: /assets/img/post-title/Helm-wallpaper.jpg
+image: /assets/img/post-title/helm-wallpaper.jpg
 ---
 
 ## 1. Rook-Ceph Kubernetes 배포 방법 이해하기 :
@@ -148,6 +148,9 @@ csi:
   resizer:
     repository: harbor.test.com/sig-storage/csi-resizer
     tag: v2.1.0
+
+  csiAddons:
+    enabled: true
 
 ceph-csi-operator:
   nameOverride: ceph-csi
@@ -300,5 +303,85 @@ $ kubectl get pods -n rook-ceph
 ```
 
 ![rook ceph cluster helm chart 배포 후 확인](/assets/img/post/helm/rook%20ceph%20cluster%20helm%20chart%20배포%20후%20확인.png)
+
+* * *
+
+## 4. PVC 생성하기 :
+### 4.1 StorageClass 확인하기:
+
+```bash
+$ kubectl get storageclass
+```
+
+![rook ceph storageclass 목록 화면](/assets/img/post/helm/rook%20ceph%20storageclass%20목록%20화면.png)
+
+* * *
+
+### 4.2 RBD(Block Storage) 사용하여 PVC 생성하기 :
+
+- PVC 생성 시, RBD(Block Storage) 사용하여 생성합니다.
+
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ceph-rbd-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ceph-block
+  resources:
+    requests:
+      storage: 5Gi
+```
+
+```bash
+# pvc-rbd 생성
+$ kubectl apply -f pvc-rbd.yaml -n rook-ceph
+```
+
+* * *
+
+- pvc가 정상적으로 Bound 되었는지 확인합니다.
+
+```bash
+$ kubectl get pvc -n rook-ceph
+```
+
+![rook ceph rbd pvc 볼륨 생성 확인](/assets/img/post/helm/rook%20ceph%20rbd%20pvc%20볼륨%20생성%20확인.png)
+
+* * *
+
+### 4.3 CephFS(File Storage) 사용하여 PVC 생성하기 :
+
+- 여러 파드에서 동시에 접근하려면 CephFS(File Storage) 사용하여 생성합니다.
+
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: cephfs-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: ceph-filesystem
+  resources:
+    requests:
+      storage: 5Gi
+```
+
+```bash
+$ kubectl apply -f pvc-cephfs.yaml -n rook-ceph
+```
+
+* * *
+
+- pvc가 정상적으로 Bound 되었는지 확인합니다.
+
+```bash
+$ kubectl get pvc -n rook-ceph
+```
+
+![rook ceph cephfs pvc 볼륨 생성 확인](/assets/img/post/helm/rook%20ceph%20cephfs%20pvc%20볼륨%20생성%20확인.png)
 
 * * *
