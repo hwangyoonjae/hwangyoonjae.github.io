@@ -333,7 +333,7 @@ $ vi /etc/crio/crio.conf.d/10-crio.conf
 ================================
 [crio.image]
 signature_policy = "/etc/crio/policy.json"
-pause_image="harbor.kwater.paas.or.kr/library/kubernetes-install/pause:3.10" <- 추가
+pause_image="harbor.test.com/library/kubernetes-install/pause:3.10" <- 추가
 
 =================================
 
