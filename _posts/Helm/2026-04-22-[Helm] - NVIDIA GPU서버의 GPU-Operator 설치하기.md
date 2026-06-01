@@ -2,7 +2,7 @@
 layout: post
 title: "NVIDIA GPU서버의 GPU-Operator 설치하기"
 date: 2026-04-22
-categories: [Helm]
+categories: [컨테이너, Helm]
 tags: [Helm, GPU]
 image: /assets/img/post-title/nvidia-wallpaper.jpg
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Helm Chart를 통해 Rook Ceph 클러스터 Kubernetes 배포하기"
 date: 2026-05-28
-categories: [Helm]
+categories: [컨테이너, Helm]
 tags: [Helm, CSI, Rook, Ceph]
 image: /assets/img/post-title/helm-wallpaper.jpg
 ---

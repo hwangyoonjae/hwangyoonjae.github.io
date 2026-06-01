@@ -2,7 +2,7 @@
 layout: post
 title: "Helm Chart를 통해 Kai-Scheduler 설치하기"
 date: 2026-04-23
-categories: [Helm]
+categories: [컨테이너, Helm]
 tags: [Helm, GPU]
 image: /assets/img/post-title/helm-wallpaper.jpg
 ---
