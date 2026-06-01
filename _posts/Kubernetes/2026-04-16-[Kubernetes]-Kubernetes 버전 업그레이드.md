@@ -75,7 +75,7 @@ $ vi create_kubernetes_rpm.sh
 set -euo pipefail
 
 VERSIONS=(
-  "1.30.14"
+  "1.31.14"
   "1.32.13"
   "1.33.10"
   "1.34.6"
@@ -157,22 +157,22 @@ echo "========================================"
 
 ```bash
 # 이미지 로드
-docker load -i registry.k8s.io-kube-apiserver-v1.30.14.tar          
-docker load -i registry.k8s.io-kube-controller-manager-v1.30.14.tar 
-docker load -i registry.k8s.io-kube-scheduler-v1.30.14.tar          
-docker load -i registry.k8s.io-kube-proxy-v1.30.14.tar
+docker load -i registry.k8s.io-kube-apiserver-v1.31.14.tar          
+docker load -i registry.k8s.io-kube-controller-manager-v1.31.14.tar 
+docker load -i registry.k8s.io-kube-scheduler-v1.31.14.tar          
+docker load -i registry.k8s.io-kube-proxy-v1.31.14.tar
 
 # 이미지 태그 변경
-docker tag registry.k8s.io/kube-apiserver:v1.30.14          harbor.kwater.paas.or.kr/library/kubernetes-install/kube-apiserver:v1.30.14         
-docker tag registry.k8s.io/kube-controller-manager:v1.30.14 harbor.kwater.paas.or.kr/library/kubernetes-install/kube-controller-manager:v1.30.14
-docker tag registry.k8s.io/kube-scheduler:v1.30.14          harbor.kwater.paas.or.kr/library/kubernetes-install/kube-scheduler:v1.30.14         
-docker tag registry.k8s.io/kube-proxy:v1.30.14              harbor.kwater.paas.or.kr/library/kubernetes-install/kube-proxy:v1.30.14    
+docker tag registry.k8s.io/kube-apiserver:v1.31.14          harbor.kwater.paas.or.kr/library/kubernetes-install/kube-apiserver:v1.31.14         
+docker tag registry.k8s.io/kube-controller-manager:v1.31.14 harbor.kwater.paas.or.kr/library/kubernetes-install/kube-controller-manager:v1.31.14
+docker tag registry.k8s.io/kube-scheduler:v1.31.14          harbor.kwater.paas.or.kr/library/kubernetes-install/kube-scheduler:v1.31.14         
+docker tag registry.k8s.io/kube-proxy:v1.31.14              harbor.kwater.paas.or.kr/library/kubernetes-install/kube-proxy:v1.31.14    
 
 # 이미지 푸쉬
-docker push harbor.kwater.paas.or.kr/library/kubernetes-install/kube-apiserver:v1.30.14         
-docker push harbor.kwater.paas.or.kr/library/kubernetes-install/kube-controller-manager:v1.30.14
-docker push harbor.kwater.paas.or.kr/library/kubernetes-install/kube-scheduler:v1.30.14         
-docker push harbor.kwater.paas.or.kr/library/kubernetes-install/kube-proxy:v1.30.14       
+docker push harbor.kwater.paas.or.kr/library/kubernetes-install/kube-apiserver:v1.31.14         
+docker push harbor.kwater.paas.or.kr/library/kubernetes-install/kube-controller-manager:v1.31.14
+docker push harbor.kwater.paas.or.kr/library/kubernetes-install/kube-scheduler:v1.31.14         
+docker push harbor.kwater.paas.or.kr/library/kubernetes-install/kube-proxy:v1.31.14       
 ```
 
 > 위 과정은 예시이며, 필요 시 사용해야하는 버전별로 이미지 푸쉬하시면됩니다.
