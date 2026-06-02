@@ -9,76 +9,119 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 
 ## 1. ArgoCD 설치하기 :
 ### 1.1 ArgoCD Helm Chart 다운로드 :
-
-- curl 또는 wget으로 직접 다운로드합니다.
-
 ```bash
-$ wget https://github.com/argoproj/argo-helm/releases/download/argo-cd-[version]/argo-cd-[버전].tgz
+$ helm repo add argo https://argoproj.github.io/argo-helm
+$ helm repo update
 ```
-
-> 필자는 현 시점 최신버전인 **9.0.5**를 사용했습니다.
-{: .prompt-tip}
 
 * * *
 
-### 1.2 Helm을 통해 ArgoCD 설치하기 :
+- 폐쇄망에서 진행하는 경우 아래와 같이 진행하면 됩니다.
 
+```bash
+# 압축 파일 다운로드
+$ helm pull argo/argo-cd --version v9.5.16 --destination .
+
+# 압축 파일 풀기
+$ tar -zxvf rargo-cd-9.5.16.tgz
+```
+
+* * *
+### 1.2 ArgoCD Container Image 다운로드 : 
+
+```bash
+$ docker pull ghcr.io/dexidp/dex:v2.45.1
+$ docker pull ecr-public.aws.com/docker/library/redis:8.2.3-alpine
+$ docker pull ghcr.io/oliver006/redis_exporter:v1.84.0
+$ docker pull ghcr.io/oliver006/redis_exporter:v1.75.0
+$ docker pull ecr-public.aws.com/docker/library/haproxy:3.1.7-alpine
+$ docker pull quay.io/argoproj/argocd:v3.4.3
+
+$ docker tag ghcr.io/dexidp/dex:v2.45.1                               harbor.test.com/argocd/dex:v2.45.1
+$ docker tag ecr-public.aws.com/docker/library/redis:8.2.3-alpine     harbor.test.com/argocd/redis:8.2.3-alpine
+$ docker tag ghcr.io/oliver006/redis_exporter:v1.84.0                 harbor.test.com/argocd/redis_exporter:v1.84.0
+$ docker tag ghcr.io/oliver006/redis_exporter:v1.75.0                 harbor.test.com/argocd/redis_exporter:v1.75.0
+$ docker tag ecr-public.aws.com/docker/library/haproxy:3.1.7-alpine   harbor.test.com/argocd/haproxy:3.1.7-alpine
+$ docker tag quay.io/argoproj/argocd:v3.4.3                           harbor.test.com/argocd/argocd:v3.4.3
+
+$ docker push harbor.test.com/argocd/dex:v2.45.1
+$ docker push harbor.test.com/argocd/redis:8.2.3-alpine
+$ docker push harbor.test.com/argocd/redis_exporter:v1.84.0
+$ docker push harbor.test.com/argocd/redis_exporter:v1.75.0
+$ docker push harbor.test.com/argocd/haproxy:3.1.7-alpine
+$ docker push harbor.test.com/argocd/argocd:v3.4.3
+```
+
+* * *
+
+### 1.3 values.yaml 수정하기 :
 - values.yaml 파일에 값을 수정합니다.
 
 ```bash
 $ vi values.yaml
 ```
 ```yaml
-# values.yaml
-namespaceOverride: [ argocd_namespace ]
-
 global:
-  domain: [ argocd_domain ]
-
+  domain: argocd.example.com
   image:
-    repository: [ argocd_image_registry ]/[ argocd_namespace ]/argocd
-    tag: [ argocd_image_tag ]
+    repository: harbor.test.com/argocd/argocd
+    tag: "v3.4.3" # 빈칸으로 둘 경우, Chart.yaml에 있는 appVersion으로 지정됩니다.
+    imagePullPolicy: IfNotPresent
+
+# 테스트 환경에서는 redis 추천
+redis:
+  enabled: true
+  image:
+    repository: harbor.test.com/argocd/redis
+    tag: 8.2.3-alpine
+    imagePullPolicy: ""
+  exporter:
+    enabled: false
+    env: []
+    image:
+      repository: harbor.test.com/argocd/redis_exporter
+      tag: v1.84.0
+      imagePullPolicy: ""
+
+# 운영 환경에서는 redis-ha 추천
+redis-ha:
+  enabled: true
+  image:
+    repository: harbor.test.com/argocd/redis
+    tag: 8.2.3-alpine
+  exporter:
+    enabled: true # Argo CD 상태 정보를 Prometheus가 읽을 수 있게 제공
+    image: harbor.test.com/argocd/redis_exporter
+    tag: v1.75.0
+  persistentVolume: # Redis HA PVC 사용 시
+    enabled: true
+    storageClass: ceph-block # 필자는 rook-ceph를 사용하여 스토리지클래스를 지정
+  haproxy:
+    enabled: true
+    labels:
+      app.kubernetes.io/name: argocd-redis-ha-haproxy
+    image:
+      repository: harbor.test.com/argocd/haproxy
+
+# SSO 관련
+dex:
+  enabled: true
+  image:
+    repository: harbor.test.com/argocd/dex
+    tag: v2.45.1
+    imagePullPolicy: ""
 
 server:
   ingress:
     enabled: true
-    annotations:
-      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-      nginx.ingress.kubernetes.io/ssl-passthrough: "true"
-
-    ingressClassName: "nginx"
-
-    hostname: [ argocd_domain ]
-
+    ingressClassName: nginx
+    hostname: argocd.example.com
     path: /
     pathType: Prefix
-
-    tls:
-      - secretName: "argocd-server-tls"
-        hosts:
-          - [ argocd_domain ]
-
-  resources:
-    requests:
-      cpu: "[ argocd_cpu_request ]"
-      memory: "[ argocd_memory_request ]"
-    limits:
-      cpu: "[ argocd_cpu_limit ]"
-      memory: "[ argocd_memory_limit ]"
-
-redis:
-  image:
-    repository: [ argocd_image_registry ]/[ argocd_namespace ]/redis
-    tag: [ argocd_image_version ]
-    imagePullPolicy: [ argocd_image_pull_policy ]
-
-configs:
-  params:
-    server.insecure: true
-
-
-dex:
-  enabled: true # true -> false로 수정
+    tls: true
+    certificateSecret:
+      enabled: true
+      secretName: wildcard-tls
 ```
 
 * * *
