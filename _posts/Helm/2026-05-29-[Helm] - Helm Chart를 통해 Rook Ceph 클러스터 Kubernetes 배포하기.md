@@ -92,6 +92,7 @@ $ docker pull registry.k8s.io/sig-storage/csi-snapshotter:v8.5.0
 $ docker pull registry.k8s.io/sig-storage/csi-attacher:v4.11.0
 $ docker pull registry.k8s.io/sig-storage/csi-resizer:v2.1.0
 $ docker pull quay.io/cephcsi/ceph-csi-operator:v0.6.0
+$ docker pull quay.io/csiaddons/k8s-sidecar:v0.14.0
 
 $ docker tag docker.io/rook/ceph:v1.19.6                                   harbor.test.com/rook/ceph:v1.19.6
 $ docker tag quay.io/cephcsi/cephcsi:v3.16.2                               harbor.test.com/cephcsi/cephcsi:v3.16.2
@@ -101,6 +102,7 @@ $ docker tag registry.k8s.io/sig-storage/csi-snapshotter:v8.5.0            harbo
 $ docker tag registry.k8s.io/sig-storage/csi-attacher:v4.11.0              harbor.test.com/sig-storage/csi-attacher:v4.11.0
 $ docker tag registry.k8s.io/sig-storage/csi-resizer:v2.1.0                harbor.test.com/sig-storage/csi-resizer:v2.1.0
 $ docker tag quay.io/cephcsi/ceph-csi-operator:v0.6.0                      harbor.test.com/cephcsi/ceph-csi-operator:v0.6.0
+$ docker tag quay.io/csiaddons/k8s-sidecar:v0.14.0                         harbor.test.com/csiaddons/k8s-sidecar:v0.14.0
 
 $ docker push harbor.test.com/rook/ceph:v1.19.6
 $ docker push harbor.test.com/cephcsi/cephcsi:v3.16.2
@@ -110,6 +112,7 @@ $ docker push harbor.test.com/sig-storage/csi-snapshotter:v8.5.0
 $ docker push harbor.test.com/sig-storage/csi-attacher:v4.11.0
 $ docker push harbor.test.com/sig-storage/csi-resizer:v2.1.0
 $ docker push harbor.test.com/cephcsi/ceph-csi-operator:v0.6.0 
+$ docker push harbor.test.com/csiaddons/k8s-sidecar:v0.14.0
 ```
 
 * * *
