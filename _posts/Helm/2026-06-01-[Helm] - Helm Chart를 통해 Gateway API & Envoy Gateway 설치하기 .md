@@ -109,6 +109,21 @@ spec:
   controllerName: gateway.envoyproxy.io/gatewayclass-controller
 ```
 
+```yaml
+# Envoy Proxy Service를 NodePort로 고정한 경우
+apiVersion: gateway.networking.k8s.io/v1
+kind: GatewayClass
+metadata:
+  name: envoy-gateway
+spec:
+  controllerName: gateway.envoyproxy.io/gatewayclass-controller
+  parametersRef:
+    group: gateway.envoyproxy.io
+    kind: EnvoyProxy
+    name: envoy-proxy-config
+    namespace: envoy-gateway
+```
+
 * * *
 
 - GatewayClass를 생성합니다.
@@ -134,10 +149,10 @@ $ kubectl get gatewayclass
 - HTTPS Listener를 사용하기 위해서는 인증서 Secret이 필요하며, Secret은 Gateway가 생성되는 네임스페이스에 존재해야 합니다.
 
 ```bash
-$ kubectl create secret tls wildcard-tls \ 
-  --cert=fullchain.crt \ 
-  --key=server.key \ 
-  -n envoy-gateway
+$ kubectl create secret tls wildcard-tls \
+--cert=fullchain.crt \ 
+--key=server.key \
+-n envoy-gateway
 ```
 
 * * *
@@ -150,7 +165,7 @@ $ kubectl get secret -n envoy-gateway
 
 * * *
 
-### 3.4 EnvoyProxy 생성하기 :
+### 3.3 (선택) EnvoyProxy 생성하기 :
 
 > EnvoyProxy 생성 시점
 >
@@ -165,7 +180,7 @@ $ kubectl get secret -n envoy-gateway
 apiVersion: gateway.envoyproxy.io/v1alpha1
 kind: EnvoyProxy
 metadata:
-  name: envoy-proxy-nodeport
+  name: envoy-proxy-config
   namespace: envoy-gateway
 spec:
   provider:
@@ -177,18 +192,17 @@ spec:
           type: StrategicMerge
           value:
             spec:
-              type: NodePort
               ports:
                 - name: http-80
-                  protocol: TCP
                   port: 80
                   targetPort: 10080
                   nodePort: 30080
-                - name: https-443
                   protocol: TCP
+                - name: https-443
                   port: 443
                   targetPort: 10443
                   nodePort: 30443
+                  protocol: TCP
 ```
 
 * * *
@@ -207,6 +221,8 @@ $ kubectl apply -f envoyproxy.yaml
 $ kubectl get EnvoyProxy -n envoy-gateway
 ```
 
+![Evovy gateway EnvoyProxy 생성 화면](/assets/img/post/helm/Evovy%20gateway%20EnvoyProxy%20생성%20화면.png)
+
 * * *
 
 ### 3.4 HTTP/HTTPS Gateway 생성하기 :
@@ -220,18 +236,23 @@ metadata:
 spec:
   gatewayClassName: envoy-gateway
   listeners:
-    - name: http # http 사용하는 경우
+    - name: http
       protocol: HTTP
       port: 80
-
-    - name: https # https 사용하는 경우
+      allowedRoutes:
+        namespaces:
+          from: All
+    - name: https
       protocol: HTTPS
-      port: 443 
-      tls: 
+      port: 443
+      tls:
         mode: Terminate
         certificateRefs:
-          - kind: Secret 
+          - kind: Secret
             name: wildcard-tls
+      allowedRoutes:
+        namespaces:
+          from: All
 ```
 
 * * *
@@ -255,27 +276,48 @@ $ kubectl get Gateway -n envoy-gateway
 ### 3.5 HTTPRoute 생성하기 :
 
 ```yaml
+# 서비스별 HTTPRoute 생성
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: argocd
+  name: argocd-route
   namespace: argocd
 spec:
-  parentRefs: 
+  parentRefs:
     - name: envoy-gateway
       namespace: envoy-gateway
-  
-  hostnames: # DNS 정보
-    - argocd.example.com 
-  
+  hostnames:
+    - argocd.example.com
   rules:
-    - matches: 
-        - path: 
-            type: PathPrefix 
+    - matches:
+        - path:
+            type: PathPrefix
             value: /
-      backendRefs: # 서비스명
+      backendRefs:
         - name: argocd-server
-          port: 80
+          port: 443
+```
+
+```yaml
+# HTTP → HTTPS 리다이렉트가 필요한 경우
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: argocd-http-redirect
+  namespace: argocd
+spec:
+  parentRefs:
+    - name: envoy-gateway
+      namespace: envoy-gateway
+      sectionName: http
+  hostnames:
+    - argocd.example.com
+  rules:
+    - filters:
+        - type: RequestRedirect
+          requestRedirect:
+            scheme: https
+            statusCode: 301
 ```
 
 * * *
@@ -293,5 +335,7 @@ $ kubectl apply -f httproute-argocd.yaml
 ```bash
 $ kubectl get httproute -n argocd
 ```
+
+![Evovy gateway httproute 생성 화면](/assets/img/post/helm/Evovy%20gateway%20httproute%20생성%20화면.png)
 
 * * *
