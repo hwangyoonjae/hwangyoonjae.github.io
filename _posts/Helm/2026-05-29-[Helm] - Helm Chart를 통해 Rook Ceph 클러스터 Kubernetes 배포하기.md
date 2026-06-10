@@ -248,7 +248,7 @@ cephImage:
 
 toolbox:
   enabled: true
-  image: harbor.inno.com/ceph/ceph:v19.2.3
+  image: harbor.test.com/ceph/ceph:v19.2.3
 
 cephClusterSpec:
   dataDirHostPath: /var/lib/rook
