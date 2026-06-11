@@ -388,3 +388,67 @@ $ kubectl get pvc -n rook-ceph
 ![rook ceph cephfs pvc 볼륨 생성 확인](/assets/img/post/helm/rook%20ceph%20cephfs%20pvc%20볼륨%20생성%20확인.png)
 
 * * *
+
+## 5. Rook-Ceph Dashboard 접속하기 :
+### 5.1 Rook-Ceph Dashboard 서비스 확인하기 :
+
+```bash
+$ kubectl get svc -n rook-ceph
+```
+
+![rook ceph dashboard 서비스 확인](/assets/img/post/helm/rook%20ceph%20dashboard%20서비스%20확인.png)
+
+* * *
+
+### 5.2 Rook-Ceph Dashboard Ingress 생성하기 :
+
+- Dashboard에 접속하기 위해 위에서 확인한 서비스를 연결하여 Ingress를 생성합니다.
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rook-ceph-dashboard
+  namespace: rook-ceph
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: rook-ceph.test.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: rook-ceph-mgr-dashboard
+                port:
+                  number: 7000
+            path: /
+            pathType: Prefix
+```
+
+* * *
+
+```bash
+$ kubectl apply -f rook-ceph-ingress.yaml
+```
+
+* * *
+
+### 5.3 Rook-Ceph Dashboard 접속하기 :
+
+- 위 과정에서 생성한 Ingress 주소로 접속합니다.
+
+![rook ceph dashboard 접속 화면](/assets/img/post/helm/rook%20ceph%20dashboard%20접속%20화면.png)
+
+* * *
+
+- 아이디/패스워드 입력하여 로그인 진행합니다.
+
+```bash
+# admin 패스워드 확인
+$ kubectl -n rook-ceph get secret rook-ceph-dashboard-password -o jsonpath="{['data']['password']}" | base64 --decode
+# Ex) GR!ZEc')4"#.P4>N}1*n
+```
+
+![rook ceph dashboard 로그인 후 화면](/assets/img/post/helm/rook%20ceph%20dashboard%20로그인%20후%20화면.png)
+
+* * *
