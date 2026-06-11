@@ -194,14 +194,12 @@ spec:
             spec:
               ports:
                 - name: http-80
-                  port: 80
-                  targetPort: 10080
-                  nodePort: 30080
+                  port: 1080
+                  nodePort: 31080
                   protocol: TCP
                 - name: https-443
-                  port: 443
-                  targetPort: 10443
-                  nodePort: 30443
+                  port: 1443
+                  nodePort: 31443
                   protocol: TCP
 ```
 
@@ -238,13 +236,13 @@ spec:
   listeners:
     - name: http
       protocol: HTTP
-      port: 80
+      port: 1080
       allowedRoutes:
         namespaces:
           from: All
     - name: https
       protocol: HTTPS
-      port: 443
+      port: 1443
       tls:
         mode: Terminate
         certificateRefs:
