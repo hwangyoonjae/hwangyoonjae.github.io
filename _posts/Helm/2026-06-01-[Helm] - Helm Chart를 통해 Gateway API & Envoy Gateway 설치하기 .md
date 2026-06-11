@@ -293,7 +293,7 @@ spec:
             value: /
       backendRefs:
         - name: argocd-server
-          port: 443
+          port: 80
 ```
 
 ```yaml
