@@ -8,7 +8,7 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 ---
 
 ## 1. Envoy Gateway란? :
-- Kubernetes 클러스터를 웹 브라우저에서 쉽게 관리할 수 있도록 제공하는 Kubernetes 전용 Web UI 대시보드입니다.
+- 클라우드 네이티브 환경에서 외부 트래픽을 내부 쿠버네티스 서비스로 안전하고 효율적으로 라우팅해주는 오픈소스 API 게이트웨이 및 인그레스 컨트롤러입니다.
 
 * * *
 
