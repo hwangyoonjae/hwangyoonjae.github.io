@@ -24,6 +24,8 @@ image: /assets/img/post-title/kubernetes-wallpaper.jpg
 - **Toleration**: Pod에 설정되며, 특정 Taint를 무시하고 해당 노드에 스케줄링될 수 있도록 허용합니다.
   - toleration의 effect, key, value가 일치하면, 해당 Taint를 가진 노드에도 Pod가 스케줄링될 수 있습니다.
 
+![taint 동작 흐름 정리](/assets/img/post/kubernetes/taint%20동작%20흐름%20정리.png)
+
 * * *
 
 ## 3. 노드의 taint 설정하기 :
