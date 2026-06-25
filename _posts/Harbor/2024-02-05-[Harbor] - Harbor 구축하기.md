@@ -45,7 +45,7 @@ $ openssl req -x509 -new -nodes -sha512 -days 365 \
 
 ### 2.4 Server Certificates(비밀키) 생성하기 :
 ```bash
-$ openssl genrsa -out yourdomain.com.key 4096
+$ openssl genrsa -out [도메인 또는 서버주소].key 4096
 ```
 
 * * *
