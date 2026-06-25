@@ -64,7 +64,7 @@ $ openssl req -sha512 -new \
 ### 2.6 인증하기 :
 ```bash
 $ cat > v3ext.cnf <<-EOF
-subjectAltName = IP:[도메인 또는 서버주소],IP:127.0.0.1
+subjectAltName = DNS:[도메인 또는 서버주소],IP:127.0.0.1
 EOF
 ```
 
