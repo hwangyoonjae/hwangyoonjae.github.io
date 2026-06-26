@@ -82,48 +82,110 @@ VERSIONS=(
   "1.35.6"
 )
 
+# 버전별 폴더를 현재 디렉토리 하위에 생성
 BASE_DIR="./"
+
+# DNF Repository 이름
+REPO="kubernetes"
+
 ARCH="$(uname -m)"
+
+case "${ARCH}" in
+  x86_64)
+    PKG_ARCH="x86_64"
+    ;;
+  aarch64|arm64)
+    PKG_ARCH="aarch64"
+    ;;
+  *)
+    echo "[ERROR] Unsupported architecture: ${ARCH}"
+    exit 1
+    ;;
+esac
+
+command -v dnf >/dev/null 2>&1 || {
+  echo "[ERROR] dnf command not found"
+  exit 1
+}
 
 mkdir -p "${BASE_DIR}"
 
-for ver in "${VERSIONS[@]}"; do
-  minor="$(echo "$ver" | cut -d. -f1,2)"
-  repo="kubernetes-${minor}"
-  target_dir="${BASE_DIR}/${ver}"
+get_pkg_rel() {
+  local pkg="$1"
+  local ver="$2"
 
+  dnf --disablerepo='*' \
+      --enablerepo="${REPO}" \
+      --showduplicates list "${pkg}.${PKG_ARCH}" 2>/dev/null \
+    | awk -v p="${pkg}" -v v="${ver}" '
+        $1 ~ "^"p"\\." && $2 ~ "^"v"-" {
+          print $2
+          exit
+        }
+      '
+}
+
+get_latest_rel() {
+  local pkg="$1"
+
+  dnf --disablerepo='*' \
+      --enablerepo="${REPO}" \
+      --showduplicates list "${pkg}.${PKG_ARCH}" 2>/dev/null \
+    | awk -v p="${pkg}" '
+        $1 ~ "^"p"\\." {
+          rel=$2
+        }
+        END {
+          if (rel != "") print rel
+        }
+      '
+}
+
+for ver in "${VERSIONS[@]}"; do
+  target_dir="${BASE_DIR}/${ver}"
   mkdir -p "${target_dir}"
 
   echo "========================================"
-  echo "Downloading Kubernetes RPMs for v${ver}"
-  echo "Using repo: ${repo}"
-  echo "Architecture: ${ARCH}"
-  echo "Target: ${target_dir}"
+  echo "Downloading Kubernetes RPMs"
+  echo "Version      : v${ver}"
+  echo "Repository   : ${REPO}"
+  echo "Architecture : ${PKG_ARCH}"
+  echo "Target Dir   : ${target_dir}"
   echo "========================================"
 
-  kubeadm_rel=$(dnf --disablerepo='*' --enablerepo="${repo}" list available "kubeadm.${ARCH}" 2>/dev/null | awk -v v="${ver}" '$1 ~ /^kubeadm\./ && $2 ~ "^"v"-" {print $2; exit}')
-  kubelet_rel=$(dnf --disablerepo='*' --enablerepo="${repo}" list available "kubelet.${ARCH}" 2>/dev/null | awk -v v="${ver}" '$1 ~ /^kubelet\./ && $2 ~ "^"v"-" {print $2; exit}')
-  kubectl_rel=$(dnf --disablerepo='*' --enablerepo="${repo}" list available "kubectl.${ARCH}" 2>/dev/null | awk -v v="${ver}" '$1 ~ /^kubectl\./ && $2 ~ "^"v"-" {print $2; exit}')
+  kubeadm_rel="$(get_pkg_rel kubeadm "${ver}")"
+  kubelet_rel="$(get_pkg_rel kubelet "${ver}")"
+  kubectl_rel="$(get_pkg_rel kubectl "${ver}")"
 
-  # cri-tools / kubernetes-cni는 Kubernetes patch 버전과 다를 수 있어서 정확한 ver 매칭 제외
-  critools_rel=$(dnf --disablerepo='*' --enablerepo="${repo}" list available "cri-tools.${ARCH}" 2>/dev/null | awk '$1 ~ /^cri-tools\./ {print $2; exit}')
-  cni_rel=$(dnf --disablerepo='*' --enablerepo="${repo}" list available "kubernetes-cni.${ARCH}" 2>/dev/null | awk '$1 ~ /^kubernetes-cni\./ {print $2; exit}')
+  # cri-tools / kubernetes-cni는 Kubernetes patch 버전과 일치하지 않을 수 있으므로 repo 내 최신 버전 사용
+  critools_rel="$(get_latest_rel cri-tools)"
+  cni_rel="$(get_latest_rel kubernetes-cni)"
 
   if [[ -z "${kubeadm_rel}" || -z "${kubelet_rel}" || -z "${kubectl_rel}" || -z "${critools_rel}" || -z "${cni_rel}" ]]; then
-    echo "[ERROR] 패키지 조회 실패: ${ver} (${repo}, ${ARCH})"
-    echo "kubeadm=${kubeadm_rel:-NOT_FOUND}"
-    echo "kubelet=${kubelet_rel:-NOT_FOUND}"
-    echo "kubectl=${kubectl_rel:-NOT_FOUND}"
-    echo "cri-tools=${critools_rel:-NOT_FOUND}"
-    echo "kubernetes-cni=${cni_rel:-NOT_FOUND}"
+    echo "[ERROR] 패키지 조회 실패"
+    echo "Version        : ${ver}"
+    echo "Repository     : ${REPO}"
+    echo "Architecture   : ${PKG_ARCH}"
+    echo "kubeadm        : ${kubeadm_rel:-NOT_FOUND}"
+    echo "kubelet        : ${kubelet_rel:-NOT_FOUND}"
+    echo "kubectl        : ${kubectl_rel:-NOT_FOUND}"
+    echo "cri-tools      : ${critools_rel:-NOT_FOUND}"
+    echo "kubernetes-cni : ${cni_rel:-NOT_FOUND}"
+    echo
+
+    echo "[DEBUG] Available kubeadm versions:"
+    dnf --disablerepo='*' \
+        --enablerepo="${REPO}" \
+        --showduplicates list "kubeadm.${PKG_ARCH}" || true
+
     exit 1
   fi
 
-  kubeadm_pkg="kubeadm-${kubeadm_rel}.${ARCH}"
-  kubelet_pkg="kubelet-${kubelet_rel}.${ARCH}"
-  kubectl_pkg="kubectl-${kubectl_rel}.${ARCH}"
-  critools_pkg="cri-tools-${critools_rel}.${ARCH}"
-  cni_pkg="kubernetes-cni-${cni_rel}.${ARCH}"
+  kubeadm_pkg="kubeadm-${kubeadm_rel}.${PKG_ARCH}"
+  kubelet_pkg="kubelet-${kubelet_rel}.${PKG_ARCH}"
+  kubectl_pkg="kubectl-${kubectl_rel}.${PKG_ARCH}"
+  critools_pkg="cri-tools-${critools_rel}.${PKG_ARCH}"
+  cni_pkg="kubernetes-cni-${cni_rel}.${PKG_ARCH}"
 
   echo "Found packages:"
   echo "  ${kubeadm_pkg}"
@@ -131,11 +193,12 @@ for ver in "${VERSIONS[@]}"; do
   echo "  ${kubectl_pkg}"
   echo "  ${critools_pkg}"
   echo "  ${cni_pkg}"
+  echo
 
   dnf download --resolve \
     --disablerepo='*' \
-    --enablerepo="${repo}" \
-    --disableexcludes="${repo}" \
+    --enablerepo="${REPO}" \
+    --disableexcludes="${REPO}" \
     --destdir="${target_dir}" \
     "${kubeadm_pkg}" \
     "${kubelet_pkg}" \
@@ -143,15 +206,21 @@ for ver in "${VERSIONS[@]}"; do
     "${critools_pkg}" \
     "${cni_pkg}"
 
-  echo "[OK] v${ver} 완료"
+  echo
+  echo "[OK] v${ver} RPM download completed"
   echo
 done
 
 echo "========================================"
 echo "All RPM downloads completed"
-echo "Location: ${BASE_DIR}"
+echo "Base Directory: ${BASE_DIR}"
 echo "========================================"
-find "${BASE_DIR}" -name "*.rpm"
+
+for ver in "${VERSIONS[@]}"; do
+  echo
+  echo "[v${ver}]"
+  find "${BASE_DIR}/${ver}" -name "*.rpm" -type f | sort
+done
 ```
 
 * * *
