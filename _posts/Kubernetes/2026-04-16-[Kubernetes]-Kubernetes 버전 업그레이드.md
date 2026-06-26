@@ -79,7 +79,7 @@ VERSIONS=(
   "1.32.13"
   "1.33.10"
   "1.34.6"
-  "1.35.3"
+  "1.35.6"
 )
 
 BASE_DIR="./"
@@ -105,22 +105,32 @@ for ver in "${VERSIONS[@]}"; do
   kubelet_rel=$(dnf --disablerepo='*' --enablerepo="${repo}" list available "kubelet.${ARCH}" 2>/dev/null | awk -v v="${ver}" '$1 ~ /^kubelet\./ && $2 ~ "^"v"-" {print $2; exit}')
   kubectl_rel=$(dnf --disablerepo='*' --enablerepo="${repo}" list available "kubectl.${ARCH}" 2>/dev/null | awk -v v="${ver}" '$1 ~ /^kubectl\./ && $2 ~ "^"v"-" {print $2; exit}')
 
-  if [[ -z "${kubeadm_rel}" || -z "${kubelet_rel}" || -z "${kubectl_rel}" ]]; then
+  # cri-tools / kubernetes-cni는 Kubernetes patch 버전과 다를 수 있어서 정확한 ver 매칭 제외
+  critools_rel=$(dnf --disablerepo='*' --enablerepo="${repo}" list available "cri-tools.${ARCH}" 2>/dev/null | awk '$1 ~ /^cri-tools\./ {print $2; exit}')
+  cni_rel=$(dnf --disablerepo='*' --enablerepo="${repo}" list available "kubernetes-cni.${ARCH}" 2>/dev/null | awk '$1 ~ /^kubernetes-cni\./ {print $2; exit}')
+
+  if [[ -z "${kubeadm_rel}" || -z "${kubelet_rel}" || -z "${kubectl_rel}" || -z "${critools_rel}" || -z "${cni_rel}" ]]; then
     echo "[ERROR] 패키지 조회 실패: ${ver} (${repo}, ${ARCH})"
     echo "kubeadm=${kubeadm_rel:-NOT_FOUND}"
     echo "kubelet=${kubelet_rel:-NOT_FOUND}"
     echo "kubectl=${kubectl_rel:-NOT_FOUND}"
+    echo "cri-tools=${critools_rel:-NOT_FOUND}"
+    echo "kubernetes-cni=${cni_rel:-NOT_FOUND}"
     exit 1
   fi
 
   kubeadm_pkg="kubeadm-${kubeadm_rel}.${ARCH}"
   kubelet_pkg="kubelet-${kubelet_rel}.${ARCH}"
   kubectl_pkg="kubectl-${kubectl_rel}.${ARCH}"
+  critools_pkg="cri-tools-${critools_rel}.${ARCH}"
+  cni_pkg="kubernetes-cni-${cni_rel}.${ARCH}"
 
   echo "Found packages:"
   echo "  ${kubeadm_pkg}"
   echo "  ${kubelet_pkg}"
   echo "  ${kubectl_pkg}"
+  echo "  ${critools_pkg}"
+  echo "  ${cni_pkg}"
 
   dnf download --resolve \
     --disablerepo='*' \
@@ -129,7 +139,9 @@ for ver in "${VERSIONS[@]}"; do
     --destdir="${target_dir}" \
     "${kubeadm_pkg}" \
     "${kubelet_pkg}" \
-    "${kubectl_pkg}"
+    "${kubectl_pkg}" \
+    "${critools_pkg}" \
+    "${cni_pkg}"
 
   echo "[OK] v${ver} 완료"
   echo
@@ -139,9 +151,13 @@ echo "========================================"
 echo "All RPM downloads completed"
 echo "Location: ${BASE_DIR}"
 echo "========================================"
+find "${BASE_DIR}" -name "*.rpm"
 ```
 
 * * *
+
+> 위 스크립트 실행 후, Crio 설치파일 다운이 안될 경우 아래 과정을 진행하시면됩니다.
+{: .prompt-warning}
 
 - 아래 URL 접속하여 Crio RPM 파일을 다운받습니다.
 
