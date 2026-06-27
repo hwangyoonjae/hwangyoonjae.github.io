@@ -86,7 +86,8 @@ VERSIONS=(
 BASE_DIR="./"
 
 # DNF Repository 이름
-REPO="kubernetes"
+K8S_REPO="kubernetes"
+CRIO_REPO="cri-o"
 
 ARCH="$(uname -m)"
 
@@ -111,11 +112,12 @@ command -v dnf >/dev/null 2>&1 || {
 mkdir -p "${BASE_DIR}"
 
 get_pkg_rel() {
-  local pkg="$1"
-  local ver="$2"
+  local repo="$1"
+  local pkg="$2"
+  local ver="$3"
 
   dnf --disablerepo='*' \
-      --enablerepo="${REPO}" \
+      --enablerepo="${repo}" \
       --showduplicates list "${pkg}.${PKG_ARCH}" 2>/dev/null \
     | awk -v p="${pkg}" -v v="${ver}" '
         $1 ~ "^"p"\\." && $2 ~ "^"v"-" {
@@ -126,10 +128,11 @@ get_pkg_rel() {
 }
 
 get_latest_rel() {
-  local pkg="$1"
+  local repo="$1"
+  local pkg="$2"
 
   dnf --disablerepo='*' \
-      --enablerepo="${REPO}" \
+      --enablerepo="${repo}" \
       --showduplicates list "${pkg}.${PKG_ARCH}" 2>/dev/null \
     | awk -v p="${pkg}" '
         $1 ~ "^"p"\\." {
@@ -146,65 +149,69 @@ for ver in "${VERSIONS[@]}"; do
   mkdir -p "${target_dir}"
 
   echo "========================================"
-  echo "Downloading Kubernetes RPMs"
+  echo "Downloading Kubernetes + CRI-O RPMs"
   echo "Version      : v${ver}"
-  echo "Repository   : ${REPO}"
+  echo "K8S Repo     : ${K8S_REPO}"
+  echo "CRI-O Repo   : ${CRIO_REPO}"
   echo "Architecture : ${PKG_ARCH}"
   echo "Target Dir   : ${target_dir}"
   echo "========================================"
 
-  kubeadm_rel="$(get_pkg_rel kubeadm "${ver}")"
-  kubelet_rel="$(get_pkg_rel kubelet "${ver}")"
-  kubectl_rel="$(get_pkg_rel kubectl "${ver}")"
+  kubeadm_rel="$(get_pkg_rel "${K8S_REPO}" kubeadm "${ver}")"
+  kubelet_rel="$(get_pkg_rel "${K8S_REPO}" kubelet "${ver}")"
+  kubectl_rel="$(get_pkg_rel "${K8S_REPO}" kubectl "${ver}")"
 
-  # cri-tools / kubernetes-cni는 Kubernetes patch 버전과 일치하지 않을 수 있으므로 repo 내 최신 버전 사용
-  critools_rel="$(get_latest_rel cri-tools)"
-  cni_rel="$(get_latest_rel kubernetes-cni)"
+  critools_rel="$(get_latest_rel "${K8S_REPO}" cri-tools)"
+  cni_rel="$(get_latest_rel "${K8S_REPO}" kubernetes-cni)"
 
-  if [[ -z "${kubeadm_rel}" || -z "${kubelet_rel}" || -z "${kubectl_rel}" || -z "${critools_rel}" || -z "${cni_rel}" ]]; then
+  crio_rel="$(get_latest_rel "${CRIO_REPO}" cri-o)"
+
+  if [[ -z "${kubeadm_rel}" || -z "${kubelet_rel}" || -z "${kubectl_rel}" || -z "${critools_rel}" || -z "${cni_rel}" || -z "${crio_rel}" ]]; then
     echo "[ERROR] 패키지 조회 실패"
     echo "Version        : ${ver}"
-    echo "Repository     : ${REPO}"
     echo "Architecture   : ${PKG_ARCH}"
     echo "kubeadm        : ${kubeadm_rel:-NOT_FOUND}"
     echo "kubelet        : ${kubelet_rel:-NOT_FOUND}"
     echo "kubectl        : ${kubectl_rel:-NOT_FOUND}"
     echo "cri-tools      : ${critools_rel:-NOT_FOUND}"
     echo "kubernetes-cni : ${cni_rel:-NOT_FOUND}"
-    echo
-
-    echo "[DEBUG] Available kubeadm versions:"
-    dnf --disablerepo='*' \
-        --enablerepo="${REPO}" \
-        --showduplicates list "kubeadm.${PKG_ARCH}" || true
-
+    echo "cri-o          : ${crio_rel:-NOT_FOUND}"
     exit 1
   fi
 
-  kubeadm_pkg="kubeadm-${kubeadm_rel}.${PKG_ARCH}"
-  kubelet_pkg="kubelet-${kubelet_rel}.${PKG_ARCH}"
-  kubectl_pkg="kubectl-${kubectl_rel}.${PKG_ARCH}"
-  critools_pkg="cri-tools-${critools_rel}.${PKG_ARCH}"
-  cni_pkg="kubernetes-cni-${cni_rel}.${PKG_ARCH}"
+  K8S_PKGS=(
+    "kubeadm-${kubeadm_rel}.${PKG_ARCH}"
+    "kubelet-${kubelet_rel}.${PKG_ARCH}"
+    "kubectl-${kubectl_rel}.${PKG_ARCH}"
+    "cri-tools-${critools_rel}.${PKG_ARCH}"
+    "kubernetes-cni-${cni_rel}.${PKG_ARCH}"
+  )
 
-  echo "Found packages:"
-  echo "  ${kubeadm_pkg}"
-  echo "  ${kubelet_pkg}"
-  echo "  ${kubectl_pkg}"
-  echo "  ${critools_pkg}"
-  echo "  ${cni_pkg}"
+  CRIO_PKGS=(
+    "cri-o-${crio_rel}.${PKG_ARCH}"
+  )
+
+  echo "Found Kubernetes packages:"
+  printf '  %s\n' "${K8S_PKGS[@]}"
+
+  echo
+  echo "Found CRI-O packages:"
+  printf '  %s\n' "${CRIO_PKGS[@]}"
   echo
 
   dnf download --resolve \
     --disablerepo='*' \
-    --enablerepo="${REPO}" \
-    --disableexcludes="${REPO}" \
+    --enablerepo="${K8S_REPO}" \
+    --disableexcludes="${K8S_REPO}" \
     --destdir="${target_dir}" \
-    "${kubeadm_pkg}" \
-    "${kubelet_pkg}" \
-    "${kubectl_pkg}" \
-    "${critools_pkg}" \
-    "${cni_pkg}"
+    "${K8S_PKGS[@]}"
+
+  dnf download --resolve \
+    --disablerepo='*' \
+    --enablerepo="${CRIO_REPO}" \
+    --disableexcludes="${CRIO_REPO}" \
+    --destdir="${target_dir}" \
+    "${CRIO_PKGS[@]}"
 
   echo
   echo "[OK] v${ver} RPM download completed"
