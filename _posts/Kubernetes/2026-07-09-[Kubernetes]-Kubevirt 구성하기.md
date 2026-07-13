@@ -152,7 +152,8 @@ $ kubectl get pods -n kubevirt
 
 ```bash
 $ vi kubevirt-cr.yaml
-
+```
+```yaml
 # 아래와 같이 수정합니다.
 apiVersion: kubevirt.io/v1
 kind: KubeVirt
@@ -205,7 +206,9 @@ $ docker push harbor.test.com/kubevirt/cirros-container-disk-demo:20260709_7c295
 
 ```bash
 $ vi test-vm.yaml
+```
 
+```yaml
 # 아래 내용 입력합니다.
 apiVersion: kubevirt.io/v1
 kind: VirtualMachine
