@@ -7,7 +7,7 @@ tags: [Kubernetes, Kubevirt]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
-## 1. kvm 확인하기 :
+## 1. KVM 확인하기 :
 ### 1.1 CPU에 VT-x(vmx) 노출 확인하기 :
 
 ```bash
@@ -63,7 +63,10 @@ $ ls -l /dev/kvm
 * * *
 
 ## 2. KubeVirt 설치하기 :
-### 2.1 KubeVirt 버전 선택하기 :
+### 2.1 Kubevirt란? :
+- 쿠버네티스 위에서 가상머신을 실행할 수 있게 해주는 가상화 확장 플랫폼이며, VM도 쿠버네티스 리소스처럼 YAML로 생성하고 관리할 수 있게 해주는 기술입니다.
+
+### 2.2 KubeVirt 버전 선택하기 :
 
 - 먼저 설치 yaml을 받아서 어떤 이미지가 필요한지 확인합니다.
 
@@ -78,7 +81,7 @@ $ grep image: kubevirt-*.yaml
 
 * * *
 
-### 2.2 KubeVirt 이미지 복사하기 :
+### 2.3 KubeVirt 이미지 복사하기 :
 
 - 위 과정에서 진행한 이미지 목록 확인 후 다운받아 Harbor 서버에 저장합니다.
 
@@ -117,7 +120,7 @@ $ docker push harbor.test.com/kubevirt/virt-launcher:v1.8.4
 
 * * *
 
-### 2.3 KubeVirt Operator 생성하기 :
+### 2.4 KubeVirt Operator 생성하기 :
 
 - 외부 이미지 대신 Harbor를 사용하도록 수정합니다.
 
@@ -143,7 +146,7 @@ $ kubectl get pods -n kubevirt
 
 * * *
 
-### 2.4 KubeVirt CR 생성하기 :
+### 2.5 KubeVirt CR 생성하기 :
 
 - virt-api / virt-controller / virt-handler / virt-launcher는 kubevirt-operator.yaml에 직접 안 보이고, virt-operator가 kubevirt-cr.yaml을 보고 생성하기 때문에 Harbor 주소를 설정해야합니다.
 
