@@ -139,7 +139,7 @@ $ kubectl apply -f kubevirt-operator.yaml
 $ kubectl get pods -n kubevirt
 ```
 
-![kubevirt 설치 확인하기](/assets/img/post/kubernetes/kubevirt%20설치%20확인하기.png)\
+![kubevirt 설치 확인하기](/assets/img/post/kubernetes/kubevirt%20설치%20확인하기.png)
 
 * * *
 
