@@ -66,6 +66,8 @@ $ ls -l /dev/kvm
 ### 2.1 Kubevirt란? :
 - 쿠버네티스 위에서 가상머신을 실행할 수 있게 해주는 가상화 확장 플랫폼이며, VM도 쿠버네티스 리소스처럼 YAML로 생성하고 관리할 수 있게 해주는 기술입니다.
 
+* * *
+
 ### 2.2 KubeVirt 버전 선택하기 :
 
 - 먼저 설치 yaml을 받아서 어떤 이미지가 필요한지 확인합니다.
@@ -185,8 +187,138 @@ $ kubectl get pods -n kubevirt
 
 * * *
 
-## 3. VM 생성하기 :
-### 3.1 테스트 VM 이미지 준비하기 :
+## 3. CDI(Containerized Data Importer) 설치하기 :
+### 3.1 CDI란? :
+
+* * *
+
+### 3.2 CDI 버전 선택하기 :
+
+- 먼저 설치 yaml을 받아서 어떤 이미지가 필요한지 확인합니다.
+
+```bash
+$ export CDI_VERSION=v1.65.0
+$ curl -LO https://github.com/kubevirt/containerized-data-importer/releases/download/${CDI_VERSION}/cdi-operator.yaml
+$ curl -LO https://github.com/kubevirt/containerized-data-importer/releases/download/${CDI_VERSION}/cdi-cr.yaml
+
+# 이미지 목록 확인
+$ grep image: cdi-*.yaml
+```
+
+* * *
+
+### 3.3 KubeVirt 이미지 복사하기 :
+
+- 위 과정에서 진행한 이미지 목록 확인 후 다운받아 Harbor 서버에 저장합니다.
+
+```bash
+$ docker pull quay.io/kubevirt/cdi-operator:v1.65.0
+$ docker pull quay.io/kubevirt/cdi-controller:v1.65.0
+$ docker pull quay.io/kubevirt/cdi-importer:v1.65.0
+$ docker pull quay.io/kubevirt/cdi-cloner:v1.65.0
+$ docker pull quay.io/kubevirt/cdi-importer:v1.65.0
+$ docker pull quay.io/kubevirt/cdi-apiserver:v1.65.0
+$ docker pull quay.io/kubevirt/cdi-uploadserver:v1.65.0
+$ docker pull quay.io/kubevirt/cdi-uploadproxy:v1.65.0
+
+$ docker save -o quay.io-kubevirt-cdi-operator-v1.65.0.tar quay.io/kubevirt/cdi-operator:v1.65.0
+$ docker save -o quay.io-kubevirt-cdi-controller-v1.65.0.tar    quay.io/kubevirt/cdi-controller:v1.65.0
+$ docker save -o quay.io-kubevirt-cdi-importer-v1.65.0.tar      quay.io/kubevirt/cdi-importer:v1.65.0
+$ docker save -o quay.io-kubevirt-cdi-cloner-v1.65.0.tar        quay.io/kubevirt/cdi-cloner:v1.65.0
+$ docker save -o quay.io-kubevirt-cdi-importer-v1.65.0.tar      quay.io/kubevirt/cdi-importer:v1.65.0
+$ docker save -o quay.io-kubevirt-cdi-apiserver-v1.65.0.tar     quay.io/kubevirt/cdi-apiserver:v1.65.0
+$ docker save -o quay.io-kubevirt-cdi-uploadserver-v1.65.0.tar  quay.io/kubevirt/cdi-uploadserver:v1.65.0
+$ docker save -o quay.io-kubevirt-cdi-uploadproxy-v1.65.0.tar   quay.io/kubevirt/cdi-uploadproxy:v1.65.0
+
+$ docker load -i quay.io-kubevirt-cdi-operator-v1.65.0.tar
+$ docker load -i quay.io-kubevirt-cdi-controller-v1.65.0.tar  
+$ docker load -i quay.io-kubevirt-cdi-importer-v1.65.0.tar    
+$ docker load -i quay.io-kubevirt-cdi-cloner-v1.65.0.tar      
+$ docker load -i quay.io-kubevirt-cdi-importer-v1.65.0.tar    
+$ docker load -i quay.io-kubevirt-cdi-apiserver-v1.65.0.tar   
+$ docker load -i quay.io-kubevirt-cdi-uploadserver-v1.65.0.tar
+$ docker load -i quay.io-kubevirt-cdi-uploadproxy-v1.65.0.tar 
+
+$ docker tag quay.io/kubevirt/cdi-operator:v1.65.0      harbor.test.com/kubevirt/cdi-operator:v1.65.0
+$ docker tag quay.io/kubevirt/cdi-controller:v1.65.0    harbor.test.com/kubevirt/cdi-controller:v1.65.0  
+$ docker tag quay.io/kubevirt/cdi-importer:v1.65.0      harbor.test.com/kubevirt/cdi-importer:v1.65.0
+$ docker tag quay.io/kubevirt/cdi-cloner:v1.65.0        harbor.test.com/kubevirt/cdi-cloner:v1.65.0
+$ docker tag quay.io/kubevirt/cdi-importer:v1.65.0      harbor.test.com/kubevirt/cdi-importer:v1.65.0
+$ docker tag quay.io/kubevirt/cdi-apiserver:v1.65.0     harbor.test.com/kubevirt/cdi-apiserver:v1.65.0
+$ docker tag quay.io/kubevirt/cdi-uploadserver:v1.65.0  harbor.test.com/kubevirt/cdi-uploadserver:v1.65.0
+$ docker tag quay.io/kubevirt/cdi-uploadproxy:v1.65.0   harbor.test.com/kubevirt/cdi-uploadproxy:v1.65.0
+
+$ docker push harbor.test.com/kubevirt/cdi-operator:v1.65.0
+$ docker push harbor.test.com/kubevirt/cdi-controller:v1.65.0  
+$ docker push harbor.test.com/kubevirt/cdi-importer:v1.65.0
+$ docker push harbor.test.com/kubevirt/cdi-cloner:v1.65.0
+$ docker push harbor.test.com/kubevirt/cdi-importer:v1.65.0
+$ docker push harbor.test.com/kubevirt/cdi-apiserver:v1.65.0
+$ docker push harbor.test.com/kubevirt/cdi-uploadserver:v1.65.0
+$ docker push harbor.test.com/kubevirt/cdi-uploadproxy:v1.65.0
+```
+
+* * *
+
+### 3.4 CDI Operator 생성하기 :
+
+- 외부 이미지 대신 Harbor를 사용하도록 수정하고, 
+
+```bash
+$ vi cdi-operator.yaml
+
+# 아래 내용 수정
+      containers:
+      - env:
+        - name: CONTROLLER_IMAGE
+          value: harbor.test.com/kubevirt/cdi-controller:v1.65.0
+        - name: IMPORTER_IMAGE
+          value: harbor.test.com/kubevirt/cdi-importer:v1.65.0
+        - name: CLONER_IMAGE
+          value: harbor.test.com/kubevirt/cdi-cloner:v1.65.0
+        - name: OVIRT_POPULATOR_IMAGE
+          value: harbor.test.com/kubevirt/cdi-importer:v1.65.0
+        - name: APISERVER_IMAGE
+          value: harbor.test.com/kubevirt/cdi-apiserver:v1.65.0
+        - name: UPLOAD_SERVER_IMAGE
+          value: harbor.test.com/kubevirt/cdi-uploadserver:v1.65.0
+        - name: UPLOAD_PROXY_IMAGE
+          value: harbor.test.com/kubevirt/cdi-uploadproxy:v1.65.0
+        - name: MONITORING_NAMESPACE
+        image: harbor.test.com/kubevirt/cdi-operator:v1.65.0
+```
+
+* * *
+
+- 변경 후 설치합니다.
+
+```bash
+$ kubectl apply -f cdi-operator.yaml
+
+# 생성 확인
+$ kubectl get pods -n cdi
+```
+
+![cdi 설치 확인하기](/assets/img/post/kubernetes/cdi%20설치%20확인하기.png)
+
+* * *
+
+### 2.5 CDI CR 생성하기 :
+
+```bash
+$ kubectl apply -f cdi-cr.yaml
+
+# 생성 확인
+$ kubectl get cdi -n cdi
+$ kubectl get pods -n cdi
+```
+
+![cdi 정상 설치 확인](/assets/img/post/kubernetes/cdi%20정상%20설치%20확인.png)
+
+* * *
+
+## 4. VM 생성하기 :
+### 4.1 테스트 VM 이미지 준비하기 :
 
 ```bash
 $ docker pull quay.io/kubevirt/cirros-container-disk-demo:20260709_7c2959d25a
@@ -202,7 +334,7 @@ $ docker push harbor.test.com/kubevirt/cirros-container-disk-demo:20260709_7c295
 
 * * *
 
-### 3.2 테스트 VM YAML 생성하기 :
+### 4.2 테스트 VM YAML 생성하기 :
 
 ```bash
 $ vi test-vm.yaml
@@ -241,7 +373,7 @@ spec:
 
 * * *
 
-### 3.3 테스트 VM Pod 생성하기 :
+### 4.3 테스트 VM Pod 생성하기 :
 
 ```bash
 $ kubectl apply -f test-vm.yaml
