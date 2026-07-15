@@ -32,8 +32,8 @@ $ lscpu | grep -i Virtualization
 ### 1.3 KVM 모듈 로드하기 :
 
 ```bash
-modprobe kvm
-modprobe kvm_intel
+$ modprobe kvm
+$ modprobe kvm_intel
 ## 에러가 없으면 됩니다.
 ```
 
@@ -398,7 +398,7 @@ $ kubectl get pod -n kubevirt | grep virt-launcher
 
 * * *
 
-### 3.4 VM 콘솔 접속하기 :
+### 4.4 VM 콘솔 접속하기 :
 
 - virtctl 명령어를 통해서 VM에 접속하기위해 설치파일을 준비합니다.
 
