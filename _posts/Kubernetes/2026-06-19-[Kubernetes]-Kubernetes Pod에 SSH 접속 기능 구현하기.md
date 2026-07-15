@@ -107,12 +107,44 @@ spec:
                 - AUDIT_WRITE # SSH 세션 생성 과정에서 Linux Audit 로그를 기록하기 위한 권한
 ```
 
+```bash
+$ kubectl apply -f pod-ssh-deploy.yaml
+```
+
 > 파드 생성 시 권한을 추가해야하는 이유
 >
 > OpenSSH Server는 일반적인 웹 애플리케이션보다 추가적인 시스템 권한을 요구합니다.
 >
 > 따라서 Kubernetes 환경에서 SSH 서비스를 제공하기 위해서는 SYS_CHROOT, AUDIT_WRITE Capability를 추가하여 SSH 인증 및 세션 생성 과정이 정상적으로 수행될 수 있도록 구성해야 합니다.
 {: .prompt-warning}
+
+* * *
+
+### 2.2 Service 생성하기 :
+
+- 외부에서 SSH로 접속할 수 있도록 Pod의 22번 포트를 노드의 30022번 포트로 연결하는 Service를 생성합니다.
+
+```bash
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-ssh-service
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    app: pod-ssh-test
+  ports:
+    - name: ssh
+      protocol: TCP
+      port: 22
+      targetPort: 22
+      nodePort: 30022
+```
+
+```bash
+$ kubectl apply -f pod-ssh-svc.yaml
+```
 
 * * *
 
