@@ -189,6 +189,7 @@ $ kubectl get pods -n kubevirt
 
 ## 3. CDI(Containerized Data Importer) 설치하기 :
 ### 3.1 CDI란? :
+- KubeVirt에서 사용하는 VM 디스크(OS 이미지)를 가져오고, 생성하고, 복제하고, 관리하는 컴포넌트입니다.
 
 * * *
 
@@ -431,5 +432,254 @@ $ virtctl console test-vm -n kubevirt
 # Password: gocubsgo
 $
 ```
+
+* * *
+
+## 5. DataVolume 생성 및 이미지 업로드하기 :
+### 5.1 CDI UploadProxy 확인하기 :
+
+- CDI가 정상인지 확인합니다.
+
+```bash
+$ kubectl get pods -n cdi
+$ kubectl get svc -n cdi
+```
+
+![CDI UploadProxy 확인하기](/assets/img/post/kubernetes/CDI%20UploadProxy%20확인하기.png)
+
+* * *
+
+### 5.2 UploadProxy 외부 노출하기 :
+
+- ClusterIP는 외부에서 접근할 수 없으므로 NodePort를 하나 생성합니다.
+
+```bash
+$ vi cdi-uploadproxy-nodeport.yaml
+```
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: cdi-uploadproxy-nodeport
+  namespace: cdi
+spec:
+  type: NodePort      # 추가
+  selector:
+    cdi.kubevirt.io: cdi-uploadproxy
+  ports:
+    - name: https
+      port: 443
+      targetPort: 8443
+      nodePort: 32443  # 추가
+```
+```bash
+$ kubectl apply -f cdi-uploadproxy-nodeport.yaml
+```
+
+* * *
+
+- 서비스의 노드포트가 지정되었는지 확인합니다.
+
+```bash
+$ kubectl get svc -n cdi
+```
+
+![cdi 서비스 노드포트 지정](/assets/img/post/kubernetes/cdi%20서비스%20노드포트%20지정.png)
+
+* * *
+
+### 5.3 qcow2 업로드하기 :
+
+```bash
+virtctl image-upload dv op-rocky96-dv \
+  --namespace default \
+  --image-path=./OP-Rocky-9.6-Minimal-10G.qcow2.compressed \
+  --pvc-size=15Gi \
+  --storage-class=nfs-client \
+  --access-mode=ReadWriteOnce \
+  --uploadproxy-url=https://[Worker_Node_IP]:32443 \
+  --insecure
+```
+
+![qcow2 업로드](/assets/img/post/kubernetes/qcow2%20업로드.png)
+
+> 위 명령어 실행 시, **DataVolume**, **PVC**, **UploadServer**, **이미지** 업로드를 모두 수행합니다.
+{: .prompt-tip}
+
+* * *
+
+- 업로드 상태 확인 후, PVC 생성이 되었는지 확인합니다.
+
+```bash
+# 업로드 상태 확인
+$ kubectl get dv
+
+# PVC 생성 확인
+$ kubectl get pvc
+```
+
+![qcow 업로드 및 pvc 볼륨 생성 확인](/assets/img/post/kubernetes/qcow%20업로드%20및%20pvc%20볼륨%20생성%20확인.png)
+
+* * *
+
+### 5.4 Cloud-init 생성하기 :
+
+```bash
+$ vi cloudinit.yaml
+```
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: rocky-cloudinit
+  namespace: default
+type: Opaque
+stringData:
+  userdata: |
+    #cloud-config
+
+    disable_root: false
+    ssh_pwauth: true
+
+    users:
+      - name: rocky
+        groups:
+          - wheel
+        sudo: ALL=(ALL) NOPASSWD:ALL
+        lock_passwd: false
+        plain_text_passwd: Passw0rd!
+
+    chpasswd:
+      list: |
+        root:qwe1212!Q
+        rocky:Passw0rd!
+      expire: false
+
+    runcmd:
+      - sed -i 's/^#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
+      - sed -i 's/^PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
+      - sed -i 's/^#PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config
+      - sed -i 's/^PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config
+      - systemctl restart sshd
+```
+```bash
+$ kubectl apply -f cloudinit.yaml
+```
+
+* * *
+
+### 5.5 VirtualMachine 생성하기 :
+
+```bash
+$ vi rocky96-vm.yaml
+```
+```yaml
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  name: rocky96
+  namespace: default
+spec:
+  running: false
+
+  template:
+    metadata:
+      labels:
+        kubevirt.io/domain: rocky96
+
+    spec:
+      domain:
+        cpu:
+          cores: 2
+
+        resources:
+          requests:
+            memory: 4Gi
+
+        devices:
+          disks:
+            - name: rootdisk
+              disk:
+                bus: virtio
+
+            - name: cloudinit
+              disk:
+                bus: virtio
+
+          interfaces:
+            - name: default
+              masquerade: {}
+
+      networks:
+        - name: default
+          pod: {}
+
+      volumes:
+        - name: rootdisk
+          persistentVolumeClaim:
+            claimName: op-rocky96-dv
+
+        - name: cloudinit
+          cloudInitNoCloud:
+            secretRef:
+              name: rocky-cloudinit
+```
+```bash
+$ kubectl apply -f rocky96-vm.yaml
+```
+
+* * *
+
+### 5.6 VM 시작하기 :
+
+```bash
+# VM 시작
+$ virtctl start rocky96
+
+# VM 확인
+$ kubectl get vm,vmi -n [NAMESPACE]
+```
+
+![vm 상태 확인](/assets/img/post/kubernetes/vm%20상태%20확인.png)
+
+* * *
+
+### 5.7 SSH 접속하기 :
+
+- SSH 접속을 위해 VM의 서비스 연결합니다.
+
+```bash
+$ vi rocky96-ssh.yaml
+```
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: rocky96-ssh
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    kubevirt.io/domain: rocky96
+  ports:
+    - name: ssh
+      protocol: TCP
+      port: 22
+      targetPort: 22
+      nodePort: 30022
+```
+```bash
+$ kubectl apply -f rocky96-ssh.yaml
+```
+
+* * *
+
+- 서비스 생성 시 설정한 nodePort로 SSH 접속합니다.
+
+```bash
+$ ssh root@<노드IP> -p 30022
+```
+
+![ssh 접속하기](/assets/img/post/kubernetes/ssh%20접속하기.png)
 
 * * *
