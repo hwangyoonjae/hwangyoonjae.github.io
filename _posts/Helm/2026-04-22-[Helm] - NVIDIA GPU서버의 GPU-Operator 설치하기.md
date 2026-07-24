@@ -23,7 +23,7 @@ $ helm search repo gpu-operator --versions | head
 - 폐쇄망에서 진행하는 경우 아래와 같이 진행하면 됩니다.
 
 ```bash
-$ helm pull nvidia/gpu-operator --version 25.10.1 --destination .
+$ helm pull nvidia/gpu-operator --version v25.10.1 --destination .
 ```
 
 * * *
