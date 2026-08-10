@@ -304,7 +304,7 @@ $ kubectl get pods -n cdi
 
 * * *
 
-### 2.5 CDI CR 생성하기 :
+### 3.5 CDI CR 생성하기 :
 
 ```bash
 $ kubectl apply -f cdi-cr.yaml
