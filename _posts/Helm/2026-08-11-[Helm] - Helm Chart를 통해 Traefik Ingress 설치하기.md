@@ -94,6 +94,32 @@ extraObjects:
     spec:
       basicAuth:
         secret: traefik-dashboard-auth-secret
+
+service:
+  spec:
+    #type: LoadBalancer
+    type: NodePort
+
+ports:
+  web:
+    port: 8000
+    expose:
+      default: true
+    exposedPort: 80
+    nodePort: 32080
+    protocol: TCP
+
+  websecure:
+    port: 8443
+    expose:
+      default: true
+    exposedPort: 443
+    nodePort: 32443
+    protocol: TCP
+
+    http:
+      tls:
+        enabled: true
 ```
 
 * * *
@@ -219,5 +245,85 @@ Password : 설정한 비밀번호
 ```
 
 ![Traefik Dashboard 로그인 후 화면](/assets/img/post/helm/Traefik%20Dashboard%20로그인%20후%20화면.png)
+
+* * *
+
+## 4. 애플리케이션 배포 테스트하기 :
+
+- traefik이 정말 Ingress Controller 역할을 하는지 확인하기 위해 deployment,service, ingress를 생성합니다.
+
+```yaml
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-test
+  template:
+    metadata:
+      labels:
+        app: nginx-test
+    spec:
+      containers:
+        - name: nginx
+          image: harbor.test.com/nginx/nginx:1.25.3
+          ports:
+            - containerPort: 80
+```
+
+```yaml
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-test
+spec:
+  selector:
+    app: nginx-test
+  ports:
+    - port: 80
+      targetPort: 80
+````
+
+```yaml
+# ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-test
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: nginx.test.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: nginx-test
+                port:
+                  number: 80
+```
+
+* * *
+
+- 생성 후, 배포합니다.
+
+```bash
+$ kubectl apply -f deployment.yaml
+$ kubectl apply -f service.yaml
+$ kubectl apply -f ingress.yaml
+```
+
+* * *
+
+- 배포 후 Ingress의 설정한 host 주소를 브라우저를 통해 접속합니다.
+
+![Traefik Ingress 적용 후 애플리케이션 접속 화면](/assets/img/post/helm/Traefik%20Ingress%20적용%20후%20애플리케이션%20접속%20화면.png)
 
 * * *
