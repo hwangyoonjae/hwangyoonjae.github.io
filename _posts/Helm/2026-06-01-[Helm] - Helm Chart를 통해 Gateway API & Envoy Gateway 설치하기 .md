@@ -13,7 +13,7 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 * * *
 
 ## 2. Envoy Gateway 설치하기 :
-### 2.1 Envovy Gateway Helm Chart 다운로드 :
+### 2.1 Envoy Gateway Helm Chart 다운로드 :
 
 - 폐쇄망에서 진행하는 경우 아래와 같이 진행하면 됩니다.
 
@@ -28,7 +28,7 @@ $ tar -zxvf gateway-helm-v1.8.0.tgz
 
 * * *
 
-### 2.2 Envovy Gateway Container Image 다운로드 : 
+### 2.2 Envoy Gateway Container Image 다운로드 : 
 
 ```bash
 $ docker pull docker.io/envoyproxy/gateway:v1.8.0
