@@ -551,14 +551,17 @@ eth1
 
 ```bash
 $ nmcli connection add \
-    type ethernet \
-    ifname eth1 \
-    con-name physical-network \
-    ipv4.method manual \
-    ipv4.addresses 192.168.171.179/24 \
-    ipv4.never-default yes \
-    ipv6.method disabled \
-    connection.autoconnect yes
+   type ethernet \
+   ifname eth1 \
+   con-name physical-network \
+   ipv4.method manual \
+   ipv4.addresses 192.168.171.179/24 \
+   ipv4.gateway 192.168.171.254 \
+   ipv4.never-default no \
+   ipv4.route-metric 50 \
+   ipv4.dns 192.168.171.1 \
+   ipv6.method disabled \
+   connection.autoconnect yes
 
 # 생성한 Network Connection을 활성화
 $ nmcli connection up physical-network
@@ -588,5 +591,3 @@ $ ip addr show eth1
 ![Physical Network Interface IP 확인하기](/assets/img/post/kubernetes/Physical%20Network%20Interface%20IP%20확인하기.png)
 
 * * *
-
-### 4.5 고정 IP 설정 유지 확인하기 :
