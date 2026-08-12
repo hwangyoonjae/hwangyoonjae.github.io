@@ -315,9 +315,9 @@ spec:
 - 생성 후, 배포합니다.
 
 ```bash
-$ kubectl apply -f deployment.yaml
-$ kubectl apply -f service.yaml
-$ kubectl apply -f ingress.yaml
+$ kubectl apply -f deployment.yaml -n traefik
+$ kubectl apply -f service.yaml -n traefik
+$ kubectl apply -f ingress.yaml -n traefik
 ```
 
 * * *
