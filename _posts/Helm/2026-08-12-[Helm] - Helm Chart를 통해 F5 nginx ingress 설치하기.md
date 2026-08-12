@@ -128,7 +128,7 @@ $ kubectl create namespace f5-test
 
 * * *
 
-- traefik이 정말 Ingress Controller 역할을 하는지 확인하기 위해 deployment,service, ingress를 생성합니다.
+- F5 Nginx가 정말 Ingress Controller 역할을 하는지 확인하기 위해 deployment,service, ingress를 생성합니다.
 
 ```yaml
 # deployment.yaml
