@@ -3,7 +3,7 @@ layout: post
 title: "Helm Chart를 통해 KEDA 설치하기"
 date: 2026-08-12
 categories: [컨테이너, Helm]
-tags: [Helm, Ingress, Gateway]tes
+tags: [Helm, Ingress, Gateway]
 image: /assets/img/post-title/helm-wallpaper.jpg
 ---
 
