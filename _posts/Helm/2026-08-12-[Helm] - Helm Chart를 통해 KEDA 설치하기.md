@@ -9,6 +9,8 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 
 ## 1. KEDA란? :
 
+- Kubernetes Event-Driven Autoscaling의 약자로, Kubernetes 워크로드를 CPU/Memory뿐 아니라 외부 이벤트나 메트릭을 기준으로 자동 확장/축소할 수 있게 해주는 오토스케일링 컴포넌트입니다.
+
 * * *
 
 ## 2. KEDA 설치하기 :
