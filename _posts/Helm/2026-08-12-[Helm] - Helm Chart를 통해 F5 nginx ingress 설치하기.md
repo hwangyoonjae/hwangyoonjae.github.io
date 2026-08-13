@@ -14,7 +14,7 @@ image: /assets/img/post-title/helm-wallpaper.jpg
 > 이에 따라 운영 환경에서는 보안 및 향후 Kubernetes 버전 호환성을 위해 지속적으로 유지보수되는 Ingress Controller로의 전환이 필요합니다.
 > 
 > 이번 구성에서는 기존 Ingress 구조를 최대한 유지할 수 있는 F5 NGINX Ingress Controller를 대안으로 설치하여 전환하고자 합니다.
-{: .promt-info}
+{: .prompt-info}
 
 * * *
 
