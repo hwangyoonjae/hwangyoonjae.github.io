@@ -299,7 +299,7 @@ sum(kube_pod_info{namespace="keda-demo",pod=~"prometheus-trigger-.*"}) or vector
 
 * * *
 
-## 11. 테스트 이벤트 제거하기 :
+## 10. 테스트 이벤트 제거하기 :
 
 - 테스트 Pod를 삭제하여 Prometheus Metric을 다시 `0`으로 변경합니다.
 
@@ -319,30 +319,18 @@ kubectl get pod -n keda-demo
 
 * * *
 
-## 12. Prometheus Metric이 다시 0인지 확인하기
+## 11. Prometheus Metric이 다시 0인지 확인하기 :
 
-Prometheus UI에서 동일한 쿼리를 다시 실행합니다.
+- Prometheus UI에서 동일한 쿼리를 다시 실행합니다.
 
 ```promql
 sum(kube_pod_info{namespace="keda-demo",pod=~"prometheus-trigger-.*"}) or vector(0)
 ```
 
-정상적으로 동작하면 결과가:
+* * *
 
-```text
-0
-```
+- 정상적으로 동작하면 결과가 ***0*** 으로 다시 변경됩니다.
 
-으로 다시 변경됩니다.
-
-```text
-prometheus-trigger-test 삭제
-        ↓
-kube_pod_info 대상 없음
-        ↓
-Prometheus Metric
-        ↓
-        0
-```
+![Prometheus 메트릭 0으로 변화 확인](/assets/img/post/kubernetes/Prometheus%20메트릭%200으로%20변화%20확인.png)
 
 * * *
