@@ -19,15 +19,15 @@ mermaid: true
 
 ```mermaid
 flowchart LR
-    A[prometheus-trigger Pod] --> B[kube-state-metrics]
-    B --> C[Prometheus]
-    C -->|PromQL Query| D[KEDA Operator]
-    D --> E[KEDA Metrics Server]
-    E --> F[HPA]
-    F --> G[keda-test Deployment]
+    A["prometheus-trigger Pod"] --> B["kube-state-metrics"]
+    B --> C["Prometheus"]
+    C -->|"PromQL Query"| D["KEDA Operator"]
+    D --> E["KEDA Metrics Server"]
+    E --> F["HPA"]
+    F --> G["keda-test Deployment"]
 
-    D -->|0 → 1| G
-    F -->|1 → N| G
+    D -->|"0 to 1"| G
+    F -->|"1 to N"| G
 ```
 
 * * *
