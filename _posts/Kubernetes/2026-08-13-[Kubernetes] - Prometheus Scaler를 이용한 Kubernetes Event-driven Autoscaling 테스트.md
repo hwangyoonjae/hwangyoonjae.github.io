@@ -5,6 +5,7 @@ date: 2026-08-13
 categories: [Kubernetes, KEDA]
 tags: [Kubernetes, KEDA]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
+mermaid: true
 ---
 
 > 이전 테스트에서는 KEDA `ScaledObject`를 이용하여 Deployment의 Replica를 **0개까지 줄이는 Scale to Zero** 동작을 확인했습니다.
