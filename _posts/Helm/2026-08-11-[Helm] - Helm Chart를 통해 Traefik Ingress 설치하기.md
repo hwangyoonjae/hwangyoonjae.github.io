@@ -230,7 +230,7 @@ $ kubectl get svc -n traefik
 
 > Traefik Dashboard의 기본 접근 경로는 /dashboard/이며, URL 마지막의 /까지 포함하여 접속합니다.
 >
-> Ex. http://<NODE_IP>:<TRAEFIK_HTTP_NODEPORT>/dashboard/
+> Ex. http://{NODE_IP}:{TRAEFIK_HTTP_NODEPORT}/dashboard/
 {: .prompt-tip}
 
 ![Traefik 대시보드 초기화면](/assets/img/post/helm/Traefik%20대시보드%20초기화면.png)
