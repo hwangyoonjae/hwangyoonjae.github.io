@@ -7,7 +7,7 @@ tags: [Helm, GPU]
 image: /assets/img/post-title/nvidia-wallpaper.jpg
 ---
 
-## 설치하기 :
+## 1. 설치하기 :
 ### 1.1 gpu-operator Helm Chart 다운로드 :
 
 ```bash
