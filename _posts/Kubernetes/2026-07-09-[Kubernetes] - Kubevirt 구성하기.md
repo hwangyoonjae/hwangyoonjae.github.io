@@ -108,10 +108,10 @@ $ docker load -i quay.io-kubevirt-virt-handler-v1.8.4.tar
 $ docker load -i quay.io-kubevirt-virt-launcher-v1.8.4.tar
 
 $ docker tag quay.io/kubevirt/virt-operator:v1.8.4 harbor.test.com/kubevirt/virt-operator:v1.8.4
-$ docker tag quay.io/kubevirt/virt-api:v1.8.4.tar harbor.test.com/kubevirt/virt-api:v1.8.4
-$ docker tag quay.io/kubevirt/virt-controller:v1.8.4.tar harbor.test.com/kubevirt/virt-controller:v1.8.4
-$ docker tag quay.io/kubevirt/virt-handler:v1.8.4.tar harbor.test.com/kubevirt/virt-handler:v1.8.4
-$ docker tag quay.io/kubevirt/virt-launcher-v1.8.4 harbor.test.com/kubevirt/virt-launcher:v1.8.4
+$ docker tag quay.io/kubevirt/virt-api:v1.8.4 harbor.test.com/kubevirt/virt-api:v1.8.4
+$ docker tag quay.io/kubevirt/virt-controller:v1.8.4 harbor.test.com/kubevirt/virt-controller:v1.8.4
+$ docker tag quay.io/kubevirt/virt-handler:v1.8.4 harbor.test.com/kubevirt/virt-handler:v1.8.4
+$ docker tag quay.io/kubevirt/virt-launcher:v1.8.4 harbor.test.com/kubevirt/virt-launcher:v1.8.4
 
 $ docker push harbor.test.com/kubevirt/virt-operator:v1.8.4
 $ docker push harbor.test.com/kubevirt/virt-api:v1.8.4
