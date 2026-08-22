@@ -13,9 +13,7 @@ mermaid: true
 > 실제로 동작하는 형태로 Redis + Prometheus + KEDA Multi Trigger 테스트 환경을 만들어보겠습니다.
 {: .prompt-tip}
 
-#
-
-## 2. 테스트 구성하기 :
+## 1. 테스트 구성하기 :
 
 - 이번 테스트의 전체 구조는 다음과 같습니다.
 
@@ -74,7 +72,7 @@ Redis Scaler
 
 ---
 
-## 3. 테스트 목적 :
+## 2. 테스트 목적 :
 
 - 이번 테스트에서는 다음 내용을 확인합니다.
 
@@ -89,7 +87,7 @@ Redis Scaler
 
 ---
 
-## 4. 오토스케일링 기준 :
+## 3. 오토스케일링 기준 :
 
 - 이번 테스트에서는 다음과 같은 기준을 사용합니다.
 
@@ -106,8 +104,8 @@ Redis Scaler
 
 * * *
 
-## 5. Redis 구성하기 :
-### 5.1 Redis Secret 생성하기 :
+## 4. Redis 구성하기 :
+### 4.1 Redis Secret 생성하기 :
 
 - Redis 인증을 위해 Password를 Secret으로 관리합니다.
 
@@ -134,7 +132,7 @@ $ kubectl apply -f redis-secret.yaml
 
 ---
 
-### 5.2 Redis Deployment 생성하기 :
+### 4.2 Redis Deployment 생성하기 :
 
 - 다음으로 Redis Deployment를 생성합니다.
 
@@ -193,7 +191,7 @@ $ kubectl apply -f redis-deployment.yaml
 
 ---
 
-### 5.3 Redis Service 생성하기 :
+### 4.3 Redis Service 생성하기 :
 
 - KEDA Scaler와 Worker에서 Redis에 접근할 수 있도록 Service를 생성합니다.
 
@@ -222,7 +220,7 @@ $ kubectl apply -f redis-svc.yaml
 
 ---
 
-### 5.4 Redis 접속 확인하기 :
+### 4.4 Redis 접속 확인하기 :
 
 - Redis가 정상적으로 동작하는지 확인합니다.
 
@@ -239,7 +237,7 @@ $ kubectl exec -n keda-demo \
 
 ---
 
-### 5.6 Redis Queue 확인하기 :
+### 4.5 Redis Queue 확인하기 :
 
 - 현재 Queue Length를 확인합니다.
 
@@ -259,8 +257,8 @@ $ kubectl exec -n keda-demo \
 
 ---
 
-## 6. Redis Queue를 처리할 Worker 구성하기 :
-### 6.1 Worker 동작 방식 :
+## 5. Redis Queue를 처리할 Worker 구성하기 :
+### 5.1 Worker 동작 방식 :
 
 - 단순히 nginx Pod를 Scale 하는 것이 아니라 실제 Redis Queue에서 Task를 가져와 처리하는 Worker를 생성할거라 Worker는 다음과 같이 동작합니다.
 
@@ -285,7 +283,7 @@ Redis Queue
 
 ---
 
-### 6.2 Worker Deployment 생성하기 :
+### 5.2 Worker Deployment 생성하기 :
 
 > Worker Pod를 생성하는 이유는?
 >
@@ -374,7 +372,7 @@ $ kubectl get deploy keda-worker -n keda-demo
 
 ---
 
-## 7. Prometheus Metric 확인하기 :
+## 6. Prometheus Metric 확인하기 :
 
 - KEDA Prometheus Scaler를 생성하기 전에 반드시 Prometheus에서 원하는 Metric이 정상적으로 조회되는지 먼저 확인 후, Prometheus에서 다음 Query를 실행합니다.
 
@@ -406,7 +404,7 @@ or vector(0)
 
 ---
 
-## 8. Redis TriggerAuthentication 생성하기 :
+## 7. Redis TriggerAuthentication 생성하기 :
 
 - KEDA ScaledObject에 Redis Password를 직접 입력하지 않고 Kubernetes Secret을 참조하도록 설정합니다.
 
@@ -442,7 +440,7 @@ $ kubectl get triggerauthentication -n keda-demo
 
 ---
 
-## 9. Redis + Prometheus Multi Trigger 구성하기 :
+## 8. Redis + Prometheus Multi Trigger 구성하기 :
 
 - 하나의 ScaledObject에 다음 두 개의 Trigger를 등록합니다.
 
@@ -556,7 +554,7 @@ $ kubectl get scaledobject -n keda-demo
 
 ---
 
-## 10. HPA 생성 확인하기 :
+## 9. HPA 생성 확인하기 :
 
 - KEDA가 자동으로 HPA를 생성했는지 확인합니다.
 
@@ -568,8 +566,8 @@ $ kubectl get hpa -n keda-demo
 
 ---
 
-## 11. Redis Queue에 Task 테스트 하기 :
-### 11.1 Redis Queue에 Task 40개 생성하기 :
+## 10. Redis Queue에 Task 테스트 하기 :
+### 10.1 Redis Queue에 Task 40개 생성하기 :
 
 - Redis의 `workload` Queue에 Task 40개를 넣습니다.
 
@@ -604,7 +602,7 @@ $ kubectl exec -n keda-demo \
 
 ---
 
-### 11.2 Redis Queue 감소 확인하기 :
+### 10.2 Redis Queue 감소 확인하기 :
 
 - 별도의 터미널에서 Queue Length를 실시간으로 확인합니다.
 
@@ -623,7 +621,7 @@ LLEN workload"
 
 ---
 
-# 12. Prometheus Scaler 동작 확인하기 :
+# 11. Prometheus Scaler 동작 확인하기 :
 
 - Worker는 Task를 하나 가져오면 약 5초 동안 CPU 작업을 수행하고, Prometheus는 Worker의 CPU 사용률이 올라가기 시작하므로 Prometheus UI에서 다음 Query를 실행합니다.
 
@@ -665,13 +663,13 @@ threshold: "1.0"
 
 ---
 
-## 13. Redis와 Prometheus를 함께 사용하는 이유 :
+## 12. Redis와 Prometheus를 함께 사용하는 이유 :
 
 - Redis는 **현재 Queue에 얼마나 많은 작업이 쌓여 있는지**를 확인하고, Prometheus는 **현재 실행 중인 Worker의 실제 부하 상태**를 확인합니다.
 
 ---
 
-### 13.1 Redis 기준? "
+### 12.1 Redis 기준? "
 
 - Redis는 현재 `workload` Queue에 남아 있는 작업 수를 기준으로 Worker의 필요 수량을 판단합니다.
 
@@ -700,7 +698,7 @@ Worker Scale Up
 
 ---
 
-### 13.2 Prometheus 기준? :
+### 12.2 Prometheus 기준? :
 
 - Prometheus는 현재 실행 중인 Worker의 CPU 사용량을 확인하기 때문에 Redis Queue가 감소하고 있더라도 Worker의 CPU 사용량이 계속 높다면, 현재 Worker들이 여전히 많은 작업을 처리하고 있다는 의미입니다.
 
@@ -730,7 +728,7 @@ Replica 유지 또는 추가 Scale Up
 
 ---
 
-### 13.3 Redis와 Prometheus의 역할 :
+### 12.3 Redis와 Prometheus의 역할 :
 
 - Redis와 Prometheus의 역할을 정리하면 다음과 같습니다.
 
@@ -744,7 +742,7 @@ Replica 유지 또는 추가 Scale Up
 
 ---
 
-### 13.4 Multi Trigger 동작 방식 :
+### 12.4 Multi Trigger 동작 방식 :
 
 - Redis와 Prometheus Trigger를 함께 사용하면 각각 필요한 Replica 수를 계산합니다.
 
@@ -777,7 +775,7 @@ Worker Replica = 6
 
 ---
 
-### 13.5 Redis + Prometheus를 함께 사용하는 이유 :
+### 12.5 Redis + Prometheus를 함께 사용하는 이유 :
 
 - Redis만 사용하는 경우 Queue가 빠르게 감소하면 Worker가 아직 작업을 처리하고 있는 상황에서도 Scale Down이 발생할 수 있습니다.
 
