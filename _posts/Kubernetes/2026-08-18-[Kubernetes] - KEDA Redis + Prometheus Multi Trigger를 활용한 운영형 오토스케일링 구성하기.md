@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "2026-08-18-[Kubernetes] - KEDA Redis + Prometheus Multi Trigger를 활용한 운영형 오토스케일링 구성하기"
-date: 2026-08-19
+title: "KEDA Redis + Prometheus Multi Trigger를 활용한 운영형 오토스케일링 구성하기"
+date: 2026-08-18
 categories: [Kubernetes, KEDA]
 tags: [Kubernetes, KEDA]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
