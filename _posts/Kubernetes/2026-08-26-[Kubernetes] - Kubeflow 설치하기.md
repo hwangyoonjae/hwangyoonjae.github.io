@@ -234,6 +234,7 @@ $ docker pull ghcr.io/kubeflow/notebooks/pvcviewer-controller:v1.11.0
 $ docker pull quay.io/brancz/kube-rbac-proxy:v0.13.1
 $ docker pull ghcr.io/kubeflow/notebooks/volumes-web-app:v1.11.0
 $ docker pull ghcr.io/kubeflow/notebooks/tensorboard-controller:v1.11.0
+$ docker pull ghcr.io/kubeflow/notebooks/tensorboards-web-app:v1.11.0
 $ docker pull quay.io/brancz/kube-rbac-proxy:v0.8.0
 $ docker pull ghcr.io/kubeflow/dashboard/access-management:v2.0.0
 $ docker pull ghcr.io/kubeflow/dashboard/profile-controller:v2.0.0
@@ -259,6 +260,7 @@ $ docker tag ghcr.io/kubeflow/notebooks/pvcviewer-controller:v1.11.0            
 $ docker tag quay.io/brancz/kube-rbac-proxy:v0.13.1                                           harbor.test.com/brancz/kube-rbac-proxy:v0.13.1
 $ docker tag ghcr.io/kubeflow/notebooks/volumes-web-app:v1.11.0                               harbor.test.com/kubeflow/notebooks/volumes-web-app:v1.11.0
 $ docker tag ghcr.io/kubeflow/notebooks/tensorboard-controller:v1.11.0                        harbor.test.com/kubeflow/notebooks/tensorboard-controller:v1.11.0
+$ docker tag ghcr.io/kubeflow/notebooks/tensorboards-web-app:v1.11.0                          harbor.test.com/kubeflow/notebooks/tensorboards-web-app:v1.11.0
 $ docker tag quay.io/brancz/kube-rbac-proxy:v0.8.0                                            harbor.test.com/brancz/kube-rbac-proxy:v0.8.0
 $ docker tag ghcr.io/kubeflow/dashboard/access-management:v2.0.0                              harbor.test.com/kubeflow/dashboard/access-management:v2.0.0
 $ docker tag ghcr.io/kubeflow/dashboard/profile-controller:v2.0.0                             harbor.test.com/kubeflow/dashboard/profile-controller:v2.0.0
@@ -284,6 +286,7 @@ $ docker push harbor.test.com/kubeflow/notebooks/pvcviewer-controller:v1.11.0
 $ docker push harbor.test.com/brancz/kube-rbac-proxy:v0.13.1
 $ docker push harbor.test.com/kubeflow/notebooks/volumes-web-app:v1.11.0
 $ docker push harbor.test.com/kubeflow/notebooks/tensorboard-controller:v1.11.0
+$ docker push harbor.test.com/kubeflow/notebooks/tensorboards-web-app:v1.11.0
 $ docker push harbor.test.com/brancz/kube-rbac-proxy:v0.8.0
 $ docker push harbor.test.com/kubeflow/dashboard/access-management:v2.0.0
 $ docker push harbor.test.com/kubeflow/dashboard/profile-controller:v2.0.0
