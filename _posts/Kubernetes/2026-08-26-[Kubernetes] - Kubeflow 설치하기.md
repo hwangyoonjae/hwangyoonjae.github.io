@@ -213,6 +213,35 @@ $ kustomize build \
 
 ---
 
+### 2.16 Dashboard virtaulservice YAML 생성하기 :
+
+```bash
+$ vi 15_centraldashboard-virtualservice.yaml
+```
+```yaml
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: centraldashboard
+  namespace: kubeflow
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - kubeflow-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: dashboard.kubeflow.svc.cluster.local
+            port:
+              number: 80
+```
+
+---
+
 ## 3. Kubeflow 설치하기 :
 ### 3.1 Kubeflow Container Image 다운로드 :
 
@@ -321,11 +350,69 @@ $ kubectl apply -f 11_volumes-web-app.yaml
 $ kubectl apply -f 12_tensorboard-controller.yaml
 $ kubectl apply -f 13_tensorboards-web-app.yaml
 $ kubectl apply -f 14_profiles.yaml
+$ kubectl apply -f 15_centraldashboard-virtualservice.yaml
 
 # 상태 확인
 $ kubectl get pod -n kubeflow
 ```
 
 ![kubeflow 설치 pod 목록 확인](/assets/img/post/kubernetes/kubeflow%20설치%20pod%20목록%20확인.png)
+
+---
+
+## 4. Kubeflow Dashboard 접속하기 :
+### 4.1 Ingress 생성하기 :
+
+```bash
+$ vi kubeflow-dashboard-ingress.yaml
+```
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kubeflow-ingress
+  namespace: istio-system
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+spec:
+  ingressClassName: nginx
+
+  rules:
+    - host: kubeflow.test.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: istio-ingressgateway
+                port:
+                  number: 80
+```
+```bash
+# 생성
+$ kubectl apply -f kubeflow-dashboard-ingress.yaml
+```
+
+---
+
+### 4.2 Dashboard 접속하기 :
+
+- Ingress 생성 시 지정한 ***host***의 주소를 브라우저의 검색합니다.
+
+![kubeflow Dashboard 접속 초기화면](/assets/img/post/kubernetes/kubeflow%20Dashboard%20접속%20초기화면.png)
+
+---
+
+- Kubeflow에서 사용할 사용자 전용 Namespace 이름을 설정한 후 Finish 버튼을 클릭하여 작업 공간을 생성합니다.
+
+![kubeflow profile namespace 지정](/assets/img/post/kubernetes/kubeflow%20profile%20namespace%20지정.png)
+
+---
+
+- Kubeflow의 메인 Dashboard 화면으로, 사용할 Namespace를 선택한 뒤 Notebook, TensorBoard, Volume 등 주요 기능으로 이동하거나 최근 작업 내역을 확인할 수 있습니다.
+
+![kubeflow Dashboard 접속 메인화면](/assets/img/post/kubernetes/kubeflow%20Dashboard%20접속%20메인화면.png)
 
 ---
