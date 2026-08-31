@@ -258,6 +258,8 @@ $ docker pull ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-full:v1
 $ docker pull ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-cuda-full:v1.11.0
 $ docker pull ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full:v1.11.0
 $ docker pull ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-cuda-full:v1.11.0
+$ docker pull ghcr.io/kubeflow/kubeflow/notebook-servers/codeserver-python:v1.11.0
+$ docker pull ghcr.io/kubeflow/kubeflow/notebook-servers/rstudio-tidyverse:v1.11.0
 $ docker pull ghcr.io/kubeflow/notebooks/jupyter-web-app:v1.11.0
 $ docker pull ghcr.io/kubeflow/notebooks/pvcviewer-controller:v1.11.0
 $ docker pull quay.io/brancz/kube-rbac-proxy:v0.13.1
@@ -284,6 +286,8 @@ $ docker tag ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-full:v1.
 $ docker tag ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-cuda-full:v1.11.0     harbor.test.com/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-cuda-full:v1.11.0
 $ docker tag ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full:v1.11.0       harbor.test.com/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full:v1.11.0
 $ docker tag ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-cuda-full:v1.11.0  harbor.test.com/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-cuda-full:v1.11.0
+$ docker tag ghcr.io/kubeflow/kubeflow/notebook-servers/codeserver-python:v1.11.0             harbor.test.com/kubeflow/kubeflownotebook-servers/codeserver-python:v1.11.0
+$ docker tag ghcr.io/kubeflow/kubeflow/notebook-servers/rstudio-tidyverse:v1.11.0             harbor.test.com/kubeflow/kubeflownotebook-servers/rstudio-tidyverse:v1.11.0
 $ docker tag ghcr.io/kubeflow/notebooks/jupyter-web-app:v1.11.0                               harbor.test.com/kubeflow/notebooks/jupyter-web-app:v1.11.0
 $ docker tag ghcr.io/kubeflow/notebooks/pvcviewer-controller:v1.11.0                          harbor.test.com/kubeflow/notebooks/pvcviewer-controller:v1.11.0
 $ docker tag quay.io/brancz/kube-rbac-proxy:v0.13.1                                           harbor.test.com/brancz/kube-rbac-proxy:v0.13.1
@@ -310,6 +314,8 @@ $ docker push harbor.test.com/kubeflow/kubeflow/notebook-servers/jupyter-pytorch
 $ docker push harbor.test.com/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-cuda-full:v1.11.0
 $ docker push harbor.test.com/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full:v1.11.0
 $ docker push harbor.test.com/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-cuda-full:v1.11.0
+$ docker push harbor.test.com/kubeflow/kubeflow/notebook-servers/codeserver-python:v1.11.0
+$ docker push harbor.test.com/kubeflow/kubeflow/notebook-servers/rstudio-tidyverse:v1.11.0
 $ docker push harbor.test.com/kubeflow/notebooks/jupyter-web-app:v1.11.0
 $ docker push harbor.test.com/kubeflow/notebooks/pvcviewer-controller:v1.11.0
 $ docker push harbor.test.com/brancz/kube-rbac-proxy:v0.13.1
