@@ -399,15 +399,15 @@ $ kubectl apply -f kubeflow-dashboard-ingress.yaml
 
 ### 4.2 Dashboard 접속하기 :
 
-- Ingress 생성 시 지정한 ***host***의 주소를 브라우저의 검색합니다.
+- Ingress 생성 시 지정한 ***host***의 주소를 브라우저의 검색하여 Kubeflow 로고와 함께 "Sign in with Dex" 버튼만 있는 초기 랜딩 페이지를 확인합니다.
 
 ![kubeflow Dashboard 접속 초기화면](/assets/img/post/kubernetes/kubeflow%20Dashboard%20접속%20초기화면.png)
 
 ---
 
-- Kubeflow에서 사용할 사용자 전용 Namespace 이름을 설정한 후 Finish 버튼을 클릭하여 작업 공간을 생성합니다.
+- Kubeflow 접속 시 Dex 인증 서버로 리다이렉트되어 이메일/비밀번호를 입력해 로그인합니다.
 
-![kubeflow profile namespace 지정](/assets/img/post/kubernetes/kubeflow%20profile%20namespace%20지정.png)
+![kubeflow dex 로그인 페이지 화면](/assets/img/post/kubernetes/kubeflow%20dex%20로그인%20페이지%20화면.png)
 
 ---
 
