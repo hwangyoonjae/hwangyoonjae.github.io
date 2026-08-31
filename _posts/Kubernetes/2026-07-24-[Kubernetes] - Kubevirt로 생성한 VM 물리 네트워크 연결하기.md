@@ -325,7 +325,7 @@ spec:
 ```
 
 > ***cniversion***은 ***/etc/cni/net.d/00-multus.conf***파일에서 확인 가능합니다.
-{: prompt-tip}
+{: .prompt-tip}
 
 * * *
 
