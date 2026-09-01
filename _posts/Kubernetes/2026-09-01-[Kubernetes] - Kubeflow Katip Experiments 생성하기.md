@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kubeflow Katip 생성하기"
+title: "Kubeflow Katip Experiments 생성하기"
 date: 2026-09-01
 categories: [Kubernetes]
 tags: [MLOps, Kubeflow]
