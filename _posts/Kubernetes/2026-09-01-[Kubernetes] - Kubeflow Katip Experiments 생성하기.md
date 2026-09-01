@@ -5,78 +5,49 @@ date: 2026-09-01
 categories: [Kubernetes]
 tags: [MLOps, Kubeflow]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
+mermaid: true
 ---
 
-> Kubeflow Dashboard를 구축하여 MLOps 기능을 사용하고자 하나, ```Katib Experiments``` 메뉴 페이지에 대한 라우팅이 구성되어 있지 않아 추가 구성이 필요합니다.
+> Kubeflow Dashboard를 구축하여 MLOps 기능을 사용하고자 하나, ```KServe Endpoints``` 메뉴 페이지에 대한 라우팅이 구성되어 있지 않아 추가 구성이 필요합니다.
 {: .prompt-warning}
 
-![kubeflow dashboard katib 라우팅 미설정](/assets/img/post/kubernetes/kubeflow%20dashboard%20katib%20라우팅%20미설정.png)
+![kubeflow dashboard kserve endpoints 라우팅 미설정](/assets/img/post/kubernetes/kubeflow%20dashboard%20kserve%20endpoints%20라우팅%20미설정.png)
 
 ---
 
-## 1. Katip은 무엇인가? :
+## 1. KServe Endpoints는 무엇인가? :
 
-- Kubeflow의 AutoML / Hyperparameter Tuning 기능입니다.
+- 학습이 끝난 머신러닝 모델을 API 형태로 서비스하는 Kubeflow 컴포넌트입니다.
 
-> Hyperparameter Tuning뿐 아니라 NAS(Neural Architecture Search), Early Stopping 등도 지원합니다.
+> Kubeflow Dashboard의 KServe Endpoints는 이 모델 서빙 리소스를 GUI로 관리하는 화면이고, 공식적으로 KServe Models Web App은 InferenceService CR의 생성, 삭제, 상태 확인 등을 웹 화면에서 제공하며, Central Dashboard에서는 이를 KServe Endpoints 메뉴로 노출합니다.
 {: .prompt-tip}
 
 ---
 
-## 2. Katib의 구조 :
+## 2. Endpoint와 InferenceService 관계 이해하기 :
 
 - 핵심 개념은 Experiment → Suggestion → Trial입니다.
 
 ```mermaid
 flowchart TD
-    A[Kubeflow] --> B[Katib UI]
-    B --> C[Experiment]
+    A[Kubeflow]
 
-    C --> D["목표 설정<br/>예: Accuracy 최대화"]
+    A --> B[Notebook]
+    A --> C[Katib]
+    A --> D[KServe]
 
-    D --> E[Katib Controller]
+    B --> B1["모델 학습"]
+    B1 --> B2["model.pt"]
 
-    E --> F[Suggestion]
-    E --> G[DB Manager]
+    C --> C1["최적화"]
+    C1 --> C2["Best Model"]
 
-    G --> H[(MySQL)]
-
-    F --> I["다음 Hyperparameter 결정"]
-
-    I --> J[Trial]
-
-    J --> K1["Trial Pod 1<br/>lr = 0.1"]
-    J --> K2["Trial Pod 2<br/>lr = 0.01"]
-    J --> K3["Trial Pod 3<br/>lr = 0.001"]
-
-    K1 --> L[Metrics Collector]
-    K2 --> L
-    K3 --> L
-
-    L --> M["Metric 수집<br/>Accuracy / Loss"]
-
-    M --> G
-
-    G --> N["결과 분석"]
-
-    N --> O{"추가 Trial 필요?"}
-
-    O -->|Yes| F
-    O -->|No| P["Best Parameter 선택"]
-
-    P --> Q["최적 Hyperparameter<br/>예: lr = 0.001"]
+    D --> D1["모델 서빙"]
+    D1 --> D2[InferenceService]
+    D2 --> D3[Predictor Pod]
+    D3 --> D4[HTTP Endpoint]
+    D4 --> D5["Client / API"]
 ```
-
----
-
-- Katib Control Plane에는 공식적으로 다음 4개가 핵심입니다.
-
-| 구성요소             | 역할                              |
-| ------------------ | -------------------------------- |
-| `katib-controller` | Experiment, Trial, Suggestion 관리 |
-| `katib-ui`         | Kubeflow 웹 UI                    |
-| `katib-db-manager` | Metric DB 접근용 gRPC API           |
-| `katib-mysql`      | Experiment/Metric 데이터 저장         |
 
 ---
 
