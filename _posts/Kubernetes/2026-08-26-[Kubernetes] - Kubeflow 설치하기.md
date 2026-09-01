@@ -29,6 +29,7 @@ $ git describe --tags
 - 위 과정에서 다운받은 Kubeflow 공식 매니페스트 파일을 각 컴포넌트별 아래와 같이 YAML 형태로 분리합니다.
 
 ```bash
+$ cd /root/kubeflow/community-distribution/
 $ mkdir kubeflow-rendered
 
 # 아래와 같이 분리 예정
