@@ -64,7 +64,7 @@ $ kubectl apply -f user-profile.yaml
 
 ### 2.4 Notebook 생성하기 :
 
-- 위 설정이 끝나면 ***LAUNCH*** 버튼을 클릭하여 생성합니다.
+- 위 설정이 끝나면 ```LAUNCH``` 버튼을 클릭하여 생성합니다.
 
 ![kubeflow Notebook 생성 화면](/assets/img/post/kubernetes/kubeflow%20Notebook%20생성%20화면.png)
 
