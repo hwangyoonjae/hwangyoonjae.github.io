@@ -7,6 +7,13 @@ tags: [MLOps, Kubeflow]
 image: /assets/img/post-title/kubernetes-wallpaper.jpg
 ---
 
+> Kubeflow Dashboard를 구축하여 MLOps 기능을 사용하고자 하나, ```Katib Experiments``` 메뉴 페이지에 대한 라우팅이 구성되어 있지 않아 추가 구성이 필요합니다.
+{: .prompt-warning}
+
+![kubeflow dashboard katib 라우팅 미설정](/assets/img/post/kubernetes/kubeflow%20dashboard%20katib%20라우팅%20미설정.png)
+
+---
+
 ## 1. Katip은 무엇인가? :
 
 - Kubeflow의 AutoML / Hyperparameter Tuning 기능입니다.
