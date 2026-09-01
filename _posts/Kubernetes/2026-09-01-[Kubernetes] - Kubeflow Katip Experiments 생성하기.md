@@ -90,7 +90,7 @@ flowchart TD
 ### 3.1 Katib YAML 파일 생성하기 :
 
 ```bash
-$ cd /root/kubeflow/community-distribution/kubeflow-rendered
+$ cd /root/kubeflow/community-distribution
 $ kustomize build applications/katib/upstream/installs/katib-with-kubeflow > ./kubeflow-rendered/16_katib.yaml
 ```
 
