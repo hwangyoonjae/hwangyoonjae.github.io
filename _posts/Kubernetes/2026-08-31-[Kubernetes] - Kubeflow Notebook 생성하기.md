@@ -62,7 +62,7 @@ $ kubectl apply -f user-profile.yaml
 
 ---
 
-### 2.4 Notebook 생성 및 접속확인 :
+### 2.4 Notebook 생성하기 :
 
 - 위 설정이 끝나면 ***LAUNCH*** 버튼을 클릭하여 생성합니다.
 
@@ -70,5 +70,51 @@ $ kubectl apply -f user-profile.yaml
 
 > Notebooks 목록 화면에서 상태가 Running으로 바뀌면 Connect 버튼으로 노트북에 접속할 수 있습니다.
 {: .prompt-info}
+
+---
+
+### 2.5 Notebook 접속확인 :
+
+- 생성된 노트북 목록에서 ```CONNECT``` 버튼을 클릭해 접속하면 됩니다.
+
+![kubeflow Notebook 접속확인](/assets/img/post/kubernetes/kubeflow%20Notebook%20접속확인.png)
+
+---
+
+## 3. TensorBoards 생성하기 :
+
+- 왼쪽 메뉴의 ```TensorBoards```를 클릭하고 ```New TensorBoard```를 클릭합니다.
+
+![TensorBoards 생성 버튼 클릭](/assets/img/post/kubernetes/TensorBoards%20생성%20버튼%20클릭.png)
+
+---
+
+- TensorBoard를 생성하기 위해 채워야 할 항목들을 입력합니다.
+
+![TensorBoards 생성 화면](/assets/img/post/kubernetes/TensorBoards%20생성%20화면.png)
+
+> 입력 항목에 대한 설명은 아래와 같습니다.
+{: .prompt-tip}
+
+| 항목 | 설명 |
+|---|---|
+| Name | TensorBoard 리소스 이름 |
+| Namespace | 사용자 네임스페이스 (자동 입력) |
+| Object Store / PVC | 로그 데이터 소스 유형 |
+| PVC Name | 로그가 저장된 볼륨 |
+| Mount Path | 컨테이너 내 마운트 경로 |
+| Configurations | 선택적 Pod 설정 프리셋 |
+
+---
+
+- 모두 입력 후 생성하여 확인합니다.
+
+![Tensorboard 생성 확인](/assets/img/post/kubernetes/Tensorboard%20생성%20확인.png)
+
+---
+
+- ```CONNECT``` 버튼을 클릭하여 접속합니다.
+
+![Tensorboard 접속 확인](/assets/img/post/kubernetes/Tensorboard%20접속%20확인.png)
 
 ---
