@@ -87,8 +87,6 @@ $ kubeadm init phase upload-certs --upload-certs --config=config.yaml
 
 ```bash
 $ kubeadm token create --certificate-key {certificate key} --print-join-command
-# 아래와 같이 출력됩니다.
-#kubeadm join k8s-lb:6443 --token azog6t.zdhbold8cm5y5l0g --discovery-token-ca-cert-hash sha256:8da0a0a22f03adb6f5c8472ea7a06a5a31e12cbe9097ed5dce99abb861eb9db6 --control-plane --certificate-key 9371b8ad6368f4de7e8901788f619d59b99a9ae2d34ea8707e6ec475b554d143
 ```
 
 * * *
