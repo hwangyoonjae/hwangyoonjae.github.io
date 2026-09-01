@@ -191,6 +191,9 @@ $ kustomize build \
   > ./kubeflow-rendered/12_tensorboard-controller.yaml
 ```
 
+> ```TENSORBOARD_IMAGE```의 경로는 Harbor 주소로 변경합니다.
+{: .prompt-tip}
+
 ---
 
 ### 2.14 TensorBoards Web App YAML 생성하기 :
@@ -270,6 +273,7 @@ $ docker pull quay.io/brancz/kube-rbac-proxy:v0.8.0
 $ docker pull ghcr.io/kubeflow/dashboard/access-management:v2.0.0
 $ docker pull ghcr.io/kubeflow/dashboard/profile-controller:v2.0.0
 $ docker pull busybox:1.28
+$ docker pull tensorflow/tensorflow:2.5.1
 $ docker pull registry.istio.io/release/proxyv2:1.30.1
 $ docker pull registry.istio.io/release/pilot:1.30.1
 $ docker pull registry.istio.io/release/install-cni:1.30.1
@@ -298,6 +302,7 @@ $ docker tag quay.io/brancz/kube-rbac-proxy:v0.8.0                              
 $ docker tag ghcr.io/kubeflow/dashboard/access-management:v2.0.0                              harbor.test.com/kubeflow/dashboard/access-management:v2.0.0
 $ docker tag ghcr.io/kubeflow/dashboard/profile-controller:v2.0.0                             harbor.test.com/kubeflow/dashboard/profile-controller:v2.0.0
 $ docker tag docker.io/library/busybox:1.28                                                   harbor.test.com/kubeflow/busybox:1.28
+$ docker tag docker.io/tensorflow/tensorflow:2.5.1                                            harbor.test.com/kubeflow/tensorflow/tensorflow:2.5.1
 $ docker tag registry.istio.io/release/proxyv2:1.30.1                                         harbor.test.com/istio/proxyv2:1.30.1
 $ docker tag registry.istio.io/release/pilot:1.30.1                                           harbor.test.com/istio/pilot:1.30.1
 $ docker tag registry.istio.io/release/install-cni:1.30.1                                     harbor.test.com/istio/install-cni:1.30.1
@@ -326,6 +331,7 @@ $ docker push harbor.test.com/brancz/kube-rbac-proxy:v0.8.0
 $ docker push harbor.test.com/kubeflow/dashboard/access-management:v2.0.0
 $ docker push harbor.test.com/kubeflow/dashboard/profile-controller:v2.0.0
 $ docker push harbor.test.com/kubeflow/busybox:1.28
+$ docker push harbor.test.com/kubeflow/tensorflow/tensorflow:2.5.1
 $ docker push harbor.test.com/istio/proxyv2:1.30.1
 $ docker push harbor.test.com/istio/pilot:1.30.1
 $ docker push harbor.test.com/istio/install-cni:1.30.1
