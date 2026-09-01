@@ -34,20 +34,22 @@ $ mkdir kubeflow-rendered
 # 아래와 같이 분리 예정
 kubeflow-rendered/
 ├── 01_namespace.yaml
-├── 02_cert-manager.yaml
-├── 03_istio.yaml
-├── 04_oauth2-proxy.yaml
-├── 05_dex.yaml
-├── 06_kubeflow-istio-resources.yaml
-├── 07_multitenancy.yaml
-├── 08_dashboard.yaml
-├── 09_notebook-controller.yaml
-├── 10_jupyter-web-app.yaml
-├── 11_pvcviewer.yaml
-├── 12_profiles.yaml
-├── 13_volumes-web-app.yaml
-├── 14_tensorboard-controller.yaml
-└── 15_tensorboard-web-app.yaml
+├── 02_istio.yaml
+├── 03_oauth2-proxy.yaml
+├── 04_dex.yaml
+├── 05_kubeflow-istio-resources.yaml
+├── 06_kubeflow-roles.yaml
+├── 07_dashboard.yaml
+├── 08_notebook-controller.yaml
+├── 09_jupyter-web-app.yaml
+├── 10_pvcviewer.yaml
+├── 11_volumes-web-app.yaml
+├── 12_tensorboard-controller.yaml
+├── 13_tensorboards-web-app.yaml
+├── 14_profiles.yaml
+├── 15_centraldashboard-virtualservice.yaml
+├── kubeflow-dashboard-ingress.yaml
+└── user-profile.yaml
 ```
 
 ---
