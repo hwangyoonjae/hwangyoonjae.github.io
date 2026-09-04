@@ -91,6 +91,9 @@ $ kustomize build common/istio/istio-install/overlays/oauth2-proxy \
   > ./kubeflow-rendered/02_istio.yaml
 ```
 
+> ```istio-ingressgateway```의 서비스의 type은 ```NodePort```로 변경합니다.
+{: .prompt-tip}
+
 ---
 
 ### 2.4 OAuth2 Proxy YAML 생성하기 :
