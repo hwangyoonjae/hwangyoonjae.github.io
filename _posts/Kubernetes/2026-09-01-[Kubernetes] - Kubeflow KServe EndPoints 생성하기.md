@@ -522,6 +522,11 @@ $ curl -v \
 
 ![추론 요청에 대한 예측 확인](/assets/img/post/kubernetes/추론%20요청에%20대한%20예측%20확인.png)
 
+> OAuth2 세션 쿠키 값 확인 방법?
+>
+> kubeflow dashboard 접속하여 개발자도구(F12) > Application > Storage > Cookies의 도메인 주소 클릭하여 ```oauth2_proxy_kubeflow```의 값(Value)을 복사하면됩니다.
+{: .prompt-tip}
+
 ---
 
 ## 6.3 예측 요청 시 access denied 에러 해결하기 :
