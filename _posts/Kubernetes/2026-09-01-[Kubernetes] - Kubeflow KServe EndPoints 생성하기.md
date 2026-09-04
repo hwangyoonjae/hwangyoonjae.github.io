@@ -221,7 +221,7 @@ $ kubectl get clusterservingruntime
 
 ---
 
-## 4. KServe Endpoints 생성하기 :
+## 4. KServe Endpoints 테스트하기 :
 
 - 실제 ML 학습 전에 Katib 동작 자체를 검증하는 아주 작은 Experiment를 생성하여 아래 흐름처럼 테스트해보겠습니다.
 
