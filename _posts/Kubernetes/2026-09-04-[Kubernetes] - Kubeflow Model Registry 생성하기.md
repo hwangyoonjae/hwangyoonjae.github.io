@@ -92,6 +92,17 @@ docker push harbor.test.com/kubeflow/hub/ui:v0.3.9
 > 폐쇄망 환경에서 배포하는 경우 각 YAML의 지정된 이미지 경로를 harbor 주소로 변경하고, storageclass가 존재하는 경우 pvc 생성에 추가합니다.
 {: .prompt-warning}
 
+- 생성 전, Service FQDN를 기존에 생성한 네임스페이스로 수정합니다.
+
+```bash
+$ vi 21_model_registry.yaml
+
+# 아래와 같이 vi 편집기에서 실행합니다.
+:%s#kubeflow-user.example.com#kubeflow-user#g
+```
+
+---
+
 - 위 과정에서 생성한 YAML 파일을 가지고 배포합니다.
 
 ```bash
@@ -102,5 +113,13 @@ $ kubectl get pod -n kubeflow-user
 ```
 
 ![Model Registry 생성 완료](/assets/img/post/kubernetes/Model%20Registry%20생성%20완료.png)
+
+---
+
+### 2.5 Model Registry 확인하기 :
+
+- 위와 같이 정상 생성 후, Kubeflow Dashboard에 접속하여 Model Registry 페이지가 정상적으로 뜨는지 확인합니다.
+
+![Model Registry 정상 확인](/assets/img/post/kubernetes/Model%20Registry%20정상%20확인.png)
 
 ---
