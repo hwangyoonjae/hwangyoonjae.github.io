@@ -123,3 +123,28 @@ $ kubectl get pod -n kubeflow-user
 ![Model Registry 정상 확인](/assets/img/post/kubernetes/Model%20Registry%20정상%20확인.png)
 
 ---
+
+## 3. 테스트 모델 등록하기 :
+
+- Model Registry 화면 중앙의 ```Register model``` 버튼을 클릭합니다.
+
+![register model 버튼 클릭 화면](/assets/img/post/kubernetes/register%20model%20버튼%20클릭%20화면.png)
+
+---
+
+- 생성할 모델의 필수 항목을 입력하고, ```Register model```버튼을 클릭하여 생성합니다.
+
+![테스트 model registry 정보 입력1](/assets/img/post/kubernetes/테스트%20model%20registry%20정보%20입력1.png)
+![테스트 model registry 정보 입력2](/assets/img/post/kubernetes/테스트%20model%20registry%20정보%20입력2.png)
+![테스트 model registry 정보 입력3](/assets/img/post/kubernetes/테스트%20model%20registry%20정보%20입력3.png)
+
+> ```Model location and storage``` 설정에서 본인 환경의 Object Storage(Minio / S3) 구성이 되어있어야합니다.
+{: .prompt-warning}
+
+---
+
+- 입력한 정보대로 생성되었는지 확인합니다.
+
+![테스트 model registry 생성 완료](/assets/img/post/kubernetes/테스트%20model%20registry%20생성%20완료.png)
+
+---
