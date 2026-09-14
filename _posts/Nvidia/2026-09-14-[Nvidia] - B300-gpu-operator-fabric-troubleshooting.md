@@ -53,7 +53,7 @@ Fabric
 - 이런 NVSwitch 기반 시스템은 GPU 드라이버가 로드된 이후에도, 별도의 유저스페이스 데몬인 **NVIDIA Fabric Manager(`nv-fabricmanager`)**가 NVSwitch를 초기화하고 GPU-NVSwitch 간 NVLink를 트레이닝해서 "fabric"에 등록시켜줘야 GPU가 실제로 CUDA 워크로드를 받을 수 있는 상태(Fabric State: Completed)가 됩니다.
 
 > 즉 GPU 드라이버 = 로드 완료 ≠ GPU 사용 가능. **Fabric Manager의 초기화가 끝나야 진짜로 사용 가능한 상태**가 되는 것이 NVSwitch 계열 서버의 특징입니다.
-{: prompt-info}
+{: .prompt-info}
 
 ---
 
