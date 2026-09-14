@@ -16,6 +16,7 @@ mermaid: true
 {: .prompt-warning}
 
 ### 1.1 구성 요약:
+
 | 구분 | 구성 내용 |
 |---|---|
 | **물리 서버** | NVIDIA B300 8-GPU 서버, NVSwitch 기반 HGX/유사 아키텍처 |
