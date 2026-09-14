@@ -13,14 +13,15 @@ mermaid: true
 > 최근 고객사에서 NVIDIA **B300(Blackwell Ultra 계열)** GPU 서버를 도입하면서, 물리 서버를 바로 베어메탈로 쓰지 않고 **OpenStack으로 가상화한 뒤 GPU를 패스스루(PCI Passthrough)로 VM에 1장씩 할당**하고, 그 VM 위에 Kubernetes 클러스터를 올려 NVIDIA GPU Operator로 GPU 스택을 구성하는 방식으로 아키텍처가 잡혀 있었습니다.
 >
 > 이 글은 이 구조에서 GPU Operator 설치 중 만난 **`nvidia-cuda-validator`가 무한 대기하는 문제**와, 그 원인이 된 **Fabric Manager / NVSwitch 초기화 이슈**를 정리한 트러블슈팅 노트입니다.
-
 {: .prompt-warning}
 
 ### 1.1 구성 요약:
-- **물리 서버**: NVIDIA B300 8-GPU 서버 (NVSwitch 기반 HGX/유사 아키텍처)
-- **가상화**: OpenStack (KVM), GPU는 VFIO 패스스루로 VM에 GPU 1장만 할당
-- **VM 위 구성**: Kubernetes (kubeadm 기반), NVIDIA GPU Operator 설치
-- **목표**: VM 단위로 GPU 1장을 K8s 워크로드에 붙여서 사용 (VM 내부에서는 멀티 GPU NVLink 통신이 필요 없는 구조)
+| 구분 | 구성 내용 |
+|---|---|
+| **물리 서버** | NVIDIA B300 8-GPU 서버, NVSwitch 기반 HGX/유사 아키텍처 |
+| **가상화 환경** | OpenStack(KVM) 기반이며, GPU는 VFIO Passthrough 방식으로 VM에 GPU 1장만 할당 |
+| **VM 내부 구성** | Kubernetes(kubeadm 기반) 클러스터 구성 및 NVIDIA GPU Operator 설치 |
+| **목표 구성** | VM 단위로 GPU 1장을 Kubernetes 워크로드에 할당하여 사용하며, VM 내부에서는 멀티 GPU 간 NVLink 통신이 필요하지 않은 구조 |
 
 ---
 
