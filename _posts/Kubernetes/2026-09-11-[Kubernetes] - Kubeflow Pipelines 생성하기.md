@@ -126,3 +126,167 @@ $ kubectl get pod -n kubeflow | grep -E \
 
 ---
 
+## 3. 테스트 Pipelines 만들기 :
+### 3.1 KFP SDK 설치하기 :
+
+```bash
+# 설치(인터넷 가능한 서버)
+$ pip3 install kfp
+
+# 폐쇄망에서 설치하기 위해 파일 다운로드 받아야하는 경우
+$ python3 -m pip download kfp -d .
+
+# 확인
+$ pip3 show kfp
+```
+
+---
+
+### 3.2 테스트 Pipeline 작성하기 :
+
+```bash
+$ vi test-pipeline.py
+```
+```python
+from kfp import dsl
+from kfp import compiler
+
+@dsl.container_component
+def step1():
+    return dsl.ContainerSpec(
+        image='harbor.test.com/kubeflow/busybox:1.36',
+        command=['sh', '-c'],
+        args=[
+            'echo "============================"; '
+            'echo "Kubeflow Pipeline Step 1"; '
+            'echo "Hello Kubeflow!"; '
+            'echo "============================"; '
+            'sleep 10'
+        ]
+    )
+
+@dsl.container_component
+def step2():
+    return dsl.ContainerSpec(
+        image='harbor.test.com/kubeflow/busybox:1.36',
+        command=['sh', '-c'],
+        args=[
+            'echo "============================"; '
+            'echo "Kubeflow Pipeline Step 2"; '
+            'echo "Pipeline Test Success!"; '
+            'echo "============================"; '
+            'sleep 10'
+        ]
+    )
+
+@dsl.pipeline(
+    name='kubeflow-test-pipeline',
+    description='Simple Kubeflow Pipelines test'
+)
+def test_pipeline():
+
+    task1 = step1()
+
+    task2 = step2()
+
+    task2.after(task1)
+
+if __name__ == '__main__':
+
+    compiler.Compiler().compile(
+        pipeline_func=test_pipeline,
+        package_path='kubeflow-test-pipeline.yaml'
+    )
+
+    print("Pipeline YAML generated.")
+```
+
+---
+
+### 3.3 테스트 컨테이너 이미지 준비하기 :
+
+- Kubeflow pipelines에서 사용할 컨테이너 이미지를 harbor에 업로드합니다.
+
+```bash
+$ docker pull busybox:1.36
+
+$ docker tag docker.io/library/busybox:1.36 harbor.test.com/kubeflow/busybox:1.36
+
+$ docker push harbor.test.com/kubeflow/busybox:1.36
+```
+
+---
+
+### 3.4 Pipelines YAML 생성하기 :
+
+- 아래와 같이 파이썬 명령어 실행하여 YAML 파일을 생성합니다.
+
+```bash
+$ python3 test-pipeline.py
+```
+
+![pipeline yaml 생성](/assets/img/post/kubernetes/pipeline%20yaml%20생성.png)
+
+---
+
+## 4. Kubeflow Dashboard에서 Pipelines 등록하기 :
+
+- Kubeflow Dashboard에서 Pipelines 페이지 접속하여 ```Upload Pipeline```를 클릭합니다.
+
+![pipelines 생성 버튼 클릭](/assets/img/post/kubernetes/pipelines%20생성%20버튼%20클릭.png)
+
+---
+
+- Pipelines 이름과 위에서 생성한 YAML 파일을 등록합니다.
+
+![pipelines 생성](/assets/img/post/kubernetes/pipelines%20생성.png)
+
+---
+
+- 아래와 같이 등록되면 그래프가 보입니다.
+
+![pipelines 등록 완료](/assets/img/post/kubernetes/pipelines%20등록%20완료.png)
+
+---
+
+## 5. 테스트 Pipelines Run 생성하기 :
+### 5.1 Pipelines Run 정보 입력하기 :
+
+- 테스트 Pipelines 실행을 위해 ```Create Run```버튼을 클릭합니다.
+
+![pipelines run 생성 버튼 클릭](/assets/img/post/kubernetes/pipelines%20run%20생성%20버튼%20클릭.png)
+
+---
+
+- Run 정보 입력 과정에서 Experiment를 선택합니다.
+
+![Experiment 선택하기](/assets/img/post/kubernetes/Experiment%20선택하기.png)
+
+---
+
+### 5.2 Experiment 선택 및 생성하기 :
+
+- Kubeflow Pipelines를 Multi-User 모드로 설치한 환경에서는 Run을 만들기 전에 Experiment가 하나 있어야하므로 없는 경우 생성합니다.
+
+![Experiment 생성 클릭](/assets/img/post/kubernetes/Experiment%20생성%20클릭.png)
+
+> Experiment가 단순한 폴더 개념이 아니라 어느 Profile/Namespace에 속한 Run인지 결정하는 기준으로 쓰입니다. 
+> 
+> 공식 문서도 Run은 부모 Experiment의 namespace에 속한다고 설명하고 있고, SDK 예제에서도 먼저 Experiment를 생성한 뒤 그 ```experiment_id```로 Run을 생성합니다.
+{: .prompt-info}
+
+---
+
+- Experiment 이름을 입력하여 생성합니다.
+
+![Experiment 생성하기](/assets/img/post/kubernetes/Experiment%20생성하기.png)
+
+---
+
+### 5.3 Run 시작하기 :
+
+- Run에 대한 정보 입력하고, Experiment 선택 하였으면 ```Start``` 버튼을 클릭하여 시작합니다.
+
+![Pipelines Run 시작하기](/assets/img/post/kubernetes/Pipelines%20Run%20시작하기.png)
+
+---
