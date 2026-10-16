@@ -64,7 +64,7 @@ $ docker push harbor.test.com/istio/proxyv2:1.30.4
 ```yaml
 # istiod/values.yaml
   global:
-    hub: registry.istio.io/release
+    hub: harbor.test.com/release
     # Default tag for Istio images.
     tag: 1.30.4
 ```
