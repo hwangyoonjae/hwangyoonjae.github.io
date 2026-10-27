@@ -4,7 +4,7 @@ title: "Semaphore 설치하기"
 date: 2026-10-21
 categories: [DevOps, Ansible, Semaphore]
 tags: [Ansible, Kubernetes]
-image: /assets/img/post-title/semaphore-wallpaper.jpg
+image: /assets/img/post-title/semaphore-wallpaper.png
 ---
 
 ## 1. 사전 확인 사항 :
