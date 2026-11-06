@@ -50,7 +50,7 @@ $ vi create_kubernetes_repo.sh
 ```bash
 #!/bin/bash
 
-VERSIONS=("1.30" "1.32" "1.33" "1.34" "1.35")
+VERSIONS=("1.30" "1.32" "1.33" "1.34" "1.35" "1.36" "1.37")
 
 for v in "${VERSIONS[@]}"; do
   cat <<EOF > /etc/yum.repos.d/kubernetes-${v}.repo
@@ -77,9 +77,11 @@ set -euo pipefail
 VERSIONS=(
   "1.31.14"
   "1.32.13"
-  "1.33.10"
-  "1.34.6"
-  "1.35.6"
+  "1.33.13"
+  "1.34.12"
+  "1.35.9"
+  "1.36.5"
+  "1.37.1"
 )
 
 # 버전별 폴더를 현재 디렉토리 하위에 생성
