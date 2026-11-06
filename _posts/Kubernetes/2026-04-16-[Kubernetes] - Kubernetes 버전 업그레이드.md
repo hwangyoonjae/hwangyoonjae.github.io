@@ -52,6 +52,7 @@ $ vi create_kubernetes_repo.sh
 
 VERSIONS=("1.30" "1.31" "1.32" "1.33" "1.34" "1.35" "1.36" "1.37")
 
+# Kubernetes Repository
 for v in "${VERSIONS[@]}"; do
   cat <<EOF > /etc/yum.repos.d/kubernetes-${v}.repo
 [kubernetes-${v}]
@@ -61,6 +62,18 @@ enabled=1    # 0: 비활성화 / 1: 활성화
 gpgcheck=0
 EOF
 done
+
+# CRI-O Repository
+for v in "${VERSIONS[@]}"; do
+cat <<EOF > /etc/yum.repos.d/crio-${v}.repo
+[cri-o-${v}]
+name=CRI-O ${v}
+baseurl=https://download.opensuse.org/repositories/isv:/cri-o:/stable:/v${v}/rpm/
+enabled=1
+gpgcheck=0
+EOF
+done
+
 ```
 
 * * *
