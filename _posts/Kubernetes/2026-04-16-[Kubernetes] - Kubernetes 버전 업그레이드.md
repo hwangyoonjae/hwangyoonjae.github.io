@@ -50,7 +50,7 @@ $ vi create_kubernetes_repo.sh
 ```bash
 #!/bin/bash
 
-VERSIONS=("1.30" "1.32" "1.33" "1.34" "1.35" "1.36" "1.37")
+VERSIONS=("1.30" "1.31" "1.32" "1.33" "1.34" "1.35" "1.36" "1.37")
 
 for v in "${VERSIONS[@]}"; do
   cat <<EOF > /etc/yum.repos.d/kubernetes-${v}.repo
