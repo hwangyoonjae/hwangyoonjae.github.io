@@ -57,7 +57,7 @@ for v in "${VERSIONS[@]}"; do
 [kubernetes-${v}]
 name=Kubernetes ${v}
 baseurl=https://pkgs.k8s.io/core:/stable:/v${v}/rpm/
-enabled=0
+enabled=1    # 0: 비활성화 / 1: 활성화
 gpgcheck=0
 EOF
 done
