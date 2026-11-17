@@ -262,3 +262,12 @@ $ kubectl get ingress -n falco
 ![falcosidekick ui ingress 생성](/assets/img/post/helm/falcosidekick%20ui%20ingress%20생성.png)
 
 ---
+
+### 2.4 Falcosidekick UI 접속하기 :
+
+- 위에서 생성한 Ingress 주소를 통해서 접속하여 로그인 진행합니다.
+
+![falcosidekick ui 초기화면](/assets/img/post/helm/falcosidekick%20ui%20초기화면.png)
+![falcosidekick ui 대시보드](/assets/img/post/helm/falcosidekick%20ui%20대시보드.png)
+
+---
