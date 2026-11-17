@@ -133,7 +133,7 @@ global:
 # 네임스페이스 생성
 $ kubectl create namespace kasten-io
 
-# kasten/base 설치 진행
+# kasten 설치 진행
 $ helm upgrade --install k10 ./ -n kasten-io
 ```
 

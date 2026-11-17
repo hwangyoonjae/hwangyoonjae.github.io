@@ -64,7 +64,7 @@ image:
 # 네임스페이스 생성
 $ kubectl create namespace cnpg-system
 
-# cnpg/base 설치 진행
+# cnpg 설치 진행
 $ helm upgrade --install cnpg ./ -n cnpg-system
 ```
 
