@@ -160,9 +160,9 @@ $ kubectl get po -n falco
 ```bash
 $ docker pull docker.io/falcosecurity/falcosidekick:2.35.1
 
-$ docker tag docker.io/falcosecurity/falcosidekick:2.35.1          harbor.inno.com/falcosecurity/falcosidekick:2.35.1
+$ docker tag docker.io/falcosecurity/falcosidekick:2.35.1          harbor.test.com/falcosecurity/falcosidekick:2.35.1
 
-$ docker push harbor.inno.com/falcosecurity/falcosidekick:2.35.1
+$ docker push harbor.test.com/falcosecurity/falcosidekick:2.35.1
 ```
 
 ---
