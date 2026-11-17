@@ -135,7 +135,7 @@ driver:
 # 네임스페이스 생성
 $ kubectl create namespace falco
 
-# falco/base 설치 진행
+# falco 설치 진행
 $ helm upgrade --install falco ./ -n falco
 ```
 
@@ -152,6 +152,113 @@ $ kubectl get po -n falco
 
 ![falco helm chart 배포 후 확인](/assets/img/post/helm/falco%20helm%20chart%20배포%20후%20확인.png)
 
-* * *
+---
+
+## 2. Falico UI 설정하기 :
+### 2.1 Falcosidekick UI Container Image 다운로드 : 
+
+```bash
+$ docker pull docker.io/falcosecurity/falcosidekick:2.35.1
+
+$ docker tag docker.io/falcosecurity/falcosidekick:2.35.1          harbor.inno.com/falcosecurity/falcosidekick:2.35.1
+
+$ docker push harbor.inno.com/falcosecurity/falcosidekick:2.35.1
+```
+
+---
+
+### 2.2 Falcosidekick UI 설치하기 :
+
+- Falcosidekick UI를 설치하면 Falco가 탐지한 보안 이벤트를 웹 대시보드에서 실시간으로 확인할 수 있습니다.
+
+```bash
+# falco/values.yaml
+falcosidekick:
+  # -- Enable falcosidekick deployment.
+  enabled: true
+  image:
+    # -- The Falcosidekick image tag to pull.i
+    registry: harbor.test.com
+    repository: falcosecurity/falcosidekick
+    tag: "2.35.1"
+  # -- Enable usage of full FQDN of falcosidekick service (useful when a Proxy is used).
+  fullfqdn: false
+  # -- Listen port. Default value: 2801
+  listenPort: ""
+  # 추가
+  webui:
+    enabled: true
+    user: "admin:admin"
+```
+```bash
+# falco/base 설치 진행
+$ helm upgrade --install falco ./ -n falco
+```
+
+---
+
+- Helm Chart 업데이트 후, 파드 목록을 조회하여 정상 설치 되었는지 확인합니다.
+
+```bash
+# pod 목록 조회
+$ kubectl get po -n falco
+```
+
+![falco helm chart 재배포 후 확인](/assets/img/post/helm/falco%20helm%20chart%20재배포%20후%20확인.png)
+
+---
+
+### 2.3 Falcosidekick Ingress 생성하기 :
+
+- 실제 생성된 Service 이름과 포트를 확인합니다.
+
+```bash
+$ kubectl get svc -n falco
+```
+
+![falcosidekick ui 서비스 확인](/assets/img/post/helm/falcosidekick%20ui%20서비스%20확인.png)
+
+---
+
+- falcosidekick-ui-ingress.yaml 파일을 생성하여 적용합니다.
+
+```bash
+# 생성
+$ vi falcosidekick-ui-ingress.yaml
+```
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: falcosidekick-ui-ingress
+  namespace: falco
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: falco.test.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: falco-falcosidekick-ui
+                port:
+                  number: 2802
+```
+```bash
+# 적용
+$ kubectl apply -f falico-ui-ingress.yaml
+```
+
+---
+
+- 적용 후, Ingress 설정 확인합니다.
+
+```bash
+$ kubectl get ingress -n falco
+```
+
+![falcosidekick ui ingress 생성](/assets/img/post/helm/falcosidekick%20ui%20ingress%20생성.png)
 
 ---
